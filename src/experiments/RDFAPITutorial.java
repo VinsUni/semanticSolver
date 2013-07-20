@@ -3,10 +3,17 @@ package experiments;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
+
 import com.hp.hpl.jena.vocabulary.RDFS;
+import com.hp.hpl.jena.vocabulary.VCARD;
 
 public class RDFAPITutorial {
-
+	
+	/*I am following the tutorial at http://jena.apache.org/tutorials/rdf_api.html#ch-Introduction, but substituting
+	 * examples from my own domain of interest for their examples, which are about people and use an RDF representation 
+	 * of VCARDS.
+	 */
 	public static void main(String[] args) {
 		// some definitions
 		final String DBPEDIA_ONTOLOGY_NS = "http://dbpedia.org/ontology/";
@@ -32,6 +39,33 @@ public class RDFAPITutorial {
 		 
 		 // Retrieve the value of the that property (i.e. the String that is the value of our artistName variable)
 		 System.out.println(johnLennon.getProperty(RDFS.label).getString());
+		 
+		 /* I'm now going to add some more properties to my johnLennon resource. These properties, FN, Given and Family, are
+		  * part of the VCARD schema. We will also make use of the property VCARD:N to illustrate the use of a blank node, which
+		  * is a common RDF technique
+		  */
+		 
+		 String givenName = "John";
+		 String familyName = "Lennon";
+		 String fullName = givenName + " " + familyName;
+		 
+		 // This time we will add properties to the resource using the cascading style
+		 johnLennon
+		 	.addProperty(VCARD.FN, fullName)
+		 	.addProperty(VCARD.N, model.createResource()
+		 								.addProperty(VCARD.Given, givenName)
+		 								.addProperty(VCARD.Family, familyName));
+		 
+		 /* Now retrieve the value of the Given and Family properties of the blank node of type VCARD:N that is a property of our
+		  * johnLennon resource
+		  */
+		 System.out.println(johnLennon.getProperty(VCARD.N).getProperty(VCARD.Given).getString()); // getProperty returns a Statement
+		 System.out.println(johnLennon.getProperty(VCARD.N).getProperty(VCARD.Family).getString());
+		 // Alternatively:
+		 Resource nameProperty = johnLennon.getPropertyResourceValue(VCARD.N); // getPropertyResourceValue returns a Resource
+		 StmtIterator statements = nameProperty.listProperties();
+		 while(statements.hasNext())
+			 System.out.println(statements.nextStatement().getString());
 	}
 
 }
