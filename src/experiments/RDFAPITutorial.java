@@ -3,6 +3,9 @@ package experiments;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.vocabulary.RDFS;
@@ -40,6 +43,10 @@ public class RDFAPITutorial {
 		 // Retrieve the value of the that property (i.e. the String that is the value of our artistName variable)
 		 System.out.println(johnLennon.getProperty(RDFS.label).getString());
 		 
+		 
+		 
+		 
+		 
 		 /* I'm now going to add some more properties to my johnLennon resource. These properties, FN, Given and Family, are
 		  * part of the VCARD schema. We will also make use of the property VCARD:N to illustrate the use of a blank node, which
 		  * is a common RDF technique
@@ -61,11 +68,43 @@ public class RDFAPITutorial {
 		  */
 		 System.out.println(johnLennon.getProperty(VCARD.N).getProperty(VCARD.Given).getString()); // getProperty returns a Statement
 		 System.out.println(johnLennon.getProperty(VCARD.N).getProperty(VCARD.Family).getString());
-		 // Alternatively:
+		 // Alternatively, using Jena's StmtIterator interface, which is a subtype of Java's Iterator:
 		 Resource nameProperty = johnLennon.getPropertyResourceValue(VCARD.N); // getPropertyResourceValue returns a Resource
-		 StmtIterator statements = nameProperty.listProperties();
-		 while(statements.hasNext())
-			 System.out.println(statements.nextStatement().getString());
+		 StmtIterator iterator = nameProperty.listProperties();
+		 while(iterator.hasNext())
+			 System.out.println(iterator.nextStatement().getString());
+		 
+		 
+		 
+		 
+		 // Exploring the Statement interface further:
+		 
+		 /* The Statement interface provides accessor methods to the subject, predicate and object of a statement. We will now get
+		  * a StmtIterator over all the statements in the model:
+		  */
+		 iterator = model.listStatements();
+		 while(iterator.hasNext()) {
+			 Statement statement = iterator.nextStatement(); // get the next statement
+			 Resource subject = statement.getSubject(); // get the subject of the statement
+			 Property predicate = statement.getPredicate(); // get the predicate
+			 RDFNode object = statement.getObject(); // get the object
+			 /*Since the object of a statement can be either a resource or a literal, the getObject() method returns 
+			  * an object typed as RDFNode, which is a common superclass of both Resource and Literal.
+			  */
+			 
+			 System.out.print(subject.toString());
+			 System.out.print(" " + predicate.toString() + " ");
+			 if(object instanceof Resource)
+				 System.out.print(object.toString());
+			 else System.out.print(" \"" + object.toString() + "\""); // the object is a literal, so surround it with quotes
+			 
+			 System.out.println(" .");
+		 }
+		 
+		 /* Writing RDF */
+		 
+		 
+		 
 	}
 
 }
