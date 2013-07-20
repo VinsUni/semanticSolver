@@ -7,9 +7,13 @@ Development timeline [Task - Target completion date]:
 
 Choose a domain of knowledge - April 2013
 
+-Pop music
+
 Familiarise myself with Apache Jena - April 2013
 
 Extract a test dataset from the Web of Data that covers the chosen domain - April 2013
+
+
 
 Define a crossword-clue ontology that covers a small number of simple clue patterns and relationships covered in the test dataset - June 2013
 
