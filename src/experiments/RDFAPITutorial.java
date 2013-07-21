@@ -94,7 +94,29 @@ public class RDFAPITutorial {
 		  */
 		 
 		 // Write each statement out in XML form to standard out:
+		 model.write(System.out);
+		 /* Note that there is an error in the RDF XML written out by the above statement; it does not exactly represent 
+		  * the Model we created. The blank node in the Model has been given a URI reference. It is no longer blank. 
+		  * The RDF/XML syntax is not capable of representing all RDF Models; for example it cannot represent a blank node 
+		  * which is the object of two statements. The 'dumb' writer we used to write this RDF/XML makes no attempt to 
+		  * write correctly the subset of Models which can be written correctly. It gives a URI to each blank node, 
+		  * making it no longer blank.
+		  */
 		 
+		 /*Jena has an extensible interface which allows new writers for different serialization languages for RDF to be easily 
+		  * plugged in. The above call invoked the standard 'dumb' writer. Jena also includes a more sophisticated RDF/XML 
+		  * writer which can be invoked by specifying another argument to the write() method call:
+		  */
+
+		 model.write(System.out, "RDF/XML-ABBREV");
+ 
+		 /* This writer, the so called PrettyWriter, takes advantage of features of the RDF/XML abbreviated syntax 
+		  * to write a Model more compactly. It is also able to preserve blank nodes where that is possible. 
+		  * It is however, not suitable for writing very large Models, as its performance is unlikely to be acceptable. 
+		  * To write large files and preserve blank nodes, write in N-Triples format:
+		  */
+		 
+		 model.write(System.out, "N-TRIPLES");
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
