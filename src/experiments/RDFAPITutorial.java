@@ -192,6 +192,20 @@ public class RDFAPITutorial {
 		persistedModel.setNsPrefix("clue", griffithsBenNS);
 		System.out.println("Writing the persisted model out with a prefix defined for my namespace:");
 		persistedModel.write(System.out);
+		
+		
+		/*Navigating a model:
+		 * Given the URI of a resource, the resource object can be retrieved from a model using the Model.getResource(String uri) method. 
+		 * This method is defined to return a Resource object if one exists in the model, 
+		 * or otherwise to create a new one. For example, to retrieve the JohnLennon resource from our persisted model:
+		 */
+		Resource lennon = persistedModel.getResource(DBPEDIA_NS + "John_Lennon");
+		System.out.println("The namespace of the JohnLennon resource is " + lennon.getNameSpace());
+		System.out.println("The name of the resource is " + lennon.getLocalName());
+		System.out.println("The entire URI of the resource is " + lennon.getURI());
+		
+		
+		
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
