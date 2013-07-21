@@ -8,7 +8,6 @@ import java.io.InputStream;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -20,6 +19,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDFS;
+import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.VCARD;
 
 public class RDFAPITutorial {
@@ -165,7 +165,33 @@ public class RDFAPITutorial {
 		// write it to standard out
 		System.out.println("The persisted model:");
 		persistedModel.write(System.out);
-		 
+		
+		
+		/* Controlling Prefixes
+		 * 1. Explicit prefix definitions:
+		 * Jena provides ways of controlling the namespaces used on output with its prefix mappings:
+		 * The method setNsPrefix(String prefix, String URI) declares that the namespace URI may be abbreviated by prefix. 
+		 * Jena requires that prefix be a legal XML namespace name, and that URI ends with a non-name character. 
+		 * The RDF/XML writer will turn these prefix declarations into XML namespace declarations and use them in its output
+		 */
+		
+		// create a new artist resource and a new memberOf property:
+		String griffithsBenNS = "http://www.griffithsben.com/ontology#";
+		Resource artist  = persistedModel.createResource(griffithsBenNS + "artist");
+		Property memberOf = persistedModel.createProperty(griffithsBenNS + "memberOf");
+		
+		// Add two new statements to the model, asserting that johnLennon a artist and johnLennon memberOf "The Beatles"
+		persistedModel.add(johnLennon, RDF.type, artist);
+		persistedModel.add(johnLennon, memberOf, "The Beatles");
+		
+		
+		System.out.println("Writing the persisted model out with no special prefixes defined:");
+		persistedModel.write(System.out);
+		
+		// Now provide a prefix for the namespace of my ontology
+		persistedModel.setNsPrefix("clue", griffithsBenNS);
+		System.out.println("Writing the persisted model out with a prefix defined for my namespace:");
+		persistedModel.write(System.out);
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
