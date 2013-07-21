@@ -37,7 +37,9 @@ public class RDFAPITutorial {
 		String artistName = "John Lennon";
 		
 		
-		
+		/* log4j logging configuration. For now, we are just writing logs to standard out */
+		BasicConfigurator.configure();
+		Logger.getRootLogger().setLevel(Level.INFO); // set threshold of logging messages to write
 		
 
 		// create an empty Model in memory
