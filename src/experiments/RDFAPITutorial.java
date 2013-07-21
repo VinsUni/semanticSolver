@@ -270,6 +270,11 @@ public class RDFAPITutorial {
 		System.out.println("The following statements in the model have John_Lennon as their subject:");
 		writeModel(iterator);
 		
+		System.out.println("Querying the model for ? memberOf \"The Beatles\":");
+		iterator = persistedModel.listStatements(new SimpleSelector(null, memberOf, "The Beatles"));
+		System.out.println("The following statements match the query ? memberOf \"The Beatles\":");
+		writeModel(iterator);
+		
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
