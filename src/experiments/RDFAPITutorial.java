@@ -1,5 +1,9 @@
 package experiments;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -117,6 +121,19 @@ public class RDFAPITutorial {
 		  */
 		 
 		 model.write(System.out, "N-TRIPLES");
+		 
+		 // Now, write the model out to a file in RDF/XML-ABBREV format:
+		 try {
+			 FileOutputStream outFile = new FileOutputStream("output.xml");
+			 model.write(outFile, "RDF/XML-ABBREV");
+			 outFile.close();
+		 }
+		 catch(FileNotFoundException e) {
+			 e.printStackTrace();
+		 } catch (IOException e) {
+			e.printStackTrace();
+		}
+		 
 	}
 	
 	public static void writeModel(StmtIterator iterator) {

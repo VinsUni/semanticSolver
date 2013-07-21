@@ -1,0 +1,13 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_Lennon">
+    <vcard:N rdf:parseType="Resource">
+      <vcard:Family>Lennon</vcard:Family>
+      <vcard:Given>John</vcard:Given>
+    </vcard:N>
+    <vcard:FN>John Lennon</vcard:FN>
+    <rdfs:label>John Lennon</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
