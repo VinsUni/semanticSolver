@@ -83,7 +83,22 @@ public class RDFAPITutorial {
 		  * a StmtIterator over all the statements in the model:
 		  */
 		 iterator = model.listStatements();
-		 while(iterator.hasNext()) {
+		 writeModel(iterator);
+		 
+		 
+		 /* Writing RDF:
+		  * This time, instead of writing each statement in the model out to standard out as a triple, we will write it out
+		  * (i) to standard out
+		  * (ii) to a file
+		  * in RDF/XML form
+		  */
+		 
+		 // Write each statement out in XML form to standard out:
+		 
+	}
+	
+	public static void writeModel(StmtIterator iterator) {
+		while(iterator.hasNext()) {
 			 Statement statement = iterator.nextStatement(); // get the next statement
 			 Resource subject = statement.getSubject(); // get the subject of the statement
 			 Property predicate = statement.getPredicate(); // get the predicate
@@ -99,12 +114,7 @@ public class RDFAPITutorial {
 			 else System.out.print(" \"" + object.toString() + "\""); // the object is a literal, so surround it with quotes
 			 
 			 System.out.println(" .");
-		 }
-		 
-		 /* Writing RDF */
-		 
-		 
-		 
+		}
 	}
 
 }
