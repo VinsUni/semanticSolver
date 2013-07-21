@@ -3,6 +3,12 @@ package experiments;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -12,6 +18,7 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
+import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.vocabulary.VCARD;
 
@@ -28,6 +35,10 @@ public class RDFAPITutorial {
 		final String DBPEDIA_ARTIST = DBPEDIA_ONTOLOGY_NS + "artist"; // unused at present
 		String artistURI = DBPEDIA_NS + "John_Lennon";
 		String artistName = "John Lennon";
+		
+		
+		
+		
 
 		// create an empty Model in memory
 		Model model = ModelFactory.createDefaultModel();
@@ -123,8 +134,9 @@ public class RDFAPITutorial {
 		 model.write(System.out, "N-TRIPLES");
 		 
 		 // Now, write the model out to a file in RDF/XML-ABBREV format:
+		 String fileName = "output.xml";
 		 try {
-			 FileOutputStream outFile = new FileOutputStream("output.xml");
+			 FileOutputStream outFile = new FileOutputStream(fileName);
 			 model.write(outFile, "RDF/XML-ABBREV");
 			 outFile.close();
 		 }
@@ -133,6 +145,24 @@ public class RDFAPITutorial {
 		 } catch (IOException e) {
 			e.printStackTrace();
 		}
+		 
+		/* We will now read back in our persisted Model before writing it to standard out*/
+		// create an empty model
+		Model persistedModel = ModelFactory.createDefaultModel();
+
+		// use the FileManager to find the input file
+		InputStream inFile = FileManager.get().open(fileName);
+		if (inFile == null) {
+		   throw new IllegalArgumentException("File: " + fileName + " not found");
+		}
+
+		// read the RDF/XML file
+		persistedModel.read(inFile, null);
+		//The second argument to the read() method call is the URI which will be used for resolving relative URIs
+
+		// write it to standard out
+		System.out.println("The persisted model:");
+		persistedModel.write(System.out);
 		 
 	}
 	
