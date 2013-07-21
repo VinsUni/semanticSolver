@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -233,9 +234,28 @@ public class RDFAPITutorial {
 		}
 		
 		/*Querying a model
-		 * 
+		 * The previous section dealt with the case of navigating a model from a resource with a known URI. 
+		 * This section deals with searching a model. The core Jena API supports only a limited query primitive. 
+		 * The more powerful query facilities of RDQL are not described in this tutorial.
 		 */
 		
+		/* Model.listSubjectsWithProperty(Property p, RDFNode o) will return an iterator over all the resources 
+		 * which have property p with value o.
+		*/
+		
+		//retrieve an iterator over all resources that are members of the Beatles
+		ResIterator resourceIterator = persistedModel.listSubjectsWithProperty(memberOf, "The Beatles");
+		
+		System.out.println();
+		System.out.println("Querying the model: ");
+		System.out.println("The members of the Beatles are: ");
+		while(resourceIterator.hasNext())
+			System.out.println(" - " + resourceIterator.nextResource().getLocalName());
+		
+		resourceIterator = persistedModel.listSubjectsWithProperty(memberOf, "Wings");
+		System.out.println("The members of Wings are: ");
+		while(resourceIterator.hasNext())
+			System.out.println(" - " + resourceIterator.nextResource().getLocalName());
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
