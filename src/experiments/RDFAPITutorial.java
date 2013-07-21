@@ -204,7 +204,26 @@ public class RDFAPITutorial {
 		System.out.println("The name of the resource is " + lennon.getLocalName());
 		System.out.println("The entire URI of the resource is " + lennon.getURI());
 		
+		// Retrieve the value of John Lennon's memberOf property:
+		String band = lennon.getProperty(memberOf).getString(); //getProperty() returns a Statement, not a Property!
+		System.out.println("John Lennon is a member of " + band);
 		
+		// Add Paul McCartney to the model, who is a member of two bands...
+		Resource paulMcCartney = persistedModel.createResource(DBPEDIA_NS + "Paul_McCartney");
+		persistedModel.add(paulMcCartney, memberOf, "The Beatles");
+		persistedModel.add(paulMcCartney, memberOf, "Wings");
+		
+		// Since paulMcCartney has TWO memberOf properties, we must retrieve a list of statements instead of using getProperty:
+		System.out.println("Paul McCartney is a member of:");
+		iterator = paulMcCartney.listProperties(memberOf); // iterator is of type StmtIterator
+		while(iterator.hasNext())
+			System.out.println(" - " + iterator.nextStatement().getObject());
+		/* NB: All the properties of a resource can be listed by using the listProperties() method without an argument. */
+		
+		
+		/*Querying a model
+		 * 
+		 */
 		
 	}
 	
