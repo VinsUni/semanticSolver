@@ -15,6 +15,8 @@ import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Selector;
+import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
@@ -256,6 +258,18 @@ public class RDFAPITutorial {
 		System.out.println("The members of Wings are: ");
 		while(resourceIterator.hasNext())
 			System.out.println(" - " + resourceIterator.nextResource().getLocalName());
+		
+		/* Using the SimpleSelector class:
+		 * The SimpleSelector constructor takes three arguments:
+		 * Selector selector = new SimpleSelector(subject, predicate, object)
+		 * Passing a null as an argument will match anything for that part of the statement
+		 */
+		
+		iterator = persistedModel.listStatements(new SimpleSelector(lennon, null, (RDFNode) null)); // retrieve all statements in which JohnLennon is subject
+		
+		System.out.println("The following statements in the model have John_Lennon as their subject:");
+		writeModel(iterator);
+		
 	}
 	
 	public static void writeModel(StmtIterator iterator) {
