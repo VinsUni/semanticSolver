@@ -220,6 +220,17 @@ public class RDFAPITutorial {
 			System.out.println(" - " + iterator.nextStatement().getObject());
 		/* NB: All the properties of a resource can be listed by using the listProperties() method without an argument. */
 		
+		// Now, write the model back out to the file in RDF/XML-ABBREV format:
+		try {
+			 FileOutputStream outFile = new FileOutputStream(fileName);
+			 persistedModel.write(outFile, "RDF/XML-ABBREV");
+			 outFile.close();
+		}
+		catch(FileNotFoundException e) {
+			 e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		/*Querying a model
 		 * 
