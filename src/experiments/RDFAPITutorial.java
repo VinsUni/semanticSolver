@@ -8,6 +8,8 @@ import java.io.InputStream;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.RollingFileAppender;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -39,10 +41,16 @@ public class RDFAPITutorial {
 		String artistURI = DBPEDIA_NS + "John_Lennon";
 		String artistName = "John Lennon";
 		
-		
-		/* log4j logging configuration. For now, we are just writing logs to standard out */
-		BasicConfigurator.configure();
+		/* log4j logging configuration */
 		Logger.getRootLogger().setLevel(Level.INFO); // set threshold of logging messages to write
+		PropertyConfigurator.configure("log4j.properties");
+		
+		RollingFileAppender rollingFileAppender = new RollingFileAppender();
+		
+		rollingFileAppender.setFile("DatasetMerger.log");
+		
+		rollingFileAppender.setMaxFileSize("20MB");
+		Logger.getRootLogger().addAppender(rollingFileAppender);
 		
 
 		// create an empty Model in memory

@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -29,9 +29,9 @@ public class DatasetMerger {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		/* log4j logging configuration. For now, we are just writing logs to standard out */
-		BasicConfigurator.configure();
-		Logger.getRootLogger().setLevel(Level.INFO); // set threshold of logging messages to write
+		/* log4j logging configuration */
+		Logger.getRootLogger().setLevel(Level.INFO);
+		PropertyConfigurator.configure("log4j.properties");
 		
 		// create two empty models into which to read my two RDF/XML files
 		Model model1 = ModelFactory.createDefaultModel();
