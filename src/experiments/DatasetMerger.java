@@ -57,8 +57,11 @@ public class DatasetMerger {
 	
 		Model mergedModel = model1.union(model2); // create a third model which is the union of the two models
 		
-		// Define a prefix for one of the many namespaces used in the merged model
-		mergedModel.setNsPrefix("dbpedia-owl","http://dbpedia.org/ontology/");
+		/* Define a prefix for one of the many namespaces used in the merged model
+		mergedModel.setNsPrefix("dbpedia-owl","http://dbpedia.org/ontology/"); */
+		
+		NsPrefixLoader prefixLoader = new NsPrefixLoader(mergedModel);
+		prefixLoader.loadStandardPrefixes();
 		
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
 		String fileName = "mergedTestDataSet.xml";
