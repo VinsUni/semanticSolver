@@ -51,6 +51,7 @@ public class ClueSolverRunner {
 			e.printStackTrace();
 		}
 		
+		// Find everything where the artist is Velvet Revolver
 		Resource object = model.createResource("http://dbpedia.org/resource/Velvet_Revolver");
 		Property predicate = model.createProperty("http://dbpedia.org/ontology/artist");
 		
@@ -60,6 +61,12 @@ public class ClueSolverRunner {
 		
 		clueSolver.outputSolutionTriples();
 		
+		// Find everything that has genre Hip Hop
+		System.out.println();
+		predicate = model.createProperty("http://dbpedia.org/ontology/genre");
+		object = model.createResource("http://dbpedia.org/resource/Hip_hop");
+		clueSolver.setClue(new Clue(null, predicate, object));
+		clueSolver.outputSolutionTriples();
 
 	}
 
