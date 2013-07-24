@@ -9,6 +9,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 public class ClueSolver {
+	private final String UNKNOWN = "?";
 	private Clue clue;
 	private Model model;
 	
@@ -20,6 +21,12 @@ public class ClueSolver {
 	public ClueSolver(Clue clue, Model model) {
 		this.setClue(clue);
 		this.setModel(model);
+	}
+	
+	public ClueSolver(String clue, Model model) {
+		this.setModel(model);
+		this.setClue(new Clue(null, null, null));
+		this.setClueStatement(clue);
 	}
 
 	public void outputSolutionTriples() {
@@ -59,6 +66,37 @@ public class ClueSolver {
 	 */
 	public void setClue(Clue clue) {
 		this.clue = clue;
+	}
+	/**
+	 * Set the clue by parsing a String argument
+	 * @param clue - a String form of a clue, in the form "subject predicate object"
+	 * @throws IllegalArgumentException if the String passed in does not consist of three words and two spaces
+	 * An unknown is represented by the word "?", which will be transformed into a null argument to the SimpleSelector
+	 */
+	public void setClueStatement(String clue) throws IllegalArgumentException {
+		String[] statementFragments = clue.split(" ");
+		if(statementFragments.length != 3)
+			throw new IllegalArgumentException(clue);
+		for(int i = 0; i < statementFragments.length; i++) {
+			if(statementFragments[i].equals(UNKNOWN))
+					statementFragments[i] = null;
+		}
+		Resource subject = (
+				statementFragments[0] == null ? 
+						null : 
+						this.getModel().createResource(statementFragments[0]));
+		this.getClue().setSubject(subject);
+		Property predicate = (
+				statementFragments[1] == null ? 
+						null : 
+						this.getModel().createProperty(statementFragments[1]));
+		this.getClue().setPredicate(predicate);
+		
+		Resource object = (
+				statementFragments[2] == null ? 
+						null : 
+						this.getModel().createResource(statementFragments[2]));
+		this.getClue().setObject(object);
 	}
 
 	/**

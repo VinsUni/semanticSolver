@@ -117,7 +117,12 @@ public class ClueSolverRunner {
 		clueSolver.getClue().setObject(null);
 		clueSolver.outputSolutionTriples();
 		
-
+		//Triples where The_Beatles is artist using the alternative ClueSolver interface:
+		String dbNs = "http://dbpedia.org/resource/";
+		String db_owlNs = "http://dbpedia.org/ontology/";
+		String clueAsString = "? " + db_owlNs + "artist " + dbNs + "The_Beatles";
+		ClueSolver anotherClueSolver = new ClueSolver(clueAsString, newModel);
+		anotherClueSolver.outputSolutionTriples();
 	}
 
 }
