@@ -67,6 +67,45 @@ public class ClueSolverRunner {
 		object = model.createResource("http://dbpedia.org/resource/Hip_hop");
 		clueSolver.setClue(new Clue(null, predicate, object));
 		clueSolver.outputSolutionTriples();
+		
+		
+		
+		// Find all resources written by John Lennon in testDatasetExtended.xml
+		System.out.println();
+		Model newModel = ModelFactory.createDefaultModel();
+		
+		modelFileName = "testDatasetExtended.xml";
+		
+		// instantiate an input stream and read the file into the model
+		try {
+			in = new FileInputStream(modelFileName);
+			
+			String lang = "RDF/XML";
+			
+			newModel.read(new InputStreamReader(in), "", lang);
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		object = newModel.createResource("http://dbpedia.org/resource/John_Lennon");
+		predicate = newModel.createProperty("http://dbpedia.org/ontology/writer");
+		
+		clueSolver.getClue().setSubject(null);
+		clueSolver.getClue().setPredicate(predicate);
+		clueSolver.getClue().setObject(object);
+		clueSolver.setModel(newModel);
+		clueSolver.outputSolutionTriples();
+		
+		
+		//... and where The_Beatles is the artist in testDatasetExtended.xml:
+		System.out.println();
+		object = newModel.createResource("http://dbpedia.org/resource/The_Beatles");
+		predicate = newModel.createProperty("http://dbpedia.org/ontology/artist");
+		clueSolver.getClue().setPredicate(predicate);
+		clueSolver.getClue().setObject(object);
+		clueSolver.outputSolutionTriples();
+		
 
 	}
 
