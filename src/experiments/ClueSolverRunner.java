@@ -106,6 +106,17 @@ public class ClueSolverRunner {
 		clueSolver.getClue().setObject(object);
 		clueSolver.outputSolutionTriples();
 		
+		//... and all triples where The_Beatles is object...
+		System.out.println();
+		clueSolver.getClue().setPredicate(null);
+		clueSolver.outputSolutionTriples();
+		
+		//... and where The_Beatles is subject (there are none):
+		System.out.println();
+		clueSolver.getClue().setSubject(object);
+		clueSolver.getClue().setObject(null);
+		clueSolver.outputSolutionTriples();
+		
 
 	}
 

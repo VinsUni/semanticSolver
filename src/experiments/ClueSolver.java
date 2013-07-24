@@ -27,6 +27,8 @@ public class ClueSolver {
 		StmtIterator iterator = this.getModel().listStatements(
 								new SimpleSelector(this.getClue().getSubject(), this.getClue().getPredicate(), 
 										(RDFNode) this.getClue().getObject()));
+		if(!iterator.hasNext())
+			System.out.println("No triples in the model match this clue");
 		while(iterator.hasNext()) {
 			 Statement statement = iterator.nextStatement(); // get the next statement
 			 Resource subject = statement.getSubject(); // get the subject of the statement
