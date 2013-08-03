@@ -15,5 +15,6 @@
       <vcard:Given>John</vcard:Given>
       <vcard:Family>Lennon</vcard:Family>
     </vcard:N>
+    <vcard:FN>Another full name!</vcard:FN>
   </clue:artist>
 </rdf:RDF>

@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -17,7 +16,6 @@ import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -35,9 +33,9 @@ public class RDFAPITutorial {
 	 */
 	public static void main(String[] args) {
 		// some definitions
-		final String DBPEDIA_ONTOLOGY_NS = "http://dbpedia.org/ontology/";
+		// final String DBPEDIA_ONTOLOGY_NS = "http://dbpedia.org/ontology/";
 		final String DBPEDIA_NS = "http://dbpedia.org/resource/";
-		final String DBPEDIA_ARTIST = DBPEDIA_ONTOLOGY_NS + "artist"; // unused at present
+		// final String DBPEDIA_ARTIST = DBPEDIA_ONTOLOGY_NS + "artist";
 		String artistURI = DBPEDIA_NS + "John_Lennon";
 		String artistName = "John Lennon";
 		
@@ -90,6 +88,10 @@ public class RDFAPITutorial {
 		 	.addProperty(VCARD.N, model.createResource()
 		 								.addProperty(VCARD.Given, givenName)
 		 								.addProperty(VCARD.Family, familyName));
+		 
+		 /* add another property */
+		 johnLennon
+		 	.addProperty(VCARD.FN, "Another full name!");
 		 
 		 /* Now retrieve the value of the Given and Family properties of the blank node of type VCARD:N that is a property of our
 		  * johnLennon resource
@@ -147,7 +149,7 @@ public class RDFAPITutorial {
 		 model.write(System.out, "N-TRIPLES");
 		 
 		 // Now, write the model out to a file in RDF/XML-ABBREV format:
-		 String fileName = "output.xml";
+		 String fileName = "data\\output.xml";
 		 try {
 			 FileOutputStream outFile = new FileOutputStream(fileName);
 			 model.write(outFile, "RDF/XML-ABBREV");

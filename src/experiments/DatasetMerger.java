@@ -52,7 +52,7 @@ public class DatasetMerger {
 		prefixLoader.loadStandardPrefixes();
 		
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
-		String fileName = "mergedTestDataSet.xml";
+		String fileName = "data\\mergedTestDataSet.xml";
 		try {
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			mergedModel.write(outFile, "RDF/XML-ABBREV");
