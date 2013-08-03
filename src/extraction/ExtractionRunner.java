@@ -14,7 +14,11 @@ public class ExtractionRunner {
 	 * @param args - accepts a single String argument, which is the URL of a resource
 	 */
 	public static void main(String[] args) {
+		if(args.length != 1)
+			throw new IllegalArgumentException("Invalid argument to main method");
+		String url = args[0];
 		
+		System.err.println("Resource: " + url );
 
 	}
 
