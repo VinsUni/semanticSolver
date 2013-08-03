@@ -3,11 +3,6 @@
  */
 package experiments;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -16,6 +11,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.util.FileManager;
 
 /**
  * @author Ben
@@ -36,20 +32,11 @@ public class ClueSolverRunner {
 		
 		Model model = ModelFactory.createDefaultModel();
 		
+		
 		String modelFileName = "mergedTestDataSet.xml";
 		
-		// instantiate an input stream and read the file into the model
-		InputStream in;
-		try {
-			in = new FileInputStream(modelFileName);
-			
-			String lang = "RDF/XML";
-			
-			model.read(new InputStreamReader(in), "", lang);
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		// Read the file into the model
+		model = FileManager.get().loadModel(modelFileName);
 		
 		// Find everything where the artist is Velvet Revolver
 		Resource object = model.createResource("http://dbpedia.org/resource/Velvet_Revolver");
@@ -76,17 +63,9 @@ public class ClueSolverRunner {
 		
 		modelFileName = "testDatasetExtended.xml";
 		
-		// instantiate an input stream and read the file into the model
-		try {
-			in = new FileInputStream(modelFileName);
-			
-			String lang = "RDF/XML";
-			
-			newModel.read(new InputStreamReader(in), "", lang);
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		// read the file into the model
+		newModel = FileManager.get().loadModel(modelFileName);
+
 		
 		object = newModel.createResource("http://dbpedia.org/resource/John_Lennon");
 		predicate = newModel.createProperty("http://dbpedia.org/ontology/writer");
