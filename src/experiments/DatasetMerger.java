@@ -1,11 +1,8 @@
 package experiments;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -13,6 +10,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.util.FileManager;
 
 public class DatasetMerger {
 	
@@ -37,24 +35,14 @@ public class DatasetMerger {
 		Model model1 = ModelFactory.createDefaultModel();
 		Model model2 = ModelFactory.createDefaultModel();
 		
-		String model1FileName = "triplesWhereObjectIsAMusicalWorkExtract.xml";
-		String model2FileName = "triplesWhereSubjectIsAMusicalWorkExtract.xml";
+		String model1Url = "triplesWhereObjectIsAMusicalWorkExtract.xml";
+		String model2Url = "triplesWhereSubjectIsAMusicalWorkExtract.xml";
 		
-		// instantiate two input streams and read the two datasets into the two models
-		InputStream in1, in2;
-		try {
-			in1 = new FileInputStream(model1FileName);
-			in2 = new FileInputStream(model2FileName);
-			
-			String lang = "RDF/XML";
-			
-			model1.read(new InputStreamReader(in1), "", lang);
-			model2.read(new InputStreamReader(in2), "", lang);
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
-	
+		
+		// Load the two files into the two models
+		model1 = FileManager.get().loadModel(model1Url);
+		model2 = FileManager.get().loadModel(model2Url);
+		
 		Model mergedModel = model1.union(model2); // create a third model which is the union of the two models
 		
 		/* Define a prefix for one of the many namespaces used in the merged model
@@ -69,6 +57,7 @@ public class DatasetMerger {
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			mergedModel.write(outFile, "RDF/XML-ABBREV");
 			outFile.close();
+			System.out.println("File has been written!");
 		}
 		catch(FileNotFoundException e) {
 			e.printStackTrace();
