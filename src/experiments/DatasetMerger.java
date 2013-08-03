@@ -57,7 +57,6 @@ public class DatasetMerger {
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			mergedModel.write(outFile, "RDF/XML-ABBREV");
 			outFile.close();
-			System.out.println("File has been written!");
 		}
 		catch(FileNotFoundException e) {
 			e.printStackTrace();
