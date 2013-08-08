@@ -1,0 +1,1411 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY umbel2 "http://umbel.org/umbel#" >
+    <!ENTITY umbel "http://umbel.org/umbel/rc/" >
+    <!ENTITY dbpedia-owl "http://dbpedia.org/ontology/" >
+    <!ENTITY dbpprop "http://dbpedia.org/property/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY yago "http://dbpedia.org/class/yago/" >
+    <!ENTITY yago2 "http://dbpedia.org/class/yago/&#39;" >
+    <!ENTITY T "http://dbpedia.org/class/yago/T&#39;" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY Man "http://dbpedia.org/class/yago/Man&#39;" >
+    <!ENTITY NoMan "http://dbpedia.org/class/yago/NoMan&#39;" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY Artist "http://dbpedia.org/class/yago/Artist&#39;" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY n "http://dbpedia.org/class/yago/Rock&#39;n&#39;" >
+    <!ENTITY Compositor "http://dbpedia.org/class/yago/Compositor&#39;" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pop "http://www.griffithsben.com/pop/ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.griffithsben.com/ontologies/pop.owl#"
+     xml:base="http://www.griffithsben.com/ontologies/pop.owl"
+     xmlns:umbel="http://umbel.org/umbel/rc/"
+     xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Artist="&yago;Artist&#39;"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:yago="http://dbpedia.org/class/yago/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:umbel2="http://umbel.org/umbel#"
+     xmlns:dbpprop="http://dbpedia.org/property/"
+     xmlns:NoMan="&yago;NoMan&#39;"
+     xmlns:yago2="&yago;&#39;"
+     xmlns:T="&yago;T&#39;"
+     xmlns:pop="http://www.griffithsben.com/pop/ontology.owl#"
+     xmlns:n="&yago;Rock&#39;n&#39;"
+     xmlns:Compositor="&yago;Compositor&#39;"
+     xmlns:Man="&yago;Man&#39;"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.griffithsben.com/ontologies/pop.owl">
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&skos;prefLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;narrowerTransitive"/>
+    <owl:AnnotationProperty rdf:about="&umbel2;superClassOf"/>
+    <owl:AnnotationProperty rdf:about="&skos;altLabel"/>
+    <owl:AnnotationProperty rdf:about="&skos;broaderTransitive"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/artist -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;artist">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/bandMember -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;bandMember">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasMember"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/musicalArtist -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;musicalArtist">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/musicalBand -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;musicalBand">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/producer -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;producer">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasProducer"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/recordLabel -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;recordLabel">
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/property/associatedActs -->
+
+    <owl:ObjectProperty rdf:about="&dbpprop;associatedActs"/>
+    
+
+
+    <!-- http://dbpedia.org/property/currentMembers -->
+
+    <owl:ObjectProperty rdf:about="&dbpprop;currentMembers"/>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#albumOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#albumOf">
+        <rdfs:label>album of</rdfs:label>
+        <rdfs:label>album by</rdfs:label>
+        <skos:prefLabel>album of</skos:prefLabel>
+        <rdfs:comment xml:lang="en">The value of this property is a musical artist or organisation responsible for performing/writing/producing/publishing the subject (a musical work of type pop:album)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#artistOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#artistOf">
+        <rdfs:label>artist of</rdfs:label>
+        <rdfs:label>singer of</rdfs:label>
+        <rdfs:comment>The value of this property is a song (pop:composition) or album (pop:album) on which the subject (artist/group/producer) performs</rdfs:comment>
+        <skos:prefLabel>artist of</skos:prefLabel>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#composerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#composerOf">
+        <rdfs:label>composer of</rdfs:label>
+        <rdfs:label>writer of</rdfs:label>
+        <skos:prefLabel>composer of</skos:prefLabel>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#compositionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#compositionOf">
+        <rdfs:label>song by</rdfs:label>
+        <rdfs:label>written by</rdfs:label>
+        <rdfs:label>composition of</rdfs:label>
+        <rdfs:comment xml:lang="en">The value of this property is a musical artist or organisation responsible for performing/writing/producing/publishing the subject (a musical work of type pop:composition or pop:album)</rdfs:comment>
+        <skos:prefLabel>composition of</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#genreOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#genreOf">
+        <rdfs:label>genre of</rdfs:label>
+        <rdfs:label>genre</rdfs:label>
+        <rdfs:comment>Describes the genre of an artist, band, album, label</rdfs:comment>
+        <skos:prefLabel>genre of</skos:prefLabel>
+        <rdfs:range rdf:resource="&dbpedia-owl;Band"/>
+        <rdfs:range rdf:resource="&dbpedia-owl;MusicalArtist"/>
+        <rdfs:range rdf:resource="&dbpedia-owl;Single"/>
+        <rdfs:range rdf:resource="&schema;MusicGroup"/>
+        <rdfs:range rdf:resource="&umbel;Artist_Performer"/>
+        <rdfs:range rdf:resource="&umbel;Band_MusicGroup"/>
+        <rdfs:range rdf:resource="&umbel;MusicSingle"/>
+        <rdfs:range rdf:resource="&umbel;MusicalComposition"/>
+        <rdfs:range rdf:resource="&umbel;MusicalComposition_Song"/>
+        <rdfs:range rdf:resource="&umbel;MusicalPerformer"/>
+        <rdfs:range rdf:resource="&umbel;RecordCompany"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genre"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasAlbum -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasAlbum">
+        <rdfs:label>album</rdfs:label>
+        <rdfs:label>has album</rdfs:label>
+        <skos:prefLabel>has album</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasArtist -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasArtist">
+        <rdfs:label>sung by</rdfs:label>
+        <rdfs:label>has artist</rdfs:label>
+        <rdfs:label>released by</rdfs:label>
+        <rdfs:label>artist</rdfs:label>
+        <skos:prefLabel>has artist</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasComposer -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasComposer">
+        <rdfs:label>composed by</rdfs:label>
+        <rdfs:label>written by</rdfs:label>
+        <rdfs:label>has composer</rdfs:label>
+        <skos:prefLabel>has composer</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composerOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasComposition -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasComposition">
+        <rdfs:label>writer of</rdfs:label>
+        <rdfs:label>has composition</rdfs:label>
+        <skos:prefLabel>has composition</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasMember">
+        <rdfs:label>member</rdfs:label>
+        <rdfs:label>has member</rdfs:label>
+        <skos:prefLabel>has member</skos:prefLabel>
+        <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedMusicalArtist"/>
+        <rdfs:subPropertyOf rdf:resource="&dbpprop;associatedActs"/>
+        <rdfs:subPropertyOf rdf:resource="&dbpprop;currentMembers"/>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasProducer -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasProducer">
+        <rdfs:label>producer</rdfs:label>
+        <rdfs:label>has producer</rdfs:label>
+        <skos:prefLabel>has producer</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel">
+        <rdfs:label>record label</rdfs:label>
+        <rdfs:label>has record label</rdfs:label>
+        <skos:prefLabel>has record label</skos:prefLabel>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#memberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#memberOf">
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>associated band</rdfs:label>
+        <rdfs:label>member of</rdfs:label>
+        <skos:prefLabel>member of</skos:prefLabel>
+        <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedBand"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#producerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#producerOf">
+        <rdfs:label>producer</rdfs:label>
+        <rdfs:label>producer of</rdfs:label>
+        <rdfs:comment xml:lang="en">The value of this property is a producer responsible for producing the subject (a musical work of type pop:composition or pop:album) or producing the subject&#39;s work (if the subject is an artist or group)</rdfs:comment>
+        <skos:prefLabel>producer of</skos:prefLabel>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf">
+        <rdfs:label>record label of</rdfs:label>
+        <rdfs:label>record label</rdfs:label>
+        <skos:prefLabel>record label of</skos:prefLabel>
+        <rdfs:comment xml:lang="en">The value of this property is a record label responsible for publishing the subject (a musical work of type pop:composition or pop:album) or publishing the subject&#39;s work (if the subject is an artist/group/producer/composer)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#relationalProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/class/yago/ACappellaSinging100546070 -->
+
+    <owl:Class rdf:about="&yago;ACappellaSinging100546070">
+        <rdfs:label>A Cappella Singing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;Singing100545501"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Album106591815 -->
+
+    <owl:Class rdf:about="&yago;Album106591815"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Composer109947232 -->
+
+    <owl:Class rdf:about="&yago;Composer109947232"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Group100031264 -->
+
+    <owl:Class rdf:about="&yago;Group100031264"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/MusicalComposition107037465 -->
+
+    <owl:Class rdf:about="&yago;MusicalComposition107037465"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Musician110340312 -->
+
+    <owl:Class rdf:about="&yago;Musician110340312"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Singer110599806 -->
+
+    <owl:Class rdf:about="&yago;Singer110599806"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Singing100545501 -->
+
+    <owl:Class rdf:about="&yago;Singing100545501"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Song107048000 -->
+
+    <owl:Class rdf:about="&yago;Song107048000"/>
+    
+
+
+    <!-- http://dbpedia.org/class/yago/Songwriter110624540 -->
+
+    <owl:Class rdf:about="&yago;Songwriter110624540"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Album -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;Album">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Band -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;Band">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/MusicalArtist -->
+
+    <owl:Class rdf:about="&dbpedia-owl;MusicalArtist">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+        <rdfs:subClassOf rdf:resource="&umbel;Artist"/>
+        <rdfs:subClassOf rdf:resource="&umbel;MusicalPerformer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/RecordLabel -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;RecordLabel">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Single -->
+
+    <owl:Class rdf:about="&dbpedia-owl;Single">
+        <owl:equivalentClass rdf:resource="&umbel;MusicSingle"/>
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Song -->
+
+    <rdf:Description rdf:about="&dbpedia-owl;Song">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/MusicGroup -->
+
+    <rdf:Description rdf:about="&schema;MusicGroup">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://schema.org/MusicRecording -->
+
+    <rdf:Description rdf:about="&schema;MusicRecording">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://umbel.org/umbel#RefConcept -->
+
+    <owl:Class rdf:about="&umbel2;RefConcept"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Album_IBO -->
+
+    <owl:Class rdf:about="&umbel;Album_IBO">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+        <rdfs:subClassOf rdf:resource="&umbel;RecordedSoundProduct"/>
+        <skos:definition>The collection of RecordedSoundProducts that instantiate instances of Album_CW.</skos:definition>
+        <skos:altLabel>albums</skos:altLabel>
+        <skos:prefLabel>album</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;RecordedSoundProduct"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Artist -->
+
+    <owl:Class rdf:about="&umbel;Artist">
+        <rdfs:subClassOf rdf:resource="&umbel;HomoSapiens"/>
+        <rdfs:subClassOf rdf:resource="&umbel;Person"/>
+        <skos:prefLabel>artist</skos:prefLabel>
+        <skos:altLabel>artists</skos:altLabel>
+        <skos:altLabel>creative artists</skos:altLabel>
+        <skos:altLabel>creative artist</skos:altLabel>
+        <skos:definition>A specialization of Person. Each instance of this collection is a person who produces or performs works of art.  This includes performing artists (whose works are transitory unless recorded) as well as visual artists, literary writers, and composers (whose works are intended to last for a significant length of time and be viewed or otherwise appreciated after the artist finishes them). A notable specialization of this collection is Artist_Visual. See also ArtObject, artisticWorksCreated.</skos:definition>
+        <skos:narrowerTransitive rdf:resource="&umbel;Actor"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Artist_Performer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Artist_Performer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Artist_Visual"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Artist_Visual"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Author"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Author"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Choreographer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Choreographer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Comedian"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Director_Movie"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Director_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Draftsman_Artist"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Draftsman_Artist"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Musician"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Musician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Novelist"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Person"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Playwright"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Poet"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Producer_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Producer_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Screenwriter"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/ArtistTypeByArtForm -->
+
+    <owl:Class rdf:about="&umbel;ArtistTypeByArtForm"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Artist_Performer -->
+
+    <owl:Class rdf:about="&umbel;Artist_Performer"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Artist_PerformerTypeByPerformanceType -->
+
+    <owl:Class rdf:about="&umbel;Artist_PerformerTypeByPerformanceType"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/AudioConceptualWork -->
+
+    <owl:Class rdf:about="&umbel;AudioConceptualWork"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Band_MusicGroup -->
+
+    <owl:Class rdf:about="&umbel;Band_MusicGroup">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+        <rdfs:subClassOf rdf:resource="&umbel;MusicPerformanceOrganization"/>
+        <skos:altLabel>bands</skos:altLabel>
+        <skos:definition>A collection of music performance organizations.  An element of Band_MusicGroup is a (small or large) group of musicians who play non-Classical music together on either a regular or intermittent schedule.  For example, the RollingStones or the University of Texas marching band -- but not the Chicago Symphony Orchestra.</skos:definition>
+        <skos:prefLabel>band</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;EntertainmentOrRecreationOrganization"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MarchingBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MarchingBand"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MilitaryBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MilitaryBand"/>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicPerformanceOrganization"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Organization"/>
+        <skos:broaderTransitive rdf:resource="&umbel;OrganizationOfPeopleOnly"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;PopularMusicBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;PopularMusicBand"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;RockBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;RockBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/BusinessTypeByActivityType -->
+
+    <owl:Class rdf:about="&umbel;BusinessTypeByActivityType"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/ExistingObjectType -->
+
+    <owl:Class rdf:about="&umbel;ExistingObjectType"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/HomoSapiens -->
+
+    <owl:Class rdf:about="&umbel;HomoSapiens"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/ManufacturingCompany -->
+
+    <owl:Class rdf:about="&umbel;ManufacturingCompany"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicPerformanceAgent -->
+
+    <owl:Class rdf:about="&umbel;MusicPerformanceAgent"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicPerformanceOrganization -->
+
+    <owl:Class rdf:about="&umbel;MusicPerformanceOrganization"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicSingle -->
+
+    <owl:Class rdf:about="&umbel;MusicSingle">
+        <rdfs:subClassOf rdf:resource="&umbel;RecordedSoundProduct"/>
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+        <skos:definition>A collection of IBOs.  Collection of musical $#RecordedSoundProducts that correspond to SingleRecording_CW.</skos:definition>
+        <skos:prefLabel>music single</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;RecordedSoundProduct"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalComposition -->
+
+    <owl:Class rdf:about="&umbel;MusicalComposition">
+        <rdfs:subClassOf rdf:resource="&umbel;AudioConceptualWork"/>
+        <skos:altLabel>music composition</skos:altLabel>
+        <skos:altLabel>music compositions</skos:altLabel>
+        <skos:altLabel>compositions</skos:altLabel>
+        <skos:prefLabel>musical composition</skos:prefLabel>
+        <skos:definition>The collection of all composed pieces of music, whether recorded or not, extant for centuries or composed on the spot, instrumental or sung, etc.  This is not to be confused with musical performances, although musical performances normally enact instances of MusicalComposition.</skos:definition>
+        <skos:altLabel>composition</skos:altLabel>
+        <skos:altLabel>musical compositions</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;AudioConceptualWork"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_1980sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_1980sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_1990sPop"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_1990sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_ACappella"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_ACappella"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Bluegrass"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Bluegrass"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Blues"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Blues"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Choral"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Choral"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Christian"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Classical"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Classical"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Country"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Country"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Cyberpunk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Cyberpunk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Electronic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Electronic"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Electronica"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Electronica"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Experimental"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Experimental"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Folk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Folk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Funk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Funk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_HipHop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_HipHop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Jazz"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Jazz"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Klezmer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Klezmer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Lounge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Lounge"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_NewAge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_NewAge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Progressive"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Progressive"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Rap"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Rap"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Reggae"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Reggae"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Religious"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Religious"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_RhythmAndBlues"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_RhythmAndBlues"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Rock"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Rock"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Romantic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Romantic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Salsa"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Salsa"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Ska"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Ska"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Song"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Song"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Soul"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Soul"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Swing"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Swing"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_TraditionalPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_TraditionalPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Trance"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Trance"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Refrain"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Refrain"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Riff"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Riff"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Tune"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Tune"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Verse"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Verse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalComposition_Song -->
+
+    <owl:Class rdf:about="&umbel;MusicalComposition_Song">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+        <rdfs:subClassOf rdf:resource="&umbel;MusicalComposition"/>
+        <skos:definition>The collection of instances of MusicalComposition that are &amp;quot;song-like&amp;quot; in nature.  They usually have 
+lyrics and are relatively short in duration.  An example of an instance of this collection is &amp;quot;Let it be&amp;quot; by TheBeatles_MusicGroup.  Negative examples might
+be the 2nd movement of some classical symphony.</skos:definition>
+        <skos:prefLabel>musical composition song</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicalComposition"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Song_CW"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Song_CW"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalPerformer -->
+
+    <owl:Class rdf:about="&umbel;MusicalPerformer">
+        <rdfs:subClassOf rdf:resource="&umbel;Artist_Performer"/>
+        <rdfs:subClassOf rdf:resource="&umbel;MusicPerformanceAgent"/>
+        <rdfs:subClassOf rdf:resource="&umbel;Musician"/>
+        <skos:altLabel>musical artist</skos:altLabel>
+        <skos:altLabel>musical artists</skos:altLabel>
+        <skos:prefLabel>musical performer</skos:prefLabel>
+        <skos:altLabel>musical performers</skos:altLabel>
+        <skos:definition>A specialization of Artist_Performer, Musician and MusicPerformanceAgent. Each instance of this collection is a an individual person performing music for an audience. For groups or bands, see MusicPerformanceAgent.</skos:definition>
+        <skos:broaderTransitive rdf:resource="&umbel;Artist_Performer"/>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicPerformanceAgent"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalConductor"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalConductor"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalInstrumentPlayer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalInstrumentPlayer"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Musician"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Rapper"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Rapper"/>
+        <umbel2:superClassOf rdf:resource="&umbel;RockMusician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;RockMusician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Singer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Singer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Soloist"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Soloist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Musician -->
+
+    <owl:Class rdf:about="&umbel;Musician"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/ObjectType -->
+
+    <owl:Class rdf:about="&umbel;ObjectType"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Person -->
+
+    <owl:Class rdf:about="&umbel;Person"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/RecordCompany -->
+
+    <owl:Class rdf:about="&umbel;RecordCompany">
+        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
+        <rdfs:subClassOf rdf:resource="&umbel;ManufacturingCompany"/>
+        <skos:altLabel>record companies</skos:altLabel>
+        <skos:altLabel>record company</skos:altLabel>
+        <skos:altLabel>record labels</skos:altLabel>
+        <skos:definition>The collection of all record companies, which are businesses that produce and market sound recordings. A type of ManufacturingCompany. RecordCompany is a BusinessTypeByActivityType.</skos:definition>
+        <skos:prefLabel>record label</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;Business"/>
+        <skos:broaderTransitive rdf:resource="&umbel;ManufacturingCompany"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/RecordedSoundProduct -->
+
+    <owl:Class rdf:about="&umbel;RecordedSoundProduct"/>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/TemporalStuffType -->
+
+    <owl:Class rdf:about="&umbel;TemporalStuffType"/>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#album -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#album">
+        <rdfs:label>platter</rdfs:label>
+        <rdfs:label>LP</rdfs:label>
+        <rdfs:label>album</rdfs:label>
+        <rdfs:label>long player</rdfs:label>
+        <rdfs:label>record</rdfs:label>
+        <rdfs:label>release</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;Album106591815"/>
+        <rdfs:subClassOf rdf:resource="&dbpedia-owl;MusicalWork"/>
+        <rdfs:subClassOf rdf:resource="&schema;MusicAlbum"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>album</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#artist -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#artist">
+        <rdfs:label>artist</rdfs:label>
+        <rdfs:label>rocker</rdfs:label>
+        <rdfs:label>musician</rdfs:label>
+        <rdfs:label>pop singer</rdfs:label>
+        <rdfs:label>singer</rdfs:label>
+        <rdfs:label>artiste</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;Musician110340312"/>
+        <rdfs:subClassOf rdf:resource="&yago;Singer110599806"/>
+        <skos:prefLabel>artist</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#composer -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#composer">
+        <rdfs:label>writer</rdfs:label>
+        <rdfs:label>composer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;Composer109947232"/>
+        <rdfs:subClassOf rdf:resource="&yago;Songwriter110624540"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>composer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#composition -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#composition">
+        <rdfs:label>single</rdfs:label>
+        <rdfs:label>hit</rdfs:label>
+        <rdfs:label>composition</rdfs:label>
+        <rdfs:label>tune</rdfs:label>
+        <rdfs:label>song</rdfs:label>
+        <rdfs:label>release</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;MusicalComposition107037465"/>
+        <rdfs:subClassOf rdf:resource="&yago;Song107048000"/>
+        <rdfs:subClassOf rdf:resource="&dbpedia-owl;MusicalWork"/>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:subClassOf rdf:resource="&schema;MusicRecording"/>
+        <rdfs:subClassOf rdf:resource="&umbel;MusicalComposition"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>composition</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#genre -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#genre">
+        <rdfs:label>genre</rdfs:label>
+        <rdfs:label>music type</rdfs:label>
+        <rdfs:label>type of music</rdfs:label>
+        <rdfs:label>style</rdfs:label>
+        <skos:prefLabel>genre</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#group -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#group">
+        <rdfs:label>group</rdfs:label>
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>outfit</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&yago;Group100031264"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>group</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#producer -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#producer">
+        <rdfs:label>producer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>producer</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.griffithsben.com/ontologies/pop.owl#recordLabel -->
+
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/pop.owl#recordLabel">
+        <rdfs:label>record label</rdfs:label>
+        <rdfs:label>label</rdfs:label>
+        <rdfs:label>record company</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <skos:prefLabel>record label</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Album_IBO -->
+
+    <owl:NamedIndividual rdf:about="&umbel;Album_IBO">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;ExistingObjectType"/>
+        <skos:definition>The collection of RecordedSoundProducts that instantiate instances of Album_CW.</skos:definition>
+        <skos:altLabel>albums</skos:altLabel>
+        <skos:prefLabel>album</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;RecordedSoundProduct"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Artist -->
+
+    <owl:NamedIndividual rdf:about="&umbel;Artist">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <skos:prefLabel>artist</skos:prefLabel>
+        <skos:altLabel>artists</skos:altLabel>
+        <skos:altLabel>creative artists</skos:altLabel>
+        <skos:altLabel>creative artist</skos:altLabel>
+        <skos:definition>A specialization of Person. Each instance of this collection is a person who produces or performs works of art.  This includes performing artists (whose works are transitory unless recorded) as well as visual artists, literary writers, and composers (whose works are intended to last for a significant length of time and be viewed or otherwise appreciated after the artist finishes them). A notable specialization of this collection is Artist_Visual. See also ArtObject, artisticWorksCreated.</skos:definition>
+        <skos:narrowerTransitive rdf:resource="&umbel;Actor"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Artist_Performer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Artist_Performer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Artist_Visual"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Artist_Visual"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Author"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Author"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Choreographer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Choreographer"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Comedian"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Director_Movie"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Director_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Draftsman_Artist"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Draftsman_Artist"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Musician"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Musician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Novelist"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Person"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Playwright"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Poet"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Producer_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Producer_Movie"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Screenwriter"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Writer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/Band_MusicGroup -->
+
+    <owl:NamedIndividual rdf:about="&umbel;Band_MusicGroup">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;ExistingObjectType"/>
+        <skos:altLabel>bands</skos:altLabel>
+        <skos:definition>A collection of music performance organizations.  An element of Band_MusicGroup is a (small or large) group of musicians who play non-Classical music together on either a regular or intermittent schedule.  For example, the RollingStones or the University of Texas marching band -- but not the Chicago Symphony Orchestra.</skos:definition>
+        <skos:prefLabel>band</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;EntertainmentOrRecreationOrganization"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MarchingBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MarchingBand"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MilitaryBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MilitaryBand"/>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicPerformanceOrganization"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Organization"/>
+        <skos:broaderTransitive rdf:resource="&umbel;OrganizationOfPeopleOnly"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;PopularMusicBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;PopularMusicBand"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;RockBand"/>
+        <umbel2:superClassOf rdf:resource="&umbel;RockBand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicSingle -->
+
+    <owl:NamedIndividual rdf:about="&umbel;MusicSingle">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;ExistingObjectType"/>
+        <skos:definition>A collection of IBOs.  Collection of musical $#RecordedSoundProducts that correspond to SingleRecording_CW.</skos:definition>
+        <skos:prefLabel>music single</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;RecordedSoundProduct"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalComposition -->
+
+    <owl:NamedIndividual rdf:about="&umbel;MusicalComposition">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;ObjectType"/>
+        <rdf:type rdf:resource="&umbel;TemporalStuffType"/>
+        <skos:altLabel>music composition</skos:altLabel>
+        <skos:altLabel>music compositions</skos:altLabel>
+        <skos:altLabel>compositions</skos:altLabel>
+        <skos:prefLabel>musical composition</skos:prefLabel>
+        <skos:definition>The collection of all composed pieces of music, whether recorded or not, extant for centuries or composed on the spot, instrumental or sung, etc.  This is not to be confused with musical performances, although musical performances normally enact instances of MusicalComposition.</skos:definition>
+        <skos:altLabel>composition</skos:altLabel>
+        <skos:altLabel>musical compositions</skos:altLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;AudioConceptualWork"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_1980sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_1980sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_1990sPop"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_1990sPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_ACappella"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_ACappella"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Bluegrass"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Bluegrass"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Blues"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Blues"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Choral"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Choral"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Christian"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Classical"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Classical"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Country"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Country"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Cyberpunk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Cyberpunk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Electronic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Electronic"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Electronica"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Electronica"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Experimental"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Experimental"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Folk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Folk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Funk"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Funk"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_HipHop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_HipHop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Jazz"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Jazz"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Klezmer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Klezmer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Lounge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Lounge"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_NewAge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_NewAge"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Progressive"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Progressive"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Rap"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Rap"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Reggae"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Reggae"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Religious"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Religious"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_RhythmAndBlues"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_RhythmAndBlues"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Rock"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Rock"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Romantic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Romantic"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Salsa"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Salsa"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Ska"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Ska"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Song"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Song"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Soul"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Soul"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Swing"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Swing"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_TraditionalPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_TraditionalPop"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalComposition_Trance"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalComposition_Trance"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Refrain"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Refrain"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Riff"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Riff"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Tune"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Tune"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Verse"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Verse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalComposition_Song -->
+
+    <owl:NamedIndividual rdf:about="&umbel;MusicalComposition_Song">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <skos:definition>The collection of instances of MusicalComposition that are &amp;quot;song-like&amp;quot; in nature.  They usually have 
+lyrics and are relatively short in duration.  An example of an instance of this collection is &amp;quot;Let it be&amp;quot; by TheBeatles_MusicGroup.  Negative examples might
+be the 2nd movement of some classical symphony.</skos:definition>
+        <skos:prefLabel>musical composition song</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicalComposition"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Song_CW"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Song_CW"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/MusicalPerformer -->
+
+    <owl:NamedIndividual rdf:about="&umbel;MusicalPerformer">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;ArtistTypeByArtForm"/>
+        <rdf:type rdf:resource="&umbel;Artist_PerformerTypeByPerformanceType"/>
+        <skos:altLabel>musical artist</skos:altLabel>
+        <skos:altLabel>musical artists</skos:altLabel>
+        <skos:prefLabel>musical performer</skos:prefLabel>
+        <skos:altLabel>musical performers</skos:altLabel>
+        <skos:definition>A specialization of Artist_Performer, Musician and MusicPerformanceAgent. Each instance of this collection is a an individual person performing music for an audience. For groups or bands, see MusicPerformanceAgent.</skos:definition>
+        <skos:broaderTransitive rdf:resource="&umbel;Artist_Performer"/>
+        <skos:broaderTransitive rdf:resource="&umbel;MusicPerformanceAgent"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalConductor"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalConductor"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;MusicalInstrumentPlayer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;MusicalInstrumentPlayer"/>
+        <skos:broaderTransitive rdf:resource="&umbel;Musician"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Rapper"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Rapper"/>
+        <umbel2:superClassOf rdf:resource="&umbel;RockMusician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;RockMusician"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Singer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Singer"/>
+        <umbel2:superClassOf rdf:resource="&umbel;Soloist"/>
+        <skos:narrowerTransitive rdf:resource="&umbel;Soloist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://umbel.org/umbel/rc/RecordCompany -->
+
+    <owl:NamedIndividual rdf:about="&umbel;RecordCompany">
+        <rdf:type rdf:resource="&umbel2;RefConcept"/>
+        <rdf:type rdf:resource="&umbel;BusinessTypeByActivityType"/>
+        <skos:altLabel>record companies</skos:altLabel>
+        <skos:altLabel>record company</skos:altLabel>
+        <skos:altLabel>record labels</skos:altLabel>
+        <skos:definition>The collection of all record companies, which are businesses that produce and market sound recordings. A type of ManufacturingCompany. RecordCompany is a BusinessTypeByActivityType.</skos:definition>
+        <skos:prefLabel>record label</skos:prefLabel>
+        <skos:broaderTransitive rdf:resource="&umbel;Business"/>
+        <skos:broaderTransitive rdf:resource="&umbel;ManufacturingCompany"/>
+        <umbel2:superClassOf rdf:resource="&skos;Collection"/>
+        <umbel2:superClassOf rdf:resource="&skos;ConceptScheme"/>
+        <umbel2:superClassOf rdf:resource="&skos;OrderedCollection"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
