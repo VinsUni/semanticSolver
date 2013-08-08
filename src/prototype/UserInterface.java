@@ -1,6 +1,6 @@
 package prototype;
 /**
- * @author Ben
+ * @author Ben Griffiths
  *
  */
 public class UserInterface {
