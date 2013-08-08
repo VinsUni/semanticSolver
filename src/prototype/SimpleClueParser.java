@@ -7,6 +7,6 @@ package prototype;
  * @author Ben Griffiths
  *
  */
-public interface ClueParser {
+public class SimpleClueParser {
 
 }

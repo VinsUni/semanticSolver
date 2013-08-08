@@ -10,7 +10,7 @@ public class SemanticSolverRunner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		ModelLoader modelLoader = new ModelLoader("Lombok is alive");
+		SimpleModelLoader modelLoader = new SimpleModelLoader("Lombok is alive");
 		modelLoader.go();
 
 	}
