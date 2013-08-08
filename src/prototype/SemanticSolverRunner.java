@@ -1,6 +1,6 @@
 package prototype;
 
-public class QueryModule {
+public class SemanticSolverRunner {
 
 	/**
 	 * @param args
