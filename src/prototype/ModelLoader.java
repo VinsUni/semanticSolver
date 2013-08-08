@@ -7,6 +7,6 @@ package prototype;
  * @author Ben Griffiths
  *
  */
-public class ClueParser {
+public class ModelLoader {
 
 }
