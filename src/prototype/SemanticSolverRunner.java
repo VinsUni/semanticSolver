@@ -1,5 +1,7 @@
 package prototype;
 
+import java.util.ArrayList;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -20,9 +22,15 @@ public class SemanticSolverRunner {
 		Logger.getRootLogger().setLevel(Level.INFO);
 		PropertyConfigurator.configure("log4j.properties");
 		
-		SimpleModelLoader modelLoader = new SimpleModelLoader();
+		ModelLoader modelLoader = new SimpleModelLoader();
 		Model model = modelLoader.getModel();
-		System.out.println("Done");
+		
+		Clue clue = new Clue("member of The Beatles");
+		Query query = new SimpleQuery(clue, model);
+		
+		
+		System.out.println("Candidate solutions:");
+		ArrayList<String> candidateSolutions = query.getCandidateSolutions();
 
 	}
 

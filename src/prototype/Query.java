@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 /**
  * @author Ben Griffiths
- * Queries the loaded model to find an answer to the clue that is passed as an argument to the Query constructor
+ * Queries a model to find an answer to a clue
  */
 public interface Query {
 	public ArrayList<String> getCandidateSolutions();
 	public String getBestSolution();
-	public String getClue();
+	public Clue getClue();
 }
