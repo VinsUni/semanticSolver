@@ -35,11 +35,22 @@ public class SimpleClueParser implements ClueParser {
 	public void parse() {
 		ArrayList<Selector> selectorVariations = new ArrayList<Selector>();
 		
+		setStringVariations();
+		
 		Property predicate = this.getModel().getProperty("http://www.griffithsben.com/ontologies/pop.owl#memberOf");
 		Resource object = this.getModel().getResource("http://schema.org/CreativeWork");
 		
 		Selector selector = new SimpleSelector(null, RDF.type, object);
 		selectorVariations.add(selector);
 		this.getClue().setSelectorVariations(selectorVariations);
+	}
+
+	/**
+	 * setStringVariations - breaks down the source clue into variations of the original String, and sets
+	 * the Clue objects string variations
+	 */
+	private void setStringVariations() {
+		String sourceClue = this.getClue().getSourceClue();
+		String[] sourceClueFragments = sourceClue.split(" ");
 	}
 }

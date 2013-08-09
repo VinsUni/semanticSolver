@@ -37,6 +37,15 @@ public class SimpleQuery implements Query {
 		clueParser.parse();
 		ArrayList<Selector> selectorVariations = clue.getSelectorVariations();
 		
+		
+		
+		
+		/* At this point, I need to use a reasoner to infer additional triples from my dataset
+		 * See http://jena.apache.org/documentation/inference/
+		 */
+		
+		
+		
 		for(Selector selector : selectorVariations) {
 			StmtIterator iterator = this.getModel().listStatements(selector);
 			while(iterator.hasNext()) {
@@ -47,13 +56,6 @@ public class SimpleQuery implements Query {
 					Statement stmt = sols.nextStatement();
 					candidateSolutions.add(stmt.getObject().toString());
 				}
-				
-				/*
-				Resource r = subject.getPropertyResourceValue(RDFS.label);
-				if(r != null) {
-					String label = r.toString();
-					candidateSolutions.add(label);
-				} */
 			}
 		}
 		return candidateSolutions;
