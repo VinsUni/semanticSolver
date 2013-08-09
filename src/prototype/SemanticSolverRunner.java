@@ -25,7 +25,7 @@ public class SemanticSolverRunner {
 		ModelLoader modelLoader = new SimpleModelLoader();
 		Model model = modelLoader.getModel();
 		
-		SimpleClue clue = new SimpleClue("member of The Beatles");
+		Clue clue = new SimpleClue("member of The Beatles");
 		Query query = new SimpleQuery(clue, model);
 		
 		

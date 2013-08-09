@@ -8,5 +8,6 @@ package prototype;
  *
  */
 public interface ClueParser {
-
+	public void parse();
+	public Clue getClue();
 }
