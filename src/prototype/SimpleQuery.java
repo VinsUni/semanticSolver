@@ -20,10 +20,10 @@ import lombok.Setter;
  */
 public class SimpleQuery implements Query {
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) SimpleClue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
 	
-	public SimpleQuery(Clue clue, Model model) {
+	public SimpleQuery(SimpleClue clue, Model model) {
 		this.setClue(clue);
 		this.setModel(model);
 	}

@@ -12,5 +12,5 @@ import java.util.ArrayList;
 public interface Query {
 	public ArrayList<String> getCandidateSolutions();
 	public String getBestSolution();
-	public Clue getClue();
+	public SimpleClue getClue();
 }

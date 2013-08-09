@@ -25,12 +25,14 @@ public class SemanticSolverRunner {
 		ModelLoader modelLoader = new SimpleModelLoader();
 		Model model = modelLoader.getModel();
 		
-		Clue clue = new Clue("member of The Beatles");
+		SimpleClue clue = new SimpleClue("member of The Beatles");
 		Query query = new SimpleQuery(clue, model);
 		
 		
 		System.out.println("Candidate solutions:");
 		ArrayList<String> candidateSolutions = query.getCandidateSolutions();
+		for(String candidateSolution : candidateSolutions)
+			System.out.println(candidateSolution);
 
 	}
 
