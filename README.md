@@ -9,11 +9,14 @@ Choose a domain of knowledge - April 2013 - Pop music - done, 22nd July 2013
 
 Familiarise myself with Apache Jena - April 2013 - done, 3rd August 2013
 
-Extract a test dataset from the Web of Data that covers the chosen domain - April 2013
+Extract a test dataset from the Web of Data that covers the chosen domain - April 2013 - done, 24th July 2013
 
-Define a crossword-clue ontology that covers a small number of simple clue patterns and relationships covered in the test dataset - June 2013
+Define a crossword-clue ontology that covers a small number of simple clue patterns and relationships covered in the test dataset - June 2013 - done, 8th August 2013
 
-Choose a source of crossword clues covering my chosen domain to act as a test - June 2013
+Choose a source of crossword clues covering my chosen domain to act as a test - June 2013 - done, 2nd August 2013. Three primary sources:
+- Sit & Solve Pop Music Crosswords by Jeffrey Harris (2012), Sterling.
+- The Everything Music Crosswords Book by Charles Timmerman (2007), Adams Media.
+- Entertainment Crosswords: Movies, Music, Broadway, Sports, TV, & More! by Sam Bellotto Jr. (2012), Imagine Publishing.
 
 Build a clue-parsing module that is able to match recognised words and phrases in a clue given as a plain text string to concepts present in the crossword clue ontology and output a set of matching RDF statements - June 2013
 
