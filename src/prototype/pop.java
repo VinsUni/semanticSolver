@@ -25,6 +25,23 @@ public class Pop {
      * Properties in the pop vocabulary
      */
     public static final Property albumOf = model.createProperty(POP_URI + "albumOf");
+    public static final Property hasAlbum = model.createProperty(POP_URI + "hasAlbum");
+    public static final Property artistOf = model.createProperty(POP_URI + "artistOf");
+    public static final Property hasArtist = model.createProperty(POP_URI + "hasArtist");
+    public static final Property composerOf = model.createProperty(POP_URI + "composerOf");
+    public static final Property hasComposer = model.createProperty(POP_URI + "hasComposer");
+    public static final Property compositionOf = model.createProperty(POP_URI + "compositionOf");
+    public static final Property hasComposition = model.createProperty(POP_URI + "hasComposition");
+    public static final Property genreOf = model.createProperty(POP_URI + "genreOf");
+    public static final Property hasGenre = model.createProperty(POP_URI + "hasGenre");
+    public static final Property memberOf = model.createProperty(POP_URI + "memberOf");
+    public static final Property hasMember = model.createProperty(POP_URI + "hasMember");
+    public static final Property producerOf = model.createProperty(POP_URI + "producerOf");
+    public static final Property hasProducer = model.createProperty(POP_URI + "hasProducer");
+    public static final Property recordLabelOf = model.createProperty(POP_URI + "recordLabelOf");
+    public static final Property hasRecordLabel = model.createProperty(POP_URI + "hasRecordLabel");
+    
+    
     
     /**
      * Classes in the pop vocabulary

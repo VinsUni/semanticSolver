@@ -334,6 +334,35 @@
         <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genre"/>
         <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasGenre"/>
+    </owl:ObjectProperty>
+	
+	<!-- http://www.griffithsben.com/ontologies/pop.owl#hasGenre -->
+	
+	<owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasGenre">
+        <rdfs:label>genre of</rdfs:label>
+        <rdfs:label>genre</rdfs:label>
+        <rdfs:comment>Describes the genre of an artist, band, album, label</rdfs:comment>
+        <skos:prefLabel>genre of</skos:prefLabel>
+        <rdfs:domain rdf:resource="&dbpedia-owl;Band"/>
+        <rdfs:domain rdf:resource="&dbpedia-owl;MusicalArtist"/>
+        <rdfs:domain rdf:resource="&dbpedia-owl;Single"/>
+        <rdfs:domain rdf:resource="&schema;MusicGroup"/>
+        <rdfs:domain rdf:resource="&umbel;Artist_Performer"/>
+        <rdfs:domain rdf:resource="&umbel;Band_MusicGroup"/>
+        <rdfs:domain rdf:resource="&umbel;MusicSingle"/>
+        <rdfs:domain rdf:resource="&umbel;MusicalComposition"/>
+        <rdfs:domain rdf:resource="&umbel;MusicalComposition_Song"/>
+        <rdfs:domain rdf:resource="&umbel;MusicalPerformer"/>
+        <rdfs:domain rdf:resource="&umbel;RecordCompany"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+		<rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genre"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+		<owl:equivalentProperty rdf:resource="http://dbpedia.org/ontology/genre"/>
+		<owl:equivalentProperty rdf:resource="http://schema.org/genre"/>
+		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genreOf"/>
     </owl:ObjectProperty>
     
 
