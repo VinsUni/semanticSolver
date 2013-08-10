@@ -12,12 +12,23 @@ import lombok.Setter;
  *
  */
 public class SimpleSolution implements Solution {
+	private final int LANGUAGE_TAG_LENGTH = 3;
+	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String solutionText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int[] solutionStructure;
 	
 	public SimpleSolution(String solutionText) {
-		this.setSolutionText(solutionText);
-		this.setSolutionStructure(this.deriveSolutionStructure(solutionText));
+		this.setSolutionText(stripLanguageTag(solutionText));
+		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
+	}
+
+	private String stripLanguageTag(String solutionText) {
+		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
+		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
+			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
+				return solutionText.substring(0, positionOfLanguageTag);
+		}
+		return solutionText;
 	}
 
 	private int[] deriveSolutionStructure(String solutionText) {
