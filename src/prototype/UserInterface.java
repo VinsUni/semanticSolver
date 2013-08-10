@@ -8,5 +8,5 @@ package prototype;
  *
  */
 public interface UserInterface {
-
+	public void createAndShow();
 }
