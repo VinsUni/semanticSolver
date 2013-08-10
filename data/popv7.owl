@@ -583,7 +583,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+    <!-- http://dbpedia.org/ontology/associatedBand -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/associatedBand">
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>associated band</rdfs:label>
+        <rdfs:label>member of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
+    </owl:ObjectProperty>
 
 
     <!-- http://dbpedia.org/class/yago/ACappellaSinging100546070 -->

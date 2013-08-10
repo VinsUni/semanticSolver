@@ -37,7 +37,7 @@ public class SimpleClueParser implements ClueParser {
 		
 		setStringVariations();
 		
-		Property predicate = this.getModel().getProperty("http://www.griffithsben.com/ontologies/pop.owl#hasMember");
+		Property predicate = Pop.memberOf; // this.getModel().getProperty("http://www.griffithsben.com/ontologies/pop.owl#hasMember");
 		Resource object = this.getModel().getResource("http://dbpedia.org/resource/The_Beatles");
 		
 		Selector selector = new SimpleSelector(null, predicate, object);
