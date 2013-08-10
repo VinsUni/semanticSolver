@@ -1,6 +1,11 @@
 package prototype;
 
-import java.io.Console;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import com.hp.hpl.jena.rdf.model.Model;
 
 /**
  * @author Ben Griffiths
@@ -12,10 +17,29 @@ public class SimpleUserInterface implements UserInterface {
 	@Override
 	public void createAndShow() {
 		String userResponse = "";
-		Console console = System.console();
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		while(!userResponse.equals(EXIT_REQUEST)) {
-			console.readLine("Please enter a clue: ");
-			System.out.println(userResponse);
+			System.out.println("Please enter a clue: ");
+			try {
+				userResponse = in.readLine();
+			}
+			catch(IOException e) {
+				e.printStackTrace();
+				continue;
+			}
+			if(!userResponse.equals(EXIT_REQUEST)) {
+				ModelLoader modelLoader = new SimpleModelLoader();
+				Model model = modelLoader.getModel();
+				
+				Clue clue = new SimpleClue(userResponse);
+				Query query = new SimpleQuery(clue, model);
+				
+				
+				System.out.println("Candidate solutions:");
+				ArrayList<String> candidateSolutions = query.getCandidateSolutions();
+				for(String candidateSolution : candidateSolutions)
+					System.out.println(candidateSolution);
+			}
 		}
 		
 		
