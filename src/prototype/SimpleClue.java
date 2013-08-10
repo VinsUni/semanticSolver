@@ -4,6 +4,7 @@
 package prototype;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.hp.hpl.jena.rdf.model.Selector;
 
@@ -26,7 +27,7 @@ public class SimpleClue implements Clue {
 	public SimpleClue(String clueAsString) {
 		
 		// Raw clue is in form "words making up clue [String representing solution structure]"
-		String[] decomposedClue = clueAsString.split("[");
+		String[] decomposedClue = clueAsString.split("\\["); // split the raw clue into the 2 Strings either side of the '[' character
 		
 		this.setSourceClue(decomposedClue[0]);
 		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING
@@ -37,11 +38,22 @@ public class SimpleClue implements Clue {
 		this.parseSolutionStructure(solutionStructureAsString);
 		this.setNumberOfWords(this.getSolutionStructure().length);
 	}
-
+	
+	/**
+	 * parseSolutionStructureAsString - creates an array of ints representing the number of words in the solution and the
+	 * number of letter in each of those words
+	 * @param solutionStructureAsString - the fragment of the raw clue containing the solution structure in String form, with 
+	 * the square brackets removed. Each number is separated by a comma followed by a space.
+	 */
 	private void parseSolutionStructure(String solutionStructureAsString) {
 		String[] parsedSolutionStructureAsString = solutionStructureAsString.split(", ");
 		this.setSolutionStructure(new int[parsedSolutionStructureAsString.length]);
 		for(int i = 0; i < parsedSolutionStructureAsString.length; i++)
 			this.getSolutionStructure()[i] = Integer.parseInt(parsedSolutionStructureAsString[i]);	
+	}
+
+	@Override
+	public boolean matchesStructure(Solution solution) {
+		return (Arrays.equals(solution.getSolutionStructure(), this.getSolutionStructure())); // requires comparison of deep equality
 	}
 }

@@ -18,4 +18,5 @@ public interface Clue {
 	public void setSelectorVariations(ArrayList<Selector> selectorVariations);
 	public int getNumberOfWords(); // do I really need this? It can be inferred from getSolutionStructure()
 	public int[] getSolutionStructure();
+	public boolean matchesStructure(Solution solution); // compares the structure of this clue with the Solution argument
 }
