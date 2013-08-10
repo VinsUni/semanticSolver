@@ -2,6 +2,7 @@ package prototype;
 
 import java.util.ArrayList;
 
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -23,12 +24,12 @@ public class SimpleQuery implements Query {
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel model;
 	
 	public SimpleQuery(Clue clue, Model model) {
 		this.setClue(clue);
 		this.setClueParser(new SimpleClueParser(clue, model));
-		this.setModel(model);
+		this.setModel((OntModel)model);
 	}
 
 	@Override

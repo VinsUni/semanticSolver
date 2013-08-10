@@ -427,6 +427,7 @@
         <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedMusicalArtist"/>
         <rdfs:subPropertyOf rdf:resource="&dbpprop;associatedActs"/>
         <rdfs:subPropertyOf rdf:resource="&dbpprop;currentMembers"/>
+        <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;bandMember"/>
         <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
     </owl:ObjectProperty>

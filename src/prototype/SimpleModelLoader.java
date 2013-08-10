@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
@@ -31,6 +33,7 @@ public class SimpleModelLoader implements ModelLoader {
 	private final String ONTOLOGY_URI = "testDatasetExtended.xml";
 	private final String OWL_FULL_URI = "http://www.w3.org/2002/07/owl#";
 	@Setter(AccessLevel.PRIVATE) Model model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModelSpec ontologyModelSpec;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontologyModel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model data;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model ontology;
@@ -53,9 +56,22 @@ public class SimpleModelLoader implements ModelLoader {
 		prefixLoader.loadStandardPrefixes();
 		
 		
-		// Create an ontology model for the Full-Owl language (equivalent to the default OntModel)
-		this.setOntologyModel(ModelFactory.createOntologyModel(OWL_FULL_URI));
+		/*
+		InfModel inferenceModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
+		
+		return inferenceModel; */
+		
+		
+		
+		// instantiate the OntModelSpec and set its reasonser
+		this.setOntologyModelSpec(new OntModelSpec(OntModelSpec.RDFS_MEM_RDFS_INF));
+		this.getOntologyModelSpec().setReasoner(OntModelSpec.RDFS_MEM_RDFS_INF.getReasoner());
+		// Create an ontology model
+		this.setOntologyModel(ModelFactory.createOntologyModel(this.getOntologyModelSpec()));
 		this.getOntologyModel().add(model, false); // add my merged dataset and ontology to the ontology model
+		
+		
+		
 		
 		
 		/*
