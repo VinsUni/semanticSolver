@@ -11,6 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
@@ -28,7 +29,9 @@ import lombok.Setter;
 public class SimpleModelLoader implements ModelLoader {
 	private final String DATA_URI = "popv7.owl";
 	private final String ONTOLOGY_URI = "testDatasetExtended.xml";
+	private final String OWL_FULL_URI = "http://www.w3.org/2002/07/owl#";
 	@Setter(AccessLevel.PRIVATE) Model model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontologyModel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model data;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model ontology;
 	
@@ -49,6 +52,12 @@ public class SimpleModelLoader implements ModelLoader {
 		NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
 		prefixLoader.loadStandardPrefixes();
 		
+		
+		// Create an ontology model for the Full-Owl language (equivalent to the default OntModel)
+		this.setOntologyModel(ModelFactory.createOntologyModel(OWL_FULL_URI));
+		this.getOntologyModel().add(model, false); // add my merged dataset and ontology to the ontology model
+		
+		
 		/*
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
 		String fileName = "data\\ontologyMergedWithTestDataSet.xml";
@@ -65,6 +74,6 @@ public class SimpleModelLoader implements ModelLoader {
 		}
 		*/
 		
-		return this.model;
+		return this.getOntologyModel();
 	}
 }
