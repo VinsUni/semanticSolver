@@ -7,6 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
@@ -30,6 +34,10 @@ public class SimpleModelLoader implements ModelLoader {
 	
 	@Override
 	public Model getModel() {
+		/* log4j logging configuration */
+		Logger.getRootLogger().setLevel(Level.INFO);
+		PropertyConfigurator.configure("log4j.properties");
+		
 		this.setModel(ModelFactory.createDefaultModel());
 		
 		data = FileManager.get().loadModel(DATA_URI); // Read the data from DBPedia into a model
