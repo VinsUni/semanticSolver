@@ -28,21 +28,20 @@ public class SimpleUserInterface implements UserInterface {
 				continue;
 			}
 			if(!userResponse.equals(EXIT_REQUEST)) {
+				
 				ModelLoader modelLoader = new SimpleModelLoader();
 				Model model = modelLoader.getModel();
 				
 				Clue clue = new SimpleClue(userResponse);
 				Query query = new SimpleQuery(clue, model);
+				Solver solver = new SimpleSolver();
 				
 				
 				System.out.println("Candidate solutions:");
-				ArrayList<String> candidateSolutions = query.getCandidateSolutions();
+				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				for(String candidateSolution : candidateSolutions)
 					System.out.println(candidateSolution);
 			}
-		}
-		
-		
+		}	
 	}
-
 }

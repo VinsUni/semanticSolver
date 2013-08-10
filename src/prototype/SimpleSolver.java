@@ -12,9 +12,8 @@ import java.util.ArrayList;
 public class SimpleSolver implements Solver {
 
 	@Override
-	public ArrayList<String> getSolutions(Clue clue) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<String> getSolutions(Clue clue, ArrayList<String> proposedSolutions) {
+		return proposedSolutions;
 	}
 
 	@Override

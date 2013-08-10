@@ -10,6 +10,6 @@ import java.util.ArrayList;
  *
  */
 public interface Solver {
-	public ArrayList<String> getSolutions(Clue clue);
+	public ArrayList<String> getSolutions(Clue clue, ArrayList<String> proposedSolutions);
 	public String getBestSolution(Clue clue);
 }
