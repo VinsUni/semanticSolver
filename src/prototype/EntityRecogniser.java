@@ -13,6 +13,7 @@ import com.hp.hpl.jena.rdf.model.Property;
  *
  */
 public interface EntityRecogniser {
-	public ArrayList<Resource> getRecognisedResources(String clueText);
-	public ArrayList<Property> getRecognisedProperties(String clueText);
+	public ArrayList<Resource> getRecognisedSubjects();
+	public ArrayList<Property> getRecognisedProperties();
+	public ArrayList<Resource> getRecognisedObjects();
 }

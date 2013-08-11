@@ -23,11 +23,14 @@ import lombok.Setter;
 public class SimpleClueParser implements ClueParser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) EntityRecogniser entityRecogniser;
 	
 	
 	public SimpleClueParser(Clue clue, Model model) {
 		this.setClue(clue);
 		this.setModel(model);
+		this.setStringVariations();
+		this.setEntityRecogniser(new SimpleEntityRecogniser(clue, model));
 	}
 	
 
@@ -35,7 +38,7 @@ public class SimpleClueParser implements ClueParser {
 	public void parse() {
 		ArrayList<Selector> selectorVariations = new ArrayList<Selector>();
 		
-		setStringVariations();
+		
 		
 		Property predicate = Pop.memberOf; // this.getModel().getProperty("http://www.griffithsben.com/ontologies/pop.owl#hasMember");
 		Resource object = this.getModel().getResource("http://dbpedia.org/resource/The_Beatles");
