@@ -81,7 +81,8 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		ResIterator subjectsInModel = this.getModel().listSubjects();
 		while(subjectsInModel.hasNext()) {
 			Resource thisSubject = subjectsInModel.nextResource();
-
+			if(this.recognisedSubjects.contains(thisSubject))
+				continue;
 			OntResource subject = this.getOntModel().getOntResource(thisSubject); // create an OntResource from the Resource object
 			ExtendedIterator<RDFNode> labels = subject.listLabels(null); // list all values of RDFS:label for this resource
 			while(labels.hasNext()) {
@@ -102,6 +103,8 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		
 		while(statementsInModel.hasNext()) {
 			Property thisProperty = statementsInModel.nextStatement().getPredicate();
+			if(this.recognisedProperties.contains(thisProperty))
+				continue;
 			String uri = thisProperty.getURI();
 			if(uri == null)
 				continue;
@@ -129,7 +132,8 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		while(objectsInModel.hasNext()) {
 			RDFNode thisObject = objectsInModel.nextNode();
 			if(thisObject.isResource()) { // We are only interested in objects that are resources
-				
+				if(this.recognisedObjects.contains((Resource)thisObject))
+					continue;
 				OntResource object = this.getOntModel().getOntResource((Resource)thisObject); // create an OntResource from the RDFNode object
 				ExtendedIterator<RDFNode> labels = object.listLabels(null); // list all values of RDFS:label for this resource
 				while(labels.hasNext()) {

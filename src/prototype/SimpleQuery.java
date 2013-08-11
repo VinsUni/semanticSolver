@@ -38,7 +38,7 @@ public class SimpleQuery implements Query {
 	@Override
 	public ArrayList<String> getCandidateSolutions() {
 		ArrayList<String> candidateSolutions = new ArrayList<String>();
-		clueParser.parse();
+		clueParser.parse(); // THE CLUE PARSER SHOULD PERHAPS BE A FIELD IN THE CLUE CLASS RATHER THAN THIS ONE?
 		ArrayList<Selector> selectorVariations = clue.getSelectorVariations();
 		
 		
@@ -55,11 +55,17 @@ public class SimpleQuery implements Query {
 			StmtIterator iterator = ontologyModel.listStatements(selector);
 			while(iterator.hasNext()) {
 				Statement statement = iterator.nextStatement();
-				Resource subject = statement.getSubject();
-				StmtIterator sols = ontologyModel.listStatements(new SimpleSelector(subject, RDFS.label, (RDFNode) null));
+				Resource resource;
+				if(selector.getSubject() == null)
+					resource = statement.getSubject(); // the candidate Selector was intended to select subjects matching a pattern of p+o
+				else resource = (Resource)statement.getObject(); // the candidate Selector was intended to select objects matching a pattern of s+p
+				
+				StmtIterator sols = ontologyModel.listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
 				while(sols.hasNext()) {
 					Statement stmt = sols.nextStatement();
-					candidateSolutions.add(stmt.getObject().toString());
+					String label = stmt.getObject().toString();
+					if(!candidateSolutions.contains(label))
+						candidateSolutions.add(label);
 				}
 			}
 		}
