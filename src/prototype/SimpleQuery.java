@@ -3,7 +3,10 @@ package prototype;
 import java.util.ArrayList;
 
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
@@ -24,12 +27,12 @@ public class SimpleQuery implements Query {
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel model;
 	
-	public SimpleQuery(Clue clue, Model model) {
+	public SimpleQuery(Clue clue, InfModel model) {
 		this.setClue(clue);
 		this.setClueParser(new SimpleClueParser(clue, model));
-		this.setModel((OntModel)model);
+		this.setModel(model);
 	}
 
 	@Override
@@ -48,11 +51,12 @@ public class SimpleQuery implements Query {
 		
 		
 		for(Selector selector : selectorVariations) {
-			StmtIterator iterator = this.getModel().listStatements(selector);
+			OntModel ontologyModel = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_RDFS_INF, this.getModel());
+			StmtIterator iterator = ontologyModel.listStatements(selector);
 			while(iterator.hasNext()) {
 				Statement statement = iterator.nextStatement();
 				Resource subject = statement.getSubject();
-				StmtIterator sols = model.listStatements(new SimpleSelector(subject, RDFS.label, (RDFNode) null));
+				StmtIterator sols = ontologyModel.listStatements(new SimpleSelector(subject, RDFS.label, (RDFNode) null));
 				while(sols.hasNext()) {
 					Statement stmt = sols.nextStatement();
 					candidateSolutions.add(stmt.getObject().toString());

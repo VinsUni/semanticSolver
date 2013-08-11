@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 
 /**
@@ -30,7 +31,7 @@ public class SimpleUserInterface implements UserInterface {
 			if(!userResponse.equals(EXIT_REQUEST)) {
 				
 				ModelLoader modelLoader = new SimpleModelLoader();
-				Model model = modelLoader.getModel();
+				InfModel model = modelLoader.getModel();
 				
 				Clue clue = new SimpleClue(userResponse);
 				Query query = new SimpleQuery(clue, model);
