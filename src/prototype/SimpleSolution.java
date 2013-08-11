@@ -21,7 +21,10 @@ public class SimpleSolution implements Solution {
 		this.setSolutionText(stripLanguageTag(solutionText));
 		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
 	}
-
+	
+	/*
+	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
+	 */
 	private String stripLanguageTag(String solutionText) {
 		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
 		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {

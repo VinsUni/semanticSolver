@@ -38,7 +38,7 @@ public class SimpleClueParser implements ClueParser {
 	public void parse() {
 		ArrayList<Selector> selectorVariations = new ArrayList<Selector>();
 		
-		
+		printRecognisedEntities(); // DEBUGGING LINE - TO BE REMOVED
 		
 		Property predicate = Pop.memberOf; // this.getModel().getProperty("http://www.griffithsben.com/ontologies/pop.owl#hasMember");
 		Resource object = this.getModel().getResource("http://dbpedia.org/resource/The_Beatles");
@@ -55,5 +55,26 @@ public class SimpleClueParser implements ClueParser {
 	private void setStringVariations() {
 		String sourceClue = this.getClue().getSourceClue();
 		String[] sourceClueFragments = sourceClue.split(" ");
+	}
+	
+	/*
+	 * FOR DEBUGGING - TO BE REMOVED
+	 */
+	private void printRecognisedEntities() {
+		ArrayList<Resource> subjects = this.getEntityRecogniser().getRecognisedSubjects();
+		ArrayList<Property> predicates = this.getEntityRecogniser().getRecognisedProperties();
+		ArrayList<Resource> objects = this.getEntityRecogniser().getRecognisedObjects();
+		
+		System.out.println("Recognised subjects:");
+		for(Resource subject : subjects)
+			System.out.println(subject.toString());
+		
+		System.out.println("Recognised properties:");
+		for(Property predicate: predicates)
+			System.out.println(predicate.toString());
+		
+		System.out.println("Recognised objects:");
+		for(Resource object : objects)
+			System.out.println(object.toString());
 	}
 }
