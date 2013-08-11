@@ -1,0 +1,1 @@
+18:45:58 ERROR RDFDefaultErrorHandler    :: file:testDatasetExtended.xml(line 58130 column 39): The entity "dbpedia-owl" was referenced, but not declared.

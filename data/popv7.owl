@@ -86,7 +86,13 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
+	
+	<!-- http://dbpedia.org/property/name -->
+	
+	<owl:ObjectProperty rdf:about="&dbpprop;name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:ObjectProperty>
     
 
 
