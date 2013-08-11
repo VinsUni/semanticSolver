@@ -58,7 +58,11 @@ public class SimpleQuery implements Query {
 				Resource resource;
 				if(selector.getSubject() == null)
 					resource = statement.getSubject(); // the candidate Selector was intended to select subjects matching a pattern of p+o
-				else resource = (Resource)statement.getObject(); // the candidate Selector was intended to select objects matching a pattern of s+p
+				else {
+					if(statement.getObject().isResource())
+						resource = (Resource)statement.getObject(); // the candidate Selector was intended to select objects matching a pattern of s+p
+					else continue; // the resource matched is a literal value - HOW SHOULD I HANDLE THIS CASE?
+				}
 				
 				StmtIterator sols = ontologyModel.listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
 				while(sols.hasNext()) {

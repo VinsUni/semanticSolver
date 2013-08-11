@@ -46,14 +46,23 @@ public class SimpleClueParser implements ClueParser {
 		ArrayList<Property> recognisedProperties = this.getEntityRecogniser().getRecognisedProperties();
 		ArrayList<Resource> recognisedObjects = this.getEntityRecogniser().getRecognisedObjects();
 		
+		/* IT MAKES NO SENSE THE WAY THIS IS DONE AT THE MOMENT - NEED TO SPLIT SELECTORS UP INTO LISTS WITH A DIFFERENT DEGREE OF
+		 * CONFIDENCE - WITH THE LOWEST LEVEL BEING THE SIMPLE CATCH-ALL OF s-null-null or null-p-null or null-null-o
+		 * At the moment, a Selector(s, null, null) is already going to match anythin matched by a more specific selector, and thus
+		 * this is unnecessary duplication
+		 */
 		for(Property predicate: recognisedProperties) {
 			for(Resource subject : recognisedSubjects) { // Add all combinations of recognised subjects and properties
 				Selector selector = new SimpleSelector(subject, predicate, (RDFNode)null);
 				selectorVariations.add(selector);
+				Selector anotherSelector = new SimpleSelector(subject, null, (RDFNode)null); // CHANGE THIS... also add any triples containing just the recognised subject
+				selectorVariations.add(anotherSelector);
 			}
 			for(Resource object : recognisedObjects) { // Add all combinations of recognised properties and objects
 				Selector selector = new SimpleSelector(null, predicate, object);
 				selectorVariations.add(selector);
+				Selector anotherSelector = new SimpleSelector(null, null, object); // CHANGE THIS... also add any triples containing just the recognised object
+				selectorVariations.add(anotherSelector);
 			}
 		}
 		this.getClue().setSelectorVariations(selectorVariations);
