@@ -37,9 +37,8 @@ public class SimpleUserInterface implements UserInterface {
 				Query query = new SimpleQuery(clue, model);
 				Solver solver = new SimpleSolver();
 				
-				
-				System.out.println("Candidate solutions:");
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
+				System.out.println("Candidate solutions:");
 				for(String candidateSolution : candidateSolutions)
 					System.out.println(candidateSolution);
 			}
