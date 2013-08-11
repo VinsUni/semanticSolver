@@ -8,6 +8,8 @@ import java.util.Arrays;
 
 import com.hp.hpl.jena.rdf.model.Selector;
 
+import exception.InvalidClueException;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,8 +26,11 @@ public class SimpleClue implements Clue {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int[] SolutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int numberOfWords;
 	
-	public SimpleClue(String clueAsString) {
-		
+	public SimpleClue(String clueAsString) throws InvalidClueException {
+		if(clueAsString == null || clueAsString.length() == 0)
+			throw new InvalidClueException("Empty clue");
+		if( (!clueAsString.contains("[")) || (clueAsString.charAt(clueAsString.length() - 1) != ']') )
+			throw new InvalidClueException("Invalid specification of solution structure");
 		// Raw clue is in form "words making up clue [String representing solution structure]"
 		String[] decomposedClue = clueAsString.split("\\["); // split the raw clue into the 2 Strings either side of the '[' character
 		
@@ -45,7 +50,7 @@ public class SimpleClue implements Clue {
 	 * @param solutionStructureAsString - the fragment of the raw clue containing the solution structure in String form, with 
 	 * the square brackets removed. Each number is separated by a comma followed by a space.
 	 */
-	private void parseSolutionStructure(String solutionStructureAsString) {
+	private void parseSolutionStructure(String solutionStructureAsString) throws InvalidClueException {
 		String[] parsedSolutionStructureAsString = solutionStructureAsString.split(", ");
 		this.setSolutionStructure(new int[parsedSolutionStructureAsString.length]);
 		for(int i = 0; i < parsedSolutionStructureAsString.length; i++)

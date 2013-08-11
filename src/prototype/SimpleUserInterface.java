@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 
+import exception.InvalidClueException;
+
 /**
  * @author Ben Griffiths
  *
@@ -33,7 +35,13 @@ public class SimpleUserInterface implements UserInterface {
 				ModelLoader modelLoader = new SimpleModelLoader();
 				InfModel model = modelLoader.getModel();
 				
-				Clue clue = new SimpleClue(userResponse);
+				Clue clue;
+				try {
+					clue = new SimpleClue(userResponse);
+				} catch (InvalidClueException e) {
+					System.out.println("The clue you entered was invalid: " + e.getMessage());
+					continue;
+				}
 				Query query = new SimpleQuery(clue, model);
 				Solver solver = new SimpleSolver();
 				
