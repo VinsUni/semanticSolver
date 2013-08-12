@@ -30,7 +30,7 @@ public class ExtractionRunner {
 	public static void main(String[] args) {
 		
 		Logger.getRootLogger().setLevel(Level.INFO);
-		PropertyConfigurator.configure("ExtractionRunnerlog4j.properties");
+		PropertyConfigurator.configure("config\\ExtractionRunnerlog4j.properties");
 		
 		
 		String fileName = "data\\subjectIsABandOffset0.xml"; // <-- The name of the file the results will be saved in
@@ -44,8 +44,10 @@ public class ExtractionRunner {
 	    Query query = QueryFactory.create(SPARQLquery);
 	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
 	    Model model = ModelFactory.createDefaultModel();
-	    queryExecution.execConstruct(model);  
+	    System.out.println("Executing query...");
+	    queryExecution.execConstruct(model);
 	    queryExecution.close();
+	    System.out.println("Data retrieved");
 	     
 	    // load standard prefixes into the model
 	    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
@@ -54,8 +56,10 @@ public class ExtractionRunner {
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
 		try {
 			FileOutputStream outFile = new FileOutputStream(fileName);
+			System.out.println("Writing retrieved data to file...");
 			model.write(outFile, "RDF/XML-ABBREV");
 			outFile.close();
+			System.out.println("Operation complete");
 		}
 		catch(FileNotFoundException e) {
 			e.printStackTrace();
