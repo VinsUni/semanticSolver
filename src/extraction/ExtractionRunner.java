@@ -15,6 +15,8 @@ import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
@@ -33,13 +35,23 @@ public class ExtractionRunner {
 		PropertyConfigurator.configure("config\\ExtractionRunnerlog4j.properties");
 		
 		
-		String fileName = "data\\subjectIsABandOffset0.xml"; // <-- The name of the file the results will be saved in
+		String fileName = "data\\objectIsAlbumOffset0Limit0.xml"; // <-- The name of the file the results will be saved in
+		
+		/*
+		 * " PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
+							" PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
+							" PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+							" PREFIX dbpprop: <http://dbpedia.org/property/>" +
+							" PREFIX umbel: <http://umbel.org/umbel/rc/>" +
+		 */
 		
 		String SPARQLquery = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>" +
 							" construct {?subject ?predicate ?object.}" +
-		 					" where {?subject ?predicate ?object." +
-		 					" 		 ?subject a dbpedia-owl:Band.}" +
-		 					" ORDER BY desc(?subject)";
+		 					" where {?subject a dbpedia-owl:Album." +
+		 					"        ?subject ?predicate ?object}" +
+		 					" ORDER BY desc(?subject)" +
+		 					" OFFSET 0" +
+		 					" LIMIT 0";
 		
 	    Query query = QueryFactory.create(SPARQLquery);
 	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);

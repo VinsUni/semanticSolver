@@ -1,2 +1,15 @@
 18:23:03 ERROR RDFDefaultErrorHandler    :: (line 16451 column 351): The reference to entity "Rã" must end with the ';' delimiter.
 18:23:06 ERROR RDFDefaultErrorHandler    :: (line 16451 column 351): The reference to entity "Rã" must end with the ';' delimiter.
+19:20:40 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+19:32:38 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+19:34:28 ERROR RDFDefaultErrorHandler    :: (line 636 column 48): The entity name must immediately follow the '&' in the entity reference.
+19:48:18 ERROR RDFDefaultErrorHandler    :: (line 3911 column 272): The entity name must immediately follow the '&' in the entity reference.
+21:33:36 ERROR RDFDefaultErrorHandler    :: (line 16451 column 351): The reference to entity "Rã" must end with the ';' delimiter.
+21:39:39 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+21:44:21 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+21:54:15 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+21:58:37 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+22:07:04 ERROR RDFDefaultErrorHandler    :: (line 633 column 48): The entity name must immediately follow the '&' in the entity reference.
+22:10:59 WARN  RDFDefaultErrorHandler    :: (line 4582 column 84): {W107} Bad URI: <http://R.%20Malcolm%20Jones> Code: 28/NOT_DNS_NAME in HOST: The host component did not meet the restrictions on DNS names.
+22:10:59 WARN  RDFDefaultErrorHandler    :: (line 4582 column 84): {W107} Bad URI: <http://R.%20Malcolm%20Jones> Code: 29/USE_PUNYCODE_NOT_PERCENTS in HOST: The host component used percent encoding, where punycode is preferred.
+22:10:59 ERROR RDFDefaultErrorHandler    :: (line 4748 column 1753): The entity name must immediately follow the '&' in the entity reference.

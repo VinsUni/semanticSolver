@@ -1,0 +1,734 @@
+<rdf:RDF
+    xmlns:opencyc="http://sw.opencyc.org/2008/06/10/concept/"
+    xmlns:yago-res="http://mpii.de/yago/resource/"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:lgv="http://linkedgeodata.org/ontology/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:j.0="http://dbpedia.org/class/yago/2000"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:freebase="http://rdf.freebase.com/ns/"
+    xmlns:bif="bif:"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:rev="http://purl.org/stuff/rev#"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:j.1="http://dbpedia.org/class/yago/2010"
+    xmlns:umbel-ac="http://umbel.org/umbel/ac/"
+    xmlns:ns7="http://www.w3.org/ns/prov#"
+    xmlns:category="http://dbpedia.org/resource/Category:"
+    xmlns:j.2="http://schema.org/"
+    xmlns:usc="http://www.rdfabout.com/rdf/schema/uscensus/details/100pct/"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:b3s="http://b3s.openlinksw.com/"
+    xmlns:grs="http://www.georss.org/georss/"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:umbel-sc="http://umbel.org/umbel/sc/"
+    xmlns:wikicompany="http://dbpedia.openlinksw.com/wikicompany/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:units="http://dbpedia.org/units/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:j.3="http://umbel.org/umbel/rc/"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lod="http://lod.openlinksw.com/">
+  <j.2:Organization rdf:about="http://dbpedia.org/resource/Yellow_Pearl_(band)">
+    <rdfs:comment xml:lang="en">Yellow Pearl is a Dutch band that started in 2003 and has had several hits. This pop/rock band consists of Emiel Pijnaker (vocals), Viktor Beekman (guitar), Robert E. James (keyboards), Sander Keuls (bass guitar) and Guzz Genser (drums). The latter has played in a wide variety of bands, of which "Herman Brood and His Wild Romance" is best known.</rdfs:comment>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Pop_music"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/BMG_Rights_Management"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2003</dbpprop:yearsActive>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.myspace.com/yellowpearlmusic"/>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yellow_Pearl_(band)?oldid=493069289"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <dbpprop:label xml:lang="en">Flow Records, BMG , Sony Music Entertainment</dbpprop:label>
+    <foaf:name xml:lang="en">Yellow Pearl</foaf:name>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yellow_Pearl_(band)"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2003-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <dbpprop:caption xml:lang="en">Photo shoot 'The Rebel in You'</dbpprop:caption>
+    <dbpprop:name xml:lang="en">Yellow Pearl</dbpprop:name>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Pop_music"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.064l7dz"/>
+    <dbpedia-owl:abstract xml:lang="en">Yellow Pearl is a Dutch band that started in 2003 and has had several hits. This pop/rock band consists of Emiel Pijnaker (vocals), Viktor Beekman (guitar), Robert E. James (keyboards), Sander Keuls (bass guitar) and Guzz Genser (drums). The latter has played in a wide variety of bands, of which "Herman Brood and His Wild Romance" is best known. In 2006, Yellow Pearl recorded the album The Rebel in You with producer Stephen van Haestregt, drummer of the band Within Temptation, during which time their original lead guitarist, Myrddin Hoogenraad left the band. Several guitar players have joined Yellow Pearl since. Amongst them are Kevin Hunter, Pablo Minoli (of Venezuelan metal band Laberinto) and one of Holland's most talented guitar players Mark Beumers. The band's biggest hits were "For you and Me" and "See You Again". "For you and Me" was an instant radio hit and was put on rotation on several playlists including 3FM. The song was featured on the CD Hitzone 27 which received the golden status in November 2004. "See you Again" was a top 10 hit in the Single Top 100. The band is one of the few acts that has performed twice in a sold out Paradiso (Amsterdam) (Dutch rock temple) within a 6 months period. First they opened for Thin Lizzy in spring 2006 and in November 2006 they had their debut album release concert in Paradiso. The band also performed on the television show Top of the Pops with the song "See you Again" in 2006. They hold the all-time record for most live performances on 3FM, the leading radio station in the Netherlands, with over 25 appearances in 4 years in 9 different shows. The first was in 2004 when DJ Rob Stenders invited them on to his morning show with their single "For you and Me". They also played during Serious Request, editions 2006 and 2007. Their song "For you and Me" was included on the compilation CD of Arbeidsvitaminen (Work vitamins), a show by DJ Gerard Ekdom, a popular-music radio show of 3FM, which received a Guinness Book of World Records award for being the longest-lived nationally broadcast radio show in history. In 2008 and 2009, the band's singer, Emiel Pijnaker, wrote music for several movie projects. In January 2010, the song "For you and Me" was selected in the Top 1000 of the last 10 years by radio station 3FM. During "Zeroes Request" of 3FM, in 2011 and 2012, "For you and Me" was one of the most requested singles of Dutch bands. As of February 2012 music of Yellow Pearl has been featured on over 325.000 sold disc units.</dbpedia-owl:abstract>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://presents.3fm.nl/page/00s_top1000/650"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Dutch_musical_groups"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.discogs.com/Various-Yorin-FM-Hitzone-27/release/575529"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.nvpi.nl/nvpi/pagina.asp?pagkey=61112&amp;documentid=1238019"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yellow_Pearl_(band)"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.imdb.com/name/nm3274456/"/>
+    <foaf:homepage rdf:resource="http://www.myspace.com/yellowpearlmusic"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Sony_Music_Entertainment"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+  </j.2:Organization>
+  <j.2:MusicGroup rdf:about="http://dbpedia.org/resource/Yeh_hum_naheen">
+    <dbpprop:name xml:lang="en">Yeh Hum Naheen</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yeh_hum_naheen"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Islamic_music"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://yehhumnaheen.blogspot.com/"/>
+    <dbpprop:website rdf:resource="http://www.yehhumnaheen.org/"/>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <dbpedia-owl:abstract xml:lang="en">Yeh Hum Naheen (say no to terrorism. ﻳﻪ ﮨﻢ ﻧﹷﮭﹻﮟ, English translation meaning "This is NOT us") is a movement started against terrorism across the world. Yeh Hum Naheen organized by an NGO headed by producer and media consultant Waseem Mahmood, has brought together a musical movement featuring the voices of many well known Pakistani singers and vocalists. The movement features the vocal talents of Haroon, Hadiqa Kiyani, Ali Haider, Shafqat Amanat Ali, Ali Zafar, Strings, Deeyah and Shuja Haider they all come together in a song, written by Ali Moeen. The music is composed by Shuja Haider with additional production and mastering of the song, done by Grammy award winning producer, Darin Prindle.</dbpedia-owl:abstract>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yeh_hum_naheen?oldid=440946874"/>
+    <dbpprop:released rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</dbpprop:released>
+    <dbpprop:tags xml:lang="en">Pakistani, Afghananti terrorism</dbpprop:tags>
+    <foaf:homepage rdf:resource="http://www.yehhumnaheen.org/"/>
+    <rdfs:comment xml:lang="en">Yeh Hum Naheen (say no to terrorism. ﻳﻪ ﮨﻢ ﻧﹷﮭﹻﮟ, English translation meaning "This is NOT us") is a movement started against terrorism across the world. Yeh Hum Naheen organized by an NGO headed by producer and media consultant Waseem Mahmood, has brought together a musical movement featuring the voices of many well known Pakistani singers and vocalists.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.teeth.com.pk/blog/2007/02/28/yeh-hum-naheen-say-no-to-terrorism/"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.myspace.com/yhnofficial"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yeh_hum_naheen"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.youtube.com/watch?v=s6P9qP_Rpxw"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.yehhumnaheen.org/"/>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/MusicalPerformer"/>
+    <foaf:name xml:lang="en">Yeh Hum Naheen</foaf:name>
+    <rdfs:label xml:lang="en">Yeh hum naheen</rdfs:label>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.02qm0vz"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.yehhumnaheen.org"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Pakistani_music"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+  </j.2:MusicGroup>
+  <dbpedia-owl:Agent rdf:about="http://dbpedia.org/resource/Yello">
+    <dbpedia-owl:abstract xml:lang="ca">Yello és un grup suís de música electrònica, format per Dieter Meier i Boris Blank, en actiu des de finals de la dècada dels anys 70. Entre els seus temes més famosos s'hi troben "The Race" (homenatge a "Autobahn" dels Kraftwerk) i "Oh Yeah", utilitzat en diverses bandes sonores i en alguns capítols dels Simpsons.</dbpedia-owl:abstract>
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Yello"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.theyellosite.com/"/>
+    <dbpedia-owl:abstract xml:lang="nl">Yello is een Zwitserse elektronica band, bestaand uit Dieter Meier en Boris Blank. Ze zijn het bekendst door de nummers I Love You, Bostich en Oh Yeah. Dit laatstgenoemde nummer werd onder meer bekend doordat het in de soundtrack van de film Ferris Bueller's Day Off zat. Ook The Race en Vicious Games zijn bekende nummers, respectievelijk van de albums Flag en Stella. Yello werd opgericht door Boris Blank en Carlos Peron, in 1979. Dieter Meier, een miljonair met een zeer diverse carrière (hij zat onder andere in het nationale golfteam van Zwitserland, schreef kinderboeken en is avantgarde kunstenaar), voegde zich bij de andere twee toen deze zich realiseerden dat ze een zanger nodig hadden. De eerste tape werd naar het label van The Residents gestuurd ('Ralph') en men kreeg pardoes een platencontract. Op Claro Que Si staat een instrumentale versie van een nummer dat afkomstig is uit de Duitse film Jetzt und Alles, die door Dieter Meier is geregisseerd, en waarvan Yello de muziek maakte. Op de geremasterde versie van de CD uit 2005 staan nog meer nummers uit die film. Sinds 1984 was Yello, met name Dieter Meier, jarenlang bezig de film Snowball van de grond te krijgen, en men stopte diverse uitprobeersels voor de soundtrack sindsdien tussen de overige nummers van de uitgebrachte platen (Ciel Ouvert en Stalakdrama op Stellá uit 1985 en Tool in Rose als B-kant van de Maxiversie van The Rhythm Divine op One Second uit 1987, een audio-avontuur met de stem van Shirley Bassey). In 1991 werd op de hoes van Baby aangekondigd dat de film 'binnenkort gezien kon worden in een theater bij u in de buurt'. In 2001 is de film uiteindelijk gemaakt en uitgebracht onder de titel Lightmaker. Peron verliet al eerder de band in 1983 om een solocarrière na te streven. Na 2003 werd het stil rondom Yello, maar in 2009 kwam er toch een nieuw album uit: Touch Yello.</dbpedia-owl:abstract>
+    <dbpprop:currentMembers rdf:resource="http://dbpedia.org/resource/Dieter_Meier"/>
+    <owl:sameAs rdf:resource="http://ru.dbpedia.org/resource/Yello"/>
+    <rdfs:comment xml:lang="pl">Yello – popularny szwajcarski zespół, grający swoistą odmianę muzyki elektronicznej, tzw. electro-pop. Grupę tworzy dwóch członków: Boris Blank i Dieter Meier. Ich najbardziej znane utwory to Oh Yeah i The Race wykorzystane w wielu filmach.</rdfs:comment>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Swiss_electronic_music_groups"/>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.0kyw3"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Polydor_Records"/>
+    <dbpprop:currentMembers xml:lang="en">Boris Blank</dbpprop:currentMembers>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1979</dbpprop:yearsActive>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Dance_musical_groups"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Mercury_Records"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Elektra_Records"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/SwissElectronicMusicGroups"/>
+    <dbpedia-owl:abstract xml:lang="en">Yello is a Swiss electronica band consisting of Dieter Meier and Boris Blank. They are probably best known for their singles "The Race" and "Oh Yeah", which feature a mix of electronic music and manipulated vocals, as does most of their music.</dbpedia-owl:abstract>
+    <dbpedia-owl:formerBandMember rdf:resource="http://dbpedia.org/resource/Carlos_Per%C3%B3n"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/4th_&amp;_B&apos;way_Records"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Down_Beat"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Mercury_Records"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Elektra_Records"/>
+    <rdfs:comment xml:lang="uk">Yello — швейцарський музичний колектив, який працює у жанрі електронної музики.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Ralph_Records"/>
+    <owl:sameAs rdf:resource="http://pt.dbpedia.org/resource/Yello"/>
+    <dbpedia-owl:abstract xml:lang="pt">Yello é uma banda de electro da Suíça formada por Dieter Meier e Boris Blank. Eles provavelmente são mais conhecidos por seus singles "The Race" e "Oh Yeah", que apresentam uma mistura de música eletrônica e vocais manipulados, como a maior parte de suas músicas. Além disso, a música "Oh Yeah" foi utilizada na trilha sonora de diversos filmes.</dbpedia-owl:abstract>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Synthpop_groups"/>
+    <dbpedia-owl:abstract xml:lang="de">Yello ist ein Schweizer Musiker-Duo. Das Wort Yello ist ein Wortspiel von Dieter Meier und steht für „a yelled Hello“ („ein gebrülltes Hallo“).</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="sv">Yello är en schweizisk synthgrupp bildad 1979 i Zürich bestående av kompositören Boris Blank och textförfattaren/sångaren Dieter Meier. Carlos Perón lämnade gruppen 1983. Yello har haft en del singlar högt upp på listorna (såsom Vicious Games, Oh Yeah och The Race), och deras kommersiella storhetstid var främst mellan 1985 och 1995. De kännetecknas dels av att de sällan väljer enkla melodier, dels av deras udda texter, om sådana saker som galna flipperspelare (Pinball cha cha), eller personer som gillar patologiska lögnare (Of course I'm lying). Deras låt "Oh Yeah" blev en framgång sedan den använts till filmen Fira med Ferris. Gruppens musik är mångfacetterad, men vissa element återkommer, till exempel texter på nonsensspråk, texter på många olika språk, och Dieter Meiers djupa basröst (som har modifierats elektroniskt av Boris). Bland gästvokalisterna på Yellos skivor återfinns bland andra Shirley Bassey (Rhythm Divine, 1987) och Stina Nordenstam (To the Sea, 1997). Den andra oktober 2009 släpptes gruppens senaste album – Touch Yello. 5 nov 2010 släpptes en CD+DVD "The Singles Collection (1980-2010)" med 20 singlar och 23 videor, samt en 3CD+DVD box "Yello by Yello - The ANnthology" med samma innehåll samt ytterligare två CD med Yellos egna favoriter under deras 30-åriga karriär inklusive två nya låtar "Dialectical Kid" och "Tears Run Dry".</dbpedia-owl:abstract>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/New_Wave_music"/>
+    <rdfs:comment xml:lang="it">Gli Yello sono un complesso svizzero di musica elettronica - techno, composto da Dieter Meier e Boris Blank. In Europa hanno riscosso successo a partire dalla metà degli anni ottanta con i singoli Oh Yeah e The Race, canzoni utilizzate anche recentemente in spot e programmi televisivi.</rdfs:comment>
+    <dbpprop:pastMembers rdf:resource="http://dbpedia.org/resource/Carlos_Per%C3%B3n"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Ralph_Records"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.yello.ch/"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1979-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Electronica"/>
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Yello"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DanceMusicalGroups"/>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/Organization"/>
+    <rdfs:comment xml:lang="no">Yello er et populært sveitsisk elektronikaband som består av Dieter Meier og Boris Blank. De er sannsynligvis mest kjent for singelen «Oh Yeah» som har en rik blanding av elektronisk musikk og vokalmanipulasjon. Sangen ble kjent etter at den ble brukt i den amerikanske filmen Ferris Bueller's Day Off. En annen kjent sang er «The Race» som ofte brukes som bakgrunnsmusikk til TV-innslag.</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="hu">A Yello egy népszerű, elektronikus zenét játszó svájci popegyüttes (sokszor az újhullámhoz sorolják). Tagjai Dieter Meier és Boris Blank. Legismertebb dalaik az „Oh Yeah” (inkább angolszász nyelvterületen), illetve a „The Race” („A verseny”). Az előbbi dal több amerikai filmben is megjelent filmzeneként, de a The Simpsons c. , itthon is ismert rajzfilmben is. Az együttes egyik különleges ismertetőjele az énekes Dieter Meier rendkívül mély hangja.</dbpedia-owl:abstract>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Techno_music_groups"/>
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Yello"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_established_in_1979"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <owl:sameAs rdf:resource="http://cs.dbpedia.org/resource/Yello"/>
+    <rdfs:comment xml:lang="ja">Yello（イエロー）は、大富豪の実業家でギャンブラーでもあるディーター・メイヤーとボリス・ブランクからなるスイスのバンド。 バンド名は、ディーターが発した言葉『a yelled Hello』をもじったもの。 サウンドを手がけるボリスは、10万以上にものぼるオリジナルサンプリング素材を多用しファンキーで独特なサウンドを構築、エレ・ポップやディスコからJazzyなバラードまで多彩な曲を展開している。</rdfs:comment>
+    <dbpprop:name xml:lang="en">Yello</dbpprop:name>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/New_Wave_music"/>
+    <dbpedia-owl:abstract xml:lang="ru">Yello («Йелло») — швейцарский музыкальный коллектив в жанре электронной музыки. Звучание группы отличают оригинальные семплы (в том числе множество настоящих инструментов), уверенный ритм и глубокий голос Дитера Майера. Среди известнейших хитов Yello — композиции «The Race», «Vicious Games» и «Oh Yeah». Музыка Yello нередко звучит в фильмах и на телевидении.</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="uk">Yello — швейцарський музичний колектив, який працює у жанрі електронної музики.</dbpedia-owl:abstract>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Listen"/>
+    <dbpedia-owl:thumbnail rdf:resource="http://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Yello.svg/200px-Yello.svg.png"/>
+    <owl:sameAs rdf:resource="http://pl.dbpedia.org/resource/Yello"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <dbpedia-owl:abstract xml:lang="no">Yello er et populært sveitsisk elektronikaband som består av Dieter Meier og Boris Blank. De er sannsynligvis mest kjent for singelen «Oh Yeah» som har en rik blanding av elektronisk musikk og vokalmanipulasjon. Sangen ble kjent etter at den ble brukt i den amerikanske filmen Ferris Bueller's Day Off. En annen kjent sang er «The Race» som ofte brukes som bakgrunnsmusikk til TV-innslag. Yello ble opprinnelig startet på slutten av 1970-tallet av Boris Blank og Carlos Peron, som ofte omtales som bandets tredje, ukjente medlem. Dieter Meier, en millionærplayboy med en svært allsidig bakgrunn, ble bragt inn i gruppen da de to grunnleggerne innså at de trengte en sanger. Peron forlot gruppen i 1983 for å starte en solokarriere. Yello er svært stolte av deres originale, særegne lydbilde som først og fremst kjennetegnes av merkelige lydsampler, en framtredende rytme og Dieter Meiers dype stemme. Hvert spor på et Yello-album har blitt laget av bandet helt fra grunnen av. Hvert instrument er samplet og redigert av Boris Blank, som opp gjennom årene har bygget opp et bibliotek av over 100 000 navngitte og kategoriserte lyder. Yellos musikk blir av tilhengerne ofte beskrevet som svært visuell – at den skaper dramatiske filmliknende bilder i sinnet. Denne karakteristikken har gjort Yello populær innen TV, markedsføring og filmindustrien. Singelen «Oh Yeah» har blitt brukt i en rekke TV-reklamer, som lydspor for amerikansk fotball på amerikansk TV og har blitt med i minst fem filmer. Singelen «The Race» har blit brukt mye, særlig av Eurosport. Yello laget også albumet til den britiske komediefilmen Nuns on the Run og den amerikanske filmen Ford Fairlane. De spilte også inn en versjon av «Jingle Bells» for filmen The Santa Clause. I Norge er «La Habanera», fra albumet One Second, brukt som kjenningsmelodi for programmet «Hallo i uken» i NRK P2.</dbpedia-owl:abstract>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/Band_MusicGroup"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Vertigo_Records_artists"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Dance_music"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/NewWaveGroups"/>
+    <rdfs:comment xml:lang="de">Yello ist ein Schweizer Musiker-Duo. Das Wort Yello ist ein Wortspiel von Dieter Meier und steht für „a yelled Hello“ („ein gebrülltes Hallo“).</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="pl">Yello – popularny szwajcarski zespół, grający swoistą odmianę muzyki elektronicznej, tzw. electro-pop. Grupę tworzy dwóch członków: Boris Blank i Dieter Meier. Ich najbardziej znane utwory to Oh Yeah i The Race wykorzystane w wielu filmach.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="es">Yello es un grupo suizo de música electrónica, formado por Dieter Meier (cantante y letrista) y Boris Blank (teclista, programador y compositor), en activo desde finales de la década de los años 70. Entre sus temas más famosos se encuentran "The Race" (homenaje a "Autobahn" de Kraftwerk) y "Oh Yeah", utilizado en varias bandas sonoras y en las escenas donde aparece Duffman personaje de Los Simpsons.</rdfs:comment>
+    <rdfs:label xml:lang="cs">Yello</rdfs:label>
+    <rdfs:label xml:lang="de">Yello</rdfs:label>
+    <rdfs:label xml:lang="en">Yello</rdfs:label>
+    <rdfs:label xml:lang="ca">Yello</rdfs:label>
+    <rdfs:label xml:lang="uk">Yello</rdfs:label>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Boris_Blank_(musician)"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Synthpop"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.discogs.com/artist/Yello"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.dietermeier.com/"/>
+    <dbpedia-owl:abstract xml:lang="ja">Yello（イエロー）は、大富豪の実業家でギャンブラーでもあるディーター・メイヤーとボリス・ブランクからなるスイスのバンド。 バンド名は、ディーターが発した言葉『a yelled Hello』をもじったもの。 サウンドを手がけるボリスは、10万以上にものぼるオリジナルサンプリング素材を多用しファンキーで独特なサウンドを構築、エレ・ポップやディスコからJazzyなバラードまで多彩な曲を展開している。</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="fr">Yello est un groupe suisse de musique électronique formé de Dieter Meier et Boris Blank. Le duo, initialement accompagné de Carlos Perón, est plus connu pour son single Oh Yeah mélangeant la musique électronique avec des voix retouchées. Ce morceau fut utilisé dans les films La Folle Journée de Ferris Bueller, Touche pas à ma fille, Chien de flic, Le Secret de mon succès et plus récemment dans "American Pie présente : Les Sex Commandements", ce qui contribua nettement au succès de Yello. Le morceau est également renommé pour être le jingle de la bière Duff dans la série les Simpson, on peut l'entendre à chaque apparition de Duffman, mascotte de la célèbre marque de bière. On peut aussi l'entendre dans le jeu vidéo de simulation automobile Gran Turismo 4 comme musique d'échec lors d'un test de permis. Leurs morceaux furent grandement exploités dans l'édition américaine et européenne du long métrage d'animation tiré du manga Space Adventure Cobra ainsi que dans la série télévisée Deux flics à Miami. C'est surtout par ces biais qu'on les connaît en francophonie.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="fi">Yello on sveitsiläinen elektronisen musiikin yhtye, jonka jäsenet ovat Dieter Meier ja Boris Blank. Duo on perustettu vuonna 1979. Yhtye on toiminut 1980-luvulta aina uudelle vuosituhannelle saakka. Yhtyeen tunnetuimpia kappaleita ovat muun muassa "The Race" ja "Oh Yeah". Yellon ensimmäiseltä levyltä, Solid Pleasure julkaistiin tanssihitti "Bostich". Yellon seuraavalta levyltä julkaistiin single "Pinball Cha Cha" jonka musiikkivideon Dieter Meier ohjasi itse.</rdfs:comment>
+    <dbpprop:origin rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+    <rdfs:comment xml:lang="nl">Yello is een Zwitserse elektronica band, bestaand uit Dieter Meier en Boris Blank. Ze zijn het bekendst door de nummers I Love You, Bostich en Oh Yeah. Dit laatstgenoemde nummer werd onder meer bekend doordat het in de soundtrack van de film Ferris Bueller's Day Off zat. Ook The Race en Vicious Games zijn bekende nummers, respectievelijk van de albums Flag en Stella. Yello werd opgericht door Boris Blank en Carlos Peron, in 1979.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://el.dbpedia.org/resource/Yello"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yello"/>
+    <dbpedia-owl:abstract xml:lang="cs">Yello je švýcarská hudební skupina založená roku 1978. Zakládající členové byli Boris Blank a Carlos Perón. Později v tom samém roce se přidal Dieter Meier. Carlos Perón skupinu opustil roku 1983. Největších úspěchů dosáhla skupina v druhé polovině 80. a začátkem 90. let. Album Stella se dostalo na 1. místo švýcarské hitparády, Baby (1991) na 1. místo rakouské a obě dvě na 6. místo německé.</dbpedia-owl:abstract>
+    <foaf:name xml:lang="en">Yello</foaf:name>
+    <rdfs:comment xml:lang="sv">Yello är en schweizisk synthgrupp bildad 1979 i Zürich bestående av kompositören Boris Blank och textförfattaren/sångaren Dieter Meier. Carlos Perón lämnade gruppen 1983. Yello har haft en del singlar högt upp på listorna (såsom Vicious Games, Oh Yeah och The Race), och deras kommersiella storhetstid var främst mellan 1985 och 1995.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/Yello"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Smash_Records"/>
+    <rdfs:comment xml:lang="en">Yello is a Swiss electronica band consisting of Dieter Meier and Boris Blank. They are probably best known for their singles "The Race" and "Oh Yeah", which feature a mix of electronic music and manipulated vocals, as does most of their music.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Smash_Records"/>
+    <dbpprop:genre xml:lang="en">Down Beat</dbpprop:genre>
+    <rdfs:comment xml:lang="fr">Yello est un groupe suisse de musique électronique formé de Dieter Meier et Boris Blank. Le duo, initialement accompagné de Carlos Perón, est plus connu pour son single Oh Yeah mélangeant la musique électronique avec des voix retouchées. Ce morceau fut utilisé dans les films La Folle Journée de Ferris Bueller, Touche pas à ma fille, Chien de flic, Le Secret de mon succès et plus récemment dans "American Pie présente : Les Sex Commandements", ce qui contribua nettement au succès de Yello.</rdfs:comment>
+    <rdfs:comment xml:lang="hu">A Yello egy népszerű, elektronikus zenét játszó svájci popegyüttes (sokszor az újhullámhoz sorolják). Tagjai Dieter Meier és Boris Blank. Legismertebb dalaik az „Oh Yeah” (inkább angolszász nyelvterületen), illetve a „The Race” („A verseny”). Az előbbi dal több amerikai filmben is megjelent filmzeneként, de a The Simpsons c. , itthon is ismert rajzfilmben is. Az együttes egyik különleges ismertetőjele az énekes Dieter Meier rendkívül mély hangja.</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="it">Gli Yello sono un complesso svizzero di musica elettronica - techno, composto da Dieter Meier e Boris Blank. In Europa hanno riscosso successo a partire dalla metà degli anni ottanta con i singoli Oh Yeah e The Race, canzoni utilizzate anche recentemente in spot e programmi televisivi.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="ru">Yello («Йелло») — швейцарский музыкальный коллектив в жанре электронной музыки. Звучание группы отличают оригинальные семплы (в том числе множество настоящих инструментов), уверенный ритм и глубокий голос Дитера Майера. Среди известнейших хитов Yello — композиции «The Race», «Vicious Games» и «Oh Yeah». Музыка Yello нередко звучит в фильмах и на телевидении.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Polydor_Records"/>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Dieter_Meier"/>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <dbpprop:description xml:lang="en">An excerpt from "Oh Yeah"</dbpprop:description>
+    <dbpprop:genre xml:lang="en">Jazz</dbpprop:genre>
+    <rdfs:comment xml:lang="cs">Yello je švýcarská hudební skupina založená roku 1978. Zakládající členové byli Boris Blank a Carlos Perón. Později v tom samém roce se přidal Dieter Meier. Carlos Perón skupinu opustil roku 1983. Největších úspěchů dosáhla skupina v druhé polovině 80. a začátkem 90. let. Album Stella se dostalo na 1. místo švýcarské hitparády, Baby (1991) na 1. místo rakouské a obě dvě na 6. místo německé.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Vertigo_Records"/>
+    <foaf:homepage rdf:resource="http://www.yello.ch/"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electronica"/>
+    <owl:sameAs rdf:resource="http://zitgist.com/music/artist/c616aef1-e21f-46f8-864f-b7bad96f41b2"/>
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/Yello"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/TechnoMusicGroups"/>
+    <dbpedia-owl:abstract xml:lang="es">Yello es un grupo suizo de música electrónica, formado por Dieter Meier (cantante y letrista) y Boris Blank (teclista, programador y compositor), en activo desde finales de la década de los años 70. Entre sus temas más famosos se encuentran "The Race" (homenaje a "Autobahn" de Kraftwerk) y "Oh Yeah", utilizado en varias bandas sonoras y en las escenas donde aparece Duffman personaje de Los Simpsons.</dbpedia-owl:abstract>
+    <dbpprop:genre xml:lang="en">Dance</dbpprop:genre>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Switzerland"/>
+    <dbpprop:title xml:lang="en">Yello - Oh Yeah excerpt</dbpprop:title>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yello"/>
+    <rdfs:comment xml:lang="ca">Yello és un grup suís de música electrònica, format per Dieter Meier i Boris Blank, en actiu des de finals de la dècada dels anys 70. Entre els seus temes més famosos s'hi troben "The Race" (homenatge a "Autobahn" dels Kraftwerk) i "Oh Yeah", utilitzat en diverses bandes sonores i en alguns capítols dels Simpsons.</rdfs:comment>
+    <dbpprop:filename xml:lang="en">Yello - Oh Yeah excerpt.ogg</dbpprop:filename>
+    <dbpedia-owl:abstract xml:lang="fi">Yello on sveitsiläinen elektronisen musiikin yhtye, jonka jäsenet ovat Dieter Meier ja Boris Blank. Duo on perustettu vuonna 1979. Yhtye on toiminut 1980-luvulta aina uudelle vuosituhannelle saakka. Yhtyeen tunnetuimpia kappaleita ovat muun muassa "The Race" ja "Oh Yeah". Yellon ensimmäiseltä levyltä, Solid Pleasure julkaistiin tanssihitti "Bostich". Yellon seuraavalta levyltä julkaistiin single "Pinball Cha Cha" jonka musiikkivideon Dieter Meier ohjasi itse. Video sai paljon kiitosta ja valittiin yhtenä teoksena Museum of Modern Art's Music Video näyttelyyn. Visuaalisuus on edelleen keskeinen osa duon työskentelyssä. Yello on työskennellyt yhteistyössä toisten artistien kanssa kuten, The Orb, Moby sekä The Grid.</dbpedia-owl:abstract>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/4th_&amp;_B&apos;way_Records"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Jazz"/>
+    <dbpprop:website rdf:resource="http://www.yello.ch/"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <rdfs:comment xml:lang="pt">Yello é uma banda de electro da Suíça formada por Dieter Meier e Boris Blank. Eles provavelmente são mais conhecidos por seus singles "The Race" e "Oh Yeah", que apresentam uma mistura de música eletrônica e vocais manipulados, como a maior parte de suas músicas. Além disso, a música "Oh Yeah" foi utilizada na trilha sonora de diversos filmes.</rdfs:comment>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yello?oldid=494023608"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Vertigo_Records"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Swiss_New_Wave_musical_groups"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Synthpop"/>
+    <foaf:depiction rdf:resource="http://upload.wikimedia.org/wikipedia/commons/9/96/Yello.svg"/>
+  </dbpedia-owl:Agent>
+  <j.2:Organization rdf:about="http://dbpedia.org/resource/Yellow_Magic_Orchestra">
+    <rdfs:comment xml:lang="pl">Yellow Magic Orchestra - japoński zespół grający muzykę elektroniczną, założony w 1978 roku. Zespół tworzyli Haruomi Hosono, Yukihiro Takahashi oraz Ryuichi Sakamoto.</rdfs:comment>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_dance_music_groups"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_reestablished_in_2007"/>
+    <rdfs:comment xml:lang="ca">Yellow Magic Orchestra fou un grup japonès de música techno-pop de l'època dels 70 integrat per Ryuichi Sakamoto (teclats), Yukihiro Takahashi (percussió) i Haruomi Hosono (baix) molt influenciats per la banda alemanya Kraftwerk. Després de la darrera unificació de la banda i fer aquest ultim àlbum, els integrants del grup van fer carreres artístiques en solitari sobresortint Ryuichi Sakamoto per la seva fama.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://facebook.com/YMOofficial"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Avant-garde_music"/>
+    <rdfs:comment xml:lang="zh">YMO，全名是Yellow Magic Orchestra（黃色魔術交響樂團），是日本音樂家坂本龍一與細野晴臣以及高橋幸宏組建的前衛時髦電子合成樂團。該樂隊在1980年代晚期和1990年代早期對acid house和techno運動有著開創式的世界影響，另類搞怪風格也令人側目卻廣受歡迎。1980年代在日本武道館舉行結束演唱會，數萬樂迷座無虛席。2007年曾於富士山頂重逢演唱並拍攝啤酒廣告。</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Alfa_Records"/>
+    <dbpprop:title xml:lang="en">"Firecracker"</dbpprop:title>
+    <dbpprop:format rdf:resource="http://dbpedia.org/resource/Ogg"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Listen"/>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Yukihiro_Takahashi"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsReestablishedIn2007"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_electronic_music_groups"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_artist_discography"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_dance_musicians"/>
+    <dbpprop:artist xml:lang="en">Yellow Magic Orchestra</dbpprop:artist>
+    <dbpedia-owl:abstract xml:lang="it">La Yellow Magic Orchestra (YMO) è una band elettropop giapponese, formata nel 1978.</dbpedia-owl:abstract>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Sony_Music_Entertainment_Japan"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/House_music"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/EMI_Music_Japan"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_established_in_1978"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Synthpop"/>
+    <dbpedia-owl:abstract xml:lang="en">Yellow Magic Orchestra (YMO) is a Japanese electronic music band consisting of principal members Haruomi Hosono (bass and keyboards and vocals), Yukihiro Takahashi (drums and lead vocals) and Ryuichi Sakamoto (keyboards and vocals). The band's former "fourth member" was music programmer Hideki Matsutake. They are often considered influential innovators in the field of popular electronic music. They helped pioneer synthpop and ambient house, helped usher in electronica, anticipated the beats and sounds of electro music, laid the foundations for contemporary J-pop, and contributed to the development of house, techno, and hip hop. More broadly, their influence is evident across many genres of popular music, including electronic dance, ambient music, chiptune, game music, pop, rock, and melodic music.</dbpedia-owl:abstract>
+    <dbpedia-owl:thumbnail rdf:resource="http://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/YMO2008(cropped).jpg/200px-YMO2008(cropped).jpg"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/House_music"/>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Haruomi_Hosono"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yellow_Magic_Orchestra"/>
+    <dbpprop:pos xml:lang="en">right</dbpprop:pos>
+    <rdfs:comment xml:lang="ja">イエロー・マジック・オーケストラ(Yellow Magic Orchestra)は、1978年に結成された日本の音楽グループ。YMO（ワイ・エム・オー）と略称される。</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Le Yellow Magic Orchestra est un groupe japonais d'electro-pop formé en 1978. Les membres principaux du groupe sont Haruomi Hosono (basse), Yukihiro Takahashi (batterie) et Ryuichi Sakamoto (claviers). Le groupe était au départ un projet solo de Hosono, les deux autres membres ayant été recrutés en tant que cuisiniers. L'idée était de concevoir un album fusionnant l'exotica orientaliste (voir leur reprise de Firecracker de Martin Denny) avec des instruments électroniques modernes.</rdfs:comment>
+    <rdfs:comment xml:lang="it">La Yellow Magic Orchestra (YMO) è una band elettropop giapponese, formata nel 1978.</rdfs:comment>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Electronic_music"/>
+    <dbpprop:alias xml:lang="en">Yellow Magic Band, YMO, YMO, Sketch Show, Human Audio Sponge, HAS, HASYMO</dbpprop:alias>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Techno"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_techno_musicians"/>
+    <dbpedia-owl:abstract xml:lang="ru">Yellow Magic Orchestra (YMO) â Ð¼ÑÐ·ÑÐºÐ°Ð»ÑÐ½ÑÐ¹ ÐºÐ¾Ð»Ð»ÐµÐºÑÐ¸Ð² Ð¸Ð· Ð¢Ð¾ÐºÐ¸Ð¾. ÐÑÑÐ¿Ð¿Ð° Ð±ÑÐ»Ð° Ð¾Ð±ÑÐ°Ð·Ð¾Ð²Ð°Ð½Ð° Ð² 1978 Ð³Ð¾Ð´Ñ, Ð¸ ÑÐ²Ð»ÑÐµÑÑÑ Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð¿Ð¸Ð¾Ð½ÐµÑÐ¾Ð² ÑÐ¿Ð¾Ð½ÑÐºÐ¾Ð¹ ÑÐ»ÐµÐºÑÑÐ¾Ð½Ð½Ð¾Ð¹ Ð¼ÑÐ·ÑÐºÐ¸. ÐÐ´ÐµÑ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ "Ð²Ð¾ÑÑÐ¾ÑÐ½Ð¾Ð³Ð¾ Ð¾ÑÐ²ÐµÑÐ° Kraftwerk" Ð¿ÑÐ¸Ð½Ð°Ð´Ð»ÐµÐ¶Ð¸Ñ Ð¥Ð°ÑÑÐ¾Ð¼Ð¸ Ð¥Ð¾ÑÐ¾Ð½Ð¾ â Ðº ÐºÐ¾Ð½ÑÑ 70-Ñ ÑÑÐ¾ Ð±ÑÐ» ÑÐ¶Ðµ Ð´Ð¾Ð²Ð¾Ð»ÑÐ½Ð¾ Ð¸Ð·Ð²ÐµÑÑÐ½ÑÐ¹ Ð¼ÑÐ·ÑÐºÐ°Ð½Ñ Ð² Ð¯Ð¿Ð¾Ð½Ð¸Ð¸, Ð¾ÑÐ»Ð¸ÑÐ¸Ð²ÑÐ¸Ð¹ÑÑ ÑÑÐ°ÑÑÐ¸ÐµÐ¼ Ð² Ð»ÐµÐ³ÐµÐ½Ð´Ð°ÑÐ½Ð¾Ð¹ ÑÐ¾Ð»Ðº-ÑÐ¾Ðº Ð³ÑÑÐ¿Ð¿Ðµ Happy End Ð¸ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¸Ð¼Ð¸ ÑÐ¾Ð»ÑÐ½ÑÐ¼Ð¸ Ð°Ð»ÑÐ±Ð¾Ð¼Ð°Ð¼Ð¸. ÐÐµÑÐ²Ð°Ñ Ð¿Ð»Ð°ÑÑÐ¸Ð½ÐºÐ° Yellow Magic Orchestra, Ð¾Ð´Ð½Ð¾Ð¸Ð¼ÑÐ½Ð½Ð°Ñ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ñ Ð³ÑÑÐ¿Ð¿Ñ, Ð±ÑÐ»Ð° Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð° Ð¿ÑÐ¸ ÑÑÐ°ÑÑÐ¸Ð¸ ÐµÑÑ Ð´Ð²ÑÑ Ð¼ÑÐ·ÑÐºÐ°Ð½ÑÐ¾Ð²: Ð®ÐºÐ¸ÑÐ¸ÑÐ¾ Ð¢Ð°ÐºÐ°ÑÐ°ÑÐ¸ Ð¸ Ð ÑÐ¸ÑÐ¸ Ð¡Ð°ÐºÐ°Ð¼Ð¾ÑÐ¾, Ñ ÐºÐ¾ÑÐ¾ÑÑÐ¼Ð¸ Ð¥Ð¾ÑÐ¾Ð½Ð¾ ÑÐ°Ð±Ð¾ÑÐ°Ð» ÑÐ°Ð½ÐµÐµ. ÐÐ°ÑÐ°Ð² ÑÐ²Ð¾Ñ ÑÑÐ°ÑÑÐ¸Ðµ Ð² Ð¿ÑÐ¾ÐµÐºÑÐµ ÐºÐ°Ðº ÑÐµÑÑÐ¸Ð¾Ð½Ð½ÑÐµ Ð¼ÑÐ·ÑÐºÐ°Ð½ÑÑ, Ð²ÑÐºÐ¾ÑÐµ Ð¢Ð°ÐºÐ°ÑÐ°ÑÐ¸ Ð¸ Ð¡Ð°ÐºÐ°Ð¼Ð¾ÑÐ¾ ÑÑÐ°Ð½Ð¾Ð²ÑÑÑÑ Ð¿Ð¾Ð»Ð½Ð¾ÑÐµÐ½Ð½Ð¾Ð¹ ÑÐ°ÑÑÑÑ Ð³ÑÑÐ¿Ð¿Ñ. Ð Ð°Ð±Ð¾ÑÐ°Ñ Ñ Ð½Ð¾Ð²ÐµÐ¹ÑÐ¸Ð¼Ð¸ ÑÐ¸Ð½ÑÐµÐ·Ð°ÑÐ¾ÑÐ°Ð¼Ð¸ Ð¸ ÑÑÑÐµÐ¼Ð¸ÑÐµÐ»ÑÐ½Ð¾ ÑÐ°Ð·Ð²Ð¸Ð²Ð°ÑÑÐµÐ¹ÑÑ Ð² Ð½Ð°ÑÐ°Ð»Ðµ 80-Ñ ÑÐµÐ¼Ð¿Ð»ÐµÑÐ½Ð¾Ð¹ ÑÐµÑÐ½Ð¾Ð»Ð¾Ð³Ð¸ÐµÐ¹, Yellow Magic Orchestra, Ð±Ð»Ð°Ð³Ð¾Ð´Ð°ÑÑ Ð½Ð¾Ð²Ð°ÑÐ¾ÑÑÐºÐ¾Ð¼Ñ Ð·Ð²ÑÑÐ°Ð½Ð¸Ñ, Ð·Ð°Ð²Ð¾ÐµÐ²Ð°Ð»Ð¸ Ð±Ð¾Ð»ÑÑÑÑ Ð¿Ð¾Ð¿ÑÐ»ÑÑÐ½Ð¾ÑÑÑ Ð½Ðµ ÑÐ¾Ð»ÑÐºÐ¾ Ð² Ð¯Ð¿Ð¾Ð½Ð¸Ð¸, Ð½Ð¾ Ð¸ Ð·Ð° ÐµÑ Ð¿ÑÐµÐ´ÐµÐ»Ð°Ð¼Ð¸. ÐÑÑÐ¿Ð¿Ð° Ð¿Ð¾ÑÑÐ¾ÑÐ½Ð½Ð¾ ÑÐºÑÐ¿ÐµÑÐ¸Ð¼ÐµÐ½ÑÐ¸ÑÐ¾Ð²Ð°Ð»Ð° ÑÐ¾ ÑÑÐ¸Ð»ÑÐ¼Ð¸, Ð¸ ÑÐ¾ÑÑ Yellow Magic Orchestra Ð¿ÑÐ¸Ð½ÑÑÐ¾ ÐºÐ»Ð°ÑÑÐ¸ÑÐ¸ÑÐ¸ÑÐ¾Ð²Ð°ÑÑ, ÐºÐ°Ðº ÑÐ»ÐµÐºÑÑÐ¾Ð¿Ð¾Ð¿, Ð² Ð½ÐµÐºÐ¾ÑÐ¾ÑÑÑ ÐºÐ¾Ð¼Ð¿Ð¾Ð·Ð¸ÑÐ¸ÑÑ Ð¼Ð¾Ð¶Ð½Ð¾ Ð²ÑÑÑÐµÑÐ¸ÑÑ ÑÐ»ÐµÐ¼ÐµÐ½ÑÑ ÑÐµÑÐ½Ð¾ Ð¸ ÑÐ¼Ð±Ð¸ÐµÐ½ÑÐ°. ÐÐ° Ð¿Ð¾Ð·Ð´Ð½Ð¸Ñ Ð°Ð»ÑÐ±Ð¾Ð¼Ð°Ñ (Naughty Boys Ð¸ Service) Ð¼ÑÐ·ÑÐºÐ° ÑÑÐ°Ð½Ð¾Ð²Ð¸ÑÑÑ Ð½Ðµ ÑÐ°ÐºÐ¾Ð¹ ÑÐºÑÐ¿ÐµÑÐ¸Ð¼ÐµÐ½ÑÐ°Ð»ÑÐ½Ð¾Ð¹, ÐºÐ°Ðº ÑÐ°Ð½ÐµÐµ, Ð±Ð¾Ð»ÐµÐµ Ð¼ÐµÐ»Ð¾Ð´Ð¸ÑÐ½Ð¾Ð¹ Ð¸ Ð±Ð»Ð¸Ð·ÐºÐ¾Ð¹ Ðº ÑÐ¸Ð½ÑÐ¸-Ð¿Ð¾Ð¿. Ð ÑÑÐ¸Ñ Ð°Ð»ÑÐ±Ð¾Ð¼Ð°Ñ Ð¿ÑÐµÐ¾Ð±Ð»Ð°Ð´Ð°ÑÑ Ð²Ð¾ÐºÐ°Ð»ÑÐ½ÑÐµ ÐºÐ¾Ð¼Ð¿Ð¾Ð·Ð¸ÑÐ¸Ð¸, Ð·Ð°ÑÐ°ÑÑÑÑ Ð¸ÑÐ¿Ð¾Ð»Ð½ÐµÐ½Ð½ÑÐµ Ð½Ð° ÑÐ¿Ð¾Ð½ÑÐºÐ¾Ð¼ ÑÐ·ÑÐºÐµ. ÐÐµÐ»ÑÐ·Ñ Ð½Ðµ Ð¾ÑÐ¼ÐµÑÐ¸ÑÑ Ð±Ð¾Ð»ÑÑÐ¾Ð¹ Ð²ÐºÐ»Ð°Ð´ Ð² ÑÐ°Ð·Ð²Ð¸ÑÐ¸Ðµ ÑÐ¿Ð¾Ð½ÑÐºÐ¾Ð¹ Ð¿Ð¾Ð¿-Ð¼ÑÐ·ÑÐºÐ¸, ÑÐ´ÐµÐ»Ð°Ð½Ð½ÑÐ¹ ÐºÐ°Ð¶Ð´ÑÐ¼ Ð¸Ð· ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ¾Ð² Yellow Magic Orchestra. ÐÐµ Ð¿ÑÐµÐºÑÐ°ÑÐ°Ñ Ð½Ð° Ð¿ÐµÑÐ¸Ð¾Ð´ ÑÐ°Ð±Ð¾ÑÑ Ð² Ð³ÑÑÐ¿Ð¿Ðµ Ð·Ð°Ð½Ð¸Ð¼Ð°ÑÑÑÑ ÑÐ¾Ð±ÑÑÐ²ÐµÐ½Ð½ÑÐ¼Ð¸ ÑÐ¾Ð»ÑÐ½ÑÐ¼Ð¸ ÐºÐ°ÑÑÐµÑÐ°Ð¼Ð¸, Ð¼ÑÐ·ÑÐºÐ°Ð½ÑÑ Ð¿Ð¸ÑÐ°Ð»Ð¸ ÐºÐ¾Ð¼Ð¿Ð¾Ð·Ð¸ÑÐ¸Ð¸ Ð´Ð»Ñ Ð¿Ð¾Ð¿ÑÐ»ÑÑÐ½ÑÑ Ð² 80-Ñ ÑÐ¿Ð¾Ð½ÑÐºÐ¸Ñ Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸ÑÐµÐ»ÐµÐ¹, ÑÐ°ÐºÐ¸Ñ ÐºÐ°Ðº Sandii &amp; The Sunsetz, Sheena &amp; The Rokkets, Susan Ð¸ Ð¼Ð½Ð¾Ð³Ð¸Ñ Ð´ÑÑÐ³Ð¸Ñ, Ð° ÑÐ°ÐºÐ¶Ðµ Ð·Ð°Ð½Ð¸Ð¼Ð°Ð»Ð¸ÑÑ Ð¿ÑÐ¾Ð´ÑÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¸ÐµÐ¼ Ð¸Ñ Ð°Ð»ÑÐ±Ð¾Ð¼Ð¾Ð². Ð 1984 Ð³Ð¾Ð´Ñ Yellow Magic Orchestra, Ð²ÑÐ¿ÑÑÑÐ¸Ð² Ð´Ð²Ð¾Ð¹Ð½Ð¾Ð¹ Live-Ð°Ð»ÑÐ±Ð¾Ð¼ After Service, Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð½ÑÐ¹ Ð²Ð¾ Ð²ÑÐµÐ¼Ñ ÑÐ¾ÐºÐ¸Ð¹ÑÐºÐ¾Ð³Ð¾ ÐºÐ¾Ð½ÑÐµÑÑÐ° Ð² Ð´ÐµÐºÐ°Ð±ÑÐµ 1983 Ð³Ð¾Ð´Ð°, Ð¿ÑÐµÐºÑÐ°ÑÐ°ÐµÑ ÑÐ²Ð¾Ñ ÑÑÑÐµÑÑÐ²Ð¾Ð²Ð°Ð½Ð¸Ðµ. ÐÐ¾ÑÐ»Ðµ ÑÐ°ÑÐ¿Ð°Ð´Ð° ÑÑÐ°ÑÑÐ½Ð¸ÐºÐ¸ ÐºÐ¾Ð»Ð»ÐµÐºÑÐ¸Ð²Ð° Ð²Ð¿Ð»Ð¾ÑÐ½ÑÑ Ð·Ð°Ð½ÑÐ»Ð¸ÑÑ ÑÐ¾Ð±ÑÑÐ²ÐµÐ½Ð½ÑÐ¼Ð¸ ÑÐ¾Ð»ÑÐ½ÑÐ¼Ð¸ Ð¿ÑÐ¾ÐµÐºÑÐ°Ð¼Ð¸. ÐÐ¾ Ð² 1993-Ð¼ Ð³ÑÑÐ¿Ð¿Ð° Ð½ÐµÐ½Ð°Ð´Ð¾Ð»Ð³Ð¾ Ð¾Ð±ÑÐµÐ´Ð¸Ð½ÑÐµÑÑÑ Ð²Ð½Ð¾Ð²Ñ, Ð´Ð°Ð² Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¾ "Ð¶Ð¸Ð²ÑÑ" Ð²ÑÑÑÑÐ¿Ð»ÐµÐ½Ð¸Ð¹ Ð¸ Ð²ÑÐ¿ÑÑÑÐ¸Ð² Ð°Ð»ÑÐ±Ð¾Ð¼Ñ Technodon Ð¸ Technodon Live. Ð¡Ð¿ÑÑÑÑ 14 Ð»ÐµÑ, Ð² 2007 Ð³Ð¾Ð´Ñ Yellow Magic Orchestra Ð½ÐµÐ¾Ð¶Ð¸Ð´Ð°Ð½Ð½Ð¾ Ð²Ð¾Ð·Ð¾Ð±Ð½Ð¾Ð²Ð»ÑÐµÑ ÑÐ²Ð¾ÑÑÐµÑÐºÑÑ Ð´ÐµÑÑÐµÐ»ÑÐ½Ð¾ÑÑÑ, Ð¿ÑÐ¸ÑÑÐ¼ Ð² Ð¿ÑÐµÐ¶Ð½ÐµÐ¼ ÑÐ¾ÑÑÐ°Ð²Ðµ. ÐÑÑÐ¿Ð¿Ð° (ÑÐ½Ð°ÑÐ°Ð»Ð° Ð¿Ð¾Ð´ Ð¸Ð¼ÐµÐ½ÐµÐ¼ HASYMO) Ð²ÑÐ¿ÑÑÐºÐ°ÐµÑ Ð½Ð¾Ð²ÑÐ¹ ÑÐ¸Ð½Ð³Ð» Rescue / Rydeen 79/07, Ð° ÑÐ°ÐºÐ¶Ðµ Ð´Ð°ÑÑ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¾ Ð¶Ð¸Ð²ÑÑ Ð²ÑÑÑÑÐ¿Ð»ÐµÐ½Ð¸Ð¹. Ð 2008-Ð¼ Ð¿ÑÐ¾ÑÐ¾Ð´ÑÑ Ð¿ÐµÑÐ²ÑÐµ ÐºÑÑÐ¿Ð½ÑÐµ (Ñ Ð½Ð°ÑÐ°Ð»Ð° 90-Ñ) ÐºÐ¾Ð½ÑÐµÑÑÑ YMO Ð² ÐÐ¾Ð½Ð´Ð¾Ð½Ðµ Ð¸ Ð¥Ð¸ÑÐ¾Ð½Ðµ (GijÃ³n, ÐÑÐ¿Ð°Ð½Ð¸Ñ), Ð½Ð° ÐºÐ¾ÑÐ¾ÑÑÑ Ð³ÑÑÐ¿Ð¿Ð° Ð´ÐµÐ¼Ð¾Ð½ÑÑÑÐ¸ÑÑÐµÑ ÐºÐ°Ðº Ð½Ð¾Ð²ÑÐ¹ Ð¼Ð°ÑÐµÑÐ¸Ð°Ð», ÑÐ°Ðº Ð¸ ÐºÐ»Ð°ÑÑÐ¸ÑÐµÑÐºÐ¸Ðµ ÑÐ¸ÑÑ Ð² ÑÐ¾Ð²ÑÐµÐ¼ÐµÐ½Ð½Ð¾Ð¹ Ð¾Ð±ÑÐ°Ð±Ð¾ÑÐºÐµ. ÐÐ°ÑÐµÑÐ¸Ð°Ð» Ñ ÑÑÐ¸Ñ ÐºÐ¾Ð½ÑÐµÑÑÐ¾Ð² ÑÑÐ°Ð» Ð¾ÑÐ½Ð¾Ð²Ð¾Ð¹ Ð´Ð²ÑÑ Ð½Ð¾Ð²ÑÑ "Ð¶Ð¸Ð²ÑÑ" CD, Ð° ÑÐ°ÐºÐ¶Ðµ ÐºÐ¾Ð½ÑÐµÑÑÐ½Ð¾Ð³Ð¾ DVD POSTYMO: Yellow Magic Orchestra Live in London 2008+.</dbpedia-owl:abstract>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1977</dbpprop:yearsActive>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Restless_Records"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpprop:singles rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >23</dbpprop:singles>
+    <dbpprop:title xml:lang="en">"Behind the Mask"</dbpprop:title>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Alfa_Records"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/A&amp;M_Records"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Techno"/>
+    <rdfs:comment xml:lang="no">Yellow Magic Orchestra (YMO) er et japansk electropop-band som ble stiftet i 1978. Medlemmene er Haruomi Hosono på bass, Yukihiro Takahashi på trommer og vokal og Ryuichi Sakamoto på keyboard. De er kjente for å være pionerene innen technopop-sjangeren.</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="pl">Yellow Magic Orchestra - japoński zespół grający muzykę elektroniczną, założony w 1978 roku. Zespół tworzyli Haruomi Hosono, Yukihiro Takahashi oraz Ryuichi Sakamoto.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="sv">Yellow Magic Orchestra är en japansk synthgrupp som grundades 1978. De huvudsakliga medlemmarna var Haruomi Hosono, Yukihiro Takahashi och Ryuichi Sakamoto. Bandet bildades ursprungligen av Hosono för ett studioprojekt som skulle vara en engångsföreteelse. Takahashi och Sakamoto hade tidigare arbetat som studiomusiker och det var i egenskap av sådana de blev medlemmar i bandet. Idén med projektet var att skapa en fusion mellan orientalisk exotika och modern elektronisk musik.</rdfs:comment>
+    <dbpprop:filename xml:lang="en">YMO - Firecracker.ogg</dbpprop:filename>
+    <dbpedia-owl:abstract xml:lang="de">Das Yellow Magic Orchestra (Y.M.O. ) ist ein japanisches Musiktrio, das sich auf Elektropop spezialisiert hat. Dieses Genre wurde Ende der Siebziger Jahre des 20. Jahrhunderts von ihnen maßgeblich mitbeeinflusst. In ihrer asiatischen Heimat genießen sie ein ähnliches Ansehen als Pioniere der elektronischen Musik wie etwa die Gruppe Kraftwerk in Europa und Nordamerika. Die Mitglieder sind Haruomi Hosono, Yukihiro Takahashi und Ryuichi Sakamoto. An der Welttournee 1979 war Gitarrist Kazumi Watanabe als Gast beteiligt.</dbpedia-owl:abstract>
+    <foaf:homepage rdf:resource="http://facebook.com/YMOofficial"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/New_Wave_music"/>
+    <dbpprop:currentMembers rdf:resource="http://dbpedia.org/resource/Ryuichi_Sakamoto"/>
+    <owl:sameAs rdf:resource="http://ko.dbpedia.org/resource/옐로_매직_오케스트라"/>
+    <dbpedia-owl:abstract xml:lang="nl">Yellow Magic Orchestra is een Japanse muziekgroep, opgericht in 1978. De band wordt met het Duitse Kraftwerk genoemd als pioniers van de technopop. De belangrijkste bandleden zijn Haruomi "Harry" Hosono, Yukihiro Takahashi en Ryuichi Sakamoto (keyboards).</dbpedia-owl:abstract>
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <dbpprop:origin xml:lang="en">Tokyo, Japan</dbpprop:origin>
+    <dbpprop:description xml:lang="en">A sample of "Behind the Mask" from the 1979 album Solid State Survivor. It was a synthpop song originally produced in 1978 for a Seiko commercial. Cover versions were later performed by artists such as Michael Jackson and Eric Clapton.</dbpprop:description>
+    <dbpprop:filename xml:lang="en">Riot in Lagos.ogg</dbpprop:filename>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Synthpop"/>
+    <dbpprop:caption xml:lang="en">YMO after playing a 2008 concert in London</dbpprop:caption>
+    <dbpprop:title xml:lang="en">"Riot in Lagos"</dbpprop:title>
+    <dbpprop:name xml:lang="en">Yellow Magic Orchestra</dbpprop:name>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Experimental_music"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Ambient_music_groups"/>
+    <owl:sameAs rdf:resource="http://pl.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <dbpedia-owl:abstract xml:lang="ca">Yellow Magic Orchestra fou un grup japonès de música techno-pop de l'època dels 70 integrat per Ryuichi Sakamoto (teclats), Yukihiro Takahashi (percussió) i Haruomi Hosono (baix) molt influenciats per la banda alemanya Kraftwerk. Després de la darrera unificació de la banda i fer aquest ultim àlbum, els integrants del grup van fer carreres artístiques en solitari sobresortint Ryuichi Sakamoto per la seva fama.</dbpedia-owl:abstract>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/Band_MusicGroup"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Worldbeat"/>
+    <foaf:depiction rdf:resource="http://upload.wikimedia.org/wikipedia/commons/b/b7/YMO2008(cropped).jpg"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_house_musicians"/>
+    <dbpedia-owl:abstract xml:lang="ko">옐로 매직 오케스트라(Yellow Music Orchestra)는 1978년에 결성된 일본의 음악 그룹이다. 줄여서 YMO(와이엠오)라고 불리기도 하며, 일렉트로 팝 장르의 선구자로 알려져 있다.</dbpedia-owl:abstract>
+    <dbpprop:currentMembers rdf:resource="http://dbpedia.org/resource/Yukihiro_Takahashi"/>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1977-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.019bmw"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2002</dbpprop:yearsActive>
+    <dbpprop:filename xml:lang="en">YMO - Behind the Mask.ogg</dbpprop:filename>
+    <dbpprop:description xml:lang="en">A sample of "Firecracker" from the 1978 album Yellow Magic Orchestra. It was combined with the "Computer Game" track into a hit single called "Computer Game". It was later sampled by artists such as Afrika Bambaata and Jennifer Lopez.</dbpprop:description>
+    <dbpedia-owl:formerBandMember rdf:resource="http://dbpedia.org/resource/Hideki_Matsutake"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yellow_Magic_Orchestra"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Avex_Trax"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Avant-garde_music"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Electronic_dance_music"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/EMI_Music_Japan"/>
+    <rdfs:comment xml:lang="en">Yellow Magic Orchestra (YMO) is a Japanese electronic music band consisting of principal members Haruomi Hosono (bass and keyboards and vocals), Yukihiro Takahashi (drums and lead vocals) and Ryuichi Sakamoto (keyboards and vocals). The band's former "fourth member" was music programmer Hideki Matsutake. They are often considered influential innovators in the field of popular electronic music.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/A&amp;M_Records"/>
+    <dbpedia-owl:abstract xml:lang="fr">Le Yellow Magic Orchestra est un groupe japonais d'electro-pop formé en 1978. Les membres principaux du groupe sont Haruomi Hosono (basse), Yukihiro Takahashi (batterie) et Ryuichi Sakamoto (claviers). Le groupe était au départ un projet solo de Hosono, les deux autres membres ayant été recrutés en tant que cuisiniers. L'idée était de concevoir un album fusionnant l'exotica orientaliste (voir leur reprise de Firecracker de Martin Denny) avec des instruments électroniques modernes. Le premier album devient vite très populaire. Utilisant abondamment les synthétiseurs, les samplers et la musique issue des ordinateurs qui devenaient accessible, leur influence s'étendit au delà du Japon. On considère le groupe comme des défricheurs de la musique pop-électronique ; leur musique continue d'être remixée et samplée par des artistes contemporains. Le groupe cesse son activité en 1984, chacun des trois membres poursuivant une carrière solo. Le groupe est plus connu au Japon sous l'acronyme YMO Au début des années 2000 Hosono et Takahashi se sont réunis dans un projet appelé "Sketch Show". Le groupe se produit quelquefois en concert au grand complet sous le nom de Human Audio Sponge. En 2007, le groupe se reforme sous le nom de HASYMO (qui est la combinaison des initiales de Human Audio Sponge et Yellow Magic Orchestra).</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="fi">Yellow Magic Orchestra (tai Y.M.O. ) on 1978 perustettu japanilainen elektronisen pop-musiikin yhtye. Sen jäseniä ovat olleet Haruomi Hosono, Yukihiro Takahashi ja Ryūichi Sakamoto. Yellow Magic Orchestra hajosi 1983, mutta palasi yhteen vielä yhden albumin ajaksi kymmenen vuotta myöhemmin.</dbpedia-owl:abstract>
+    <dbpprop:pastMembers rdf:resource="http://dbpedia.org/resource/Hideki_Matsutake"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsEstablishedIn1978"/>
+    <rdfs:comment xml:lang="pt">Yellow Magic Orchestra (YMO) é uma banda japonesa de electropop, formada em 1978. Eles foram considerados Nº2 na lista dos 100 melhores músicos do Japão pela HMV. A banda é nomeada como sendo pioneira nos gêneros musicais Synthpop e Electropop, juntamente com os alemães do Kraftwerk. Os principais membros são Haruomi "Harry" Hosono, Yukihiro Takahashi e Ryuichi Sakamoto.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://ru.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Synthpop_groups"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <rdfs:comment xml:lang="fi">Yellow Magic Orchestra (tai Y.M.O. ) on 1978 perustettu japanilainen elektronisen pop-musiikin yhtye. Sen jäseniä ovat olleet Haruomi Hosono, Yukihiro Takahashi ja Ryūichi Sakamoto. Yellow Magic Orchestra hajosi 1983, mutta palasi yhteen vielä yhden albumin ajaksi kymmenen vuotta myöhemmin.</rdfs:comment>
+    <rdfs:label xml:lang="ca">Yellow Magic Orchestra</rdfs:label>
+    <rdfs:label xml:lang="de">Yellow Magic Orchestra</rdfs:label>
+    <rdfs:label xml:lang="en">Yellow Magic Orchestra</rdfs:label>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Japan_(band)"/>
+    <dbpedia-owl:abstract xml:lang="pt">Yellow Magic Orchestra (YMO) é uma banda japonesa de electropop, formada em 1978. Eles foram considerados Nº2 na lista dos 100 melhores músicos do Japão pela HMV. A banda é nomeada como sendo pioneira nos gêneros musicais Synthpop e Electropop, juntamente com os alemães do Kraftwerk. Os principais membros são Haruomi "Harry" Hosono, Yukihiro Takahashi e Ryuichi Sakamoto.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="ko">옐로 매직 오케스트라(Yellow Music Orchestra)는 1978년에 결성된 일본의 음악 그룹이다. 줄여서 YMO(와이엠오)라고 불리기도 하며, 일렉트로 팝 장르의 선구자로 알려져 있다.</rdfs:comment>
+    <dbpedia-owl:alias xml:lang="en">Yellow Magic Band, YMO, YMO, Sketch Show, Human Audio Sponge, HAS, HASYMO</dbpedia-owl:alias>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DanceMusicalGroups"/>
+    <dbpprop:currentMembers rdf:resource="http://dbpedia.org/resource/Haruomi_Hosono"/>
+    <dbpprop:imageSize rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >235</dbpprop:imageSize>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Sony_Music_Japan_artists"/>
+    <dbpedia-owl:abstract xml:lang="zh">YMO，全名是Yellow Magic Orchestra（黃色魔術交響樂團），是日本音樂家坂本龍一與細野晴臣以及高橋幸宏組建的前衛時髦電子合成樂團。該樂隊在1980年代晚期和1990年代早期對acid house和techno運動有著開創式的世界影響，另類搞怪風格也令人側目卻廣受歡迎。1980年代在日本武道館舉行結束演唱會，數萬樂迷座無虛席。2007年曾於富士山頂重逢演唱並拍攝啤酒廣告。</dbpedia-owl:abstract>
+    <rdfs:label xml:lang="zh">黃色魔術交響樂團</rdfs:label>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <foaf:name xml:lang="en">Yellow Magic Orchestra</foaf:name>
+    <dbpedia-owl:activeYearsEndYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1977-01-01T00:00:00+02:00</dbpedia-owl:activeYearsEndYear>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Restless_Records"/>
+    <rdfs:comment xml:lang="ru">Yellow Magic Orchestra (YMO) — музыкальный коллектив из Токио. Группа была образована в 1978 году, и является одним из пионеров японской электронной музыки. Идея создания "восточного ответа Kraftwerk" принадлежит Харуоми Хосоно – к концу 70-х это был уже довольно известный музыкант в Японии, отличившийся участием в легендарной фолк-рок группе Happy End и несколькими сольными альбомами.</rdfs:comment>
+    <dbpprop:studio rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9</dbpprop:studio>
+    <dbpprop:description rdf:datatype="http://dbpedia.org/datatype/second"
+    >1980.0</dbpprop:description>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electronic_dance_music"/>
+    <dbpprop:compilation rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</dbpprop:compilation>
+    <rdfs:comment xml:lang="de">Das Yellow Magic Orchestra (Y.M.O. ) ist ein japanisches Musiktrio, das sich auf Elektropop spezialisiert hat. Dieses Genre wurde Ende der Siebziger Jahre des 20. Jahrhunderts von ihnen maßgeblich mitbeeinflusst. In ihrer asiatischen Heimat genießen sie ein ähnliches Ansehen als Pioniere der elektronischen Musik wie etwa die Gruppe Kraftwerk in Europa und Nordamerika. Die Mitglieder sind Haruomi Hosono, Yukihiro Takahashi und Ryuichi Sakamoto.</rdfs:comment>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_electro_musicians"/>
+    <dbpprop:live rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >13</dbpprop:live>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/New_Wave_music"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Sony_Music_Entertainment_Japan"/>
+    <dbpedia-owl:abstract xml:lang="ja">イエロー・マジック・オーケストラ(Yellow Magic Orchestra)は、1978年に結成された日本の音楽グループ。YMO（ワイ・エム・オー）と略称される。</dbpedia-owl:abstract>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electronic_music"/>
+    <owl:sameAs rdf:resource="http://pt.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Avex_Trax"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/JapaneseElectronicMusicGroups"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_pop_music_groups"/>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Ryuichi_Sakamoto"/>
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/イエロー・マジック・オーケストラ"/>
+    <dbpedia-owl:abstract xml:lang="no">Yellow Magic Orchestra (YMO) er et japansk electropop-band som ble stiftet i 1978. Medlemmene er Haruomi Hosono på bass, Yukihiro Takahashi på trommer og vokal og Ryuichi Sakamoto på keyboard. De er kjente for å være pionerene innen technopop-sjangeren.</dbpedia-owl:abstract>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yellow_Magic_Orchestra?oldid=494477969"/>
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Yellow_Magic_Orchestra"/>
+    <owl:sameAs rdf:resource="http://zitgist.com/music/artist/ac5af671-1df0-4312-8b7b-e61992ecc883"/>
+    <dbpedia-owl:abstract xml:lang="sv">Yellow Magic Orchestra är en japansk synthgrupp som grundades 1978. De huvudsakliga medlemmarna var Haruomi Hosono, Yukihiro Takahashi och Ryuichi Sakamoto. Bandet bildades ursprungligen av Hosono för ett studioprojekt som skulle vara en engångsföreteelse. Takahashi och Sakamoto hade tidigare arbetat som studiomusiker och det var i egenskap av sådana de blev medlemmar i bandet. Idén med projektet var att skapa en fusion mellan orientalisk exotika och modern elektronisk musik. Det första albumet med dess banbrytande produktion blev populärt och studioprojektet växte till en mer normalt turnerande orkester och en karriär för alla tre medlemmarna Genom sin omfattande användning av nya synthar, samplers och modern digital inspelningsteknik blev de populära inte bara i Japan. De ansågs, och anses, vara några av pionjärerna inom elektronisk musik som än idag samplas och remixas av andra. Bandet upplöstes officiellt 1984 då de tre medlemmarna ägnade sig åt sina solokarriärer, men återförenades för ett album; Technodon 1993. Under det tidiga 2000-talet återförenades Hosono &amp; Takahashi i orkestern Sketch Show och vid ett flertal tillfällen har Sakamoto förenats med två andra för framträdanden och inspelningar. Senare skall har han föreslagit att orkestern skulle döpas om till "Human Audio Sponge" när han medverkar.</dbpedia-owl:abstract>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://myspace.com/hasymo"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.ymo.org/"/>
+    <rdfs:comment xml:lang="nl">Yellow Magic Orchestra is een Japanse muziekgroep, opgericht in 1978. De band wordt met het Duitse Kraftwerk genoemd als pioniers van de technopop. De belangrijkste bandleden zijn Haruomi "Harry" Hosono, Yukihiro Takahashi en Ryuichi Sakamoto (keyboards).</rdfs:comment>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Experimental_music"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Japanese_musical_groups"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Worldbeat"/>
+  </j.2:Organization>
+  <j.2:Organization rdf:about="http://dbpedia.org/resource/Yelle">
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Dance_music"/>
+    <dbpprop:currentMembers xml:lang="en">GrandMarnier</dbpprop:currentMembers>
+    <rdfs:comment xml:lang="pt">Yelle (um acrônimo feminino de "You enjoy life" é uma cantora francesa da cidade de Saint-Brieuc, região da Bretanha, na França. Ela chegou a fama através do MySpace, quando colocou online uma música chamada "Short Dick Cuizi", segundo afirma Cuizinier, um membro parisiense do grupo de hip hop TTC. Com o produtor e grande amigo GrandMarnier, Yelle gravou um álbum com o título "Pop-up", e depois seu single "Je Veux Te Voir" .</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="de">Yelle ist eine französische Sängerin. Ihr Künstlername ist ein Akronym von „You enjoy life“. Ihre Musik ist eine Kombination aus modernem Elektro und typischen 80er-Jahre synthie-Klängen, was sich auch in ihrem grellen Erscheinungsbild widerspiegelt.</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="it">Raggiunge la notorietà pubblicando i primi lavori su Myspace, attirando particolare attenzione quando pubblica una canzone dal nome "Short Dick Cuizi", indirizzata a Cuizinier, membro del gruppo parigino hip-hop TTC. Collaborando con il produttore e amico GrandMarnier Yelle registra nel 2007 l'album di debutto, Pop-Up, seguito dal primo singolo "Je Veux Te Voir" (versione finale di "Short Dick Cuizi"). La canzone diventa presto una hit nazionale e, riadattata con un nuovo videoclip, lancia Yelle nel panorama internazionale. La collaborazione col gruppo francese Fatal Bazooka nella canzone "Parle à ma main" (2007) contribuisce fortemente al lancio nazionale della cantante, raggiungendo presto la cima delle classifiche dei singoli in Francia. L'11 gennaio 2011 la cantante francese attraverso il proprio sito ufficiale annuncia come nel Marzo 2011 uscirà il suo secondo album in studio dal titolo "Safari Disco Club". La cantante afferma al riguardo: « Questo nuovo album è davvero molto diverso da 'Pop up', il nostro disco d'esordio. Nel 2007, in preda all'entusiasmo, abbiamo realizzato tutto in due mesi, registrazioni comprese. 'Safari disco club' è di sicuro più maturo perché siamo maturati anche noi, non vediamo l'ora di sentire cosa ne pensa il nostro pubblico.  »&lt;/div&gt;</dbpedia-owl:abstract>
+    <owl:sameAs rdf:resource="http://pt.dbpedia.org/resource/Yelle"/>
+    <dbpprop:currentMembers xml:lang="en">Tepr</dbpprop:currentMembers>
+    <dbpprop:currentMembers xml:lang="en">Yelle</dbpprop:currentMembers>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.03j0k31"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yelle"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/2000sMusicGroups"/>
+    <rdfs:comment xml:lang="pl">Yelle, właśc. Julie Budet – francuska piosenkarka tworząca muzykę zaliczaną do takich gatunków muzyki elektronicznej i muzyki pop jak electroclash oraz electro-pop, córka muzyka François Budeta.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/Yelle"/>
+    <owl:sameAs rdf:resource="http://pl.dbpedia.org/resource/Yelle"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_established_in_2005"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpprop:origin xml:lang="en">France</dbpprop:origin>
+    <rdfs:comment xml:lang="en">Yelle is a French band founded by lead singer and namesake Yelle (Julie Budet) and GrandMarnier (Jean-François Perrier). A third member, Tepr (Tanguy Destable), joined the band before the recording of its debut album. Budet and GrandMarnier began working on music together in 2000. The band came to prominence when it posted an early version of the song "Je veux te voir" on MySpace in September 2005, which later reached the top five in France.</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="en">Yelle is a French band founded by lead singer and namesake Yelle (Julie Budet) and GrandMarnier (Jean-François Perrier). A third member, Tepr (Tanguy Destable), joined the band before the recording of its debut album. Budet and GrandMarnier began working on music together in 2000. The band came to prominence when it posted an early version of the song "Je veux te voir" on MySpace in September 2005, which later reached the top five in France. The success of the song on MySpace attracted the attention of a record label, which set them to work on its debut album, Pop Up, which was released in 2007. The group's second album, Safari Disco Club was released in 2011. Even though the group's songs are sung exclusively in French, they have enjoyed a significant following overseas in non-French-speaking countries. They toured the globe for three years in support of Pop Up.</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="pt">Yelle (um acrônimo feminino de "You enjoy life" é uma cantora francesa da cidade de Saint-Brieuc, região da Bretanha, na França. Ela chegou a fama através do MySpace, quando colocou online uma música chamada "Short Dick Cuizi", segundo afirma Cuizinier, um membro parisiense do grupo de hip hop TTC. Com o produtor e grande amigo GrandMarnier, Yelle gravou um álbum com o título "Pop-up", e depois seu single "Je Veux Te Voir" . O som, que tem samples de base '20 Fingers', como o hit Short Dick Man, recebeu grande apoio pela MTV. Ela também foi caracterizada pela música "Parle à ma main" juntamente com Fatal Bazooka, em 2007. Em Outubro de 2007, abriu o show para Mika durante sua turnê pela Europa. Em Fevereiro de 2008 apresentou a faixa "A cause des Garçons" no Terceiro show BBC "Lily Allen and Friends". Foi a sua primeira aparição na televisão britânica. Ela é a 'Artista da Semana' da MTV na semana de 24 a 30 de Março de 2008, tendo aparições durante os comerciais.</dbpedia-owl:abstract>
+    <foaf:name xml:lang="en">Yelle</foaf:name>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Caroline_Records_artists"/>
+    <dbpedia-owl:abstract xml:lang="ja">イェール（Yelle、1983年1月17日 – ）は、フランスの歌手。本名 Julie Budet。</dbpedia-owl:abstract>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:French_electronic_music_groups"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/2010sMusicGroups"/>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/Band_MusicGroup"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_trios"/>
+    <rdfs:comment xml:lang="fr">Yelle est un groupe français d'électro-pop, originaire de Bretagne, composé de la chanteuse Yelle (Julie Budet), de GrandMarnier (Jean-François Perrier) et de Tepr (Tanguy Destable). Découvert sur Internet en 2005, via le réseau social MySpace, le groupe Yelle compte deux albums à son actif.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Yelle is een Franse zangeres. Haar echte naam is Julie Budet. Ze werd bekend op MySpace met het liedje Short Dick Cuizi. Met producer en goede vriend GrandMarnier heeft Yelle haar debuutalbum Pop-Up opgenomen. Als derde bandlid speelt Tepr, ook bekend van de remix van A cause des Garçons, mee. Vanaf oktober 2007 deed ze voor Mika het voorprogramma tijdens zijn optredens in Europa. In februari 2008 had ze een nieuwe hit met A cause des Garçons op BBC 3.</rdfs:comment>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2005-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <rdfs:label xml:lang="en">Yelle</rdfs:label>
+    <rdfs:label xml:lang="de">Yelle</rdfs:label>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <dbpprop:landscape xml:lang="en">yes</dbpprop:landscape>
+    <dbpedia-owl:thumbnail rdf:resource="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Yelle_2008.jpg/200px-Yelle_2008.jpg"/>
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Yelle"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/FrenchMusicalGroups"/>
+    <dbpprop:name xml:lang="en">Yelle</dbpprop:name>
+    <dbpprop:label xml:lang="en">Source Etc, Recreation Center, Caroline Records</dbpprop:label>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yelle"/>
+    <dbpedia-owl:abstract xml:lang="ru">Жюли́ Бюдэ́ (более известная как Yelle) — французская исполнительница в стиле электропоп. Псевдоним образован из акронима YEL («You enjoy life», «Ты наслаждаешься жизнью»), переделанного на женский манер.</dbpedia-owl:abstract>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electro_(music)"/>
+    <dbpedia-owl:abstract xml:lang="fr">Yelle est un groupe français d'électro-pop, originaire de Bretagne, composé de la chanteuse Yelle (Julie Budet), de GrandMarnier (Jean-François Perrier) et de Tepr (Tanguy Destable). Découvert sur Internet en 2005, via le réseau social MySpace, le groupe Yelle compte deux albums à son actif.</dbpedia-owl:abstract>
+    <dbpprop:caption xml:lang="en">Yelle in December 2008. From left to right: GrandMarnier, Yelle and Tepr.</dbpprop:caption>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <foaf:depiction rdf:resource="http://upload.wikimedia.org/wikipedia/commons/9/9a/Yelle_2008.jpg"/>
+    <rdfs:comment xml:lang="de">Yelle ist eine französische Sängerin. Ihr Künstlername ist ein Akronym von „You enjoy life“. Ihre Musik ist eine Kombination aus modernem Elektro und typischen 80er-Jahre synthie-Klängen, was sich auch in ihrem grellen Erscheinungsbild widerspiegelt.</rdfs:comment>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/EMI"/>
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/イェール"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.yelle.fr"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalTrios"/>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Caroline_Records"/>
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Yelle"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:French-language_singers"/>
+    <dbpedia-owl:abstract xml:lang="es">Julie Budet, más conocida por su apodo Yelle (acrónimo de You Enjoy Life), es una cantante francesa de electropop nacida el 17 de enero de 1983 en Saint-Brieuc, Bretaña. Asimismo, Yelle es también el nombre de la banda que integra con los DJs Grand Marnier (Jean François Perrier) y Tepr (Tanguy Destable).</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="pl">Yelle, właśc. Julie Budet – francuska piosenkarka tworząca muzykę zaliczaną do takich gatunków muzyki elektronicznej i muzyki pop jak electroclash oraz electro-pop, córka muzyka François Budeta.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="ja">イェール（Yelle、1983年1月17日 – ）は、フランスの歌手。本名 Julie Budet。</rdfs:comment>
+    <dbpedia-owl:abstract xml:lang="sv">Yelle, är det artistnamn som den franska sångerskan Julie Budet använder sig av. Yelle slog igenom på Myspace under 2006, singeln Je veux te voir spelades sedan mycket på SR P3 under våren 2007. Singeln är skriven som ett svar på sexistiska raptexter; jämför med D muttant och Y Puss i Sverige. År 2006 släppte hos sitt debutalbum Pop Up!. Yelle var med och designade en tröja för fashion against Aids med H&amp;M.</dbpedia-owl:abstract>
+    <owl:sameAs rdf:resource="http://ru.dbpedia.org/resource/Yelle"/>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yelle?oldid=492031889"/>
+    <dbpedia-owl:abstract xml:lang="nl">Yelle is een Franse zangeres. Haar echte naam is Julie Budet. Ze werd bekend op MySpace met het liedje Short Dick Cuizi. Met producer en goede vriend GrandMarnier heeft Yelle haar debuutalbum Pop-Up opgenomen. Als derde bandlid speelt Tepr, ook bekend van de remix van A cause des Garçons, mee. Vanaf oktober 2007 deed ze voor Mika het voorprogramma tijdens zijn optredens in Europa. In februari 2008 had ze een nieuwe hit met A cause des Garçons op BBC 3. Dit was haar eerste verschijning op de Britse televisie. In het voorjaar van 2011 kwam haar nieuwe album Safari Disco Club uit met een gelijknamige eerste single.</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="ru">Жюли́ Бюдэ́ (более известная как Yelle) — французская исполнительница в стиле электропоп. Псевдоним образован из акронима YEL («You enjoy life», «Ты наслаждаешься жизнью»), переделанного на женский манер.</rdfs:comment>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.bloginity.com/blog/2008/10/13/interview-julie-budet-yelle-french-pop-star/"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electronic_music"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2005</dbpprop:yearsActive>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:comment xml:lang="es">Julie Budet, más conocida por su apodo Yelle (acrónimo de You Enjoy Life), es una cantante francesa de electropop nacida el 17 de enero de 1983 en Saint-Brieuc, Bretaña. Asimismo, Yelle es también el nombre de la banda que integra con los DJs Grand Marnier (Jean François Perrier) y Tepr (Tanguy Destable).</rdfs:comment>
+    <dbpprop:genre xml:lang="en">Electronic, pop, dance, electro</dbpprop:genre>
+    <rdfs:comment xml:lang="it">Raggiunge la notorietà pubblicando i primi lavori su Myspace, attirando particolare attenzione quando pubblica una canzone dal nome "Short Dick Cuizi", indirizzata a Cuizinier, membro del gruppo parigino hip-hop TTC. Collaborando con il produttore e amico GrandMarnier Yelle registra nel 2007 l'album di debutto, Pop-Up, seguito dal primo singolo "Je Veux Te Voir" (versione finale di "Short Dick Cuizi").</rdfs:comment>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.europopmusic.eu/Reviews/ReviewsQ1_11.html#Review_Safaridiscoclub"/>
+    <rdfs:comment xml:lang="sv">Yelle, är det artistnamn som den franska sångerskan Julie Budet använder sig av. Yelle slog igenom på Myspace under 2006, singeln Je veux te voir spelades sedan mycket på SR P3 under våren 2007. Singeln är skriven som ett svar på sexistiska raptexter; jämför med D muttant och Y Puss i Sverige. År 2006 släppte hos sitt debutalbum Pop Up!. Yelle var med och designade en tröja för fashion against Aids med H&amp;M.</rdfs:comment>
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Yelle_(groupe)"/>
+  </j.2:Organization>
+  <dbpedia-owl:Band rdf:about="http://dbpedia.org/resource/Yellow_Second">
+    <dbpprop:label xml:lang="en">Urban Achiever Records</dbpprop:label>
+    <dbpedia-owl:abstract xml:lang="en">Yellow Second was a melodic power pop band from Denver, Colorado formed in 1999 by Scott Kerr and Andrew Verdecchio, both members of the Christian ska band Five Iron Frenzy. During their six-year stint, the band released three albums, June One, Still Small, and Altitude. Additionally, several completed, though commercially-unreleased tracks (referred to as "B-sides"), were made available for download on the band's official website. These tracks were entitled Waiting For No One, Velocity, Everything is Changing, and Return Receipt Requested. In late 2005, Yellow Second's disbandment was announced via the official Myspace account as well as the official website. Despite Yellow Second's common inclusion among Christian music genres, the band's lyrics are primarily secular with incidental references to God and prayer, while some lyrics are clearly critical of organized religion. Scott Kerr, Yellow Second's foreman, claimed that his goal in the formation of the band was "writing good songs which are musically interesting but also accessible". Other themes include personal failings, romance, and allusions to the writing process. On 22 June 2009, Yellow Second released the song "Something to Do with You" on MySpace.</dbpedia-owl:abstract>
+    <rdfs:label xml:lang="en">Yellow Second</rdfs:label>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Power_pop"/>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.01pnh5m"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.myspace.com/yellowsecond"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanPowerPopMusicalGroups"/>
+    <dbpedia-owl:formerBandMember rdf:resource="http://dbpedia.org/resource/Andrew_Verdecchio"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.floodgaterecords.com/"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanChristianMusicalGroups"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <foaf:name xml:lang="en">Yellow Second</foaf:name>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Five_Iron_Frenzy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yellow_Second"/>
+    <dbpprop:website rdf:resource="http://www.yellowsecond.com"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Five_Iron_Frenzy"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/The_Rocket_Summer"/>
+    <dbpprop:currentMembers xml:lang="en">Brett Bowden</dbpprop:currentMembers>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_from_Colorado"/>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yellow_Second?oldid=492301488"/>
+    <rdfs:comment xml:lang="en">Yellow Second was a melodic power pop band from Denver, Colorado formed in 1999 by Scott Kerr and Andrew Verdecchio, both members of the Christian ska band Five Iron Frenzy. During their six-year stint, the band released three albums, June One, Still Small, and Altitude. Additionally, several completed, though commercially-unreleased tracks (referred to as "B-sides"), were made available for download on the band's official website.</rdfs:comment>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.floodgaterecords.com/artistdetail/index.php?id=25"/>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.purevolume.com/yellowsecond/"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/United_States"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.yellowsecond.com"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:American_Christian_musical_groups"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsFromColorado"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/The_Rocket_Summer"/>
+    <foaf:homepage rdf:resource="http://www.yellowsecond.com"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Power_pop"/>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Five_Iron_Frenzy"/>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/The_Rocket_Summer"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Denver"/>
+    <dbpprop:currentMembers xml:lang="en">Scott Kerr</dbpprop:currentMembers>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1999</dbpprop:yearsActive>
+    <dbpedia-owl:activeYearsEndYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2005-01-01T00:00:00+02:00</dbpedia-owl:activeYearsEndYear>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yellow_Second"/>
+    <dbpprop:currentMembers xml:lang="en">Josh Hemingway</dbpprop:currentMembers>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/2000sMusicGroups"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Colorado"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:American_power_pop_groups"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpprop:pastMembers xml:lang="en">Nathan Marcy</dbpprop:pastMembers>
+    <dbpprop:currentMembers xml:lang="en">Sammy Sharon</dbpprop:currentMembers>
+    <dbpprop:label xml:lang="en">Floodgate Records</dbpprop:label>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1999-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+  </dbpedia-owl:Band>
+  <dbpedia-owl:Agent rdf:about="http://dbpedia.org/resource/Yeborobo">
+    <dbpedia-owl:abstract xml:lang="en">Yeborobo are a noize band, now based in London. They are one of the most notable members of the Mentalist Association, a tribal unit of diverse personalities originating from Maidstone, Kent. The name may have been taken from that of a South African contestant to the UK television programme Robot Wars. Yeborobo's music has grown out of a wild stage act, an always changing riot that at once revels in and laughs about the great follies of prog and metal. Props and costumes are enthusiastically built and then generally destroyed through crazed interaction between band and audience to such a degree that concerts often end in minor injuries to performers and fans alike. The question of danger in live performance since The Stooges has often been used to create an interaction between audience and performer whilst relying on the hostility to keep them distinct. Yeborobo have moved away from this divisive tension and genuinely allow the audience to virtually take over the proceedings within an inclusive tension more akin to the performance art of the 1960s. This relies on a dichotomy created between different factions of the band. The drums and the twin guitars create a solid yet complex groove, shifting and buckling under their own weight. In the foreground Andrew and Rob create mayhem, jumping and yelping, their pithy lyrics mostly lost within the clamour of their band, eventually abandoning their posts to climb a wall or ruck amongst the audience. This creates an illusionary atmosphere of total chaos. The controlling factor between these two parties is their bassist, Sophie, at once laying down the rhythm and increasingly becoming embroiled in the mania down the front. This dynamic creates the excitement, humour and urgency of the spectacle whilst also supplying powerful and cerebral music to fuel it in a furtively structured way. Yeborobo's moment in the spotlight came during 2007 when they went on tour as support act to Klaxons, the Nu Rave pop band whose album, Myths of the Near Future, was soon to win the years Mercury Music Prize. The transition from playing small dark venues of receptive and savvy art school kids, mostly around London and Brighton, to playing in front of a much larger and wider audience was fraught, and they were often booed and looked upon with incomprehensibility by both public and critics: "What an abortion of a support band Yeborobo turned out to be. Placing animal masks, face paint and giant cardboard arms above having two good songs to rub together. When they weren’t poking the audience with aforementioned cardboard limb, they were being sick on them. I think we can leave it there. " http://www. wessexscene. co. uk/article. php?sid=2042 Yeborobo were also heavily involved with a project put together by the fashion magazine Dazed and Confused based around the various out-puts of the Mentalist Association. More can be read about this here: http://www. dazeddigital. com/features/article. aspx?a=327. In 2006 Yeborobo's 7" 'I'm Magick Gimme A Fiver' was chosen as Single Of The Year by The Daddy Said So Land radio broadcast on Resonance fm.</dbpedia-owl:abstract>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <dbpprop:currentMembers xml:lang="en">Sam Eden Green</dbpprop:currentMembers>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/New_rave"/>
+    <rdfs:label xml:lang="en">Yeborobo</rdfs:label>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/New_rave"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:English_rock_music_groups"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2003</dbpprop:yearsActive>
+    <dbpprop:currentMembers xml:lang="en">Rob Bidder</dbpprop:currentMembers>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.mentalistassociation.co.uk/"/>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/EnglishRockMusicGroups"/>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2003-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <dbpprop:label xml:lang="en">Mentalist Association</dbpprop:label>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:English_punk_rock_groups"/>
+    <rdfs:comment xml:lang="en">Yeborobo are a noize band, now based in London. They are one of the most notable members of the Mentalist Association, a tribal unit of diverse personalities originating from Maidstone, Kent. The name may have been taken from that of a South African contestant to the UK television programme Robot Wars. Yeborobo's music has grown out of a wild stage act, an always changing riot that at once revels in and laughs about the great follies of prog and metal.</rdfs:comment>
+    <dbpprop:origin rdf:resource="http://dbpedia.org/resource/England"/>
+    <foaf:name xml:lang="en">Yeborobo</foaf:name>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.03c9n8z"/>
+    <dbpprop:website rdf:resource="http://www.mentalistassociation.co.uk/"/>
+    <dbpprop:currentMembers xml:lang="en">Matthew Rains</dbpprop:currentMembers>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.dazeddigital.com/features/article.aspx?a=327"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Maidstone"/>
+    <dbpprop:origin rdf:resource="http://dbpedia.org/resource/Maidstone"/>
+    <dbpedia-owl:thumbnail rdf:resource="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Yeborobo2.jpg/200px-Yeborobo2.jpg"/>
+    <foaf:homepage rdf:resource="http://www.mentalistassociation.co.uk/"/>
+    <dbpprop:name xml:lang="en">Yeborobo</dbpprop:name>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpprop:currentMembers xml:lang="en">Russell Bailey</dbpprop:currentMembers>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yeborobo?oldid=440982451"/>
+    <dbpprop:caption xml:lang="en">Yeborobo performing live at The Old Blue Last, London</dbpprop:caption>
+    <dbpprop:currentMembers xml:lang="en">Andrew Kerr</dbpprop:currentMembers>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yeborobo"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/EnglishPunkRockGroups"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Punk_rock"/>
+    <foaf:depiction rdf:resource="http://upload.wikimedia.org/wikipedia/commons/9/94/Yeborobo2.jpg"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Punk_rock"/>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/England"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Mentalist_Association"/>
+    <dbpprop:currentMembers xml:lang="en">Sophie Simpson</dbpprop:currentMembers>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yeborobo"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.wessexscene.co.uk/article.php?sid=2042"/>
+  </dbpedia-owl:Agent>
+  <yago:TributesToTheBeatles rdf:about="http://dbpedia.org/resource/Yellow_Matter_Custard">
+    <dbpedia-owl:abstract xml:lang="pt">Yellow Matter Custard Beatles é uma banda tributo constituída por Mike Portnoy (Dream Theater, Transatlantic, OSI, Liquid Tension Experiment, Liquid Trio Experiment), Neal Morse (Transatlantic, Spock's Beard), Paul Gilbert (Racer X, Mr. Big) e Matt Bissonette (Mustard Seeds, Jughead, The Squirts, Joe Satriani, ELO). Eles tomam o nome da letra de "I am the walrus": "Yellow matter custard Dripping from a dead dog's eye" (Creme de Matéria Amarela, a pingar do olho de um cão morto). Mais um projeto do que uma banda, eles realizaram shows apenas duas vezes: em 17 de maio de 2003 em Upper Montclair, New Jersey, e em 18 de maio de 2003 no BB King's Blues Club, em Nova York. A última performance foi gravada e lançada como o duplo CD Uma Noite em Nova Iorque nesse mesmo ano, sob o selo Radiant Records. Agora também disponível como um vídeo de DVD também Radiant Records, lançado no final de 2005. Características especiais do DVD incluem ensaios antes do show e áudio exclusivo, comentários de Mike &amp; Howard Portnoy (Pai de Mike).</dbpedia-owl:abstract>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Yellow_Matter_Custard"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_from_New_York"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20032011</dbpprop:yearsActive>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/The_Beatles"/>
+    <rdfs:comment xml:lang="en">Yellow Matter Custard is a Beatles tribute supergroup consisting of Mike Portnoy, Neal Morse, Paul Gilbert and Matt Bissonette. Kasim Sulton played bass with the band in 2011, replacing Bissonette. They take their name from a lyric in "I Am the Walrus", by The Beatles: "Yellow matter custard, dripping from a dead dog's eye". Ty Tabor was originally approached to play guitar for the group, but was unable to due to the King's X touring schedule.</rdfs:comment>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Paul_Gilbert"/>
+    <dbpprop:currentMembers rdf:resource="http://dbpedia.org/resource/Mike_Portnoy"/>
+    <dbpprop:name xml:lang="en">Yellow Matter Custard</dbpprop:name>
+    <rdfs:label xml:lang="de">Yellow Matter Custard</rdfs:label>
+    <rdfs:label xml:lang="en">Yellow Matter Custard</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Kasim_Sulton"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:The_Beatles_tribute_bands"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <rdfs:comment xml:lang="pt">Yellow Matter Custard Beatles é uma banda tributo constituída por Mike Portnoy (Dream Theater, Transatlantic, OSI, Liquid Tension Experiment, Liquid Trio Experiment), Neal Morse (Transatlantic, Spock's Beard), Paul Gilbert (Racer X, Mr. Big) e Matt Bissonette (Mustard Seeds, Jughead, The Squirts, Joe Satriani, ELO). Eles tomam o nome da letra de "I am the walrus": "Yellow matter custard Dripping from a dead dog's eye" (Creme de Matéria Amarela, a pingar do olho de um cão morto).</rdfs:comment>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpedia-owl:abstract xml:lang="fr">Yellow Matter Custard est un supergroupe de reprise des Beatles créé en 2003. Il a été monté par la volonté de Mike Portnoy (batterie, chant) et Neal Morse (clavier, guitare, chant), tous deux grands fans des Beatles, suite à leur collaboration dans le groupe Transatlantic. La formation est complétée par Paul Gilbert (guitare, chant) et Matt Bissonette (basse, chant). Le nom du groupe provient des paroles de la chanson des Beatles I Am the Walrus : « yellow Matter custard, dripping from a dead dog's eye ». Le groupe ne donne que deux concerts en 2003 : le 17 mai à Upper Montclair et le 18 mai au B.B. King's Blues Club de New York. L'album One Night in New York City, sorti la même année, est un enregistrement de ce second concert. En 2011, Mike Portnoy et Neal Morse décident de relancer l'expérience pour une semaine de tournée à travers les États-Unis. Matt Bissonette étant indisponible, il est remplacé par Kasim Sulton. Lors de cette tournée, le groupe interprète une quarantaine de chansons, dont aucune ne figurait dans leur set-list en 2003. Cette réunion fait l'objet du CD et du DVD One More Night in New York City.</dbpedia-owl:abstract>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yellow_Matter_Custard?oldid=485974341"/>
+    <foaf:name xml:lang="en">Yellow Matter Custard</foaf:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsFromNewYork"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yellow_Matter_Custard"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2003-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Yellow_Matter_Custard"/>
+    <dbpedia-owl:abstract xml:lang="en">Yellow Matter Custard is a Beatles tribute supergroup consisting of Mike Portnoy, Neal Morse, Paul Gilbert and Matt Bissonette. Kasim Sulton played bass with the band in 2011, replacing Bissonette. They take their name from a lyric in "I Am the Walrus", by The Beatles: "Yellow matter custard, dripping from a dead dog's eye". Ty Tabor was originally approached to play guitar for the group, but was unable to due to the King's X touring schedule. Conceived as more of a project than a band, they have only performed a total of five times: twice in 2003, and three times in 2011. Due to scheduling conflicts, Matt Bissonette was unable to play with the band in 2011, and thus was replaced by Kasim Sulton.</dbpedia-owl:abstract>
+    <dbpedia-owl:abstract xml:lang="de">Yellow Matter Custard ist eine US-amerikanische Beatles-Tribute-Band, die für lediglich zwei Auftritte existierte. Nach Art einer Supergroup setzte sie sich aus vier Mitgliedern zusammen, die zuvor bereits von anderen Bands her bekannt waren. Für die beiden Shows am 17. und 18. Mai 2003 kamen Mike Portnoy, Neal Morse, Paul Gilbert und Matt Bissonette unter dem Namen Yellow Matter Custard zusammen. Der Bandname stammt aus dem 1967 veröffentlichten Beatles-Song I Am the Walrus: „Yellow matter custard, dripping from a dead dog's eye“. Mike Portnoy trat weiterhin in Erscheinung als Initiator der Tribute-Bands Cygnus &amp; The Sea Monsters und Hammer of the Gods. Von dem zweiten Konzert im BB King's New York ist eine Doppel-CD sowie eine DVD erschienen.</dbpedia-owl:abstract>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/The_Beatles"/>
+    <rdfs:comment xml:lang="de">Yellow Matter Custard ist eine US-amerikanische Beatles-Tribute-Band, die für lediglich zwei Auftritte existierte. Nach Art einer Supergroup setzte sie sich aus vier Mitgliedern zusammen, die zuvor bereits von anderen Bands her bekannt waren. Für die beiden Shows am 17. und 18. Mai 2003 kamen Mike Portnoy, Neal Morse, Paul Gilbert und Matt Bissonette unter dem Namen Yellow Matter Custard zusammen.</rdfs:comment>
+    <dbpprop:currentMembers xml:lang="en">Matt Bissonette</dbpprop:currentMembers>
+    <owl:sameAs rdf:resource="http://pt.dbpedia.org/resource/Yellow_Matter_Custard"/>
+    <dbpprop:currentMembers xml:lang="en">Paul Gilbert</dbpprop:currentMembers>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yellow_Matter_Custard"/>
+    <rdfs:comment xml:lang="fr">Yellow Matter Custard est un supergroupe de reprise des Beatles créé en 2003. Il a été monté par la volonté de Mike Portnoy (batterie, chant) et Neal Morse (clavier, guitare, chant), tous deux grands fans des Beatles, suite à leur collaboration dans le groupe Transatlantic. La formation est complétée par Paul Gilbert (guitare, chant) et Matt Bissonette (basse, chant).</rdfs:comment>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Matt_Bissonette"/>
+    <dbpedia-owl:abstract xml:lang="es">Yellow Matter Custard es el nombre de la banda formada por Neal Morse, Matt Bisonette, Paul Gilbert y Mike Portnoy, para un par de presentaciones realizadas en Nueva York en 2003. La grabación que vio la luz como DVD y CD doble fue la del 18 de mayo de ese año, realizada en el club B.B. King de New York. Por un lapso de 2 horas, Mike (ex baterista de Dream Theater), Neal (cantante y compositor de rock progresivo Cristiano, con quien ha colaborado Mike), Matt (ex bajista de Ringo Starr y su banda, así como de formación Jazzística) y Paul (fundador de Racer X y guitarrista de Mr. Big) interpretaron 31 melodías de prácticamente toda la historia Beatle, aunque haciendo un poco hincapié en el período de evolución (es decir, a partir de Help!, Revolver y Seargent Pepper's). La filmación del concierto se efectuó con tan sólo 2 cámaras, pero en vez de ser un defecto, se convirtió en una virtud, al darle cierto aire de antigüedad, rudimentarismo y también de intimidad. El espectáculo tuvo también la ventaja de que los integrantes asumieron el rol de ser realmente The Beatles, por lo que la frescura, las risas y hasta los errores en la interpretación de las letras estuvieron presentes. La música se interpretó en este orden, abarcando, como se mencionó antes, la mayoría de la carrera Beatle: Magical Mystery Tour Dear Prudence Dig A Pony She Said, She Said I Call Your Name You Can't Do That When I Get Home Nowhere Man Rain Free As A Bird Come Together I Am The Walrus While My Guitar Gently Weeps Drum Solo/The End (No incluida en los CD originales) Baby's In Black I'll Be Back No Reply The Night Before You're Gonna Lose That Girl Ticket To Ride Everybody's Got Something To Hide Except Me And My Monkey Oh Darling Think For Yourself Wait Revolution I Want You (She's So Heavy) You Know My Name (Look Up The Number) Lovely Rita Good Morning, Good Morning Sgt. Pepper (Reprise) A Day In The Life</dbpedia-owl:abstract>
+    <rdfs:comment xml:lang="es">Yellow Matter Custard es el nombre de la banda formada por Neal Morse, Matt Bisonette, Paul Gilbert y Mike Portnoy, para un par de presentaciones realizadas en Nueva York en 2003. La grabación que vio la luz como DVD y CD doble fue la del 18 de mayo de ese año, realizada en el club B.B. King de New York.</rdfs:comment>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Mike_Portnoy"/>
+    <dbpprop:currentMembers xml:lang="en">Kasim Sulton</dbpprop:currentMembers>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Rock_music"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <dbpedia-owl:activeYearsEndYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >2003-01-01T00:00:00+02:00</dbpedia-owl:activeYearsEndYear>
+    <dbpedia-owl:bandMember rdf:resource="http://dbpedia.org/resource/Neal_Morse"/>
+    <rdf:type rdf:resource="http://schema.org/Organization"/>
+    <dbpprop:currentMembers xml:lang="en">Neal Morse</dbpprop:currentMembers>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanRockMusicGroups"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.0243nr"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <owl:sameAs rdf:resource="http://zitgist.com/music/artist/6a8f8833-5cd2-4562-9a09-496c8cc8583d"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:American_rock_music_groups"/>
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/Yellow_Matter_Custard"/>
+  </yago:TributesToTheBeatles>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Yeasayer">
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/2010sMusicGroups"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+  </owl:Thing>
+  <j.2:Organization rdf:about="http://dbpedia.org/resource/Yeht_Mae">
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Zoth_Ommog_Records"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:pastMembers xml:lang="en">Jeremy Daw</dbpprop:pastMembers>
+    <dbpprop:origin rdf:resource="http://dbpedia.org/resource/United_States"/>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Zoth_Ommog_Records"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Electro-industrial"/>
+    <dbpprop:background xml:lang="en">group_or_band</dbpprop:background>
+    <dbpprop:origin rdf:resource="http://dbpedia.org/resource/California"/>
+    <foaf:name xml:lang="en">Yeht Mae</foaf:name>
+    <dbpprop:website rdf:resource="http://yehtmae.com/"/>
+    <rdfs:label xml:lang="en">Yeht Mae</rdfs:label>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/California"/>
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.02qvmn8"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Organisation"/>
+    <dbpprop:wikiPageUsesTemplate rdf:resource="http://dbpedia.org/resource/Template:Infobox_musical_artist"/>
+    <dbpprop:yearsActive rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1987</dbpprop:yearsActive>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsEstablishedIn1987"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_disestablished_in_1997"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://yehtmae.com/"/>
+    <dbpprop:hasPhotoCollection rdf:resource="http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Yeht_Mae"/>
+    <dbpedia-owl:activeYearsStartYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1987-01-01T00:00:00+02:00</dbpedia-owl:activeYearsStartYear>
+    <dbpprop:label rdf:resource="http://dbpedia.org/resource/Metropolis_Records"/>
+    <foaf:homepage rdf:resource="http://yehtmae.com/"/>
+    <dbpedia-owl:activeYearsEndYear rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >1997-01-01T00:00:00+02:00</dbpedia-owl:activeYearsEndYear>
+    <dbpprop:label xml:lang="en">Gymnastic Records</dbpprop:label>
+    <ns7:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Yeht_Mae?oldid=446362247"/>
+    <dbpprop:name xml:lang="en">Yeht Mae</dbpprop:name>
+    <dbpprop:pastMembers xml:lang="en">Lynda Sterling</dbpprop:pastMembers>
+    <dbpedia-owl:recordLabel rdf:resource="http://dbpedia.org/resource/Metropolis_Records"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/MusicalGroupsDisestablishedIn1997"/>
+    <dbpedia-owl:wikiPageExternalLink rdf:resource="http://www.discogs.com/artist/Yeht+Mae"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:American_industrial_music_groups"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Band"/>
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Yeht_Mae"/>
+    <rdf:type rdf:resource="http://schema.org/MusicGroup"/>
+    <dbpprop:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-musician-noun-1"/>
+    <dcterms:subject rdf:resource="http://dbpedia.org/resource/Category:Musical_groups_established_in_1987"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanIndustrialMusicGroups"/>
+    <rdfs:comment xml:lang="en">Yeht Mae was an electro-industrial band from California which began in 1988 by vocalist and keyboard programmer Jeremy Daw. Daw was later joined by vocalist Lynda Sterling and released two self-distributed cassette demos. Their first CD "1000 Veins" was released by the British gothic/industrial label Gymnastic Records whose albums were pressed in Germany.</rdfs:comment>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Electro-industrial"/>
+    <dbpprop:label xml:lang="en">Out of Line</dbpprop:label>
+    <rdf:type rdf:resource="http://umbel.org/umbel/rc/Band_MusicGroup"/>
+    <dbpedia-owl:background xml:lang="en">group_or_band</dbpedia-owl:background>
+    <dbpedia-owl:abstract xml:lang="en">Yeht Mae was an electro-industrial band from California which began in 1988 by vocalist and keyboard programmer Jeremy Daw. Daw was later joined by vocalist Lynda Sterling and released two self-distributed cassette demos. Their first CD "1000 Veins" was released by the British gothic/industrial label Gymnastic Records whose albums were pressed in Germany. In 1992, musician and producer Talla 2XLC of the band Bigod 20 signed the band to his label Zoth Ommog Records where they went on to release two more CD albums. The band's primary lyrical themes cover strange subjects such as death, experimental surgery, and alien abductions.</dbpedia-owl:abstract>
+    <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/United_States"/>
+  </j.2:Organization>
+</rdf:RDF>
