@@ -7,6 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -25,13 +29,17 @@ public class ExtractionRunner {
 
 	public static void main(String[] args) {
 		
-		String fileName = "data\\objectIsABandOffset0.xml"; // <-- The name of the file the results will be saved in
+		Logger.getRootLogger().setLevel(Level.INFO);
+		PropertyConfigurator.configure("ExtractionRunnerlog4j.properties");
+		
+		
+		String fileName = "data\\subjectIsABandOffset0.xml"; // <-- The name of the file the results will be saved in
 		
 		String SPARQLquery = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>" +
-							" construct {?Subject ?Predicate ?Object.}" +
-		 					" where {?Subject ?Predicate ?Object." +
-		 					" 		 ?Object a dbpedia-owl:Band.}" +
-		 					" ORDER BY desc(?Object)";
+							" construct {?subject ?predicate ?object.}" +
+		 					" where {?subject ?predicate ?object." +
+		 					" 		 ?subject a dbpedia-owl:Band.}" +
+		 					" ORDER BY desc(?subject)";
 		
 	    Query query = QueryFactory.create(SPARQLquery);
 	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
