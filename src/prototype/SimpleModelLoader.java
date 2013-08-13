@@ -62,41 +62,6 @@ public class SimpleModelLoader implements ModelLoader {
 		NsPrefixLoader prefixLoader = new NsPrefixLoader(this.model);
 		prefixLoader.loadStandardPrefixes();
 		
-		
-		/*
-		InfModel inferenceModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MICRO_RULE_INF, model);
-		
-		return inferenceModel; */
-		
-		
-		/*
-		// instantiate the OntModelSpec and set its reasonser
-		this.setOntologyModelSpec(new OntModelSpec(OntModelSpec.RDFS_MEM_RDFS_INF));
-		this.getOntologyModelSpec().setReasoner(OntModelSpec.RDFS_MEM_RDFS_INF.getReasoner());
-		// Create an ontology model
-		this.setOntologyModel(ModelFactory.createOntologyModel(this.getOntologyModelSpec()));
-		this.getOntologyModel().add(model, false); // add my merged dataset and ontology to the ontology model
-		*/
-		
-		
-		
-		
-		/*
-		// Now, write the model out to a file in RDF/XML-ABBREV format:
-		String fileName = "data\\inferredModwel.xml";
-		try {
-			FileOutputStream outFile = new FileOutputStream(fileName);
-			this.model.write(outFile, "RDF/XML-ABBREV");
-			outFile.close();
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		*/
-		
 		return this.model;
 	}
 }
