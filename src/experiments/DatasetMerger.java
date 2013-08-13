@@ -29,14 +29,14 @@ public class DatasetMerger {
 	public static void main(String[] args) {
 		/* log4j logging configuration */
 		Logger.getRootLogger().setLevel(Level.INFO);
-		PropertyConfigurator.configure("merger_log4j.properties");
+		PropertyConfigurator.configure("log4j.properties");
 		
 		// create two empty models into which to read my two RDF/XML files
 		Model model1 = ModelFactory.createDefaultModel();
 		Model model2 = ModelFactory.createDefaultModel();
 		
-		String model1Url = "data\\testDatasetExtended.xml";
-		String model2Url = "data\\dbPediaExtracts\\predicateIsDBbandMember.xml";
+		String model1Url = "data\\mergedTestDatasetAug13b.xml";
+		String model2Url = "data\\dbPediaExtracts\\subjectIsAnAlbumNoAbstractsNoCommentsWithLabels.xml";
 		
 		
 		// Load the two files into the two models
@@ -52,7 +52,7 @@ public class DatasetMerger {
 		prefixLoader.loadStandardPrefixes();
 		
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
-		String fileName = "data\\mergedTestDatasetAug13a.xml";
+		String fileName = "data\\mergedTestDatasetAug13c.xml";
 		try {
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			mergedModel.write(outFile, "RDF/XML-ABBREV");
