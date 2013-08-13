@@ -32,9 +32,6 @@ public class SimpleUserInterface implements UserInterface {
 			}
 			if(!userResponse.equals(EXIT_REQUEST)) {
 				
-				ModelLoader modelLoader = new SimpleModelLoader();
-				InfModel model = modelLoader.getModel();
-				
 				Clue clue;
 				try {
 					clue = new SimpleClue(userResponse);
@@ -42,6 +39,10 @@ public class SimpleUserInterface implements UserInterface {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;
 				}
+				
+				ModelLoader modelLoader = new SimpleModelLoader();
+				InfModel model = modelLoader.getModel();
+				
 				Query query = new SimpleQuery(clue, model);
 				Solver solver = new SimpleSolver();
 				
