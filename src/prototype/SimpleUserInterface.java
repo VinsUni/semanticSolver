@@ -22,7 +22,7 @@ public class SimpleUserInterface implements UserInterface {
 		String userResponse = "";
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		while(!userResponse.equals(EXIT_REQUEST)) {
-			System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\")");
+			System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
 			try {
 				userResponse = in.readLine();
 			}
