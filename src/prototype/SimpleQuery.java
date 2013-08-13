@@ -41,15 +41,6 @@ public class SimpleQuery implements Query {
 		clueParser.parse(); // THE CLUE PARSER SHOULD PERHAPS BE A FIELD IN THE CLUE CLASS RATHER THAN THIS ONE?
 		ArrayList<Selector> selectorVariations = clue.getSelectorVariations();
 		
-		
-		
-		
-		/* At this point, I need to use a reasoner to infer additional triples from my dataset
-		 * See http://jena.apache.org/documentation/inference/
-		 */
-		
-		
-		
 		for(Selector selector : selectorVariations) {
 			OntModel ontologyModel = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_RDFS_INF, this.getModel());
 			StmtIterator iterator = ontologyModel.listStatements(selector);
