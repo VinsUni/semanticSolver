@@ -38,11 +38,12 @@ public class DatasetMerger {
 		String model1Url = "data\\mergedTestDatasetAug13b.xml";
 		String model2Url = "data\\dbPediaExtracts\\subjectIsAnAlbumNoAbstractsNoCommentsWithLabels.xml";
 		
-		
+		System.out.println("Loading two files to be merged...");
 		// Load the two files into the two models
 		model1 = FileManager.get().loadModel(model1Url);
 		model2 = FileManager.get().loadModel(model2Url);
 		
+		System.out.println("Performing merge...");
 		Model mergedModel = model1.union(model2); // create a third model which is the union of the two models
 		
 		/* Define a prefix for one of the many namespaces used in the merged model
@@ -51,12 +52,15 @@ public class DatasetMerger {
 		NsPrefixLoader prefixLoader = new NsPrefixLoader(mergedModel);
 		prefixLoader.loadStandardPrefixes();
 		
+		
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
 		String fileName = "data\\mergedTestDatasetAug13c.xml";
 		try {
+			System.out.println("Writing result out to disk...");
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			mergedModel.write(outFile, "RDF/XML-ABBREV");
 			outFile.close();
+			System.out.println("Operation complete.");
 		}
 		catch(FileNotFoundException e) {
 			e.printStackTrace();
