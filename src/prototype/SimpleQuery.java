@@ -66,10 +66,4 @@ public class SimpleQuery implements Query {
 		}
 		return candidateSolutions;
 	}
-
-	@Override
-	public String getBestSolution() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
