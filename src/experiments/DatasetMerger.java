@@ -35,8 +35,8 @@ public class DatasetMerger {
 		Model model1 = ModelFactory.createDefaultModel();
 		Model model2 = ModelFactory.createDefaultModel();
 		
-		String model1Url = "data\\mergedTestDatasetAug13e.xml";
-		String model2Url = "data\\dbPediaExtracts\\AlbumLabelsEN.xml";
+		String model1Url = "data\\mergedTestDatasetAug13g.xml";
+		String model2Url = "data\\dbPediaExtracts\\BandNamesEN.xml";
 		
 		System.out.println("Loading two files to be merged...");
 		// Load the two files into the two models
@@ -54,7 +54,7 @@ public class DatasetMerger {
 		
 		
 		// Now, write the model out to a file in RDF/XML-ABBREV format:
-		String fileName = "data\\mergedTestDatasetAug13f.xml";
+		String fileName = "data\\mergedTestDatasetAug13h.xml";
 		try {
 			System.out.println("Writing result out to disk...");
 			FileOutputStream outFile = new FileOutputStream(fileName);
