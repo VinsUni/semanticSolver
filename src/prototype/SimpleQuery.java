@@ -6,12 +6,11 @@ import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
-import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.shared.PropertyNotFoundException;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import framework.Clue;
@@ -48,29 +47,45 @@ public class SimpleQuery implements Query {
 		ArrayList<Selector> selectorVariations = clue.getSelectorVariations();
 		
 		for(Selector selector : selectorVariations) {
+			String label;
 			StmtIterator iterator = this.getOntModel().listStatements(selector);
 			while(iterator.hasNext()) {
 				Statement statement = iterator.nextStatement();
 				Resource resource;
-				if(selector.getSubject() == null)
+				if(selector.getSubject() == null) {
 					resource = statement.getSubject(); // the candidate Selector was intended to select subjects matching a pattern of p+o
+					/* duplicated code */
+					StmtIterator iter = resource.listProperties(RDFS.label);
+					while(iter.hasNext()) {
+						Statement s = iter.nextStatement();
+						label = s.getObject().toString();
+						if(!candidateSolutions.contains(label))
+							candidateSolutions.add(label);
+					}
+				}
 				else {
-					if(statement.getObject().isResource())
+					if(statement.getObject().isResource()) {
 						resource = (Resource)statement.getObject(); // the candidate Selector was intended to select objects matching a pattern of s+p
+						try {
+							/* duplicated code */
+							StmtIterator iter = resource.listProperties(RDFS.label);
+							while(iter.hasNext()) {
+								Statement s = iter.nextStatement();
+								label = s.getObject().toString();
+								if(!candidateSolutions.contains(label))
+									candidateSolutions.add(label);
+							}
+						}
+						catch(PropertyNotFoundException e) {
+							// this resource has no label, so ignore it.
+						}
+					}
 					else { // the resource matched is a literal value
 						String literal = statement.getObject().toString();
 						if(!candidateSolutions.contains(literal))
 							candidateSolutions.add(literal);
 						continue;
 					}
-				}
-				
-				StmtIterator sols = this.getOntModel().listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
-				while(sols.hasNext()) {
-					Statement stmt = sols.nextStatement();
-					String label = stmt.getObject().toString();
-					if(!candidateSolutions.contains(label))
-						candidateSolutions.add(label);
 				}
 			}
 		}

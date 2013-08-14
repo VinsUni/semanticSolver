@@ -54,6 +54,22 @@ public class SimpleClueParser implements ClueParser {
 		 * At the moment, a Selector(s, null, null) is already going to match anythin matched by a more specific selector, and thus
 		 * this is unnecessary duplication
 		 */
+		
+		
+		/* This doesn't work - need to look at more closely:
+		 
+		ArrayList<Resource> recognisedSubjectsAndObjects = recognisedSubjects;
+		recognisedSubjectsAndObjects.addAll(recognisedObjects);
+		
+		for(Property predicate: recognisedProperties) {
+			for(Resource resource : recognisedSubjectsAndObjects) {
+				Selector selector = new SimpleSelector(resource, predicate, (RDFNode)null);
+				selectorVariations.add(selector);
+				Selector anotherSelector = new SimpleSelector(null, predicate, resource);
+				selectorVariations.add(anotherSelector);
+			} */
+		
+		
 		for(Property predicate: recognisedProperties) {
 			for(Resource subject : recognisedSubjects) { // Add all combinations of recognised subjects and properties
 				Selector selector = new SimpleSelector(subject, predicate, (RDFNode)null);
