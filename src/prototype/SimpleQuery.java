@@ -30,12 +30,15 @@ public class SimpleQuery implements Query {
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel infModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
+	
 	
 	public SimpleQuery(Clue clue, InfModel model) {
 		this.setClue(clue);
 		this.setClueParser(new SimpleClueParser(clue, model));
-		this.setModel(model);
+		this.setInfModel(model);
+		this.setOntModel(ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_RDFS_INF, this.getInfModel()));
 	}
 
 	@Override
@@ -45,8 +48,7 @@ public class SimpleQuery implements Query {
 		ArrayList<Selector> selectorVariations = clue.getSelectorVariations();
 		
 		for(Selector selector : selectorVariations) {
-			OntModel ontologyModel = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_RDFS_INF, this.getModel());
-			StmtIterator iterator = ontologyModel.listStatements(selector);
+			StmtIterator iterator = this.getOntModel().listStatements(selector);
 			while(iterator.hasNext()) {
 				Statement statement = iterator.nextStatement();
 				Resource resource;
@@ -58,7 +60,7 @@ public class SimpleQuery implements Query {
 					else continue; // the resource matched is a literal value - HOW SHOULD I HANDLE THIS CASE?
 				}
 				
-				StmtIterator sols = ontologyModel.listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
+				StmtIterator sols = this.getOntModel().listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
 				while(sols.hasNext()) {
 					Statement stmt = sols.nextStatement();
 					String label = stmt.getObject().toString();

@@ -7,7 +7,7 @@ package prototype;
  * @author Ben Griffiths
  * 
  */
-public class QueryRunner implements Runnable {
+public class QueryRunnable implements Runnable {
 
 	@Override
 	public void run() {

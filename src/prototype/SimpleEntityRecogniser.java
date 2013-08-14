@@ -34,9 +34,9 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 	private final int LANGUAGE_TAG_LENGTH = 3; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
 	private final String LANGUAGE_TAG = "@"; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
-	@Setter(AccessLevel.PRIVATE) ArrayList<Resource> recognisedSubjects;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Model model;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
+	@Setter(AccessLevel.PUBLIC) ArrayList<Resource> recognisedSubjects;
 	@Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
 	@Setter(AccessLevel.PRIVATE) ArrayList<Resource> recognisedObjects;
 	
@@ -80,6 +80,18 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 
 	@Override
 	public ArrayList<Resource> getRecognisedSubjects() {
+		
+		/* Outline of multithreading idea (doesn't actually work; just exceeds heap space and crashes!
+		if(this.recognisedSubjects == null) {
+			this.setRecognisedSubjects(new ArrayList<Resource>()); // take this line out of constructor
+			ResIterator subjectsInModel = this.getModel().listSubjects();
+			while(subjectsInModel.hasNext()) {
+				Thread erThread = new Thread(new EntityRecogniserRunnable(this));
+				erThread.start(); // start a new thread to query the model for this subject
+			}
+		}
+		return this.recognisedSubjects; */
+			
 		ResIterator subjectsInModel = this.getModel().listSubjects();
 		while(subjectsInModel.hasNext()) {
 			Resource thisSubject = subjectsInModel.nextResource();
