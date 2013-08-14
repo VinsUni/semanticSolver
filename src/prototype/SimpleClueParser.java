@@ -11,7 +11,6 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
-import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
 import framework.ClueParser;
