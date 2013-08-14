@@ -13,6 +13,10 @@ import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.vocabulary.RDF;
 
+import framework.Clue;
+import framework.ClueParser;
+import framework.EntityRecogniser;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

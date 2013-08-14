@@ -7,22 +7,21 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import prototype.Clue;
-import prototype.ModelLoader;
-import prototype.Query;
 import prototype.SimpleClue;
 import prototype.SimpleModelLoader;
 import prototype.SimpleQuery;
 import prototype.SimpleSolver;
-import prototype.Solver;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 
 import exception.InvalidClueException;
+import framework.Clue;
+import framework.ModelLoader;
+import framework.Query;
+import framework.Solver;
 
 /**
  * @author Ben Griffiths

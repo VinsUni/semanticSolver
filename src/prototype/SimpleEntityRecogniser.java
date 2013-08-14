@@ -24,6 +24,9 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
+import framework.Clue;
+import framework.EntityRecogniser;
+
 /**
  * @author Ben Griffiths
  *

@@ -5,6 +5,10 @@ package prototype;
 
 import java.util.ArrayList;
 
+import framework.Clue;
+import framework.Solution;
+import framework.Solver;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

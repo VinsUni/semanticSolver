@@ -1,5 +1,7 @@
 package prototype;
 
+import framework.UserInterface;
+
 /**
  * @author Ben Griffiths
  *

@@ -3,6 +3,7 @@
  */
 package prototype;
 
+import framework.Solution;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

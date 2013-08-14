@@ -15,6 +15,10 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
+import framework.Clue;
+import framework.ClueParser;
+import framework.Query;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
