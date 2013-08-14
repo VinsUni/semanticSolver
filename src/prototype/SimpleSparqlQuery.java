@@ -36,11 +36,4 @@ public class SimpleSparqlQuery implements Query {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public Clue getClue() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

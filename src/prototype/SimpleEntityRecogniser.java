@@ -58,7 +58,7 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		String[] wordsInClueText = clueText.split(" ");
 		for(int i = 0; i < wordsInClueText.length; i++) {
 			String thisWord = wordsInClueText[i];
-			this.getClueFragments().add(thisWord);
+			this.getClueFragments().add(thisWord.toLowerCase());
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + wordsInClueText[j];
 				this.getClueFragments().add(thisWord);
@@ -89,7 +89,7 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 			ExtendedIterator<RDFNode> labels = subject.listLabels(null); // list all values of RDFS:label for this resource
 			while(labels.hasNext()) {
 				String thisLabel = stripLanguageTag(labels.next().toString());
-				if(this.getClueFragments().contains(thisLabel))
+				if(this.getClueFragments().contains(thisLabel.toLowerCase()))
 					this.recognisedSubjects.add(thisSubject);
 			}
 		}
