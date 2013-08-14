@@ -42,12 +42,12 @@ public class PrototypeCoverageTest {
 		cluesToSolve = new ArrayList<String>();
 		solutions = new ArrayList<String>();
 		
-		cluesToSolve.add("member of The Beatles [4, 6]");
-		solutions.add("John Lennon");
-		cluesToSolve.add("member of The Beatles [4, 9]");
-		solutions.add("Paul McCartney");
-		cluesToSolve.add("member of The Beatles (4, 9)"); // not a valid clue
-		solutions.add("[NOT A VALID CLUE]");
+		//cluesToSolve.add("member of The Beatles [4, 6]");
+		//solutions.add("John Lennon");
+		//cluesToSolve.add("member of The Beatles [4, 9]");
+		//solutions.add("Paul McCartney");
+		//cluesToSolve.add("member of The Beatles (4, 9)"); // not a valid clue
+		//solutions.add("[NOT A VALID CLUE]");
 		cluesToSolve.add("Member of The Beatles [4, 9]"); // first letter is upper-case. At present, the basicCoverageTest will fail on this one
 		solutions.add("Paul McCartney");
 		
