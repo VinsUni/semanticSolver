@@ -57,7 +57,12 @@ public class SimpleQuery implements Query {
 				else {
 					if(statement.getObject().isResource())
 						resource = (Resource)statement.getObject(); // the candidate Selector was intended to select objects matching a pattern of s+p
-					else continue; // the resource matched is a literal value - HOW SHOULD I HANDLE THIS CASE?
+					else { // the resource matched is a literal value
+						String literal = statement.getObject().toString();
+						if(!candidateSolutions.contains(literal))
+							candidateSolutions.add(literal);
+						continue;
+					}
 				}
 				
 				StmtIterator sols = this.getOntModel().listStatements(new SimpleSelector(resource, RDFS.label, (RDFNode) null));
