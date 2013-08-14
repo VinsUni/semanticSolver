@@ -4,6 +4,7 @@
 package prototype;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -147,26 +148,16 @@ public class NewSimpleEntityRecogniser implements EntityRecogniser {
 	}
 	
 	/*
-	 * CODE DUPLICATED FROM getRecognisedSubjects() method - TO BE REFACTORED SOMEHOW
+	 * A map is no good for this - I need sequential access
 	 */
 	@Override
 	public ArrayList<Resource> getRecognisedObjects() {
-		NodeIterator objectsInModel = this.getModel().listObjects();
-		while(objectsInModel.hasNext()) {
-			RDFNode thisObject = objectsInModel.nextNode();
-			if(thisObject.isResource()) { // We are only interested in objects that are resources
-				if(this.recognisedObjects.contains((Resource)thisObject))
-					continue;
-				OntResource object = this.getOntModel().getOntResource((Resource)thisObject); // create an OntResource from the RDFNode object
-				ExtendedIterator<RDFNode> labels = object.listLabels(null); // list all values of RDFS:label for this resource
-				while(labels.hasNext()) {
-					String thisLabel = stripLanguageTag(labels.next().toString());
-					if(this.getClueFragments().contains(thisLabel))
-						this.recognisedObjects.add((Resource)thisObject);
-				}
-			}
+		Map<String, Resource> objects = NewSimpleModelLoader.objectsInModel;
+		
+		for(int i = 0; i < objects.size(); i++) {
+			//String label = objects.
 		}
-		return this.recognisedObjects;
+		return new ArrayList<Resource>();
 	}
 
 }
