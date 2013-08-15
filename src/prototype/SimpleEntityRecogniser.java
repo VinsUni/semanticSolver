@@ -36,9 +36,15 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Model model;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ResIterator subjectsIterator;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) StmtIterator statementsIterator; // possibly don't need the other two?
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) NodeIterator objectsIterator;
 	@Setter(AccessLevel.PUBLIC) ArrayList<Resource> recognisedSubjects;
 	@Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
 	@Setter(AccessLevel.PRIVATE) ArrayList<Resource> recognisedObjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Resource> allSubjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Property> allProperties;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Resource> allObjects;
 	
 	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
 
@@ -91,10 +97,14 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 			}
 		}
 		return this.recognisedSubjects; */
-			
-		ResIterator subjectsInModel = this.getModel().listSubjects();
-		while(subjectsInModel.hasNext()) {
-			Resource thisSubject = subjectsInModel.nextResource();
+		
+		
+		
+		if(this.getSubjectsIterator() == null)
+			this.setSubjectsIterator(this.getModel().listSubjects());
+		
+		while(this.getSubjectsIterator().hasNext()) {
+			Resource thisSubject = this.getSubjectsIterator().nextResource();
 			if(this.recognisedSubjects.contains(thisSubject))
 				continue;
 			OntResource subject = this.getOntModel().getOntResource(thisSubject); // create an OntResource from the Resource object
@@ -113,10 +123,11 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 	 */
 	@Override
 	public ArrayList<Property> getRecognisedProperties() {
-		StmtIterator statementsInModel = this.getModel().listStatements();
+		if(this.getStatementsIterator() == null)
+			this.setStatementsIterator(this.getModel().listStatements());
 		
-		while(statementsInModel.hasNext()) {
-			Property thisProperty = statementsInModel.nextStatement().getPredicate();
+		while(this.getStatementsIterator().hasNext()) {
+			Property thisProperty = this.getStatementsIterator().nextStatement().getPredicate();
 			if(this.recognisedProperties.contains(thisProperty))
 				continue;
 			String uri = thisProperty.getURI();
@@ -142,9 +153,11 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 	 */
 	@Override
 	public ArrayList<Resource> getRecognisedObjects() {
-		NodeIterator objectsInModel = this.getModel().listObjects();
-		while(objectsInModel.hasNext()) {
-			RDFNode thisObject = objectsInModel.nextNode();
+		if(this.getObjectsIterator() == null)
+			this.setObjectsIterator(this.getModel().listObjects());
+		
+		while(this.getObjectsIterator().hasNext()) {
+			RDFNode thisObject = this.getObjectsIterator().nextNode();
 			if(thisObject.isResource()) { // We are only interested in objects that are resources
 				if(this.recognisedObjects.contains((Resource)thisObject))
 					continue;
