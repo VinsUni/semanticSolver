@@ -23,8 +23,11 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.reasoner.Reasoner;
+import com.hp.hpl.jena.reasoner.rulesys.RDFSRuleReasonerFactory;
 import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import com.hp.hpl.jena.vocabulary.ReasonerVocabulary;
 
 import experiments.NsPrefixLoader;
 import framework.ModelLoader;
@@ -48,11 +51,13 @@ public class NewSimpleModelLoader implements ModelLoader {
 	private final String ONTOLOGY_URI = "popv7.owl";
 	private final String DATA_URI = "newTestDataset.xml";
 	private final String OWL_FULL_URI = "http://www.w3.org/2002/07/owl#";
-	@Setter(AccessLevel.PRIVATE) InfModel model;
+	@Setter(AccessLevel.PRIVATE) InfModel infModel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModelSpec ontologyModelSpec;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model data;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model ontology;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Reasoner boundReasoner;
+	
 	
 	private void setSubjects() {
 			ResIterator subjects = this.getModel().listSubjects();
@@ -141,33 +146,36 @@ public class NewSimpleModelLoader implements ModelLoader {
 	
 	@Override
 	public InfModel getModel() {
-		if(this.model != null)
-			return this.model; // if the model has already been loaded, simply return it
+		if(this.infModel != null)
+			return this.infModel; // if the model has already been loaded, simply return it
 		
 		/* log4j logging configuration */
 		Logger.getRootLogger().setLevel(Level.INFO);
 		PropertyConfigurator.configure("log4j.properties");
 		
+		this.setOntologyModelSpec(OntModelSpec.RDFS_MEM_RDFS_INF);
 		
-		Model baseModel = ModelFactory.createDefaultModel();
+		this.setData(FileManager.get().loadModel(DATA_URI)); // Read the data from DBPedia into a model
+		this.setInfModel(ModelFactory.createInfModel(this.getOntologyModelSpec().getReasoner(), this.getData()));
+		this.setOntology(FileManager.get().loadModel(ONTOLOGY_URI)); // read my pop ontology into another model
 		
-		data = FileManager.get().loadModel(DATA_URI); // Read the data from DBPedia into a model
-		ontology = FileManager.get().loadModel(ONTOLOGY_URI); // read my pop ontology into another model
-		
-		baseModel = data.union(ontology); // create a third model which is the union of the two models
+		Reasoner reasoner = RDFSRuleReasonerFactory.theInstance().create(null);
+	    reasoner.setParameter(ReasonerVocabulary.PROPsetRDFSLevel, ReasonerVocabulary.RDFS_FULL);
 		
 		
-		this.setModel(ModelFactory.createInfModel(OntModelSpec.RDFS_MEM_RDFS_INF.getReasoner(), baseModel));
+		this.setBoundReasoner(reasoner.bindSchema(this.getOntology()));
+		
+		this.infModel = ModelFactory.createInfModel(this.getBoundReasoner(), this.getData());
 		
 		// load standard prefixes into the model
-		NsPrefixLoader prefixLoader = new NsPrefixLoader(this.model);
+		NsPrefixLoader prefixLoader = new NsPrefixLoader(this.infModel);
 		prefixLoader.loadStandardPrefixes();
 		
 		this.setSubjects();
 		this.setProperties();
 		this.setObjects();
 		
-		return this.model;
+		return this.infModel;
 	}
 	
 	

@@ -41,8 +41,6 @@ import framework.EntityRecogniser;
  * RECOGNISED AS OBJECTS OR SUBJECTS BUT NOT AS PROPERTIES
  */
 public class NewSimpleEntityRecogniser implements EntityRecogniser {
-	private final int LANGUAGE_TAG_LENGTH = 3; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
-	private final String LANGUAGE_TAG = "@"; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Model model;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
@@ -57,9 +55,6 @@ public class NewSimpleEntityRecogniser implements EntityRecogniser {
 		this.setModel(model);
 		this.setOntModel(ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM,this.getModel()));
 		this.setClueFragments();
-		this.setRecognisedSubjects(new ArrayList<Resource>());
-		this.setRecognisedProperties(new ArrayList<Property>());
-		this.setRecognisedObjects(new ArrayList<Resource>());
 	}
 	
 	private void setClueFragments() {
@@ -76,44 +71,14 @@ public class NewSimpleEntityRecogniser implements EntityRecogniser {
 		}
 	}
 	
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLESOLUTION CLASS - REFACTOR IT OUT SOMEWHERE?
-	 */
-	private String stripLanguageTag(String text) {
-		int positionOfLanguageTag = text.length() - LANGUAGE_TAG_LENGTH;
-		if(text.length() > LANGUAGE_TAG_LENGTH) {
-			if(text.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return text.substring(0, positionOfLanguageTag);
-		}
-		return text;
-	}
-
 	@Override
 	public ArrayList<Resource> getRecognisedSubjects() {
+		this.setRecognisedSubjects(new ArrayList<Resource>());
+		Map<String, Resource> subjects = NewSimpleModelLoader.subjectsInModel;
 		
-		/* Outline of multithreading idea (doesn't actually work; just exceeds heap space and crashes!
-		if(this.recognisedSubjects == null) {
-			this.setRecognisedSubjects(new ArrayList<Resource>()); // take this line out of constructor
-			ResIterator subjectsInModel = this.getModel().listSubjects();
-			while(subjectsInModel.hasNext()) {
-				Thread erThread = new Thread(new EntityRecogniserRunnable(this));
-				erThread.start(); // start a new thread to query the model for this subject
-			}
-		}
-		return this.recognisedSubjects; */
-			
-		ResIterator subjectsInModel = this.getModel().listSubjects();
-		while(subjectsInModel.hasNext()) {
-			Resource thisSubject = subjectsInModel.nextResource();
-			if(this.recognisedSubjects.contains(thisSubject))
-				continue;
-			OntResource subject = this.getOntModel().getOntResource(thisSubject); // create an OntResource from the Resource object
-			ExtendedIterator<RDFNode> labels = subject.listLabels(null); // list all values of RDFS:label for this resource
-			while(labels.hasNext()) {
-				String thisLabel = stripLanguageTag(labels.next().toString());
-				if(this.getClueFragments().contains(thisLabel.toLowerCase()))
-					this.recognisedSubjects.add(thisSubject);
-			}
+		for(String clueFragment : this.getClueFragments()) {
+			if(subjects.containsKey(clueFragment));
+				this.recognisedSubjects.add(subjects.get(clueFragment)); // add the resource with a matching a String value
 		}
 		return this.recognisedSubjects;
 	}
@@ -123,41 +88,26 @@ public class NewSimpleEntityRecogniser implements EntityRecogniser {
 	 */
 	@Override
 	public ArrayList<Property> getRecognisedProperties() {
-		StmtIterator statementsInModel = this.getModel().listStatements();
+		this.setRecognisedProperties(new ArrayList<Property>());
+		Map<String, Property> properties = NewSimpleModelLoader.propertiesInModel;
 		
-		while(statementsInModel.hasNext()) {
-			Property thisProperty = statementsInModel.nextStatement().getPredicate();
-			if(this.recognisedProperties.contains(thisProperty))
-				continue;
-			String uri = thisProperty.getURI();
-			if(uri == null)
-				continue;
-			OntProperty property = this.getOntModel().getOntProperty(uri); // create an OntProperty from the Property object
-			if(property == null)
-				continue;
-			ExtendedIterator<RDFNode> labels = property.listLabels(null); // list all values of RDFS:label for this resource
-			if(labels == null)
-				continue;
-			while(labels.hasNext()) {
-				String thisLabel = stripLanguageTag(labels.next().toString());
-				if(this.getClueFragments().contains(thisLabel))
-					this.recognisedProperties.add(thisProperty);
-			}
+		for(String clueFragment : this.getClueFragments()) {
+			if(properties.containsKey(clueFragment));
+				this.recognisedProperties.add(properties.get(clueFragment)); // add the resource with a matching a String value
 		}
 		return this.recognisedProperties;
 	}
 	
-	/*
-	 * A map is no good for this - I need sequential access
-	 */
 	@Override
 	public ArrayList<Resource> getRecognisedObjects() {
+		this.setRecognisedObjects(new ArrayList<Resource>());
 		Map<String, Resource> objects = NewSimpleModelLoader.objectsInModel;
 		
-		for(int i = 0; i < objects.size(); i++) {
-			//String label = objects.
+		for(String clueFragment : this.getClueFragments()) {
+			if(objects.containsKey(clueFragment));
+				this.recognisedObjects.add(objects.get(clueFragment)); // add the resource with a matching a String value
 		}
-		return new ArrayList<Resource>();
+		return this.recognisedObjects;
 	}
 
 }
