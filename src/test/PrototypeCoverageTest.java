@@ -13,7 +13,7 @@ import org.junit.Test;
 import prototype.SimpleClue;
 import prototype.SimpleModelLoader;
 import prototype.SimpleQuery;
-import prototype.SimpleSolver;
+import prototype.SimpleClueSolver;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 
@@ -74,7 +74,7 @@ public class PrototypeCoverageTest {
 						continue;
 					}
 					Query query = new SimpleQuery(this.clue, model);
-					ClueSolver solver = new SimpleSolver();
+					ClueSolver solver = new SimpleClueSolver();
 					ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 					boolean correctSolutionInList = candidateSolutions.contains(solution);
 					assertTrue("Failed to find correct solution (\"" + solution +

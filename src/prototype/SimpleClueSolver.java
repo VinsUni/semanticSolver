@@ -17,7 +17,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  *
  */
-public class SimpleSolver implements ClueSolver {
+public class SimpleClueSolver implements ClueSolver {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
 
 	/**

@@ -48,7 +48,7 @@ public class SimpleUserInterface implements UserInterface {
 				InfModel model = modelLoader.getModel();
 				
 				Query query = new SimpleQuery(clue, model);
-				ClueSolver solver = new SimpleSolver();
+				ClueSolver solver = new SimpleClueSolver();
 				
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				System.out.println("Candidate solutions:");
