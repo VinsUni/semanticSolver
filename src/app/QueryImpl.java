@@ -22,7 +22,7 @@ import framework.Clue;
  * @author Ben Griffiths
  *
  */
-public class SimpleSparqlQuery implements framework.Query {
+public class QueryImpl implements framework.Query {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
@@ -32,8 +32,9 @@ public class SimpleSparqlQuery implements framework.Query {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) String whereClause;
 	
-	public SimpleSparqlQuery(Clue clue) {
+	public QueryImpl(Clue clue) {
 		this.setClue(clue);
 	}
 

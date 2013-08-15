@@ -20,7 +20,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  * Represents a clue
  */
-public class SimpleClue implements Clue {
+public class ClueImpl implements Clue {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String sourceClue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) ArrayList<String> clueVariations;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) ArrayList<Selector> selectorVariations;
@@ -28,7 +28,7 @@ public class SimpleClue implements Clue {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int[] SolutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int numberOfWords;
 	
-	public SimpleClue(String clueAsString) throws InvalidClueException {
+	public ClueImpl(String clueAsString) throws InvalidClueException {
 		if(clueAsString == null || clueAsString.length() == 0)
 			throw new InvalidClueException("Empty clue");
 		if( (!clueAsString.contains("[")) || (clueAsString.charAt(clueAsString.length() - 1) != ']') )

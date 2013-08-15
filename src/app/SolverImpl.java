@@ -17,7 +17,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  *
  */
-public class SimpleSolver implements Solver {
+public class SolverImpl implements Solver {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
@@ -32,7 +32,7 @@ public class SimpleSolver implements Solver {
 		proposedSolutions = this.filterByLanguage(proposedSolutions);
 		ArrayList<String> solutions = new ArrayList<String>();
 		for(String proposedSolution : proposedSolutions) {
-			Solution parsedSolution = new SimpleSolution(proposedSolution);
+			Solution parsedSolution = new SolutionImpl(proposedSolution);
 			String solutionText = parsedSolution.getSolutionText();
 			if(!solutions.contains(solutionText) && isWellFormedSolution(solutionText) && clue.matchesStructure(parsedSolution))
 				solutions.add(solutionText);

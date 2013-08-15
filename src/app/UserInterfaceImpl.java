@@ -18,7 +18,7 @@ import framework.UserInterface;
  * @author Ben Griffiths
  *
  */
-public class SimpleUserInterface implements UserInterface {
+public class UserInterfaceImpl implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 
 	@Override
@@ -38,14 +38,14 @@ public class SimpleUserInterface implements UserInterface {
 				
 				Clue clue;
 				try {
-					clue = new SimpleClue(userResponse);
+					clue = new ClueImpl(userResponse);
 				} catch (InvalidClueException e) {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;
 				}
 				
-				Query query = new SimpleSparqlQuery(clue);
-				Solver solver = new SimpleSolver();
+				Query query = new QueryImpl(clue);
+				Solver solver = new SolverImpl();
 				
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				System.out.println("Candidate solutions:");

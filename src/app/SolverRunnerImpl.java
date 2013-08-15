@@ -6,13 +6,13 @@ import framework.UserInterface;
  * @author Ben Griffiths
  *
  */
-public class SemanticSolverRunner {
+public class SolverRunnerImpl {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		UserInterface ui = new SimpleUserInterface();
+		UserInterface ui = new UserInterfaceImpl();
 		ui.createAndShow();
 	}
 
