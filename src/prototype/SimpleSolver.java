@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 import framework.Clue;
 import framework.Solution;
-import framework.Solver;
+import framework.ClueSolver;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -17,7 +17,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  *
  */
-public class SimpleSolver implements Solver {
+public class SimpleSolver implements ClueSolver {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
 
 	/**

@@ -11,7 +11,7 @@ import exception.InvalidClueException;
 import framework.Clue;
 import framework.ModelLoader;
 import framework.Query;
-import framework.Solver;
+import framework.ClueSolver;
 import framework.UserInterface;
 
 /**
@@ -45,7 +45,7 @@ public class UserInterfaceImpl implements UserInterface {
 				}
 				
 				Query query = new QueryImpl(clue);
-				Solver solver = new SolverImpl();
+				ClueSolver solver = new SolverImpl();
 				
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				System.out.println("Candidate solutions:");

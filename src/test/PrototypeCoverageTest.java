@@ -21,7 +21,7 @@ import exception.InvalidClueException;
 import framework.Clue;
 import framework.ModelLoader;
 import framework.Query;
-import framework.Solver;
+import framework.ClueSolver;
 
 /**
  * @author Ben Griffiths
@@ -74,7 +74,7 @@ public class PrototypeCoverageTest {
 						continue;
 					}
 					Query query = new SimpleQuery(this.clue, model);
-					Solver solver = new SimpleSolver();
+					ClueSolver solver = new SimpleSolver();
 					ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 					boolean correctSolutionInList = candidateSolutions.contains(solution);
 					assertTrue("Failed to find correct solution (\"" + solution +

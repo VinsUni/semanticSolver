@@ -11,7 +11,7 @@ import exception.InvalidClueException;
 import framework.Clue;
 import framework.ModelLoader;
 import framework.Query;
-import framework.Solver;
+import framework.ClueSolver;
 import framework.UserInterface;
 
 /**
@@ -48,7 +48,7 @@ public class SimpleUserInterface implements UserInterface {
 				InfModel model = modelLoader.getModel();
 				
 				Query query = new SimpleQuery(clue, model);
-				Solver solver = new SimpleSolver();
+				ClueSolver solver = new SimpleSolver();
 				
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				System.out.println("Candidate solutions:");

@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Ben Griffiths
  *
  */
-public interface Solver {
+public interface ClueSolver {
 	/**
 	 * 
 	 * @param clue
