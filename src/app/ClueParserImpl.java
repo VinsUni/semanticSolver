@@ -22,7 +22,8 @@ import lombok.Setter;
 
 /**
  * @author Ben Griffiths
- *
+ * This implementation needs to query DBpedia to see if it can find resources that match any of the clue fragments identified.
+ * It will need to return a list of identified resources to the Solver object, so that it can perform queries
  */
 public class ClueParserImpl implements ClueParser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
@@ -40,49 +41,6 @@ public class ClueParserImpl implements ClueParser {
 	@Override
 	public void parse() {
 		ArrayList<Selector> selectorVariations = new ArrayList<Selector>();
-		
-		
-		printRecognisedEntities(); // DEBUGGING LINE - TO BE REMOVED
-		
-		ArrayList<Resource> recognisedSubjects = this.getEntityRecogniser().getRecognisedSubjects();
-		ArrayList<Property> recognisedProperties = this.getEntityRecogniser().getRecognisedProperties();
-		ArrayList<Resource> recognisedObjects = this.getEntityRecogniser().getRecognisedObjects();
-		
-		/* IT MAKES NO SENSE THE WAY THIS IS DONE AT THE MOMENT - NEED TO SPLIT SELECTORS UP INTO LISTS WITH A DIFFERENT DEGREE OF
-		 * CONFIDENCE - WITH THE LOWEST LEVEL BEING THE SIMPLE CATCH-ALL OF s-null-null or null-p-null or null-null-o
-		 * At the moment, a Selector(s, null, null) is already going to match anythin matched by a more specific selector, and thus
-		 * this is unnecessary duplication
-		 */
-		
-		
-		/* This doesn't work - need to look at more closely:
-		 
-		ArrayList<Resource> recognisedSubjectsAndObjects = recognisedSubjects;
-		recognisedSubjectsAndObjects.addAll(recognisedObjects);
-		
-		for(Property predicate: recognisedProperties) {
-			for(Resource resource : recognisedSubjectsAndObjects) {
-				Selector selector = new SimpleSelector(resource, predicate, (RDFNode)null);
-				selectorVariations.add(selector);
-				Selector anotherSelector = new SimpleSelector(null, predicate, resource);
-				selectorVariations.add(anotherSelector);
-			} */
-		
-		
-		for(Property predicate: recognisedProperties) {
-			for(Resource subject : recognisedSubjects) { // Add all combinations of recognised subjects and properties
-				Selector selector = new SimpleSelector(subject, predicate, (RDFNode)null);
-				selectorVariations.add(selector);
-				Selector anotherSelector = new SimpleSelector(subject, null, (RDFNode)null); // CHANGE THIS... also add any triples containing just the recognised subject
-				selectorVariations.add(anotherSelector);
-			}
-			for(Resource object : recognisedObjects) { // Add all combinations of recognised properties and objects
-				Selector selector = new SimpleSelector(null, predicate, object);
-				selectorVariations.add(selector);
-				Selector anotherSelector = new SimpleSelector(null, null, object); // CHANGE THIS... also add any triples containing just the recognised object
-				selectorVariations.add(anotherSelector);
-			}
-		}
 		this.getClue().setSelectorVariations(selectorVariations);
 	}
 
