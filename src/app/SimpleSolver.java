@@ -31,7 +31,7 @@ public class SimpleSolver implements Solver {
 		for(String proposedSolution : proposedSolutions) {
 			Solution parsedSolution = new SimpleSolution(proposedSolution);
 			String solutionText = parsedSolution.getSolutionText();
-			if(clue.matchesStructure(parsedSolution) && !solutions.contains(solutionText))
+			if(!solutions.contains(solutionText) && isWellFormedSolution(solutionText) && clue.matchesStructure(parsedSolution))
 				solutions.add(solutionText);
 		}
 		
@@ -39,6 +39,15 @@ public class SimpleSolver implements Solver {
 			this.setBestSolution(proposedSolutions.get(0));
 		
 		return solutions;
+	}
+	
+	/**
+	 * Need to make this much more sophisticated... (!)
+	 * @param solutionText
+	 * @return
+	 */
+	private boolean isWellFormedSolution(String solutionText) {
+		return true;
 	}
 
 	@Override

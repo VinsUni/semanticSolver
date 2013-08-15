@@ -45,7 +45,8 @@ public class SimpleSparqlQuery implements framework.Query {
 				" " + RDFS_PREFIX_DECLARATION +
 				" select distinct ?label" +
 					" where {dbpedia:The_Beatles dbpedia-owl:bandMember ?object." +
-					"        ?object rdfs:label ?label}";
+					"        ?object rdfs:label ?label" +
+					" FILTER (lang(?label) = 'en')}";
 		
 		Query query = QueryFactory.create(SPARQLquery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
