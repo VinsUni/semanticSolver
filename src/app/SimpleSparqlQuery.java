@@ -1,7 +1,7 @@
 /**
  * 
  */
-package prototype;
+package app;
 
 import java.util.ArrayList;
 
@@ -15,10 +15,8 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.InfModel;
 
 import framework.Clue;
-import framework.ClueParser;
 
 /**
  * @author Ben Griffiths
@@ -32,15 +30,11 @@ public class SimpleSparqlQuery implements framework.Query {
 	
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel model;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
 	
 	public SimpleSparqlQuery(Clue clue) {
 		this.setClue(clue);
-		this.setClueParser(new SimpleClueParser(clue, model));
-		//this.setModel(model);
 	}
 
 	@Override
@@ -59,7 +53,7 @@ public class SimpleSparqlQuery implements framework.Query {
 		
 		while(resultSet.hasNext()) {
 			QuerySolution querySolution = resultSet.nextSolution();
-			String label = querySolution.toString();
+			String label = querySolution.getLiteral("?label").toString();
 			candidateSolutions.add(label);
 		}
 		queryExecution.close();
