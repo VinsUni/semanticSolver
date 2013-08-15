@@ -45,7 +45,7 @@ public class UserInterfaceImpl implements UserInterface {
 				}
 				
 				Query query = new QueryImpl(clue);
-				ClueSolver solver = new SolverImpl();
+				ClueSolver solver = new ClueSolverImpl();
 				
 				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 				System.out.println("Candidate solutions:");

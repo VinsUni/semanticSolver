@@ -17,7 +17,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  *
  */
-public class SolverImpl implements ClueSolver {
+public class ClueSolverImpl implements ClueSolver {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
