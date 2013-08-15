@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import org.openjena.atlas.web.HttpException;
+
 import com.hp.hpl.jena.rdf.model.InfModel;
 
 import exception.InvalidClueException;
@@ -45,7 +47,12 @@ public class UserInterfaceImpl implements UserInterface {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;
 				}
-				semanticSolver.solve(clue);
+				try {
+					semanticSolver.solve(clue);
+				}
+				catch(HttpException e) {
+					System.out.println("DBpedia is unavailable at this time. Please try again");
+				}
 			}
 		}	
 	}

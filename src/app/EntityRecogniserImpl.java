@@ -5,40 +5,80 @@ package app;
 
 import java.util.ArrayList;
 
+import org.openjena.atlas.web.HttpException;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.ontology.OntProperty;
-import com.hp.hpl.jena.ontology.OntResource;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.NodeIterator;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+
 import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 import framework.Clue;
-import framework.EntityRecogniser;
 
 /**
  * @author Ben Griffiths
- *
+ *  ************************************************************************************************************!!!!!!!!!!!!!
+ * I NEED TO USE THIS: http://wiki.dbpedia.org/lookup/
+ *  ************************************************************************************************************!!!!!!!!!!!!!
  */
 public class EntityRecogniserImpl {
-	private final int LANGUAGE_TAG_LENGTH = 3; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
-	private final String LANGUAGE_TAG = "@"; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
+	private final String LANG = "@en";
+	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
+	//private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>"; // DUPLICATED IN QUERYIMPL
+	//private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>"; // DUPLICATED IN QUERYIMPL
+	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
+	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
 
 	public EntityRecogniserImpl(Clue clue) {
 		this.setClue(clue);
 		this.setClueFragments();
+	}
+	
+	public ArrayList<String> getRecognisedRemoteResources() throws HttpException {
+		ArrayList<String> recognisedResources = new ArrayList<String>();
+		
+		for(String clueFragment : clueFragments) {
+			
+			String SPARQLquery = RDFS_PREFIX_DECLARATION +
+								 " " + RDF_PREFIX_DECLARATION +
+								 " select distinct ?resource" +
+								 " where { ?resource rdfs:label " + clueFragment + ".}";
+			
+			Query query = QueryFactory.create(SPARQLquery);
+			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+			try {
+				ResultSet resultSet = queryExecution.execSelect();
+				while(resultSet.hasNext()) {
+					QuerySolution querySolution = resultSet.nextSolution();
+					Resource thisResource = querySolution.getResource("?resource");
+					String resourceURI = thisResource.getURI();
+					
+					/* I need to do this manipulation of the Strings BEFORE querying! */
+					resourceURI = "\"" + resourceURI + "\""; // surround the raw String with quotes
+					if(!recognisedResources.contains(resourceURI)) {
+						recognisedResources.add(resourceURI); // add the quoted String
+						recognisedResources.add(resourceURI + LANG); // add the quoted String with a language specification appended
+					}
+				}
+				queryExecution.close();	
+			}
+			catch(HttpException e) {
+				throw e;
+			}
+			
+		}
+		return recognisedResources;
 	}
 	
 	private void setClueFragments() {
@@ -46,24 +86,21 @@ public class EntityRecogniserImpl {
 		String clueText = this.getClue().getSourceClue();
 		String[] wordsInClueText = clueText.split(" ");
 		for(int i = 0; i < wordsInClueText.length; i++) {
-			String thisWord = wordsInClueText[i];
-			this.getClueFragments().add(thisWord.toLowerCase());
+			String thisWord = this.toProperCase(wordsInClueText[i]);
+			this.getClueFragments().add(thisWord);
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
-				thisWord = thisWord + " " + wordsInClueText[j];
-				this.getClueFragments().add(thisWord.toLowerCase());
+				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
+				this.getClueFragments().add(thisWord);
 			}
 		}
+		for(String s : clueFragments) // DEBUGGING *****************************************
+			System.out.println(s);
 	}
-	
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLESOLUTION CLASS - REFACTOR IT OUT SOMEWHERE?
-	 */
-	private String stripLanguageTag(String text) {
-		int positionOfLanguageTag = text.length() - LANGUAGE_TAG_LENGTH;
-		if(text.length() > LANGUAGE_TAG_LENGTH) {
-			if(text.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return text.substring(0, positionOfLanguageTag);
-		}
-		return text;
+
+	private String toProperCase(String thisWord) {
+		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
+		if(thisWord.length() > 1)
+			thisWordInProperCase += thisWord.substring(1,thisWord.length());
+		return thisWordInProperCase;
 	}
 }
