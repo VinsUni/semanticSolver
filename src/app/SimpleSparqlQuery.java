@@ -54,7 +54,8 @@ public class SimpleSparqlQuery implements framework.Query {
 		while(resultSet.hasNext()) {
 			QuerySolution querySolution = resultSet.nextSolution();
 			String label = querySolution.getLiteral("?label").toString();
-			candidateSolutions.add(label);
+			if(!candidateSolutions.contains(label))
+				candidateSolutions.add(label);
 		}
 		queryExecution.close();
 		return candidateSolutions;

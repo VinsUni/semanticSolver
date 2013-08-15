@@ -30,11 +30,9 @@ public class SimpleSolver implements Solver {
 		ArrayList<String> solutions = new ArrayList<String>();
 		for(String proposedSolution : proposedSolutions) {
 			Solution parsedSolution = new SimpleSolution(proposedSolution);
-			
-			System.out.println("Candidate solution: " + proposedSolution); // DEBUGGING LINE *********************
-			
-			if(clue.matchesStructure(parsedSolution))
-				solutions.add(parsedSolution.getSolutionText());
+			String solutionText = parsedSolution.getSolutionText();
+			if(clue.matchesStructure(parsedSolution) && !solutions.contains(solutionText))
+				solutions.add(solutionText);
 		}
 		
 		if(proposedSolutions.size() > 0)
