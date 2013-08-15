@@ -18,6 +18,8 @@ import lombok.Setter;
  *
  */
 public class SimpleSolver implements Solver {
+	private final int LANGUAGE_TAG_LENGTH = 3;
+	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
 
 	/**
@@ -27,6 +29,7 @@ public class SimpleSolver implements Solver {
 	 */
 	@Override
 	public ArrayList<String> getSolutions(Clue clue, ArrayList<String> proposedSolutions) {
+		proposedSolutions = this.filterByLanguage(proposedSolutions);
 		ArrayList<String> solutions = new ArrayList<String>();
 		for(String proposedSolution : proposedSolutions) {
 			Solution parsedSolution = new SimpleSolution(proposedSolution);
@@ -41,6 +44,24 @@ public class SimpleSolver implements Solver {
 		return solutions;
 	}
 	
+	/*
+	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
+	 */
+	private ArrayList<String> filterByLanguage(ArrayList<String> proposedSolutions) {
+		ArrayList<String> filteredSolutions = new ArrayList<String>();
+		for(int i = 0; i < proposedSolutions.size(); i++) {
+			String solutionText = proposedSolutions.get(i);
+			int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
+			if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
+				if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG) 
+					&& !solutionText.substring(positionOfLanguageTag + 1, solutionText.length()).equals("en"))
+						continue; // non-English language, so filter it out
+			}
+			filteredSolutions.add(solutionText);
+		}
+		return filteredSolutions;
+	}
+
 	/**
 	 * Need to make this much more sophisticated... (!)
 	 * @param solutionText
