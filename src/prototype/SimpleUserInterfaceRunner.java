@@ -6,7 +6,7 @@ import framework.UserInterface;
  * @author Ben Griffiths
  *
  */
-public class SemanticSolverRunner {
+public class SimpleUserInterfaceRunner {
 
 	/**
 	 * @param args

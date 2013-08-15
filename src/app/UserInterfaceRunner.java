@@ -10,7 +10,7 @@ import framework.UserInterface;
  * @author Ben Griffiths
  *
  */
-public class SolverRunnerImpl {
+public class UserInterfaceRunner {
 
 	/**
 	 * @param args
