@@ -22,6 +22,7 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 import framework.Clue;
+import framework.EntityRecogniser;
 
 /**
  * @author Ben Griffiths
@@ -29,7 +30,7 @@ import framework.Clue;
  * I NEED TO USE THIS: http://wiki.dbpedia.org/lookup/
  *  ************************************************************************************************************!!!!!!!!!!!!!
  */
-public class EntityRecogniserImpl {
+public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	//private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>"; // DUPLICATED IN QUERYIMPL

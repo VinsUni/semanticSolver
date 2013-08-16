@@ -173,4 +173,11 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		return this.recognisedObjects;
 	}
 
+	@Override
+	public ArrayList<Resource> getRecognisedResources() {
+		ArrayList<Resource> subjectsAndObjects = this.getRecognisedSubjects();
+		subjectsAndObjects.addAll(this.getRecognisedObjects());
+		return subjectsAndObjects;
+	}
+
 }
