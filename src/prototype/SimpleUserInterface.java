@@ -12,6 +12,7 @@ import framework.Clue;
 import framework.ModelLoader;
 import framework.ClueQuery;
 import framework.ClueSolver;
+import framework.SemanticSolver;
 import framework.UserInterface;
 
 /**
@@ -23,6 +24,7 @@ public class SimpleUserInterface implements UserInterface {
 
 	@Override
 	public void createAndShow() {
+		SemanticSolver solver = new SimpleSemanticSolver();
 		String userResponse = "";
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		while(!userResponse.equals(EXIT_REQUEST)) {
@@ -43,17 +45,7 @@ public class SimpleUserInterface implements UserInterface {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;
 				}
-				
-				ModelLoader modelLoader = new SimpleModelLoader();
-				InfModel model = modelLoader.getModel();
-				
-				ClueQuery query = new SimpleQuery(clue, model);
-				ClueSolver solver = new SimpleClueSolver();
-				
-				ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
-				System.out.println("Candidate solutions:");
-				for(String candidateSolution : candidateSolutions)
-					System.out.println(candidateSolution);
+				solver.solve(clue);
 			}
 		}	
 	}
