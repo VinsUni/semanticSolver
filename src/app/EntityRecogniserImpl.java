@@ -5,15 +5,12 @@ package app;
 
 import java.util.ArrayList;
 
-import org.openjena.atlas.web.HttpException;
-
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -28,7 +25,6 @@ import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
@@ -45,7 +41,7 @@ import framework.ModelLoader;
  *  ************************************************************************************************************!!!!!!!!!!!!!
  */
 public class EntityRecogniserImpl implements EntityRecogniser {
-	private final String ONTOLOGY_NAMESPACE = "http://www.griffithsben.com/ontologies/pop#";
+	private final String ONTOLOGY_NAMESPACE = "http://www.griffithsben.com/ontologies/pop.owl#";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String LANG = "@en";
@@ -110,8 +106,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		if(this.getStatementsIterator() == null) {
 			ModelLoader modelLoader = new ModelLoaderImpl();
 			InfModel model = modelLoader.getModel();
-			// this.setStatementsIterator(model.listStatements()); // initialise the StmtIterator with all statements in the ontology
-			this.setPropertiesIterator(model.listSubjects()); // NEED TO DO THE SAME WITH OBJECTS!
+			this.setPropertiesIterator(model.listSubjects()); // NEED TO DO THE SAME WITH OBJECTS! ********************************
 			this.setOntModel(ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM, model)); // initialise the OntModel member
 		}
 		
@@ -123,7 +118,6 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 			if(recognisedPropertyURIs.contains(uri))
 				continue;
 			if(thisResource.getNameSpace().equals(ONTOLOGY_NAMESPACE)) {
-				System.out.println("Resource " + uri + " is in the pop namespace"); // DEBUGGING ***************
 				continue; // properties in my pop namespace are not wanted as they aren't used in the wild
 			}
 			OntResource resource = this.getOntModel().getOntResource(uri); // create an OntResource from the Resource object
@@ -138,33 +132,6 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					recognisedPropertyURIs.add(uri);
 			}
 		}
-		
-		/*
-		while(this.getStatementsIterator().hasNext()) {
-			Property thisProperty = this.getStatementsIterator().nextStatement().getPredicate();
-			System.out.println("Property in ontology: " + thisProperty.getLocalName()); // DEBUGGING ********************
-			if(this.recognisedProperties.contains(thisProperty))
-				continue;
-			if(thisProperty.getNameSpace().equals(ONTOLOGY_NAMESPACE)) {
-				System.out.println("Property " + thisProperty.getURI() + " is in the pop namespace"); // DEBUGGING ***************
-				continue; // properties in my pop namespace are not wanted as they aren't used in the wild
-			}
-			String uri = thisProperty.getURI();
-			if(uri == null)
-				continue;
-			OntProperty property = this.getOntModel().getOntProperty(uri); // create an OntProperty from the Property object
-			if(property == null)
-				continue;
-			ExtendedIterator<RDFNode> labels = property.listLabels(null); // list all values of RDFS:label for this resource
-			if(labels == null)
-				continue;
-			while(labels.hasNext()) {
-				String thisLabel = stripLanguageTag(labels.next().toString());
-				if(this.getClueFragments().contains(toProperCase(thisLabel)))
-					recognisedPropertyURIs.add(uri);
-			}
-		} */
-		
 		return recognisedPropertyURIs;
 	}
 	
