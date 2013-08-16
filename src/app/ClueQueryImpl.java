@@ -46,27 +46,29 @@ public class ClueQueryImpl implements ClueQuery {
 	public ArrayList<String> getCandidateSolutions() {
 		ArrayList<String> candidateSolutions = new ArrayList<String>();
 		
-		for(String uri : this.getEntityRecogniser().getRecognisedPropertyURIs()) {
-			String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
-					" " + DBPEDIA_OWL_PREFIX_DECLARATION +
-					" " + RDFS_PREFIX_DECLARATION +
-					" select distinct ?label" +
-						" where {?subject <" + uri + "> dbpedia:The_Beatles." +
-						"        ?subject rdfs:label ?label.}";
-						
-			
-			Query query = QueryFactory.create(SPARQLquery);
-			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-			ResultSet resultSet = queryExecution.execSelect();
-			
-			while(resultSet.hasNext()) {
-				QuerySolution querySolution = resultSet.nextSolution();
-				String label = querySolution.getLiteral("?label").toString();
-				if(!candidateSolutions.contains(label))
-					candidateSolutions.add(label);
+		for(String resourceUri : this.getEntityRecogniser().getRecognisedResourceURIs()) {
+			for(String propertyUri : this.getEntityRecogniser().getRecognisedPropertyURIs()) {
+				String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
+						" " + DBPEDIA_OWL_PREFIX_DECLARATION +
+						" " + RDFS_PREFIX_DECLARATION +
+						" select distinct ?label" +
+							" where {?subject <" + propertyUri + "> <" + resourceUri +">." +
+							"        ?subject rdfs:label ?label.}";
+				
+				Query query = QueryFactory.create(SPARQLquery);
+				QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+				ResultSet resultSet = queryExecution.execSelect();
+				
+				while(resultSet.hasNext()) {
+					QuerySolution querySolution = resultSet.nextSolution();
+					String label = querySolution.getLiteral("?label").toString();
+					if(!candidateSolutions.contains(label))
+						candidateSolutions.add(label);
+				}
+				queryExecution.close();
 			}
-			queryExecution.close();
 		}
+		
 		return candidateSolutions;
 	}
 }
