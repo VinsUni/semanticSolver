@@ -48,7 +48,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		this.setClueFragments();
 	}
 	
-	public ArrayList<String> getRecognisedResourceLabels() throws QueryExceptionHTTP {
+	public ArrayList<String> getRecognisedResourceURIs() throws QueryExceptionHTTP {
 		ArrayList<String> recognisedResources = new ArrayList<String>();
 		
 		for(String clueFragment : clueFragments) {
@@ -80,6 +80,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		}
 		return recognisedResources;
 	}
+	
+	
 	
 	private void setClueFragments() {
 		this.clueFragments = new ArrayList<String>();

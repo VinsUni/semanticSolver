@@ -180,4 +180,10 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 		return subjectsAndObjects;
 	}
 
+	@Override
+	public ArrayList<String> getRecognisedResourceURIs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
