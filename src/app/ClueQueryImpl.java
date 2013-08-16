@@ -18,6 +18,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 import framework.Clue;
 import framework.ClueQuery;
+import framework.EntityRecogniser;
 
 /**
  * @author Ben Griffiths
@@ -31,36 +32,41 @@ public class ClueQueryImpl implements ClueQuery {
 	
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) EntityRecogniser entityRecogniser;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) String whereClause;
 	
-	public ClueQueryImpl(Clue clue) {
+	public ClueQueryImpl(Clue clue, EntityRecogniser entityRecogniser) {
 		this.setClue(clue);
+		this.setEntityRecogniser(entityRecogniser);
 	}
 
 	@Override
 	public ArrayList<String> getCandidateSolutions() {
 		ArrayList<String> candidateSolutions = new ArrayList<String>();
-		String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
-				" " + DBPEDIA_OWL_PREFIX_DECLARATION +
-				" " + RDFS_PREFIX_DECLARATION +
-				" select distinct ?label" +
-					" where {dbpedia:The_Beatles dbpedia-owl:bandMember ?object." +
-					"        ?object rdfs:label ?label.}";
-					
 		
-		Query query = QueryFactory.create(SPARQLquery);
-		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-		ResultSet resultSet = queryExecution.execSelect();
-		
-		while(resultSet.hasNext()) {
-			QuerySolution querySolution = resultSet.nextSolution();
-			String label = querySolution.getLiteral("?label").toString();
-			if(!candidateSolutions.contains(label))
-				candidateSolutions.add(label);
+		for(String uri : this.getEntityRecogniser().getRecognisedPropertyURIs()) {
+			String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
+					" " + DBPEDIA_OWL_PREFIX_DECLARATION +
+					" " + RDFS_PREFIX_DECLARATION +
+					" select distinct ?label" +
+						" where {?subject <" + uri + "> dbpedia:The_Beatles." +
+						"        ?subject rdfs:label ?label.}";
+						
+			
+			Query query = QueryFactory.create(SPARQLquery);
+			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+			ResultSet resultSet = queryExecution.execSelect();
+			
+			while(resultSet.hasNext()) {
+				QuerySolution querySolution = resultSet.nextSolution();
+				String label = querySolution.getLiteral("?label").toString();
+				if(!candidateSolutions.contains(label))
+					candidateSolutions.add(label);
+			}
+			queryExecution.close();
 		}
-		queryExecution.close();
 		return candidateSolutions;
 	}
 }

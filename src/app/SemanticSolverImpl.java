@@ -21,10 +21,11 @@ public class SemanticSolverImpl implements SemanticSolver {
 
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
-		ClueQuery query = new ClueQueryImpl(clue);
+		EntityRecogniser entityRecogniser = new EntityRecogniserImpl(clue);
+		ClueQuery query = new ClueQueryImpl(clue, entityRecogniser);
 		ClueSolver solver = new ClueSolverImpl();
 		
-		EntityRecogniser entityRecogniser = new EntityRecogniserImpl(clue);
+		
 		System.out.println("Recognised the following resources:"); // DEBUGGING ***************************
 		try {
 			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResourceURIs();
