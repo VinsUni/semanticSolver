@@ -119,4 +119,10 @@ public class NewSimpleEntityRecogniser implements EntityRecogniser {
 		return null;
 	}
 
+	@Override
+	public ArrayList<String> getRecognisedPropertyURIs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

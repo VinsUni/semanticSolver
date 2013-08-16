@@ -81,6 +81,12 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		return recognisedResources;
 	}
 	
+	@Override
+	public ArrayList<String> getRecognisedPropertyURIs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 	
 	private void setClueFragments() {
