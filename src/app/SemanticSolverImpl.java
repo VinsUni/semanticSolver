@@ -25,15 +25,19 @@ public class SemanticSolverImpl implements SemanticSolver {
 		ClueSolver solver = new ClueSolverImpl();
 		
 		EntityRecogniser entityRecogniser = new EntityRecogniserImpl(clue);
-		System.out.println("Recognised the following resources:");
+		System.out.println("Recognised the following resources:"); // DEBUGGING ***************************
 		try {
 			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResourceURIs();
-			for(String uri : recognisedResources)
-				System.out.println(uri);
+			for(String uri : recognisedResources) // DEBUGGING ***************************
+				System.out.println(uri); // DEBUGGING ***************************
 		}
 		catch(QueryExceptionHTTP e) {
 			throw e;
 		}
+		System.out.println("Recognised the following properties in the local ontology:"); // DEBUGGING ***************************
+		ArrayList<String> recognisedProperties = entityRecogniser.getRecognisedPropertyURIs();
+		for(String uri : recognisedProperties) // DEBUGGING ***************************
+			System.out.println(uri); // DEBUGGING ***************************
 		
 		ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 		System.out.println("Candidate solutions:");
