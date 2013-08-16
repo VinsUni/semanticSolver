@@ -20,7 +20,7 @@ import com.hp.hpl.jena.rdf.model.InfModel;
 import exception.InvalidClueException;
 import framework.Clue;
 import framework.ModelLoader;
-import framework.Query;
+import framework.ClueQuery;
 import framework.ClueSolver;
 
 /**
@@ -73,7 +73,7 @@ public class PrototypeCoverageTest {
 						solutions.remove(solution);
 						continue;
 					}
-					Query query = new SimpleQuery(this.clue, model);
+					ClueQuery query = new SimpleQuery(this.clue, model);
 					ClueSolver solver = new SimpleClueSolver();
 					ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 					boolean correctSolutionInList = candidateSolutions.contains(solution);

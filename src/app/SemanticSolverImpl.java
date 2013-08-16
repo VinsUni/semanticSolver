@@ -10,7 +10,7 @@ import org.openjena.atlas.web.HttpException;
 import framework.Clue;
 import framework.ClueSolver;
 import framework.EntityRecogniser;
-import framework.Query;
+import framework.ClueQuery;
 import framework.SemanticSolver;
 
 /**
@@ -21,7 +21,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 
 	@Override
 	public void solve(Clue clue) throws HttpException {
-		Query query = new QueryImpl(clue);
+		ClueQuery query = new QueryImpl(clue);
 		ClueSolver solver = new ClueSolverImpl();
 		
 		EntityRecogniserImpl entityRecogniser = new EntityRecogniserImpl(clue);

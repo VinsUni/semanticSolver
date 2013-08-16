@@ -22,7 +22,7 @@ import framework.Clue;
  * @author Ben Griffiths
  *
  */
-public class QueryImpl implements framework.Query {
+public class QueryImpl implements framework.ClueQuery {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";

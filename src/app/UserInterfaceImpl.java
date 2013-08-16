@@ -12,7 +12,7 @@ import com.hp.hpl.jena.rdf.model.InfModel;
 import exception.InvalidClueException;
 import framework.Clue;
 import framework.ModelLoader;
-import framework.Query;
+import framework.ClueQuery;
 import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.UserInterface;
