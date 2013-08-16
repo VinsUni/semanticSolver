@@ -27,7 +27,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 		EntityRecogniserImpl entityRecogniser = new EntityRecogniserImpl(clue);
 		System.out.println("Recognised the following resources:");
 		try {
-			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedRemoteResources();
+			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResources();
 			for(String uri : recognisedResources)
 				System.out.println(uri);
 		}

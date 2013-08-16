@@ -45,7 +45,7 @@ public class EntityRecogniserImpl {
 		this.setClueFragments();
 	}
 	
-	public ArrayList<String> getRecognisedRemoteResources() throws HttpException {
+	public ArrayList<String> getRecognisedResources() throws HttpException {
 		ArrayList<String> recognisedResources = new ArrayList<String>();
 		
 		for(String clueFragment : clueFragments) {
