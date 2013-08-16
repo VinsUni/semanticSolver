@@ -23,7 +23,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
-		ClueQuery query = new QueryImpl(clue);
+		ClueQuery query = new ClueQueryImpl(clue);
 		ClueSolver solver = new ClueSolverImpl();
 		
 		EntityRecogniserImpl entityRecogniser = new EntityRecogniserImpl(clue);

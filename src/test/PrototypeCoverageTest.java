@@ -12,7 +12,7 @@ import org.junit.Test;
 
 import prototype.SimpleClue;
 import prototype.SimpleModelLoader;
-import prototype.SimpleQuery;
+import prototype.SimpleClueQuery;
 import prototype.SimpleClueSolver;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
@@ -73,7 +73,7 @@ public class PrototypeCoverageTest {
 						solutions.remove(solution);
 						continue;
 					}
-					ClueQuery query = new SimpleQuery(this.clue, model);
+					ClueQuery query = new SimpleClueQuery(this.clue, model);
 					ClueSolver solver = new SimpleClueSolver();
 					ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 					boolean correctSolutionInList = candidateSolutions.contains(solution);

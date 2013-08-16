@@ -22,7 +22,7 @@ import framework.Clue;
  * @author Ben Griffiths
  *
  */
-public class QueryImpl implements framework.ClueQuery {
+public class ClueQueryImpl implements framework.ClueQuery {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
@@ -34,7 +34,7 @@ public class QueryImpl implements framework.ClueQuery {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) String whereClause;
 	
-	public QueryImpl(Clue clue) {
+	public ClueQueryImpl(Clue clue) {
 		this.setClue(clue);
 	}
 

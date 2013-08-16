@@ -30,7 +30,7 @@ public class SimpleSemanticSolver implements SemanticSolver {
 			modelLoader = new SimpleModelLoader();
 		InfModel model = modelLoader.getModel();
 		
-		ClueQuery query = new SimpleQuery(clue, model);
+		ClueQuery query = new SimpleClueQuery(clue, model);
 		ClueSolver solver = new SimpleClueSolver();
 		
 		ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());

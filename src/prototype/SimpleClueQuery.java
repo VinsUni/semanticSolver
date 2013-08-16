@@ -25,7 +25,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  *
  */
-public class SimpleQuery implements ClueQuery {
+public class SimpleClueQuery implements ClueQuery {
 	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
@@ -33,7 +33,7 @@ public class SimpleQuery implements ClueQuery {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
 	
 	
-	public SimpleQuery(Clue clue, InfModel model) {
+	public SimpleClueQuery(Clue clue, InfModel model) {
 		this.setClue(clue);
 		this.setClueParser(new SimpleClueParser(clue, model));
 		this.setInfModel(model);
