@@ -40,7 +40,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
 	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
+	@Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
+	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
 
 	public EntityRecogniserImpl(Clue clue) {
 		this.setClue(clue);
@@ -86,10 +87,12 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		String[] wordsInClueText = clueText.split(" ");
 		for(int i = 0; i < wordsInClueText.length; i++) {
 			String thisWord = this.toProperCase(wordsInClueText[i]);
-			this.getClueFragments().add(thisWord);
+			if(!excludedWord(thisWord))
+				this.getClueFragments().add(thisWord);
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
-				this.getClueFragments().add(thisWord);
+				if(!excludedWord(thisWord))
+					this.getClueFragments().add(thisWord);
 			}
 		}
 		for(String s : clueFragments) // DEBUGGING *****************************************
@@ -101,6 +104,18 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		if(thisWord.length() > 1)
 			thisWordInProperCase += thisWord.substring(1,thisWord.length());
 		return thisWordInProperCase;
+	}
+	
+	/**
+	 * 
+	 * @param wordToCheck
+	 * @return true if wordToCheck is in the list of common words to be excluded
+	 */
+	private boolean excludedWord(String wordToCheck) {
+		for(int i = 0; i < this.WORDS_TO_EXCLUDE.length; i++)
+			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
+				return true;
+		return false;
 	}
 	
 	
