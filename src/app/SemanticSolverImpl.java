@@ -5,8 +5,6 @@ package app;
 
 import java.util.ArrayList;
 
-import org.openjena.atlas.web.HttpException;
-
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import framework.Clue;
@@ -26,7 +24,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 		ClueQuery query = new ClueQueryImpl(clue);
 		ClueSolver solver = new ClueSolverImpl();
 		
-		EntityRecogniserImpl entityRecogniser = new EntityRecogniserImpl(clue);
+		EntityRecogniser entityRecogniser = new EntityRecogniserImpl(clue);
 		System.out.println("Recognised the following resources:");
 		try {
 			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResourceURIs();
