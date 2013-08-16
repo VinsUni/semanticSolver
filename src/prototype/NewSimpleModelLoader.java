@@ -3,7 +3,6 @@
  */
 package prototype;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.log4j.Level;

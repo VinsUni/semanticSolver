@@ -3,18 +3,12 @@ package app;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-import org.openjena.atlas.web.HttpException;
-
-import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
+
 import framework.Clue;
-import framework.ModelLoader;
-import framework.ClueQuery;
-import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.UserInterface;
 
