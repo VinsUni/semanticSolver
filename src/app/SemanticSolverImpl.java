@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 import org.openjena.atlas.web.HttpException;
 
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
+
 import framework.Clue;
 import framework.ClueSolver;
 import framework.EntityRecogniser;
@@ -20,18 +22,18 @@ import framework.SemanticSolver;
 public class SemanticSolverImpl implements SemanticSolver {
 
 	@Override
-	public void solve(Clue clue) throws HttpException {
+	public void solve(Clue clue) throws QueryExceptionHTTP {
 		ClueQuery query = new QueryImpl(clue);
 		ClueSolver solver = new ClueSolverImpl();
 		
 		EntityRecogniserImpl entityRecogniser = new EntityRecogniserImpl(clue);
 		System.out.println("Recognised the following resources:");
 		try {
-			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResources();
+			ArrayList<String> recognisedResources = entityRecogniser.getRecognisedResourceLabels();
 			for(String uri : recognisedResources)
 				System.out.println(uri);
 		}
-		catch(HttpException e) {
+		catch(QueryExceptionHTTP e) {
 			throw e;
 		}
 		

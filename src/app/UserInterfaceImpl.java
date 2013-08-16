@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.openjena.atlas.web.HttpException;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
 import framework.Clue;
@@ -50,7 +51,7 @@ public class UserInterfaceImpl implements UserInterface {
 				try {
 					semanticSolver.solve(clue);
 				}
-				catch(HttpException e) {
+				catch(QueryExceptionHTTP e) {
 					System.out.println("DBpedia is unavailable at this time. Please try again");
 				}
 			}

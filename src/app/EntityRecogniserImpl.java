@@ -20,6 +20,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import framework.Clue;
 import framework.EntityRecogniser;
@@ -46,16 +47,17 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		this.setClueFragments();
 	}
 	
-	public ArrayList<String> getRecognisedResources() throws HttpException {
+	public ArrayList<String> getRecognisedResourceLabels() throws QueryExceptionHTTP {
 		ArrayList<String> recognisedResources = new ArrayList<String>();
 		
 		for(String clueFragment : clueFragments) {
 			
+			String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
+			
 			String SPARQLquery = RDFS_PREFIX_DECLARATION +
 								 " " + RDF_PREFIX_DECLARATION +
 								 " select distinct ?resource" +
-								 " where { ?resource rdfs:label " + clueFragment + ".}";
-			
+								 " where { ?resource rdfs:label " + wrappedClueFragment + "}";
 			Query query = QueryFactory.create(SPARQLquery);
 			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
 			try {
@@ -65,16 +67,12 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					Resource thisResource = querySolution.getResource("?resource");
 					String resourceURI = thisResource.getURI();
 					
-					/* I need to do this manipulation of the Strings BEFORE querying! */
-					resourceURI = "\"" + resourceURI + "\""; // surround the raw String with quotes
-					if(!recognisedResources.contains(resourceURI)) {
-						recognisedResources.add(resourceURI); // add the quoted String
-						recognisedResources.add(resourceURI + LANG); // add the quoted String with a language specification appended
-					}
+					if(!recognisedResources.contains(resourceURI))
+						recognisedResources.add(resourceURI);
 				}
 				queryExecution.close();	
 			}
-			catch(HttpException e) {
+			catch(QueryExceptionHTTP e) {
 				throw e;
 			}
 			
@@ -103,5 +101,32 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		if(thisWord.length() > 1)
 			thisWordInProperCase += thisWord.substring(1,thisWord.length());
 		return thisWordInProperCase;
+	}
+	
+	
+	@Override
+	public ArrayList<Resource> getRecognisedResources() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public ArrayList<Property> getRecognisedProperties() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	@Override
+	public ArrayList<Resource> getRecognisedSubjects() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Resource> getRecognisedObjects() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
