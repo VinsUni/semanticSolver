@@ -50,11 +50,11 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	//private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ResIterator propertiesIterator;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel; // to hold the ontology in memory
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PUBLIC) private ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
 	
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
 

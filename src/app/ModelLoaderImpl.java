@@ -26,7 +26,7 @@ import lombok.Setter;
  */
 public class ModelLoaderImpl implements ModelLoader {
 	private final String ONTOLOGY_URI = "popv7.owl";
-	@Setter(AccessLevel.PRIVATE) InfModel model;
+	@Setter(AccessLevel.PRIVATE) private InfModel model;
 	
 	@Override
 	public InfModel getModel() {

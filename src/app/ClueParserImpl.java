@@ -26,9 +26,9 @@ import lombok.Setter;
  * It will need to return a list of identified resources to the Solver object, so that it can perform queries
  */
 public class ClueParserImpl implements ClueParser {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) EntityRecogniser entityRecogniser;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model model;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniser entityRecogniser;
 	
 	
 	public ClueParserImpl(Clue clue) {

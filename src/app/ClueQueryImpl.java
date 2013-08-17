@@ -30,12 +30,12 @@ public class ClueQueryImpl implements ClueQuery {
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	
-	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) EntityRecogniser entityRecogniser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Query query;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) String whereClause;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniser entityRecogniser;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
 	
 	public ClueQueryImpl(Clue clue, EntityRecogniser entityRecogniser) {
 		this.setClue(clue);

@@ -20,7 +20,7 @@ import lombok.Setter;
 public class ClueSolverImpl implements ClueSolver {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String bestSolution;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String bestSolution;
 
 	/**
 	 * For now, it just returns all of the proposedSolutions and sets the first one as the best solution,
