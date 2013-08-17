@@ -48,6 +48,7 @@ public class ClueQueryImpl implements ClueQuery {
 		
 		for(String resourceUri : this.getEntityRecogniser().getRecognisedResourceURIs()) {
 			for(String propertyUri : this.getEntityRecogniser().getRecognisedPropertyURIs()) {
+				// Look for subjects where <?subject propertyUri ResourceUri>
 				String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
 						" " + DBPEDIA_OWL_PREFIX_DECLARATION +
 						" " + RDFS_PREFIX_DECLARATION +

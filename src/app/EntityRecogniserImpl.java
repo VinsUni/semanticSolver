@@ -21,6 +21,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -29,6 +30,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import com.hp.hpl.jena.vocabulary.OWL;
 
 import framework.Clue;
 import framework.EntityRecogniser;
@@ -56,7 +58,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
-
+	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/"}; // a list of namespaces whose terms should be excluded from consideration
+	
 	public EntityRecogniserImpl(Clue clue) {
 		this.setClue(clue);
 		this.setClueFragments(new ArrayList<String>());
@@ -81,6 +84,10 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 				while(resultSet.hasNext()) {
 					QuerySolution querySolution = resultSet.nextSolution();
 					Resource thisResource = querySolution.getResource("?resource");
+					
+					String nameSpace = thisResource.getNameSpace();
+					if(excludedNameSpace(nameSpace))
+						continue;
 					String resourceURI = thisResource.getURI();
 					
 					if(!recognisedResources.contains(resourceURI))
@@ -117,12 +124,40 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 				continue;
 			if(recognisedPropertyURIs.contains(uri))
 				continue;
-			if(thisResource.getNameSpace().equals(ONTOLOGY_NAMESPACE)) {
-				continue; // properties in my pop namespace are not wanted as they aren't used in the wild
-			}
+			
 			OntResource resource = this.getOntModel().getOntResource(uri); // create an OntResource from the Resource object
 			if(resource == null)
 				continue;
+			
+			
+			
+			/* Check to see if there are inverseProperties of this property that match a label 
+			NodeIterator inverseProperties = resource.listPropertyValues(OWL.inverseOf);
+			if(inverseProperties != null) {
+				while(inverseProperties.hasNext()) {
+					RDFNode propertyNode = inverseProperties.next();
+					OntResource inverseProperty = (OntResource)propertyNode;
+					
+					String nodeURI;
+					if(propertyNode.isURIResource())
+						nodeURI = propertyNode.
+					ExtendedIterator<RDFNode> labels = propertyNode.listLabels(null); // list all values of RDFS:label for this resource
+					if(labels == null)
+						continue;
+					while(labels.hasNext()) {
+						String thisLabel = stripLanguageTag(labels.next().toString());
+						if(this.getClueFragments().contains(toProperCase(thisLabel)))
+							recognisedPropertyURIs.add(uri);
+					}
+				}
+			}
+			*/
+			
+			
+			if(thisResource.getNameSpace().equals(ONTOLOGY_NAMESPACE)) {
+				continue; // properties in my pop namespace are not wanted as they aren't used in the wild
+			}
+			
 			ExtendedIterator<RDFNode> labels = resource.listLabels(null); // list all values of RDFS:label for this resource
 			if(labels == null)
 				continue;
@@ -189,6 +224,22 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private boolean excludedWord(String wordToCheck) {
 		for(int i = 0; i < this.WORDS_TO_EXCLUDE.length; i++)
 			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
+				return true;
+		return false;
+	}
+	
+	/**
+	 * excludedNameSpace - checks if any of the namespaces of the vocabularies that we want to exclude from consideration are
+	 * substrings of the namespace under consideration. It is necessary to do it this way rather than simply checking if the NS 
+	 * under consideration is in our list of namespaces to be excluded primarily because of the high number of resources on DBpedia
+	 * that have been created under a badly-formed variant of the NS http://dbpedia.org/class/yago/, where a resource with local
+	 * name local_name has been put into the DBpedia graph with the NS "http://dbpedia.org/class/yago/local_name"
+	 * @param namespaceToCheck
+	 * @return
+	 */
+	private boolean excludedNameSpace(String nameSpaceToCheck) {
+		for(int i = 0; i < this.VOCABULARIES_TO_EXCLUDE.length; i++)
+			if(nameSpaceToCheck.contains(VOCABULARIES_TO_EXCLUDE[i]))
 				return true;
 		return false;
 	}

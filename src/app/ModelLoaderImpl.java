@@ -11,6 +11,7 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.FileManager;
 
 import experiments.NsPrefixLoader;
@@ -40,7 +41,9 @@ public class ModelLoaderImpl implements ModelLoader {
 		Model baseModel = FileManager.get().loadModel(ONTOLOGY_URI); // Read my ontology into a model
 		
 		/* Create an inference model using my ontology */
-		this.setModel(ModelFactory.createInfModel(OntModelSpec.RDFS_MEM_RDFS_INF.getReasoner(), baseModel));
+		this.setModel(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
+		// Was previously using OntModelSpec.RDFS_MEM_RDFS_INF.getReasoner()
+		
 		
 		// load standard prefixes into the model
 		NsPrefixLoader prefixLoader = new NsPrefixLoader(this.model);

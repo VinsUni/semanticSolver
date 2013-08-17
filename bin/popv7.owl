@@ -475,6 +475,7 @@
         <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
         <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasMember"/>
     </owl:ObjectProperty>
     
 
