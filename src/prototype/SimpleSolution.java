@@ -15,8 +15,8 @@ import lombok.Setter;
 public class SimpleSolution implements Solution {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String solutionText;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int[] solutionStructure;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
 	
 	public SimpleSolution(String solutionText) {
 		this.setSolutionText(stripLanguageTag(solutionText));

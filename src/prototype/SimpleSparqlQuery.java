@@ -30,12 +30,12 @@ public class SimpleSparqlQuery implements framework.ClueQuery {
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	
-	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel model;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Query query;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) QueryExecution queryExecution;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueParser clueParser;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel model;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	
 	public SimpleSparqlQuery(Clue clue) {
 		this.setClue(clue);

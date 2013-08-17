@@ -33,20 +33,20 @@ import framework.EntityRecogniser;
 public class SimpleEntityRecogniser implements EntityRecogniser {
 	private final int LANGUAGE_TAG_LENGTH = 3; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
 	private final String LANGUAGE_TAG = "@"; // DUPLICATED IN SIMPLESOLUTION CLASS - REFACTOR OUT AS A STATIC CONSTANT?
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Model model;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ResIterator subjectsIterator;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) StmtIterator statementsIterator; // possibly don't need the other two?
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) NodeIterator objectsIterator;
-	@Setter(AccessLevel.PUBLIC) ArrayList<Resource> recognisedSubjects;
-	@Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
-	@Setter(AccessLevel.PRIVATE) ArrayList<Resource> recognisedObjects;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Resource> allSubjects;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Property> allProperties;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<Resource> allObjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Model model;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private OntModel ontModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator subjectsIterator;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // possibly don't need the other two?
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NodeIterator objectsIterator;
+	@Setter(AccessLevel.PUBLIC) private ArrayList<Resource> recognisedSubjects;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<Property> recognisedProperties;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<Resource> recognisedObjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> allSubjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Property> allProperties;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> allObjects;
 	
-	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) private ArrayList<String> clueFragments;
 
 	public SimpleEntityRecogniser(Clue clue, Model model) {
 		this.setClue(clue);

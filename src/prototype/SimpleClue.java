@@ -21,12 +21,12 @@ import lombok.Setter;
  * Represents a clue
  */
 public class SimpleClue implements Clue {
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) String sourceClue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) ArrayList<String> clueVariations;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) ArrayList<Selector> selectorVariations;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String sourceClue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<String> clueVariations;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<Selector> selectorVariations;
 	// solutionStructure of e.g. {2, 3} means the answer consists of a 2-letter word followed by a 3-letter word
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int[] SolutionStructure;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) int numberOfWords;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] SolutionStructure;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int numberOfWords;
 	
 	public SimpleClue(String clueAsString) throws InvalidClueException {
 		if(clueAsString == null || clueAsString.length() == 0)

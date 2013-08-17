@@ -37,14 +37,14 @@ import framework.EntityRecogniser;
  * RECOGNISED AS OBJECTS OR SUBJECTS BUT NOT AS PROPERTIES
  */
 public class NewSimpleEntityRecogniser implements EntityRecogniser {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Model model;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
-	@Setter(AccessLevel.PUBLIC) ArrayList<Resource> recognisedSubjects;
-	@Setter(AccessLevel.PRIVATE) ArrayList<Property> recognisedProperties;
-	@Setter(AccessLevel.PRIVATE) ArrayList<Resource> recognisedObjects;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Model model;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private OntModel ontModel;
+	@Setter(AccessLevel.PUBLIC) private ArrayList<Resource> recognisedSubjects;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<Property> recognisedProperties;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<Resource> recognisedObjects;
 	
-	@Getter(AccessLevel.PUBLIC) ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) private ArrayList<String> clueFragments;
 
 	public NewSimpleEntityRecogniser(Clue clue, Model model) {
 		this.setClue(clue);

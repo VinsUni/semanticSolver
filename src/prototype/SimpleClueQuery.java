@@ -26,11 +26,11 @@ import lombok.Setter;
  *
  */
 public class SimpleClueQuery implements ClueQuery {
-	@Setter(AccessLevel.PRIVATE) ArrayList<String> candidateSolutions;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ClueParser clueParser;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) InfModel infModel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueParser clueParser;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel;
 	
 	
 	public SimpleClueQuery(Clue clue, InfModel model) {

@@ -20,7 +20,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
  * See http://jena.apache.org/documentation/javadoc/jena/com/hp/hpl/jena/rdf/model/SimpleSelector.html
  */
 public class SolutionSelector extends SimpleSelector {
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<String> labels;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> labels;
 	
 	public SolutionSelector(Resource subject, Property predicate, RDFNode object, ArrayList<String> labels) {
 		super(subject, predicate, object);

@@ -22,7 +22,7 @@ import lombok.Setter;
  *
  */
 public class SimpleSemanticSolver implements SemanticSolver {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ModelLoader modelLoader; 
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ModelLoader modelLoader; 
 	
 	@Override
 	public void solve(Clue clue) {

@@ -25,9 +25,9 @@ import lombok.Setter;
  *
  */
 public class SimpleClueParser implements ClueParser {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model model;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) EntityRecogniser entityRecogniser;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model model;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniser entityRecogniser;
 	
 	
 	public SimpleClueParser(Clue clue, Model model) {

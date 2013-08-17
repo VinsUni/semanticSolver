@@ -50,12 +50,12 @@ public class NewSimpleModelLoader implements ModelLoader {
 	private final String ONTOLOGY_URI = "popv7.owl";
 	private final String DATA_URI = "newTestDataset.xml";
 	private final String OWL_FULL_URI = "http://www.w3.org/2002/07/owl#";
-	@Setter(AccessLevel.PRIVATE) InfModel infModel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModelSpec ontologyModelSpec;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) OntModel ontModel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model data;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Model ontology;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Reasoner boundReasoner;
+	@Setter(AccessLevel.PRIVATE) private InfModel infModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModelSpec ontologyModelSpec;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model data;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model ontology;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner boundReasoner;
 	
 	
 	private void setSubjects() {
