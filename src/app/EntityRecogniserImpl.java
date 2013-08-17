@@ -200,11 +200,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		if(clueText.contains(this.APOSTROPHE_S_SEQUENCE)) {
 			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
 			this.addClueFragments(transformedClueText);
-			return; // DEBUGGING *************************** remove with line below ***************************
 		}
-		
-		for(String s : clueFragments) // DEBUGGING *****************************************
-			System.out.println(s);
 	}
 	
 	private String toProperCase(String thisWord) {
