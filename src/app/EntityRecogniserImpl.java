@@ -51,16 +51,16 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	@Getter(AccessLevel.PUBLIC) private ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
-	
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
 
 	public EntityRecogniserImpl(Clue clue) {
 		this.setClue(clue);
-		this.setClueFragments();
+		this.setClueFragments(new ArrayList<String>());
+		this.addClueFragments(this.getClue().getSourceClue());
 	}
 	
 	public ArrayList<String> getRecognisedResourceURIs() throws QueryExceptionHTTP {
@@ -146,18 +146,16 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		}
 		return solutionText;
 	}
-
-	private void setClueFragments() {
-		this.clueFragments = new ArrayList<String>();
-		String clueText = this.getClue().getSourceClue();
+	
+	private void addClueFragments(String clueText) {
 		String[] wordsInClueText = clueText.split(" ");
 		for(int i = 0; i < wordsInClueText.length; i++) {
 			String thisWord = this.toProperCase(wordsInClueText[i]);
-			if(!excludedWord(thisWord))
+			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
 				this.getClueFragments().add(thisWord);
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
-				if(!excludedWord(thisWord))
+				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
 					this.getClueFragments().add(thisWord);
 			}
 		}
@@ -181,13 +179,6 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 			}
 		}
 		return thisWordInProperCase;
-		
-		/* This can handle just a single word:
-		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
-		if(thisWord.length() > 1)
-			thisWordInProperCase += thisWord.substring(1,thisWord.length());
-		return thisWordInProperCase;
-		*/
 	}
 	
 	/**

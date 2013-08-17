@@ -45,19 +45,34 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> allSubjects;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Property> allProperties;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> allObjects;
-	
-	@Getter(AccessLevel.PUBLIC) private ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 
 	public SimpleEntityRecogniser(Clue clue, Model model) {
 		this.setClue(clue);
 		this.setModel(model);
 		this.setOntModel(ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM,this.getModel()));
-		this.setClueFragments();
+		this.setClueFragments(new ArrayList<String>());
+		this.addClueFragments(this.getClue().getSourceClue());
 		this.setRecognisedSubjects(new ArrayList<Resource>());
 		this.setRecognisedProperties(new ArrayList<Property>());
 		this.setRecognisedObjects(new ArrayList<Resource>());
 	}
 	
+	private void addClueFragments(String clueText) {
+		String[] wordsInClueText = clueText.split(" ");
+		for(int i = 0; i < wordsInClueText.length; i++) {
+			String thisWord = wordsInClueText[i].toLowerCase();
+			if(!this.getClueFragments().contains(thisWord))
+				this.getClueFragments().add(thisWord);
+			for(int j = i + 1; j < wordsInClueText.length; j++) {
+				thisWord = thisWord + " " + wordsInClueText[j].toLowerCase();
+				if(!this.getClueFragments().contains(thisWord))
+					this.getClueFragments().add(thisWord);
+			}
+		}
+	}
+	
+	/*
 	private void setClueFragments() {
 		this.clueFragments = new ArrayList<String>();
 		String clueText = this.getClue().getSourceClue();
@@ -70,7 +85,7 @@ public class SimpleEntityRecogniser implements EntityRecogniser {
 				this.getClueFragments().add(thisWord.toLowerCase());
 			}
 		}
-	}
+	} */
 	
 	/*
 	 * THIS CODE IS DUPLICATED IN THE SIMPLESOLUTION CLASS - REFACTOR IT OUT SOMEWHERE?
