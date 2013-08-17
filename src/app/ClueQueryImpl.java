@@ -67,6 +67,24 @@ public class ClueQueryImpl implements ClueQuery {
 						candidateSolutions.add(label);
 				}
 				queryExecution.close();
+				
+				// Look for objects where <?resourceUri propertyUri object>
+				SPARQLquery = RDFS_PREFIX_DECLARATION +
+							" select distinct ?label" +
+							" where { <" + resourceUri + "> <" + propertyUri + "> ?object." +
+							"        ?object rdfs:label ?label.}";
+				
+				query = QueryFactory.create(SPARQLquery);
+				queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+				resultSet = queryExecution.execSelect();
+				
+				while(resultSet.hasNext()) {
+					QuerySolution querySolution = resultSet.nextSolution();
+					String label = querySolution.getLiteral("?label").toString();
+					if(!candidateSolutions.contains(label))
+						candidateSolutions.add(label);
+				}
+				queryExecution.close();
 			}
 		}
 		
