@@ -59,6 +59,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
 	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/"}; // a list of namespaces whose terms should be excluded from consideration
+	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
+	
 	
 	public EntityRecogniserImpl(Clue clue) {
 		this.setClue(clue);
@@ -194,6 +196,13 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					this.getClueFragments().add(thisWord);
 			}
 		}
+		
+		if(clueText.contains(this.APOSTROPHE_S_SEQUENCE)) {
+			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
+			this.addClueFragments(transformedClueText);
+			return; // DEBUGGING *************************** remove with line below ***************************
+		}
+		
 		for(String s : clueFragments) // DEBUGGING *****************************************
 			System.out.println(s);
 	}

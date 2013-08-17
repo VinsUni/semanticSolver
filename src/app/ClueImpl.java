@@ -56,7 +56,12 @@ public class ClueImpl implements Clue {
 		String[] parsedSolutionStructureAsString = solutionStructureAsString.split(", ");
 		this.setSolutionStructure(new int[parsedSolutionStructureAsString.length]);
 		for(int i = 0; i < parsedSolutionStructureAsString.length; i++)
-			this.getSolutionStructure()[i] = Integer.parseInt(parsedSolutionStructureAsString[i]);	
+			try {
+				this.getSolutionStructure()[i] = Integer.parseInt(parsedSolutionStructureAsString[i]);
+			}
+			catch(NumberFormatException e) {
+				throw new InvalidClueException(parsedSolutionStructureAsString[i] + " is not a valid solution structure");
+			}
 	}
 
 	@Override
