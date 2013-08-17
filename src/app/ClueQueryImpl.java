@@ -40,54 +40,54 @@ public class ClueQueryImpl implements ClueQuery {
 	public ClueQueryImpl(Clue clue, EntityRecogniser entityRecogniser) {
 		this.setClue(clue);
 		this.setEntityRecogniser(entityRecogniser);
+		this.setCandidateSolutions(new ArrayList<String>());
 	}
-
+	
+	/**
+	 * @return ArrayList<String>
+	 */
 	@Override
 	public ArrayList<String> getCandidateSolutions() {
-		ArrayList<String> candidateSolutions = new ArrayList<String>();
-		
-		for(String resourceUri : this.getEntityRecogniser().getRecognisedResourceURIs()) {
-			for(String propertyUri : this.getEntityRecogniser().getRecognisedPropertyURIs()) {
+		ArrayList<String> recognisedResourceURIs = this.getEntityRecogniser().getRecognisedResourceURIs();
+		ArrayList<String> recognisedPropertyURIs = this.getEntityRecogniser().getRecognisedPropertyURIs();
+		for(String resourceUri : recognisedResourceURIs) {
+			for(String propertyUri : recognisedPropertyURIs) {
 				// Look for subjects where <?subject propertyUri ResourceUri>
-				String SPARQLquery = DBPEDIA_PREFIX_DECLARATION +
+				String sparqlQuery = DBPEDIA_PREFIX_DECLARATION +
 						" " + DBPEDIA_OWL_PREFIX_DECLARATION +
 						" " + RDFS_PREFIX_DECLARATION +
 						" select distinct ?label" +
 							" where {?subject <" + propertyUri + "> <" + resourceUri +">." +
 							"        ?subject rdfs:label ?label.}";
-				
-				Query query = QueryFactory.create(SPARQLquery);
-				QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-				ResultSet resultSet = queryExecution.execSelect();
-				
-				while(resultSet.hasNext()) {
-					QuerySolution querySolution = resultSet.nextSolution();
-					String label = querySolution.getLiteral("?label").toString();
-					if(!candidateSolutions.contains(label))
-						candidateSolutions.add(label);
-				}
-				queryExecution.close();
+				this.executeSparqlQuery(sparqlQuery);
 				
 				// Look for objects where <?resourceUri propertyUri object>
-				SPARQLquery = RDFS_PREFIX_DECLARATION +
+				sparqlQuery = RDFS_PREFIX_DECLARATION +
 							" select distinct ?label" +
 							" where { <" + resourceUri + "> <" + propertyUri + "> ?object." +
 							"        ?object rdfs:label ?label.}";
-				
-				query = QueryFactory.create(SPARQLquery);
-				queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-				resultSet = queryExecution.execSelect();
-				
-				while(resultSet.hasNext()) {
-					QuerySolution querySolution = resultSet.nextSolution();
-					String label = querySolution.getLiteral("?label").toString();
-					if(!candidateSolutions.contains(label))
-						candidateSolutions.add(label);
-				}
-				queryExecution.close();
+				this.executeSparqlQuery(sparqlQuery);
 			}
 		}
-		
 		return candidateSolutions;
+	}
+	
+	/**
+	 * executeSparqlQuery
+	 * @param sparqlQuery
+	 */
+	private void executeSparqlQuery(String sparqlQuery) {
+		Query query = QueryFactory.create(sparqlQuery);
+		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+		ResultSet resultSet = queryExecution.execSelect();
+		
+		while(resultSet.hasNext()) {
+			QuerySolution querySolution = resultSet.nextSolution();
+			String label = querySolution.getLiteral("?label").toString();
+			
+			if(label != null && !(this.candidateSolutions.contains(label)))
+				this.candidateSolutions.add(label);
+		}
+		queryExecution.close();
 	}
 }
