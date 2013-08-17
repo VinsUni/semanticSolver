@@ -22,8 +22,7 @@ import lombok.Setter;
 
 /**
  * @author Ben Griffiths
- * This implementation needs to query DBpedia to see if it can find resources that match any of the clue fragments identified.
- * It will need to return a list of identified resources to the Solver object, so that it can perform queries
+ * THIS IS CURRENTLY UNUSED
  */
 public class ClueParserImpl implements ClueParser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model model;

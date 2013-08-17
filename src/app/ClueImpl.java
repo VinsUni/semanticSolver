@@ -21,22 +21,30 @@ import lombok.Setter;
  * Represents a clue
  */
 public class ClueImpl implements Clue {
+	private final String SOLUTION_STRUCTURE_OPEN_TAG = "[";
+	private final char SOLUTION_STRUCTURE_CLOSE_TAG = ']';
+	private final String FILL_IN_THE_BLANK_MARKER = "_";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String sourceClue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<String> clueVariations;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<Selector> selectorVariations;
 	// solutionStructure of e.g. {2, 3} means the answer consists of a 2-letter word followed by a 3-letter word
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] SolutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int numberOfWords;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank; // true if the clue is a 'Fill in the blank' style clue
 	
 	public ClueImpl(String clueAsString) throws InvalidClueException {
 		if(clueAsString == null || clueAsString.length() == 0)
 			throw new InvalidClueException("Empty clue");
-		if( (!clueAsString.contains("[")) || (clueAsString.charAt(clueAsString.length() - 1) != ']') )
+		if( (!clueAsString.contains(SOLUTION_STRUCTURE_OPEN_TAG)) 
+			|| (clueAsString.charAt(clueAsString.length() - 1) != SOLUTION_STRUCTURE_CLOSE_TAG) )
 			throw new InvalidClueException("Invalid specification of solution structure");
 		// Raw clue is in form "words making up clue [String representing solution structure]"
+		
 		String[] decomposedClue = clueAsString.split("\\["); // split the raw clue into the 2 Strings either side of the '[' character
 		
 		this.setSourceClue(decomposedClue[0]);
+		if(this.getSourceClue().contains(FILL_IN_THE_BLANK_MARKER))
+			this.setFillInTheBlank(true);
 		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING
 		
 		String solutionStructureAsString = decomposedClue[1].substring(0, decomposedClue[1].length() - 1);
