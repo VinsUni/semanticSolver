@@ -1,0 +1,400 @@
+<rdf:RDF
+    xmlns:opencyc="http://sw.opencyc.org/2008/06/10/concept/"
+    xmlns:yago-res="http://mpii.de/yago/resource/"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:lgv="http://linkedgeodata.org/ontology/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:freebase="http://rdf.freebase.com/ns/"
+    xmlns:bif="bif:"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:rev="http://purl.org/stuff/rev#"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:umbel-ac="http://umbel.org/umbel/ac/"
+    xmlns:category="http://dbpedia.org/resource/Category:"
+    xmlns:usc="http://www.rdfabout.com/rdf/schema/uscensus/details/100pct/"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:b3s="http://b3s.openlinksw.com/"
+    xmlns:grs="http://www.georss.org/georss/"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:umbel-sc="http://umbel.org/umbel/sc/"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:wikicompany="http://dbpedia.openlinksw.com/wikicompany/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:units="http://dbpedia.org/units/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lod="http://lod.openlinksw.com/">
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Winterland_(album)">
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Foxy_Lady">
+        <rdfs:label xml:lang="uk">Foxey Lady</rdfs:label>
+        <rdfs:label xml:lang="en">Foxy Lady</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpedia-owl:genre>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Funk_rock">
+        <rdfs:label xml:lang="en">Funk rock</rdfs:label>
+        <rdfs:label xml:lang="cs">Funk rock</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:genre>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Red_House_(song)">
+        <rdfs:label xml:lang="en">Red House (song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Francis_Scott_Key">
+        <rdfs:label xml:lang="de">Francis Scott Key</rdfs:label>
+        <rdfs:label xml:lang="ca">Francis Scott Key</rdfs:label>
+        <rdfs:label xml:lang="en">Francis Scott Key</rdfs:label>
+        <rdfs:label xml:lang="cs">Francis Scott Key</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpedia-owl:genre>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Hard_rock">
+        <rdfs:label xml:lang="vi">Hard rock</rdfs:label>
+        <rdfs:label xml:lang="ca">Rock dur</rdfs:label>
+        <rdfs:label xml:lang="de">Hard Rock</rdfs:label>
+        <rdfs:label xml:lang="uk">Хард-рок</rdfs:label>
+        <rdfs:label xml:lang="en">Hard rock</rdfs:label>
+        <rdfs:label xml:lang="zh">硬式搖滾</rdfs:label>
+        <rdfs:label xml:lang="cs">Hard rock</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:genre>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Little_Wing">
+        <rdfs:label xml:lang="en">Little Wing</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Pete_Brown">
+        <rdfs:label xml:lang="en">Pete Brown</rdfs:label>
+        <rdfs:label xml:lang="de">Pete Brown (Songwriter)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Spanish_Castle_Magic">
+        <rdfs:label xml:lang="en">Spanish Castle Magic</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Wild_Thing_(Chip_Taylor_song)">
+        <rdfs:label xml:lang="en">Wild Thing (Chip Taylor song)</rdfs:label>
+        <rdfs:label xml:lang="de">Wild Thing (Lied)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dcterms:subject>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Jimi_Hendrix_albums">
+        <rdfs:label xml:lang="en">Jimi Hendrix albums</rdfs:label>
+      </rdf:Description>
+    </dcterms:subject>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Killing_Floor_(Howlin&apos;_Wolf_song)">
+        <rdfs:label xml:lang="en">Killing Floor (Howlin' Wolf song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpedia-owl:recordedIn>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Winterland_Ballroom">
+        <rdfs:label xml:lang="de">Winterland</rdfs:label>
+        <rdfs:label xml:lang="en">Winterland Ballroom</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:recordedIn>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Jim_Capaldi">
+        <rdfs:label xml:lang="de">Jim Capaldi</rdfs:label>
+        <rdfs:label xml:lang="en">Jim Capaldi</rdfs:label>
+        <rdfs:label xml:lang="cs">Jim Capaldi</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:genre>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Acid_rock">
+        <rdfs:label xml:lang="cs">Acid rock</rdfs:label>
+        <rdfs:label xml:lang="en">Acid rock</rdfs:label>
+      </rdf:Description>
+    </dbpprop:genre>
+    <dbpedia-owl:genre>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Blues_rock">
+        <rdfs:label xml:lang="ca">Blues rock</rdfs:label>
+        <rdfs:label xml:lang="uk">Блюз-рок</rdfs:label>
+        <rdfs:label xml:lang="de">Bluesrock</rdfs:label>
+        <rdfs:label xml:lang="en">Blues rock</rdfs:label>
+        <rdfs:label xml:lang="cs">Blues rock</rdfs:label>
+        <rdfs:label xml:lang="zh">藍調搖滾</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:genre>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Album">
+        <rdfs:label xml:lang="ko">앨범</rdfs:label>
+        <rdfs:label xml:lang="en">album</rdfs:label>
+        <rdfs:label xml:lang="de">Album</rdfs:label>
+        <rdfs:label xml:lang="el">album</rdfs:label>
+        <rdfs:label xml:lang="fr">album</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/John_Stafford_Smith">
+        <rdfs:label xml:lang="en">John Stafford Smith</rdfs:label>
+        <rdfs:label xml:lang="de">John Stafford Smith</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpedia-owl:type>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Live_album">
+        <rdfs:label xml:lang="cs">Koncertní album</rdfs:label>
+        <rdfs:label xml:lang="en">Live album</rdfs:label>
+        <rdfs:label xml:lang="vi">Album trực tiếp</rdfs:label>
+        <rdfs:label xml:lang="ca">Àlbum en directe</rdfs:label>
+        <rdfs:label xml:lang="de">Live-Album</rdfs:label>
+        <rdfs:label xml:lang="uk">Концертний альбом</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:type>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Blues_rock"/>
+    <dbpedia-owl:artist>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Jimi_Hendrix">
+        <rdfs:label xml:lang="zh">吉米·亨德里克斯</rdfs:label>
+        <rdfs:label xml:lang="en">Jimi Hendrix</rdfs:label>
+        <rdfs:label xml:lang="ca">Jimi Hendrix</rdfs:label>
+        <rdfs:label xml:lang="cs">Jimi Hendrix</rdfs:label>
+        <rdfs:label xml:lang="vi">Jimi Hendrix</rdfs:label>
+        <rdfs:label xml:lang="uk">Джимі Хендрікс</rdfs:label>
+        <rdfs:label xml:lang="de">Jimi Hendrix</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:artist>
+    <dbpedia-owl:genre>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Psychedelic_rock">
+        <rdfs:label xml:lang="uk">Психоделічний рок</rdfs:label>
+        <rdfs:label xml:lang="cs">Psychedelický rock</rdfs:label>
+        <rdfs:label xml:lang="zh">迷幻搖滾</rdfs:label>
+        <rdfs:label xml:lang="en">Psychedelic rock</rdfs:label>
+        <rdfs:label xml:lang="de">Psychedelic Rock</rdfs:label>
+        <rdfs:label xml:lang="ca">Rock psicodèlic</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:genre>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Are_You_Experienced%3F_(song)">
+        <rdfs:label xml:lang="en">Are You Experienced? (song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dcterms:subject>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Category:2011_albums">
+        <rdfs:label xml:lang="en">2011 albums</rdfs:label>
+      </rdf:Description>
+    </dcterms:subject>
+    <dbpprop:rev>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Contactmusic.com">
+        <rdfs:label xml:lang="en">Contactmusic.com</rdfs:label>
+      </rdf:Description>
+    </dbpprop:rev>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Lover_Man_(Jimi_Hendrix_song)">
+        <rdfs:label xml:lang="en">Lover Man (Jimi Hendrix song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Eric_Clapton">
+        <rdfs:label xml:lang="de">Eric Clapton</rdfs:label>
+        <rdfs:label xml:lang="vi">Eric Clapton</rdfs:label>
+        <rdfs:label xml:lang="cs">Eric Clapton</rdfs:label>
+        <rdfs:label xml:lang="uk">Ерік Клептон</rdfs:label>
+        <rdfs:label xml:lang="zh">埃里克·克莱普顿</rdfs:label>
+        <rdfs:label xml:lang="en">Eric Clapton</rdfs:label>
+        <rdfs:label xml:lang="ca">Eric Clapton</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Hey_Joe">
+        <rdfs:label xml:lang="de">Hey Joe</rdfs:label>
+        <rdfs:label xml:lang="en">Hey Joe</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Steve_Winwood">
+        <rdfs:label xml:lang="en">Steve Winwood</rdfs:label>
+        <rdfs:label xml:lang="de">Steve Winwood</rdfs:label>
+        <rdfs:label xml:lang="zh">史蒂夫·温伍德</rdfs:label>
+        <rdfs:label xml:lang="cs">Steve Winwood</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Jimi_Hendrix"/>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_Petway">
+        <rdfs:label xml:lang="de">Robert Petway</rdfs:label>
+        <rdfs:label xml:lang="en">Robert Petway</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Psychedelic_rock"/>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Voodoo_Child_(Slight_Return)">
+        <rdfs:label xml:lang="en">Voodoo Child (Slight Return)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Purple_Haze">
+        <rdfs:label xml:lang="cs">Purple Haze</rdfs:label>
+        <rdfs:label xml:lang="en">Purple Haze</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Howlin&apos;_Wolf">
+        <rdfs:label xml:lang="en">Howlin' Wolf</rdfs:label>
+        <rdfs:label xml:lang="cs">Howlin' Wolf</rdfs:label>
+        <rdfs:label xml:lang="uk">Хаулін Вульф</rdfs:label>
+        <rdfs:label xml:lang="ca">Howlin' Wolf</rdfs:label>
+        <rdfs:label xml:lang="de">Howlin’ Wolf</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Chris_Wood_(rock_musician)">
+        <rdfs:label xml:lang="cs">Chris Wood</rdfs:label>
+        <rdfs:label xml:lang="de">Chris Wood (Rockmusiker)</rdfs:label>
+        <rdfs:label xml:lang="en">Chris Wood (rock musician)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Hard_rock"/>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Like_a_Rolling_Stone">
+        <rdfs:label xml:lang="uk">Like a Rolling Stone</rdfs:label>
+        <rdfs:label xml:lang="en">Like a Rolling Stone</rdfs:label>
+        <rdfs:label xml:lang="ca">Like a Rolling Stone</rdfs:label>
+        <rdfs:label xml:lang="cs">Like a Rolling Stone</rdfs:label>
+        <rdfs:label xml:lang="vi">Like a Rolling Stone</rdfs:label>
+        <rdfs:label xml:lang="de">Like a Rolling Stone</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalWork">
+        <rdfs:label xml:lang="fr">œuvre musicale</rdfs:label>
+        <rdfs:label xml:lang="en">musical work</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Acid_rock"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Jimi_Hendrix"/>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Manic_Depression_(song)">
+        <rdfs:label xml:lang="en">Manic Depression (song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Work">
+        <rdfs:label xml:lang="el">δημιουργία</rdfs:label>
+        <rdfs:label xml:lang="de">Werk</rdfs:label>
+        <rdfs:label xml:lang="pt">obra</rdfs:label>
+        <rdfs:label xml:lang="fr">travail</rdfs:label>
+        <rdfs:label xml:lang="en">work</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:recordLabel>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Legacy_Recordings">
+        <rdfs:label xml:lang="en">Legacy Recordings</rdfs:label>
+        <rdfs:label xml:lang="cs">Legacy Recordings</rdfs:label>
+      </rdf:Description>
+    </dbpedia-owl:recordLabel>
+    <dcterms:subject>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Live_albums_published_posthumously">
+        <rdfs:label xml:lang="en">Live albums published posthumously</rdfs:label>
+      </rdf:Description>
+    </dcterms:subject>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Chip_Taylor">
+        <rdfs:label xml:lang="en">Chip Taylor</rdfs:label>
+        <rdfs:label xml:lang="de">Chip Taylor</rdfs:label>
+        <rdfs:label xml:lang="cs">Chip Taylor</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/The_Star-Spangled_Banner">
+        <rdfs:label xml:lang="en">The Star-Spangled Banner</rdfs:label>
+        <rdfs:label xml:lang="zh">星条旗 (美国国歌)</rdfs:label>
+        <rdfs:label xml:lang="ca">The Star-Spangled Banner</rdfs:label>
+        <rdfs:label xml:lang="uk">Гімн США</rdfs:label>
+        <rdfs:label xml:lang="cs">Hymna Spojených států amerických</rdfs:label>
+        <rdfs:label xml:lang="vi">The Star-Spangled Banner</rdfs:label>
+        <rdfs:label xml:lang="de">The Star-Spangled Banner</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Funk_rock"/>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Fire_(The_Jimi_Hendrix_Experience_song)">
+        <rdfs:label xml:lang="en">Fire (The Jimi Hendrix Experience song)</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Sunshine_of_Your_Love">
+        <rdfs:label xml:lang="en">Sunshine of Your Love</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Bob_Dylan">
+        <rdfs:label xml:lang="vi">Bob Dylan</rdfs:label>
+        <rdfs:label xml:lang="zh">鲍勃·迪伦</rdfs:label>
+        <rdfs:label xml:lang="ca">Bob Dylan</rdfs:label>
+        <rdfs:label xml:lang="de">Bob Dylan</rdfs:label>
+        <rdfs:label xml:lang="cs">Bob Dylan</rdfs:label>
+        <rdfs:label xml:lang="uk">Боб Ділан</rdfs:label>
+        <rdfs:label xml:lang="en">Bob Dylan</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Jack_Bruce">
+        <rdfs:label xml:lang="en">Jack Bruce</rdfs:label>
+        <rdfs:label xml:lang="cs">Jack Bruce</rdfs:label>
+        <rdfs:label xml:lang="uk">Джек Брюс</rdfs:label>
+        <rdfs:label xml:lang="de">Jack Bruce</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Hear_My_Train_A_Comin&apos;">
+        <rdfs:label xml:lang="en">Hear My Train A Comin'</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:title>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Dear_Mr._Fantasy">
+        <rdfs:label xml:lang="en">Dear Mr. Fantasy</rdfs:label>
+      </rdf:Description>
+    </dbpprop:title>
+    <dbpprop:writer>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Billy_Roberts">
+        <rdfs:label xml:lang="en">Billy Roberts</rdfs:label>
+      </rdf:Description>
+    </dbpprop:writer>
+    <dcterms:subject>
+      <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Jimi_Hendrix_live_albums">
+        <rdfs:label xml:lang="en">Jimi Hendrix live albums</rdfs:label>
+      </rdf:Description>
+    </dcterms:subject>
+  </owl:Thing>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdfs:label>Thing</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

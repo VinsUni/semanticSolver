@@ -1,0 +1,1921 @@
+<rdf:RDF
+    xmlns:opencyc="http://sw.opencyc.org/2008/06/10/concept/"
+    xmlns:yago-res="http://mpii.de/yago/resource/"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:lgv="http://linkedgeodata.org/ontology/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:freebase="http://rdf.freebase.com/ns/"
+    xmlns:bif="bif:"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:rev="http://purl.org/stuff/rev#"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:umbel-ac="http://umbel.org/umbel/ac/"
+    xmlns:category="http://dbpedia.org/resource/Category:"
+    xmlns:usc="http://www.rdfabout.com/rdf/schema/uscensus/details/100pct/"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:b3s="http://b3s.openlinksw.com/"
+    xmlns:grs="http://www.georss.org/georss/"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:umbel-sc="http://umbel.org/umbel/sc/"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:wikicompany="http://dbpedia.openlinksw.com/wikicompany/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:units="http://dbpedia.org/units/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lod="http://lod.openlinksw.com/">
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Per_%C3%85hlin">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Per Åhlin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Zavoloka">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Zavoloka</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Thomas_Russell_(painter)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Thomas Russell (painter)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jenny_Humphrey">
+    <rdfs:label xml:lang="en">Jenny Humphrey</rdfs:label>
+    <rdfs:label xml:lang="zh">韓珍妮</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mr._Lobo">
+    <rdfs:label xml:lang="en">Mr. Lobo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kalervo_Palsa">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Kalervo Palsa</rdfs:label>
+    <rdfs:label xml:lang="en">Kalervo Palsa</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dong_Abay">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Dong Abay</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Frank_Reaugh">
+    <rdfs:label xml:lang="en">Frank Reaugh</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hero_Angeles">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Hero Angeles</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gino_Paoli">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Gino Paoli</rdfs:label>
+    <rdfs:label xml:lang="cs">Gino Paoli</rdfs:label>
+    <rdfs:label xml:lang="ca">Gino Paoli</rdfs:label>
+    <rdfs:label xml:lang="de">Gino Paoli</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marcie_Bolen">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Marcie Bolen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eric_Clapton">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">埃里克·克莱普顿</rdfs:label>
+    <rdfs:label xml:lang="vi">Eric Clapton</rdfs:label>
+    <rdfs:label xml:lang="cs">Eric Clapton</rdfs:label>
+    <rdfs:label xml:lang="en">Eric Clapton</rdfs:label>
+    <rdfs:label xml:lang="ca">Eric Clapton</rdfs:label>
+    <rdfs:label xml:lang="uk">Ерік Клептон</rdfs:label>
+    <rdfs:label xml:lang="de">Eric Clapton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Tork">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Peter Tork</rdfs:label>
+    <rdfs:label xml:lang="de">Peter Tork</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Luciano_(singer)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Luciano (Sänger)</rdfs:label>
+    <rdfs:label xml:lang="en">Luciano (singer)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Moris_Tepper">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Moris Tepper</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jean_Cocteau">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Jean Cocteau</rdfs:label>
+    <rdfs:label xml:lang="zh">让·谷克多</rdfs:label>
+    <rdfs:label xml:lang="uk">Жан Кокто</rdfs:label>
+    <rdfs:label xml:lang="en">Jean Cocteau</rdfs:label>
+    <rdfs:label xml:lang="ca">Jean Cocteau</rdfs:label>
+    <rdfs:label xml:lang="de">Jean Cocteau</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bill_Monroe">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Bill Monroe</rdfs:label>
+    <rdfs:label xml:lang="de">Bill Monroe</rdfs:label>
+    <rdfs:label xml:lang="uk">Біл Монро</rdfs:label>
+    <rdfs:label xml:lang="cs">Bill Monroe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_Indiana">
+    <rdfs:label xml:lang="en">Robert Indiana</rdfs:label>
+    <rdfs:label xml:lang="zh">罗伯特·印第安纳</rdfs:label>
+    <rdfs:label xml:lang="ca">Robert Indiana</rdfs:label>
+    <rdfs:label xml:lang="de">Robert Indiana</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/William_T._Cooper">
+    <rdfs:label xml:lang="en">William T. Cooper</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Basil_Rakoczi">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Basil Rakoczi</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/James_Brown_(artist)">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">James Brown (Maler)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Joey_Skaggs">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Joey Skaggs</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sarah_Dougher">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sarah Dougher</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mathieu_Bauer">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Mathieu Bauer</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_Hunt_(ethnologist)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">George Hunt (ethnologist)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_Harvard_University_people">
+    <dbpprop:nota rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">List of Harvard University people</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pat_Lytle">
+    <rdfs:label xml:lang="en">Pat Lytle</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Li_Tobler">
+    <rdfs:label xml:lang="en">Li Tobler</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Artist_(disambiguation)">
+    <dbpedia-owl:wikiPageDisambiguates rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="ca">Artista (desambiguació)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Edwin_Schlossberg">
+    <rdfs:label xml:lang="en">Edwin Schlossberg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kevin_Eastman">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Kevin Eastman</rdfs:label>
+    <rdfs:label xml:lang="de">Kevin Eastman</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Grigoriy_Dovzhenko">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="uk">Довженко Григорій Овксентійович</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Andrew_Levitas">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Andrew Levitas</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Andrew_Coulter_Enright">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Andrew Coulter Enright</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lasse_%C3%85berg">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Lasse Åberg</rdfs:label>
+    <rdfs:label xml:lang="de">Lasse Åberg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Fernando_Garibay">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Fernando Garibay</rdfs:label>
+    <rdfs:label xml:lang="de">Fernando Garibay</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tsuyoshi_Domoto">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">堂本剛</rdfs:label>
+    <rdfs:label xml:lang="en">Tsuyoshi Domoto</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Paulette_Frankl">
+    <rdfs:label xml:lang="en">Paulette Frankl</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ahlam_Shibli">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Ahlam Shibli</rdfs:label>
+    <rdfs:label xml:lang="en">Ahlam Shibli</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Emilio_Giuseppe_Dossena">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Emilio Giuseppe Dossena</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lois_Hamilton">
+    <rdfs:label xml:lang="en">Lois Hamilton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/David_Greenberger">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">David Greenberger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Danger_Mouse">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Danger Mouse</rdfs:label>
+    <rdfs:label xml:lang="de">DJ Danger Mouse</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kevin_Hanna">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Kevin Hanna</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_Byrne_(playwright)">
+    <rdfs:label xml:lang="en">John Byrne (playwright)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Yas_Taalat">
+    <rdfs:label xml:lang="en">Yas Taalat</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bobby_Driscoll">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Bobby Driscoll</rdfs:label>
+    <rdfs:label xml:lang="en">Bobby Driscoll</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nick_Duffy">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Nick Duffy</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/E._T._A._Hoffmann">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">E·T·A·霍夫曼</rdfs:label>
+    <rdfs:label xml:lang="en">E. T. A. Hoffmann</rdfs:label>
+    <rdfs:label xml:lang="de">E. T. A. Hoffmann</rdfs:label>
+    <rdfs:label xml:lang="vi">E.T.A. Hoffmann</rdfs:label>
+    <rdfs:label xml:lang="cs">Ernst Theodor Wilhelm Hoffmann</rdfs:label>
+    <rdfs:label xml:lang="uk">Ернст Теодор Амадей Гофманн</rdfs:label>
+    <rdfs:label xml:lang="ca">Ernst Theodor Amadeus Hoffmann</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ralph_Barton">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ralph Barton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charles_Crumb">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Charles Crumb</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Samwise_Didier">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Samwise Didier</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tove_Jansson">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">朵貝·楊笙</rdfs:label>
+    <rdfs:label xml:lang="uk">Туве Янссон</rdfs:label>
+    <rdfs:label xml:lang="ca">Tove Jansson</rdfs:label>
+    <rdfs:label xml:lang="en">Tove Jansson</rdfs:label>
+    <rdfs:label xml:lang="de">Tove Jansson</rdfs:label>
+    <rdfs:label xml:lang="cs">Tove Janssonová</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Boardman_Robinson">
+    <rdfs:label xml:lang="en">Boardman Robinson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dean_Fujioka">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">藤岡靛</rdfs:label>
+    <rdfs:label xml:lang="en">Dean Fujioka</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Carol_Barton">
+    <rdfs:label xml:lang="en">Carol Barton</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alex_Grey">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">亚历斯·格列</rdfs:label>
+    <rdfs:label xml:lang="de">Alex Grey</rdfs:label>
+    <rdfs:label xml:lang="en">Alex Grey</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Christopher_Willits">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Christopher Willits</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Taras_Shevchenko">
+    <rdfs:label xml:lang="de">Taras Schewtschenko</rdfs:label>
+    <rdfs:label xml:lang="vi">Taras Hryhorovych Shevchenko</rdfs:label>
+    <rdfs:label xml:lang="cs">Taras Ševčenko</rdfs:label>
+    <rdfs:label xml:lang="uk">Шевченко Тарас Григорович</rdfs:label>
+    <rdfs:label xml:lang="ca">Taràs Xevtxenko</rdfs:label>
+    <rdfs:label xml:lang="zh">塔拉斯·舍甫琴科</rdfs:label>
+    <rdfs:label xml:lang="en">Taras Shevchenko</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mimi_Parent">
+    <rdfs:label xml:lang="en">Mimi Parent</rdfs:label>
+    <rdfs:label xml:lang="de">Mimi Parent</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Chamin_Correa">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Chamin Correa</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gamble_Rogers">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Gamble Rogers</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Norton_Buffalo">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Norton Buffalo</rdfs:label>
+    <rdfs:label xml:lang="en">Norton Buffalo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ghost_Rider_(comics)">
+    <rdfs:label xml:lang="de">Ghost Rider (Comic)</rdfs:label>
+    <rdfs:label xml:lang="zh">幽靈車神</rdfs:label>
+    <rdfs:label xml:lang="en">Ghost Rider (comics)</rdfs:label>
+    <dbpedia-owl:creator rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jimmy_Cauty">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jimmy Cauty</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Joshua_Ang">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Joshua Ang</rdfs:label>
+    <rdfs:label xml:lang="zh">洪賜健</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mike_Batt">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Mike Batt</rdfs:label>
+    <rdfs:label xml:lang="de">Mike Batt</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Fred_Wolf">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Fred Wolf</rdfs:label>
+    <rdfs:label xml:lang="en">Fred Wolf</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Freddy_Milton">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Freddy Milton</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hilda_Kay_Grant">
+    <rdfs:label xml:lang="en">Hilda Kay Grant</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Franz_Pomassl">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Franz Pomassl</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Raissa_Venables">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Raissa Venables</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Yuu_Watase">
+    <rdfs:label xml:lang="vi">Watase Yuu</rdfs:label>
+    <rdfs:label xml:lang="de">Yuu Watase</rdfs:label>
+    <rdfs:label xml:lang="zh">渡瀨悠宇</rdfs:label>
+    <rdfs:label xml:lang="ca">Yuu Watase</rdfs:label>
+    <rdfs:label xml:lang="en">Yuu Watase</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Renata_Przemyk">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Renata Przemyk</rdfs:label>
+    <rdfs:label xml:lang="de">Renata Przemyk</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ahmed_Pervez">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ahmed Pervez</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Steve_%22Clem%22_Grogan">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Steven Dennis Grogan</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ted_Vasin">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ted Vasin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Su_Shi">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Su Shi</rdfs:label>
+    <rdfs:label xml:lang="zh">苏轼</rdfs:label>
+    <rdfs:label xml:lang="vi">Tô Thức</rdfs:label>
+    <rdfs:label xml:lang="de">Su Shi</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Wieteke_van_Dort">
+    <rdfs:label xml:lang="en">Wieteke van Dort</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Louis_Vola">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Louis Vola</rdfs:label>
+    <rdfs:label xml:lang="en">Louis Vola</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Shin_Hae_Chul">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Shin Hae Chul</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Brian_Routh">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Brian Routh</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jesse_Michaels">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jesse Michaels</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sonia_Leong">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sonia Leong</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._P._Pickens">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">J. P. Pickens</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eddie_Boros">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Eddie Boros</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jyrki_Parantainen">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jyrki Parantainen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marcos_Grigorian">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Marcos Grigorian</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sterling_Ruby">
+    <rdfs:label xml:lang="en">Sterling Ruby</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Laura_Watton">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Laura Watton</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Judith_Belushi_Pisano">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Judith Belushi Pisano</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Dreher">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Peter Dreher</rdfs:label>
+    <rdfs:label xml:lang="en">Peter Dreher</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sean_Porteous">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sean Porteous</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Stas_Namin">
+    <rdfs:label xml:lang="en">Stas Namin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Glenn_Chadbourne">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Glenn Chadbourne</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_Humair">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Daniel Humair</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ronny_Jordan">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ronny Jordan</rdfs:label>
+    <rdfs:label xml:lang="de">Ronny Jordan</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Maurice_Sendak">
+    <rdfs:label xml:lang="uk">Моріс Сендак</rdfs:label>
+    <rdfs:label xml:lang="de">Maurice Sendak</rdfs:label>
+    <rdfs:label xml:lang="en">Maurice Sendak</rdfs:label>
+    <rdfs:label xml:lang="zh">莫里斯·桑達克</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/R._C._Gorman">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">R. C. Gorman</rdfs:label>
+    <rdfs:label xml:lang="de">R. C. Gorman</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/James_Gahagan">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">James Gahagan</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charlie_Benante">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Charlie Benante</rdfs:label>
+    <rdfs:label xml:lang="de">Charlie Benante</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sanem_%C3%87elik">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Sanem Çelik</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/James_Montgomery_Flagg">
+    <rdfs:label xml:lang="de">James Montgomery Flagg</rdfs:label>
+    <rdfs:label xml:lang="en">James Montgomery Flagg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Terre_Thaemlitz">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Terre Thaemlitz</rdfs:label>
+    <rdfs:label xml:lang="de">Terre Thaemlitz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Satoshi_Ohno">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Satoshi Ohno</rdfs:label>
+    <rdfs:label xml:lang="de">Satoshi Ōno</rdfs:label>
+    <rdfs:label xml:lang="zh">大野智</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Edgar_Seligman">
+    <rdfs:label xml:lang="en">Edgar Seligman</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mikhail_Lermontov">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">米哈伊尔·莱蒙托夫</rdfs:label>
+    <rdfs:label xml:lang="vi">Mikhail Yuryevich Lermontov</rdfs:label>
+    <rdfs:label xml:lang="ca">Mikhaïl Lèrmontov</rdfs:label>
+    <rdfs:label xml:lang="uk">Лермонтов Михайло Юрійович</rdfs:label>
+    <rdfs:label xml:lang="de">Michail Jurjewitsch Lermontow</rdfs:label>
+    <rdfs:label xml:lang="cs">Michail Jurjevič Lermontov</rdfs:label>
+    <rdfs:label xml:lang="en">Mikhail Lermontov</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gordon_Parks">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Gordon Parks</rdfs:label>
+    <rdfs:label xml:lang="de">Gordon Parks</rdfs:label>
+    <rdfs:label xml:lang="en">Gordon Parks</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alex_Steinweiss">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Alex Steinweiss</rdfs:label>
+    <rdfs:label xml:lang="de">Alex Steinweiss</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_Crumb">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Robert Crumb</rdfs:label>
+    <rdfs:label xml:lang="en">Robert Crumb</rdfs:label>
+    <rdfs:label xml:lang="ca">Robert Crumb</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Quincy_Tan">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Quincy Tan</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rudy_Trouv%C3%A9">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Rudy Trouvé</rdfs:label>
+    <rdfs:label xml:lang="en">Rudy Trouvé</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Georg_Klein">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Georg Klein (Klangkünstler)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Floyd_Red_Crow_Westerman">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Floyd Red Crow Westerman</rdfs:label>
+    <rdfs:label xml:lang="de">Floyd Westerman</rdfs:label>
+    <rdfs:label xml:lang="ca">Floyd Red Crow Westerman</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Markos_Vamvakaris">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Markos Vamvakaris</rdfs:label>
+    <rdfs:label xml:lang="de">Markos Vamvakaris</rdfs:label>
+    <rdfs:label xml:lang="uk">Маркос Вамвакаріс</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Keith_Roberts">
+    <rdfs:label xml:lang="en">Keith Roberts</rdfs:label>
+    <rdfs:label xml:lang="de">Keith Roberts</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tommy_Makem">
+    <rdfs:label xml:lang="de">Tommy Makem</rdfs:label>
+    <rdfs:label xml:lang="en">Tommy Makem</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/David_Reddick">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">David Reddick</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Giampietrino">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Giampietrino</rdfs:label>
+    <rdfs:label xml:lang="en">Giampietrino</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alexander_Wilson_Drake">
+    <rdfs:label xml:lang="en">Alexander Wilson Drake</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Shusaku_Arakawa">
+    <rdfs:label xml:lang="de">Shūsaku Arakawa</rdfs:label>
+    <rdfs:label xml:lang="en">Shusaku Arakawa</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._C._Sch%C3%BCtz">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">J. C. Schütz</rdfs:label>
+    <rdfs:label xml:lang="de">J. C. Schütz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Artiste">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Artiste</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Soshana_Afroyim">
+    <dbpprop:knownFor rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Soshana Afroyim</rdfs:label>
+    <rdfs:label xml:lang="de">Soshana</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Roger_Pfund">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Roger Pfund</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eleni_Oikonomopoulou">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Eleni Oikonomopoulou</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_Clutesi">
+    <rdfs:label xml:lang="en">George Clutesi</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Takashi_Takeuchi">
+    <rdfs:label xml:lang="en">Takashi Takeuchi</rdfs:label>
+    <rdfs:label xml:lang="zh">武内崇</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mustafa_al-Hallaj">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Mustafa al-Hallaj</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lucien_Clergue">
+    <rdfs:label xml:lang="de">Lucien Clergue</rdfs:label>
+    <rdfs:label xml:lang="en">Lucien Clergue</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eric_Bauza">
+    <rdfs:label xml:lang="en">Eric Bauza</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alison_Jackson">
+    <rdfs:label xml:lang="de">Alison Jackson</rdfs:label>
+    <rdfs:label xml:lang="en">Alison Jackson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Igor_Kufayev">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Igor Kufayev</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Melleny_Brown">
+    <rdfs:label xml:lang="en">Melleny Brown</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Emy_Kat">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Emy Kat</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Fran%C3%A7oise_Gilot">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Françoise Gilot</rdfs:label>
+    <rdfs:label xml:lang="de">Françoise Gilot</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Fingazz">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Fingazz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kv%C4%95ta_Pacovsk%C3%A1">
+    <rdfs:label xml:lang="ca">Květa Pacovská</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniele_Luppi">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Daniele Luppi</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Michael_Shaowanasai">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Michael Shaowanasai</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Donald_Rubinstein">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Donald Rubinstein</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tom_Batiuk">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Tom Batiuk</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Suz_Andreasen">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Suz Andreasen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Max_Neuhaus">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Max Neuhaus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robin_Crutchfield">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Robin Crutchfield</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/R._Stevie_Moore">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">R. Stevie Moore</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jean_Michel_Jarre">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="ca">Jean Michel Jarre</rdfs:label>
+    <rdfs:label xml:lang="zh">让-米歇尔·雅尔</rdfs:label>
+    <rdfs:label xml:lang="de">Jean Michel Jarre</rdfs:label>
+    <rdfs:label xml:lang="en">Jean Michel Jarre</rdfs:label>
+    <rdfs:label xml:lang="uk">Жан-Мішель Жарр</rdfs:label>
+    <rdfs:label xml:lang="cs">Jean-Michel Jarre</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Truth_Hurts">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Truth Hurts</rdfs:label>
+    <rdfs:label xml:lang="de">Truth Hurts</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ernest_Stoneman">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Ernest Stoneman</rdfs:label>
+    <rdfs:label xml:lang="en">Ernest Stoneman</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Perez_Burdett">
+    <rdfs:label xml:lang="cs">Peter Perez Burdett</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sam_Taylor-Wood">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sam Taylor-Wood</rdfs:label>
+    <rdfs:label xml:lang="ca">Sam Taylor-Wood</rdfs:label>
+    <rdfs:label xml:lang="cs">Sam Taylor-Wood</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Douglas_Lucas">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Douglas Lucas</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Piero_Manzoni">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Piero Manzoni</rdfs:label>
+    <rdfs:label xml:lang="de">Piero Manzoni</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tom_Six">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Tom Six</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_Kuchar">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">George Kuchar</rdfs:label>
+    <rdfs:label xml:lang="de">George Kuchar</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Justin_Taylor">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Justin Taylor</rdfs:label>
+    <rdfs:label xml:lang="ca">Justin Taylor</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Andy_Luckey">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Andy Luckey</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cy_Thao">
+    <dbpprop:profession rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Cy Thao</rdfs:label>
+    <dbpedia-owl:profession rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Judy_Cassab">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Judy Cassab</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Garth_Williams">
+    <rdfs:label xml:lang="en">Garth Williams</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/MentalEscape">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">MentalEscape</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sw.opencyc.org/2008/06/10/concept/Mx4rwMcZI5wpEbGdrcN5Y29ycA">
+    <rdfs:label xml:lang="en">artist</rdfs:label>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Wayne_Robbins">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Wayne Robbins</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/DJ_Skee">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">DJ Skee</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Martha_Joy">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Martha Joy</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Christian_Furr">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Christian Furr</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cabin_Fever_Media">
+    <rdfs:label xml:lang="en">Cabin Fever Media</rdfs:label>
+    <dbpedia-owl:keyPerson rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Julian_Howard_Ashton">
+    <rdfs:label xml:lang="en">Julian Howard Ashton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ivan_Maximov">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ivan Maximov</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jim_Whiting">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Jim Whiting</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Larry_Carroll_(artist)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Larry Carroll (artist)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kelly_L._Moran">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Kelly L. Moran</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Junior_Marvin">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Junior Marvin</rdfs:label>
+    <rdfs:label xml:lang="en">Junior Marvin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Edward_Burtynsky">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Edward Burtynsky</rdfs:label>
+    <rdfs:label xml:lang="cs">Edward Burtynsky</rdfs:label>
+    <rdfs:label xml:lang="de">Edward Burtynsky</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Conrad_Mieschke">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Conrad Mieschke</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sandro_Perri">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sandro Perri</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jean_Ven_Robert_Hal">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Jean Ven Robert Hal</rdfs:label>
+    <rdfs:label xml:lang="de">Jean Ven Robert Hal</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Woody_Crumbo">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Woody Crumbo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jessie_Baetz">
+    <rdfs:label xml:lang="en">Jessie Baetz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Fernando_D%C3%ADaz_Dom%C3%ADnguez">
+    <rdfs:label xml:lang="en">Fernando Díaz Domínguez</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_Garc%C3%ADa_And%C3%BAjar">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="ca">Daniel García Andújar</rdfs:label>
+    <rdfs:label xml:lang="de">Daniel García Andújar</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alan_M._Clark">
+    <rdfs:label xml:lang="en">Alan M. Clark</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Artists">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Artists</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Samuel_Roy-Bois">
+    <rdfs:label xml:lang="en">Samuel Roy-Bois</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cherie_Currie">
+    <rdfs:label xml:lang="en">Cherie Currie</rdfs:label>
+    <rdfs:label xml:lang="de">Cherie Currie</rdfs:label>
+    <rdfs:label xml:lang="cs">Cherie Currie</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gidget_Gein">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Gidget Gein</rdfs:label>
+    <rdfs:label xml:lang="en">Gidget Gein</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alasdair_Gray">
+    <rdfs:label xml:lang="en">Alasdair Gray</rdfs:label>
+    <rdfs:label xml:lang="de">Alasdair Gray</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bob_Ross">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Bob Ross (Maler)</rdfs:label>
+    <rdfs:label xml:lang="zh">鮑伯·魯斯</rdfs:label>
+    <rdfs:label xml:lang="en">Bob Ross</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Francis_Rimbert">
+    <rdfs:label xml:lang="en">Francis Rimbert</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ku_Hye_Sun">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ku Hye Sun</rdfs:label>
+    <rdfs:label xml:lang="zh">具惠善</rdfs:label>
+    <rdfs:label xml:lang="vi">Gu Hye-seon</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Al_Anderson_(The_Wailers)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Al Anderson (The Wailers)</rdfs:label>
+    <rdfs:label xml:lang="de">Al Anderson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Max_Feldbauer">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Max Feldbauer</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ursula_Vernon">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ursula Vernon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rembrandt_Peale">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Rembrandt Peale</rdfs:label>
+    <rdfs:label xml:lang="en">Rembrandt Peale</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jin_Akanishi">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="vi">Akanishi Jin</rdfs:label>
+    <rdfs:label xml:lang="en">Jin Akanishi</rdfs:label>
+    <rdfs:label xml:lang="zh">赤西仁</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Michael_Cartellone">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Michael Cartellone</rdfs:label>
+    <rdfs:label xml:lang="de">Michael Cartellone</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dickon_Edwards">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Dickon Edwards</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Billy_Dee_Williams">
+    <rdfs:label xml:lang="en">Billy Dee Williams</rdfs:label>
+    <rdfs:label xml:lang="de">Billy Dee Williams</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alarm_(magazine)">
+    <dbpprop:category rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Alarm (magazine)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/James_Best">
+    <rdfs:label xml:lang="de">James Best</rdfs:label>
+    <rdfs:label xml:lang="en">James Best</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hovsep_Pushman">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Hovsep Pushman</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Madeline_Gins">
+    <rdfs:label xml:lang="en">Madeline Gins</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sw.opencyc.org/2008/06/10/concept/en/Artist">
+    <rdfs:label xml:lang="en">artist</rdfs:label>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Christine_Norrie">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Christine Norrie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jack_Coggins">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jack Coggins</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Elizabeth_Siddal">
+    <rdfs:label xml:lang="en">Elizabeth Siddal</rdfs:label>
+    <rdfs:label xml:lang="de">Elizabeth Eleanor Siddal</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Arturo_Meza">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Arturo Meza</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Andrey_Kiritchenko">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Andrey Kiritchenko</rdfs:label>
+    <rdfs:label xml:lang="uk">Кириченко Андрій</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kalidas_Shrestha">
+    <rdfs:label xml:lang="en">Kalidas Shrestha</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Edward_Clarke_Cabot">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Edward Clarke Cabot</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jason_Cruz">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jason Cruz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jos%C3%A9_Antonio_Burciaga">
+    <rdfs:label xml:lang="en">José Antonio Burciaga</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/George_Gittoes">
+    <rdfs:label xml:lang="en">George Gittoes</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bobby_Orlando">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Bobby Orlando</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Togrul_Narimanbekov">
+    <rdfs:label xml:lang="en">Togrul Narimanbekov</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Thomas_Wrede">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Thomas Wrede</rdfs:label>
+    <rdfs:label xml:lang="de">Thomas Wrede</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Clear_Rivers">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Clear Rivers</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Reginald_Gray_(artist)">
+    <rdfs:label xml:lang="de">Reginald Gray</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Norval_Morrisseau">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Norval Morrisseau</rdfs:label>
+    <rdfs:label xml:lang="ca">Norval Morrisseau</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tom_Poulton">
+    <rdfs:label xml:lang="en">Tom Poulton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Joni_Eareckson_Tada">
+    <rdfs:label xml:lang="cs">Joni Eareckson Tada</rdfs:label>
+    <rdfs:label xml:lang="en">Joni Eareckson Tada</rdfs:label>
+    <rdfs:label xml:lang="de">Joni Eareckson Tada</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sabrina_Hughes">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sabrina Hughes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_Boston_Latin_School_alumni">
+    <dbpprop:nota rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">List of Boston Latin School alumni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hans_Dieter_Aigner">
+    <rdfs:label xml:lang="de">Hans Dieter Aigner</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hans_Reffert">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Hans Reffert</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gustavus_von_Tempsky">
+    <rdfs:label xml:lang="de">Gustav von Tempsky</rdfs:label>
+    <rdfs:label xml:lang="en">Gustavus von Tempsky</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lyn-Z">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Lyn-Z</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Akira_Toriyama">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Akira Toriyama</rdfs:label>
+    <rdfs:label xml:lang="zh">鳥山明</rdfs:label>
+    <rdfs:label xml:lang="de">Akira Toriyama</rdfs:label>
+    <rdfs:label xml:lang="vi">Toriyama Akira</rdfs:label>
+    <rdfs:label xml:lang="ca">Akira Toriyama</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bill_Nelson_(musician)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Bill Nelson (musician)</rdfs:label>
+    <rdfs:label xml:lang="uk">Білл Нельсон</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nelson_Medina">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Nelson Medina</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_M._Place">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Robert M. Place</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Patrick_Michael_Castielle">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Patrick Michael Castielle</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Warren_Fitzgerald">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Warren Fitzgerald</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Max_Lawrence">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Peter Max Lawrence</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tony_Hart">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Tony Hart</rdfs:label>
+    <rdfs:label xml:lang="en">Tony Hart</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Uzo">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Uzo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rhiana_Griffith">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Rhiana Griffith</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bill_Tiller">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Bill Tiller</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lance_Henriksen">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Lance Henriksen</rdfs:label>
+    <rdfs:label xml:lang="en">Lance Henriksen</rdfs:label>
+    <rdfs:label xml:lang="de">Lance Henriksen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/DJ_Green_Lantern">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">DJ Green Lantern</rdfs:label>
+    <rdfs:label xml:lang="en">DJ Green Lantern</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_B%C3%A9langer">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Daniel Bélanger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Janet_Krueger">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Janet Krueger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Firmin">
+    <rdfs:label xml:lang="en">Peter Firmin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lee_Wagstaff">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Lee Wagstaff</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/David_Klein_(American_artist)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">David Klein (American artist)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Caroline_K">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Caroline K</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jos%C3%A9_Belloni">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">José Belloni</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Molly_Crabapple">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Molly Crabapple</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cem_K%C4%B1z%C4%B1ltu%C4%9F">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Cem Kızıltuğ</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rob_Dixon">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Rob Dixon</rdfs:label>
+    <rdfs:label xml:lang="de">Rob Dixon</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/James_T._White">
+    <rdfs:label xml:lang="de">James T. White</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Promise_(rapper)">
+    <rdfs:label xml:lang="en">Promise (rapper)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Will_Brooks">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Will Brooks</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Stefan_Banz">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Stefan Banz</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Benedict_Carpenter">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Benedict Carpenter</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Astrid_Kirchherr">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Astrid Kirchherr</rdfs:label>
+    <rdfs:label xml:lang="en">Astrid Kirchherr</rdfs:label>
+    <rdfs:label xml:lang="zh">阿斯特丽德·基尔赫</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ernesto_Padilla">
+    <rdfs:label xml:lang="en">Ernesto Padilla</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lewis_Baltz">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Lewis Baltz</rdfs:label>
+    <rdfs:label xml:lang="en">Lewis Baltz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ben_Earl_Looney">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ben Earl Looney</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mart%C3%ADn_Sastre">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Martín Sastre</rdfs:label>
+    <rdfs:label xml:lang="ca">Martín Sastre</rdfs:label>
+    <rdfs:label xml:lang="en">Martín Sastre</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sally_Warner">
+    <rdfs:label xml:lang="en">Sally Warner</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Alexander_Ivanov_(art_collector)">
+    <rdfs:label xml:lang="uk">Іванов Олександр Миколайович</rdfs:label>
+    <rdfs:label xml:lang="de">Alexander Nikolajewitsch Iwanow (Kunstsammler)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charles_Ricketts">
+    <rdfs:label xml:lang="en">Charles Ricketts</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tatsuya_Ishii">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Tatsuya Ishii</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pedro_Figari">
+    <rdfs:label xml:lang="ca">Pedro Figari</rdfs:label>
+    <rdfs:label xml:lang="en">Pedro Figari</rdfs:label>
+    <rdfs:label xml:lang="de">Pedro Figari</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_Mulloy">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Daniel Mulloy</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sue_Richards_(artist)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sue Richards (artist)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/JP_White">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">JP White</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tony_Garnier_(musician)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Tony Garnier (musician)</rdfs:label>
+    <rdfs:label xml:lang="de">Tony Garnier (Musiker)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kim_Miller">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Kim Miller</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sally_Morgan_(artist)">
+    <rdfs:label xml:lang="en">Sally Morgan (artist)</rdfs:label>
+    <rdfs:label xml:lang="de">Sally Morgan</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Vasily_Shumov">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Vasily Shumov</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Russya">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Russya</rdfs:label>
+    <rdfs:label xml:lang="uk">Руся</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Annita_van_Iersel">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Annita van Iersel</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bruno_Schleinstein">
+    <rdfs:label xml:lang="de">Bruno S.</rdfs:label>
+    <rdfs:label xml:lang="en">Bruno Schleinstein</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gil_Kane">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Gil Kane</rdfs:label>
+    <rdfs:label xml:lang="de">Gil Kane</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Joseph_Horace_Eaton">
+    <dbpprop:laterwork rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Joseph Horace Eaton</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Umberto_Bindi">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Umberto Bindi</rdfs:label>
+    <rdfs:label xml:lang="en">Umberto Bindi</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jill_Tasker">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jill Tasker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Doris_Fish">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Doris Fish</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bj%C3%B8rn_Holter">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Bjørn Holter</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jean_Oliver_Sartor">
+    <rdfs:label xml:lang="en">Jean Oliver Sartor</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Michael_Noakes">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Michael Noakes</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mani_Spinx">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Mani Spinx</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hajime_Tsutsui">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">筒井一</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Chesley_Bonestell">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Chesley Bonestell</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Shakir_Ali_(artist)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Shakir Ali (artist)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Steve_%22Pablo%22_Davis">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Steve "Pablo" Davis</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Erik_Lindbergh">
+    <rdfs:label xml:lang="en">Erik Lindbergh</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mort_Drucker">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Mort Drucker</rdfs:label>
+    <rdfs:label xml:lang="en">Mort Drucker</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Miklos_Ga%C3%A1l">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Miklos Gaál</rdfs:label>
+    <rdfs:label xml:lang="de">Miklos Gaál</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Pixie_O&apos;Harris">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Pixie O'Harris</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Paul_Jaeg">
+    <rdfs:label xml:lang="de">Paul Jaeg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/David_Lapham">
+    <rdfs:label xml:lang="en">David Lapham</rdfs:label>
+    <dbpedia-owl:award rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_Seward_Johnson_II">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">John Seward Johnson II</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rebecca_Moore">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Rebecca Moore</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Margaret_Keane">
+    <rdfs:label xml:lang="en">Margaret Keane</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Scary_Guy">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">The Scary Guy</rdfs:label>
+    <rdfs:label xml:lang="de">The Scary Guy</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tomoe_Shinohara">
+    <rdfs:label xml:lang="en">Tomoe Shinohara</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eerie_Von">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Eerie Von</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ron_Arad_(industrial_designer)">
+    <rdfs:label xml:lang="de">Ron Arad</rdfs:label>
+    <rdfs:label xml:lang="cs">Ron Arad (designér)</rdfs:label>
+    <rdfs:label xml:lang="ca">Ron Arad</rdfs:label>
+    <rdfs:label xml:lang="en">Ron Arad (industrial designer)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marjane_Satrapi">
+    <dbpprop:area rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Marjane Satrapiová</rdfs:label>
+    <rdfs:label xml:lang="ca">Marjane Satrapi</rdfs:label>
+    <rdfs:label xml:lang="en">Marjane Satrapi</rdfs:label>
+    <rdfs:label xml:lang="de">Marjane Satrapi</rdfs:label>
+    <rdfs:label xml:lang="zh">瑪嘉·莎塔碧</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Aino_Kannisto">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Aino Kannisto</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nissan_Rilov">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Nissan Rilov</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mikey_Welsh">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Mikey Welsh</rdfs:label>
+    <rdfs:label xml:lang="en">Mikey Welsh</rdfs:label>
+    <rdfs:label xml:lang="zh">麥奇·威爾許</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Peter_Coke">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Peter Coke</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Oleg_Grigoriev">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Oleg Grigoriev</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Neil_Forrester">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Neil Forrester</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hutch_(sound_engineer)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Hutch (sound engineer)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Zuoxiao_Zuzhou">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">左小祖咒</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Adolphe_Desbarrolles">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Adolphe Desbarrolles</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Magne_Furuholmen">
+    <rdfs:label xml:lang="uk">Магне Фуругольмен</rdfs:label>
+    <rdfs:label xml:lang="en">Magne Furuholmen</rdfs:label>
+    <rdfs:label xml:lang="de">Magne Furuholmen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Arturo_R._Luz">
+    <rdfs:label xml:lang="en">Arturo R. Luz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_The_Doon_School_alumni">
+    <dbpprop:nota rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">List of The Doon School alumni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Antoni_Clav%C3%A9">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="ca">Antoni Clavé i Sanmartí</rdfs:label>
+    <rdfs:label xml:lang="de">Antoni Clavé</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sarah_Jackson">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Sarah Jackson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Derren_Brown">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Derren Brown</rdfs:label>
+    <rdfs:label xml:lang="de">Derren Brown</rdfs:label>
+    <rdfs:label xml:lang="cs">Derren Brown</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Takeshi_Obata">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Takeshi Obata</rdfs:label>
+    <rdfs:label xml:lang="ca">Takeshi Obata</rdfs:label>
+    <rdfs:label xml:lang="en">Takeshi Obata</rdfs:label>
+    <rdfs:label xml:lang="vi">Obata Takeshi</rdfs:label>
+    <rdfs:label xml:lang="zh">小畑健</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ert%C3%A9">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Erté</rdfs:label>
+    <rdfs:label xml:lang="de">Erté</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Steven_B._Smith_(poet)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Steven B. Smith (poet)</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kaja_Foglio">
+    <rdfs:label xml:lang="en">Kaja Foglio</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ashley_Laurence">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ashley Laurence</rdfs:label>
+    <rdfs:label xml:lang="de">Ashley Laurence</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Syd_Barrett">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="zh">西德·巴雷特</rdfs:label>
+    <rdfs:label xml:lang="vi">Syd Barrett</rdfs:label>
+    <rdfs:label xml:lang="uk">Сід Барретт</rdfs:label>
+    <rdfs:label xml:lang="cs">Syd Barrett</rdfs:label>
+    <rdfs:label xml:lang="de">Syd Barrett</rdfs:label>
+    <rdfs:label xml:lang="en">Syd Barrett</rdfs:label>
+    <rdfs:label xml:lang="ca">Syd Barrett</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Izya_Shlosberg">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Izya Shlosberg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Timmy_Mallett">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Timmy Mallett</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mar%C3%ADa_Luisa_Penne">
+    <rdfs:label xml:lang="en">María Luisa Penne</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bill_Keith_(musician)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Bill Keith</rdfs:label>
+    <rdfs:label xml:lang="en">Bill Keith (musician)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marc_Costanzo">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Marc Costanzo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hermann-Paul">
+    <rdfs:label xml:lang="en">Hermann-Paul</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Audrey_Niffenegger">
+    <rdfs:label xml:lang="de">Audrey Niffenegger</rdfs:label>
+    <rdfs:label xml:lang="en">Audrey Niffenegger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Erol_Otus">
+    <rdfs:label xml:lang="en">Erol Otus</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hanayo">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Hanayo</rdfs:label>
+    <rdfs:label xml:lang="en">Hanayo</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Klaus_Dinger">
+    <rdfs:label xml:lang="en">Klaus Dinger</rdfs:label>
+    <rdfs:label xml:lang="de">Klaus Dinger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Valeria_Lynch">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Valeria Lynch</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jonathan_Bragdon">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Jonathan Bragdon</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Porl_Thompson">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Porl Thompson</rdfs:label>
+    <rdfs:label xml:lang="en">Porl Thompson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jasun_Martz">
+    <rdfs:label xml:lang="en">Jasun Martz</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Debra_Berger">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Debra Berger</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Olaf_Breuning">
+    <rdfs:label xml:lang="en">Olaf Breuning</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jean-Paul_Mousseau">
+    <rdfs:label xml:lang="de">Jean-Paul Mousseau</rdfs:label>
+    <rdfs:label xml:lang="en">Jean-Paul Mousseau</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jimmy_Murakami">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Jimmy Murakami</rdfs:label>
+    <rdfs:label xml:lang="de">Jimmy T. Murakami</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gy%C3%B6rgy_Gal%C3%A1ntai">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">György Galántai</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Scot_Halpin">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Scot Halpin</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Lawrence_Saint">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Lawrence Saint</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_Howard_Sanden">
+    <rdfs:label xml:lang="en">John Howard Sanden</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/El_Lissitzky">
+    <rdfs:label xml:lang="de">El Lissitzky</rdfs:label>
+    <rdfs:label xml:lang="cs">El Lisickij</rdfs:label>
+    <rdfs:label xml:lang="en">El Lissitzky</rdfs:label>
+    <rdfs:label xml:lang="zh">埃尔·利西茨基</rdfs:label>
+    <rdfs:label xml:lang="ca">El Lissitzky</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Harry_Oliver">
+    <rdfs:label xml:lang="en">Harry Oliver</rdfs:label>
+    <rdfs:label xml:lang="de">Harry Oliver</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Chris_Metzen">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Chris Metzen</rdfs:label>
+    <rdfs:label xml:lang="en">Chris Metzen</rdfs:label>
+    <rdfs:label xml:lang="zh">克里斯·梅森</rdfs:label>
+    <rdfs:label xml:lang="cs">Chris Metzen</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robert_Turnbull_Macpherson">
+    <dbpprop:shortDescription rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Robert Turnbull Macpherson</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Samuel_Greenberg">
+    <rdfs:label xml:lang="en">Samuel Greenberg</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kenny_Baker_(fiddler)">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Kenny Baker (fiddler)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Heath_Bunting">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Heath Bunting</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hirohiko_Araki">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="de">Hirohiko Araki</rdfs:label>
+    <rdfs:label xml:lang="zh">荒木飛呂彥</rdfs:label>
+    <rdfs:label xml:lang="ca">Hirohiko Araki</rdfs:label>
+    <rdfs:label xml:lang="en">Hirohiko Araki</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ludwig_Fahrenkrog">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Ludwig Fahrenkrog</rdfs:label>
+    <rdfs:label xml:lang="de">Ludwig Fahrenkrog</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Philip_Jamison">
+    <dbpprop:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="en">Philip Jamison</rdfs:label>
+    <dbpedia-owl:occupation rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Curtis_Kulig">
+    <dbpprop:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+    <rdfs:label xml:lang="cs">Curtis Kulig</rdfs:label>
+    <dbpedia-owl:field rdf:resource="http://dbpedia.org/resource/Artist"/>
+  </rdf:Description>
+</rdf:RDF>

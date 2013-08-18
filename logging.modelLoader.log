@@ -1,1 +1,23 @@
 18:45:58 ERROR RDFDefaultErrorHandler    :: file:testDatasetExtended.xml(line 58130 column 39): The entity "dbpedia-owl" was referenced, but not declared.
+14:10:49 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:10:49 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:12:02 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:12:02 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:12:17 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:12:17 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:30:30 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:30:30 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:38:38 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:38:38 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:46:07 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:46:07 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:49:45 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:49:45 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:51:39 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:51:39 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:52:05 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:52:05 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:56:09 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:56:09 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.
+14:57:52 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 92 column 87): {E201} rdf:about not allowed as attribute here.
+14:57:52 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 93 column 108): {E201} rdf:resource not allowed as attribute here.

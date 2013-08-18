@@ -77,6 +77,24 @@
      -->
 
     
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  
+   <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#propertyToCheck">
+    <owl:equivalentClass>
+      <owl:Restriction>
+          <owl:onProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+          	<owl:hasValue rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+          </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
+   </rdf:Description>
 
 
     <!-- 

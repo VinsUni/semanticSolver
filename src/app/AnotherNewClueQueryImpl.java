@@ -3,7 +3,11 @@
  */
 package app;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -33,6 +37,7 @@ import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
+import experiments.NsPrefixLoader;
 import framework.Clue;
 import framework.ClueQuery;
 import framework.EntityRecogniser;
@@ -129,6 +134,35 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 		String subOrOb = resourceAsSubject ? "subject" : "object";						 // DEBUGGING ******************************
 		System.out.println("Constructing model with " + resourceUri + " as " + subOrOb); // DEBUGGING ******************************
 		Model model = queryExecution.execConstruct();
+		
+		/*
+		// DEBUGGING ***************************************************************
+		 // load standard prefixes into the model
+	    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
+		prefixLoader.loadStandardPrefixes();
+		 
+		// Now, write the model out to a file in RDF/XML-ABBREV format:
+		try {
+			Random rand = new Random();
+			int randToAppend = rand.nextInt(1000);
+			
+			String fileName = "data\\extractedModel" + randToAppend + ".xml";
+			FileOutputStream outFile = new FileOutputStream(fileName);
+			System.out.println("Writing retrieved data to file...");
+			model.write(outFile, "RDF/XML-ABBREV");
+			outFile.close();
+			System.out.println("Operation complete");
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		
+		
 		queryExecution.close();
 		return model;
 	}
@@ -137,50 +171,68 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 		ArrayList<String> clueFragments = this.getEntityRecogniser().getClueFragments();
 		System.out.println("Extracting labels..."); // DEBUGGING ****************************************************
 		
-		Selector selector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode) null);
+		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
+		
+		//Model posit = ModelFactory.createDefaultModel();
+		//Resource desiredProperty = posit.createResource("http://www.griffithsben.com/ontologies/pop.owl#desiredProperty");
+		
+		
 		
 		// List statements in which the predicate is a pop:relationalProperty
-		StmtIterator statements = infModel.listStatements(selector);
+		StmtIterator statements = infModel.listStatements(propertiesOfInterestSelector);
 		
 		while(statements.hasNext()) {
 			Statement thisStatement = statements.nextStatement();
-			Property thisPredicate = thisStatement.getPredicate();
-			Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
+			Resource subjectOfStatement = thisStatement.getSubject();
+			RDFNode objectOfStatement = thisStatement.getObject();
+			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
 			
-			StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
+			StmtIterator statementsOfInterest = infModel.listStatements(selector);
 			
-			if(labelProperties != null) {
-				System.err.println("Found some properties..."); // DEBUGGING ****************************
-				while(labelProperties.hasNext()) {
-					RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
-					String rawPredicateLabel = predicateLabelValue.toString();
-					System.err.println("Found pop:relationalProperty with label " + rawPredicateLabel); // DEBUGGING **************
-					String predicateLabel = stripLanguageTag(rawPredicateLabel);
-					if(clueFragments.contains(toProperCase(predicateLabel))) {
-						RDFNode objectOfStatement = thisStatement.getObject();
-						if(objectOfStatement.isLiteral()) { // a string has been identified which may be a solution
-								this.addCandidateSolution(objectOfStatement.toString());
-						}
+			while(statementsOfInterest.hasNext()) {
+				Statement statementOfInterest = statementsOfInterest.nextStatement();
+				Property thisPredicate = statementOfInterest.getPredicate();
+				
+				String predicateNameSpace = thisPredicate.getNameSpace(); // UNUSED
+				
+				if(thisPredicate.equals(Pop.relationalProperty))
+					continue;
+				Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
+				
+				StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
+				
+				if(labelProperties != null) {
+					System.err.println("Found some properties... for statement: " + thisStatement.toString()); // DEBUGGING ****************************
+					while(labelProperties.hasNext()) {
+						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
+						String rawPredicateLabel = predicateLabelValue.toString();
+						System.err.println("Found pop:relationalProperty with label " + rawPredicateLabel); // DEBUGGING **************
+						String predicateLabel = stripLanguageTag(rawPredicateLabel);
+						if(clueFragments.contains(toProperCase(predicateLabel))) {
+							RDFNode objectOfInterest = thisStatement.getObject();
+							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
+									this.addCandidateSolution(objectOfInterest.toString());
+							}
+								
+							else {  // a resource has been identified whose label may represent a solution
+									Resource object = objectOfStatement.asResource();
+									if(!extractedResources.contains(object)) { // check if we have already tested this resource
+										extractedResources.add(object);
+										StmtIterator candidateLabels = object.listProperties(RDFS.label);
+										while(candidateLabels.hasNext()) {
+											RDFNode candidateLabelValue = candidateLabels.nextStatement().getObject();
+											String rawCandidateLabel = candidateLabelValue.toString();
+											String candidateLabel = stripLanguageTag(rawCandidateLabel);
+											this.addCandidateSolution(candidateLabel);
+										}
+										
 							
-						else {  // a resource has been identified whose label may represent a solution
-								Resource object = objectOfStatement.asResource();
-								if(!extractedResources.contains(object)) { // check if we have already tested this resource
-									extractedResources.add(object);
-									StmtIterator candidateLabels = object.listProperties(RDFS.label);
-									while(candidateLabels.hasNext()) {
-										RDFNode candidateLabelValue = candidateLabels.nextStatement().getObject();
-										String rawCandidateLabel = candidateLabelValue.toString();
-										String candidateLabel = stripLanguageTag(rawCandidateLabel);
-										this.addCandidateSolution(candidateLabel);
 									}
-									
-						
-								}
+							}
 						}
 					}
 				}
 			}
-			
 		}
 	}
 

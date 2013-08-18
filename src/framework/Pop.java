@@ -13,9 +13,9 @@ import com.hp.hpl.jena.rdf.model.Resource;
  *
  */
 public class Pop {
-	private static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";  
     private static Model model = ModelFactory.createDefaultModel();
     
+    public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
     /**
      * Resource representing the pop namespace
      */
@@ -24,6 +24,7 @@ public class Pop {
     /**
      * Properties in the pop vocabulary
      */
+    public static final Property propertyToCheck = model.createProperty(POP_URI + "propertyToCheck");
     public static final Property relationalProperty = model.createProperty(POP_URI + "relationalProperty");
     public static final Property artistOf = model.createProperty(POP_URI + "artistOf");
     public static final Property hasArtist = model.createProperty(POP_URI + "hasArtist");
