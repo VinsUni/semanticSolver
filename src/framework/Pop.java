@@ -24,6 +24,7 @@ public class Pop {
     /**
      * Properties in the pop vocabulary
      */
+    public static final Property relationalProperty = model.createProperty(POP_URI + "relationalProperty");
     public static final Property artistOf = model.createProperty(POP_URI + "artistOf");
     public static final Property hasArtist = model.createProperty(POP_URI + "hasArtist");
     public static final Property albumOf = model.createProperty(POP_URI + "albumOf");
