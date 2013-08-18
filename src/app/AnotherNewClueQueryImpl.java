@@ -79,63 +79,38 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 	@Override
 	public ArrayList<String> getCandidateSolutions() {
 		ArrayList<String> recognisedResourceURIs = this.getEntityRecogniser().getRecognisedResourceURIs();
-		// ArrayList<String> recognisedPropertyURIs = this.getEntityRecogniser().getRecognisedPropertyURIs();
 		Model schema = FileManager.get().loadModel("popv7.owl");
 		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
 	    reasoner = reasoner.bindSchema(schema);
 		for(String resourceUri : recognisedResourceURIs) {
-			
-		    Model data = this.constructModelFromRemoteStore(resourceUri, true); // Query DBpedia using resource as subject
+		    Model data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
 		    InfModel infModel = ModelFactory.createInfModel(reasoner, data);
 		    this.extractCandidates(infModel);
-		    
-		    
-		    data = this.constructModelFromRemoteStore(resourceUri, false); // .. and using resource as object
-		    infModel = ModelFactory.createInfModel(reasoner, data);
-		    this.extractCandidates(infModel);
-			
-			/*
-			for(String propertyUri : recognisedPropertyURIs) {
-				// Look for subjects where <?subject propertyUri ResourceUri>
-				String sparqlQuery = DBPEDIA_PREFIX_DECLARATION +
-						" " + DBPEDIA_OWL_PREFIX_DECLARATION +
-						" " + RDFS_PREFIX_DECLARATION +
-						" select distinct ?label" +
-							" where {?subject <" + propertyUri + "> <" + resourceUri +">." +
-							"        ?subject rdfs:label ?label.}";
-				this.executeSparqlQuery(sparqlQuery);
-				
-				// Look for objects where <?resourceUri propertyUri object>
-				sparqlQuery = RDFS_PREFIX_DECLARATION +
-							" select distinct ?label" +
-							" where { <" + resourceUri + "> <" + propertyUri + "> ?object." +
-							"        ?object rdfs:label ?label.}";
-				this.executeSparqlQuery(sparqlQuery);
-			} */
 		}
 		return this.candidateSolutions;
 	}
 	
-	private Model constructModelFromRemoteStore(String resourceUri, boolean resourceAsSubject) {
-		String sparqlQuery;
-		if(resourceAsSubject) {
-			sparqlQuery = RDFS_PREFIX_DECLARATION +
-						" construct {<" + resourceUri + "> ?predicate ?object." +
-						" 			?object rdfs:label ?label.}" +
-						" where {<" + resourceUri + "> ?predicate ?object." +
-						" 			?object rdfs:label ?label.}";
-		}
-		else {
-			sparqlQuery = RDFS_PREFIX_DECLARATION +
-						" construct { ?subject ?predicate <" + resourceUri + ">." +
-						" 			?subject rdfs:label ?label.}" +
-						" where {?subject ?predicate <" + resourceUri + ">." +
-						" 			?subject rdfs:label ?label.}";
-		}
+	private Model constructModelFromRemoteStore(String resourceUri) {
+		
+		String sparqlQuery = RDFS_PREFIX_DECLARATION +
+				" construct {<" + resourceUri + "> ?predicate ?object." +
+				" 			?object rdfs:label ?label." +
+				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
+				"			?subject rdfs:label ?anotherLabel." +
+				"}" +
+				" where {" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				" 			?object rdfs:label ?label.}" +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				" ?subject rdfs:label ?anotherLabel.} " +
+				"}";
+		
 		Query query = QueryFactory.create(sparqlQuery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-		String subOrOb = resourceAsSubject ? "subject" : "object";						 // DEBUGGING ******************************
-		System.out.println("Constructing model with " + resourceUri + " as " + subOrOb); // DEBUGGING ******************************
+		
+		System.out.println("Constructing model around " + resourceUri); // DEBUGGING ******************************
+		
 		Model model = queryExecution.execConstruct();
 		
 		/*
@@ -196,22 +171,14 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 				Statement statementOfInterest = statementsOfInterest.nextStatement();
 				Property thisPredicate = statementOfInterest.getPredicate();
 				
-				String predicateNameSpace = thisPredicate.getNameSpace(); // UNUSED
-				
-				/*
-				if(thisPredicate.equals(Pop.relationalProperty))
-					continue; */
-				
 				Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
 				
 				StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
 				
 				if(labelProperties != null) {
-					System.err.println("Found some properties... for statement: " + statementOfInterest.toString()); // DEBUGGING ****************************
 					while(labelProperties.hasNext()) {
 						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
 						String rawPredicateLabel = predicateLabelValue.toString();
-						System.err.println("Found pop:relationalProperty with label " + rawPredicateLabel); // DEBUGGING **************
 						String predicateLabel = stripLanguageTag(rawPredicateLabel);
 						if(clueFragments.contains(toProperCase(predicateLabel))) {
 							RDFNode objectOfInterest = thisStatement.getObject();
@@ -220,6 +187,8 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 							}
 								
 							else {  // a resource has been identified whose label may represent a solution
+								
+									// *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
 									Resource object = objectOfStatement.asResource();
 									
 									if(!extractedResources.contains(object)) { // check if we have already tested this resource
@@ -245,11 +214,6 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 				}
 			}
 		}
-	}
-
-	private boolean isFromExcludedNS(Resource object) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	private void addCandidateSolution(String candidateSolution) {

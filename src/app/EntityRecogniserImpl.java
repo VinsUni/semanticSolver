@@ -105,19 +105,11 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 							       	" }" + 
 						       " }";
 			
-			Query askQuery = QueryFactory.create(askQueryExpression);
+			Query askQuery = QueryFactory.create(askQueryExpression); // DOES THIS ACTUALLY IMPROVE PERFORMANCE? - NEED TO TEST
 			QueryExecution askQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, askQuery);
 			boolean isPresent = askQueryExecution.execAsk();
 			if(!isPresent)
 				continue;
-			
-			String s = RDFS_PREFIX_DECLARATION + // the query I was previously using
-								 " " + RDF_PREFIX_DECLARATION + // this prefix isn't used in this query!
-								 " select distinct ?resource" +
-								 " where { ?resource rdfs:label " + wrappedClueFragment + "}" +
-								 " UNION" +
-								 " select distinct ?resource" +
-								 " where { ?resource dbpprop:name " + wrappedClueFragment + "}";
 			
 			Query query = QueryFactory.create(SPARQLquery);
 			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
@@ -148,100 +140,12 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	
 	/**
 	 * Queries the locally stored ontology for properties matching fragments of the clue
+	 * 
+	 * NOT USED - NEED TO REMOVE THIS FROM INTERFACE
 	 */
 	@Override
 	public ArrayList<String> getRecognisedPropertyURIs() {
 		ArrayList<String> recognisedPropertyURIs = new ArrayList<String>();
-		
-		if(this.getPropertiesIterator() == null) {
-			ModelLoader modelLoader = new ModelLoaderImpl();
-			InfModel model = modelLoader.getModel();
-			this.setPropertiesIterator(model.listSubjects()); // NEED TO DO THE SAME WITH OBJECTS! ********************************
-			this.setOntModel(ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM_MINI_RULE_INF, model)); // initialise the OntModel member
-		}
-		
-		while(this.getPropertiesIterator().hasNext()) {
-			Resource thisResource = this.getPropertiesIterator().nextResource();
-			String uri = thisResource.getURI();
-			if(uri == null)
-				continue;
-			if(recognisedPropertyURIs.contains(uri))
-				continue;
-			
-			OntResource resource = this.getOntModel().getOntResource(uri); // create an OntResource from the Resource object
-			if(resource == null)
-				continue;
-			
-			
-			
-			/* Check to see if there are inverseProperties of this property that match a label 
-			NodeIterator inverseProperties = resource.listPropertyValues(OWL.inverseOf);
-			if(inverseProperties != null) {
-				while(inverseProperties.hasNext()) {
-					RDFNode propertyNode = inverseProperties.next();
-					OntResource inverseProperty = (OntResource)propertyNode;
-					
-					String nodeURI;
-					if(propertyNode.isURIResource())
-						nodeURI = propertyNode.
-					ExtendedIterator<RDFNode> labels = propertyNode.listLabels(null); // list all values of RDFS:label for this resource
-					if(labels == null)
-						continue;
-					while(labels.hasNext()) {
-						String thisLabel = stripLanguageTag(labels.next().toString());
-						if(this.getClueFragments().contains(toProperCase(thisLabel)))
-							recognisedPropertyURIs.add(uri);
-					}
-				}
-			}
-			*/
-			
-			if(thisResource.getNameSpace().equals(ONTOLOGY_NAMESPACE)) { // properties in my pop: namespace are not wanted as they aren't used in the wild
-				//FIRST I NEED TO CHECK IF ANY OF THE LABELS OF THIS RESOURCE MATCH! SO I SHOULD DO THIS STUFF FURTHER BELOW...
-				continue;
-				/*
-				ArrayList<RDFNode> nodeList = new ArrayList<RDFNode>();
-				StmtIterator equivalentPropertyStatements = thisResource.listProperties();
-				while(equivalentPropertyStatements.hasNext()) {
-					Statement thisStatement = equivalentPropertyStatements.nextStatement();
-					if(thisStatement.getPredicate().equals(OWL.equivalentProperty))
-						nodeList.add(thisStatement.getObject());
-				}
-				for(RDFNode node : nodeList) { // instead, we want to check the labels of any equivalent properties in a different NS
-					Resource equivalentProperty = (Resource)node;
-					if(equivalentProperty.getNameSpace().equals(ONTOLOGY_NAMESPACE))
-						continue; // the equivalent property is also in my pop: namespace, so ignore it and move on to next one
-					String equivalentPropertyURI = equivalentProperty.getURI();
-					
-					System.out.println("Found equivalent property: " + equivalentPropertyURI); // DEBUGGING **********************
-					OntResource thisEquivalentProperty = this.getOntModel().getOntResource(equivalentPropertyURI);
-					// THIS CODE IS DUPLICATED BELOW
-					ExtendedIterator<RDFNode> labels = thisEquivalentProperty.listLabels(null); // list all values of RDFS:label for this resource
-					
-					if(labels == null)
-						continue;
-					while(labels.hasNext()) {
-						String thisLabel = stripLanguageTag(labels.next().toString());
-						System.out.println("Found label of equivalent Property: " + thisLabel); // DEBUGGING *******************************************
-						if(this.getClueFragments().contains(toProperCase(thisLabel))) // ****** I need to test the other label!
-							recognisedPropertyURIs.add(equivalentPropertyURI);
-					}
-				}
-				continue; // matched property was part of namespace - equivs have been checked, so move onto next found property
-				*/
-			}
-			/* THIS CODE IS DUPLICATED ABOVE */
-			ExtendedIterator<RDFNode> labels = resource.listLabels(null); // list all values of RDFS:label for this resource
-			
-			if(labels == null)
-				continue;
-			while(labels.hasNext()) {
-				String thisLabel = stripLanguageTag(labels.next().toString());
-				System.out.println("Found label: " + thisLabel); // DEBUGGING *******************************************
-				if(this.getClueFragments().contains(toProperCase(thisLabel)))
-					recognisedPropertyURIs.add(uri);
-			}
-		}
 		return recognisedPropertyURIs;
 	}
 	
