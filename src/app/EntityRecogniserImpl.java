@@ -10,8 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
-import com.hp.hpl.jena.ontology.OntResource;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -19,23 +18,14 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 
-import com.hp.hpl.jena.rdf.model.InfModel;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.NodeIterator;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
-import com.hp.hpl.jena.vocabulary.OWL;
 
 import framework.Clue;
 import framework.EntityRecogniser;
-import framework.ModelLoader;
 
 /**
  * @author Ben Griffiths
@@ -44,9 +34,6 @@ import framework.ModelLoader;
  *  ************************************************************************************************************!!!!!!!!!!!!!
  */
 public class EntityRecogniserImpl implements EntityRecogniser {
-	private final String ONTOLOGY_NAMESPACE = "http://www.griffithsben.com/ontologies/pop.owl#";
-	private final int LANGUAGE_TAG_LENGTH = 3;
-	private final String LANGUAGE_TAG = "@";
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
@@ -151,18 +138,6 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	public ArrayList<String> getRecognisedPropertyURIs() {
 		ArrayList<String> recognisedPropertyURIs = new ArrayList<String>();
 		return recognisedPropertyURIs;
-	}
-	
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
-	 */
-	private String stripLanguageTag(String solutionText) {
-		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
-		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
-			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return solutionText.substring(0, positionOfLanguageTag);
-		}
-		return solutionText;
 	}
 	
 	private void addClueFragments(String clueText) {

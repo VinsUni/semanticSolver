@@ -85,17 +85,10 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-  
-   <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#propertyToCheck">
-    <owl:equivalentClass>
-      <owl:Restriction>
-          <owl:onProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
-          	<owl:hasValue rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-          </owl:onProperty>
-      </owl:Restriction>
-    </owl:equivalentClass>
-   </rdf:Description>
-
+     
+     
+     
+     
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -411,6 +404,8 @@
         <rdfs:label>released by</rdfs:label>
         <rdfs:label>artist</rdfs:label>
         <rdfs:label>singer</rdfs:label>
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>group</rdfs:label>
         <skos:prefLabel>has artist</skos:prefLabel>
         <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>

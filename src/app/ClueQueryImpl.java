@@ -115,31 +115,32 @@ public class ClueQueryImpl implements ClueQuery {
 		
 		Model model = queryExecution.execConstruct();
 		
-		/*
+		
 		// DEBUGGING ***************************************************************
-		 // load standard prefixes into the model
-	    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
-		prefixLoader.loadStandardPrefixes();
-		 
-		// Now, write the model out to a file in RDF/XML-ABBREV format:
-		try {
-			Random rand = new Random();
-			int randToAppend = rand.nextInt(1000);
-			
-			String fileName = "data\\extractedModel" + randToAppend + ".xml";
-			FileOutputStream outFile = new FileOutputStream(fileName);
-			System.out.println("Writing retrieved data to file...");
-			model.write(outFile, "RDF/XML-ABBREV");
-			outFile.close();
-			System.out.println("Operation complete");
+		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
+			 // load standard prefixes into the model
+		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
+			prefixLoader.loadStandardPrefixes();
+			 
+			// Now, write the model out to a file in RDF/XML-ABBREV format:
+			try {
+				Random rand = new Random();
+				int randToAppend = rand.nextInt(1000);
+				
+				String fileName = "data\\extractedModel" + randToAppend + ".xml";
+				FileOutputStream outFile = new FileOutputStream(fileName);
+				System.out.println("Writing retrieved data to file...");
+				model.write(outFile, "RDF/XML-ABBREV");
+				outFile.close();
+				System.out.println("Operation complete");
+			}
+			catch(FileNotFoundException e) {
+				e.printStackTrace();
+			} 
+			catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		} 
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		*/
 		
 		
 		
@@ -168,12 +169,12 @@ public class ClueQueryImpl implements ClueQuery {
 			
 			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
 			
-			if(this.getTestedSelectors().contains(selector)) {
-				System.err.println("Already tested this selector"); // DEBUGGING **********************************
-				continue;
-			}
-			else this.getTestedSelectors().add(selector);
 			
+			
+			
+			if(this.getTestedSelectors().contains(selector)) { // DEBUGGING **************************************
+				System.err.println("Already tested this selector"); // DEBUGGING **********************************
+			}
 			
 			StmtIterator statementsOfInterest = infModel.listStatements(selector);
 			
