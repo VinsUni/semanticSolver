@@ -5,6 +5,10 @@ package app;
 
 import java.util.ArrayList;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import framework.Clue;
@@ -12,12 +16,18 @@ import framework.ClueSolver;
 import framework.EntityRecogniser;
 import framework.ClueQuery;
 import framework.SemanticSolver;
+import framework.UserInterface;
 
 /**
  * @author Ben Griffiths
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) UserInterface ui;
+	
+	public SemanticSolverImpl(UserInterface ui) {
+		this.setUi(ui);
+	}
 
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
@@ -43,9 +53,12 @@ public class SemanticSolverImpl implements SemanticSolver {
 		
 		ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
 		System.out.println("Candidate solutions:");
-		for(String candidateSolution : candidateSolutions)
+		String results = "Candidate solutions: ";
+		for(String candidateSolution : candidateSolutions) {
 			System.out.println(candidateSolution);
-		
+			results += "[" + candidateSolution + "] ";
+		}
+		this.getUi().updateResults(results);
 	}
 
 }

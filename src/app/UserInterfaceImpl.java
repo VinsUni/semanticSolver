@@ -23,7 +23,7 @@ public class UserInterfaceImpl implements UserInterface {
 	public void createAndShow() {
 		String userResponse = "";
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		SemanticSolver semanticSolver = new SemanticSolverImpl();
+		SemanticSolver semanticSolver = new SemanticSolverImpl(this);
 		while(!userResponse.equals(EXIT_REQUEST)) {
 			System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
 			try {
@@ -50,5 +50,11 @@ public class UserInterfaceImpl implements UserInterface {
 				}
 			}
 		}	
+	}
+
+	@Override
+	public void updateResults(String resultsMessage) {
+		// TODO Auto-generated method stub
+		
 	}
 }
