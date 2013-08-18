@@ -3,6 +3,8 @@
  */
 package app;
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,9 +21,16 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 	public void createAndShow() {
 		this.setTitle("Semantic Crossword Solver");
 		
+		Dimension d = new Dimension(550, 700);
+		
 		contentPane = new JPanel();
+		contentPane.setPreferredSize(d);
 		this.setContentPane(contentPane);
-		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		
+		this.setPreferredSize(d);
+		this.setMinimumSize(d);
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 		
 	}
