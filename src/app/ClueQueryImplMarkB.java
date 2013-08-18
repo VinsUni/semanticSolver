@@ -39,7 +39,7 @@ import framework.EntityRecogniser;
  * @author Ben Griffiths
  *
  */
-public class NewClueQueryImpl implements ClueQuery {
+public class ClueQueryImplMarkB implements ClueQuery {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
@@ -55,7 +55,7 @@ public class NewClueQueryImpl implements ClueQuery {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
 	
-	public NewClueQueryImpl(Clue clue, EntityRecogniser entityRecogniser) {
+	public ClueQueryImplMarkB(Clue clue, EntityRecogniser entityRecogniser) {
 		this.setClue(clue);
 		this.setEntityRecogniser(entityRecogniser);
 		this.setCandidateSolutions(new ArrayList<String>());
