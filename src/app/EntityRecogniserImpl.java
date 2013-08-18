@@ -91,6 +91,25 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					       	" }" + 
 				       " }";
 			
+			String askQueryExpression = RDFS_PREFIX_DECLARATION + " " +
+					 		 DBPPROP_PREFIX_DECLARATION +
+							 " ask {" +
+						       		" {" +
+							       		"{ select distinct ?resource" +
+							       		" where {?resource rdfs:label " + wrappedClueFragment + "}" +
+							       		" }" +
+							       		" UNION" +
+							       		" { select distinct ?resource" +
+							       		"  where {?resource dbpprop:name " + wrappedClueFragment + "}" +
+							       		" }" +
+							       	" }" + 
+						       " }";
+			
+			Query askQuery = QueryFactory.create(askQueryExpression);
+			QueryExecution askQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, askQuery);
+			boolean isPresent = askQueryExecution.execAsk();
+			if(!isPresent)
+				continue;
 			
 			String s = RDFS_PREFIX_DECLARATION + // the query I was previously using
 								 " " + RDF_PREFIX_DECLARATION + // this prefix isn't used in this query!
@@ -103,6 +122,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 			Query query = QueryFactory.create(SPARQLquery);
 			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
 			try {
+				
 				ResultSet resultSet = queryExecution.execSelect();
 				while(resultSet.hasNext()) {
 					QuerySolution querySolution = resultSet.nextSolution();
