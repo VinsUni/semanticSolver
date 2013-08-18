@@ -26,6 +26,7 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import framework.Clue;
 import framework.EntityRecogniser;
+import framework.Pop;
 
 /**
  * @author Ben Griffiths
@@ -38,6 +39,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
+	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
@@ -67,7 +69,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 			String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
 			
 			String SPARQLquery = RDFS_PREFIX_DECLARATION + " " +
-								 DBPPROP_PREFIX_DECLARATION +
+								 DBPPROP_PREFIX_DECLARATION + " " +
+								 DB_OWL_PREFIX_DECLARATION +
 						" select distinct ?resource {" +
 				       		" {" +
 					       		"{ select distinct ?resource" +
@@ -76,6 +79,16 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					       		" UNION" +
 					       		" { select distinct ?resource" +
 					       		"  where {?resource dbpprop:name " + wrappedClueFragment + "}" +
+					       		" }" +
+					       		" UNION" +
+					       		" { select distinct ?resource" +
+					       		"  where {?redirectingResource rdfs:label " + wrappedClueFragment + "." +
+					       		"         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource}" +
+					       		" }" +
+					       		" UNION" +
+					       		" { select distinct ?resource" +
+					       		"  where {?redirectingResource dbpprop:name " + wrappedClueFragment + "." +
+					       		"         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource}" +
 					       		" }" +
 					       	" }" + 
 				       " }";
@@ -115,6 +128,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					if(excludedNameSpace(nameSpace))
 						continue;
 					String resourceURI = thisResource.getURI();
+					
+					
 					
 					if(!recognisedResources.contains(resourceURI))
 						recognisedResources.add(resourceURI);

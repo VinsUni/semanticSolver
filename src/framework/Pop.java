@@ -16,10 +16,17 @@ public class Pop {
     private static Model model = ModelFactory.createDefaultModel();
     
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
+    public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
     /**
      * Resource representing the pop namespace
      */
     public static final Resource POP_NS = model.createResource(POP_URI);
+    
+    /**
+     * Properties of special interest in the dbpedia-owl vocabulary
+     */
+    public static final Property wikiPageRedirects = model.createProperty(DBPEDIA_OWL_URI + "wikiPageRedirects");
+    
     
     /**
      * Properties in the pop vocabulary
