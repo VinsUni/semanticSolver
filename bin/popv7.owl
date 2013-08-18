@@ -105,6 +105,16 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
     </owl:ObjectProperty>
     
+    <!-- http://dbpedia.org/property/artist -->
+	
+	<owl:ObjectProperty rdf:about="&dbpprop;artist">
+        <rdfs:label>artist</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://dbpedia.org/ontology/artist -->
