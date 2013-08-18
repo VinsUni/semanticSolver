@@ -13,14 +13,11 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.hp.hpl.jena.ontology.OntModel;
-import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
+
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -34,7 +31,7 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.FileManager;
-import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import experiments.NsPrefixLoader;
@@ -117,6 +114,7 @@ public class ClueQueryImpl implements ClueQuery {
 		
 		
 		// DEBUGGING ***************************************************************
+		/*
 		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
 		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
@@ -141,6 +139,7 @@ public class ClueQueryImpl implements ClueQuery {
 				e.printStackTrace();
 			}
 		}
+		*/
 		
 		
 		
