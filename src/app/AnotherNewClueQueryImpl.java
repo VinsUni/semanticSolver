@@ -59,6 +59,7 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 	private final String[] EXCLUDED_VOCABS = {};
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Selector> testedSelectors;
 	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniser entityRecogniser;
@@ -71,6 +72,7 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 		this.setEntityRecogniser(entityRecogniser);
 		this.setCandidateSolutions(new ArrayList<String>());
 		this.setExtractedResources(new ArrayList<Resource>());
+		this.setTestedSelectors(new ArrayList<Selector>());
 	}
 	
 	/**
@@ -163,7 +165,15 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 			Statement thisStatement = statements.nextStatement();
 			Resource subjectOfStatement = thisStatement.getSubject();
 			RDFNode objectOfStatement = thisStatement.getObject();
+			
 			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
+			
+			if(this.getTestedSelectors().contains(selector)) {
+				System.err.println("Already tested this selector"); // DEBUGGING **********************************
+				continue;
+			}
+			else this.getTestedSelectors().add(selector);
+			
 			
 			StmtIterator statementsOfInterest = infModel.listStatements(selector);
 			

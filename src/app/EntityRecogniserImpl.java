@@ -49,8 +49,6 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String LANGUAGE_TAG = "@";
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
-	//private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>"; // DUPLICATED IN QUERYIMPL
-	//private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
@@ -60,7 +58,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
-	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album"};
+	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", "writer"};
 	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/"}; // a list of namespaces whose terms should be excluded from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	
@@ -95,6 +93,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 					       	" }" + 
 				       " }";
 			
+			/*
 			String askQueryExpression = RDFS_PREFIX_DECLARATION + " " +
 					 		 DBPPROP_PREFIX_DECLARATION +
 							 " ask {" +
@@ -109,11 +108,12 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 							       	" }" + 
 						       " }";
 			
+			
 			Query askQuery = QueryFactory.create(askQueryExpression); // DOES THIS ACTUALLY IMPROVE PERFORMANCE? - NEED TO TEST
 			QueryExecution askQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, askQuery);
 			boolean isPresent = askQueryExecution.execAsk();
 			if(!isPresent)
-				continue;
+				continue; */
 			
 			Query query = QueryFactory.create(SPARQLquery);
 			QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
