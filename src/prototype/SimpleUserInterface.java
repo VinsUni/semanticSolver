@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 
 import exception.InvalidClueException;
 
-import framework.Clue;
-import framework.SemanticSolver;
-import framework.UserInterface;
+import framework.prototype.Clue;
+import framework.prototype.SemanticSolver;
+import framework.prototype.UserInterface;
 
 /**
  * @author Ben Griffiths

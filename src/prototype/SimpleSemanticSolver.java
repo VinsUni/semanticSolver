@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 
-import framework.Clue;
-import framework.ClueQuery;
-import framework.ClueSolver;
-import framework.ModelLoader;
-import framework.SemanticSolver;
+import framework.prototype.Clue;
+import framework.prototype.ClueQuery;
+import framework.prototype.ClueSolver;
+import framework.prototype.ModelLoader;
+import framework.prototype.SemanticSolver;
 
 import lombok.AccessLevel;
 import lombok.Getter;

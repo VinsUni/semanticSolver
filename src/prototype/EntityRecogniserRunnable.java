@@ -16,7 +16,7 @@ import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-import framework.EntityRecogniser;
+import framework.prototype.EntityRecogniser;
 
 /**
  * @author Ben Griffiths

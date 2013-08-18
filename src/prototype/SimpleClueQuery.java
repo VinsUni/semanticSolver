@@ -13,9 +13,9 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.shared.PropertyNotFoundException;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
-import framework.Clue;
-import framework.ClueParser;
-import framework.ClueQuery;
+import framework.prototype.Clue;
+import framework.prototype.ClueParser;
+import framework.prototype.ClueQuery;
 
 import lombok.AccessLevel;
 import lombok.Getter;

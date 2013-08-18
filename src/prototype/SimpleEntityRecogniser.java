@@ -23,8 +23,8 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
-import framework.Clue;
-import framework.EntityRecogniser;
+import framework.prototype.Clue;
+import framework.prototype.EntityRecogniser;
 
 /**
  * @author Ben Griffiths

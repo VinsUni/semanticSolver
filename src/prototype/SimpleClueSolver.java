@@ -5,9 +5,9 @@ package prototype;
 
 import java.util.ArrayList;
 
-import framework.Clue;
-import framework.Solution;
-import framework.ClueSolver;
+import framework.prototype.Clue;
+import framework.prototype.Solution;
+import framework.prototype.ClueSolver;
 
 import lombok.AccessLevel;
 import lombok.Getter;

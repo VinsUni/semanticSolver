@@ -1,6 +1,6 @@
 package prototype;
 
-import framework.UserInterface;
+import framework.prototype.UserInterface;
 
 /**
  * @author Ben Griffiths

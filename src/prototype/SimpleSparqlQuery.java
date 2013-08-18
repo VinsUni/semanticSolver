@@ -17,14 +17,15 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.InfModel;
 
-import framework.Clue;
-import framework.ClueParser;
+import framework.prototype.Clue;
+import framework.prototype.ClueParser;
+import framework.prototype.ClueQuery;
 
 /**
  * @author Ben Griffiths
  *
  */
-public class SimpleSparqlQuery implements framework.ClueQuery {
+public class SimpleSparqlQuery implements ClueQuery {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";

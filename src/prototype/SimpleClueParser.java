@@ -12,9 +12,9 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 
-import framework.Clue;
-import framework.ClueParser;
-import framework.EntityRecogniser;
+import framework.prototype.Clue;
+import framework.prototype.ClueParser;
+import framework.prototype.EntityRecogniser;
 
 import lombok.AccessLevel;
 import lombok.Getter;

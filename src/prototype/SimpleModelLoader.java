@@ -15,7 +15,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.util.FileManager;
 
 import experiments.NsPrefixLoader;
-import framework.ModelLoader;
+import framework.prototype.ModelLoader;
 
 import lombok.AccessLevel;
 import lombok.Getter;

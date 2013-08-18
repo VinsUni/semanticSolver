@@ -18,10 +18,10 @@ import prototype.SimpleClueSolver;
 import com.hp.hpl.jena.rdf.model.InfModel;
 
 import exception.InvalidClueException;
-import framework.Clue;
-import framework.ModelLoader;
-import framework.ClueQuery;
-import framework.ClueSolver;
+import framework.prototype.Clue;
+import framework.prototype.ModelLoader;
+import framework.prototype.ClueQuery;
+import framework.prototype.ClueSolver;
 
 /**
  * @author Ben Griffiths

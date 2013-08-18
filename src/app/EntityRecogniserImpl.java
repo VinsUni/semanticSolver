@@ -237,31 +237,4 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 				return true;
 		return false;
 	}
-	
-	
-	@Override
-	public ArrayList<Resource> getRecognisedResources() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@Override
-	public ArrayList<Property> getRecognisedProperties() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	
-	
-	@Override
-	public ArrayList<Resource> getRecognisedSubjects() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<Resource> getRecognisedObjects() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

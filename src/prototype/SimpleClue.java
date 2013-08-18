@@ -9,8 +9,8 @@ import java.util.Arrays;
 import com.hp.hpl.jena.rdf.model.Selector;
 
 import exception.InvalidClueException;
-import framework.Clue;
-import framework.Solution;
+import framework.prototype.Clue;
+import framework.prototype.Solution;
 
 import lombok.AccessLevel;
 import lombok.Getter;

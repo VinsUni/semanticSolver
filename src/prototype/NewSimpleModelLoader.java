@@ -29,7 +29,7 @@ import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.ReasonerVocabulary;
 
 import experiments.NsPrefixLoader;
-import framework.ModelLoader;
+import framework.prototype.ModelLoader;
 
 import lombok.AccessLevel;
 import lombok.Getter;
