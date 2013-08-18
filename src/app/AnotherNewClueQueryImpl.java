@@ -54,6 +54,9 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
+	private final String ENG_LANG = "en";
+	
+	private final String[] EXCLUDED_VOCABS = {};
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
 	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
@@ -195,14 +198,16 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 				
 				String predicateNameSpace = thisPredicate.getNameSpace(); // UNUSED
 				
+				/*
 				if(thisPredicate.equals(Pop.relationalProperty))
-					continue;
+					continue; */
+				
 				Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
 				
 				StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
 				
 				if(labelProperties != null) {
-					System.err.println("Found some properties... for statement: " + thisStatement.toString()); // DEBUGGING ****************************
+					System.err.println("Found some properties... for statement: " + statementOfInterest.toString()); // DEBUGGING ****************************
 					while(labelProperties.hasNext()) {
 						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
 						String rawPredicateLabel = predicateLabelValue.toString();
@@ -216,14 +221,20 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 								
 							else {  // a resource has been identified whose label may represent a solution
 									Resource object = objectOfStatement.asResource();
+									
 									if(!extractedResources.contains(object)) { // check if we have already tested this resource
 										extractedResources.add(object);
 										StmtIterator candidateLabels = object.listProperties(RDFS.label);
 										while(candidateLabels.hasNext()) {
-											RDFNode candidateLabelValue = candidateLabels.nextStatement().getObject();
-											String rawCandidateLabel = candidateLabelValue.toString();
-											String candidateLabel = stripLanguageTag(rawCandidateLabel);
-											this.addCandidateSolution(candidateLabel);
+											Statement s = candidateLabels.nextStatement();
+											
+											String lang = s.getLanguage(); // we only want English-language labels
+											if(lang == null || lang.equals(this.ENG_LANG)) {
+												RDFNode candidateLabelValue = s.getObject();
+												String rawCandidateLabel = candidateLabelValue.toString();
+												String candidateLabel = stripLanguageTag(rawCandidateLabel);
+												this.addCandidateSolution(candidateLabel);
+											}
 										}
 										
 							
@@ -234,6 +245,11 @@ public class AnotherNewClueQueryImpl implements ClueQuery {
 				}
 			}
 		}
+	}
+
+	private boolean isFromExcludedNS(Resource object) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	private void addCandidateSolution(String candidateSolution) {
