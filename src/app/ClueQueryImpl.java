@@ -215,19 +215,22 @@ public class ClueQueryImpl implements ClueQuery {
 										StmtIterator candidateLabels = object.listProperties(RDFS.label);
 										while(candidateLabels.hasNext()) {
 											Statement s = candidateLabels.nextStatement();
-											String lang = null;
-											try {
+											RDFNode candidateLabelValue = null;
+											
+											String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a 
+											try {										// LiteralRequiredException is thrown	
 												lang = s.getLanguage(); // we only want English-language labels
 											}
 											catch(LiteralRequiredException e) {
-												/* It is not unknown within the DBpedia dataset for a property to have
-												 * a resource as its value despite that property being specified as
-												 * rdfs:subPropertyOf rdfs:label. For example, dbpprop:artist is sometimes
-												 * given a resource as a value. In such cases, we ignore the resource
+												/* The pop ontology treats some properties in the dbpprop namespace as subProperties
+												 * of rdfs:label, because they are often used in place of rdfs:label in the DBpedia
+												 * dataset. However, sometimes they are given resources as values. In such cases,
+												 * we ignore the resource and move on to the next value of rdfs:label
 												 */
 											}
 											if(lang == null || lang.equals(this.ENG_LANG)) {
-												RDFNode candidateLabelValue = s.getObject();
+												if(candidateLabelValue == null)
+													candidateLabelValue = s.getObject();
 												String rawCandidateLabel = candidateLabelValue.toString();
 												String candidateLabel = stripLanguageTag(rawCandidateLabel);
 												this.addCandidateSolution(candidateLabel);
