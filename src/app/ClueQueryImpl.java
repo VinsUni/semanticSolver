@@ -19,6 +19,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.LiteralRequiredException;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -206,8 +207,17 @@ public class ClueQueryImpl implements ClueQuery {
 										StmtIterator candidateLabels = object.listProperties(RDFS.label);
 										while(candidateLabels.hasNext()) {
 											Statement s = candidateLabels.nextStatement();
-											
-											String lang = s.getLanguage(); // we only want English-language labels
+											String lang = null;
+											try {
+												lang = s.getLanguage(); // we only want English-language labels
+											}
+											catch(LiteralRequiredException e) {
+												/* It is not unknown within the DBpedia dataset for a property to have
+												 * a resource as its value despite that property being specified as
+												 * rdfs:subPropertyOf rdfs:label. For example, dbpprop:artist is sometimes
+												 * given a resource as a value. In such cases, we ignore the resource
+												 */
+											}
 											if(lang == null || lang.equals(this.ENG_LANG)) {
 												RDFNode candidateLabelValue = s.getObject();
 												String rawCandidateLabel = candidateLabelValue.toString();

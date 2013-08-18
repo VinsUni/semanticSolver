@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -55,40 +56,50 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 		this.start();
 	}
 	private void start() {
-		String userResponse = "";
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		SemanticSolver semanticSolver = new SemanticSolverImpl(this);
-		while(!userResponse.equals(EXIT_REQUEST)) {
-			System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
-			try {
-				userResponse = in.readLine();
+		final UserInterface THIS_UI = this;
+		Thread thread = new Thread(new Runnable() {
+    		@Override
+			public void run() {
+    			String userResponse = "";
+    			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
+    			while(!userResponse.equals(EXIT_REQUEST)) {
+    				System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
+    				try {
+    					userResponse = in.readLine();
+    				}
+    				catch(IOException e) {
+    					e.printStackTrace();
+    					continue;
+    				}
+    				if(!userResponse.equals(EXIT_REQUEST)) {
+    					
+    					Clue clue;
+    					try {
+    						clue = new ClueImpl(userResponse);
+    					} catch (InvalidClueException e) {
+    						System.out.println("The clue you entered was invalid: " + e.getMessage());
+    						continue;
+    					}
+    					try {
+    						semanticSolver.solve(clue);
+    					}
+    					catch(QueryExceptionHTTP e) {
+    						System.out.println("DBpedia is unavailable at this time. Please try again");
+    					}
+    				}
+    			}	
+    			
+    			
 			}
-			catch(IOException e) {
-				e.printStackTrace();
-				continue;
-			}
-			if(!userResponse.equals(EXIT_REQUEST)) {
-				
-				Clue clue;
-				try {
-					clue = new ClueImpl(userResponse);
-				} catch (InvalidClueException e) {
-					System.out.println("The clue you entered was invalid: " + e.getMessage());
-					continue;
-				}
-				try {
-					semanticSolver.solve(clue);
-				}
-				catch(QueryExceptionHTTP e) {
-					System.out.println("DBpedia is unavailable at this time. Please try again");
-				}
-			}
-		}	
-		
+		});
+		thread.start();
 	}
+	
 	@Override
 	public void updateResults(String resultsMessage) {
 		this.getResultsLabel().setText(resultsMessage);
+		this.repaint();
 	}
 	
 }

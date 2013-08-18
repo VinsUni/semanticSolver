@@ -5,6 +5,8 @@ package app;
 
 import java.util.ArrayList;
 
+import javax.swing.SwingUtilities;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -58,7 +60,16 @@ public class SemanticSolverImpl implements SemanticSolver {
 			System.out.println(candidateSolution);
 			results += "[" + candidateSolution + "] ";
 		}
-		this.getUi().updateResults(results);
+		
+		final String FINAL_RESULTS = results;
+		final UserInterface UI = this.getUi();
+		SwingUtilities.invokeLater(new Runnable() {
+    		@Override
+			public void run() {
+    			UI.updateResults(FINAL_RESULTS);
+			}
+		});
+		System.out.println("SemanticSolverImpl is running on the thread: " + Thread.currentThread().getName()); // DEBUGGING ********
 	}
 
 }
