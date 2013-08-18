@@ -35,6 +35,8 @@ import com.hp.hpl.jena.util.FileManager;
 
 import com.hp.hpl.jena.vocabulary.RDFS;
 
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
+
 import experiments.NsPrefixLoader;
 import framework.Clue;
 import framework.ClueQuery;
@@ -83,14 +85,20 @@ public class ClueQueryImpl implements ClueQuery {
 		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
 	    reasoner = reasoner.bindSchema(schema);
 		for(String resourceUri : recognisedResourceURIs) {
-		    Model data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
-		    InfModel infModel = ModelFactory.createInfModel(reasoner, data);
-		    this.extractCandidates(infModel);
+			try {
+				Model data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
+				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
+			    this.extractCandidates(infModel);
+			}
+			catch(QueryExceptionHTTP e) {
+				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+			}
+			
 		}
 		return this.candidateSolutions;
 	}
 	
-	private Model constructModelFromRemoteStore(String resourceUri) {
+	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
 		
 		String sparqlQuery = RDFS_PREFIX_DECLARATION +
 				" construct {<" + resourceUri + "> ?predicate ?object." +
