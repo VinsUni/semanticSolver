@@ -59,7 +59,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
-	private final String[] WORDS_TO_EXCLUDE = {"the", "of"}; // a list of common words to exclude from consideration
+	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
+	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album"};
 	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/"}; // a list of namespaces whose terms should be excluded from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	
@@ -74,6 +75,9 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		ArrayList<String> recognisedResources = new ArrayList<String>();
 		
 		for(String clueFragment : clueFragments) {
+			
+			if(considerAsPredicateOnly(clueFragment))
+				continue;
 			
 			String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
 			
@@ -137,7 +141,7 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 		}
 		return recognisedResources;
 	}
-	
+
 	/**
 	 * Queries the locally stored ontology for properties matching fragments of the clue
 	 * 
@@ -196,6 +200,14 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 			}
 		}
 		return thisWordInProperCase;
+	}
+	
+	
+	private boolean considerAsPredicateOnly(String wordToCheck) {
+		for(int i = 0; i < this.WORDS_TO_CONSIDER_AS_PREDICATES_ONLY.length; i++)
+			if(toProperCase(WORDS_TO_CONSIDER_AS_PREDICATES_ONLY[i]).equals(wordToCheck))
+				return true;
+		return false;
 	}
 	
 	/**
