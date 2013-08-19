@@ -51,6 +51,7 @@ public class ClueQueryImpl implements ClueQuery {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
+	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
@@ -86,6 +87,8 @@ public class ClueQueryImpl implements ClueQuery {
 	    reasoner = reasoner.bindSchema(schema);
 		for(String resourceUri : recognisedResourceURIs) {
 			try {
+				if(!resourceUri.equals("http://dbpedia.org/resource/Johnny_Cash")) // DEBUGGING ************************
+					throw new QueryExceptionHTTP(0, "Skipping " + resourceUri); // DEBUGGING ************************
 				Model data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
 				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
 			    this.extractCandidates(infModel);
@@ -100,18 +103,27 @@ public class ClueQueryImpl implements ClueQuery {
 	
 	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
 		
-		String sparqlQuery = RDFS_PREFIX_DECLARATION +
+		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
+				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
 				" construct {<" + resourceUri + "> ?predicate ?object." +
 				" 			?object rdfs:label ?label." +
+				" 			?object dbpprop:name ?name." +
 				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
 				"			?subject rdfs:label ?anotherLabel." +
+				"			?subject dbpprop:name ?anotherName." +
 				"}" +
 				" where {" +
 				" {<" + resourceUri + "> ?predicate ?object." +
 				" 			?object rdfs:label ?label.}" +
 				" UNION" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				" 			?object dbpprop:name ?name.}" +
+				" UNION" +
 				" {?subject ?anotherPredicate <" + resourceUri + ">." +
 				" ?subject rdfs:label ?anotherLabel.} " +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				" ?subject dbpprop:name ?anotherName.} " +
 				"}";
 		
 		Query query = QueryFactory.create(sparqlQuery);
@@ -123,8 +135,8 @@ public class ClueQueryImpl implements ClueQuery {
 		
 		
 		// DEBUGGING ***************************************************************
-		/*
-		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
+		
+		//if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
 		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
 			prefixLoader.loadStandardPrefixes();
@@ -147,8 +159,8 @@ public class ClueQueryImpl implements ClueQuery {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
-		*/
+		//}
+		
 		
 		
 		
@@ -183,6 +195,7 @@ public class ClueQueryImpl implements ClueQuery {
 			if(this.getTestedSelectors().contains(selector)) { // DEBUGGING **************************************
 				System.err.println("Already tested this selector"); // DEBUGGING **********************************
 			}
+			else this.getTestedSelectors().add(selector); // DEBUGGING **********************************
 			
 			StmtIterator statementsOfInterest = infModel.listStatements(selector);
 			

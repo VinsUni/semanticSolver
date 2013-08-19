@@ -234,6 +234,9 @@
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#artistOf">
         <rdfs:label>artist of</rdfs:label>
         <rdfs:label>singer of</rdfs:label>
+        <rdfs:label>song</rdfs:label>
+        <rdfs:label>sang</rdfs:label>
+        <rdfs:label>sung</rdfs:label>
         <rdfs:comment>The value of this property is a song (pop:composition) or album (pop:album) on which the subject (artist/group/producer) performs</rdfs:comment>
         <skos:prefLabel>artist of</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
@@ -410,6 +413,10 @@
 
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasArtist">
         <rdfs:label>sung by</rdfs:label>
+        <rdfs:label>singer</rdfs:label>
+        <rdfs:label>song</rdfs:label>
+        <rdfs:label>sang</rdfs:label>
+        <rdfs:label>sung</rdfs:label>
         <rdfs:label>has artist</rdfs:label>
         <rdfs:label>released by</rdfs:label>
         <rdfs:label>artist</rdfs:label>

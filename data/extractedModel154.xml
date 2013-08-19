@@ -1,0 +1,2392 @@
+<rdf:RDF
+    xmlns:opencyc="http://sw.opencyc.org/2008/06/10/concept/"
+    xmlns:j.0="http://dbpedia.org/class/yago/PeopleFromClevelandCounty,"
+    xmlns:yago-res="http://mpii.de/yago/resource/"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:lgv="http://linkedgeodata.org/ontology/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:freebase="http://rdf.freebase.com/ns/"
+    xmlns:bif="bif:"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:rev="http://purl.org/stuff/rev#"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:umbel-ac="http://umbel.org/umbel/ac/"
+    xmlns:category="http://dbpedia.org/resource/Category:"
+    xmlns:usc="http://www.rdfabout.com/rdf/schema/uscensus/details/100pct/"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:b3s="http://b3s.openlinksw.com/"
+    xmlns:grs="http://www.georss.org/georss/"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:j.1="http://dbpedia.org/class/yago/PeopleFromSumnerCounty,"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:umbel-sc="http://umbel.org/umbel/sc/"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:wikicompany="http://dbpedia.openlinksw.com/wikicompany/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:units="http://dbpedia.org/units/"
+    xmlns:j.2="http://dbpedia.org/class/yago/PeopleWithParkinson&apos;"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lod="http://lod.openlinksw.com/">
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kate_(Johnny_Cash_song)">
+    <dbpprop:name xml:lang="en">Kate</dbpprop:name>
+    <dbpprop:artist>
+      <yago:AmericanComposers rdf:about="http://dbpedia.org/resource/Johnny_Cash">
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:People_with_Parkinson&apos;s_disease">
+            <rdfs:label xml:lang="en">People with Parkinson's disease</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Rockabilly">
+            <dbpprop:name xml:lang="en">Rockabilly</dbpprop:name>
+            <rdfs:label xml:lang="de">Rockabilly</rdfs:label>
+            <rdfs:label xml:lang="cs">Rockabilly</rdfs:label>
+            <rdfs:label xml:lang="en">Rockabilly</rdfs:label>
+            <rdfs:label xml:lang="ca">Rockabilly</rdfs:label>
+            <rdfs:label xml:lang="uk">Рокабілі</rdfs:label>
+          </rdf:Description>
+        </dbpprop:genre>
+        <dbpedia-owl:deathPlace>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Nashville,_Tennessee">
+            <dbpprop:name xml:lang="en">Nashville</dbpprop:name>
+            <rdfs:label xml:lang="zh">纳什维尔</rdfs:label>
+            <rdfs:label xml:lang="vi">Nashville, Tennessee</rdfs:label>
+            <rdfs:label xml:lang="uk">Нашвілл</rdfs:label>
+            <rdfs:label xml:lang="de">Nashville</rdfs:label>
+            <rdfs:label xml:lang="ca">Nashville</rdfs:label>
+            <rdfs:label xml:lang="cs">Nashville</rdfs:label>
+            <rdfs:label xml:lang="en">Nashville, Tennessee</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:deathPlace>
+        <dbpprop:birthPlace>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Kingsland,_Arkansas">
+            <rdfs:label xml:lang="de">Kingsland (Arkansas)</rdfs:label>
+            <rdfs:label xml:lang="en">Kingsland, Arkansas</rdfs:label>
+          </rdf:Description>
+        </dbpprop:birthPlace>
+        <dbpedia-owl:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/American_folk_music">
+            <rdfs:label xml:lang="en">American folk music</rdfs:label>
+            <rdfs:label xml:lang="zh">美国民间音乐</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:genre>
+        <dbpedia-owl:associatedBand>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Roy_Orbison">
+            <dbpprop:name xml:lang="en">Roy Orbison</dbpprop:name>
+            <dbpprop:name xml:lang="en">Orbison, Roy Kelton</dbpprop:name>
+            <rdfs:label xml:lang="cs">Roy Orbison</rdfs:label>
+            <rdfs:label xml:lang="ca">Roy Orbison</rdfs:label>
+            <rdfs:label xml:lang="de">Roy Orbison</rdfs:label>
+            <rdfs:label xml:lang="uk">Рой Орбісон</rdfs:label>
+            <rdfs:label xml:lang="en">Roy Orbison</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:associatedBand>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Grammy_Award_winners">
+            <rdfs:label xml:lang="en">Grammy Award winners</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Rockabilly_Hall_of_Fame_inductees">
+            <rdfs:label xml:lang="en">Rockabilly Hall of Fame inductees</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Burials_in_Tennessee">
+            <rdfs:label xml:lang="en">Burials in Tennessee</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Carter_Family">
+            <dbpprop:name xml:lang="en">Carter Family</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="de">The Carter Family</rdfs:label>
+            <rdfs:label xml:lang="zh">卡特家族</rdfs:label>
+            <rdfs:label xml:lang="cs">Carter Family</rdfs:label>
+            <rdfs:label xml:lang="en">Carter Family</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:United_States_National_Medal_of_Arts_recipients">
+            <rdfs:label xml:lang="en">United States National Medal of Arts recipients</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:notableInstruments>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/C._F._Martin_&amp;_Company">
+            <rdfs:label xml:lang="de">Martin Guitar</rdfs:label>
+            <rdfs:label xml:lang="zh">马丁吉他</rdfs:label>
+            <rdfs:label xml:lang="en">C. F. Martin &amp; Company</rdfs:label>
+          </rdf:Description>
+        </dbpprop:notableInstruments>
+        <dbpedia-owl:birthPlace>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/United_States">
+            <rdfs:label xml:lang="en">United States</rdfs:label>
+            <rdfs:label xml:lang="zh">美國</rdfs:label>
+            <rdfs:label xml:lang="vi">Hoa Kỳ</rdfs:label>
+            <rdfs:label xml:lang="cs">Spojené státy americké</rdfs:label>
+            <rdfs:label xml:lang="de">Vereinigte Staaten</rdfs:label>
+            <rdfs:label xml:lang="uk">Сполучені Штати Америки</rdfs:label>
+            <rdfs:label xml:lang="ca">Estats Units d'Amèrica</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:birthPlace>
+        <dbpedia-owl:associatedBand>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/The_Oak_Ridge_Boys">
+            <dbpprop:name xml:lang="en">The Oak Ridge Boys</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="en">The Oak Ridge Boys</rdfs:label>
+            <rdfs:label xml:lang="de">Oak Ridge Boys</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedBand>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolkGuitarists">
+            <rdfs:label xml:lang="en">American folk guitarists</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Kennedy_Center_honorees">
+            <rdfs:label xml:lang="en">Kennedy Center honorees</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:deathPlace rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <dbpprop:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Country_music">
+            <dbpprop:name xml:lang="en">Country music</dbpprop:name>
+            <rdfs:label xml:lang="uk">Кантрі</rdfs:label>
+            <rdfs:label xml:lang="cs">Country</rdfs:label>
+            <rdfs:label xml:lang="de">Country-Musik</rdfs:label>
+            <rdfs:label xml:lang="zh">乡村音乐</rdfs:label>
+            <rdfs:label xml:lang="ca">Country</rdfs:label>
+            <rdfs:label xml:lang="en">Country music</rdfs:label>
+            <rdfs:label xml:lang="vi">Nhạc đồng quê</rdfs:label>
+          </rdf:Description>
+        </dbpprop:genre>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Area_Code_615_(band)">
+            <dbpprop:name xml:lang="en">Area Code 615</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="en">Area Code 615 (band)</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <dbpprop:birthPlace rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Roy_Orbison"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Grammy_Legend_Award">
+            <rdfs:label xml:lang="en">Grammy Legend Award</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Carter_Family"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/ontology/Person">
+            <rdfs:label xml:lang="fr">personne</rdfs:label>
+            <rdfs:label xml:lang="el">Πληροφορίες προσώπου</rdfs:label>
+            <rdfs:label xml:lang="es">persona</rdfs:label>
+            <rdfs:label xml:lang="sl">Oseba</rdfs:label>
+            <rdfs:label xml:lang="pt">pessoa</rdfs:label>
+            <rdfs:label xml:lang="en">person</rdfs:label>
+            <rdfs:label xml:lang="de">Person</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:instrument rdf:resource="http://dbpedia.org/resource/C._F._Martin_&amp;_Company"/>
+        <dbpedia-owl:associatedBand>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Jerry_Lee_Lewis">
+            <dbpprop:name xml:lang="en">Jerry Lee Lewis</dbpprop:name>
+            <dbpprop:name xml:lang="en">Lewis, Jerry Lee</dbpprop:name>
+            <rdfs:label xml:lang="cs">Jerry Lee Lewis</rdfs:label>
+            <rdfs:label xml:lang="ca">Jerry Lee Lewis</rdfs:label>
+            <rdfs:label xml:lang="en">Jerry Lee Lewis</rdfs:label>
+            <rdfs:label xml:lang="de">Jerry Lee Lewis</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:associatedBand>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_people_of_English_descent">
+            <rdfs:label xml:lang="en">American people of English descent</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:People_from_Cleveland_County,_Arkansas">
+            <rdfs:label xml:lang="en">People from Cleveland County, Arkansas</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanMaleSingers">
+            <rdfs:label xml:lang="en">American male singers</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanCountryGuitarists">
+            <rdfs:label xml:lang="en">American country guitarists</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Area_Code_615_(band)"/>
+        <dbpprop:title>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Americana_Music_Association">
+            <rdfs:label xml:lang="en">Americana Music Association</rdfs:label>
+          </rdf:Description>
+        </dbpprop:title>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanPerformersOfChristianMusic">
+            <rdfs:label xml:lang="en">American performers of Christian music</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Americana_(music)">
+            <rdfs:label xml:lang="en">Americana (music)</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:genre>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Carl_Perkins">
+            <dbpprop:name xml:lang="en">Perkins, Carl</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="uk">Карл Перкінс</rdfs:label>
+            <rdfs:label xml:lang="cs">Carl Perkins</rdfs:label>
+            <rdfs:label xml:lang="de">Carl Perkins</rdfs:label>
+            <rdfs:label xml:lang="en">Carl Perkins</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/ActorsFromArkansas">
+            <rdfs:label xml:lang="en">Actors from Arkansas</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Jerry_Lee_Lewis"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/Person100007846">
+            <rdfs:label xml:lang="en">person</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Carter_Family"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/SunRecordsArtists">
+            <rdfs:label xml:lang="en">Sun Records artists</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:recordLabel>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Sun_Records">
+            <rdfs:label xml:lang="cs">Sun Records</rdfs:label>
+            <rdfs:label xml:lang="en">Sun Records</rdfs:label>
+            <rdfs:label xml:lang="de">Sun Records</rdfs:label>
+            <rdfs:label xml:lang="uk">Sun Records</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:recordLabel>
+        <dbpedia-owl:instrument>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Guitar">
+            <dbpprop:name xml:lang="en">Guitar</dbpprop:name>
+            <rdfs:label xml:lang="uk">Гітара</rdfs:label>
+            <rdfs:label xml:lang="cs">Kytara</rdfs:label>
+            <rdfs:label xml:lang="en">Guitar</rdfs:label>
+            <rdfs:label xml:lang="vi">Ghi-ta</rdfs:label>
+            <rdfs:label xml:lang="de">Gitarre</rdfs:label>
+            <rdfs:label xml:lang="zh">吉他</rdfs:label>
+            <rdfs:label xml:lang="ca">Guitarra</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:instrument>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/Actor109765278">
+            <rdfs:label xml:lang="en">player</rdfs:label>
+            <rdfs:label xml:lang="en">actor</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Country_Music_Hall_of_Fame_inductees">
+            <rdfs:label xml:lang="en">Country Music Hall of Fame inductees</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Rock_and_Roll_Hall_of_Fame_inductees">
+            <rdfs:label xml:lang="en">Rock and Roll Hall of Fame inductees</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/PeopleFromSumnerCounty,Tennessee">
+            <rdfs:label xml:lang="en">People from Sumner County, Tennessee</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <rdf:type>
+          <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+            <rdfs:label>Person</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Bob_Dylan">
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpprop:name xml:lang="en">Bob Dylan</dbpprop:name>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="zh">鲍勃·迪伦</rdfs:label>
+            <rdfs:label xml:lang="uk">Боб Ділан</rdfs:label>
+            <dbpprop:name xml:lang="en">Dylan, Bob</dbpprop:name>
+            <rdfs:label xml:lang="en">Bob Dylan</rdfs:label>
+            <rdfs:label xml:lang="vi">Bob Dylan</rdfs:label>
+            <rdfs:label xml:lang="cs">Bob Dylan</rdfs:label>
+            <rdfs:label xml:lang="ca">Bob Dylan</rdfs:label>
+            <rdfs:label xml:lang="de">Bob Dylan</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Tom_Petty_and_the_Heartbreakers">
+            <dbpprop:name xml:lang="en">Tom Petty and the Heartbreakers</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="cs">Tom Petty and the Heartbreakers</rdfs:label>
+            <rdfs:label xml:lang="de">Tom Petty &amp; the Heartbreakers</rdfs:label>
+            <rdfs:label xml:lang="en">Tom Petty and the Heartbreakers</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/The_Highwaymen_(country_supergroup)">
+            <dbpprop:pastMembers rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpprop:name xml:lang="en">The Highwaymen</dbpprop:name>
+            <rdfs:label xml:lang="de">The Highwaymen (Countryband)</rdfs:label>
+            <rdfs:label xml:lang="uk">The Highwaymen</rdfs:label>
+            <rdfs:label xml:lang="en">The Highwaymen (country supergroup)</rdfs:label>
+            <rdfs:label xml:lang="cs">The Highwaymen</rdfs:label>
+            <dbpedia-owl:formerBandMember rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_country_guitarists">
+            <rdfs:label xml:lang="en">American country guitarists</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:title>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/First_Amendment_Center">
+            <rdfs:label xml:lang="en">First Amendment Center</rdfs:label>
+          </rdf:Description>
+        </dbpprop:title>
+        <rdf:type>
+          <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+            <rdfs:label>Thing</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Rockabilly"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanCountrySingers">
+            <rdfs:label xml:lang="en">American country singers</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Carl_Perkins"/>
+        <dbpedia-owl:recordLabel>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Legacy_Recordings">
+            <rdfs:label xml:lang="cs">Legacy Recordings</rdfs:label>
+            <rdfs:label xml:lang="en">Legacy Recordings</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:recordLabel>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_folk_singers">
+            <rdfs:label xml:lang="en">American folk singers</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedBand>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/The_Tennessee_Three">
+            <dbpprop:name xml:lang="en">The Tennessee Three</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="en">The Tennessee Three</rdfs:label>
+            <rdfs:label xml:lang="de">Tennessee Three</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedBand>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolkSingers">
+            <rdfs:label xml:lang="en">American folk singers</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Rock_and_roll">
+            <dbpprop:name xml:lang="en">Rock and roll</dbpprop:name>
+            <rdfs:label xml:lang="zh">摇滚</rdfs:label>
+            <rdfs:label xml:lang="cs">Rock and roll</rdfs:label>
+            <rdfs:label xml:lang="de">Rock ’n’ Roll</rdfs:label>
+            <rdfs:label xml:lang="uk">Рок-н-рол</rdfs:label>
+            <rdfs:label xml:lang="ca">Rock and roll</rdfs:label>
+            <rdfs:label xml:lang="vi">Rock and roll</rdfs:label>
+            <rdfs:label xml:lang="en">Rock and roll</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:genre>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_autobiographers">
+            <rdfs:label xml:lang="en">American autobiographers</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Area_Code_615_(band)"/>
+        <dbpprop:placeOfDeath rdf:resource="http://dbpedia.org/resource/Nashville,_Tennessee"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Grammy_Lifetime_Achievement_Award_winners">
+            <rdfs:label xml:lang="en">Grammy Lifetime Achievement Award winners</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Musicians_from_Arkansas">
+            <rdfs:label xml:lang="en">Musicians from Arkansas</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedMusicalArtist>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/June_Carter_Cash">
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpprop:name xml:lang="en">Cash, June Carter</dbpprop:name>
+            <rdfs:label xml:lang="ca">June Carter Cash</rdfs:label>
+            <rdfs:label xml:lang="cs">June Carter Cash</rdfs:label>
+            <rdfs:label xml:lang="en">June Carter Cash</rdfs:label>
+            <rdfs:label xml:lang="de">June Carter Cash</rdfs:label>
+            <dbpprop:name xml:lang="en">June Carter Cash</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpprop:spouse rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedMusicalArtist>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanCountrySongwriters">
+            <rdfs:label xml:lang="en">American country songwriters</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_bass-baritones">
+            <rdfs:label xml:lang="en">American bass-baritones</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Sun_Records_artists">
+            <rdfs:label xml:lang="en">Sun Records artists</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:instrument>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Mandolin">
+            <dbpprop:name xml:lang="en">Mandolin</dbpprop:name>
+            <rdfs:label xml:lang="de">Mandoline</rdfs:label>
+            <rdfs:label xml:lang="ca">Mandolina</rdfs:label>
+            <rdfs:label xml:lang="uk">Мандоліна</rdfs:label>
+            <rdfs:label xml:lang="zh">曼陀林</rdfs:label>
+            <rdfs:label xml:lang="en">Mandolin</rdfs:label>
+            <rdfs:label xml:lang="cs">Mandolína</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:instrument>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:People_from_Sumner_County,_Tennessee">
+            <rdfs:label xml:lang="en">People from Sumner County, Tennessee</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Actors_from_Arkansas">
+            <rdfs:label xml:lang="en">Actors from Arkansas</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:instrument>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Harmonica">
+            <dbpprop:name xml:lang="en">Harmonica</dbpprop:name>
+            <rdfs:label xml:lang="de">Mundharmonika</rdfs:label>
+            <rdfs:label xml:lang="cs">Harmonika</rdfs:label>
+            <rdfs:label xml:lang="ca">Harmònica</rdfs:label>
+            <rdfs:label xml:lang="zh">口琴</rdfs:label>
+            <rdfs:label xml:lang="uk">Губна гармоніка</rdfs:label>
+            <rdfs:label xml:lang="en">Harmonica</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:instrument>
+        <dbpedia-owl:associatedBand>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/The_Statler_Brothers">
+            <dbpprop:name xml:lang="en">The Statler Brothers</dbpprop:name>
+            <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <rdfs:label xml:lang="de">Statler Brothers</rdfs:label>
+            <rdfs:label xml:lang="en">The Statler Brothers</rdfs:label>
+            <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+            <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+          </rdf:Description>
+        </dbpedia-owl:associatedBand>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/The_Highwaymen_(country_supergroup)"/>
+        <dbpedia-owl:recordLabel>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Columbia_Records">
+            <rdfs:label xml:lang="cs">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="ca">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="de">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="en">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="vi">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="uk">Columbia Records</rdfs:label>
+            <rdfs:label xml:lang="zh">哥伦比亚唱片</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:recordLabel>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/KennedyCenterHonorees">
+            <rdfs:label xml:lang="en">Kennedy Center honorees</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/Kingsland,_Arkansas"/>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Bob_Dylan"/>
+        <dbpedia-owl:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Gospel_music">
+            <dbpprop:name xml:lang="en">Gospel music</dbpprop:name>
+            <rdfs:label xml:lang="uk">Госпел</rdfs:label>
+            <rdfs:label xml:lang="cs">Gospel</rdfs:label>
+            <rdfs:label xml:lang="de">Gospelmusik</rdfs:label>
+            <rdfs:label xml:lang="ca">Gospel</rdfs:label>
+            <rdfs:label xml:lang="en">Gospel music</rdfs:label>
+            <rdfs:label xml:lang="vi">Nhạc Phúc âm</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:genre>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/PeopleWithParkinson&apos;sDisease">
+            <rdfs:label xml:lang="en">People with Parkinson's disease</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Columbia_Records_artists">
+            <rdfs:label xml:lang="en">Columbia Records artists</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Charly_Records_artists">
+            <rdfs:label xml:lang="en">Charly Records artists</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Grand_Ole_Opry_members">
+            <rdfs:label xml:lang="en">Grand Ole Opry members</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Carl_Perkins"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/Musician110340312">
+            <rdfs:label xml:lang="en">player</rdfs:label>
+            <rdfs:label xml:lang="en">musician</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Johnny_Cash">
+            <rdfs:label xml:lang="en">Johnny Cash</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/MusiciansFromArkansas">
+            <rdfs:label xml:lang="en">Musicians from Arkansas</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:The_Highwaymen_(country_supergroup)_members">
+            <rdfs:label xml:lang="en">The Highwaymen (country supergroup) members</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_people_of_Scottish_descent">
+            <rdfs:label xml:lang="en">American people of Scottish descent</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/The_Oak_Ridge_Boys"/>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/The_Oak_Ridge_Boys"/>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/The_Tennessee_Three"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_performers_of_Christian_music">
+            <rdfs:label xml:lang="en">American performers of Christian music</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Rock_and_roll"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/ontology/Artist">
+            <rdfs:label xml:lang="de">Künstler</rdfs:label>
+            <rdfs:label xml:lang="en">artist</rdfs:label>
+            <rdfs:label xml:lang="fr">artiste</rdfs:label>
+            <rdfs:label xml:lang="el">καλλιτέχνης</rdfs:label>
+            <rdfs:label xml:lang="ko">예술가</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_Protestants">
+            <rdfs:label xml:lang="en">American Protestants</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_country_songwriters">
+            <rdfs:label xml:lang="en">American country songwriters</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanAutobiographers">
+            <rdfs:label xml:lang="en">American autobiographers</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Country_musicians_from_Arkansas">
+            <rdfs:label xml:lang="en">Country musicians from Arkansas</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:instrument rdf:resource="http://dbpedia.org/resource/Harmonica"/>
+        <dbpedia-owl:hometown rdf:resource="http://dbpedia.org/resource/United_States"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:1932_births">
+            <rdfs:label xml:lang="en">1932 births</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalArtist">
+            <rdfs:label xml:lang="pt">artista musical</rdfs:label>
+            <rdfs:label xml:lang="en">musical artist</rdfs:label>
+            <rdfs:label xml:lang="ko">음악가</rdfs:label>
+            <rdfs:label xml:lang="fr">musicien</rdfs:label>
+            <rdfs:label xml:lang="el">μουσικός</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Roy_Orbison"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/CharlyRecordsArtists">
+            <rdfs:label xml:lang="en">Charly Records artists</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:instrument>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Lead_vocalist">
+            <rdfs:label xml:lang="en">Lead vocalist</rdfs:label>
+            <rdfs:label xml:lang="uk">Фронтмен</rdfs:label>
+            <rdfs:label xml:lang="cs">Frontman</rdfs:label>
+          </rdf:Description>
+        </dbpprop:instrument>
+        <dbpedia-owl:genre>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Blues">
+            <dbpprop:name xml:lang="en">Blues</dbpprop:name>
+            <rdfs:label xml:lang="cs">Blues</rdfs:label>
+            <rdfs:label xml:lang="ca">Blues</rdfs:label>
+            <rdfs:label xml:lang="uk">Блюз</rdfs:label>
+            <rdfs:label xml:lang="vi">Blues</rdfs:label>
+            <rdfs:label xml:lang="en">Blues</rdfs:label>
+            <rdfs:label xml:lang="de">Blues</rdfs:label>
+            <rdfs:label xml:lang="zh">藍調</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:genre>
+        <dbpedia-owl:recordLabel>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Mercury_Records">
+            <rdfs:label xml:lang="cs">Mercury Records</rdfs:label>
+            <rdfs:label xml:lang="de">Mercury Records</rdfs:label>
+            <rdfs:label xml:lang="en">Mercury Records</rdfs:label>
+            <rdfs:label xml:lang="ca">Mercury Records</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:recordLabel>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/PeopleFromClevelandCounty,Arkansas">
+            <rdfs:label xml:lang="en">People from Cleveland County, Arkansas</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/June_Carter_Cash"/>
+        <dbpprop:placeOfBirth rdf:resource="http://dbpedia.org/resource/Kingsland,_Arkansas"/>
+        <dbpprop:instrument rdf:resource="http://dbpedia.org/resource/Guitar"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Article_Feedback_5">
+            <rdfs:label xml:lang="en">Article Feedback 5</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/ontology/Agent">
+            <rdfs:label xml:lang="en">agent</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:genre rdf:resource="http://dbpedia.org/resource/American_folk_music"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Deaths_from_diabetes">
+            <rdfs:label xml:lang="en">Deaths from diabetes</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_composers">
+            <rdfs:label xml:lang="en">American composers</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/The_Highwaymen_(country_supergroup)"/>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Tom_Petty_and_the_Heartbreakers"/>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Jerry_Lee_Lewis"/>
+        <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Gospel_music"/>
+        <rdf:type>
+          <rdf:Description rdf:about="http://dbpedia.org/class/yago/ColumbiaRecordsArtists">
+            <rdfs:label xml:lang="en">Columbia Records artists</rdfs:label>
+          </rdf:Description>
+        </rdf:type>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/The_Statler_Brothers"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Disease-related_deaths_in_Tennessee">
+            <rdfs:label xml:lang="en">Disease-related deaths in Tennessee</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/June_Carter_Cash"/>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Tom_Petty_and_the_Heartbreakers"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:People_self-identifying_as_substance_abusers">
+            <rdfs:label xml:lang="en">People self-identifying as substance abusers</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Blues"/>
+        <dbpedia-owl:recordLabel>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/American_Recordings_(record_label)">
+            <rdfs:label xml:lang="en">American Recordings (record label)</rdfs:label>
+            <rdfs:label xml:lang="de">American Recordings (Label)</rdfs:label>
+            <rdfs:label xml:lang="uk">American Recordings</rdfs:label>
+          </rdf:Description>
+        </dbpedia-owl:recordLabel>
+        <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/The_Tennessee_Three"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_people_of_Scotch-Irish_descent">
+            <rdfs:label xml:lang="en">American people of Scotch-Irish descent</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:instrument rdf:resource="http://dbpedia.org/resource/Mandolin"/>
+        <dbpedia-owl:birthPlace rdf:resource="http://dbpedia.org/resource/Kingsland,_Arkansas"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_folk_guitarists">
+            <rdfs:label xml:lang="en">American folk guitarists</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:2003_deaths">
+            <rdfs:label xml:lang="en">2003 deaths</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpedia-owl:genre rdf:resource="http://dbpedia.org/resource/Country_music"/>
+        <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Bob_Dylan"/>
+        <dbpedia-owl:instrument rdf:resource="http://dbpedia.org/resource/Lead_vocalist"/>
+        <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/The_Statler_Brothers"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:United_States_Air_Force_airmen">
+            <rdfs:label xml:lang="en">United States Air Force airmen</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dbpprop:genre rdf:resource="http://dbpedia.org/resource/Americana_(music)"/>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:Million_Dollar_Quartet_members">
+            <rdfs:label xml:lang="en">Million Dollar Quartet members</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+        <dcterms:subject>
+          <rdf:Description rdf:about="http://dbpedia.org/resource/Category:American_country_singers">
+            <rdfs:label xml:lang="en">American country singers</rdfs:label>
+          </rdf:Description>
+        </dcterms:subject>
+      </yago:AmericanComposers>
+    </dbpprop:artist>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Greatest_Hits,_Vol._1_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Greatest Hits, Vol. 1</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Greatest Hits, Vol. 1 (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_R_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">John R Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Water_from_the_Wells_of_Home">
+    <dbpprop:name xml:lang="en">Water from the Wells of Home</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Water from the Wells of Home</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_The_Jackie_Gleason_Show_episodes">
+    <dbpprop:rtitle rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">List of The Jackie Gleason Show episodes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_III:_Solitary_Man">
+    <dbpprop:name xml:lang="en">American III: Solitary Man</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">American III: Solitary Man</rdfs:label>
+    <rdfs:label xml:lang="en">American III: Solitary Man</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Anita_Carter">
+    <dbpprop:name xml:lang="en">Anita Carter</dbpprop:name>
+    <dbpprop:name xml:lang="en">Carter, Anita</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Anita Carter</rdfs:label>
+    <rdfs:label xml:lang="en">Anita Carter</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Blood,_Sweat_and_Tears_(album)">
+    <dbpprop:name xml:lang="en">Blood, Sweat, and Tears</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Blood, Sweat and Tears (Album)</rdfs:label>
+    <rdfs:label xml:lang="en">Blood, Sweat and Tears (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sings_the_Ballads_of_the_True_West">
+    <dbpprop:name xml:lang="en">Sings the Ballads of the True West</dbpprop:name>
+    <dbpprop:name xml:lang="en">Mean as Hell! : Ballads From The True West</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sings the Ballads of the True West</rdfs:label>
+    <rdfs:label xml:lang="de">Sings the Ballads of the True West</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Greatest_Hits,_Vol._2_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Greatest Hits, Vol. 2</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Greatest Hits, Vol. 2 (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Understand_Your_Man">
+    <dbpprop:name xml:lang="en">Understand Your Man</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Last_Gunfighter_Ballad">
+    <dbpprop:name xml:lang="en">The Last Gunfighter Ballad</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Last Gunfighter Ballad</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Big_River_(Johnny_Cash_song)">
+    <dbpprop:name xml:lang="en">Big River</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Big River (Lied)</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/It_Ain&apos;t_Me_Babe">
+    <dbpprop:name xml:lang="en">It Ain't Me Babe</dbpprop:name>
+    <dbpprop:altArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">It Ain't Me Babe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Christmas_Spirit">
+    <dbpprop:name xml:lang="en">The Christmas Spirit</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Christmas Spirit</rdfs:label>
+    <rdfs:label xml:lang="de">The Christmas Spirit</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hymns_from_the_Heart">
+    <dbpprop:name xml:lang="en">Hymns from the Heart</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Hymns from the Heart</rdfs:label>
+    <rdfs:label xml:lang="en">Hymns from the Heart</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hymns_by_Johnny_Cash">
+    <dbpprop:name xml:lang="en">Hymns by Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Hymns by Johnny Cash</rdfs:label>
+    <rdfs:label xml:lang="en">Hymns by Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Old_Golden_Throat">
+    <dbpprop:name xml:lang="en">Old Golden Throat</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Old Golden Throat</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Any_Old_Wind_That_Blows">
+    <dbpprop:name xml:lang="en">Any Old Wind That Blows</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Any Old Wind That Blows</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Johnny_Cash_Children&apos;s_Album">
+    <dbpprop:name xml:lang="en">The Johnny Cash Children's Album</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Johnny Cash Children's Album</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_R._Cash">
+    <dbpprop:name xml:lang="en">John R. Cash</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">John R. Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_and_His_Woman">
+    <dbpprop:name xml:lang="en">Johnny Cash and His Woman</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash and His Woman</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_family">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash family</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Encore_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Encore</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Encore (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/What_Is_Truth_(song)">
+    <dbpprop:name xml:lang="en">What Is Truth</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Wanted_Man_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Wanted Man</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Wanted Man (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Unissued_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Unissued Johnny Cash</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Unissued Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_%E2%80%93_Biography">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash – Biography</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Badlands:_A_Tribute_to_Bruce_Springsteen&apos;s_Nebraska">
+    <dbpprop:name xml:lang="en">Badlands: A Tribute to Bruce Springsteen's Nebraska</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Billy_Joe_Shaver">
+    <dbpprop:name xml:lang="en">Shaver, Billy Joe</dbpprop:name>
+    <rdfs:label xml:lang="cs">Billy Joe Shaver</rdfs:label>
+    <rdfs:label xml:lang="en">Billy Joe Shaver</rdfs:label>
+    <rdfs:label xml:lang="de">Billy Joe Shaver</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/So_Doggone_Lonesome">
+    <dbpprop:name xml:lang="en">So Doggone Lonesome</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_at_Madison_Square_Garden">
+    <dbpprop:name xml:lang="en">Johnny Cash at Madison Square Garden</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">At Madison Square Garden</rdfs:label>
+    <rdfs:label xml:lang="en">Johnny Cash at Madison Square Garden</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Personal_File">
+    <dbpprop:name xml:lang="en">Personal File</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Personal File</rdfs:label>
+    <rdfs:label xml:lang="en">Personal File</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Man_in_Black_%E2%80%93_His_Greatest_Hits">
+    <dbpprop:name xml:lang="en">The Man In Black-His Greatest Hits</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Eat_the_Document">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Eat the Document</dbpprop:name>
+    <rdfs:label xml:lang="de">Eat the Document</rdfs:label>
+    <rdfs:label xml:lang="en">Eat the Document</rdfs:label>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ring_of_Fire_(song)">
+    <dbpprop:name xml:lang="en">Ring of Fire</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Ring of Fire (Lied)</rdfs:label>
+    <rdfs:label xml:lang="vi">Ring of Fire (bài hát)</rdfs:label>
+    <rdfs:label xml:lang="en">Ring of Fire (song)</rdfs:label>
+    <rdfs:label xml:lang="cs">Ring of Fire</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Welcome_to_Carcass_Cuntry">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Welcome to Carcass Cuntry</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sheryl_Crow">
+    <dbpprop:name xml:lang="en">Sheryl Crow</dbpprop:name>
+    <dbpprop:name xml:lang="en">Crow, Sheryl</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Sheryl Crow</rdfs:label>
+    <rdfs:label xml:lang="zh">雪瑞兒·可洛</rdfs:label>
+    <rdfs:label xml:lang="en">Sheryl Crow</rdfs:label>
+    <rdfs:label xml:lang="cs">Sheryl Crow</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Merle_Kilgore">
+    <dbpprop:name xml:lang="en">Merle Kilgore</dbpprop:name>
+    <dbpprop:name xml:lang="en">Kilgore, Merle</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Merle Kilgore</rdfs:label>
+    <rdfs:label xml:lang="de">Merle Kilgore</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Busted_(Johnny_Cash_song)">
+    <dbpprop:name xml:lang="en">Busted</dbpprop:name>
+    <dbpprop:altArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tommy_Cash">
+    <dbpprop:name xml:lang="en">Tommy Cash</dbpprop:name>
+    <dbpprop:name xml:lang="en">Cash, Tommy</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Tommy Cash</rdfs:label>
+    <rdfs:label xml:lang="de">Tommy Cash</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Adventures_of_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Adventures of Johnny Cash</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Adventures of Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rick_Rubin">
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Rubin, Frederick Jay</dbpprop:name>
+    <rdfs:label xml:lang="ca">Rick Rubin</rdfs:label>
+    <rdfs:label xml:lang="cs">Rick Rubin</rdfs:label>
+    <rdfs:label xml:lang="de">Rick Rubin</rdfs:label>
+    <rdfs:label xml:lang="en">Rick Rubin</rdfs:label>
+    <rdfs:label xml:lang="uk">Рік Рубін</rdfs:label>
+    <dbpprop:name xml:lang="en">Rick Rubin</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Orange_Blossom_Special_(album)">
+    <dbpprop:name xml:lang="en">Orange Blossom Special</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Orange Blossom Special (Album)</rdfs:label>
+    <rdfs:label xml:lang="en">Orange Blossom Special (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Flesh_and_Blood_(Johnny_Cash_song)">
+    <dbpprop:name xml:lang="en">Flesh and Blood</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Biggest_Hits">
+    <dbpprop:name xml:lang="en">Biggest Hits</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Biggest Hits</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_One_on_the_Right_Is_on_the_Left">
+    <dbpprop:name xml:lang="en">The One on the Right Is on the Left</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The One on the Right Is on the Left</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Silver_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Silver</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Silver (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Lure_of_the_Grand_Canyon">
+    <dbpprop:name xml:lang="en">The Lure of the Grand Canyon</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Lure of the Grand Canyon</rdfs:label>
+    <rdfs:label xml:lang="de">The Lure of the Grand Canyon</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Dukes_of_Hazzard_(soundtrack)">
+    <dbpprop:name xml:lang="en">The Dukes of Hazzard</dbpprop:name>
+    <dbpedia-owl:relative rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Land_of_the_Free_Home_of_the_Brave_(album)">
+    <dbpprop:name xml:lang="en">Land of the Free Home of the Brave</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dwight&apos;s_Used_Records">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Dwight's Used Records</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sam_Phillips">
+    <dbpprop:name xml:lang="en">Sam Phillips</dbpprop:name>
+    <dbpprop:name xml:lang="en">Phillips, Sam</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sam Phillips</rdfs:label>
+    <rdfs:label xml:lang="uk">Сем Філліпс</rdfs:label>
+    <rdfs:label xml:lang="de">Sam Phillips</rdfs:label>
+    <rdfs:label xml:lang="cs">Sam Phillips</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Martin_Delray">
+    <dbpprop:name xml:lang="en">Martin Delray</dbpprop:name>
+    <dbpprop:name xml:lang="en">Delray, Martin</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Martin Delray</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Man_in_Black_(song)">
+    <dbpprop:name xml:lang="en">Man in Black</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Man in Black (song)</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J.R._Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">J.R. Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ballad_of_a_Teenage_Queen">
+    <dbpprop:name xml:lang="en">Ballad of a Teenage Queen</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Ballad of a Teenage Queen</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Legend_of_Johnny_Cash_Vol._II">
+    <dbpprop:name xml:lang="en">The Legend of Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Legend of Johnny Cash Vol. II</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Greg_Fidelman">
+    <dbpprop:name xml:lang="en">Fidelman, Greg</dbpprop:name>
+    <dbpprop:name xml:lang="en">Greg Fidelman</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Greg Fidelman</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ragged_Old_Flag">
+    <dbpprop:name xml:lang="en">Ragged Old Flag</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Ragged Old Flag</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/At_Folsom_Prison">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">At Folsom Prison</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">At Folsom Prison</rdfs:label>
+    <rdfs:label xml:lang="de">At Folsom Prison</rdfs:label>
+    <rdfs:label xml:lang="cs">At Folsom Prison</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ride_This_Train">
+    <dbpprop:name xml:lang="en">Ride This Train</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Ride This Train</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rock_Island_Line_(album)">
+    <dbpprop:name xml:lang="en">Rock Island Line</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Thousand_Miles_Behind">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">A Thousand Miles Behind</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Mystery_of_Life">
+    <dbpprop:name xml:lang="en">The Mystery of Life</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Mystery of Life</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_World_of_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The World of Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The World of Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnie_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnie Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/I_Walk_the_Line_(soundtrack_album)">
+    <dbpprop:name xml:lang="en">I Walk the Line</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">I Walk the Line (soundtrack album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Now,_There_Was_a_Song!">
+    <dbpprop:name xml:lang="en">Now, There Was a Song!</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Now, There Was a Song!</rdfs:label>
+    <rdfs:label xml:lang="de">Now, There Was a Song!</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/I_Walk_the_Line_(1964_album)">
+    <dbpprop:name xml:lang="en">I Walk the Line</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">I Walk the Line (Album)</rdfs:label>
+    <rdfs:label xml:lang="en">I Walk the Line (1964 album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/June_Carter_and_Johnny_Cash:_Duets">
+    <dbpprop:name xml:lang="en">Duets</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">June Carter and Johnny Cash: Duets</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Heroes_(Johnny_Cash_and_Waylon_Jennings_album)">
+    <dbpprop:name xml:lang="en">Heroes</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Heroes (Johnny Cash and Waylon Jennings album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/VH1_Storytellers:_Johnny_Cash_&amp;_Willie_Nelson">
+    <dbpprop:name xml:lang="en">VH1 Storytellers</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">VH1 Storytellers: Johnny Cash &amp; Willie Nelson</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Classic_Christmas_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Classic Christmas</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Classic Christmas (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_99">
+    <dbpprop:name xml:lang="en">Johnny 99</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny 99</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/We&apos;ll_Meet_Again">
+    <dbpprop:name xml:lang="en">We'll Meet Again</dbpprop:name>
+    <dbpprop:altArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">We'll Meet Again</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Unearthed_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">My Mother's Hymn Book</dbpprop:name>
+    <dbpprop:name xml:lang="en">Unearthed</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Unearthed (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Five_Feet_High_and_Rising">
+    <dbpprop:name xml:lang="en">Five Feet High and Rising</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Five Feet High and Rising</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Man_in_Black_1959%E2%80%931962">
+    <dbpprop:name xml:lang="en">The Man in Black 1959-1962</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Chris_Whitten">
+    <dbpprop:name xml:lang="en">Whitten, Chris</dbpprop:name>
+    <dbpprop:name xml:lang="en">Chris Whitten</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Chris Whitten</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Get_Rhythm">
+    <dbpprop:name xml:lang="en">Get Rhythm</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Get Rhythm</rdfs:label>
+    <rdfs:label xml:lang="en">Get Rhythm</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Johnny_Cash_Family_Christmas">
+    <dbpprop:name xml:lang="en">The Johnny Cash Family Christmas</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Johnny Cash Family Christmas</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Five_Minutes_to_Live">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Five Minutes to Live</dbpprop:name>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Original_Sun_Sound_of_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Original Sun Sound</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Believe_in_Him">
+    <dbpprop:name xml:lang="en">Believe in Him</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Believe in Him</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Johnny_Cash_Show_(album)">
+    <dbpprop:name xml:lang="en">The Johnny Cash Show</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Johnny Cash Show (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Legend_(box_set)">
+    <dbpprop:name xml:lang="en">The Legend</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Legend (box set)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/P%C3%A5_%C3%96ster%C3%A5ker">
+    <dbpprop:name xml:lang="en">På Österåker</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">På Österåker</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_R._Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny R. Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurt_(Nine_Inch_Nails_song)">
+    <dbpprop:name xml:lang="en">Hurt</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Hurt (Nine Inch Nails song)</rdfs:label>
+    <rdfs:label xml:lang="cs">Hurt (píseň Nine Inch Nails)</rdfs:label>
+    <rdfs:label xml:lang="de">Hurt (Lied)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Brian_Ahern_(producer)">
+    <dbpprop:name xml:lang="en">Ahern, Brian</dbpprop:name>
+    <dbpprop:name xml:lang="en">Brian Ahern</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_a_Country_Christmas">
+    <dbpprop:name xml:lang="en">Now That's What I Call a Country Christmas</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Happiness_Is_You">
+    <dbpprop:name xml:lang="en">Happiness Is You</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Happiness Is You</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Charlie_McCoy">
+    <dbpprop:name xml:lang="en">McCoy, Charlie</dbpprop:name>
+    <dbpprop:name xml:lang="en">Charlie McCoy</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="cs">Charlie McCoy</rdfs:label>
+    <rdfs:label xml:lang="en">Charlie McCoy</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">J Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tom_T._Hall">
+    <dbpprop:name xml:lang="en">Hall, Tom T.</dbpprop:name>
+    <dbpprop:name xml:lang="en">Tom T. Hall</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Tom T. Hall</rdfs:label>
+    <rdfs:label xml:lang="en">Tom T. Hall</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ring_of_Fire_(musical)">
+    <dbpprop:name xml:lang="en">Ring of Fire</dbpprop:name>
+    <dbpprop:music rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Ring of Fire (musical)</rdfs:label>
+    <dbpedia-owl:musicBy rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Koncert_V_Praze_(In_Prague%E2%80%93Live)">
+    <dbpprop:name xml:lang="en">Koncert V Praze</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_lists">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash lists</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johny_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johny Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Appalachian_Pride">
+    <dbpprop:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Appalachian Pride</dbpprop:name>
+    <rdfs:label xml:lang="en">Appalachian Pride</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Jonny_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Jonny Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/For_the_Good_Times_(The_Little_Willies_album)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">For the Good Times</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Folk_Singer">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">The Folk Singer</dbpprop:name>
+    <dbpprop:name xml:lang="en">The Singer</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Luther_Perkins">
+    <dbpprop:name xml:lang="en">Perkins, Luther</dbpprop:name>
+    <dbpprop:name xml:lang="en">Luther Perkins</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Luther Perkins</rdfs:label>
+    <rdfs:label xml:lang="de">Luther Perkins</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daddy_Sang_Bass">
+    <dbpprop:name xml:lang="en">Daddy Sang Bass</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Daddy Sang Bass</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rockabilly_Blues">
+    <dbpprop:name xml:lang="en">Rockabilly Blues</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Rockabilly Blues</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Man_in_Black_(album)">
+    <dbpprop:name xml:lang="en">Man in Black</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Man in Black (album)</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Carlene_Carter">
+    <dbpprop:name xml:lang="en">Carter, Carlene</dbpprop:name>
+    <dbpprop:name xml:lang="en">Carlene Carter</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Carlene Carter</rdfs:label>
+    <rdfs:label xml:lang="de">Carlene Carter</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash:_Patriot">
+    <dbpprop:name xml:lang="en">Johnny Cash: Patriot</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/One_Piece_at_a_Time_(album)">
+    <dbpprop:name xml:lang="en">One Piece at a Time</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">One Piece at a Time (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sunday_Morning_Coming_Down_(album)">
+    <dbpprop:name xml:lang="en">Sunday Morning Coming Down</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sunday Morning Coming Down (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Fabulous_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Fabulous Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Fabulous Johnny Cash</rdfs:label>
+    <rdfs:label xml:lang="de">The Fabulous Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Friendship_(Ray_Charles_album)">
+    <dbpprop:name xml:lang="en">Friendship</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Holy_Land_(album)">
+    <dbpprop:name xml:lang="en">The Holy Land</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Holy Land (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Richard_Sterban">
+    <dbpprop:name xml:lang="en">Richard Sterban</dbpprop:name>
+    <dbpprop:name xml:lang="en">Sterban, Richard</dbpprop:name>
+    <rdfs:label xml:lang="en">Richard Sterban</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Robbie_Harden">
+    <dbpprop:name xml:lang="en">Robbie Harden</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Green,_Green_Grass_of_Home">
+    <dbpprop:name xml:lang="en">Green, Green Grass of Home</dbpprop:name>
+    <dbpprop:name xml:lang="en">Tom Jones: Green, Green Grass of Home</dbpprop:name>
+    <dbpprop:altArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Green, Green Grass of Home</rdfs:label>
+    <rdfs:label xml:lang="de">Green, Green Grass of Home</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nick_Lowe">
+    <dbpprop:name xml:lang="en">Lowe, Nick</dbpprop:name>
+    <rdfs:label xml:lang="en">Nick Lowe</rdfs:label>
+    <rdfs:label xml:lang="de">Nick Lowe</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Man_in_Black_1963%E2%80%931969">
+    <dbpprop:name xml:lang="en">The Man in Black 1963-1969</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/I_Still_Miss_Someone">
+    <dbpprop:name xml:lang="en">I Still Miss Someone</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">I Still Miss Someone</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Baron_(album)">
+    <dbpprop:name xml:lang="en">The Baron</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Baron (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Oney_(song)">
+    <dbpprop:name xml:lang="en">Oney</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/I_Would_Like_to_See_You_Again">
+    <dbpprop:name xml:lang="en">I Would Like to See You Again</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">I Would Like to See You Again</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Jordanaires">
+    <dbpprop:name xml:lang="en">The Jordanaires</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Jordanaires</rdfs:label>
+    <rdfs:label xml:lang="de">The Jordanaires</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/God&apos;s_Gonna_Cut_You_Down">
+    <dbpprop:name xml:lang="en">God's Gonna Cut You Down</dbpprop:name>
+    <dbpprop:name xml:lang="en">Run On</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">God's Gonna Cut You Down</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Kellye_Cash">
+    <dbpprop:relations rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Cash, Kellye</dbpprop:name>
+    <rdfs:label xml:lang="en">Kellye Cash</rdfs:label>
+    <dbpedia-owl:relation rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sw.opencyc.org/2008/06/10/concept/en/JohnnyCash">
+    <rdfs:label xml:lang="en">Johnny Cash</rdfs:label>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Back_to_the_Bus_(Funeral_for_a_Friend_album)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Back to the Bus</dbpprop:name>
+    <rdfs:label xml:lang="en">Back to the Bus (Funeral for a Friend album)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sings_the_Songs_That_Made_Him_Famous">
+    <dbpprop:name xml:lang="en">Johnny Cash Sings the Songs That Made Him Famous</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sings the Songs That Made Him Famous</rdfs:label>
+    <rdfs:label xml:lang="de">Sings the Songs That Made Him Famous</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_discography">
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash discography</rdfs:label>
+    <rdfs:label xml:lang="de">Johnny Cash/Diskografie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Look_at_Them_Beans">
+    <dbpprop:name xml:lang="en">Look at Them Beans</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Look at Them Beans</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marty_Stuart">
+    <dbpprop:name xml:lang="en">Stuart, Marty</dbpprop:name>
+    <dbpprop:name xml:lang="en">Marty Stuart</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Marty Stuart</rdfs:label>
+    <rdfs:label xml:lang="de">Marty Stuart</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Love,_God,_Murder">
+    <dbpprop:name xml:lang="en">Love</dbpprop:name>
+    <dbpprop:name xml:lang="en">God</dbpprop:name>
+    <dbpprop:name xml:lang="en">Life</dbpprop:name>
+    <dbpprop:name xml:lang="en">Murder</dbpprop:name>
+    <dbpprop:name xml:lang="en">Love, God, Murder</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Love, God, Murder</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rosanne_Cash">
+    <dbpprop:name xml:lang="en">Rosanne Cash</dbpprop:name>
+    <dbpprop:name xml:lang="en">Cash, Rosanne</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Rosanne Cash</rdfs:label>
+    <rdfs:label xml:lang="de">Rosanne Cash</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bob_Johnston">
+    <dbpprop:name xml:lang="en">Johnston, Bob</dbpprop:name>
+    <dbpprop:name xml:lang="en">Bob Johnston</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="ca">Bob Johnston</rdfs:label>
+    <rdfs:label xml:lang="de">Bob Johnston</rdfs:label>
+    <rdfs:label xml:lang="en">Bob Johnston</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/16_Biggest_Hits_(Johnny_Cash_and_June_Carter_Cash_album)">
+    <dbpprop:name rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</dbpprop:name>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Willie_Nelson">
+    <dbpprop:name xml:lang="en">Nelson, Willie Hugh</dbpprop:name>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Willie Nelson</rdfs:label>
+    <rdfs:label xml:lang="de">Willie Nelson</rdfs:label>
+    <rdfs:label xml:lang="ca">Willie Nelson</rdfs:label>
+    <rdfs:label xml:lang="cs">Willie Nelson</rdfs:label>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="uk">Віллі Нельсон</rdfs:label>
+    <dbpprop:name xml:lang="en">Willie Nelson</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_V:_A_Hundred_Highways">
+    <dbpprop:name xml:lang="en">American V: A Hundred Highways</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">American V: A Hundred Highways</rdfs:label>
+    <rdfs:label xml:lang="en">American V: A Hundred Highways</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Mississippi_Cold_Case">
+    <dbpprop:name xml:lang="en">Mississippi Cold Case</dbpprop:name>
+    <dbpprop:music rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Mississippi Cold Case</rdfs:label>
+    <dbpedia-owl:musicComposer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_Christmas!_3">
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! Volume 3</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas! 3</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/One_Piece_at_a_Time">
+    <dbpprop:name xml:lang="en">One Piece at a Time</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">One Piece at a Time</rdfs:label>
+    <rdfs:label xml:lang="en">One Piece at a Time</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Rainbow_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Rainbow</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Rainbow (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/International_Superstar">
+    <dbpprop:name xml:lang="en">International Superstar</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">International Superstar</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Believer_Sings_the_Truth">
+    <dbpprop:name xml:lang="en">A Believer Sings the Truth</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">A Believer Sings the Truth</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Guess_Things_Happen_That_Way">
+    <dbpprop:name xml:lang="en">Guess Things Happen That Way</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Johnny_Cash_Songbook">
+    <dbpprop:name xml:lang="en">The Johnny Cash Songbook</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Matador_(song)">
+    <dbpprop:name xml:lang="en">The Matador</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Survivors_Live">
+    <dbpprop:name xml:lang="en">The Survivors Live</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">The Survivors Live</rdfs:label>
+    <rdfs:label xml:lang="en">The Survivors Live</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Greatest_Hits,_Vol._3_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Greatest Hits, Vol. 3</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Greatest Hits, Vol. 3 (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Little_Fauss_and_Big_Halsy_(soundtrack)">
+    <dbpprop:name xml:lang="en">Little Fauss and Big Halsy</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Little Fauss and Big Halsy (soundtrack)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hootenanny_Hoot">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Hootenanny Hoot</dbpprop:name>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/With_His_Hot_and_Blue_Guitar">
+    <dbpprop:name xml:lang="en">Johnny Cash with His Hot and Blue Guitar</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">With His Hot and Blue Guitar</rdfs:label>
+    <rdfs:label xml:lang="de">With His Hot and Blue Guitar</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/List_of_The_Muppet_Show_episodes">
+    <dbpprop:rtitle rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">List of The Muppet Show episodes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Boy_Named_Sue">
+    <dbpprop:name xml:lang="en">A Boy Named Sue</dbpprop:name>
+    <dbpprop:name xml:lang="en">Boy Named Sue</dbpprop:name>
+    <rdfs:label xml:lang="en">A Boy Named Sue</rdfs:label>
+    <rdfs:label xml:lang="de">A Boy Named Sue</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Concert_Behind_Prison_Walls">
+    <dbpprop:name xml:lang="en">A Concert: Behind Prison Walls</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">A Concert Behind Prison Walls</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_IV:_The_Man_Comes_Around">
+    <dbpprop:name xml:lang="en">American IV: The Man Comes Around</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="cs">American IV: The Man Comes Around</rdfs:label>
+    <rdfs:label xml:lang="de">American IV: The Man Comes Around</rdfs:label>
+    <rdfs:label xml:lang="en">American IV: The Man Comes Around</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Brother_Clyde_(album)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Brother Clyde</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Heart_of_Cash">
+    <dbpprop:name xml:lang="en">Heart of Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Heart of Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Vivian_Liberto">
+    <dbpprop:name xml:lang="en">Liberto, Vivian</dbpprop:name>
+    <dbpprop:name xml:lang="en">Vivian Liberto</dbpprop:name>
+    <rdfs:label xml:lang="en">Vivian Liberto</rdfs:label>
+    <dbpedia-owl:knownFor rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">J. Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Sound_of_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Sound of Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Sound of Johnny Cash</rdfs:label>
+    <rdfs:label xml:lang="de">The Sound of Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/All_Aboard_the_Blue_Train">
+    <dbpprop:name xml:lang="en">All Aboard the Blue Train</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">All Aboard the Blue Train</rdfs:label>
+    <rdfs:label xml:lang="en">All Aboard the Blue Train</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Columbia_Records_1958%E2%80%931986">
+    <dbpprop:name xml:lang="en">Columbia Records 1958-1986</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Wayne_Kemp">
+    <dbpprop:name xml:lang="en">Wayne Kemp</dbpprop:name>
+    <dbpprop:name xml:lang="en">Kemp, Wayne</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/I_Walk_the_Line">
+    <dbpprop:name xml:lang="en">I Walk the Line</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">I Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="de">I Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="ca">I Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="cs">I Walk the Line</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gone_Girl">
+    <dbpprop:name xml:lang="en">Gone Girl</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Gone Girl</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Rambler_(album)">
+    <dbpprop:name xml:lang="en">The Rambler</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Rambler (album)</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J_R_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">J R Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/16_Biggest_Hits_(Johnny_Cash_album)">
+    <dbpprop:name rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">16 Biggest Hits (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Walk_the_Line">
+    <dbpprop:name xml:lang="en">Walk the Line</dbpprop:name>
+    <dbpprop:music rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="ca">A la corda fluixa</rdfs:label>
+    <rdfs:label xml:lang="en">Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="cs">Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="de">Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="vi">Walk the Line</rdfs:label>
+    <rdfs:label xml:lang="zh">弦途有你 (電影)</rdfs:label>
+    <dbpedia-owl:musicComposer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tall_Man_(album)">
+    <dbpprop:name xml:lang="en">Tall Man</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Tall Man (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Marshall_Grant">
+    <dbpprop:name xml:lang="en">Grant, Marshall</dbpprop:name>
+    <dbpprop:name xml:lang="en">Marshall Grant</dbpprop:name>
+    <rdfs:label xml:lang="de">Marshall Grant</rdfs:label>
+    <rdfs:label xml:lang="en">Marshall Grant</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/John_Denver">
+    <dbpprop:name xml:lang="en">John Denver</dbpprop:name>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="uk">Джон Денвер</rdfs:label>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="zh">約翰·丹佛</rdfs:label>
+    <rdfs:label xml:lang="ca">John Denver</rdfs:label>
+    <rdfs:label xml:lang="de">John Denver</rdfs:label>
+    <rdfs:label xml:lang="cs">John Denver</rdfs:label>
+    <rdfs:label xml:lang="en">John Denver</rdfs:label>
+    <rdfs:label xml:lang="vi">John Denver</rdfs:label>
+    <dbpprop:name xml:lang="en">Denver, John</dbpprop:name>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Essential_Johnny_Cash">
+    <dbpprop:name xml:lang="en">The Essential Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Essential Johnny Cash</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sw.opencyc.org/2008/06/10/concept/Mx4rvosgIJwpEbGdrcN5Y29ycA">
+    <rdfs:label xml:lang="en">Johnny Cash</rdfs:label>
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hillbilly_Rock">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Hillbilly Rock</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hey,_Porter">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Hey, Porter</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Hey, Porter</rdfs:label>
+    <rdfs:label xml:lang="uk">Hey, Porter</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Bitter_Tears:_Ballads_of_the_American_Indian">
+    <dbpprop:name xml:lang="en">Bitter Tears: Ballads of the American Indian</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Bitter Tears: Ballads of the American Indian</rdfs:label>
+    <rdfs:label xml:lang="en">Bitter Tears: Ballads of the American Indian</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Don&apos;t_Take_Your_Guns_to_Town">
+    <dbpprop:name xml:lang="en">Don't Take Your Guns to Town</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Don’t Take Your Guns to Town</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash!_The_Man,_His_World,_His_Music">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Johnny Cash! The Man, His World, His Music</dbpprop:name>
+    <dbpprop:music rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicComposer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sings_Hank_Williams">
+    <dbpprop:name xml:lang="en">Sings Hank Williams</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sings Hank Williams</rdfs:label>
+    <rdfs:label xml:lang="de">Sings Hank Williams</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Nashville_Rebel_(box_set)">
+    <rdfs:label xml:lang="en">Nashville Rebel (box set)</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Boom_Chicka_Boom">
+    <dbpprop:name xml:lang="en">Boom Chicka Boom</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Boom Chicka Boom</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hello,_I&apos;m_Johnny_Cash">
+    <dbpprop:name xml:lang="en">Hello, I'm Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Hello, I'm Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Thing_Called_Love">
+    <dbpprop:name xml:lang="en">A Thing Called Love</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">A Thing Called Love</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_Country_Christmas">
+    <dbpprop:name xml:lang="en">Johnny Cash Country Christmas</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash Country Christmas</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Benmont_Tench">
+    <dbpprop:name xml:lang="en">Benmont Tench</dbpprop:name>
+    <dbpprop:name xml:lang="en">Tench, Benmont</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Benmont Tench</rdfs:label>
+    <rdfs:label xml:lang="de">Benmont Tench</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J.J._Blair">
+    <dbpprop:name xml:lang="en">J.J. Blair</dbpprop:name>
+    <dbpprop:name xml:lang="en">Blair, J. J.</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cry!_Cry!_Cry!">
+    <dbpprop:name xml:lang="en">Cry! Cry! Cry!</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Cry! Cry! Cry!</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sunday_Mornin&apos;_Comin&apos;_Down">
+    <dbpprop:name xml:lang="en">Sunday Mornin' Comin' Down</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sunday Mornin' Comin' Down</rdfs:label>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cash,_John">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Cash, John</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/America:_A_200-Year_Salute_in_Story_and_Song">
+    <dbpprop:name xml:lang="en">America: A 200-Year Salute in Story and Song</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">America: A 200-Year Salute in Story and Song</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Blistered">
+    <dbpprop:name xml:lang="en">Blistered</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Sings_Precious_Memories">
+    <dbpprop:name xml:lang="en">Johnny Cash Sings Precious Memories</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Sings Precious Memories</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Man_in_Black_1954%E2%80%931958">
+    <dbpprop:name xml:lang="en">The Man in Black 1954-1958</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Man in Black 1954–1958</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Carryin&apos;_On_with_Johnny_Cash_and_June_Carter">
+    <dbpprop:name xml:lang="en">Carryin' On with Johnny Cash and June Carter</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Carryin' On with Johnny Cash and June Carter</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Class_of_&apos;55">
+    <dbpprop:name xml:lang="en">Class of '55</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Class of ’55</rdfs:label>
+    <rdfs:label xml:lang="en">Class of '55</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Dark_as_a_Dungeon">
+    <dbpprop:recordedBy rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Dark as a Dungeon</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Barefoot_Jerry">
+    <dbpprop:name xml:lang="en">Barefoot Jerry</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Barefoot Jerry</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tony_Hawk&apos;s_Underground_2">
+    <dbpprop:title rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Tony Hawk's Underground 2</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Come_Along_and_Ride_this_Train">
+    <dbpprop:name xml:lang="en">Come Along And Ride This Train</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Classic_Cash:_Hall_of_Fame_Series">
+    <dbpprop:name xml:lang="en">Classic Cash: Hall of Fame Series</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Classic Cash: Hall of Fame Series</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Greatest!">
+    <dbpprop:name xml:lang="en">Greatest!</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Greatest!</rdfs:label>
+    <rdfs:label xml:lang="de">Greatest!</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Everybody_Loves_a_Nut">
+    <dbpprop:name xml:lang="en">Everybody Loves a Nut</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Everybody Loves a Nut</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Daniel_Jeanrenaud">
+    <dbpprop:name xml:lang="en">Jeanrenaud, Daniel</dbpprop:name>
+    <dbpprop:name xml:lang="en">Daniel Jeanrenaud</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Here&apos;s_Patsy_Cline">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Here's Patsy Cline</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Now_Here&apos;s_Johnny_Cash">
+    <dbpprop:name xml:lang="en">Now Here's Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Now Here's Johnny Cash</rdfs:label>
+    <rdfs:label xml:lang="de">Now Here’s Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Live_from_Austin,_TX_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Live from Austin, TX</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Live from Austin, TX (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_Recordings_(album)">
+    <dbpprop:name xml:lang="en">American Recordings</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">American Recordings (Album)</rdfs:label>
+    <rdfs:label xml:lang="en">American Recordings (album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Cash_Is_Coming_to_Town">
+    <dbpprop:name xml:lang="en">Johnny Cash Is Coming to Town</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Cash Is Coming to Town</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Junkie_and_the_Juicehead_Minus_Me">
+    <dbpprop:name xml:lang="en">The Junkie and the Juicehead Minus Me</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Junkie and the Juicehead Minus Me</rdfs:label>
+    <dbpedia-owl:producer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Folsom_Prison_Blues">
+    <dbpprop:name xml:lang="en">Folsom Prison Blues</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="uk">Folsom Prison Blues</rdfs:label>
+    <rdfs:label xml:lang="de">Folsom Prison Blues</rdfs:label>
+    <rdfs:label xml:lang="en">Folsom Prison Blues</rdfs:label>
+    <rdfs:label xml:lang="cs">Folsom Prison Blues</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/JohnnyCash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">JohnnyCash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tennessee_Flat_Top_Box">
+    <dbpprop:name xml:lang="en">Tennessee Flat Top Box</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Man_Comes_Around_(song)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">The Man Comes Around</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">The Man Comes Around</rdfs:label>
+    <rdfs:label xml:lang="en">The Man Comes Around (song)</rdfs:label>
+    <dbpedia-owl:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/J._R._Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">J. R. Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/JR_Cash">
+    <dbpedia-owl:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">JR Cash</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A_Gunfight">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">A Gunfight</dbpprop:name>
+    <rdfs:label xml:lang="en">A Gunfight</rdfs:label>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/More_of_Old_Golden_Throat">
+    <dbpprop:name xml:lang="en">More of Old Golden Throat</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">More of Old Golden Throat</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Return_to_the_Promised_Land">
+    <dbpprop:name xml:lang="en">Return to the Promised Land</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Return to the Promised Land</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Songs_of_Our_Soil">
+    <dbpprop:name xml:lang="en">Songs of Our Soil</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Songs of Our Soil</rdfs:label>
+    <rdfs:label xml:lang="en">Songs of Our Soil</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Ring_of_Fire:_The_Best_of_Johnny_Cash">
+    <dbpprop:name xml:lang="en">Ring of Fire: The Best of Johnny Cash</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Ring of Fire: The Best of Johnny Cash</rdfs:label>
+    <rdfs:label xml:lang="de">Ring of Fire: The Best of Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Legend_of_Johnny_Cash">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">The Legend of Johnny Cash</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Legend of Johnny Cash</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Solitary_Man_(song)">
+    <dbpprop:name xml:lang="en">Solitary Man</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Solitary Man (song)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cool_Country_Favorites">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Cool Country Favorites</dbpprop:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_&amp;_June">
+    <dbpprop:name xml:lang="en">Johnny &amp; June</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny &amp; June</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Strawberry_Cake">
+    <dbpprop:name xml:lang="en">Strawberry Cake</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Strawberry Cake</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Countryman_(album)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">Countryman</dbpprop:name>
+    <rdfs:label xml:lang="en">Countryman (album)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Any_Old_Wind_That_Blows_(song)">
+    <dbpprop:name xml:lang="en">Any Old Wind That Blows</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Great_Pretender_(Dolly_Parton_album)">
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:name xml:lang="en">The Great Pretender</dbpprop:name>
+    <rdfs:label xml:lang="en">The Great Pretender (Dolly Parton album)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Johnny_Western">
+    <dbpprop:name xml:lang="en">Western, Johnny</dbpprop:name>
+    <dbpprop:name xml:lang="en">Johnny Western</dbpprop:name>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Johnny Western</rdfs:label>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/American_VI:_Ain&apos;t_No_Grave">
+    <dbpprop:name xml:lang="en">American VI: Ain't No Grave</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">American VI: Ain’t No Grave</rdfs:label>
+    <rdfs:label xml:lang="en">American VI: Ain't No Grave</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/12_Giant_Hits">
+    <dbpprop:name rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/At_San_Quentin">
+    <dbpprop:name xml:lang="en">At San Quentin</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">At San Quentin</rdfs:label>
+    <rdfs:label xml:lang="en">At San Quentin</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Essential_Johnny_Cash_1955%E2%80%931983">
+    <dbpprop:name xml:lang="en">The Essential Johnny Cash 1955-1983</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cocaine_Blues">
+    <dbpprop:recordedBy rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Cocaine Blues</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Gospel_Road">
+    <dbpprop:name xml:lang="en">The Gospel Road</dbpprop:name>
+    <dbpprop:chronology rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">The Gospel Road</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Buddy_Harman">
+    <dbpprop:name xml:lang="en">Harman,Buddy</dbpprop:name>
+    <dbpprop:name xml:lang="en">Buddy Harman</dbpprop:name>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Cash_(disambiguation)">
+    <dbpedia-owl:wikiPageDisambiguates rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="zh">CASH</rdfs:label>
+    <rdfs:label xml:lang="de">Cash</rdfs:label>
+    <rdfs:label xml:lang="en">Cash (disambiguation)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Gene_Summers_in_Nashville">
+    <dbpprop:name xml:lang="en">Gene Summers in Nashville</dbpprop:name>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">Gene Summers in Nashville</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Unchained_(Johnny_Cash_album)">
+    <dbpprop:name xml:lang="en">Unchained</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="de">Unchained</rdfs:label>
+    <rdfs:label xml:lang="en">Unchained (Johnny Cash album)</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/From_Sea_to_Shining_Sea">
+    <dbpprop:name xml:lang="en">From Sea to Shining Sea</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+    <rdfs:label xml:lang="en">From Sea to Shining Sea</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Johnny_Cash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanComposers">
+    <rdfs:label xml:lang="en">American composers</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
