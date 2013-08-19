@@ -49,6 +49,7 @@ import framework.Solution;
  *
  */
 public class ClueQueryImpl implements ClueQuery {
+	private final String SCHEMA_FILE_NAME = "popv7.owl";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final String DBPEDIA_PREFIX_DECLARATION = "PREFIX dbpedia: <http://dbpedia.org/resource/>";
 	private final String DBPEDIA_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
@@ -97,7 +98,7 @@ public class ClueQueryImpl implements ClueQuery {
 	@Override
 	public ArrayList<String> getCandidateSolutions() {
 		ArrayList<String> recognisedResourceURIs = this.getEntityRecogniser().getRecognisedResourceURIs();
-		Model schema = FileManager.get().loadModel("popv7.owl");
+		Model schema = FileManager.get().loadModel(this.SCHEMA_FILE_NAME);
 		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
 	    reasoner = reasoner.bindSchema(schema);
 		for(String resourceUri : recognisedResourceURIs) {
