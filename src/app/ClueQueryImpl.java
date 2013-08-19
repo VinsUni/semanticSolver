@@ -87,8 +87,6 @@ public class ClueQueryImpl implements ClueQuery {
 	    reasoner = reasoner.bindSchema(schema);
 		for(String resourceUri : recognisedResourceURIs) {
 			try {
-				if(!resourceUri.equals("http://dbpedia.org/resource/Johnny_Cash")) // DEBUGGING ************************
-					throw new QueryExceptionHTTP(0, "Skipping " + resourceUri); // DEBUGGING ************************
 				Model data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
 				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
 			    this.extractCandidates(infModel);
@@ -134,9 +132,9 @@ public class ClueQueryImpl implements ClueQuery {
 		Model model = queryExecution.execConstruct();
 		
 		
-		// DEBUGGING ***************************************************************
 		
-		//if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
+		// DEBUGGING ***************************************************************
+		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
 		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
 			prefixLoader.loadStandardPrefixes();
@@ -159,7 +157,7 @@ public class ClueQueryImpl implements ClueQuery {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		//}
+		}
 		
 		
 		
