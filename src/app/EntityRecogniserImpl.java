@@ -49,7 +49,8 @@ public class EntityRecogniserImpl implements EntityRecogniser {
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
 	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", 
 			"writer", "song", "group"};
-	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/"}; // a list of namespaces whose terms should be excluded from consideration
+	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/", 
+			"http://dbpedia.org/resource/Category:"}; // a list of namespaces whose terms should be excluded from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	
 	
