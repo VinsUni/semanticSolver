@@ -75,6 +75,7 @@ public class ClueQueryImpl implements ClueQuery {
 		this.setClue(clue);
 		this.setEntityRecogniser(entityRecogniser);
 		this.setCandidateSolutions(new ArrayList<String>());
+		this.setSolutions(new ArrayList<Solution>());
 		this.setExtractedResources(new ArrayList<Resource>());
 		this.setTestedSelectors(new ArrayList<Selector>());
 	}
@@ -82,16 +83,120 @@ public class ClueQueryImpl implements ClueQuery {
 	/**
 	 * getSolutions - wraps each candidate solution String into a Solution object and returns a list of candidate Solutions
 	 * @return ArrayList<Solution>
+	 * THIS NEEDS TO ALSO EITHER PASS THE MODEL TO THE SOLUTION OBJECT SO IT CAN SCORE ITSELF, OR PASS THE SCORE TO THE SOLUTION
+	 * OBJECT
 	 */
 	@Override
 	public ArrayList<Solution> getSolutions() {
-		ArrayList<String> solutionStrings = this.getCandidateSolutions(); // REFACTOR
-		for(String solutionString : solutionStrings) {
-			this.solutions.add(new SolutionImpl(solutionString));
+		ArrayList<String> recognisedResourceURIs = this.getEntityRecogniser().getRecognisedResourceURIs();
+		Model schema = FileManager.get().loadModel(this.SCHEMA_FILE_NAME);
+		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
+	    reasoner = reasoner.bindSchema(schema);
+		for(String resourceUri : recognisedResourceURIs) {
+			Model data;
+			try {
+				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
+				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
+			    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel); // adds any candidate solutions from the model to the candidateSolutions list
+			    for(Solution sol : sols)
+			    	this.solutions.add(sol);
+			}
+			catch(QueryExceptionHTTP e) {
+				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+			}
+			
 		}
 		return this.solutions;
 	}
 	
+	private ArrayList<Solution> extractCandidateSolutions(InfModel infModel) {
+		ArrayList<Solution> candidateSols = new ArrayList<Solution>();
+		ArrayList<String> clueFragments = this.getEntityRecogniser().getClueFragments();
+		
+		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
+		// List statements in which the predicate is a pop:relationalProperty
+		StmtIterator statements = infModel.listStatements(propertiesOfInterestSelector);
+		
+		while(statements.hasNext()) {
+			Statement thisStatement = statements.nextStatement();
+			Resource subjectOfStatement = thisStatement.getSubject();
+			RDFNode objectOfStatement = thisStatement.getObject();
+			
+			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
+			
+			StmtIterator statementsOfInterest = infModel.listStatements(selector);
+			
+			while(statementsOfInterest.hasNext()) {
+				Statement statementOfInterest = statementsOfInterest.nextStatement();
+				Property thisPredicate = statementOfInterest.getPredicate();
+				
+				Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
+				
+				StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
+				
+				if(labelProperties != null) {
+					while(labelProperties.hasNext()) {
+						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
+						String rawPredicateLabel = predicateLabelValue.toString();
+						String predicateLabel = stripLanguageTag(rawPredicateLabel);
+						if(clueFragments.contains(toProperCase(predicateLabel))) {
+							Resource r = thisStatement.getResource();
+							RDFNode objectOfInterest = thisStatement.getObject();
+							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
+								Solution s = new SolutionImpl(objectOfInterest.toString(), r, infModel, this.getClue());
+								if(!(candidateSols.contains(s)))
+									candidateSols.add(s);
+								
+									
+							}
+								
+							else {  // a resource has been identified whose label may represent a solution
+								
+									// *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
+									Resource object = objectOfStatement.asResource();
+									
+									if(!extractedResources.contains(object)) { // check if we have already tested this resource
+										extractedResources.add(object);
+										StmtIterator candidateLabels = object.listProperties(RDFS.label);
+										while(candidateLabels.hasNext()) {
+											Statement s = candidateLabels.nextStatement();
+											RDFNode candidateLabelValue = null;
+											
+											String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a 
+											try {										// LiteralRequiredException is thrown	
+												lang = s.getLanguage(); // we only want English-language labels
+											}
+											catch(LiteralRequiredException e) {
+												/* The pop ontology treats some properties in the dbpprop namespace as subProperties
+												 * of rdfs:label, because they are often used in place of rdfs:label in the DBpedia
+												 * dataset. However, sometimes they are given resources as values. In such cases,
+												 * we ignore the resource and move on to the next value of rdfs:label
+												 */
+											}
+											if(lang == null || lang.equals(this.ENG_LANG)) {
+												if(candidateLabelValue == null)
+													candidateLabelValue = s.getObject();
+												String rawCandidateLabel = candidateLabelValue.toString();
+												String candidateLabel = stripLanguageTag(rawCandidateLabel);
+												
+												Resource res = s.getSubject();
+												Solution so = new SolutionImpl(candidateLabel, res, infModel, this.getClue());
+												if(!(candidateSols.contains(so)))
+													candidateSols.add(so);
+											}
+										}
+										
+							
+									}
+							}
+						}
+					}
+				}
+			}
+		}
+		return candidateSols;
+	}
+
 	/**
 	 * @return ArrayList<String>
 	 */

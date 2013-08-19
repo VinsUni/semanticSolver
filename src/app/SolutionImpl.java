@@ -3,6 +3,10 @@
  */
 package app;
 
+import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Resource;
+
+import framework.Clue;
 import framework.Solution;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -18,13 +22,45 @@ public class SolutionImpl implements Solution {
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Resource solutionResource;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
 	public SolutionImpl(String solutionText) {
 		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
 		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
 		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
 	}
-
+	
+	/**
+	 * This constructor allows for scoring of the clue
+	 * @param solutionText
+	 * @param solutionResource
+	 * @param infModel
+	 * @param clue
+	 */
+	public SolutionImpl(String solutionText, Resource solutionResource, InfModel infModel, Clue clue) {
+		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
+		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
+		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
+		
+		this.setSolutionResource(solutionResource);
+		this.setInfModel(infModel);
+		this.setClue(clue);
+		this.score();
+	}
+	
+	
+	
+	private void score() {
+		/* Start by getting the values of RDF:type for the solutionResource
+		 * Then check my local ontology for class types with labels that match fragments of the solution text
+		 */
+		
+	}
+	
+	
+	
 	/*
 	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
 	 */
