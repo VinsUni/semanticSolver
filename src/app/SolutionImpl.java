@@ -10,7 +10,8 @@ import lombok.Setter;
 
 /**
  * @author Ben Griffiths
- * Represents a solution to a clue
+ * Represents a solution to a clue - at present, it is just used to parse the solution by removing language tags and other
+ * unwanted characters
  */
 public class SolutionImpl implements Solution {
 	private final int LANGUAGE_TAG_LENGTH = 3;
@@ -19,10 +20,11 @@ public class SolutionImpl implements Solution {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
 	
 	public SolutionImpl(String solutionText) {
-		this.setSolutionText(stripLanguageTag(solutionText));
+		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
+		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
 		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
 	}
-	
+
 	/*
 	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
 	 */
@@ -33,6 +35,16 @@ public class SolutionImpl implements Solution {
 				return solutionText.substring(0, positionOfLanguageTag);
 		}
 		return solutionText;
+	}
+	
+	/**
+	 * 
+	 * @param solutionWithoutLanguageTag
+	 * @return the solution after removing all characters that are not alphabetic or spaces or hyphens
+	 */
+	private String removeIllegalCharacters(String solutionWithoutLanguageTag) {
+		String parsedSolution = solutionWithoutLanguageTag.replaceAll("[^a-zA-Z -]", "");
+		return parsedSolution;
 	}
 
 	private int[] deriveSolutionStructure(String solutionText) {
