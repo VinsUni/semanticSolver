@@ -19,6 +19,7 @@ import com.hp.hpl.jena.query.ResultSet;
 import framework.Clue;
 import framework.ClueQuery;
 import framework.EntityRecogniser;
+import framework.Solution;
 
 /**
  * @author Ben Griffiths
@@ -89,5 +90,11 @@ public class ClueQueryImplMarkA implements ClueQuery {
 				this.candidateSolutions.add(label);
 		}
 		queryExecution.close();
+	}
+
+	@Override
+	public ArrayList<Solution> getSolutions() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

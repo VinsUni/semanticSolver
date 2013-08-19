@@ -10,7 +10,7 @@ import lombok.Setter;
 
 /**
  * @author Ben Griffiths
- *
+ * Represents a solution to a clue
  */
 public class SolutionImpl implements Solution {
 	private final int LANGUAGE_TAG_LENGTH = 3;

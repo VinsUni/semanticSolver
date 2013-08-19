@@ -42,6 +42,7 @@ import framework.Clue;
 import framework.ClueQuery;
 import framework.EntityRecogniser;
 import framework.Pop;
+import framework.Solution;
 
 /**
  * @author Ben Griffiths
@@ -295,5 +296,11 @@ public class ClueQueryImpl implements ClueQuery {
 			}
 		}
 		return thisWordInProperCase;
+	}
+
+	@Override
+	public ArrayList<Solution> getSolutions() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

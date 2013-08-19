@@ -11,5 +11,6 @@ import java.util.ArrayList;
  */
 public interface ClueQuery {
 	public ArrayList<String> getCandidateSolutions();
+	public ArrayList<Solution> getSolutions();
 	public Clue getClue();
 }
