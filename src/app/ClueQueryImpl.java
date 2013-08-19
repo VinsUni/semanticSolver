@@ -62,7 +62,8 @@ public class ClueQueryImpl implements ClueQuery {
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Selector> testedSelectors;
-	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions;
+	@Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions; // list of candidate solutions as raw Strings
+	@Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniser entityRecogniser;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
@@ -75,6 +76,19 @@ public class ClueQueryImpl implements ClueQuery {
 		this.setCandidateSolutions(new ArrayList<String>());
 		this.setExtractedResources(new ArrayList<Resource>());
 		this.setTestedSelectors(new ArrayList<Selector>());
+	}
+	
+	/**
+	 * getSolutions - wraps each candidate solution String into a Solution object and returns a list of candidate Solutions
+	 * @return ArrayList<Solution>
+	 */
+	@Override
+	public ArrayList<Solution> getSolutions() {
+		ArrayList<String> solutionStrings = this.getCandidateSolutions(); // REFACTOR
+		for(String solutionString : solutionStrings) {
+			this.solutions.add(new SolutionImpl(solutionString));
+		}
+		return this.solutions;
 	}
 	
 	/**
@@ -296,11 +310,5 @@ public class ClueQueryImpl implements ClueQuery {
 			}
 		}
 		return thisWordInProperCase;
-	}
-
-	@Override
-	public ArrayList<Solution> getSolutions() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

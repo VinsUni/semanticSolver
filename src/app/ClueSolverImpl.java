@@ -21,7 +21,7 @@ public class ClueSolverImpl implements ClueSolver {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String bestSolution;
-
+	
 	/**
 	 * For now, it just returns all of the proposedSolutions and sets the first one as the best solution,
 	 * but it will need to screen out those that do not solve the clue
@@ -75,5 +75,4 @@ public class ClueSolverImpl implements ClueSolver {
 	public String getBestSolution(Clue clue) {
 		return this.getBestSolution();
 	}
-
 }
