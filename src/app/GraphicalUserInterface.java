@@ -33,6 +33,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 	private JPanel contentPane;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel resultsLabel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	
 	@Override
 	public void createAndShow() {
@@ -40,14 +41,17 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 		
 		Dimension d = new Dimension(550, 700);
 		
-		contentPane = new JPanel();
-		contentPane.setPreferredSize(d);
+		// contentPane = new JPanel();
+		// contentPane.setPreferredSize(d);
+		
+		this.setDisplayPanel(new DisplayPanel());
+		
 		
 		this.setResultsLabel(new JLabel());
-		contentPane.add(this.getResultsLabel());
+		// contentPane.add(this.getResultsLabel());
 		
-		this.setContentPane(contentPane);
-		this.contentPane.setOpaque(true);
+		this.setContentPane(this.getDisplayPanel());
+		this.getDisplayPanel().setOpaque(true);
 		
 		this.setPreferredSize(d);
 		this.setMinimumSize(d);
@@ -100,7 +104,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 	
 	@Override
 	public void updateResults(String resultsMessage) {
-		this.getResultsLabel().setText(resultsMessage);
+		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
 		this.repaint();
 	}
 	
