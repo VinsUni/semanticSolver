@@ -47,11 +47,13 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 		contentPane.add(this.getResultsLabel());
 		
 		this.setContentPane(contentPane);
+		this.contentPane.setOpaque(true);
 		
 		this.setPreferredSize(d);
 		this.setMinimumSize(d);
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.pack();
 		this.setVisible(true);
 		this.start();
 	}
