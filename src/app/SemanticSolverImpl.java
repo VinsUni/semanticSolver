@@ -18,6 +18,7 @@ import framework.ClueSolver;
 import framework.EntityRecogniser;
 import framework.ClueQuery;
 import framework.SemanticSolver;
+import framework.Solution;
 import framework.UserInterface;
 
 /**
@@ -53,13 +54,28 @@ public class SemanticSolverImpl implements SemanticSolver {
 			System.out.println(uri); // DEBUGGING ***************************
 		*/
 		
-		ArrayList<String> candidateSolutions = solver.getCandidateSolutions(clue, query.getCandidateSolutions());
+		// ArrayList<String> candidateSolutions = solver.getCandidateSolutions(clue, query.getCandidateSolutions());
+		
+		ArrayList<Solution> solutions = solver.getSolutions(clue, query.getSolutions());
+		
+		
 		System.out.println("Candidate solutions:");
-		String results = "Candidate solutions: ";
+		String results = "Candidate solutions:\n";
+		
+		for(Solution solution: solutions) {
+			String solutionText = solution.getSolutionText();
+			System.out.println(solutionText);
+			results += solutionText + "\n";
+		}
+		
+		
+		
+		/*
 		for(String candidateSolution : candidateSolutions) {
 			System.out.println(candidateSolution);
 			results += "[" + candidateSolution + "] ";
 		}
+		*/
 		
 		final String FINAL_RESULTS = results;
 		final UserInterface UI = this.getUi();

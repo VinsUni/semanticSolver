@@ -18,4 +18,5 @@ public interface ClueSolver {
 	 */
 	public ArrayList<String> getCandidateSolutions(Clue clue, ArrayList<String> proposedSolutions);
 	public String getBestSolution(Clue clue);
+	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions);
 }
