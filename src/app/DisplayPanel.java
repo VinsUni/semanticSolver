@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -36,17 +37,21 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	private final int BORDER_TOP = 20;
 	private final int BORDER_BOTTOM = 20;
 	private final int BORDER_RIGHT = 20;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface uiFrame;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JTextField inputField;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask task;
 	
-    public DisplayPanel() {
+    public DisplayPanel(GraphicalUserInterface uiFrame) {
         super(new BorderLayout());
+        
+        this.setUiFrame(uiFrame);
 
         this.setSubmitClueButton(new JButton("Submit clue"));
-        this.getSubmitClueButton().setActionCommand("start");
+        this.getSubmitClueButton().setActionCommand("submitClue");
         this.getSubmitClueButton().addActionListener(this);
 
         this.setProgressBar(new JProgressBar(0, this.PROGRESS_BAR_MAXIMUM));
@@ -62,21 +67,33 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         this.getPanel().add(this.getProgressBar());
 
         this.add(panel, BorderLayout.PAGE_START);
-        this.add(new JScrollPane(getMessageArea()), BorderLayout.CENTER);
+        this.add(new JScrollPane(this.getMessageArea()), BorderLayout.CENTER);
+        
+        this.setInputField(new JTextField(20));
+		this.getInputField().setText("Enter your clue");
+		this.add(this.getInputField(), BorderLayout.SOUTH);
+        
         this.setBorder(BorderFactory.createEmptyBorder(this.BORDER_TOP, this.BORDER_LEFT, this.BORDER_BOTTOM, this.BORDER_RIGHT));
     }
 
     /**
-     * Invoked when the user presses the start button.
+     * Invoked when the user presses the "Submit clue" button.
      */
     @Override
-    public void actionPerformed(ActionEvent evt) {
+    public void actionPerformed(ActionEvent actionEvent) {
         this.getSubmitClueButton().setEnabled(false);
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         
+        String clueAsText = this.getInputField().getText();
+        this.getUiFrame().solveClue(clueAsText);
+        
+        this.getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+        
+        /*
         EntityRecogniserTask erTask = new EntityRecogniserTask(null, null, this);
         erTask.addPropertyChangeListener(this);
-        erTask.execute();
+        erTask.execute(); */
     }
 
     /**

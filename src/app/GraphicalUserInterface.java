@@ -29,13 +29,14 @@ import framework.UserInterface;
 public class GraphicalUserInterface extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	
 	@Override
 	public void createAndShow() {
 		this.setTitle("Semantic Crossword Solver");
 		
-		this.setDisplayPanel(new DisplayPanel());
+		this.setDisplayPanel(new DisplayPanel(this));
 		
 		this.setContentPane(this.getDisplayPanel());
 		this.getDisplayPanel().setOpaque(true);
@@ -48,6 +49,30 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 		this.setVisible(true);
 		this.start();
 	}
+	
+	public void solveClue(String userResponse) {
+		this.userResponse = userResponse;
+		final GraphicalUserInterface THIS_UI = this;
+		Thread thread = new Thread(new Runnable() {
+    		@Override
+			public void run() {		
+    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
+    			Clue clue;
+    			try {
+					clue = new ClueImpl(THIS_UI.getUserResponse());
+					semanticSolver.solve(clue);
+				} catch (InvalidClueException e) {
+					System.out.println("The clue you entered was invalid: " + e.getMessage());
+				}
+				catch(QueryExceptionHTTP e) {
+					System.out.println("DBpedia is unavailable at this time. Please try again");
+				}
+    		}	
+
+		});
+		thread.start();
+	}
+	
 	private void start() {
 		final UserInterface THIS_UI = this;
 		Thread thread = new Thread(new Runnable() {
