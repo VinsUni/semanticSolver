@@ -28,7 +28,9 @@ import lombok.AccessLevel;
 
 /**
  * @author Ben Griffiths
- *
+ * I need to move the progress bars, listening functionality, etc to the GraphicalUserInterface class *********************
+ * ****************************************************************************************************************
+ * ****************************************************************************************************************
  */
 @SuppressWarnings("serial")
 public class DisplayPanel extends JPanel implements ActionListener, PropertyChangeListener {
@@ -96,8 +98,10 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 		try {
 			clue = new ClueImpl(clueAsText);
 		} catch (InvalidClueException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			this.getMessageArea().append("The clue \"" + clueAsText + "\" + " + " is invalid. Please try again\n");
+			this.getSubmitClueButton().setEnabled(true);
+	        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+			return;
 		}
 		
 		this.setClue(clue);
@@ -120,11 +124,6 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         
         this.getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
-        
-        /*
-        EntityRecogniserTask erTask = new EntityRecogniserTask(null, null, this);
-        erTask.addPropertyChangeListener(this);
-        erTask.execute(); */
     }
 
     /**
