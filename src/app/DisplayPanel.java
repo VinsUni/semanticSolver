@@ -40,6 +40,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	private final int BORDER_TOP = 20;
 	private final int BORDER_BOTTOM = 20;
 	private final int BORDER_RIGHT = 20;
+	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface uiFrame;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JTextField inputField;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
@@ -60,7 +61,6 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 
         this.setProgressBar(new JProgressBar(0, this.PROGRESS_BAR_MAXIMUM));
         this.getProgressBar().setValue(0);
-        this.getProgressBar().setStringPainted(true);
         
         this.setMessageArea(new JTextArea(this.MESSAGE_AREA_ROWS, this.MESSAGE_AREA_COLUMNS));
         this.getMessageArea().setMargin(new Insets(this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET));
@@ -102,6 +102,10 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 		
 		this.setClue(clue);
         
+		this.getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+        this.getProgressBar().setStringPainted(true);
+		
+		
 		final DisplayPanel THIS_PANEL = this;
 	    Thread erThread = new Thread(new Runnable() {
 		        public void run() {
@@ -131,8 +135,8 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         if (propertyChangeEvent.getPropertyName().equals("progress")) {
             int progress = (Integer) propertyChangeEvent.getNewValue();
             this.getProgressBar().setValue(progress);
-            this.getMessageArea().append(String.format(
-                    "Completed %d%% of task.\n", this.getEntityRecogniserTask().getProgress()));
+            if(this.getProgressBar().getValue() == 100)
+            	this.getProgressBar().setStringPainted(false);
         } 
     }
 }
