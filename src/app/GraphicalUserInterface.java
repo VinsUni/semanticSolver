@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -31,30 +28,20 @@ import framework.UserInterface;
 @SuppressWarnings("serial")
 public class GraphicalUserInterface extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
-	private JPanel contentPane;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel resultsLabel;
+	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	
 	@Override
 	public void createAndShow() {
 		this.setTitle("Semantic Crossword Solver");
 		
-		Dimension d = new Dimension(550, 700);
-		
-		// contentPane = new JPanel();
-		// contentPane.setPreferredSize(d);
-		
 		this.setDisplayPanel(new DisplayPanel());
-		
-		
-		this.setResultsLabel(new JLabel());
-		// contentPane.add(this.getResultsLabel());
 		
 		this.setContentPane(this.getDisplayPanel());
 		this.getDisplayPanel().setOpaque(true);
 		
-		this.setPreferredSize(d);
-		this.setMinimumSize(d);
+		this.setPreferredSize(this.FRAME_DIMENSION);
+		this.setMinimumSize(this.FRAME_DIMENSION);
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.pack();
