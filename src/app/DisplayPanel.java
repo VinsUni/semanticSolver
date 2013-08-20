@@ -11,9 +11,6 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-import framework.Clue;
-import framework.EntityRecogniser;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -31,6 +28,14 @@ import lombok.AccessLevel;
  */
 @SuppressWarnings("serial")
 public class DisplayPanel extends JPanel implements ActionListener, PropertyChangeListener {
+	private final int PANEL_INSET = 5;
+	private final int MESSAGE_AREA_ROWS = 5;
+	private final int MESSAGE_AREA_COLUMNS = 20;
+	private final int PROGRESS_BAR_MAXIMUM = 100;
+	private final int BORDER_LEFT = 20;
+	private final int BORDER_TOP = 20;
+	private final int BORDER_BOTTOM = 20;
+	private final int BORDER_RIGHT = 20;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
@@ -44,12 +49,12 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         this.getSubmitClueButton().setActionCommand("start");
         this.getSubmitClueButton().addActionListener(this);
 
-        this.setProgressBar(new JProgressBar(0, 100));
+        this.setProgressBar(new JProgressBar(0, this.PROGRESS_BAR_MAXIMUM));
         this.getProgressBar().setValue(0);
         this.getProgressBar().setStringPainted(true);
-
-        this.setMessageArea(new JTextArea(5, 20));
-        this.getMessageArea().setMargin(new Insets(5,5,5,5));
+        
+        this.setMessageArea(new JTextArea(this.MESSAGE_AREA_ROWS, this.MESSAGE_AREA_COLUMNS));
+        this.getMessageArea().setMargin(new Insets(this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET));
         this.getMessageArea().setEditable(false);
 
         this.setPanel(new JPanel());
@@ -58,7 +63,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 
         this.add(panel, BorderLayout.PAGE_START);
         this.add(new JScrollPane(getMessageArea()), BorderLayout.CENTER);
-        this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        this.setBorder(BorderFactory.createEmptyBorder(this.BORDER_TOP, this.BORDER_LEFT, this.BORDER_BOTTOM, this.BORDER_RIGHT));
     }
 
     /**
