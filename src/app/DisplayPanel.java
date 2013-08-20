@@ -19,6 +19,9 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+import exception.InvalidClueException;
+import framework.Clue;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.AccessLevel;
@@ -43,7 +46,8 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask task;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
     public DisplayPanel(GraphicalUserInterface uiFrame) {
         super(new BorderLayout());
@@ -84,8 +88,31 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         this.getSubmitClueButton().setEnabled(false);
         this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         
+       
+        
         String clueAsText = this.getInputField().getText();
-        this.getUiFrame().solveClue(clueAsText);
+        
+        Clue clue = null;
+		try {
+			clue = new ClueImpl(clueAsText);
+		} catch (InvalidClueException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		this.setClue(clue);
+        
+		final DisplayPanel THIS_PANEL = this;
+	    Thread erThread = new Thread(new Runnable() {
+		        public void run() {
+		        	setEntityRecogniserTask(new EntityRecogniserTask(getClue(), THIS_PANEL));
+		            getEntityRecogniserTask().addPropertyChangeListener(THIS_PANEL);
+		            getEntityRecogniserTask().execute();
+		        }
+		    });
+	    erThread.start();
+        
+        //this.getUiFrame().solveClue(clueAsText);
         
         this.getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
@@ -101,11 +128,11 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
      */
     @Override
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-        if ("progress" == propertyChangeEvent.getPropertyName()) {
+        if (propertyChangeEvent.getPropertyName().equals("progress")) {
             int progress = (Integer) propertyChangeEvent.getNewValue();
             this.getProgressBar().setValue(progress);
             this.getMessageArea().append(String.format(
-                    "Completed %d%% of task.\n", getTask().getProgress()));
+                    "Completed %d%% of task.\n", this.getEntityRecogniserTask().getProgress()));
         } 
     }
 }
