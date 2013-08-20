@@ -32,6 +32,7 @@ import lombok.AccessLevel;
 @SuppressWarnings("serial")
 public class DisplayPanel extends JPanel implements ActionListener, PropertyChangeListener {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask task;
@@ -39,27 +40,25 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
     public DisplayPanel() {
         super(new BorderLayout());
 
-        //Create the demo's UI.
-        setSubmitClueButton(new JButton("Submit clue"));
-        getSubmitClueButton().setActionCommand("start");
-        getSubmitClueButton().addActionListener(this);
+        this.setSubmitClueButton(new JButton("Submit clue"));
+        this.getSubmitClueButton().setActionCommand("start");
+        this.getSubmitClueButton().addActionListener(this);
 
-        setProgressBar(new JProgressBar(0, 100));
-        getProgressBar().setValue(0);
-        getProgressBar().setStringPainted(true);
+        this.setProgressBar(new JProgressBar(0, 100));
+        this.getProgressBar().setValue(0);
+        this.getProgressBar().setStringPainted(true);
 
-        setMessageArea(new JTextArea(5, 20));
-        getMessageArea().setMargin(new Insets(5,5,5,5));
-        getMessageArea().setEditable(false);
+        this.setMessageArea(new JTextArea(5, 20));
+        this.getMessageArea().setMargin(new Insets(5,5,5,5));
+        this.getMessageArea().setEditable(false);
 
-        JPanel panel = new JPanel();
-        panel.add(getSubmitClueButton());
-        panel.add(getProgressBar());
+        this.setPanel(new JPanel());
+        this.getPanel().add(this.getSubmitClueButton());
+        this.getPanel().add(this.getProgressBar());
 
-        add(panel, BorderLayout.PAGE_START);
-        add(new JScrollPane(getMessageArea()), BorderLayout.CENTER);
-        setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-
+        this.add(panel, BorderLayout.PAGE_START);
+        this.add(new JScrollPane(getMessageArea()), BorderLayout.CENTER);
+        this.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
     }
 
     /**
@@ -67,8 +66,8 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
      */
     @Override
     public void actionPerformed(ActionEvent evt) {
-        getSubmitClueButton().setEnabled(false);
-        setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        this.getSubmitClueButton().setEnabled(false);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         
         EntityRecogniserTask erTask = new EntityRecogniserTask(null, null, this);
         erTask.addPropertyChangeListener(this);
@@ -79,11 +78,11 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
      * Invoked when task's progress property changes.
      */
     @Override
-    public void propertyChange(PropertyChangeEvent evt) {
-        if ("progress" == evt.getPropertyName()) {
-            int progress = (Integer) evt.getNewValue();
-            getProgressBar().setValue(progress);
-            getMessageArea().append(String.format(
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
+        if ("progress" == propertyChangeEvent.getPropertyName()) {
+            int progress = (Integer) propertyChangeEvent.getNewValue();
+            this.getProgressBar().setValue(progress);
+            this.getMessageArea().append(String.format(
                     "Completed %d%% of task.\n", getTask().getProgress()));
         } 
     }
