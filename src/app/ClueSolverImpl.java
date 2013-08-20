@@ -28,7 +28,7 @@ public class ClueSolverImpl implements ClueSolver {
 	 * (e.g. due to being the wrong number of words/wrong length 
 	 */
 	@Override
-	public ArrayList<String> getSolutions(Clue clue, ArrayList<String> proposedSolutions) {
+	public ArrayList<String> getCandidateSolutions(Clue clue, ArrayList<String> proposedSolutions) {
 		proposedSolutions = this.filterByLanguage(proposedSolutions);
 		ArrayList<String> solutions = new ArrayList<String>();
 		for(String proposedSolution : proposedSolutions) {

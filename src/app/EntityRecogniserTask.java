@@ -34,19 +34,17 @@ public class EntityRecogniserTask extends SwingWorker<Void, Void> {
      */
     @Override
     public Void doInBackground() {
-        
         int progress = 0;
-        //Initialize progress property of SwingWorker
-        setProgress(0);
+        this.setProgress(0); // Initialise progress property of SwingWorker
 
-    int combinedLengthOfQueries = this.getEntityRecogniser().getClueFragments().size();
-    int taskLength = 100 / combinedLengthOfQueries;
+        int combinedLengthOfQueries = this.getEntityRecogniser().getClueFragments().size();
+        int taskLength = 100 / combinedLengthOfQueries;
 
         while (progress < 100) {
             
 	/* extract entities for next clue fragment */
 	
-            setProgress(progress + taskLength); // one query has been completed
+            this.setProgress(progress + taskLength); // one query has been completed
         }
         return null;
     }

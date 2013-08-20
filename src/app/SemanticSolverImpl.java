@@ -53,7 +53,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 			System.out.println(uri); // DEBUGGING ***************************
 		*/
 		
-		ArrayList<String> candidateSolutions = solver.getSolutions(clue, query.getCandidateSolutions());
+		ArrayList<String> candidateSolutions = solver.getCandidateSolutions(clue, query.getCandidateSolutions());
 		System.out.println("Candidate solutions:");
 		String results = "Candidate solutions: ";
 		for(String candidateSolution : candidateSolutions) {
