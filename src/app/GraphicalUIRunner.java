@@ -18,12 +18,14 @@ import framework.UserInterface;
  */
 public class GraphicalUIRunner {
 	public static void main(String[] args) {
+		/* log4j logging configuration */
+		Logger.getRootLogger().setLevel(Level.INFO);
+		PropertyConfigurator.configure("log4j.properties");
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				
-				/* log4j logging configuration */
-				Logger.getRootLogger().setLevel(Level.INFO);
-				PropertyConfigurator.configure("log4j.properties");
+				
 				
 				UserInterface ui = new GraphicalUserInterface();
 				ui.createAndShow();

@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import lombok.AccessLevel;
@@ -30,7 +31,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
+	@Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
 	
 	@Override
 	public void createAndShow() {
@@ -56,11 +57,11 @@ public class GUIMarkA extends JFrame implements UserInterface {
 		Thread thread = new Thread(new Runnable() {
     		@Override
 			public void run() {		
-    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
+    			//SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
     			Clue clue;
     			try {
 					clue = new ClueImpl(THIS_UI.getUserResponse());
-					semanticSolver.solve(clue);
+					//semanticSolver.solve(clue);
 				} catch (InvalidClueException e) {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 				}
@@ -80,7 +81,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
 			public void run() {
     			String userResponse = "";
     			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
+    			//SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
     			while(!userResponse.equals(EXIT_REQUEST)) {
     				System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
     				try {
@@ -100,7 +101,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
     						continue;
     					}
     					try {
-    						semanticSolver.solve(clue);
+    						//semanticSolver.solve(clue);
     					}
     					catch(QueryExceptionHTTP e) {
     						System.out.println("DBpedia is unavailable at this time. Please try again");
@@ -118,6 +119,12 @@ public class GUIMarkA extends JFrame implements UserInterface {
 	public void updateResults(String resultsMessage) {
 		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
 		this.repaint();
+	}
+
+	@Override
+	public DisplayPanel getDisplayPanel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

@@ -31,7 +31,7 @@ import framework.EntityRecogniser;
  * @author Ben Griffiths
  *
  */
-public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
+public class EntityRecogniserTaskMarkA extends SwingWorker<Void, Void> {
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
@@ -52,19 +52,18 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResources;
 
 	/* This constructor will be used to instantiate a task that recognises entities in a clue */
-	public EntityRecogniserTask(Clue clue) {
-		super(); // call SwingWorker Default constructor
+	public EntityRecogniserTaskMarkA(Clue clue) {
+		// call SwingWorker Default constructor
 		this.setClue(clue);
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(this.getClue().getSourceClue());
-		this.setRecognisedResources(new ArrayList<String>());
 	}
     
 	/*
      * Main task. Executed in background thread. 
      */
     @Override
-    public ArrayList<String> doInBackground() {
+    public Void doInBackground() {
         int progress = 0;
         this.setProgress(progress); // Initialise progress property of SwingWorker
         
@@ -77,7 +76,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
         	progress += taskLength;
             this.setProgress(progress); // one query has been completed
         }
-        return this.getRecognisedResources();
+        return null;
     }
     
     /*

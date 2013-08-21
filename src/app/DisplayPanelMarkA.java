@@ -49,7 +49,7 @@ public class DisplayPanelMarkA extends JPanel implements ActionListener, Propert
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTaskMarkA entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
     public DisplayPanelMarkA(GUIMarkA uiFrame) {
@@ -113,7 +113,7 @@ public class DisplayPanelMarkA extends JPanel implements ActionListener, Propert
 		final DisplayPanelMarkA THIS_PANEL = this;
 	    Thread erThread = new Thread(new Runnable() {
 		        public void run() {
-		        	setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
+		        	setEntityRecogniserTask(new EntityRecogniserTaskMarkA(getClue()));
 		            getEntityRecogniserTask().addPropertyChangeListener(THIS_PANEL);
 		            getEntityRecogniserTask().execute();
 		        }

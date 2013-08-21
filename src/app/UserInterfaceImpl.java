@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.swing.JButton;
+
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
@@ -23,7 +25,7 @@ public class UserInterfaceImpl implements UserInterface {
 	public void createAndShow() {
 		String userResponse = "";
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		SemanticSolver semanticSolver = new SemanticSolverImpl(this);
+		//SemanticSolver semanticSolver = new SemanticSolverImpl(this);
 		while(!userResponse.equals(EXIT_REQUEST)) {
 			System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
 			try {
@@ -43,7 +45,7 @@ public class UserInterfaceImpl implements UserInterface {
 					continue;
 				}
 				try {
-					semanticSolver.solve(clue);
+					//semanticSolver.solve(clue);
 				}
 				catch(QueryExceptionHTTP e) {
 					System.out.println("DBpedia is unavailable at this time. Please try again");
@@ -56,5 +58,11 @@ public class UserInterfaceImpl implements UserInterface {
 	public void updateResults(String resultsMessage) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public DisplayPanel getDisplayPanel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -3,7 +3,9 @@
  */
 package app;
 
+import java.awt.Cursor;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
 
@@ -26,14 +28,94 @@ import framework.UserInterface;
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) UserInterface ui;
+	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	
-	public SemanticSolverImpl(UserInterface ui) {
-		this.setUi(ui);
+	
+	public SemanticSolverImpl(GraphicalUserInterface userInterface) {
+		this.setUserInterface(userInterface);
 	}
 
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
+		this.setClue(clue);
+        /* Update the GUI on the EDT */
+        SwingUtilities.invokeLater(new Runnable() {
+                 public void run() {
+                         getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(false);
+                         getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+                         getUserInterface().getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+                         getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
+                 }
+        });
+        
+        this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
+
+        Thread erThread = new Thread(new Runnable() {
+                public void run() {
+                         getEntityRecogniserTask().addPropertyChangeListener(getUserInterface());
+                         getEntityRecogniserTask().execute();
+                }
+            });
+         erThread.start();
+        
+        try {
+			ArrayList<String> recognisedResourceUris = this.getEntityRecogniserTask().get(); // will block until ERTask has finished
+			System.out.println("Recognised resources: ");
+		     for(String recognisedResource : recognisedResourceUris)
+		        	System.out.println("<" + recognisedResource + ">");
+        } catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+        catch (ExecutionException e) {
+        	// TODO Auto-generated catch block
+        	e.printStackTrace();
+        }
+        
+
+        /*              
+        this.setClueQueryTask(new ClueQueryTask(this.getClue(), recognisedResourceUris));
+        
+        Thread cqThread = new Thread(new Runnable() {
+                public void run() {
+                          getClueQueryTask().addPropertyChangeListener(getUserInterface());
+                         getClueQueryTask().execute();
+                }
+            });
+         cqThread.start();
+        ArrayList<Solution> proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is complete
+        
+        this.setClueSolver(ClueSolverImpl());
+        
+        ArrayList<Solution> solutions = solver.getSolutions(clue, proposedSolutions);
+
+        String resultsBuffer = "Candidate solutions:\n";
+
+        for(Solution solution: solutions) {
+                 String solutionText = solution.getSolutionText();
+                 resultsBuffer += solutionText + "\n";
+        }
+       
+        this.setResults(resultsBuffer);
+        */
+       
+        /* Update the GUI on the EDT */
+        SwingUtilities.invokeLater(new Runnable() {
+        @Override
+                 public void run() {
+                 // getUserInterface().updateResults(getResults());
+                 getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
+                 getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                 }
+        });
+	}
+	
+	
+	
+	public void oldSolveMethod(Clue clue) throws QueryExceptionHTTP {
 		EntityRecogniser entityRecogniser = new EntityRecogniserImpl(clue);
 		ClueQuery query = new ClueQueryImpl(clue, entityRecogniser);
 		ClueSolver solver = new ClueSolverImpl();
@@ -78,11 +160,11 @@ public class SemanticSolverImpl implements SemanticSolver {
 		*/
 		
 		final String FINAL_RESULTS = results;
-		final UserInterface UI = this.getUi();
+		//final UserInterface UI = this.getUi();
 		SwingUtilities.invokeLater(new Runnable() {
     		@Override
 			public void run() {
-    			UI.updateResults(FINAL_RESULTS);
+    			//UI.updateResults(FINAL_RESULTS);
 			}
 		});
 		System.out.println("SemanticSolverImpl is running on the thread: " + Thread.currentThread().getName()); // DEBUGGING ********

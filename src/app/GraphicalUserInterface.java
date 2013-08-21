@@ -41,7 +41,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -176,19 +176,28 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
         this.getDisplayPanel().getProgressBar().setStringPainted(true);
 		
-		this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
-        this.getEntityRecogniserTask().addPropertyChangeListener(this);
-	    Thread erThread = new Thread(new Runnable() {
+        
+		//this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
+        //this.getEntityRecogniserTask().addPropertyChangeListener(this);
+	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
-		            getEntityRecogniserTask().execute();
+		        	getSemanticSolver().solve(getClue());
 		        }
 		    });
-	    erThread.start();
+	    solverThread.start();
         
         //this.getUiFrame().solveClue(clueAsText);
         
         this.getDisplayPanel().getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+    }
+    
+    /**
+     * Provided for convenience - used by SemanticSolverImpl
+     * @return
+     */
+    public JButton getSubmitClueButton() {
+    	return this.getDisplayPanel().getSubmitClueButton();
     }
 	
 }
