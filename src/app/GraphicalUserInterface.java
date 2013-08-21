@@ -3,12 +3,22 @@
  */
 package app;
 
+import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -26,20 +36,27 @@ import framework.UserInterface;
  *
  */
 @SuppressWarnings("serial")
-public class GraphicalUserInterface extends JFrame implements UserInterface {
+public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String EXIT_REQUEST = "EXIT";
+	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
 	@Override
 	public void createAndShow() {
+		this.setSemanticSolver(new SemanticSolverImpl(this));
 		this.setTitle("Semantic Crossword Solver");
 		
-		//this.setDisplayPanel(new DisplayPanel(this));
+		this.setDisplayPanel(new DisplayPanel());
+		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
+		this.getDisplayPanel().setOpaque(true);
 		
 		this.setContentPane(this.getDisplayPanel());
-		this.getDisplayPanel().setOpaque(true);
 		
 		this.setPreferredSize(this.FRAME_DIMENSION);
 		this.setMinimumSize(this.FRAME_DIMENSION);
@@ -51,7 +68,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 	}
 	
 	public void solveClue(String userResponse) {
-		this.userResponse = userResponse;
+		
+		/*this.userResponse = userResponse;
 		final GraphicalUserInterface THIS_UI = this;
 		Thread thread = new Thread(new Runnable() {
     		@Override
@@ -70,17 +88,16 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
     		}	
 
 		});
-		thread.start();
+		thread.start(); */
 	}
 	
 	private void start() {
-		final UserInterface THIS_UI = this;
+		
 		Thread thread = new Thread(new Runnable() {
     		@Override
 			public void run() {
     			String userResponse = "";
     			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
     			while(!userResponse.equals(EXIT_REQUEST)) {
     				System.out.println("Please enter a clue: (e.g. \"member of The Beatles [4, 6]\") or EXIT to finish");
     				try {
@@ -92,15 +109,14 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
     				}
     				if(!userResponse.equals(EXIT_REQUEST)) {
     					
-    					Clue clue;
     					try {
-    						clue = new ClueImpl(userResponse);
+    						setClue(new ClueImpl(userResponse));
     					} catch (InvalidClueException e) {
     						System.out.println("The clue you entered was invalid: " + e.getMessage());
     						continue;
     					}
     					try {
-    						semanticSolver.solve(clue);
+    						getSemanticSolver().solve(getClue());
     					}
     					catch(QueryExceptionHTTP e) {
     						System.out.println("DBpedia is unavailable at this time. Please try again");
@@ -119,5 +135,60 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
 		this.repaint();
 	}
+
+	/**
+     * Invoked when task's progress property changes.
+     */
+    @Override
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
+        if (propertyChangeEvent.getPropertyName().equals("progress")) {
+            int progress = (Integer) propertyChangeEvent.getNewValue();
+            this.getDisplayPanel().getProgressBar().setValue(progress);
+            if(this.getDisplayPanel().getProgressBar().getValue() == 100)
+            	this.getDisplayPanel().getProgressBar().setStringPainted(false);
+        } 
+    }
+
+    /**
+     * Invoked when the user presses the "Submit clue" button.
+     */
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        
+       
+        
+        String clueAsText = this.getDisplayPanel().getInputField().getText();
+        
+        Clue clue = null;
+		try {
+			clue = new ClueImpl(clueAsText);
+		} catch (InvalidClueException e) {
+			this.getDisplayPanel().getMessageArea().append("The clue \"" + clueAsText + "\" + " + " is invalid. Please try again\n");
+			this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
+	        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+			return;
+		}
+		
+		this.setClue(clue);
+        
+		this.getDisplayPanel().getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+        this.getDisplayPanel().getProgressBar().setStringPainted(true);
+		
+		this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
+        this.getEntityRecogniserTask().addPropertyChangeListener(this);
+	    Thread erThread = new Thread(new Runnable() {
+		        public void run() {
+		            getEntityRecogniserTask().execute();
+		        }
+		    });
+	    erThread.start();
+        
+        //this.getUiFrame().solveClue(clueAsText);
+        
+        this.getDisplayPanel().getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+    }
 	
 }

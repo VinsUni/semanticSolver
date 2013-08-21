@@ -50,14 +50,11 @@ public class EntityRecogniserTask extends SwingWorker<Void, Void> {
 			"http://dbpedia.org/resource/Category:"}; // a list of namespaces whose terms should be excluded from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResources;
-	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
 
 	/* This constructor will be used to instantiate a task that recognises entities in a clue */
-	public EntityRecogniserTask(Clue clue, DisplayPanelMarkA displayPanel) {
+	public EntityRecogniserTask(Clue clue) {
 		// call SwingWorker Default constructor
 		this.setClue(clue);
-		this.setDisplayPanel(displayPanel);
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(this.getClue().getSourceClue());
 	}
@@ -88,7 +85,6 @@ public class EntityRecogniserTask extends SwingWorker<Void, Void> {
     @Override
     public void done() {
     	this.setProgress(100);
-        this.getDisplayPanel().getMessageArea().append("Entity Recognition complete!\n");
     }
     
     private void extractEntities(String clueFragment) {

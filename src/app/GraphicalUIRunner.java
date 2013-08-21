@@ -25,7 +25,7 @@ public class GraphicalUIRunner {
 				Logger.getRootLogger().setLevel(Level.INFO);
 				PropertyConfigurator.configure("log4j.properties");
 				
-				UserInterface ui = new GUIMarkA();
+				UserInterface ui = new GraphicalUserInterface();
 				ui.createAndShow();
 			}
 		});

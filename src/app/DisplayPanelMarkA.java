@@ -113,7 +113,7 @@ public class DisplayPanelMarkA extends JPanel implements ActionListener, Propert
 		final DisplayPanelMarkA THIS_PANEL = this;
 	    Thread erThread = new Thread(new Runnable() {
 		        public void run() {
-		        	setEntityRecogniserTask(new EntityRecogniserTask(getClue(), THIS_PANEL));
+		        	setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
 		            getEntityRecogniserTask().addPropertyChangeListener(THIS_PANEL);
 		            getEntityRecogniserTask().execute();
 		        }
