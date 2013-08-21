@@ -26,7 +26,7 @@ import framework.UserInterface;
  *
  */
 @SuppressWarnings("serial")
-public class GraphicalUserInterface extends JFrame implements UserInterface {
+public class GUIMarkA extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
@@ -52,7 +52,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface {
 	
 	public void solveClue(String userResponse) {
 		this.userResponse = userResponse;
-		final GraphicalUserInterface THIS_UI = this;
+		final GUIMarkA THIS_UI = this;
 		Thread thread = new Thread(new Runnable() {
     		@Override
 			public void run() {		

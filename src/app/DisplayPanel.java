@@ -43,7 +43,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	private final int BORDER_BOTTOM = 20;
 	private final int BORDER_RIGHT = 20;
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface uiFrame;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GUIMarkA uiFrame;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JTextField inputField;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
@@ -52,7 +52,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
-    public DisplayPanel(GraphicalUserInterface uiFrame) {
+    public DisplayPanel(GUIMarkA uiFrame) {
         super(new BorderLayout());
         
         this.setUiFrame(uiFrame);
