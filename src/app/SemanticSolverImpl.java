@@ -32,6 +32,9 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
+	
 	
 	public SemanticSolverImpl(GraphicalUserInterface userInterface) {
 		this.setUserInterface(userInterface);
