@@ -73,7 +73,12 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
         int taskLength = (100 / combinedLengthOfQueries);
         
         for(String clueFragment : this.getClueFragments()) {
-        	this.extractEntities(clueFragment); // extract entities for next clue fragment
+        	try {
+        		this.extractEntities(clueFragment); // extract entities for next clue fragment
+        	}
+        	catch (QueryExceptionHTTP e) {
+        		System.err.println("DBpedia connection dropped. Entity recognition for clue fragment " + clueFragment + " failed");
+        	}
         	progress += taskLength;
             this.setProgress(progress); // one query has been completed
         }
@@ -88,7 +93,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
     	this.setProgress(100);
     }
     
-    private void extractEntities(String clueFragment) {
+    private void extractEntities(String clueFragment) throws QueryExceptionHTTP {
 		if(considerAsPredicateOnly(clueFragment))
 			return;
 		

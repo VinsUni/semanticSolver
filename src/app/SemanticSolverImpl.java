@@ -31,9 +31,14 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryManager clueQueryManager;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	
 	
 	public SemanticSolverImpl(GraphicalUserInterface userInterface) {
@@ -45,6 +50,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 		this.setClue(clue);
         
         this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
+        this.setClueFragments(this.getEntityRecogniserTask().getClueFragments());
 
         Thread erThread = new Thread(new Runnable() {
                 public void run() {
@@ -53,13 +59,21 @@ public class SemanticSolverImpl implements SemanticSolver {
                 }
             });
          erThread.start();
+         
+         
+         ArrayList<String> recognisedResourceUris = null;
         
         try {
-			ArrayList<String> recognisedResourceUris = this.getEntityRecogniserTask().get(); // will block until ERTask has finished
+			recognisedResourceUris = this.getEntityRecogniserTask().get(); // will block until ERTask has finished
 			System.out.println("Recognised resources: ");
 		     for(String recognisedResource : recognisedResourceUris)
 		        	System.out.println("<" + recognisedResource + ">");
-        } catch (InterruptedException e) {
+        } 
+        catch (QueryExceptionHTTP e) {
+        	throw e;
+        }
+        
+        catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
@@ -69,21 +83,33 @@ public class SemanticSolverImpl implements SemanticSolver {
         }
         
 
-        /*              
-        this.setClueQueryTask(new ClueQueryTask(this.getClue(), recognisedResourceUris));
+                     
+        // this.setClueQueryManager(new ClueQueryManager(this.getUserInterface(), this.getClue(), this.getClueFragments(), recognisedResourceUris));
+        
+        this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
         
         Thread cqThread = new Thread(new Runnable() {
                 public void run() {
-                          getClueQueryTask().addPropertyChangeListener(getUserInterface());
-                         getClueQueryTask().execute();
+                    getClueQueryTask().addPropertyChangeListener(getUserInterface());
+                    getClueQueryTask().execute();
                 }
             });
-         cqThread.start();
-        ArrayList<Solution> proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is complete
+        cqThread.start();
         
-        this.setClueSolver(ClueSolverImpl());
+        ArrayList<Solution> proposedSolutions = null;
+		try {
+			proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is finished
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         
-        ArrayList<Solution> solutions = solver.getSolutions(clue, proposedSolutions);
+        this.setClueSolver(new ClueSolverImpl());
+        
+        ArrayList<Solution> solutions = this.getClueSolver().getSolutions(clue, proposedSolutions);
 
         String resultsBuffer = "Candidate solutions:\n";
 
@@ -93,13 +119,13 @@ public class SemanticSolverImpl implements SemanticSolver {
         }
        
         this.setResults(resultsBuffer);
-        */
+        
        
         /* Update the GUI on the EDT */
         SwingUtilities.invokeLater(new Runnable() {
         @Override
                  public void run() {
-                 // getUserInterface().updateResults(getResults());
+                 getUserInterface().updateResults(getResults());
                  getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
                  getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
                  }

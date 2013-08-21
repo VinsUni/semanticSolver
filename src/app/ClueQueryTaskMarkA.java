@@ -9,23 +9,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
-
+import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
-
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.LiteralRequiredException;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
@@ -33,15 +33,16 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 import com.hp.hpl.jena.util.FileManager;
-
 import com.hp.hpl.jena.vocabulary.RDFS;
 
-import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
 
 import experiments.NsPrefixLoader;
 import framework.Clue;
-import framework.ClueQuery;
 import framework.EntityRecogniser;
 import framework.Pop;
 import framework.Solution;
@@ -50,83 +51,68 @@ import framework.Solution;
  * @author Ben Griffiths
  *
  */
-
-public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
-	private final String SCHEMA_FILE_NAME = "popv7.owl";
-	
+public class ClueQueryTaskMarkA extends SwingWorker<ArrayList<Solution>, Void> {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
-	
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String ENG_LANG = "en";
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model schema;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
 	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryManager clueQueryManager;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions; // list of candidate solutions as raw Strings
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
-	
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Selector> testedSelectors;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions; // list of candidate solutions as raw Strings
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String resourceUri;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
-	
-	public ClueQueryTask(Clue clue, ArrayList<String> clueFragments, ArrayList<String> recognisedResourceUris) {
-		super();
+
+	/* This constructor will be used to instantiate a task that recognises entities in a clue */
+	public ClueQueryTaskMarkA(String resourceUri, Clue clue, ArrayList<String> clueFragments,
+			Reasoner reasoner, ClueQueryManager clueQueryManager) {
+		super(); // call SwingWorker Default constructor
+		this.setResourceUri(resourceUri);
 		this.setClue(clue);
 		this.setClueFragments(clueFragments);
-		this.setRecognisedResourceUris(recognisedResourceUris);
-		this.setCandidateSolutions(new ArrayList<String>());
-		this.setSolutions(new ArrayList<Solution>());
-		this.setExtractedResources(new ArrayList<Resource>());
-		this.setSchema(FileManager.get().loadModel(this.SCHEMA_FILE_NAME));
-		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
-	    this.setReasoner(reasoner.bindSchema(schema));
+		this.setReasoner(reasoner);
+		this.setClueQueryManager(clueQueryManager);
 	}
-	
-	@Override
-	protected ArrayList<Solution> doInBackground() throws Exception {
-		int progress = 0;
-        this.setProgress(progress); // Initialise progress property of SwingWorker
- 
-        int combinedLengthOfQueries = this.getRecognisedResourceUris().size();
-        int taskLength = (100 / combinedLengthOfQueries);
-        
-        for(String resourceUri : this.getRecognisedResourceUris()) {
-        	
-			Model data;
-			try {
-				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
-				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
-			    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel); // adds any candidate solutions from the model to the candidateSolutions list
-			    for(Solution sol : sols)
-			    	this.solutions.add(sol);
-			}
-			catch(QueryExceptionHTTP e) {
-				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
-			}
-			
-        	progress += taskLength;
-            this.setProgress(progress); // one query has been completed
-        }
-        return this.solutions;
-	}
-	
-    /*
-     * Executed on EDT
+    
+	/*
+     * Main task. Executed in background thread. 
      */
     @Override
-    public void done() {
-    	this.setProgress(100);
+    public ArrayList<Solution> doInBackground() {
+    	
+    	Model data;
+		try {
+			data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
+			InfModel infModel = ModelFactory.createInfModel(reasoner, data);
+		    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel); // adds any candidate solutions from the model to the candidateSolutions list
+		    for(Solution sol : sols)
+		    	this.solutions.add(sol);
+		}
+		catch(QueryExceptionHTTP e) {
+			System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+			this.cancel(false);
+		}
+		
+		// this.getClueQueryManager().getSolutions().addAll(this.solutions);
+		synchronized(this.getClueQueryManager()) {
+			this.getClueQueryManager().updateProgress();
+		}
+		return this.solutions;
+    	
     }
-	
-	private ArrayList<Solution> extractCandidateSolutions(InfModel infModel) {
+    
+    private ArrayList<Solution> extractCandidateSolutions(InfModel infModel) {
 		ArrayList<Solution> candidateSols = new ArrayList<Solution>();
 		
 		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
@@ -212,7 +198,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		}
 		return candidateSols;
 	}
-	
+
 	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
 		
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
@@ -246,7 +232,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		Model model = queryExecution.execConstruct();
 		
 		
-		
+		/*
 		// DEBUGGING ***************************************************************
 		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
@@ -271,8 +257,11 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
-
+		} */
+		
+		
+		
+		
 		queryExecution.close();
 		return model;
 	}

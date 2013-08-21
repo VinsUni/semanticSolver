@@ -56,7 +56,7 @@ public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private int taskLength;
 	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<ClueQueryTask> clueQueryTasks;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<ClueQueryTaskMarkA> clueQueryTasks;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model schema;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
@@ -73,15 +73,20 @@ public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions; // list of candidate solutions as raw Strings
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
+	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
-
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
+	
+	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
 	
-	public ClueQueryManager(GraphicalUserInterface userInterface, Clue clue, ArrayList<String> recognisedResourceUris) {
+	public ClueQueryManager(GraphicalUserInterface userInterface, Clue clue, ArrayList<String> clueFragments,
+			ArrayList<String> recognisedResourceUris) {
 		this.setUserInterface(userInterface);
 		this.setClue(clue);
+		this.setClueFragments(clueFragments);
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setCandidateSolutions(new ArrayList<String>());
 		this.setSolutions(new ArrayList<Solution>());
@@ -101,7 +106,7 @@ public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
         
         this.setInstance(this);
         
-        this.setClueQueryTasks(new ArrayList<ClueQueryTask>());
+        this.setClueQueryTasks(new ArrayList<ClueQueryTaskMarkA>());
 	    
 		for(String resourceUri : this.getRecognisedResourceUris()) {
 			this.setCurrentResourceUri(resourceUri);
@@ -109,10 +114,10 @@ public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
 			
 			Thread clueQueryThread = new Thread(new Runnable() {
                 public void run() {
-                	ClueQueryTask clueQueryTask = new ClueQueryTask(getCurrentResourceUri(), getClue(), 
+                	ClueQueryTaskMarkA clueQueryTask = new ClueQueryTaskMarkA(getCurrentResourceUri(), getClue(), getClueFragments(),
                 			getReasoner(), getInstance());
                 	getClueQueryTasks().add(clueQueryTask);
-                    clueQueryTask.addPropertyChangeListener(getUserInterface());
+                    
                     clueQueryTask.execute();
                 }
             });
@@ -120,17 +125,16 @@ public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
 			
 		}
 		
-		for(ClueQueryTask clueQueryTask : getClueQueryTasks()) {
+		for(ClueQueryTaskMarkA clueQueryTask : getClueQueryTasks()) {
 			ArrayList<Solution> sols = clueQueryTask.get();
 			this.getSolutions().addAll(sols);
 		}
 		return this.getSolutions();
 	}
 	
-	public void updateProgress() {
+	public synchronized void updateProgress() {
 		int newProgress = this.getProgress() + this.getTaskLength();
         this.setProgress(newProgress); // one query has been completed
-		
 	}
 	
 	 /*
