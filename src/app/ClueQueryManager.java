@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.SwingWorker;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -43,61 +45,99 @@ import framework.ClueQuery;
 import framework.EntityRecogniser;
 import framework.Pop;
 import framework.Solution;
+import framework.UserInterface;
 
 /**
  * @author Ben Griffiths
  *
  */
-public class ClueQueryManager implements ClueQuery {
+public class ClueQueryManager extends SwingWorker<ArrayList<Solution>, Void> {
 	private final String SCHEMA_FILE_NAME = "popv7.owl";
+
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private int taskLength;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<ClueQueryTask> clueQueryTasks;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model schema;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
+	
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
+	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String currentResourceUri; // to be accessed by anonymous inner Runnable
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryManager instance; // to be accessed by anonymous inner Runnable
+	
+	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Selector> testedSelectors;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> candidateSolutions; // list of candidate solutions as raw Strings
-	@Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
 	
-	public ClueQueryManager(Clue clue, ArrayList<String> recognisedResourceUris) {
+	public ClueQueryManager(GraphicalUserInterface userInterface, Clue clue, ArrayList<String> recognisedResourceUris) {
+		this.setUserInterface(userInterface);
 		this.setClue(clue);
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setCandidateSolutions(new ArrayList<String>());
 		this.setSolutions(new ArrayList<Solution>());
 		this.setExtractedResources(new ArrayList<Resource>());
-		this.setTestedSelectors(new ArrayList<Selector>());
-	}
-	
-	/**
-	 * getSolutions - wraps each candidate solution String into a Solution object and returns a list of candidate Solutions
-	 * @return ArrayList<Solution>
-	 * THIS NEEDS TO ALSO EITHER PASS THE MODEL TO THE SOLUTION OBJECT SO IT CAN SCORE ITSELF, OR PASS THE SCORE TO THE SOLUTION
-	 * OBJECT
-	 */
-	@Override
-	public ArrayList<Solution> getSolutions() {
-		/*
-		Model schema = FileManager.get().loadModel(this.SCHEMA_FILE_NAME);
+		this.setSchema(FileManager.get().loadModel(this.SCHEMA_FILE_NAME));
 		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
-	    reasoner = reasoner.bindSchema(schema);
-		for(String resourceUri : recognisedResourceURIs) {
-			Model data;
-			try {
-				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
-				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
-			    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel); // adds any candidate solutions from the model to the candidateSolutions list
-			    for(Solution sol : sols)
-			    	this.solutions.add(sol);
-			}
-			catch(QueryExceptionHTTP e) {
-				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
-			}
+	    this.setReasoner(reasoner.bindSchema(schema));
+	}
+
+	@Override
+	protected ArrayList<Solution> doInBackground() throws Exception {
+		
+        this.setProgress(0); // Initialise progress property of SwingWorker
+
+        int numberOfRecognisedResources = this.getRecognisedResourceUris().size();
+        this.setTaskLength((100 / numberOfRecognisedResources));
+        
+        this.setInstance(this);
+        
+        this.setClueQueryTasks(new ArrayList<ClueQueryTask>());
+	    
+		for(String resourceUri : this.getRecognisedResourceUris()) {
+			this.setCurrentResourceUri(resourceUri);
+			
+			
+			Thread clueQueryThread = new Thread(new Runnable() {
+                public void run() {
+                	ClueQueryTask clueQueryTask = new ClueQueryTask(getCurrentResourceUri(), getClue(), 
+                			getReasoner(), getInstance());
+                	getClueQueryTasks().add(clueQueryTask);
+                    clueQueryTask.addPropertyChangeListener(getUserInterface());
+                    clueQueryTask.execute();
+                }
+            });
+         	clueQueryThread.start();
 			
 		}
-		*/
-		return this.solutions;
+		
+		for(ClueQueryTask clueQueryTask : getClueQueryTasks()) {
+			ArrayList<Solution> sols = clueQueryTask.get();
+			this.getSolutions().addAll(sols);
+		}
+		return this.getSolutions();
 	}
+	
+	public void updateProgress() {
+		int newProgress = this.getProgress() + this.getTaskLength();
+        this.setProgress(newProgress); // one query has been completed
+		
+	}
+	
+	 /*
+     * Executed on EDT
+     */
+    @Override
+    public void done() {
+    	this.setProgress(100);
+    }
 }
