@@ -51,10 +51,10 @@ public class EntityRecogniserTask extends SwingWorker<Void, Void> {
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResources;
 	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
 
 	/* This constructor will be used to instantiate a task that recognises entities in a clue */
-	public EntityRecogniserTask(Clue clue, DisplayPanel displayPanel) {
+	public EntityRecogniserTask(Clue clue, DisplayPanelMarkA displayPanel) {
 		// call SwingWorker Default constructor
 		this.setClue(clue);
 		this.setDisplayPanel(displayPanel);

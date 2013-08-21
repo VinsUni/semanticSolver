@@ -33,7 +33,7 @@ import lombok.AccessLevel;
  * ****************************************************************************************************************
  */
 @SuppressWarnings("serial")
-public class DisplayPanel extends JPanel implements ActionListener, PropertyChangeListener {
+public class DisplayPanelMarkA extends JPanel implements ActionListener, PropertyChangeListener {
 	private final int PANEL_INSET = 5;
 	private final int MESSAGE_AREA_ROWS = 5;
 	private final int MESSAGE_AREA_COLUMNS = 20;
@@ -52,7 +52,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
-    public DisplayPanel(GUIMarkA uiFrame) {
+    public DisplayPanelMarkA(GUIMarkA uiFrame) {
         super(new BorderLayout());
         
         this.setUiFrame(uiFrame);
@@ -110,7 +110,7 @@ public class DisplayPanel extends JPanel implements ActionListener, PropertyChan
         this.getProgressBar().setStringPainted(true);
 		
 		
-		final DisplayPanel THIS_PANEL = this;
+		final DisplayPanelMarkA THIS_PANEL = this;
 	    Thread erThread = new Thread(new Runnable() {
 		        public void run() {
 		        	setEntityRecogniserTask(new EntityRecogniserTask(getClue(), THIS_PANEL));

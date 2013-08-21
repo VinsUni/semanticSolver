@@ -30,13 +30,13 @@ public class GUIMarkA extends JFrame implements UserInterface {
 	private final String EXIT_REQUEST = "EXIT";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 700); // width and height of the GUI frame
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private DisplayPanelMarkA displayPanel;
 	
 	@Override
 	public void createAndShow() {
 		this.setTitle("Semantic Crossword Solver");
 		
-		this.setDisplayPanel(new DisplayPanel(this));
+		this.setDisplayPanel(new DisplayPanelMarkA(this));
 		
 		this.setContentPane(this.getDisplayPanel());
 		this.getDisplayPanel().setOpaque(true);
