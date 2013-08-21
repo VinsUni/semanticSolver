@@ -28,7 +28,6 @@ import framework.UserInterface;
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
-	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -41,15 +40,6 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
 		this.setClue(clue);
-        /* Update the GUI on the EDT */
-        SwingUtilities.invokeLater(new Runnable() {
-                 public void run() {
-                         getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(false);
-                         getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-                         getUserInterface().getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
-                         getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
-                 }
-        });
         
         this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
 

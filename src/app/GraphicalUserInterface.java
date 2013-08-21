@@ -155,7 +155,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
-        this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        this.getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+        this.getDisplayPanel().getProgressBar().setStringPainted(true);
         
        
         
@@ -176,9 +178,6 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
         this.getDisplayPanel().getProgressBar().setStringPainted(true);
 		
-        
-		//this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
-        //this.getEntityRecogniserTask().addPropertyChangeListener(this);
 	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
 		        	getSemanticSolver().solve(getClue());
