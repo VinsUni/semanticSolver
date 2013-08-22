@@ -5,6 +5,7 @@ package app;
 
 import java.awt.BorderLayout;
 import java.awt.Cursor;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -108,6 +109,7 @@ public class DisplayPanel extends JPanel {
 		
 		
 		/* Add components to userInputPanel */
+		this.getUserInputPanel().setLayout(new FlowLayout(FlowLayout.LEFT));
 		this.getUserInputPanel().add(this.getClueHintLabel());
 		this.getUserInputPanel().add(this.getClueInputField());
 		this.getUserInputPanel().add(this.getWordNumberHintLabel());
