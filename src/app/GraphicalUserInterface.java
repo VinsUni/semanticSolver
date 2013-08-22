@@ -12,6 +12,7 @@ import java.beans.PropertyChangeListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -161,13 +162,19 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         
        
         
-        String clueAsText = this.getDisplayPanel().getClueInputField().getText();
+        String clueText = this.getDisplayPanel().getClueInputField().getText();
+        int[] solutionStructure = new int[(Integer)this.getDisplayPanel().getWordNumberSpinnerModel().getValue()];
+        
+        ArrayList<JTextField> solutionStructureInputFields = this.getDisplayPanel().getSolutionStructureInputFields();
+        for(int i = 0; i < solutionStructureInputFields.size(); i++) {
+        	solutionStructure[i] = Integer.parseInt(solutionStructureInputFields.get(i).getText()); // NEED TO ADD EXCEPTION CHECK
+        }
         
         Clue clue = null;
 		try {
-			clue = new ClueImplMarkA(clueAsText);
+			clue = new ClueImpl(clueText, solutionStructure);
 		} catch (InvalidClueException e) {
-			this.getDisplayPanel().getMessageArea().append("The clue \"" + clueAsText + "\"" + " is invalid. Please try again\n");
+			this.getDisplayPanel().getMessageArea().append(e.getMessage() + "\n");
 			this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
 	        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 			return;
@@ -185,10 +192,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		    });
 	    solverThread.start();
         
-        //this.getUiFrame().solveClue(clueAsText);
-        
-        this.getDisplayPanel().getSubmitClueButton().setEnabled(true); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
-        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR)); // NEEDS TO BE DONE AFTER THE TASK IS FINISHED - i.e. in the GUI object, not here
+        this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
     
     /**
