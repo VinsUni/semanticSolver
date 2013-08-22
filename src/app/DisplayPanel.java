@@ -13,6 +13,7 @@ import java.beans.PropertyChangeListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
@@ -42,10 +43,13 @@ public class DisplayPanel extends JPanel {
 	private final int BORDER_TOP = 20;
 	private final int BORDER_BOTTOM = 20;
 	private final int BORDER_RIGHT = 20;
-	
+	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
+
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel userInputPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel clueHintLabel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextField inputField;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel userInputPanel;
+
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTaskMarkA entityRecogniserTask;
@@ -74,10 +78,11 @@ public class DisplayPanel extends JPanel {
 
         
         
-        
+        this.setClueHintLabel(new JLabel(this.CLUE_HINT_MESSAGE));
         this.setInputField(new JTextField(20));
 		this.getInputField().setText("Enter your clue");
 		
+		this.getUserInputPanel().add(this.getClueHintLabel());
 		this.getUserInputPanel().add(this.getInputField());
 		this.getUserInputPanel().add(this.getSubmitClueButton());
 		
