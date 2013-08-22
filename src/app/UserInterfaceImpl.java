@@ -39,7 +39,7 @@ public class UserInterfaceImpl implements UserInterface {
 				
 				Clue clue;
 				try {
-					clue = new ClueImpl(userResponse);
+					clue = new ClueImplMarkA(userResponse);
 				} catch (InvalidClueException e) {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;

@@ -20,7 +20,7 @@ import lombok.Setter;
  * @author Ben Griffiths
  * Represents a clue
  */
-public class ClueImpl implements Clue {
+public class ClueImplMarkA implements Clue {
 	private final String SOLUTION_STRUCTURE_OPEN_TAG = "[";
 	private final char SOLUTION_STRUCTURE_CLOSE_TAG = ']';
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
@@ -32,7 +32,18 @@ public class ClueImpl implements Clue {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int numberOfWords;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank; // true if the clue is a 'Fill in the blank' style clue
 	
-	public ClueImpl(String clueAsString) throws InvalidClueException {
+	
+	public ClueImplMarkA() {
+		
+	}
+	
+	/**
+	 * Construct a clue using a String that contains both source clue text and solution structure, in the form:
+	 * words_making_up_clue [num_letters_in_first_word, ... , num_letters_in_last_word]
+	 * @param clueAsString
+	 * @throws InvalidClueException
+	 */
+	public ClueImplMarkA(String clueAsString) throws InvalidClueException {
 		if(clueAsString == null || clueAsString.length() == 0)
 			throw new InvalidClueException("Empty clue");
 		if( (!clueAsString.contains(SOLUTION_STRUCTURE_OPEN_TAG)) 

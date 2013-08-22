@@ -110,7 +110,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     				if(!userResponse.equals(EXIT_REQUEST)) {
     					
     					try {
-    						setClue(new ClueImpl(userResponse));
+    						setClue(new ClueImplMarkA(userResponse));
     					} catch (InvalidClueException e) {
     						System.out.println("The clue you entered was invalid: " + e.getMessage());
     						continue;
@@ -165,7 +165,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         
         Clue clue = null;
 		try {
-			clue = new ClueImpl(clueAsText);
+			clue = new ClueImplMarkA(clueAsText);
 		} catch (InvalidClueException e) {
 			this.getDisplayPanel().getMessageArea().append("The clue \"" + clueAsText + "\"" + " is invalid. Please try again\n");
 			this.getDisplayPanel().getSubmitClueButton().setEnabled(true);

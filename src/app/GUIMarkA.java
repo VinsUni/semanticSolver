@@ -60,7 +60,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
     			//SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
     			Clue clue;
     			try {
-					clue = new ClueImpl(THIS_UI.getUserResponse());
+					clue = new ClueImplMarkA(THIS_UI.getUserResponse());
 					//semanticSolver.solve(clue);
 				} catch (InvalidClueException e) {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
@@ -95,7 +95,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
     					
     					Clue clue;
     					try {
-    						clue = new ClueImpl(userResponse);
+    						clue = new ClueImplMarkA(userResponse);
     					} catch (InvalidClueException e) {
     						System.out.println("The clue you entered was invalid: " + e.getMessage());
     						continue;

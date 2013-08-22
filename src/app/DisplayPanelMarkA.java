@@ -96,7 +96,7 @@ public class DisplayPanelMarkA extends JPanel implements ActionListener, Propert
         
         Clue clue = null;
 		try {
-			clue = new ClueImpl(clueAsText);
+			clue = new ClueImplMarkA(clueAsText);
 		} catch (InvalidClueException e) {
 			this.getMessageArea().append("The clue \"" + clueAsText + "\" + " + " is invalid. Please try again\n");
 			this.getSubmitClueButton().setEnabled(true);
