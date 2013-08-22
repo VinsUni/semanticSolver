@@ -25,18 +25,16 @@ public class ClueImpl implements Clue {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private String sourceClue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<String> clueVariations;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<Selector> selectorVariations;
-	// solutionStructure of e.g. {2, 3} means the answer consists of a 2-letter word followed by a 3-letter word
+	/* solutionStructure of e.g. {2, 3} means the answer consists of a 2-letter word followed by a 3-letter word */
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private int[] SolutionStructure;
-	private int numberOfWords;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank; // true if the clue is a 'Fill in the blank' style clue
-	
-	
-	public ClueImpl() {
-		
-	}
-	
-	// Construct a clue from a String representing the clue text and an int[] representing the solution structure
 
+	/**
+	 * Constructor - constructs a clue from a String representing the clue text and an int[] representing the solution structure
+	 * @param clueText
+	 * @param solutionStructure
+	 * @throws InvalidClueException
+	 */
 	public ClueImpl(String clueText, int[] solutionStructure) throws InvalidClueException {
 		if(clueText == null || clueText.length() == 0)
 			throw new InvalidClueException("Empty clue");
@@ -58,10 +56,5 @@ public class ClueImpl implements Clue {
 	@Override
 	public boolean matchesStructure(Solution solution) {
 		return (Arrays.equals(solution.getSolutionStructure(), this.getSolutionStructure())); // requires comparison of deep equality
-	}
-
-	@Override
-	public int getNumberOfWords() {
-		return this.getSolutionStructure().length;
 	}
 }
