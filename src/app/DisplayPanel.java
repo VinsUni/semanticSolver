@@ -45,7 +45,7 @@ public class DisplayPanel extends JPanel {
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextField inputField;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel panel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel userInputPanel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTaskMarkA entityRecogniserTask;
@@ -65,16 +65,26 @@ public class DisplayPanel extends JPanel {
         this.getMessageArea().setMargin(new Insets(this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET, this.PANEL_INSET));
         this.getMessageArea().setEditable(false);
 
-        this.setPanel(new JPanel());
-        this.getPanel().add(this.getSubmitClueButton());
-        this.getPanel().add(this.getProgressBar());
+        this.setUserInputPanel(new JPanel());
+        this.add(new JScrollPane(this.getMessageArea()),BorderLayout.CENTER);
+        
+       
+        
+        
 
-        this.add(panel, BorderLayout.PAGE_START);
-        this.add(new JScrollPane(this.getMessageArea()), BorderLayout.CENTER);
+        
+        
         
         this.setInputField(new JTextField(20));
 		this.getInputField().setText("Enter your clue");
-		this.add(this.getInputField(), BorderLayout.SOUTH);
+		
+		this.getUserInputPanel().add(this.getInputField());
+		this.getUserInputPanel().add(this.getSubmitClueButton());
+		
+		this.add(this.getUserInputPanel(), BorderLayout.NORTH);
+		
+		this.add(this.getProgressBar(), BorderLayout.SOUTH);
+		
         
         this.setBorder(BorderFactory.createEmptyBorder(this.BORDER_TOP, this.BORDER_LEFT, this.BORDER_BOTTOM, this.BORDER_RIGHT));
     }
