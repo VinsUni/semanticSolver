@@ -7,6 +7,12 @@ import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.BufferedReader;
@@ -58,6 +64,23 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().setOpaque(true);
 		
 		this.setContentPane(this.getDisplayPanel());
+		
+		this.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				requestFocusInWindow();
+			}
+		});
+		
+		this.addKeyListener(new KeyAdapter() {
+
+			@Override
+			public void keyPressed(KeyEvent keyEvent) {
+				if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER)
+					solveClue();
+			}
+			
+		});
 		
 		this.setPreferredSize(this.FRAME_DIMENSION);
 		this.setMinimumSize(this.FRAME_DIMENSION);
@@ -149,13 +172,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
             	this.getDisplayPanel().getProgressBar().setStringPainted(false);
         } 
     }
-
-    /**
-     * Invoked when the user presses the "Submit clue" button.
-     */
-    @Override
-    public void actionPerformed(ActionEvent actionEvent) {
-        this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
+    
+    public void solveClue() {
+    	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
         this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         this.getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
         this.getDisplayPanel().getProgressBar().setStringPainted(true);
@@ -194,6 +213,14 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         
         this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+    }
+
+    /**
+     * Invoked when the user presses the "Submit clue" button.
+     */
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+        this.solveClue();
     }
     
     /**

@@ -28,6 +28,7 @@ import framework.UserInterface;
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
+	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Extracting data from DBpedia";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -95,6 +96,9 @@ public class SemanticSolverImpl implements SemanticSolver {
                 }
             });
         cqThread.start();
+        /* update the String painted on the Progress bar */
+        this.getUserInterface().getDisplayPanel().getProgressBar().setString(this.CLUE_QUERY_IN_PROGRESS_MESSAGE);
+        this.getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
         
         ArrayList<Solution> proposedSolutions = null;
 		try {
