@@ -169,7 +169,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		} catch (InvalidClueException e) {
 			this.getDisplayPanel().getMessageArea().append("The clue \"" + clueAsText + "\"" + " is invalid. Please try again\n");
 			this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
-	        this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+	        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 			return;
 		}
 		
