@@ -161,7 +161,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         
        
         
-        String clueAsText = this.getDisplayPanel().getInputField().getText();
+        String clueAsText = this.getDisplayPanel().getClueInputField().getText();
         
         Clue clue = null;
 		try {
