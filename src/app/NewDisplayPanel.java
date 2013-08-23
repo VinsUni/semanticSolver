@@ -89,8 +89,8 @@ public class NewDisplayPanel extends JPanel {
         this.setSubmitClueButton(new JButton("Submit clue"));
         this.getSubmitClueButton().setActionCommand("submitClue");
 
-	this.setSubmitChosenResourcesButton(new JButton("Solve clue"));
-	this.getSubmitClueButton().setActionCommand("submitChosenResources");
+        this.setSubmitChosenResourcesButton(new JButton("Solve clue"));
+        this.getSubmitChosenResourcesButton().setActionCommand("submitChosenResources");
         
 
         this.setProgressBar(new JProgressBar(0, this.PROGRESS_BAR_MAXIMUM));

@@ -14,6 +14,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -157,7 +158,7 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
                                    if(this.getRecognisedResourceUris().contains(resourceUri))
                                 	   continue; // Only create one RecognisedResource object for each resource found. It’ll be pot luck which label we get!
                                    else this.getRecognisedResourceUris().add(resourceUri);
-                                   Resource thisTypeLabel = querySolution.getResource("?typeLabel");
+                                   Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
                                    
                                    String typeLabel = thisTypeLabel.toString();
                                    

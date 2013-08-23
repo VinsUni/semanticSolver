@@ -185,7 +185,7 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
 	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
-		        	getSemanticSolver().solve(getClue());
+		        	getSemanticSolver().findEntities(getClue());
 		        }
 		    });
 	    solverThread.start();
@@ -195,6 +195,11 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
     }
 
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
+    	
+    	 this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
+    	 this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
+    	 
+    	 
          this.setCheckBoxes(new ArrayList<JCheckBox>());
          this.setRecognisedResourceUris(new ArrayList<String>());
          this.setChosenResourceUris(new ArrayList<String>());
@@ -255,9 +260,9 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
      */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if(actionEvent.getActionCommand().equals("solveClue"))
+        if(actionEvent.getActionCommand().equals("submitClue"))
         	this.solveClue();
-	else if(actionEvent.getActionCommand().equals("findSolutions"))
+	else if(actionEvent.getActionCommand().equals("submitChosenResources"))
 	      	this.findSolutions();
     		
     }

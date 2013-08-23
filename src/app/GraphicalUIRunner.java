@@ -24,7 +24,7 @@ public class GraphicalUIRunner {
 		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				UserInterface ui = new GraphicalUserInterface();
+				UserInterface ui = new NewGraphicalUserInterface();
 				ui.createAndShow();
 			}
 		});
