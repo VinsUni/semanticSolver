@@ -145,31 +145,8 @@ public class NewSemanticSolverImpl implements SemanticSolver {
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
                  	public void run() {
-                 	getUserInterface().updateResults(getResults());
-                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
-                 	getUserInterface().getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
-                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setText("Submit clue");
-                 	
-                 	
-                 	/* Remove checkboxes from resourceSelectorPanel */
-                 	ArrayList<JCheckBox> checkBoxes = getUserInterface().getCheckBoxes();
-                 	for(JCheckBox thisCheckBox : checkBoxes)
-                 		getUserInterface().getMainDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
-                 	
-                 	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
-                    getUserInterface().getMainDisplayPanel().remove(
-                    		getUserInterface().getMainDisplayPanel().getResourceSelectorPanel());
-                    
-                    /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
-                             GridLayout resourceSelectorLayout = new GridLayout(0, 1);
-                    */
-                    GridBagConstraints constraints = getUserInterface().getMainDisplayPanel().getGridBagConstraints();
-                    constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
-                    getUserInterface().getMainDisplayPanel().add(
-                    		getUserInterface().getMainDisplayPanel().getSolutionStructurePanel(), constraints);
-                 	
-                 	
+                 		getUserInterface().updateResults(getResults());
+                 		getUserInterface().showNewClueOptions();
                  	}
         	});
 	}

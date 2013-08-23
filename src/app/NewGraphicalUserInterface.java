@@ -196,25 +196,9 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
     	
-    	 this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
-    	 this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
-    	 
-    	 
-         this.setCheckBoxes(new ArrayList<JCheckBox>());
-         this.setRecognisedResourceUris(new ArrayList<String>());
-         this.setChosenResourceUris(new ArrayList<String>());
+    	this.showResourceSelectionOptions();
 
-         /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
-         this.getMainDisplayPanel().remove(this.getMainDisplayPanel().getSolutionStructurePanel());
-         
-         /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
-                  GridLayout resourceSelectorLayout = new GridLayout(0, 1);
-         */
-         GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
-         constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
-         this.getMainDisplayPanel().add(this.getMainDisplayPanel().getResourceSelectorPanel(), constraints);
-
-         for(RecognisedResource thisResource : recognisedResources) {
+        for(RecognisedResource thisResource : recognisedResources) {
                  String resourceLabel = thisResource.getResourceLabel();
                  String typeLabel = thisResource.getTypeLabel();
                  String uri = thisResource.getUri();
@@ -279,6 +263,48 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 	public DisplayPanel getDisplayPanel() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public void showNewClueOptions() {
+		this.getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
+		this.getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
+		this.getMainDisplayPanel().getSubmitClueButton().setText("Submit clue");
+ 
+     	/* Remove checkboxes from resourceSelectorPanel */
+     	for(JCheckBox thisCheckBox : this.getCheckBoxes())
+     		this.getMainDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
+     	
+     	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
+     	this.getMainDisplayPanel().remove(
+        this.getMainDisplayPanel().getResourceSelectorPanel());
+        
+        /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
+                 GridLayout resourceSelectorLayout = new GridLayout(0, 1);
+        */
+        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints();
+        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
+        this.getMainDisplayPanel().add(this.getMainDisplayPanel().getSolutionStructurePanel(), constraints);
+	}
+	
+	private void showResourceSelectionOptions() {
+		this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
+   	 	this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
+   	 
+   	 
+        this.setCheckBoxes(new ArrayList<JCheckBox>());
+        this.setRecognisedResourceUris(new ArrayList<String>());
+        this.setChosenResourceUris(new ArrayList<String>());
+
+        /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
+        this.getMainDisplayPanel().remove(this.getMainDisplayPanel().getSolutionStructurePanel());
+        
+        /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
+                 GridLayout resourceSelectorLayout = new GridLayout(0, 1);
+        */
+        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
+        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
+        this.getMainDisplayPanel().add(this.getMainDisplayPanel().getResourceSelectorPanel(), constraints);
 	}
 
 }
