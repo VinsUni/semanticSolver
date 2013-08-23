@@ -20,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+import javax.swing.JScrollBar;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
@@ -58,6 +59,8 @@ public class NewDisplayPanel extends JPanel {
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private int numberOfWordsInSolution;
 
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JScrollPane panelScrollPane;
+	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel solutionStructurePanel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel resourceSelectorPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<JLabel> solutionStructureLabels;
@@ -126,10 +129,12 @@ public class NewDisplayPanel extends JPanel {
         this.setClueInputField(new JTextField(20));
 		this.getClueInputField().setText("Enter your clue");
 		this.setUserInputPanel(new JPanel());
+		
 		this.setSolutionStructurePanel(new JPanel());
-		
-		
 		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1)));
+		
+		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
+				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
 
 		/* Add components to userInputPanel */
 		this.getUserInputPanel().setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -150,14 +155,14 @@ public class NewDisplayPanel extends JPanel {
 		gridBagLayout.setConstraints(this.getUserInputPanel(), this.getGridBagConstraints());
 		this.add(this.getUserInputPanel(), this.getGridBagConstraints());
 
-		/* Add solutionStructurePanel to second row of grid bag */
+		/* Add panelScrollPane to second row of grid bag */
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
 
 		this.getGridBagConstraints().weighty = 0;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 1;
-		gridBagLayout.setConstraints(this.getSolutionStructurePanel(), this.getGridBagConstraints());
-		this.add(this.getSolutionStructurePanel(), this.getGridBagConstraints());
+		gridBagLayout.setConstraints(this.getPanelScrollPane(), this.getGridBagConstraints());
+		this.add(this.getPanelScrollPane(), this.getGridBagConstraints());
 
 		/* Add messageAreaScrollPane to third row of grid bag */
 		this.getGridBagConstraints().weighty = 1;

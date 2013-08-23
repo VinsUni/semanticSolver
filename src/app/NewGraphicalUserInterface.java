@@ -196,7 +196,21 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
     	
-    	this.showResourceSelectionOptions();
+    	this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
+   	 	this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
+   	 
+   	 
+        this.setCheckBoxes(new ArrayList<JCheckBox>());
+        this.setRecognisedResourceUris(new ArrayList<String>());
+        this.setChosenResourceUris(new ArrayList<String>());
+
+        /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
+        
+        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
+        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
+        this.getMainDisplayPanel().getPanelScrollPane().setViewportView(this.getMainDisplayPanel().getResourceSelectorPanel());
+        this.getMainDisplayPanel().getPanelScrollPane().revalidate();
+        this.getMainDisplayPanel().getPanelScrollPane().repaint();
 
         for(RecognisedResource thisResource : recognisedResources) {
                  String resourceLabel = thisResource.getResourceLabel();
@@ -217,15 +231,14 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
                                else getChosenResourceUris().remove(thisUri);
                        }
                });
-               
-               int row = 0, column = 0;
-               for(JCheckBox checkbox : this.getCheckBoxes())
-                       this.getMainDisplayPanel().getResourceSelectorPanel().add(checkBox); 
          }
-         
+        
+        for(JCheckBox checkBox : this.getCheckBoxes())
+            this.getMainDisplayPanel().getResourceSelectorPanel().add(checkBox); 
+        
          /* Revalidate and repaint – do I need to call this on the displayPanel? Hopefully it will propagate to all children of the GraphicalUserInterface */
-         this.revalidate();
-         this.repaint();
+         this.getMainDisplayPanel().getPanelScrollPane().revalidate();
+         this.getMainDisplayPanel().getPanelScrollPane().repaint();
     }
 
 
@@ -276,35 +289,10 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
      		this.getMainDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
      	
      	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
-     	this.getMainDisplayPanel().remove(
-        this.getMainDisplayPanel().getResourceSelectorPanel());
+     	
+        this.getMainDisplayPanel().getPanelScrollPane().setViewportView(this.getMainDisplayPanel().getSolutionStructurePanel());
         
-        /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
-                 GridLayout resourceSelectorLayout = new GridLayout(0, 1);
-        */
-        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints();
-        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
-        this.getMainDisplayPanel().add(this.getMainDisplayPanel().getSolutionStructurePanel(), constraints);
+        this.getMainDisplayPanel().getPanelScrollPane().revalidate();
+     	this.getMainDisplayPanel().getPanelScrollPane().repaint();
 	}
-	
-	private void showResourceSelectionOptions() {
-		this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
-   	 	this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
-   	 
-   	 
-        this.setCheckBoxes(new ArrayList<JCheckBox>());
-        this.setRecognisedResourceUris(new ArrayList<String>());
-        this.setChosenResourceUris(new ArrayList<String>());
-
-        /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
-        this.getMainDisplayPanel().remove(this.getMainDisplayPanel().getSolutionStructurePanel());
-        
-        /* resourceSelectorPanel should have GridLayout with 1 column and as many rows as necessary, like this:
-                 GridLayout resourceSelectorLayout = new GridLayout(0, 1);
-        */
-        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
-        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
-        this.getMainDisplayPanel().add(this.getMainDisplayPanel().getResourceSelectorPanel(), constraints);
-	}
-
 }
