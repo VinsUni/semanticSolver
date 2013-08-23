@@ -151,22 +151,34 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
                                    String nameSpace = thisResource.getNameSpace();
                                    if(excludedNameSpace(nameSpace))
                                             continue;
-
+                                   
+                                   Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
+                                   String typeLabel = thisTypeLabel.toString();
+                                   typeLabel = stripLanguageTag(typeLabel);
 
                                    String resourceUri = thisResource.getURI();
-
-                                   if(this.getRecognisedResourceUris().contains(resourceUri))
-                                	   continue; // Only create one RecognisedResource object for each resource found. It’ll be pot luck which label we get!
-                                   else this.getRecognisedResourceUris().add(resourceUri);
-                                   Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
                                    
-                                   String typeLabel = thisTypeLabel.toString();
+                                   boolean resourceAlreadyRecognised = false;
+                                   int indexOfResource = 0;
                                    
-                                   typeLabel = stripLanguageTag(typeLabel);
-                                   
-                                   
-                                   RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment, typeLabel);
-                                   this.getRecognisedResources().add(recognisedResource);
+                                   /* Check if a RecognisedResource has already been created for this resource */
+                                   for(int i = 0; i < this.getRecognisedResources().size(); i++) {
+                                	   if(this.getRecognisedResources().get(i).getUri().equals(resourceUri)) {
+                                		   resourceAlreadyRecognised = true;
+                                		   indexOfResource = i;
+                                	   	   break;
+                                	   }
+                                   }
+                                
+                                   if(resourceAlreadyRecognised) {
+                                	   String types = this.getRecognisedResources().get(indexOfResource).getTypeLabel();
+                                	   types = types + ", " + typeLabel;
+                                	   this.getRecognisedResources().get(indexOfResource).setTypeLabel(types);
+                                   }
+                                   else {
+		                                   RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment, typeLabel);
+		                                   this.getRecognisedResources().add(recognisedResource);
+                                   }
                           }
                           queryExecution.close();   
                  }
