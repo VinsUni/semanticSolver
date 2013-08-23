@@ -230,5 +230,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     public JButton getSubmitClueButton() {
     	return this.getDisplayPanel().getSubmitClueButton();
     }
+
+	@Override
+	public NewDisplayPanel getMainDisplayPanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

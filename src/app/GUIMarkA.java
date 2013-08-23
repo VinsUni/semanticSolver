@@ -126,5 +126,11 @@ public class GUIMarkA extends JFrame implements UserInterface {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public NewDisplayPanel getMainDisplayPanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

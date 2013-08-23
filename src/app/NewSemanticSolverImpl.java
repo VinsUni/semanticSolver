@@ -17,8 +17,7 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import framework.Clue;
 import framework.ClueSolver;
-import framework.EntityRecogniser;
-import framework.ClueQuery;
+
 import framework.SemanticSolver;
 import framework.Solution;
 import framework.UserInterface;
@@ -29,7 +28,7 @@ import framework.UserInterface;
  */
 public class NewSemanticSolverImpl implements SemanticSolver {
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Extracting data from DBpedia";
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewGraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewEntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
@@ -41,8 +40,9 @@ public class NewSemanticSolverImpl implements SemanticSolver {
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
-	public NewSemanticSolverImpl(GraphicalUserInterface userInterface) {
+	public NewSemanticSolverImpl(NewGraphicalUserInterface userInterface) {
 		this.setUserInterface(userInterface);
 	}
 
@@ -64,9 +64,10 @@ public class NewSemanticSolverImpl implements SemanticSolver {
          	erThread.start();
          
          
-         	ArrayList<RecognisedResource> recognisedResources = null;
+         	this.setRecognisedResources(null);
+         	
         	try {
-                        recognisedResources = this.getEntityRecogniserTask().get(); // will block until ERTask has finished
+                        this.setRecognisedResources(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
         	} 
         	catch (QueryExceptionHTTP e) {
          	throw e;
@@ -84,9 +85,9 @@ public class NewSemanticSolverImpl implements SemanticSolver {
          	SwingUtilities.invokeLater(new Runnable() {
         		@Override
                  	public void run() {
-                 	getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
-                 	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-                 	getUserInterface().presentRecognisedEntitiesToUser(recognisedResources);
+                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
+                 	getUserInterface().getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                 	getUserInterface().getChosenEntitiesFromUser(getRecognisedResources());
                  	}
         	});      
 	}
@@ -108,8 +109,8 @@ public class NewSemanticSolverImpl implements SemanticSolver {
 		SwingUtilities.invokeLater(new Runnable() {
         		@Override
                  	public void run() {
-        			this.getUserInterface().getDisplayPanel().getProgressBar().setString(this.CLUE_QUERY_IN_PROGRESS_MESSAGE);
-        			this.getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
+        			getUserInterface().getMainDisplayPanel().getProgressBar().setString(CLUE_QUERY_IN_PROGRESS_MESSAGE);
+        			getUserInterface().getMainDisplayPanel().getProgressBar().setStringPainted(true);
                         }
         	});
 
@@ -143,8 +144,8 @@ public class NewSemanticSolverImpl implements SemanticSolver {
         	@Override
                  	public void run() {
                  	getUserInterface().updateResults(getResults());
-                 	getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
-                 	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
+                 	getUserInterface().getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
                  	}
         	});
 	}
