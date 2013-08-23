@@ -8,6 +8,7 @@ import java.awt.GridBagConstraints;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
+import javax.swing.JCheckBox;
 import javax.swing.SwingUtilities;
 
 import lombok.AccessLevel;
@@ -150,6 +151,11 @@ public class NewSemanticSolverImpl implements SemanticSolver {
                  	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
                  	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setText("Submit clue");
                  	
+                 	
+                 	/* Remove checkboxes from resourceSelectorPanel */
+                 	ArrayList<JCheckBox> checkBoxes = getUserInterface().getCheckBoxes();
+                 	for(JCheckBox thisCheckBox : checkBoxes)
+                 		getUserInterface().getMainDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
                  	
                  	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
                     getUserInterface().getMainDisplayPanel().remove(

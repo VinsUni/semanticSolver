@@ -127,7 +127,9 @@ public class NewDisplayPanel extends JPanel {
 		this.getClueInputField().setText("Enter your clue");
 		this.setUserInputPanel(new JPanel());
 		this.setSolutionStructurePanel(new JPanel());
-		this.setResourceSelectorPanel(new JPanel());
+		
+		
+		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1)));
 
 		/* Add components to userInputPanel */
 		this.getUserInputPanel().setLayout(new FlowLayout(FlowLayout.LEFT));
