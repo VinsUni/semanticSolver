@@ -5,7 +5,6 @@ package app;
 
 import java.awt.Cursor;
 import java.awt.Dimension;
-import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -42,16 +41,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 600); // width and height of the GUI frame
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
-	
-	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
-
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JCheckBox> checkBoxes;
-
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> chosenResourceUris;
 
@@ -61,14 +55,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.setTitle("Semantic Crossword Solver");
 
 		this.setDisplayPanel(new DisplayPanel());
-
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
-
-
 		this.getDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
-
-
-
 		this.getDisplayPanel().setOpaque(true);
 
 		this.setContentPane(this.getDisplayPanel());
@@ -124,8 +112,6 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
         this.getDisplayPanel().getProgressBar().setStringPainted(true);
         
-       
-        
         String clueText = this.getDisplayPanel().getClueInputField().getText();
         int[] solutionStructure = new int[(Integer)this.getDisplayPanel().getWordNumberSpinnerModel().getValue()];
         
@@ -164,16 +150,12 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     	
     	this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
    	 	this.getDisplayPanel().getSubmitClueButton().setText("Solve clue");
-   	 
-   	 
+  
         this.setCheckBoxes(new ArrayList<JCheckBox>());
         this.setRecognisedResourceUris(new ArrayList<String>());
         this.setChosenResourceUris(new ArrayList<String>());
 
         /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
-        
-        GridBagConstraints constraints = this.getDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
-        constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
         this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getResourceSelectorPanel());
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
@@ -198,13 +180,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
                        }
                });
          }
-        
         for(JCheckBox checkBox : this.getCheckBoxes())
             this.getDisplayPanel().getResourceSelectorPanel().add(checkBox); 
         
-         /* Revalidate and repaint – do I need to call this on the displayPanel? Hopefully it will propagate to all children of the GraphicalUserInterface */
-         this.getDisplayPanel().getPanelScrollPane().revalidate();
-         this.getDisplayPanel().getPanelScrollPane().repaint();
+        this.getDisplayPanel().getPanelScrollPane().revalidate();
+        this.getDisplayPanel().getPanelScrollPane().repaint();
     }
 
 
@@ -226,8 +206,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         if(actionEvent.getActionCommand().equals("submitClue"))
         	this.solveClue();
 	else if(actionEvent.getActionCommand().equals("submitChosenResources"))
-	      	this.findSolutions();
-    		
+	      	this.findSolutions();	
     }
 
 	public void showNewClueOptions() {
@@ -239,9 +218,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
      	/* Remove checkboxes from resourceSelectorPanel */
      	for(JCheckBox thisCheckBox : this.getCheckBoxes())
      		this.getDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
-     	
      	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
-     	
         this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getSolutionStructurePanel());
         
         this.getDisplayPanel().getPanelScrollPane().revalidate();
