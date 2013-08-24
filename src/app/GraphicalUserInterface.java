@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
@@ -163,7 +164,13 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.setRecognisedResourceUris(new ArrayList<String>());
         this.setChosenResourceUris(new ArrayList<String>());
 
-        /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
+        GridBagConstraints resourceSelectorConstraints = this.getDisplayPanel().getSolutionStructureConstraints(); 
+        resourceSelectorConstraints.gridx = 0;
+        resourceSelectorConstraints.gridy = 0;
+		/* Add title label to first row of resourceSelector panel */
+        JLabel titleLabel = this.getDisplayPanel().getResourceSelectorTitleLabel();
+		this.getDisplayPanel().getResourceSelectorPanel().add(titleLabel, resourceSelectorConstraints);
+		/* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
         this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getResourceSelectorPanel());
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
@@ -196,12 +203,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
                        }
                });
          }
-        GridBagConstraints constraints = this.getDisplayPanel().getResourceSelectorConstraints();
-        constraints.gridx = 0;
-        constraints.gridy = 0;
+        resourceSelectorConstraints.gridy = 1;
         for(JCheckBox checkBox : this.getCheckBoxes()) {
-            this.getDisplayPanel().getResourceSelectorPanel().add(checkBox, constraints); // add new checkbox to next row of resourceSelectorPanel
-            constraints.gridy += 1;
+            this.getDisplayPanel().getResourceSelectorPanel().add(checkBox, resourceSelectorConstraints); // add new checkbox to next row of resourceSelectorPanel
+            resourceSelectorConstraints.gridy += 1;
         }
         
         this.getDisplayPanel().getPanelScrollPane().revalidate();

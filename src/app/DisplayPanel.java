@@ -6,7 +6,6 @@ package app;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
 
 import java.util.ArrayList;
@@ -50,6 +49,9 @@ public class DisplayPanel extends JPanel {
 	private final int DEFAULT_WORD_NUMBER = 1;
 	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
 	private final String WORD_NUMBER_HINT_MESSAGE = "Number of words in the solution: ";
+	public final String RESOURCE_SELECTION_LABEL = "The following entities have been recognised in the clue. " +
+													"Please tick all those that are relevant:";
+	private final String SOLUTION_STRUCTURE_LABEL = "Please enter the number of letters in each word of the solution";
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints; // constraints for the DisplayPanel itself
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints solutionStructureConstraints;
@@ -64,7 +66,7 @@ public class DisplayPanel extends JPanel {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel solutionStructurePanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel solutionStructureTitleLabel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel resourceSelectorPanel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel resourceSelectorTitleLabel;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JLabel resourceSelectorTitleLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<JLabel> solutionStructureLabels;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JTextField> solutionStructureInputFields;
 
@@ -128,7 +130,7 @@ public class DisplayPanel extends JPanel {
 		this.getSolutionStructureConstraints().anchor = GridBagConstraints.NORTHWEST;
 		
 		this.setSolutionStructurePanel(new JPanel());
-		this.setSolutionStructureTitleLabel(new JLabel("Please enter the number of letters in each word in the solution"));
+		this.setSolutionStructureTitleLabel(new JLabel(this.SOLUTION_STRUCTURE_LABEL));
 		this.getSolutionStructurePanel().setLayout(solutionStructureLayout);
 		
 		GridBagLayout resourceSelectorLayout = new GridBagLayout();
@@ -137,6 +139,7 @@ public class DisplayPanel extends JPanel {
 		this.getResourceSelectorConstraints().anchor = GridBagConstraints.NORTHWEST;
 		
 		this.setResourceSelectorPanel(new JPanel());
+		this.setResourceSelectorTitleLabel(new JLabel(this.RESOURCE_SELECTION_LABEL));
 		this.getResourceSelectorPanel().setLayout(resourceSelectorLayout);
 		
 		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
