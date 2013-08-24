@@ -31,8 +31,6 @@ import framework.Clue;
  *
  */
 public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResource>, Void> {
-	private final int LANGUAGE_TAG_LENGTH = 3;
-	private final String LANGUAGE_TAG = "@";
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
@@ -154,7 +152,6 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
                                    
                                    Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
                                    String typeLabel = thisTypeLabel.toString();
-                                   typeLabel = stripLanguageTag(typeLabel);
 
                                    String resourceUri = thisResource.getURI();
                                    
@@ -171,12 +168,11 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
                                    }
                                 
                                    if(resourceAlreadyRecognised) {
-                                	   String types = this.getRecognisedResources().get(indexOfResource).getTypeLabel();
-                                	   types = types + ", " + typeLabel;
-                                	   this.getRecognisedResources().get(indexOfResource).setTypeLabel(types);
+                                	   this.getRecognisedResources().get(indexOfResource).addTypeLabel(typeLabel);
                                    }
                                    else {
-		                                   RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment, typeLabel);
+		                                   RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment);
+		                                   recognisedResource.addTypeLabel(typeLabel);
 		                                   this.getRecognisedResources().add(recognisedResource);
                                    }
                           }
@@ -231,19 +227,6 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
 			if(toProperCase(WORDS_TO_CONSIDER_AS_PREDICATES_ONLY[i]).equals(wordToCheck))
 				return true;
 		return false;
-	}
-
-
-	/* This method is duplicated in other classes!
-	 *
-	 */
-	private String stripLanguageTag(String solutionText) {
-		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
-		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
-			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return solutionText.substring(0, positionOfLanguageTag);
-		}
-		return solutionText;
 	}
 
 	/**

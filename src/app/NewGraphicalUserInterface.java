@@ -214,10 +214,10 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
         for(RecognisedResource thisResource : recognisedResources) {
                  String resourceLabel = thisResource.getResourceLabel();
-                 String typeLabel = thisResource.getTypeLabel();
+                 String typeLabels = thisResource.getConcatenatedTypeLabels();
                  String uri = thisResource.getUri();
                  this.getRecognisedResourceUris().add(uri);
-                 JCheckBox checkBox = new JCheckBox(resourceLabel + " (type: " + typeLabel + ")");
+                 JCheckBox checkBox = new JCheckBox(resourceLabel + " (type: " + typeLabels + ")");
                  this.getCheckBoxes().add(checkBox);
                  
                  checkBox.addItemListener(new ItemListener() {
