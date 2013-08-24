@@ -1,10 +1,13 @@
-package app;
+package remotePrototype;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 import javax.swing.JButton;
+
+import app.DisplayPanel;
+import app.NewDisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 

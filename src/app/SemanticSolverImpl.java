@@ -9,6 +9,8 @@ import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
 
+import remotePrototype.EntityRecogniserImpl;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

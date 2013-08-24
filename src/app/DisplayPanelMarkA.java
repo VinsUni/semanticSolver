@@ -19,6 +19,9 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
+import remotePrototype.ClueImplMarkA;
+import remotePrototype.GUIMarkA;
+
 import exception.InvalidClueException;
 import framework.Clue;
 

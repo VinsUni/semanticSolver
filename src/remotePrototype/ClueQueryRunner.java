@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 
 import java.util.ArrayList;
@@ -10,6 +10,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
+
+import app.CandidateSelector;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;

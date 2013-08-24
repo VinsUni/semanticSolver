@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.awt.Dimension;
 import java.io.BufferedReader;
@@ -14,6 +14,10 @@ import javax.swing.JFrame;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+
+import app.DisplayPanel;
+import app.DisplayPanelMarkA;
+import app.NewDisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -12,6 +12,8 @@ import java.util.Random;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+
+import app.CandidateSelector;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
