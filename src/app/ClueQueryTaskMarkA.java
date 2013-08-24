@@ -42,10 +42,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 import experiments.NsPrefixLoader;
-import framework.Clue;
-import framework.EntityRecogniser;
-import framework.Pop;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.Pop;
+import framework.remotePrototype.Solution;
 
 /**
  * @author Ben Griffiths

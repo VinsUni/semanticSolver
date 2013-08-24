@@ -34,8 +34,8 @@ import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 
 import com.hp.hpl.jena.vocabulary.RDFS;
 
-import framework.ClueQuery;
-import framework.Pop;
+import framework.remotePrototype.ClueQuery;
+import framework.remotePrototype.Pop;
 
 /**
  * @author Ben Griffiths

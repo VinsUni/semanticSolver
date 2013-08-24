@@ -23,7 +23,7 @@ import remotePrototype.ClueImplMarkA;
 import remotePrototype.GUIMarkA;
 
 import exception.InvalidClueException;
-import framework.Clue;
+import framework.remotePrototype.Clue;
 
 import lombok.Getter;
 import lombok.Setter;

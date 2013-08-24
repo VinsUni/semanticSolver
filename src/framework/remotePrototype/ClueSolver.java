@@ -1,7 +1,7 @@
 /**
  * 
  */
-package framework;
+package framework.remotePrototype;
 
 import java.util.ArrayList;
 

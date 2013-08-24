@@ -16,10 +16,10 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 
-import framework.Clue;
-import framework.ClueQuery;
-import framework.EntityRecogniser;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueQuery;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.Solution;
 
 /**
  * @author Ben Griffiths

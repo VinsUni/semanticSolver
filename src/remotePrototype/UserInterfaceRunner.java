@@ -4,7 +4,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import framework.UserInterface;
+import framework.remotePrototype.UserInterface;
 
 /**
  * @author Ben Griffiths

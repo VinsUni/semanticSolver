@@ -1,7 +1,7 @@
 /**
  * 
  */
-package framework;
+package framework.remotePrototype;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;

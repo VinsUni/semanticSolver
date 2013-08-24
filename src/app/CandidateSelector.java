@@ -9,7 +9,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 
-import framework.Pop;
+import framework.remotePrototype.Pop;
 
 /**
  * @author Ben Griffiths

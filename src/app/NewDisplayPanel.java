@@ -30,7 +30,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import exception.InvalidClueException;
-import framework.Clue;
+import framework.remotePrototype.Clue;
 
 import lombok.Getter;
 import lombok.Setter;

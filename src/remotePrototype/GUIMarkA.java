@@ -22,9 +22,9 @@ import app.NewDisplayPanel;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
-import framework.Clue;
-import framework.SemanticSolver;
-import framework.UserInterface;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.SemanticSolver;
+import framework.remotePrototype.UserInterface;
 
 /**
  * @author Ben Griffiths

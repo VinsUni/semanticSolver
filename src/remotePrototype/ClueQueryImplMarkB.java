@@ -31,10 +31,10 @@ import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
-import framework.Clue;
-import framework.ClueQuery;
-import framework.EntityRecogniser;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueQuery;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.Solution;
 
 /**
  * @author Ben Griffiths

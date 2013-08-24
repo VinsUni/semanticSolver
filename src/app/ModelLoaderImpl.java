@@ -15,7 +15,7 @@ import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.FileManager;
 
 import experiments.NsPrefixLoader;
-import framework.ModelLoader;
+import framework.remotePrototype.ModelLoader;
 
 import lombok.AccessLevel;
 import lombok.Getter;

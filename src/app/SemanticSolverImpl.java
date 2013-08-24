@@ -17,13 +17,13 @@ import lombok.Setter;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-import framework.Clue;
-import framework.ClueSolver;
-import framework.EntityRecogniser;
-import framework.ClueQuery;
-import framework.SemanticSolver;
-import framework.Solution;
-import framework.UserInterface;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueQuery;
+import framework.remotePrototype.ClueSolver;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.SemanticSolver;
+import framework.remotePrototype.Solution;
+import framework.remotePrototype.UserInterface;
 
 /**
  * @author Ben Griffiths

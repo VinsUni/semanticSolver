@@ -5,9 +5,9 @@ package app;
 
 import java.util.ArrayList;
 
-import framework.Clue;
-import framework.Solution;
-import framework.ClueSolver;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueSolver;
+import framework.remotePrototype.Solution;
 
 import lombok.AccessLevel;
 import lombok.Getter;

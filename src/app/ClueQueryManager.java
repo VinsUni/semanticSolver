@@ -40,12 +40,12 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import experiments.NsPrefixLoader;
-import framework.Clue;
-import framework.ClueQuery;
-import framework.EntityRecogniser;
-import framework.Pop;
-import framework.Solution;
-import framework.UserInterface;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueQuery;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.Pop;
+import framework.remotePrototype.Solution;
+import framework.remotePrototype.UserInterface;
 
 /**
  * @author Ben Griffiths

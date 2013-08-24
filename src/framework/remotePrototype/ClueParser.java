@@ -1,7 +1,7 @@
 /**
  * 
  */
-package framework;
+package framework.remotePrototype;
 
 /**
  * @author Ben Griffiths

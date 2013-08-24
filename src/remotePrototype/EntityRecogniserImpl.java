@@ -24,9 +24,9 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-import framework.Clue;
-import framework.EntityRecogniser;
-import framework.Pop;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.EntityRecogniser;
+import framework.remotePrototype.Pop;
 
 /**
  * @author Ben Griffiths
