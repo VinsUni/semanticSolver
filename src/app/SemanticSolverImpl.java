@@ -143,8 +143,9 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        	});
 	        	return;
 			}
-
-        	String resultsBuffer = "Candidate solutions:\n";
+			
+        	String resultsBuffer = "Solutions to the clue \"" + this.getClue().getSourceClue() + " " +
+        							this.getClue().getSolutionStructureAsString() + "\":\n";
 
         	for(Solution solution: solutions) {
                  	String solutionText = solution.getSolutionText();
