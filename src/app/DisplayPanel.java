@@ -39,6 +39,8 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_ROWS = 5;
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	private final int PROGRESS_BAR_MAXIMUM = 100;
+	
+	private final int DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION = 1;
 
 	private final int DEFAULT_WORD_NUMBER = 1;
 	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
@@ -163,6 +165,10 @@ public class DisplayPanel extends JPanel {
 		this.getGridBagConstraints().gridy = 3;
 		gridBagLayout.setConstraints(this.getProgressBar(), this.getGridBagConstraints());
 		this.add(this.getProgressBar(), this.getGridBagConstraints()); // this.add(this.getProgressBar(), BorderLayout.SOUTH);
+		
+		/* Draw the solutionStructurePanel using default number of words in solution */
+		this.setNumberOfWordsInSolution(this.DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION);
+		this.drawSolutionStructurePanel();
     }
 
 	private void drawSolutionStructurePanel() {
