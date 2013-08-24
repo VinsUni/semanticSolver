@@ -47,7 +47,7 @@ public class DisplayPanel extends JPanel {
 	private final String WORD_NUMBER_HINT_MESSAGE = "Number of words in the solution: ";
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel userInputPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel clueInputPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel clueHintLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel wordNumberHintLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private int numberOfWordsInSolution;
@@ -107,7 +107,7 @@ public class DisplayPanel extends JPanel {
 							});
         this.setClueInputField(new JTextField(20));
 		this.getClueInputField().setText("Enter your clue");
-		this.setUserInputPanel(new JPanel());
+		this.setClueInputPanel(new JPanel());
 		
 		/* create solutionStructurePanel and resourceSelectorPanels, both with grid layout of one column and 
 		 * variable number of rows
@@ -119,12 +119,12 @@ public class DisplayPanel extends JPanel {
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
 
 		/* Add components to userInputPanel */
-		this.getUserInputPanel().setLayout(new FlowLayout(FlowLayout.LEFT));
-		this.getUserInputPanel().add(this.getClueHintLabel());
-		this.getUserInputPanel().add(this.getClueInputField());
-		this.getUserInputPanel().add(this.getWordNumberHintLabel());
-		this.getUserInputPanel().add(this.getWordNumberSpinner());
-		this.getUserInputPanel().add(this.getSubmitClueButton());
+		this.getClueInputPanel().setLayout(new FlowLayout(FlowLayout.LEFT));
+		this.getClueInputPanel().add(this.getClueHintLabel());
+		this.getClueInputPanel().add(this.getClueInputField());
+		this.getClueInputPanel().add(this.getWordNumberHintLabel());
+		this.getClueInputPanel().add(this.getWordNumberSpinner());
+		this.getClueInputPanel().add(this.getSubmitClueButton());
 
 		/* Add userInputPanel to first row of grid bag */
 		this.getGridBagConstraints().fill = GridBagConstraints.HORIZONTAL;
@@ -133,8 +133,8 @@ public class DisplayPanel extends JPanel {
 		this.getGridBagConstraints().weighty = 1;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 0;
-		gridBagLayout.setConstraints(this.getUserInputPanel(), this.getGridBagConstraints());
-		this.add(this.getUserInputPanel(), this.getGridBagConstraints());
+		gridBagLayout.setConstraints(this.getClueInputPanel(), this.getGridBagConstraints());
+		this.add(this.getClueInputPanel(), this.getGridBagConstraints());
 
 		/* Add panelScrollPane to second row of grid bag */
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
