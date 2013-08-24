@@ -211,6 +211,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
     @Override
 	public void findSolutions() {
+    	
+    	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
+        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+    	
     	this.getDisplayPanel().getProgressBar().setValue(0);
     	this.getDisplayPanel().getProgressBar().setString(this.CLUE_QUERY_IN_PROGRESS_MESSAGE);
     	this.getDisplayPanel().getProgressBar().setStringPainted(true);

@@ -27,7 +27,6 @@ import framework.Solution;
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
-	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Extracting data from DBpedia";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -101,17 +100,6 @@ public class SemanticSolverImpl implements SemanticSolver {
             	});
         	cqThread.start();
 
-       /* update the String painted on the Progress bar
-
-		SwingUtilities.invokeLater(new Runnable() {
-        		@Override
-                 	public void run() {
-        			
-        			getUserInterface().getDisplayPanel().getProgressBar().setString(CLUE_QUERY_IN_PROGRESS_MESSAGE);
-        			getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
-                        }
-        	}); */
-
         	ArrayList<Solution> proposedSolutions = null;
                  try {
                 	 proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is finished
@@ -139,6 +127,10 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        				String solutionStructure = getClue().getSolutionStructureAsString();
 	        				setResults(exceptionMessage + ": \"" + getClue().getSourceClue() + "\" " + solutionStructure);
 	                 		getUserInterface().updateResults(getResults());
+	                 		
+	                 		getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
+	                     	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+	                 		
 	                 		getUserInterface().showNewClueOptions();
 	                 	}
 	        	});
