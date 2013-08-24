@@ -51,7 +51,10 @@ public class DisplayPanel extends JPanel {
 	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
 	private final String WORD_NUMBER_HINT_MESSAGE = "Number of words in the solution: ";
 
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints; // constraints for the DisplayPanel itself
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints solutionStructureConstraints;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints resourceSelectorConstraints;
+	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel clueInputPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel clueHintLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel wordNumberHintLabel;
@@ -117,8 +120,16 @@ public class DisplayPanel extends JPanel {
 		/* create solutionStructurePanel and resourceSelectorPanels, both with grid layout of one column and 
 		 * variable number of rows
 		 */
-		this.setSolutionStructurePanel(new JPanel(new GridLayout(0, 1)));
-		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1)));
+		GridBagLayout solutionStructureLayout = new GridBagLayout();
+		this.setSolutionStructureConstraints(new GridBagConstraints());
+		this.getSolutionStructureConstraints().fill = GridBagConstraints.HORIZONTAL;
+		this.getSolutionStructureConstraints().anchor = GridBagConstraints.NORTHWEST;
+		
+		this.setSolutionStructurePanel(new JPanel());
+		this.getSolutionStructurePanel().setLayout(solutionStructureLayout);
+		
+		
+		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1, 1, 1)));
 		
 		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
@@ -177,6 +188,9 @@ public class DisplayPanel extends JPanel {
 		this.getSolutionStructurePanel().removeAll();
 		this.setSolutionStructureLabels(new ArrayList<JLabel>());
 		this.setSolutionStructureInputFields(new ArrayList<JTextField>());
+		
+		this.getSolutionStructureConstraints().gridx = 0;
+		this.getSolutionStructureConstraints().gridy = 0;
 
 		for(int i = 1; i <= this.getNumberOfWordsInSolution(); i++) {
 			this.getSolutionStructureLabels().add(new JLabel("Letters in word " + i + ": "));
@@ -185,8 +199,11 @@ public class DisplayPanel extends JPanel {
 			JPanel solutionStructureSubPanel = new JPanel();
 			solutionStructureSubPanel.add(this.getSolutionStructureLabels().get(i - 1));
 			solutionStructureSubPanel.add(this.getSolutionStructureInputFields().get(i - 1));
+			
 			/* add the panel to the next row of the solutionStructurePanel */
-			this.getSolutionStructurePanel().add(solutionStructureSubPanel);
+			this.getSolutionStructurePanel().add(solutionStructureSubPanel, this.getSolutionStructureConstraints());
+			
+			this.getSolutionStructureConstraints().gridy += 1;
 		}
 		this.revalidate();
 		this.repaint();
