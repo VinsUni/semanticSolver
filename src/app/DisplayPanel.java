@@ -64,6 +64,7 @@ public class DisplayPanel extends JPanel {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel solutionStructurePanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel solutionStructureTitleLabel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel resourceSelectorPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel resourceSelectorTitleLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<JLabel> solutionStructureLabels;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JTextField> solutionStructureInputFields;
 
@@ -135,7 +136,7 @@ public class DisplayPanel extends JPanel {
 		this.getResourceSelectorConstraints().fill = GridBagConstraints.HORIZONTAL;
 		this.getResourceSelectorConstraints().anchor = GridBagConstraints.NORTHWEST;
 		
-		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1, 1, 1)));
+		this.setResourceSelectorPanel(new JPanel());
 		this.getResourceSelectorPanel().setLayout(resourceSelectorLayout);
 		
 		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
