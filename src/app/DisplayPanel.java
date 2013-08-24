@@ -117,7 +117,7 @@ public class DisplayPanel extends JPanel {
 		this.getClueInputField().setText("Enter your clue");
 		this.setClueInputPanel(new JPanel());
 		
-		/* create solutionStructurePanel and resourceSelectorPanels, both with grid layout of one column and 
+		/* create solutionStructurePanel and resourceSelectorPanels, both with gridbag layouts of one column and 
 		 * variable number of rows
 		 */
 		GridBagLayout solutionStructureLayout = new GridBagLayout();
@@ -128,8 +128,13 @@ public class DisplayPanel extends JPanel {
 		this.setSolutionStructurePanel(new JPanel());
 		this.getSolutionStructurePanel().setLayout(solutionStructureLayout);
 		
+		GridBagLayout resourceSelectorLayout = new GridBagLayout();
+		this.setResourceSelectorConstraints(new GridBagConstraints());
+		this.getResourceSelectorConstraints().fill = GridBagConstraints.HORIZONTAL;
+		this.getResourceSelectorConstraints().anchor = GridBagConstraints.NORTHWEST;
 		
 		this.setResourceSelectorPanel(new JPanel(new GridLayout(0, 1, 1, 1)));
+		this.getResourceSelectorPanel().setLayout(resourceSelectorLayout);
 		
 		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));

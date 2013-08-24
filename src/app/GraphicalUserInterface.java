@@ -5,6 +5,7 @@ package app;
 
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -194,8 +195,13 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
                        }
                });
          }
-        for(JCheckBox checkBox : this.getCheckBoxes())
-            this.getDisplayPanel().getResourceSelectorPanel().add(checkBox); 
+        GridBagConstraints constraints = this.getDisplayPanel().getResourceSelectorConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        for(JCheckBox checkBox : this.getCheckBoxes()) {
+            this.getDisplayPanel().getResourceSelectorPanel().add(checkBox, constraints); // add new checkbox to next row of resourceSelectorPanel
+            constraints.gridy += 1;
+        }
         
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
