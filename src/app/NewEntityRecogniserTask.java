@@ -24,7 +24,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import framework.remotePrototype.Clue;
+import framework.Clue;
 
 /**
  * @author Ben Griffiths

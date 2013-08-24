@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 
-import framework.Clue;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.Solution;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

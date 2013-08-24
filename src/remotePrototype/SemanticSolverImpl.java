@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.awt.Cursor;
 import java.util.ArrayList;
@@ -9,13 +9,13 @@ import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
 
-import remotePrototype.ClueQueryImpl;
-import remotePrototype.ClueQueryManager;
-import remotePrototype.EntityRecogniserImpl;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+
+import remotePrototype.ClueQueryTask;
+import remotePrototype.ClueSolverImpl;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 

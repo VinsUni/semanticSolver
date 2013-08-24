@@ -3,7 +3,7 @@
  */
 package framework.remotePrototype;
 
-import app.DisplayPanel;
+import remotePrototype.DisplayPanel;
 import app.NewDisplayPanel;
 
 /**

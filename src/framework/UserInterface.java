@@ -3,7 +3,7 @@
  */
 package framework;
 
-import app.DisplayPanel;
+import remotePrototype.DisplayPanel;
 import app.NewDisplayPanel;
 
 /**
@@ -13,6 +13,5 @@ import app.NewDisplayPanel;
 public interface UserInterface {
 	public void createAndShow();
 	public void updateResults(String resultsMessage);
-	public DisplayPanel getDisplayPanel();
 	public NewDisplayPanel getMainDisplayPanel();
 }

@@ -12,8 +12,8 @@ import java.util.Random;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
-import app.CandidateSelector;
-import app.SolutionImpl;
+import remotePrototype.CandidateSelector;
+import remotePrototype.SolutionImpl;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;

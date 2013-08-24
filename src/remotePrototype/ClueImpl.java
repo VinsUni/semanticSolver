@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,8 +10,8 @@ import com.hp.hpl.jena.rdf.model.Selector;
 
 import exception.InvalidClueException;
 
-import framework.Clue;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.Solution;
 
 import lombok.AccessLevel;
 import lombok.Getter;

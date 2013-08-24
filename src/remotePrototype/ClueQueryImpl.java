@@ -13,8 +13,8 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import app.CandidateSelector;
-import app.SolutionImpl;
+import remotePrototype.CandidateSelector;
+import remotePrototype.SolutionImpl;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;

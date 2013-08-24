@@ -1,13 +1,13 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.util.ArrayList;
 
-import framework.Clue;
-import framework.ClueSolver;
-import framework.Solution;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueSolver;
+import framework.remotePrototype.Solution;
 
 import lombok.AccessLevel;
 import lombok.Getter;

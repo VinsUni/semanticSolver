@@ -38,9 +38,9 @@ import lombok.Setter;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
-import framework.remotePrototype.Clue;
-import framework.remotePrototype.SemanticSolver;
-import framework.remotePrototype.UserInterface;
+import framework.Clue;
+import framework.SemanticSolver;
+import framework.UserInterface;
 
 /**
  * @author Ben Griffiths
@@ -271,12 +271,6 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
     public JButton getSubmitClueButton() {
     	return this.getMainDisplayPanel().getSubmitClueButton();
     }
-
-	@Override
-	public DisplayPanel getDisplayPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public void showNewClueOptions() {
 		this.getMainDisplayPanel().getSubmitClueButton().setEnabled(true);

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -27,11 +27,13 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import remotePrototype.ClueImplMarkA;
-
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+
+import remotePrototype.ClueImpl;
+
+import app.NewDisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 

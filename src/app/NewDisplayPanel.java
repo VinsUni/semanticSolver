@@ -29,10 +29,9 @@ import javax.swing.SpinnerListModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import remotePrototype.EntityRecogniserTaskMarkA;
 
 import exception.InvalidClueException;
-import framework.remotePrototype.Clue;
+import framework.Clue;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -80,8 +79,6 @@ public class NewDisplayPanel extends JPanel {
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitChosenResourcesButton;
 
-
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTaskMarkA entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 
 

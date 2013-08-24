@@ -11,8 +11,6 @@ import java.util.concurrent.ExecutionException;
 import javax.swing.JCheckBox;
 import javax.swing.SwingUtilities;
 
-import remotePrototype.ClueQueryManager;
-
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,11 +18,11 @@ import lombok.Setter;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 
-import framework.remotePrototype.Clue;
-import framework.remotePrototype.ClueSolver;
-import framework.remotePrototype.SemanticSolver;
-import framework.remotePrototype.Solution;
-import framework.remotePrototype.UserInterface;
+import framework.Clue;
+import framework.ClueSolver;
+import framework.SemanticSolver;
+import framework.Solution;
+import framework.UserInterface;
 
 /**
  * @author Ben Griffiths	
@@ -36,8 +34,6 @@ public class NewSemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewEntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
-
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryManager clueQueryManager;
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
