@@ -66,7 +66,6 @@ public class DisplayPanel extends JPanel {
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitChosenResourcesButton;
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 
@@ -78,9 +77,6 @@ public class DisplayPanel extends JPanel {
    
         this.setSubmitClueButton(new JButton("Submit clue"));
         this.getSubmitClueButton().setActionCommand("submitClue");
-
-        this.setSubmitChosenResourcesButton(new JButton("Solve clue"));
-        this.getSubmitChosenResourcesButton().setActionCommand("submitChosenResources");
 
         this.setProgressBar(new JProgressBar(0, this.PROGRESS_BAR_MAXIMUM));
         this.getProgressBar().setValue(0);

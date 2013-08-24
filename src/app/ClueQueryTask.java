@@ -39,7 +39,6 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-import exception.NoResourcesSelectedException;
 import experiments.NsPrefixLoader;
 import framework.Clue;
 import framework.Pop;

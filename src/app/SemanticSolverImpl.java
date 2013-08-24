@@ -16,8 +16,6 @@ import lombok.Setter;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-
-import exception.NoResourcesSelectedException;
 import exception.NoSolutionsException;
 import framework.Clue;
 import framework.ClueSolver;

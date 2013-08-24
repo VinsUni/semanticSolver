@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
@@ -57,7 +56,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
 		this.setDisplayPanel(new DisplayPanel());
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
-		//this.getDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
+
 		this.getDisplayPanel().setOpaque(true);
 
 		this.setContentPane(this.getDisplayPanel());
