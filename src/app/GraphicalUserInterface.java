@@ -41,7 +41,8 @@ import framework.UserInterface;
 public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
-	private final Dimension FRAME_DIMENSION = new Dimension(550, 600); // width and height of the GUI frame
+	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
+	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
@@ -59,6 +60,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
 		this.setDisplayPanel(new DisplayPanel());
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
+		
+		this.getDisplayPanel().setPreferredSize(this.DISPLAY_PANEL_DIMENSION);
 
 		this.getDisplayPanel().setOpaque(true);
 
