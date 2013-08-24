@@ -11,6 +11,8 @@ import java.util.concurrent.ExecutionException;
 import javax.swing.JCheckBox;
 import javax.swing.SwingUtilities;
 
+import remotePrototype.ClueQueryManager;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

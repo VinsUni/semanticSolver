@@ -29,6 +29,8 @@ import javax.swing.SpinnerListModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import remotePrototype.EntityRecogniserTaskMarkA;
+
 import exception.InvalidClueException;
 import framework.remotePrototype.Clue;
 

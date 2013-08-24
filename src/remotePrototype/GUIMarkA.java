@@ -16,7 +16,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import app.DisplayPanel;
-import app.DisplayPanelMarkA;
 import app.NewDisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
