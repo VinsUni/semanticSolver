@@ -62,6 +62,7 @@ public class DisplayPanel extends JPanel {
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JScrollPane panelScrollPane;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel solutionStructurePanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel solutionStructureTitleLabel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel resourceSelectorPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<JLabel> solutionStructureLabels;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JTextField> solutionStructureInputFields;
@@ -126,6 +127,7 @@ public class DisplayPanel extends JPanel {
 		this.getSolutionStructureConstraints().anchor = GridBagConstraints.NORTHWEST;
 		
 		this.setSolutionStructurePanel(new JPanel());
+		this.setSolutionStructureTitleLabel(new JLabel("Please enter the number of letters in each word in the solution"));
 		this.getSolutionStructurePanel().setLayout(solutionStructureLayout);
 		
 		GridBagLayout resourceSelectorLayout = new GridBagLayout();
@@ -196,8 +198,12 @@ public class DisplayPanel extends JPanel {
 		
 		this.getSolutionStructureConstraints().gridx = 0;
 		this.getSolutionStructureConstraints().gridy = 0;
+		
+		this.getSolutionStructurePanel().add(this.getSolutionStructureTitleLabel(), this.getSolutionStructureConstraints());
 
 		for(int i = 1; i <= this.getNumberOfWordsInSolution(); i++) {
+			this.getSolutionStructureConstraints().gridy += 1;
+			
 			this.getSolutionStructureLabels().add(new JLabel("Letters in word " + i + ": "));
 			this.getSolutionStructureInputFields().add(new JTextField(1));
 			/* add the newly created label and textfield to a panel */
@@ -207,8 +213,6 @@ public class DisplayPanel extends JPanel {
 			
 			/* add the panel to the next row of the solutionStructurePanel */
 			this.getSolutionStructurePanel().add(solutionStructureSubPanel, this.getSolutionStructureConstraints());
-			
-			this.getSolutionStructureConstraints().gridy += 1;
 		}
 		this.revalidate();
 		this.repaint();
