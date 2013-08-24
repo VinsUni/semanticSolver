@@ -58,4 +58,15 @@ public class ClueImpl implements Clue {
 	public boolean matchesStructure(Solution solution) {
 		return (Arrays.equals(solution.getSolutionStructure(), this.getSolutionStructure())); // requires comparison of deep equality
 	}
+
+	@Override
+	public String getSolutionStructureAsString() {
+		if(this.getSolutionStructure() == null || this.getSolutionStructure().length < 1)
+			return "";
+		String structure = "[" + this.getSolutionStructure()[0];
+		for(int i = 1; i < this.getSolutionStructure().length; i++)
+			structure += ", " + this.getSolutionStructure()[i];
+		structure += "]";
+		return structure;
+	}
 }

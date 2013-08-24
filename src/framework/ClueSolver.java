@@ -5,6 +5,8 @@ package framework;
 
 import java.util.ArrayList;
 
+import exception.NoSolutionsException;
+
 /**
  * @author Ben Griffiths
  *
@@ -18,5 +20,5 @@ public interface ClueSolver {
 	 */
 	public ArrayList<String> getCandidateSolutions(Clue clue, ArrayList<String> proposedSolutions);
 	public String getBestSolution(Clue clue);
-	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions);
+	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions) throws NoSolutionsException;
 }

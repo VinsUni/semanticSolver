@@ -5,6 +5,7 @@ package app;
 
 import java.util.ArrayList;
 
+import exception.NoSolutionsException;
 import framework.Clue;
 import framework.ClueSolver;
 import framework.Solution;
@@ -24,7 +25,9 @@ public class ClueSolverImpl implements ClueSolver {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Solution bestSolution;
 	
 	@Override
-	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions) {
+	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions) throws NoSolutionsException {
+		if(proposedSolutions == null)
+			throw new NoSolutionsException("No solutions found for this clue");
 		proposedSolutions = filterOutNonEnglishSolutions(proposedSolutions);
 		
 		ArrayList<Solution> acceptedSolutions = new ArrayList<Solution>();

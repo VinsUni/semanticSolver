@@ -39,6 +39,7 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
+import exception.NoResourcesSelectedException;
 import experiments.NsPrefixLoader;
 import framework.Clue;
 import framework.Pop;
@@ -77,6 +78,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	
 	public ClueQueryTask(Clue clue, ArrayList<String> clueFragments, ArrayList<String> recognisedResourceUris) {
 		super();
+		/*if(recognisedResourceUris == null || recognisedResourceUris.size() == 0)
+			throw new NoResourcesSelectedException();
+		*/
 		this.setClue(clue);
 		this.setClueFragments(clueFragments);
 		this.setRecognisedResourceUris(recognisedResourceUris);
@@ -94,6 +98,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
         this.setProgress(progress); // Initialise progress property of SwingWorker
  
         int combinedLengthOfQueries = this.getRecognisedResourceUris().size();
+        
         int taskLength = (100 / combinedLengthOfQueries);
         
         for(String resourceUri : this.getRecognisedResourceUris()) {

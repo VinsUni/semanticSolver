@@ -19,5 +19,6 @@ public interface Clue {
 	public void setSelectorVariations(ArrayList<Selector> selectorVariations);
 	public int[] getSolutionStructure();
 	public void setSolutionStructure(int[] solutionStructure);
+	public String getSolutionStructureAsString();
 	public boolean matchesStructure(Solution solution); // compares the structure of this clue with the Solution argument
 }

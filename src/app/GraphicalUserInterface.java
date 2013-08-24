@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
@@ -56,7 +57,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
 		this.setDisplayPanel(new DisplayPanel());
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
-		this.getDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
+		//this.getDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
 		this.getDisplayPanel().setOpaque(true);
 
 		this.setContentPane(this.getDisplayPanel());
@@ -69,13 +70,19 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		});
 
 		this.addKeyListener(new KeyAdapter() {
-
 			@Override
 			public void keyPressed(KeyEvent keyEvent) {
-				if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER)
-					solveClue();
+				if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER) {
+					if(getDisplayPanel().getSubmitClueButton().getText().equals("Submit clue"))
+						solveClue();
+					else {
+						if(getChosenResourceUris() == null || getChosenResourceUris().size() == 0) {
+				        	updateResults("You didn't select any resources!");
+				     }
+					 else findSolutions();
+					}
+				}
 			}
-
 		});
 
 		this.setPreferredSize(this.FRAME_DIMENSION);
@@ -159,7 +166,15 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getResourceSelectorPanel());
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
-
+        
+        if(recognisedResources == null || recognisedResources.size() == 0) {
+        	this.updateResults("Recognition of entities in the clue text failed. Please try again");
+        	this.showNewClueOptions();
+        	this.revalidate();
+        	this.repaint();
+        	return;
+        }
+        
         for(RecognisedResource thisResource : recognisedResources) {
                  String resourceLabel = thisResource.getResourceLabel();
                  String typeLabels = thisResource.getConcatenatedTypeLabels();
@@ -205,8 +220,14 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     public void actionPerformed(ActionEvent actionEvent) {
         if(actionEvent.getActionCommand().equals("submitClue"))
         	this.solveClue();
-	else if(actionEvent.getActionCommand().equals("submitChosenResources"))
-	      	this.findSolutions();	
+        else {
+        	if(actionEvent.getActionCommand().equals("submitChosenResources")) {
+				 if(this.getChosenResourceUris() == null || this.getChosenResourceUris().size() == 0) {
+			        	this.updateResults("You didn't select any resources!");
+			     }
+				 else this.findSolutions();
+        	}
+       }
     }
 
 	public void showNewClueOptions() {

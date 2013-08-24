@@ -17,6 +17,8 @@ import lombok.Setter;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 
+import exception.NoResourcesSelectedException;
+import exception.NoSolutionsException;
 import framework.Clue;
 import framework.ClueSolver;
 import framework.SemanticSolver;
@@ -113,8 +115,9 @@ public class SemanticSolverImpl implements SemanticSolver {
 
         	ArrayList<Solution> proposedSolutions = null;
                  try {
-                          proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is finished
-                 } catch (InterruptedException e) {
+                	 proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is finished
+                 }
+                 catch (InterruptedException e) {
                           // TODO Auto-generated catch block
                           e.printStackTrace();
                  } catch (ExecutionException e) {
@@ -124,7 +127,24 @@ public class SemanticSolverImpl implements SemanticSolver {
         
         	this.setClueSolver(new ClueSolverImpl());
         
-        	ArrayList<Solution> solutions = this.getClueSolver().getSolutions(clue, proposedSolutions);
+        	ArrayList<Solution> solutions = null;
+			try {
+				solutions = this.getClueSolver().getSolutions(this.getClue(), proposedSolutions);
+			} catch (NoSolutionsException e) {
+				/* Notify the user that no solutions were found and then return*/
+				this.setResults(e.getMessage());
+	        	SwingUtilities.invokeLater(new Runnable() {
+	        	@Override
+	                 	public void run() {
+	        				String exceptionMessage = getResults();
+	        				String solutionStructure = getClue().getSolutionStructureAsString();
+	        				setResults(exceptionMessage + ": \"" + getClue().getSourceClue() + "\" " + solutionStructure);
+	                 		getUserInterface().updateResults(getResults());
+	                 		getUserInterface().showNewClueOptions();
+	                 	}
+	        	});
+	        	return;
+			}
 
         	String resultsBuffer = "Candidate solutions:\n";
 
