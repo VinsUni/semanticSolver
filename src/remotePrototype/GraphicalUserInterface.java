@@ -9,10 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.BufferedReader;
@@ -22,9 +21,7 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JTextArea;
+
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
@@ -33,7 +30,7 @@ import lombok.Setter;
 
 import remotePrototype.ClueImpl;
 
-import app.NewDisplayPanel;
+import remotePrototype.DisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
@@ -234,11 +231,5 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     public JButton getSubmitClueButton() {
     	return this.getDisplayPanel().getSubmitClueButton();
     }
-
-	@Override
-	public NewDisplayPanel getMainDisplayPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 	
 }

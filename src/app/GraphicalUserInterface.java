@@ -12,30 +12,20 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
-
-import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
 import framework.Clue;
@@ -47,18 +37,17 @@ import framework.UserInterface;
  *
  */
 @SuppressWarnings("serial")
-public class NewGraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
-	private final String EXIT_REQUEST = "EXIT";
+public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 600); // width and height of the GUI frame
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	
 	
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private NewDisplayPanel mainDisplayPanel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewSemanticSolverImpl semanticSolver;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
 
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewEntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JCheckBox> checkBoxes;
@@ -68,21 +57,21 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
 	@Override
 	public void createAndShow() {
-		this.setSemanticSolver(new NewSemanticSolverImpl(this));
+		this.setSemanticSolver(new SemanticSolverImpl(this));
 		this.setTitle("Semantic Crossword Solver");
 
-		this.setMainDisplayPanel(new NewDisplayPanel());
+		this.setDisplayPanel(new DisplayPanel());
 
-		this.getMainDisplayPanel().getSubmitClueButton().addActionListener(this);
-
-
-		this.getMainDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
+		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
 
 
+		this.getDisplayPanel().getSubmitChosenResourcesButton().addActionListener(this);
 
-		this.getMainDisplayPanel().setOpaque(true);
 
-		this.setContentPane(this.getMainDisplayPanel());
+
+		this.getDisplayPanel().setOpaque(true);
+
+		this.setContentPane(this.getDisplayPanel());
 
 		this.addMouseListener(new MouseAdapter() {
 			@Override
@@ -109,33 +98,9 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 		this.setVisible(true);
 	}
 
-	public void solveClue(String userResponse) {
-
-		/*this.userResponse = userResponse;
-		final GraphicalUserInterface THIS_UI = this;
-		Thread thread = new Thread(new Runnable() {
-    		@Override
-			public void run() {		
-    			SemanticSolver semanticSolver = new SemanticSolverImpl(THIS_UI);
-    			Clue clue;
-    			try {
-					clue = new ClueImpl(THIS_UI.getUserResponse());
-					semanticSolver.solve(clue);
-				} catch (InvalidClueException e) {
-					System.out.println("The clue you entered was invalid: " + e.getMessage());
-				}
-				catch(QueryExceptionHTTP e) {
-					System.out.println("DBpedia is unavailable at this time. Please try again");
-				}
-    		}	
-
-		});
-		thread.start(); */
-	}
-
 	@Override
 	public void updateResults(String resultsMessage) {
-		this.getMainDisplayPanel().getMessageArea().append(resultsMessage + "\n");
+		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
 		this.repaint();
 	}
 
@@ -146,24 +111,25 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (propertyChangeEvent.getPropertyName().equals("progress")) {
             int progress = (Integer) propertyChangeEvent.getNewValue();
-            this.getMainDisplayPanel().getProgressBar().setValue(progress);
-            if(this.getMainDisplayPanel().getProgressBar().getValue() == 100)
-            	this.getMainDisplayPanel().getProgressBar().setStringPainted(false);
+            this.getDisplayPanel().getProgressBar().setValue(progress);
+            if(this.getDisplayPanel().getProgressBar().getValue() == 100)
+            	this.getDisplayPanel().getProgressBar().setStringPainted(false);
         } 
     }
     
+    @Override
     public void solveClue() {
-    	this.getMainDisplayPanel().getSubmitClueButton().setEnabled(false);
-        this.getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        this.getMainDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
-        this.getMainDisplayPanel().getProgressBar().setStringPainted(true);
+    	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
+        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        this.getDisplayPanel().getProgressBar().setString(ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+        this.getDisplayPanel().getProgressBar().setStringPainted(true);
         
        
         
-        String clueText = this.getMainDisplayPanel().getClueInputField().getText();
-        int[] solutionStructure = new int[(Integer)this.getMainDisplayPanel().getWordNumberSpinnerModel().getValue()];
+        String clueText = this.getDisplayPanel().getClueInputField().getText();
+        int[] solutionStructure = new int[(Integer)this.getDisplayPanel().getWordNumberSpinnerModel().getValue()];
         
-        ArrayList<JTextField> solutionStructureInputFields = this.getMainDisplayPanel().getSolutionStructureInputFields();
+        ArrayList<JTextField> solutionStructureInputFields = this.getDisplayPanel().getSolutionStructureInputFields();
         for(int i = 0; i < solutionStructureInputFields.size(); i++) {
         	solutionStructure[i] = Integer.parseInt(solutionStructureInputFields.get(i).getText()); // NEED TO ADD EXCEPTION CHECK
         }
@@ -172,16 +138,16 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 		try {
 			clue = new ClueImpl(clueText, solutionStructure);
 		} catch (InvalidClueException e) {
-			this.getMainDisplayPanel().getMessageArea().append(e.getMessage() + "\n");
-			this.getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
-	        this.getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+			this.getDisplayPanel().getMessageArea().append(e.getMessage() + "\n");
+			this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
+	        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 			return;
 		}
 
 		this.setClue(clue);
         
-		this.getMainDisplayPanel().getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
-        this.getMainDisplayPanel().getProgressBar().setStringPainted(true);
+		this.getDisplayPanel().getProgressBar().setString(this.ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE);
+        this.getDisplayPanel().getProgressBar().setStringPainted(true);
 
 	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
@@ -190,14 +156,14 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 		    });
 	    solverThread.start();
         
-        this.getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
+        this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
-
+    
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
     	
-    	this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
-   	 	this.getMainDisplayPanel().getSubmitClueButton().setText("Solve clue");
+    	this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
+   	 	this.getDisplayPanel().getSubmitClueButton().setText("Solve clue");
    	 
    	 
         this.setCheckBoxes(new ArrayList<JCheckBox>());
@@ -206,11 +172,11 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 
         /* Remove solutionStructurePanel and add resourceSelectorPanel in its place */
         
-        GridBagConstraints constraints = this.getMainDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
+        GridBagConstraints constraints = this.getDisplayPanel().getGridBagConstraints(); // I WILL NEED TO MAKE THE CONSTRAINTS A MEMBER INSTEAD OF JUST A LOCAL VARIABLE
         constraints.gridy = 1; // Add to second row of DisplayPanel (which I think is where the solutionStructurePanel was)
-        this.getMainDisplayPanel().getPanelScrollPane().setViewportView(this.getMainDisplayPanel().getResourceSelectorPanel());
-        this.getMainDisplayPanel().getPanelScrollPane().revalidate();
-        this.getMainDisplayPanel().getPanelScrollPane().repaint();
+        this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getResourceSelectorPanel());
+        this.getDisplayPanel().getPanelScrollPane().revalidate();
+        this.getDisplayPanel().getPanelScrollPane().repaint();
 
         for(RecognisedResource thisResource : recognisedResources) {
                  String resourceLabel = thisResource.getResourceLabel();
@@ -234,15 +200,15 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
          }
         
         for(JCheckBox checkBox : this.getCheckBoxes())
-            this.getMainDisplayPanel().getResourceSelectorPanel().add(checkBox); 
+            this.getDisplayPanel().getResourceSelectorPanel().add(checkBox); 
         
          /* Revalidate and repaint – do I need to call this on the displayPanel? Hopefully it will propagate to all children of the GraphicalUserInterface */
-         this.getMainDisplayPanel().getPanelScrollPane().revalidate();
-         this.getMainDisplayPanel().getPanelScrollPane().repaint();
+         this.getDisplayPanel().getPanelScrollPane().revalidate();
+         this.getDisplayPanel().getPanelScrollPane().repaint();
     }
 
 
-
+    @Override
 	public void findSolutions() {
 		Thread findSolutionsThread = new Thread(new Runnable() {
                          public void run() {
@@ -263,30 +229,22 @@ public class NewGraphicalUserInterface extends JFrame implements UserInterface, 
 	      	this.findSolutions();
     		
     }
-    
-    /**
-     * Provided for convenience - used by SemanticSolverImpl
-     * @return
-     */
-    public JButton getSubmitClueButton() {
-    	return this.getMainDisplayPanel().getSubmitClueButton();
-    }
 
 	public void showNewClueOptions() {
-		this.getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
-		this.getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		this.getMainDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
-		this.getMainDisplayPanel().getSubmitClueButton().setText("Submit clue");
+		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
+		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
+		this.getDisplayPanel().getSubmitClueButton().setText("Submit clue");
  
      	/* Remove checkboxes from resourceSelectorPanel */
      	for(JCheckBox thisCheckBox : this.getCheckBoxes())
-     		this.getMainDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
+     		this.getDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
      	
      	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
      	
-        this.getMainDisplayPanel().getPanelScrollPane().setViewportView(this.getMainDisplayPanel().getSolutionStructurePanel());
+        this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getSolutionStructurePanel());
         
-        this.getMainDisplayPanel().getPanelScrollPane().revalidate();
-     	this.getMainDisplayPanel().getPanelScrollPane().repaint();
+        this.getDisplayPanel().getPanelScrollPane().revalidate();
+     	this.getDisplayPanel().getPanelScrollPane().repaint();
 	}
 }

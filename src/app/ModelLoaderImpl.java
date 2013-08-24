@@ -7,7 +7,6 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -18,7 +17,6 @@ import experiments.NsPrefixLoader;
 import framework.ModelLoader;
 
 import lombok.AccessLevel;
-import lombok.Getter;
 import lombok.Setter;
 
 /**

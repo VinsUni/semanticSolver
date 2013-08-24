@@ -3,24 +3,18 @@
  */
 package app;
 
-import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
+
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
-import javax.swing.JScrollBar;
 import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
@@ -29,8 +23,6 @@ import javax.swing.SpinnerListModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-
-import exception.InvalidClueException;
 import framework.Clue;
 
 import lombok.Getter;
@@ -42,7 +34,7 @@ import lombok.AccessLevel;
  *
  */
 @SuppressWarnings("serial")
-public class NewDisplayPanel extends JPanel {
+public class DisplayPanel extends JPanel {
 	private final int PANEL_INSET = 5;
 	private final int MESSAGE_AREA_ROWS = 5;
 	private final int MESSAGE_AREA_COLUMNS = 20;
@@ -82,7 +74,7 @@ public class NewDisplayPanel extends JPanel {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 
 
-    public NewDisplayPanel() {
+    public DisplayPanel() {
         super();
     	GridBagLayout gridBagLayout = new GridBagLayout();
     	this.setGridBagConstraints(new GridBagConstraints());

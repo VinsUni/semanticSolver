@@ -15,7 +15,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import app.NewDisplayPanel;
+import remotePrototype.DisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
@@ -128,11 +128,4 @@ public class GUIMarkA extends JFrame implements UserInterface {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public NewDisplayPanel getMainDisplayPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }

@@ -4,11 +4,10 @@
 package app;
 
 import java.awt.Cursor;
-import java.awt.GridBagConstraints;
+
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import javax.swing.JCheckBox;
 import javax.swing.SwingUtilities;
 
 import lombok.AccessLevel;
@@ -22,17 +21,16 @@ import framework.Clue;
 import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.Solution;
-import framework.UserInterface;
 
 /**
  * @author Ben Griffiths	
  *
  */
-public class NewSemanticSolverImpl implements SemanticSolver {
+public class SemanticSolverImpl implements SemanticSolver {
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Extracting data from DBpedia";
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewGraphicalUserInterface userInterface;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private NewEntityRecogniserTask entityRecogniserTask;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
@@ -42,17 +40,15 @@ public class NewSemanticSolverImpl implements SemanticSolver {
 
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
-	public NewSemanticSolverImpl(NewGraphicalUserInterface userInterface) {
+	public SemanticSolverImpl(GraphicalUserInterface userInterface) {
 		this.setUserInterface(userInterface);
 	}
 
-	
-
-	
+	@Override
 	public void findEntities(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
         	
-        	this.setEntityRecogniserTask(new NewEntityRecogniserTask(getClue()));
+        	this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
         	this.setClueFragments(this.getEntityRecogniserTask().getClueFragments());
 	
         	Thread erThread = new Thread(new Runnable() {
@@ -85,13 +81,14 @@ public class NewSemanticSolverImpl implements SemanticSolver {
          	SwingUtilities.invokeLater(new Runnable() {
         		@Override
                  	public void run() {
-                 	getUserInterface().getMainDisplayPanel().getSubmitClueButton().setEnabled(true);
-                 	getUserInterface().getMainDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                 	getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
+                 	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
                  	getUserInterface().getChosenEntitiesFromUser(getRecognisedResources());
                  	}
         	});      
 	}
-
+	
+	@Override
 	public  void findSolutions(ArrayList<String> recognisedResourceUris) {        
                 
         	this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
@@ -109,8 +106,8 @@ public class NewSemanticSolverImpl implements SemanticSolver {
 		SwingUtilities.invokeLater(new Runnable() {
         		@Override
                  	public void run() {
-        			getUserInterface().getMainDisplayPanel().getProgressBar().setString(CLUE_QUERY_IN_PROGRESS_MESSAGE);
-        			getUserInterface().getMainDisplayPanel().getProgressBar().setStringPainted(true);
+        			getUserInterface().getDisplayPanel().getProgressBar().setString(CLUE_QUERY_IN_PROGRESS_MESSAGE);
+        			getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
                         }
         	});
 
@@ -147,14 +144,5 @@ public class NewSemanticSolverImpl implements SemanticSolver {
                  		getUserInterface().showNewClueOptions();
                  	}
         	});
-	}
-
-
-
-
-	@Override
-	public void solve(Clue clue) {
-		// TODO Auto-generated method stub
-		
 	}
 }

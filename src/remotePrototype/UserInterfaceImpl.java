@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 import javax.swing.JButton;
 
-import app.NewDisplayPanel;
+import remotePrototype.DisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
@@ -64,12 +64,6 @@ public class UserInterfaceImpl implements UserInterface {
 	
 	@Override
 	public DisplayPanel getDisplayPanel() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public NewDisplayPanel getMainDisplayPanel() {
 		// TODO Auto-generated method stub
 		return null;
 	}

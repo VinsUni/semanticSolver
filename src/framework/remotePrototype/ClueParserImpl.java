@@ -1,16 +1,16 @@
 /**
  * 
  */
-package app;
+package framework.remotePrototype;
 
 import java.util.ArrayList;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Selector;
 
-import framework.Clue;
-import framework.ClueParser;
-import framework.EntityRecogniser;
+import framework.remotePrototype.Clue;
+import framework.remotePrototype.ClueParser;
+import framework.remotePrototype.EntityRecogniser;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -45,7 +45,9 @@ public class ClueParserImpl implements ClueParser {
 	 * the Clue objects string variations
 	 */
 	private void setStringVariations() {
+		/*
 		String sourceClue = this.getClue().getSourceClue();
 		String[] sourceClueFragments = sourceClue.split(" ");
+		*/
 	}
 }

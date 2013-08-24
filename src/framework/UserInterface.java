@@ -3,8 +3,7 @@
  */
 package framework;
 
-import remotePrototype.DisplayPanel;
-import app.NewDisplayPanel;
+import app.DisplayPanel;
 
 /**
  * @author Ben Griffiths
@@ -13,5 +12,7 @@ import app.NewDisplayPanel;
 public interface UserInterface {
 	public void createAndShow();
 	public void updateResults(String resultsMessage);
-	public NewDisplayPanel getMainDisplayPanel();
+	public void solveClue();
+	void findSolutions();
+	public DisplayPanel getDisplayPanel();
 }

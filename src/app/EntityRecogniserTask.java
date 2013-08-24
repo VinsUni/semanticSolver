@@ -30,7 +30,7 @@ import framework.Clue;
  * @author Ben Griffiths
  *
  */
-public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResource>, Void> {
+public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResource>, Void> {
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql"; // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
@@ -53,7 +53,7 @@ public class NewEntityRecogniserTask extends SwingWorker<ArrayList<RecognisedRes
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
 
 	/* This constructor will be used to instantiate a task that recognises entities in a clue */
-	public NewEntityRecogniserTask(Clue clue) {
+	public EntityRecogniserTask(Clue clue) {
 		super(); // call SwingWorker Default constructor
 		this.setClue(clue);
 		this.setClueFragments(new ArrayList<String>());
