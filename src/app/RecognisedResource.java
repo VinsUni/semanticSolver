@@ -17,7 +17,7 @@ public class RecognisedResource {
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String LANG = "@en";
-	private final String[] LABELS_TO_IGNORE = {"thing, Thing"};
+	private final String[] LABELS_TO_IGNORE = {"thing"};
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String uri;
     @Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String resourceLabel;
@@ -53,7 +53,7 @@ public class RecognisedResource {
     		return; // ignore duplicate labels
     	
     	for(int i = 0; i < this.LABELS_TO_IGNORE.length; i++) {
-    		if(this.LABELS_TO_IGNORE[i].equals(label))
+    		if(this.LABELS_TO_IGNORE[i].toLowerCase().equals(label.toLowerCase()))
     			return; // ignore the set of unwanted labels
     	}
     		
