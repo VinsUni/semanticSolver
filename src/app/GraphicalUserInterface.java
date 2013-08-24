@@ -39,6 +39,7 @@ import framework.UserInterface;
 @SuppressWarnings("serial")
 public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
+	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Extracting data from DBpedia";
 	private final Dimension FRAME_DIMENSION = new Dimension(550, 600); // width and height of the GUI frame
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
@@ -210,6 +211,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
     @Override
 	public void findSolutions() {
+    	this.getDisplayPanel().getProgressBar().setValue(0);
+    	this.getDisplayPanel().getProgressBar().setString(this.CLUE_QUERY_IN_PROGRESS_MESSAGE);
+    	this.getDisplayPanel().getProgressBar().setStringPainted(true);
+    	
 		Thread findSolutionsThread = new Thread(new Runnable() {
                          public void run() {
                           getSemanticSolver().findSolutions(getChosenResourceUris());

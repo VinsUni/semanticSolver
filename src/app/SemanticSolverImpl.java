@@ -101,15 +101,16 @@ public class SemanticSolverImpl implements SemanticSolver {
             	});
         	cqThread.start();
 
-        	/* update the String painted on the Progress bar */
-		
+       /* update the String painted on the Progress bar
+
 		SwingUtilities.invokeLater(new Runnable() {
         		@Override
                  	public void run() {
+        			
         			getUserInterface().getDisplayPanel().getProgressBar().setString(CLUE_QUERY_IN_PROGRESS_MESSAGE);
         			getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
                         }
-        	});
+        	}); */
 
         	ArrayList<Solution> proposedSolutions = null;
                  try {
