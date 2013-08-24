@@ -3,20 +3,14 @@
  */
 package remotePrototype;
 
-import java.awt.BorderLayout;
-import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
+
 import java.util.ArrayList;
 
-import javax.swing.BorderFactory;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -29,9 +23,7 @@ import javax.swing.SpinnerListModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-
-import exception.InvalidClueException;
-import framework.Clue;
+import framework.remotePrototype.Clue;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -47,10 +39,6 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_ROWS = 5;
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	private final int PROGRESS_BAR_MAXIMUM = 100;
-	private final int BORDER_LEFT = 20;
-	private final int BORDER_TOP = 20;
-	private final int BORDER_BOTTOM = 20;
-	private final int BORDER_RIGHT = 20;
 	private final int DEFAULT_WORD_NUMBER = 1;
 	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
 	private final String WORD_NUMBER_HINT_MESSAGE = "Number of words in the solution: ";

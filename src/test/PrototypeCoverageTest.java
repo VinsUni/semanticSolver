@@ -29,7 +29,7 @@ import framework.prototype.ClueSolver;
  */
 public class PrototypeCoverageTest {
 	private final long NANOSECONDS_IN_ONE_SECOND = 1000000000;
-	private final long NANOSECONDS_IN_ONE_MINUTE = NANOSECONDS_IN_ONE_SECOND * 60;
+	//private final long NANOSECONDS_IN_ONE_MINUTE = NANOSECONDS_IN_ONE_SECOND * 60;
 	private static ArrayList<String> cluesToSolve;
 	private static ArrayList<String> solutions;
 	private static ModelLoader modelLoader;

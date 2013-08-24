@@ -25,7 +25,6 @@ import framework.remotePrototype.ClueSolver;
 import framework.remotePrototype.EntityRecogniser;
 import framework.remotePrototype.SemanticSolver;
 import framework.remotePrototype.Solution;
-import framework.remotePrototype.UserInterface;
 
 /**
  * @author Ben Griffiths
@@ -186,7 +185,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 		}
 		*/
 		
-		final String FINAL_RESULTS = results;
+		//final String FINAL_RESULTS = results;
 		//final UserInterface UI = this.getUi();
 		SwingUtilities.invokeLater(new Runnable() {
     		@Override

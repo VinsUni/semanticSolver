@@ -8,7 +8,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import lombok.AccessLevel;
@@ -21,7 +20,6 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.InvalidClueException;
 import framework.remotePrototype.Clue;
-import framework.remotePrototype.SemanticSolver;
 import framework.remotePrototype.UserInterface;
 
 /**
@@ -77,7 +75,7 @@ public class GUIMarkA extends JFrame implements UserInterface {
 	}
 	
 	private void start() {
-		final UserInterface THIS_UI = this;
+		//final UserInterface THIS_UI = this;
 		Thread thread = new Thread(new Runnable() {
     		@Override
 			public void run() {

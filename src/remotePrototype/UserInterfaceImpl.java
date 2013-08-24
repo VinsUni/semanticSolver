@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import javax.swing.JButton;
-
 import remotePrototype.DisplayPanel;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
@@ -13,7 +11,6 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 import exception.InvalidClueException;
 
 import framework.remotePrototype.Clue;
-import framework.remotePrototype.SemanticSolver;
 import framework.remotePrototype.UserInterface;
 
 /**

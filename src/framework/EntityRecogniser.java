@@ -5,8 +5,6 @@ package framework;
 
 import java.util.ArrayList;
 
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Property;
 
 /**
  * @author Ben Griffiths

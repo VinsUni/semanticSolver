@@ -3,50 +3,39 @@
  */
 package remotePrototype;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 
-import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
 import remotePrototype.CandidateSelector;
 import remotePrototype.SolutionImpl;
 
-import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
+
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.LiteralRequiredException;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
-import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
-import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import experiments.NsPrefixLoader;
 import framework.remotePrototype.Clue;
-import framework.remotePrototype.EntityRecogniser;
+
 import framework.remotePrototype.Pop;
 import framework.remotePrototype.Solution;
 
