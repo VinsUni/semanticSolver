@@ -40,6 +40,11 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	private final int PROGRESS_BAR_MAXIMUM = 100;
 	
+	private final int CLUE_INPUT_PANEL_V_PAD = 100;
+	private final int PANEL_SCROLL_PANE_V_PAD = 100;
+	private final int MESSAGE_SCROLL_PANE_V_PAD = 250;
+	private final int PROGRESS_BAR_V_PAD = 25;
+	
 	private final int DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION = 1;
 
 	private final int DEFAULT_WORD_NUMBER = 1;
@@ -129,7 +134,7 @@ public class DisplayPanel extends JPanel {
 		/* Add userInputPanel to first row of grid bag */
 		this.getGridBagConstraints().fill = GridBagConstraints.HORIZONTAL;
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
-		this.getGridBagConstraints().ipady = 100;
+		this.getGridBagConstraints().ipady = this.CLUE_INPUT_PANEL_V_PAD;
 		this.getGridBagConstraints().weighty = 1;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 0;
@@ -139,6 +144,7 @@ public class DisplayPanel extends JPanel {
 		/* Add panelScrollPane to second row of grid bag */
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
 		this.getGridBagConstraints().weighty = 0;
+		this.getGridBagConstraints().ipady = this.PANEL_SCROLL_PANE_V_PAD;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 1;
 		gridBagLayout.setConstraints(this.getPanelScrollPane(), this.getGridBagConstraints());
@@ -146,7 +152,7 @@ public class DisplayPanel extends JPanel {
 
 		/* Add messageAreaScrollPane to third row of grid bag */
 		this.getGridBagConstraints().weighty = 1;
-		this.getGridBagConstraints().ipady = 250;
+		this.getGridBagConstraints().ipady = this.MESSAGE_SCROLL_PANE_V_PAD;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 2;
 		gridBagLayout.setConstraints(this.getMessageAreaScrollPane(), this.getGridBagConstraints());
@@ -155,7 +161,7 @@ public class DisplayPanel extends JPanel {
 		/* Add progressBar to fourth row of grid bag */
 		this.getGridBagConstraints().weighty = 0;
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
-		this.getGridBagConstraints().ipady = 25;
+		this.getGridBagConstraints().ipady = this.PROGRESS_BAR_V_PAD;
 		this.getGridBagConstraints().weighty = 1;
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 3;
