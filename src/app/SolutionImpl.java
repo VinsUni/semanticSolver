@@ -115,5 +115,19 @@ public class SolutionImpl implements Solution {
 		return structure;
 	}
 	
-	
+	/**
+	 * equals - see java.lang.Object
+	 * Two Solution objects are considered equal if their respective solutionText members are equal
+	 */
+	@Override
+	public boolean equals(Object anotherObject) {
+		SolutionImpl anotherSolution;
+		try {
+			anotherSolution = (SolutionImpl)anotherObject;
+		}
+		catch(ClassCastException e) {
+			return false;
+		}
+		return this.getSolutionText().equals(anotherSolution.getSolutionText());
+	}
 }
