@@ -43,7 +43,6 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
 	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
 	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
-	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
@@ -160,8 +159,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
     
+    @Override
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
-    	
     	this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
    	 	this.getDisplayPanel().getSubmitClueButton().setText("Solve clue");
   
@@ -213,11 +212,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
             this.getDisplayPanel().getResourceSelectorPanel().add(checkBox, resourceSelectorConstraints); // add new checkbox to next row of resourceSelectorPanel
             resourceSelectorConstraints.gridy += 1;
         }
-        
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
     }
-
 
     @Override
 	public void findSolutions() {
@@ -253,7 +250,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         	}
        }
     }
-
+    
+    @Override
 	public void showNewClueOptions() {
 		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
 		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));

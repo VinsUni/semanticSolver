@@ -21,25 +21,23 @@ import framework.Clue;
 import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.Solution;
+import framework.UserInterface;
 
 /**
  * @author Ben Griffiths	
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private GraphicalUserInterface userInterface;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private UserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
-
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
-
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
-
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
-	public SemanticSolverImpl(GraphicalUserInterface userInterface) {
+	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
 	}
 
@@ -57,10 +55,8 @@ public class SemanticSolverImpl implements SemanticSolver {
                 	}
             	});
          	erThread.start();
-         
-         
-         	this.setRecognisedResources(null);
          	
+         	this.setRecognisedResources(null);
         	try {
                         this.setRecognisedResources(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
         	} 
@@ -146,8 +142,7 @@ public class SemanticSolverImpl implements SemanticSolver {
         	}
        
         	this.setResults(resultsBuffer);
-        
-       
+        	
         	/* Update the GUI on the EDT */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
