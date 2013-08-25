@@ -19,6 +19,11 @@ public interface Clue {
 	public void setSelectorVariations(ArrayList<Selector> selectorVariations);
 	public int[] getSolutionStructure();
 	public void setSolutionStructure(int[] solutionStructure);
+	/**
+	 * getSolutionStructureAsString
+	 * @return a String representing the structure of the solution to this clue. For example, if the solution consists of two words,
+	 * each containing 5 letters, the return value will be the String "[5, 5]"
+	 */
 	public String getSolutionStructureAsString();
 	public boolean matchesStructure(Solution solution); // compares the structure of this clue with the Solution argument
 }

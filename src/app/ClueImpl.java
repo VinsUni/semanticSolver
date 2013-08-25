@@ -32,9 +32,10 @@ public class ClueImpl implements Clue {
 
 	/**
 	 * Constructor - constructs a clue from a String representing the clue text and an int[] representing the solution structure
-	 * @param clueText
-	 * @param solutionStructure
-	 * @throws InvalidClueException
+	 * @param clueText - the text of the clue
+	 * @param solutionStructure - an array of integers representing the structure of the solution, with each element of the array
+	 * representing a word, and the value of the element representing the number of letters in that array
+	 * @throws InvalidClueException - if either the clue text or the structure of the solution is invalid
 	 */
 	public ClueImpl(String clueText, int[] solutionStructure) throws InvalidClueException {
 		if(clueText == null || clueText.length() == 0)
@@ -53,12 +54,18 @@ public class ClueImpl implements Clue {
 		
 		this.setSolutionStructure(solutionStructure);
 	}
-
+	
+	/**
+	 * matchesStructure - see framework.Clue
+	 */
 	@Override
 	public boolean matchesStructure(Solution solution) {
 		return (Arrays.equals(solution.getSolutionStructure(), this.getSolutionStructure())); // requires comparison of deep equality
 	}
-
+	
+	/**
+	 * getSolutionStructureAsString - see framework.Clue
+	 */
 	@Override
 	public String getSolutionStructureAsString() {
 		if(this.getSolutionStructure() == null || this.getSolutionStructure().length < 1)
