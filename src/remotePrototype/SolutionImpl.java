@@ -76,11 +76,12 @@ public class SolutionImpl implements Solution {
 		 * I will need to add these to a list of objects that allow me to store together the particular fragment of the
 		 * text and the type from my ontology that it has matched. For now, I will lazily keep these in two parallel lists,
 		 * but I REALLY MUST REFACTOR THIS
-		 */
+		 
+		
 		ArrayList<String> recognisedClueFragments = new ArrayList<String>(); // TWO PARALLEL LISTS
 		ArrayList<Resource> recognisedClueResourceTypes = new ArrayList<Resource>();
 		
-		/* Next, I need to get hold of the complete list of clue fragments... */
+		 Next, I need to get hold of the complete list of clue fragments... */
 	}
 	
 	

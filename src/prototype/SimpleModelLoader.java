@@ -28,7 +28,6 @@ import lombok.Setter;
 public class SimpleModelLoader implements ModelLoader {
 	private final String ONTOLOGY_URI = "popv7.owl";
 	private final String DATA_URI = "newTestDataset.xml";
-	private final String OWL_FULL_URI = "http://www.w3.org/2002/07/owl#";
 	@Setter(AccessLevel.PRIVATE) InfModel model;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModelSpec ontologyModelSpec;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontologyModel;

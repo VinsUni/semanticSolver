@@ -185,12 +185,12 @@ public class SemanticSolverImpl implements SemanticSolver {
 		}
 		*/
 		
-		//final String FINAL_RESULTS = results;
+		final String FINAL_RESULTS = results;
 		//final UserInterface UI = this.getUi();
 		SwingUtilities.invokeLater(new Runnable() {
     		@Override
 			public void run() {
-    			//UI.updateResults(FINAL_RESULTS);
+    			getUserInterface().updateResults(FINAL_RESULTS);
 			}
 		});
 		System.out.println("SemanticSolverImpl is running on the thread: " + Thread.currentThread().getName()); // DEBUGGING ********

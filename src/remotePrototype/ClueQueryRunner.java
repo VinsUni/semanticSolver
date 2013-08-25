@@ -34,7 +34,6 @@ import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 
 import com.hp.hpl.jena.vocabulary.RDFS;
 
-import framework.remotePrototype.ClueQuery;
 import framework.remotePrototype.Pop;
 
 /**

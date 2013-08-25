@@ -39,6 +39,7 @@ public class UserInterfaceImpl implements UserInterface {
 				Clue clue;
 				try {
 					clue = new ClueImplMarkA(userResponse);
+					clue.getClueVariations(); // DUMMY LINE
 				} catch (InvalidClueException e) {
 					System.out.println("The clue you entered was invalid: " + e.getMessage());
 					continue;

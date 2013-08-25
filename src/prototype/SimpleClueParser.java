@@ -93,8 +93,10 @@ public class SimpleClueParser implements ClueParser {
 	 * the Clue objects string variations
 	 */
 	private void setStringVariations() {
+		/*
 		String sourceClue = this.getClue().getSourceClue();
 		String[] sourceClueFragments = sourceClue.split(" ");
+		*/
 	}
 	
 	/*

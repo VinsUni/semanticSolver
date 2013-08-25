@@ -5,7 +5,6 @@ package remotePrototype;
 
 import java.util.ArrayList;
 
-import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
 import com.hp.hpl.jena.ontology.OntModel;
@@ -25,7 +24,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import framework.remotePrototype.Clue;
-import framework.remotePrototype.EntityRecogniser;
 
 /**
  * @author Ben Griffiths
@@ -37,7 +35,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
-	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology

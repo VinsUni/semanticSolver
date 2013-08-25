@@ -41,8 +41,6 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import experiments.NsPrefixLoader;
 import framework.remotePrototype.Clue;
-import framework.remotePrototype.ClueQuery;
-import framework.remotePrototype.EntityRecogniser;
 import framework.remotePrototype.Pop;
 import framework.remotePrototype.Solution;
 

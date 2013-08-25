@@ -36,8 +36,10 @@ public class DatasetMerger {
 		Model model1 = ModelFactory.createDefaultModel();
 		Model model2 = ModelFactory.createDefaultModel();
 		
+		/*
 		String model1Url = "data\\mergedTestDatasetAug13h.xml";
 		String model2Url = "data\\dbPediaExtracts\\MusicalArtistNamesEN.xml";
+		*/
 		
 		ArrayList<String> modelsToBeMerged = new ArrayList<String>();
 		String modelFileName;
