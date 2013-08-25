@@ -9,7 +9,8 @@ import com.hp.hpl.jena.rdf.model.Selector;
 
 /**
  * @author Ben Griffiths
- *
+ * Clue - represents a clue to be solved, including the text that makes up the clue, and a representation of the structure of
+ * the solution to the clue
  */
 public interface Clue {
 	public String getSourceClue(); // returns the original text String used to initialise the Clue object

@@ -24,6 +24,9 @@ public class ClueSolverImpl implements ClueSolver {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String bestSolutionText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Solution bestSolution;
 	
+	/**
+	 * getSolutions - see framework.ClueSolver
+	 */
 	@Override
 	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions) throws NoSolutionsException {
 		if(proposedSolutions == null)
