@@ -39,6 +39,8 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	private final int PROGRESS_BAR_MAXIMUM = 100;
 	
+	private final int H_PAD = 400;
+	
 	private final int CLUE_INPUT_PANEL_V_PAD = 30;
 	private final int PANEL_SCROLL_PANE_V_PAD = 235;
 	private final int MESSAGE_SCROLL_PANE_V_PAD = 140;
@@ -154,6 +156,7 @@ public class DisplayPanel extends JPanel {
 		this.getClueInputPanel().add(this.getSubmitClueButton());
 
 		/* Add userInputPanel to first row of grid bag */
+		this.getGridBagConstraints().ipadx = this.H_PAD;
 		this.getGridBagConstraints().fill = GridBagConstraints.HORIZONTAL;
 		this.getGridBagConstraints().anchor = GridBagConstraints.NORTHWEST;
 		this.getGridBagConstraints().ipady = this.CLUE_INPUT_PANEL_V_PAD;

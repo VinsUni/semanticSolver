@@ -62,7 +62,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
 		
 		this.getDisplayPanel().setPreferredSize(this.DISPLAY_PANEL_DIMENSION);
-
+		
+		this.getDisplayPanel().setSize(this.DISPLAY_PANEL_DIMENSION);
+		
 		this.getDisplayPanel().setOpaque(true);
 
 		this.setContentPane(this.getDisplayPanel());
