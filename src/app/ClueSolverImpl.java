@@ -76,7 +76,10 @@ public class ClueSolverImpl implements ClueSolver {
 	private boolean isWellFormedSolution(String solutionText) {
 		return true;
 	}
-
+	
+	/**
+	 * getBestSolution - see framework.ClueSolver
+	 */
 	@Override
 	public String getBestSolution(Clue clue) {
 		return this.getBestSolutionText();
