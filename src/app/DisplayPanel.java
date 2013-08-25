@@ -39,8 +39,8 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	private final int PROGRESS_BAR_MAXIMUM = 100;
 	
-	private final int CLUE_INPUT_PANEL_V_PAD = 60;
-	private final int PANEL_SCROLL_PANE_V_PAD = 205;
+	private final int CLUE_INPUT_PANEL_V_PAD = 30;
+	private final int PANEL_SCROLL_PANE_V_PAD = 235;
 	private final int MESSAGE_SCROLL_PANE_V_PAD = 140;
 	private final int PROGRESS_BAR_V_PAD = 50;
 	
