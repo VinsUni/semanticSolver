@@ -22,8 +22,9 @@ public interface ClueSolver {
 	 * getSolutions - return a list of all the valid solutions found for the given clue
 	 * @param clue - the clue whose solutions are to be returned
 	 * @param proposedSolutions - an ArrayList of Solution objects resulting from a query of the model for an answer to the clue
-	 * @return a subset of the list of proposedSolutions, each member of which matches the requirements of the clue
-	 * @throws NoSolutionsException - if the proposedSolutions argument is null or empty
+	 * @return a subset of the list of proposedSolutions, each member of which matches the requirements of the clue. Returns null
+	 * if the proposedSolutions list is empty
+	 * @throws NoSolutionsException - if the proposedSolutions argument is null
 	 */
 	public ArrayList<Solution> getSolutions(Clue clue, ArrayList<Solution> proposedSolutions) throws NoSolutionsException;
 }
