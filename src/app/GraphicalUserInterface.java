@@ -51,7 +51,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JCheckBox> checkBoxes;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> chosenResourceUris;
-
+	
+	/**
+	 * createAndShow - Creates the GUI. Must be called from the EDT. See framework.UserInterface
+	 */
 	@Override
 	public void createAndShow() {
 		this.setSemanticSolver(new SemanticSolverImpl(this));
@@ -98,7 +101,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.pack();
 		this.setVisible(true);
 	}
-
+	
+	/**
+	 * updateResults - Adds the specified String to the message area. See framework.UserInterface
+	 * @argument resultsMessage - the message to be displayed to the user
+	 */
 	@Override
 	public void updateResults(String resultsMessage) {
 		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
@@ -106,7 +113,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	}
 
 	/**
-     * Invoked when task's progress property changes.
+     * propertyChange - Invoked when task's progress property changes. See java.beans.PropertyChangeListener
+     * @argument propertyChangeEvent - the event to be handled
      */
     @Override
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
@@ -118,6 +126,12 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         } 
     }
     
+    /**
+     * solveClue - updates the GUI to reflect to the user that a clue has been submitted. Retrieves the specification of a clue
+     * entered by the user and instantiates a new Clue object to represent the clue. Then calls the SemanticSolver member's
+     * findEntities method on a separate thread in order to begin extracting recognised entities from the clue.
+     * See framework.UserInterface
+     */
     @Override
     public void solveClue() {
     	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
@@ -159,6 +173,12 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
     }
     
+    /**
+     * getChosenEntitiesFromUser - presents the user with a list of resources that have been recognised in the clue text of the clue
+     * currently being solved, together with information about their types. See framework.UserInterface
+     * @argument recognisedResources - a list of RecognisedResource objects to present to the user for selection of the most 
+     * relevant entities.
+     */
     @Override
     public void getChosenEntitiesFromUser(ArrayList<RecognisedResource> recognisedResources) {
     	this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitChosenResources");
@@ -215,7 +235,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.getDisplayPanel().getPanelScrollPane().revalidate();
         this.getDisplayPanel().getPanelScrollPane().repaint();
     }
-
+    
+    /**
+     * findSolutions - updates the GUI to reflect to the user that a clue is being solved. Calls the SemanticSolver member's
+     * findSolutions method on a new thread, passing it the list of resources chosen by the user. See framework.UserInterface
+     */
     @Override
 	public void findSolutions() {
     	
@@ -235,7 +259,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	}
 
     /**
-     * Invoked when the user presses the "Submit clue" button.
+     * actionPerformed - invoked when the user presses the "Submit clue" button in order to submit a clue for entity recognition or
+     * submit a list of chosen resources to use in solving the previously submitted clue. See java.awt.event.ActionListener.
+     * @argument actionEvent - the event to be handled
      */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
@@ -251,6 +277,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
        }
     }
     
+    /**
+     * showNewClueOptions - presents the user with the solutionStructurePanel, allowing the structure of the solution to a clue
+     * to be specified, and enables the submission of a new clue using the "Submit clue" button or the Enter key.
+     * See framework.UserInterface
+     */
     @Override
 	public void showNewClueOptions() {
 		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
