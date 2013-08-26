@@ -22,7 +22,12 @@ import lombok.Setter;
  * Represents a clue
  */
 public class ClueImpl implements Clue {
+	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
+	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
+	
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
+	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private String sourceClue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<String> clueVariations;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<Selector> selectorVariations;
@@ -53,6 +58,10 @@ public class ClueImpl implements Clue {
 		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING
 		
 		this.setSolutionStructure(solutionStructure);
+		
+		this.setClueFragments(new ArrayList<String>());
+		this.addClueFragments(clueText);
+		
 	}
 	
 	/**
@@ -75,5 +84,56 @@ public class ClueImpl implements Clue {
 			structure += ", " + this.getSolutionStructure()[i];
 		structure += "]";
 		return structure;
+	}
+	
+	
+	
+    private void addClueFragments(String clueText) {
+		String[] wordsInClueText = clueText.split(" ");
+		for(int i = 0; i < wordsInClueText.length; i++) {
+			String thisWord = this.toProperCase(wordsInClueText[i]);
+			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
+				this.getClueFragments().add(thisWord);
+			for(int j = i + 1; j < wordsInClueText.length; j++) {
+				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
+				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
+					this.getClueFragments().add(thisWord);
+			}
+		}
+
+		if(clueText.contains(this.APOSTROPHE_S_SEQUENCE)) {
+			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
+			this.addClueFragments(transformedClueText);
+		}
+	}
+
+	private String toProperCase(String thisWord) {
+		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
+		if(thisWord.length() > 1) {
+			int index = 1; // start at the second letter of the word
+			while(index < thisWord.length()) {
+				String nextCharacter = thisWord.substring(index, index + 1);
+				thisWordInProperCase += nextCharacter;
+				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
+					 index++; // the next character needs to be capitalised
+					 nextCharacter = thisWord.substring(index, index + 1);
+					 thisWordInProperCase += nextCharacter.toUpperCase();
+				}
+				index++;
+			}
+		}
+		return thisWordInProperCase;
+	}
+
+	/**
+	 * 
+	 * @param wordToCheck
+	 * @return true if wordToCheck is in the list of common words to be excluded
+	 */
+	private boolean excludedWord(String wordToCheck) {
+		for(int i = 0; i < this.WORDS_TO_EXCLUDE.length; i++)
+			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
+				return true;
+		return false;
 	}
 }

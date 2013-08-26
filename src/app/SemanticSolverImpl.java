@@ -46,8 +46,8 @@ public class SemanticSolverImpl implements SemanticSolver {
 	public void findEntities(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
         	
+         	this.setClueFragments(this.getClue().getClueFragments());
         	this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
-        	this.setClueFragments(this.getEntityRecogniserTask().getClueFragments());
 	
         	Thread erThread = new Thread(new Runnable() {
                 	public void run() {

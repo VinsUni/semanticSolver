@@ -42,12 +42,10 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private OntModel ontModel; // to hold the ontology in memory
-	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
 	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", 
 			"writer", "song", "group"};
 	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/", 
 			"http://dbpedia.org/resource/Category:"}; // a list of namespaces whose terms should be excluded from consideration
-	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<RecognisedResource> recognisedResources;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
@@ -56,8 +54,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	public EntityRecogniserTask(Clue clue) {
 		super(); // call SwingWorker Default constructor
 		this.setClue(clue);
-		this.setClueFragments(new ArrayList<String>());
-		this.addClueFragments(this.getClue().getSourceClue());
+		this.setClueFragments(clue.getClueFragments());
 		this.setRecognisedResources(new ArrayList<RecognisedResource>());
 		this.setRecognisedResourceUris(new ArrayList<String>());
 	}
@@ -183,26 +180,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                  }
 	}
 
-    
-    private void addClueFragments(String clueText) {
-		String[] wordsInClueText = clueText.split(" ");
-		for(int i = 0; i < wordsInClueText.length; i++) {
-			String thisWord = this.toProperCase(wordsInClueText[i]);
-			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
-				this.getClueFragments().add(thisWord);
-			for(int j = i + 1; j < wordsInClueText.length; j++) {
-				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
-				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
-					this.getClueFragments().add(thisWord);
-			}
-		}
-
-		if(clueText.contains(this.APOSTROPHE_S_SEQUENCE)) {
-			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
-			this.addClueFragments(transformedClueText);
-		}
-	}
-
 	private String toProperCase(String thisWord) {
 		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
 		if(thisWord.length() > 1) {
@@ -225,18 +202,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private boolean considerAsPredicateOnly(String wordToCheck) {
 		for(int i = 0; i < this.WORDS_TO_CONSIDER_AS_PREDICATES_ONLY.length; i++)
 			if(toProperCase(WORDS_TO_CONSIDER_AS_PREDICATES_ONLY[i]).equals(wordToCheck))
-				return true;
-		return false;
-	}
-
-	/**
-	 * 
-	 * @param wordToCheck
-	 * @return true if wordToCheck is in the list of common words to be excluded
-	 */
-	private boolean excludedWord(String wordToCheck) {
-		for(int i = 0; i < this.WORDS_TO_EXCLUDE.length; i++)
-			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
 				return true;
 		return false;
 	}

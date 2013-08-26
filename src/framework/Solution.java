@@ -3,6 +3,7 @@
  */
 package framework;
 
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
@@ -15,4 +16,6 @@ public interface Solution {
 	public int[] getSolutionStructure();
 	public Resource getSolutionResource();
 	public Resource getClueResource();
+	public Clue getClue();
+	public InfModel getInfModel();
 }

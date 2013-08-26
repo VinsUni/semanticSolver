@@ -26,5 +26,6 @@ public interface Clue {
 	 * each containing 5 letters, the return value will be the String "[5, 5]"
 	 */
 	public String getSolutionStructureAsString();
+	public ArrayList<String> getClueFragments();
 	public boolean matchesStructure(Solution solution); // compares the structure of this clue with the Solution argument
 }

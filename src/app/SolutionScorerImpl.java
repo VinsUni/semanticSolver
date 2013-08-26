@@ -11,6 +11,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -35,34 +36,31 @@ public class SolutionScorerImpl implements SolutionScorer {
 	@Override
 	public double score(Solution solution) {
 		
-		/* Start by getting the values of RDF:type for the solutionResource
-		 * Then check my local ontology for class types with labels that match fragments of the solution text
-		 * 
-		 * Then...
-		 * 
-		 */
+		double distanceBetweenClueAndSolution = distance(solution.getSolutionResource(), solution.getClueResource());
 		
-		/* Find values of RDF:type for the solutionResource and add these resources to a list */
-		ArrayList<Resource> solutionResourceTypes = new ArrayList<Resource>();
-		StmtIterator statementIterator = solution.getSolutionResource().listProperties(RDF.type);
-		while(statementIterator.hasNext()) {
-			Resource r = (Resource) statementIterator.nextStatement().getObject();
-			solutionResourceTypes.add(r);
-		}
+		ArrayList<Resource> clueTypes = this.getClueTypes(solution);
 		
-		/* Find types within my ontology that match fragments of the clue text.
-		 * I will need to add these to a list of objects that allow me to store together the particular fragment of the
-		 * text and the type from my ontology that it has matched. For now, I will lazily keep these in two parallel lists,
-		 * but I REALLY MUST REFACTOR THIS
-		 */
-		ArrayList<String> recognisedClueFragments = new ArrayList<String>(); // TWO PARALLEL LISTS
-		ArrayList<Resource> recognisedClueResourceTypes = new ArrayList<Resource>();
 		
-		/* Next, I need to get hold of the complete list of clue fragments... */
 		
-		return distance(solution.getSolutionResource(), solution.getClueResource());
+		double distanceBetweenClueTypesAndSolution = 1.0;
+		
+		return distanceBetweenClueAndSolution * distanceBetweenClueTypesAndSolution;
 	}
 	
+	private ArrayList<Resource> getClueTypes(Solution solution) {
+		ArrayList clueTypes = new ArrayList<Resource>();
+		
+		InfModel infModel = solution.getInfModel();
+		Clue clue = solution.getClue();
+		
+		//ArrayList<String> clueFragments = 
+		
+		//StmtIterator typeStatements = 
+		
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	private double distance(Resource firstResource, Resource secondResource) {
 		
 		double numberOfLinks = this.countLinks(firstResource, secondResource);
@@ -97,5 +95,35 @@ public class SolutionScorerImpl implements SolutionScorer {
 		return numberOfLinks;
 	}
 	
-
+	private double countTypeLinks(Resource solutionResource, ArrayList<Resource> clueTypes) {
+		
+		return 1.0;
+	}
+	
+	private void outLineOfScoringAlgorithm(Solution solution) {
+		/* Start by getting the values of RDF:type for the solutionResource
+		 * Then check my local ontology for class types with labels that match fragments of the solution text
+		 * 
+		 * Then...
+		 * 
+		 */
+		
+		/* Find values of RDF:type for the solutionResource and add these resources to a list */
+		ArrayList<Resource> solutionResourceTypes = new ArrayList<Resource>();
+		StmtIterator statementIterator = solution.getSolutionResource().listProperties(RDF.type);
+		while(statementIterator.hasNext()) {
+			Resource r = (Resource) statementIterator.nextStatement().getObject();
+			solutionResourceTypes.add(r);
+		}
+		
+		/* Find types within my ontology that match fragments of the clue text.
+		 * I will need to add these to a list of objects that allow me to store together the particular fragment of the
+		 * text and the type from my ontology that it has matched. For now, I will lazily keep these in two parallel lists,
+		 * but I REALLY MUST REFACTOR THIS
+		 */
+		ArrayList<String> recognisedClueFragments = new ArrayList<String>(); // TWO PARALLEL LISTS
+		ArrayList<Resource> recognisedClueResourceTypes = new ArrayList<Resource>();
+		
+		/* Next, I need to get hold of the complete list of clue fragments... */
+	}
 }
