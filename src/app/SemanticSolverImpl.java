@@ -21,6 +21,7 @@ import framework.Clue;
 import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.Solution;
+import framework.SolutionScorer;
 import framework.UserInterface;
 
 /**
@@ -135,7 +136,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 			
         	String resultsBuffer = "Solutions to the clue \"" + this.getClue().getSourceClue() + " " +
         							this.getClue().getSolutionStructureAsString() + "\":\n";
-
+        	
         	for(Solution solution: solutions) {
                  	String solutionText = solution.getSolutionText();
                  	resultsBuffer += solutionText + "\n";
@@ -151,5 +152,26 @@ public class SemanticSolverImpl implements SemanticSolver {
                  		getUserInterface().showNewClueOptions();
                  	}
         	});
+        	
+        	/* Get solution scores */
+        	SolutionScorer solutionScorer = new SolutionScorerImpl();
+        	resultsBuffer = "Scores for these solutions:\n";
+        	for(Solution solution: solutions) {
+             	double thisScore = solutionScorer.score(solution);
+             	resultsBuffer += thisScore + "\n";
+        	}
+        	
+        	this.setResults(resultsBuffer);
+        	
+        	/* Update the GUI on the EDT to show the scores */
+        	SwingUtilities.invokeLater(new Runnable() {
+        	@Override
+                 	public void run() {
+                 		getUserInterface().updateResults(getResults());
+                 		getUserInterface().showNewClueOptions();
+                 	}
+        	});
+        	
+        	
 	}
 }

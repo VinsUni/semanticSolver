@@ -14,4 +14,5 @@ public interface Solution {
 	public String getSolutionText();
 	public int[] getSolutionStructure();
 	public Resource getSolutionResource();
+	public Resource getClueResource();
 }

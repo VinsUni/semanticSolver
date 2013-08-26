@@ -51,15 +51,21 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		/* Next, I need to get hold of the complete list of clue fragments... */
 		
-		// TODO Auto-generated method stub
-		return 0;
+		return distance(solution.getSolutionResource(), solution.getClueResource());
 	}
 	
-	private double distance(Resource clueResource, Resource solutionResource) {
+	private double distance(Resource firstResource, Resource secondResource) {
 		
+		double numberOfLinks = this.countLinks(firstResource, secondResource);
 		
+		double distance = (1.0 / (1.0 + numberOfLinks));
 		
-		return 0;
+		return distance;
+	}
+
+	private double countLinks(Resource firstResource, Resource secondResource) {
+		// TODO Auto-generated method stub
+		return 3.0;
 	}
 	
 
