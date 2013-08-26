@@ -22,6 +22,11 @@ import java.util.ArrayList;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+
 import javax.swing.JTextField;
 
 import lombok.AccessLevel;
@@ -53,6 +58,12 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> chosenResourceUris;
 	
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuBar mainMenuBar;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenu menu;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem aboutMenuItem;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem helpMenuItem;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem exitMenuItem;
+	
 	/**
 	 * createAndShow - Creates the GUI. Must be called from the EDT. See framework.UserInterface
 	 */
@@ -60,7 +71,38 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	public void createAndShow() {
 		this.setSemanticSolver(new SemanticSolverImpl(this));
 		this.setTitle("Semantic Crossword Solver");
-
+		
+		/* Create menubar, menu and menu items */
+		this.setMainMenuBar(new JMenuBar());
+		this.setMenu(new JMenu("Help"));
+		
+		this.setExitMenuItem(new JMenuItem("Exit"));
+		this.getExitMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    			System.exit(EXIT_ON_CLOSE);
+    		}
+    	});
+    	this.getMenu().add(this.getExitMenuItem(), 0);
+		
+		this.setAboutMenuItem(new JMenuItem("About this application"));
+    	this.getAboutMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    		
+    		}
+    	});
+    	this.getMenu().add(this.getAboutMenuItem(), 0);
+    	this.setHelpMenuItem(new JMenuItem("How to use this application"));
+    	this.getHelpMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    		
+    		}
+    	});
+    	this.getMenu().add(this.getHelpMenuItem(), 0);
+    	
+    	this.getMainMenuBar().add(this.getMenu());
+    	this.setJMenuBar(this.getMainMenuBar());
+    	
+        
 		this.setDisplayPanel(new DisplayPanel());
 		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
 		
