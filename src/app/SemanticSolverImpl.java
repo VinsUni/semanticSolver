@@ -134,31 +134,21 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        	return;
 			}
 			
-        	String resultsBuffer = "Solutions to the clue \"" + this.getClue().getSourceClue() + " " +
-        							this.getClue().getSolutionStructureAsString() + "\":\n";
-        	
-        	for(Solution solution: solutions) {
-                 	String solutionText = solution.getSolutionText();
-                 	resultsBuffer += solutionText + "\n";
-        	}
-       
-        	this.setResults(resultsBuffer);
-        	
-        	/* Update the GUI on the EDT */
+			/* Update the GUI on the EDT */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
                  	public void run() {
-                 		getUserInterface().updateResults(getResults());
                  		getUserInterface().updateProgressBarMessage("Calculating confidence levels for solutions");
                  	}
         	});
-        	
-        	/* Get solution scores */
+			
+        	String resultsBuffer = "Solutions to the clue \"" + this.getClue().getSourceClue() + " " +
+        							this.getClue().getSolutionStructureAsString() + "\":\n";
+
         	SolutionScorer solutionScorer = new SolutionScorerImpl();
-        	resultsBuffer = "Scores for these solutions:\n";
         	for(Solution solution: solutions) {
              	solution.setScore(solutionScorer.score(solution));
-             	resultsBuffer += solution.getSolutionText() + " (score: " + solution.getScore() + " - " + solution.toString() + ")\n";
+             	resultsBuffer += solution.getSolutionText() + " (score: " + solution.getScore() + ")\n";
         	}
         	
         	this.setResults(resultsBuffer);
