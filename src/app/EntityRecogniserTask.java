@@ -146,8 +146,11 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                    String nameSpace = thisResource.getNameSpace();
                                    
                                    /* Trialling dbpedia.org/resource only ... */
-                                   if(!nameSpace.equals("http://dbpedia.org/resource/"))
+                                   if(!nameSpace.contains("http://dbpedia.org/resource/")) {
+                                	   System.out.println("Rejected resource <" + thisResource.getURI() + "> with NS " +
+                                			   				nameSpace);
                                 	   continue;
+                                   }
                                    
                                    /*
                                    if(excludedNameSpace(nameSpace))

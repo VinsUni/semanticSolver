@@ -179,9 +179,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 								/* Trialling http://dbpedia.org/resource/ only... */
 								String solutionResourceNameSpace = solutionResource.getNameSpace();
 								String clueResourceNameSpace = clueResource.getNameSpace();
-								if(!solutionResourceNameSpace.equals("http://dbpedia.org/resource/"))
+								if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
 									continue;
-								if(!clueResourceNameSpace.equals("http://dbpedia.org/resource/"))
+								if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
 									continue;
 								
 								
@@ -237,9 +237,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 											/* Trialling http://dbpedia.org/resource/ only... */
 											String solutionResourceNameSpace = solutionResource.getNameSpace();
 											String clueResourceNameSpace = clueResource.getNameSpace();
-											if(!solutionResourceNameSpace.equals("http://dbpedia.org/resource/"))
+											if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
 												break;
-											if(!clueResourceNameSpace.equals("http://dbpedia.org/resource/"))
+											if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
 												break;
 											
 											Solution so = new SolutionImpl(candidateLabel, solutionResource, clueResource,
