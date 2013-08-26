@@ -4,6 +4,7 @@
 package app;
 
 import framework.Clue;
+import framework.Solution;
 import framework.SolutionScorer;
 
 /**
@@ -13,9 +14,10 @@ import framework.SolutionScorer;
 public class SolutionScorerImpl implements SolutionScorer {
 
 	@Override
-	public double score(Clue clue) {
+	public double score(Solution solution) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 
 }

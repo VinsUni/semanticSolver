@@ -8,5 +8,5 @@ package framework;
  *
  */
 public interface SolutionScorer {
-	public double score(Clue clue);
+	public double score(Solution solution);
 }
