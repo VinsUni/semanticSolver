@@ -3,6 +3,8 @@
  */
 package framework;
 
+import com.hp.hpl.jena.rdf.model.Resource;
+
 /**
  * @author Ben Griffiths
  * Solution - represents a solution to a clue, comprising text of one or more words and a solution structure that describes
@@ -11,4 +13,5 @@ package framework;
 public interface Solution {
 	public String getSolutionText();
 	public int[] getSolutionStructure();
+	public Resource getSolutionResource();
 }

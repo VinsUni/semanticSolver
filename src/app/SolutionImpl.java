@@ -3,12 +3,8 @@
  */
 package app;
 
-import java.util.ArrayList;
-
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
 import framework.Solution;
@@ -26,9 +22,9 @@ public class SolutionImpl implements Solution {
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Resource solutionResource;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Resource solutionResource;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
 	public SolutionImpl(String solutionText) {
 		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
@@ -51,40 +47,8 @@ public class SolutionImpl implements Solution {
 		this.setSolutionResource(solutionResource);
 		this.setInfModel(infModel);
 		this.setClue(clue);
-		this.score();
 	}
-	
-	
-	
-	private void score() {
-		/* Start by getting the values of RDF:type for the solutionResource
-		 * Then check my local ontology for class types with labels that match fragments of the solution text
-		 * 
-		 * Then...
-		 * 
-		 */
-		
-		/* Find values of RDF:type for the solutionResource and add these resources to a list */
-		ArrayList<Resource> solutionResourceTypes = new ArrayList<Resource>();
-		StmtIterator statementIterator = this.getSolutionResource().listProperties(RDF.type);
-		while(statementIterator.hasNext()) {
-			Resource r = (Resource) statementIterator.nextStatement().getObject();
-			solutionResourceTypes.add(r);
-		}
-		
-		/* Find types within my ontology that match fragments of the clue text.
-		 * I will need to add these to a list of objects that allow me to store together the particular fragment of the
-		 * text and the type from my ontology that it has matched. For now, I will lazily keep these in two parallel lists,
-		 * but I REALLY MUST REFACTOR THIS
-		 */
-		ArrayList<String> recognisedClueFragments = new ArrayList<String>(); // TWO PARALLEL LISTS
-		ArrayList<Resource> recognisedClueResourceTypes = new ArrayList<Resource>();
-		
-		/* Next, I need to get hold of the complete list of clue fragments... */
-	}
-	
-	
-	
+
 	/*
 	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
 	 */
