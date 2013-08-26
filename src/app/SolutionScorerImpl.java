@@ -5,6 +5,14 @@ package app;
 
 import java.util.ArrayList;
 
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
@@ -22,6 +30,7 @@ import framework.SolutionScorer;
  *
  */
 public class SolutionScorerImpl implements SolutionScorer {
+	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	
 	@Override
 	public double score(Solution solution) {
@@ -64,8 +73,28 @@ public class SolutionScorerImpl implements SolutionScorer {
 	}
 
 	private double countLinks(Resource firstResource, Resource secondResource) {
-		// TODO Auto-generated method stub
-		return 3.0;
+		String firstResourceUri = firstResource.getURI();
+		String secondResourceUri = secondResource.getURI();
+		
+		String sparqlQuery = " select (count(*) as ?count) where {" +
+							 	" {<" + firstResourceUri + "> ?predicate <" + secondResourceUri + ">." +
+							 	" }" +
+							 " UNION" +
+							 	" {<" + secondResourceUri + "> ?predicate <" + firstResourceUri + ">." +
+							 	" }" +
+							 " }";
+		Query query = QueryFactory.create(sparqlQuery);
+		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(this.ENDPOINT_URI, query);
+		ResultSet resultSet = queryExecution.execSelect();
+        QuerySolution querySolution = resultSet.nextSolution();
+        
+        Literal numberOfLinksAsLiteral = querySolution.getLiteral("?count");
+        double numberOfLinks = numberOfLinksAsLiteral.getDouble();
+        
+        System.out.println("Number of links found: " + numberOfLinks); // DEBUGGING ****************
+
+		queryExecution.close();
+		return numberOfLinks;
 	}
 	
 
