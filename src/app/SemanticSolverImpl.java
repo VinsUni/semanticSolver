@@ -157,8 +157,8 @@ public class SemanticSolverImpl implements SemanticSolver {
         	SolutionScorer solutionScorer = new SolutionScorerImpl();
         	resultsBuffer = "Scores for these solutions:\n";
         	for(Solution solution: solutions) {
-             	double thisScore = solutionScorer.score(solution);
-             	resultsBuffer += thisScore + "\n";
+             	solution.setScore(solutionScorer.score(solution));
+             	resultsBuffer += solution.getSolutionText() + " (score: " + solution.getScore() + ")\n";
         	}
         	
         	this.setResults(resultsBuffer);
