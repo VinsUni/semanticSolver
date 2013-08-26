@@ -55,5 +55,12 @@ public class SolutionScorerImpl implements SolutionScorer {
 		return 0;
 	}
 	
+	private double distance(Resource clueResource, Resource solutionResource) {
+		
+		
+		
+		return 0;
+	}
+	
 
 }

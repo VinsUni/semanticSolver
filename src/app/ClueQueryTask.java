@@ -161,7 +161,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
 							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
-								Solution s = new SolutionImpl(objectOfInterest.toString(), r, infModel, this.getClue());
+								Solution s = new SolutionImpl(objectOfInterest.toString(), r, subjectOfStatement,
+										infModel, this.getClue());
 								if(!(candidateSols.contains(s)))
 									candidateSols.add(s);
 								
@@ -198,7 +199,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 												String candidateLabel = stripLanguageTag(rawCandidateLabel);
 												
 												Resource res = s.getSubject();
-												Solution so = new SolutionImpl(candidateLabel, res, infModel, this.getClue());
+												Solution so = new SolutionImpl(candidateLabel, res, subjectOfStatement,
+														infModel, this.getClue());
 												if(!(candidateSols.contains(so)))
 													candidateSols.add(so);
 											}

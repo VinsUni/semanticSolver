@@ -23,6 +23,7 @@ public class SolutionImpl implements Solution {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Resource solutionResource;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Resource clueResource;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
@@ -39,14 +40,19 @@ public class SolutionImpl implements Solution {
 	 * @param infModel
 	 * @param clue
 	 */
-	public SolutionImpl(String solutionText, Resource solutionResource, InfModel infModel, Clue clue) {
+	public SolutionImpl(String solutionText, Resource solutionResource, Resource clueResource, InfModel infModel, Clue clue) {
 		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
 		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
 		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
 		
 		this.setSolutionResource(solutionResource);
+		this.setClueResource(clueResource);
+		
 		this.setInfModel(infModel);
 		this.setClue(clue);
+		
+		System.out.println("Solution resource: " + this.getSolutionResource().getURI()); // DEBUGGING ******************************
+		System.out.println("Clue resource " + this.getClueResource().getURI()); // DEBUGGING ******************************
 	}
 
 	/*
