@@ -13,7 +13,6 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
@@ -40,9 +39,6 @@ public class SolutionScorerImpl implements SolutionScorer {
 	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
-	
-	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
-	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
@@ -299,37 +295,5 @@ public class SolutionScorerImpl implements SolutionScorer {
 
 		queryExecution.close();
 		return numberOfLinks;	
-	}
-	
-	private double countTypeLinks(Resource solutionResource, ArrayList<Resource> clueTypes) {
-		
-		return 1.0;
-	}
-	
-	private void outLineOfScoringAlgorithm(Solution solution) {
-		/* Start by getting the values of RDF:type for the solutionResource
-		 * Then check my local ontology for class types with labels that match fragments of the solution text
-		 * 
-		 * Then...
-		 * 
-		 */
-		
-		/* Find values of RDF:type for the solutionResource and add these resources to a list */
-		ArrayList<Resource> solutionResourceTypes = new ArrayList<Resource>();
-		StmtIterator statementIterator = solution.getSolutionResource().listProperties(RDF.type);
-		while(statementIterator.hasNext()) {
-			Resource r = (Resource) statementIterator.nextStatement().getObject();
-			solutionResourceTypes.add(r);
-		}
-		
-		/* Find types within my ontology that match fragments of the clue text.
-		 * I will need to add these to a list of objects that allow me to store together the particular fragment of the
-		 * text and the type from my ontology that it has matched. For now, I will lazily keep these in two parallel lists,
-		 * but I REALLY MUST REFACTOR THIS
-		 */
-		ArrayList<String> recognisedClueFragments = new ArrayList<String>(); // TWO PARALLEL LISTS
-		ArrayList<Resource> recognisedClueResourceTypes = new ArrayList<Resource>();
-		
-		/* Next, I need to get hold of the complete list of clue fragments... */
 	}
 }
