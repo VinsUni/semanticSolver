@@ -714,6 +714,9 @@
 
     <owl:Class rdf:about="&dbpedia-owl;MusicalArtist">
         <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
+        
+        <rdfs:subClassOf rdf:resource="&pop;artist"/>
+        
         <rdfs:subClassOf rdf:resource="&umbel;Artist"/>
         <rdfs:subClassOf rdf:resource="&umbel;MusicalPerformer"/>
     </owl:Class>
@@ -1133,9 +1136,11 @@ be the 2nd movement of some classical symphony.</skos:definition>
         <rdfs:label>pop singer</rdfs:label>
         <rdfs:label>singer</rdfs:label>
         <rdfs:label>artiste</rdfs:label>
+        
+		<skos:prefLabel>artist</skos:prefLabel>
+		
         <rdfs:subClassOf rdf:resource="&yago;Musician110340312"/>
         <rdfs:subClassOf rdf:resource="&yago;Singer110599806"/>
-        <skos:prefLabel>artist</skos:prefLabel>
     </owl:Class>
     
 
