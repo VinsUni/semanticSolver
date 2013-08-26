@@ -139,6 +139,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			Statement thisStatement = statements.nextStatement();
 			Resource subjectOfStatement = thisStatement.getSubject();
 			RDFNode objectOfStatement = thisStatement.getObject();
+				
 			
 			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
 			
@@ -160,8 +161,23 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 						if(this.getClueFragments().contains(toProperCase(predicateLabel))) {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
+							
+							Resource solutionResource, clueResource;
+							
 							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
-								Solution s = new SolutionImpl(objectOfInterest.toString(), r, subjectOfStatement,
+								
+
+								if(this.getRecognisedResourceUris().contains(r.getURI())) {
+									clueResource = r;
+									solutionResource = objectOfInterest.asResource();
+								}
+								else {
+									clueResource = objectOfInterest.asResource();
+									solutionResource = r;
+								}
+								
+								
+								Solution s = new SolutionImpl(objectOfInterest.toString(), solutionResource, clueResource,
 										infModel, this.getClue());
 								if(!(candidateSols.contains(s)))
 									candidateSols.add(s);
@@ -199,7 +215,17 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 												String candidateLabel = stripLanguageTag(rawCandidateLabel);
 												
 												Resource res = s.getSubject();
-												Solution so = new SolutionImpl(candidateLabel, res, subjectOfStatement,
+												
+												if(this.getRecognisedResourceUris().contains(res.getURI())) {
+													clueResource = res;
+													solutionResource = subjectOfStatement;
+												}
+												else {
+													clueResource = subjectOfStatement;
+													solutionResource = res;
+												}
+												
+												Solution so = new SolutionImpl(candidateLabel, solutionResource, clueResource,
 														infModel, this.getClue());
 												if(!(candidateSols.contains(so)))
 													candidateSols.add(so);
