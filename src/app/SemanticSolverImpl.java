@@ -149,7 +149,7 @@ public class SemanticSolverImpl implements SemanticSolver {
         	@Override
                  	public void run() {
                  		getUserInterface().updateResults(getResults());
-                 		getUserInterface().showNewClueOptions();
+                 		getUserInterface().updateProgressBarMessage("Calculating confidence levels for solutions");
                  	}
         	});
         	

@@ -41,6 +41,7 @@ import framework.UserInterface;
 public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
+	//private final String SCORING_IN_PROGRESS_MESSAGE = "Scoring solutions";
 	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
 	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
@@ -298,4 +299,13 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         this.getDisplayPanel().getPanelScrollPane().revalidate();
      	this.getDisplayPanel().getPanelScrollPane().repaint();
 	}
+    
+    /**
+     * 
+     */
+    @Override
+    public void updateProgressBarMessage(String message) {
+    	this.getDisplayPanel().getProgressBar().setString(message);
+    	this.getDisplayPanel().getProgressBar().setStringPainted(true);
+    }
 }
