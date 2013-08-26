@@ -258,7 +258,16 @@ public class SolutionScorerImpl implements SolutionScorer {
 							 " }";
 		Query query = QueryFactory.create(sparqlQuery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(this.ENDPOINT_URI, query);
-		ResultSet resultSet = queryExecution.execSelect();
+		
+		ResultSet resultSet = null;
+		try {
+			resultSet = queryExecution.execSelect();
+		}
+		catch (QueryExceptionHTTP e) {
+			System.err.println("DBpedia failed to return a result for the scoring query: " + sparqlQuery);
+			return 0;
+		}
+		
         QuerySolution querySolution = resultSet.nextSolution();
         
         Literal numberOfLinksAsLiteral = querySolution.getLiteral("?count");

@@ -88,7 +88,8 @@ public class SolutionImpl implements Solution {
 	
 	/**
 	 * equals - see java.lang.Object
-	 * Two Solution objects are considered equal if their respective solutionText members are equal
+	 * Two Solution objects are considered equal if their respective solutionText members are equal, the URLs of their respective
+	 * solutionResource members are equal, and the URLs of their respective clueResource members are equal
 	 */
 	@Override
 	public boolean equals(Object anotherObject) {
@@ -99,6 +100,8 @@ public class SolutionImpl implements Solution {
 		catch(ClassCastException e) {
 			return false;
 		}
-		return this.getSolutionText().equals(anotherSolution.getSolutionText());
+		return this.getSolutionText().equals(anotherSolution.getSolutionText()) &&
+				this.getSolutionResource().getURI().equals(anotherSolution.getSolutionResource().getURI()) &&
+				this.getClueResource().getURI().equals(anotherSolution.getClueResource().getURI());
 	}
 }
