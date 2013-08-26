@@ -27,6 +27,8 @@ public class SolutionImpl implements Solution {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private double score;
+	
 	public SolutionImpl(String solutionText) {
 		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
 		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
@@ -103,5 +105,11 @@ public class SolutionImpl implements Solution {
 		return this.getSolutionText().equals(anotherSolution.getSolutionText()) &&
 				this.getSolutionResource().getURI().equals(anotherSolution.getSolutionResource().getURI()) &&
 				this.getClueResource().getURI().equals(anotherSolution.getClueResource().getURI());
+	}
+
+	@Override
+	public int getConfidence() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

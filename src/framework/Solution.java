@@ -18,4 +18,7 @@ public interface Solution {
 	public Resource getClueResource();
 	public Clue getClue();
 	public InfModel getInfModel();
+	public void setScore(double score);
+	public double getScore();
+	public int getConfidence();
 }
