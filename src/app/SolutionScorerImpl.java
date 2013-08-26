@@ -20,6 +20,7 @@ import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
@@ -272,7 +273,14 @@ public class SolutionScorerImpl implements SolutionScorer {
 	private double executeCountQuery(String countQuery) {
 		Query query = QueryFactory.create(countQuery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(this.ENDPOINT_URI, query);
-		ResultSet resultSet = queryExecution.execSelect();
+		ResultSet resultSet = null;
+		try {
+			resultSet = queryExecution.execSelect();
+		}
+		catch (QueryExceptionHTTP e) {
+			System.err.println("DBpedia failed to return a result for the scoring query: " + countQuery);
+			return 0;
+		}
         QuerySolution querySolution = resultSet.nextSolution();
         
         Literal numberOfLinksAsLiteral = querySolution.getLiteral("?count");
@@ -281,8 +289,7 @@ public class SolutionScorerImpl implements SolutionScorer {
         System.out.println("Number of links found: " + numberOfLinks); // DEBUGGING ****************
 
 		queryExecution.close();
-		return numberOfLinks;
-		
+		return numberOfLinks;	
 	}
 	
 	private double countTypeLinks(Resource solutionResource, ArrayList<Resource> clueTypes) {
