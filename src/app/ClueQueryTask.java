@@ -250,7 +250,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		Model model = queryExecution.execConstruct();
 		
 		
-		
+		/*
 		// DEBUGGING ***************************************************************
 		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
@@ -275,7 +275,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
+		} */
 
 		queryExecution.close();
 		return model;
