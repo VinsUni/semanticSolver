@@ -176,11 +176,21 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 									solutionResource = r;
 								}
 								
+								/* Trialling http://dbpedia.org/resource/ only... */
+								String solutionResourceNameSpace = solutionResource.getNameSpace();
+								String clueResourceNameSpace = clueResource.getNameSpace();
+								if(!solutionResourceNameSpace.equals("http://dbpedia.org/resource/"))
+									continue;
+								if(!clueResourceNameSpace.equals("http://dbpedia.org/resource/"))
+									continue;
+								
 								
 								Solution s = new SolutionImpl(objectOfInterest.toString(), solutionResource, clueResource,
 										infModel, this.getClue());
-								if(!(candidateSols.contains(s)))
+								if(!(candidateSols.contains(s))) {
+									System.out.println("New solution found: " + s.toString()); // DEBUGGING **********
 									candidateSols.add(s);
+								}
 								
 									
 							}
@@ -223,10 +233,21 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 												solutionResource = res;
 											}
 											
+
+											/* Trialling http://dbpedia.org/resource/ only... */
+											String solutionResourceNameSpace = solutionResource.getNameSpace();
+											String clueResourceNameSpace = clueResource.getNameSpace();
+											if(!solutionResourceNameSpace.equals("http://dbpedia.org/resource/"))
+												break;
+											if(!clueResourceNameSpace.equals("http://dbpedia.org/resource/"))
+												break;
+											
 											Solution so = new SolutionImpl(candidateLabel, solutionResource, clueResource,
 													infModel, this.getClue());
-											if(!(candidateSols.contains(so)))
+											if(!(candidateSols.contains(so))) {
+												System.out.println("New solution found: " + so.toString()); // DEBUGGING **********
 												candidateSols.add(so);
+											}
 										}
 								}
 							}

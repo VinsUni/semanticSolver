@@ -112,4 +112,9 @@ public class SolutionImpl implements Solution {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+		return this.getSolutionText() + " - " + this.getSolutionResource().getURI() + " - " + this.getClueResource().getURI();
+	}
 }

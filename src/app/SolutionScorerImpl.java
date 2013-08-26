@@ -107,7 +107,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				
 				System.out.println("Found label: " + thisLabel); // DEBUGGING *****************************************
 				
-				if(clueFragments.contains(toProperCase(thisLabel)))
+				if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
 					solutionTypes.add(thisType);
 			}
 		}
@@ -145,7 +145,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				
 				System.out.println("Found label: " + thisPredicateLabel); // DEBUGGING *****************************************
 				
-				if(clueFragments.contains(toProperCase(thisPredicateLabel)))
+				if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
 					solutionProperties.add(thisPredicate);
 			}
 		}

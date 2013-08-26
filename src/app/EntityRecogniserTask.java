@@ -144,8 +144,15 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                    Resource thisResource = querySolution.getResource("?resource");
 
                                    String nameSpace = thisResource.getNameSpace();
+                                   
+                                   /* Trialling dbpedia.org/resource only ... */
+                                   if(!nameSpace.equals("http://dbpedia.org/resource/"))
+                                	   continue;
+                                   
+                                   /*
                                    if(excludedNameSpace(nameSpace))
                                             continue;
+                                   */
                                    
                                    Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
                                    String typeLabel = thisTypeLabel.toString();
