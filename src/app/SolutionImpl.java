@@ -106,11 +106,14 @@ public class SolutionImpl implements Solution {
 				this.getSolutionResource().getURI().equals(anotherSolution.getSolutionResource().getURI()) &&
 				this.getClueResource().getURI().equals(anotherSolution.getClueResource().getURI());
 	}
-
+	
+	/**
+	 * getConfidence - see framework.Solution
+	 */
 	@Override
 	public int getConfidence() {
-		// TODO Auto-generated method stub
-		return 0;
+		int confidence = (int)((1 - this.getScore()) * 100);
+		return confidence;
 	}
 	
 	@Override
