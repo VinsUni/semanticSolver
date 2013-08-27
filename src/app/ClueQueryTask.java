@@ -87,7 +87,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		this.setSolutions(new ArrayList<Solution>());
 		this.setExtractedResources(new ArrayList<Resource>());
 		this.setSchema(FileManager.get().loadModel(this.SCHEMA_FILE_NAME));
-		Reasoner reasoner = ReasonerRegistry.getOWLMiniReasoner();
+		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
 	    this.setReasoner(reasoner.bindSchema(schema));
 	}
 	
