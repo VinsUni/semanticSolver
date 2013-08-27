@@ -61,6 +61,9 @@ public class ClueImpl implements Clue {
 		
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(clueText);
+		System.out.println("Clue fragments:"); // DEBUGGING ****************************************
+		for(String clueFragment : this.getClueFragments()) // DEBUGGING ****************************************
+			System.out.println(clueFragment); // DEBUGGING ****************************************
 		
 	}
 	
@@ -92,12 +95,20 @@ public class ClueImpl implements Clue {
 		String[] wordsInClueText = clueText.split(" ");
 		for(int i = 0; i < wordsInClueText.length; i++) {
 			String thisWord = this.toProperCase(wordsInClueText[i]);
-			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
+			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 				this.getClueFragments().add(thisWord);
+				/* if the word ends with a comma, add the word without the comma as a fragment too */
+				if(thisWord.length() > 1 && thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(","))
+					this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
+			}
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
-				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord))
+				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 					this.getClueFragments().add(thisWord);
+					/* if the word ends with a comma, add the word without the comma as a fragment too */
+					if(thisWord.length() > 1 && thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(","))
+						this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
+				}
 			}
 		}
 
