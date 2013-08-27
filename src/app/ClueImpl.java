@@ -52,6 +52,8 @@ public class ClueImpl implements Clue {
 				throw new InvalidClueException("Invalid specification of solution structure");
 		}
 		
+		clueText = stripQuotes(clueText);
+		
 		this.setSourceClue(clueText);
 		if(this.getSourceClue().contains(FILL_IN_THE_BLANK_MARKER))
 			this.setFillInTheBlank(true);
@@ -63,6 +65,11 @@ public class ClueImpl implements Clue {
 		this.addClueFragments(clueText);
 	}
 	
+	private String stripQuotes(String clueText) {
+		String clueTextWithoutQuotes = clueText.replace("\"", "");
+		return clueTextWithoutQuotes;
+	}
+
 	/**
 	 * matchesStructure - see framework.Clue
 	 */
