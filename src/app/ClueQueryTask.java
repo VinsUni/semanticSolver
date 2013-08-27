@@ -56,6 +56,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
+	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
+	
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String ENG_LANG = "en";
@@ -262,26 +264,39 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
 		
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
+				RDF_PREFIX_DECLARATION + " " +
 				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
 				" construct {<" + resourceUri + "> ?predicate ?object." +
 				" 			?object rdfs:label ?label." +
 				" 			?object dbpprop:name ?name." +
+				"			?object rdf:type ?objectType." +
+				"			?objectType rdfs:label ?objectTypeLabel." +
 				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
 				"			?subject rdfs:label ?anotherLabel." +
 				"			?subject dbpprop:name ?anotherName." +
+				"			?subject rdf:type ?subjectType." +
+				"			?subjectType rdfs:label ?subjectTypeLabel." +
 				"}" +
 				" where {" +
 				" {<" + resourceUri + "> ?predicate ?object." +
-				" 			?object rdfs:label ?label.}" +
+				"  ?object rdfs:label ?label." +
+				"  ?object rdf:type ?objectType." +
+				"  ?objectType rdfs:label ?objectTypeLabel.}" +
 				" UNION" +
 				" {<" + resourceUri + "> ?predicate ?object." +
-				" 			?object dbpprop:name ?name.}" +
+				"  ?object dbpprop:name ?name." +
+				"  ?object rdf:type ?objectType." +
+				"  ?objectType rdfs:label ?objectTypeLabel.}" +
 				" UNION" +
 				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				" ?subject rdfs:label ?anotherLabel.} " +
+				" ?subject rdfs:label ?anotherLabel. " +
+				" ?subject rdf:type ?subjectType." +
+				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
 				" UNION" +
 				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				" ?subject dbpprop:name ?anotherName.} " +
+				" ?subject dbpprop:name ?anotherName. " +
+				" ?subject rdf:type ?subjectType." +
+				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
 				"}";
 		
 		Query query = QueryFactory.create(sparqlQuery);
