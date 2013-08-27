@@ -237,6 +237,8 @@
         <rdfs:label>song</rdfs:label>
         <rdfs:label>sang</rdfs:label>
         <rdfs:label>sung</rdfs:label>
+        <rdfs:label>hit</rdfs:label>
+        
         <rdfs:comment>The value of this property is a song (pop:composition) or album (pop:album) on which the subject (artist/group/producer) performs</rdfs:comment>
         <skos:prefLabel>artist of</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
