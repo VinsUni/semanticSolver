@@ -61,10 +61,6 @@ public class ClueImpl implements Clue {
 		
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(clueText);
-		System.out.println("Clue fragments:"); // DEBUGGING ****************************************
-		for(String clueFragment : this.getClueFragments()) // DEBUGGING ****************************************
-			System.out.println(clueFragment); // DEBUGGING ****************************************
-		
 	}
 	
 	/**
