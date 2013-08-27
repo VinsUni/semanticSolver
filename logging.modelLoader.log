@@ -2144,3 +2144,4 @@
 19:47:06 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 1468 column 70): {E201} Multiple children of property element
 19:47:06 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 1468 column 70): {E201} rdf:resource not allowed as attribute here.
 19:47:06 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 1470 column 3): The element type "rdf:Description" must be terminated by the matching end-tag "</rdf:Description>".
+18:37:45 WARN  BaseXMLWriter             :: Workaround for bugs 803804 and 858163: using RDF/XML (not RDF/XML-ABBREV) writer  for unsafe graph class com.hp.hpl.jena.reasoner.rulesys.FBRuleInfGraph
