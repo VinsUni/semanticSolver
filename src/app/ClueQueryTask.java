@@ -52,7 +52,7 @@ import framework.Solution;
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private final String SCHEMA_FILE_NAME = "popv7.owl";
 	
-	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
+	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql
 	
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";

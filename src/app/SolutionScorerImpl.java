@@ -41,7 +41,7 @@ import framework.SolutionScorer;
  *
  */
 public class SolutionScorerImpl implements SolutionScorer {
-	private final String ENDPOINT_URI = "http://dbpedia.org/sparql";
+	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED TWICE
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
