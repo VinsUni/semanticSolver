@@ -462,7 +462,11 @@
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasMember">
         <rdfs:label>member</rdfs:label>
         <rdfs:label>has member</rdfs:label>
+        <rdfs:label>included</rdfs:label>
+        
+        
         <skos:prefLabel>has member</skos:prefLabel>
+        
         <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedMusicalArtist"/>
         <rdfs:subPropertyOf rdf:resource="&dbpprop;associatedActs"/>
         <rdfs:subPropertyOf rdf:resource="&dbpprop;currentMembers"/>
@@ -503,6 +507,12 @@
         <rdfs:label>band</rdfs:label>
         <rdfs:label>associated band</rdfs:label>
         <rdfs:label>member of</rdfs:label>
+        <rdfs:label>one of</rdfs:label>
+        <rdfs:label>musician</rdfs:label>
+        <rdfs:label>from</rdfs:label>
+        <rdfs:label>in</rdfs:label>
+        <rdfs:label>played with</rdfs:label>
+        
         <skos:prefLabel>member of</skos:prefLabel>
         <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedBand"/>
         <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
