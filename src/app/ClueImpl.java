@@ -57,12 +57,16 @@ public class ClueImpl implements Clue {
 		this.setSourceClue(clueText);
 		if(this.getSourceClue().contains(FILL_IN_THE_BLANK_MARKER))
 			this.setFillInTheBlank(true);
-		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING
+		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING *******************************
 		
 		this.setSolutionStructure(solutionStructure);
 		
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(clueText);
+		
+		System.out.println("Clue fragments generated:"); // DEBUGGING *******************************
+		for(String f : this.getClueFragments()) // DEBUGGING *******************************
+			System.out.println(f); // DEBUGGING *******************************
 	}
 	
 	private String stripQuotes(String clueText) {
@@ -100,17 +104,25 @@ public class ClueImpl implements Clue {
 			String thisWord = this.toProperCase(wordsInClueText[i]);
 			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 				this.getClueFragments().add(thisWord);
-				/* if the word ends with a comma, add the word without the comma as a fragment too */
-				if(thisWord.length() > 1 && thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(","))
+				/* if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too */
+				if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")
+						|| thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(")")))
 					this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
+				/* if the word begins with a (, add the word without the ( as a fragment too */
+				if(thisWord.length() > 1 && thisWord.substring(0, 1).equals("("))
+					this.getClueFragments().add(thisWord.substring(1, thisWord.length()));
 			}
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
 				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 					this.getClueFragments().add(thisWord);
-					/* if the word ends with a comma, add the word without the comma as a fragment too */
-					if(thisWord.length() > 1 && thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(","))
+					/* if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too */
+					if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")
+							|| thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(")")))
 						this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
+					/* if the word begins with a (, add the word without the ( as a fragment too */
+					if(thisWord.length() > 1 && thisWord.substring(0, 1).equals("("))
+						this.getClueFragments().add(thisWord.substring(1, thisWord.length()));
 				}
 			}
 		}
