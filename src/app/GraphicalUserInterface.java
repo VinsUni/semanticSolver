@@ -130,8 +130,12 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 					else {
 						if(getChosenResourceUris() == null || getChosenResourceUris().size() == 0) {
 				        	updateResults("You didn't select any resources!");
-				     }
-					 else findSolutions();
+				        	int confirmExit = JOptionPane.showConfirmDialog(getDisplayPanel(), "No entities selected. Do you want to give up on this clue?", 
+									"Do you want to cancel?", JOptionPane.YES_NO_OPTION);
+				        	if(confirmExit == JOptionPane.YES_OPTION)
+				        		showNewClueOptions();
+						}
+						else findSolutions();
 					}
 				}
 			}
@@ -314,6 +318,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         	if(actionEvent.getActionCommand().equals("submitChosenResources")) {
 				 if(this.getChosenResourceUris() == null || this.getChosenResourceUris().size() == 0) {
 			        	this.updateResults("You didn't select any resources!");
+			        	int confirmExit = JOptionPane.showConfirmDialog(getDisplayPanel(), "No entities selected. Do you want to give up on this clue?", 
+								"Do you want to cancel?", JOptionPane.YES_NO_OPTION);
+			        	if(confirmExit == JOptionPane.YES_OPTION)
+			        		showNewClueOptions();
 			     }
 				 else this.findSolutions();
         	}
