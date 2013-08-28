@@ -33,6 +33,7 @@ import lombok.Setter;
 
 import experiments.NsPrefixLoader;
 import framework.Clue;
+import framework.Pop;
 import framework.Solution;
 import framework.SolutionScorer;
 
@@ -127,6 +128,10 @@ public class SolutionScorerImpl implements SolutionScorer {
 			
 			Resource thisType = thisStatement.getObject().asResource();
 			
+			String nameSpace = thisType.getNameSpace();
+			if(nameSpace != null && nameSpace.equals(Pop.POP_URI))
+				continue;
+			
 			StmtIterator typeLabels = thisType.listProperties(RDFS.label);
 			
 			while(typeLabels.hasNext()) {
@@ -164,6 +169,10 @@ public class SolutionScorerImpl implements SolutionScorer {
 			System.err.println(thisStatement.toString()); // DEBUGGING ***********************************************
 			
 			Resource thisPredicate = thisStatement.getPredicate().asResource();
+			
+			String nameSpace = thisPredicate.getNameSpace();
+			if(nameSpace != null && nameSpace.equals(Pop.POP_URI))
+				continue;
 			
 			StmtIterator predicateLabels = thisPredicate.listProperties(RDFS.label);
 			
