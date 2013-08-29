@@ -426,9 +426,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		Model mergedModel = model.union(secondModel);
 		
-		
+		/*
 		// DEBUGGING ***************************************************************
-		//if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
+		
 			 // load standard prefixes into the model
 		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
 			prefixLoader.loadStandardPrefixes();
@@ -451,7 +451,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		//} 
+		*/
 
 		return mergedModel;
 		//return model;
