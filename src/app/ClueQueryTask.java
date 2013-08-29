@@ -57,6 +57,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
+	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
@@ -113,6 +114,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			    	this.solutions.add(sol);
 			}
 			catch(QueryExceptionHTTP e) {
+				e.printStackTrace(); // DEBUGGING ***********************8
 				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
 			}
 			
@@ -262,6 +264,58 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	}
 	
 	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
+		/*
+		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
+				RDF_PREFIX_DECLARATION + " " +
+				DBPEDIA_PROPERTY_PREFIX_DECLARATION + " " +
+				FOAF_PREFIX_DECLARATION +
+				" construct {<" + resourceUri + "> ?predicate ?object." +
+				" 			?object rdfs:label ?label." +
+				" 			?object dbpprop:name ?name." +
+				"			?object rdf:type ?objectType." +
+				"			?object foaf:givenName ?givenName." +
+				"			?object foaf:surname ?surname." +
+				"			?objectType rdfs:label ?objectTypeLabel." +
+				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
+				"			?subject rdfs:label ?anotherLabel." +
+				"			?subject dbpprop:name ?anotherName." +
+				"			?subject rdf:type ?subjectType." +
+				"			?subject foaf:givenName ?anotherGivenName." +
+				"			?subject foaf:surname ?anotherSurname." +
+				"			?subjectType rdfs:label ?subjectTypeLabel." +
+				"}" +
+				" where {" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				"  ?object rdfs:label ?label." +
+				"  ?object rdf:type ?objectType." +
+				"  ?objectType rdfs:label ?objectTypeLabel.}" +
+				" UNION" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				"  ?object dbpprop:name ?name." +
+				"  ?object rdf:type ?objectType." +
+				"  ?objectType rdfs:label ?objectTypeLabel.}" +
+				" UNION" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				"  ?object foaf:givenName ?givenName." +
+				"  ?object foaf:surname ?surname." +
+				"  ?objectType rdfs:label ?objectTypeLabel.}" +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				" ?subject rdfs:label ?anotherLabel. " +
+				" ?subject rdf:type ?subjectType." +
+				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				" ?subject dbpprop:name ?anotherName. " +
+				" ?subject rdf:type ?subjectType." +
+				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				"  ?subject foaf:givenName ?anotherGivenName." +
+				"  ?subject foaf:surname ?anotherSurname." +
+				"  ?subjectType rdfs:label ?subjectTypeLabel.}" +
+				"}";
+		*/
 		
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
 				RDF_PREFIX_DECLARATION + " " +
@@ -298,6 +352,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				" ?subject rdf:type ?subjectType." +
 				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
 				"}";
+		 
 		
 		Query query = QueryFactory.create(sparqlQuery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
@@ -306,6 +361,36 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		Model model = queryExecution.execConstruct();
 		
+		queryExecution.close();
+		
+		String secondSparqlQuery = FOAF_PREFIX_DECLARATION +
+				" construct {<" + resourceUri + "> ?predicate ?object." +
+				"			?object foaf:givenName ?givenName." +
+				"			?object foaf:surname ?surname." +
+				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
+				"			?subject foaf:givenName ?anotherGivenName." +
+				"			?subject foaf:surname ?anotherSurname." +
+				"}" +
+				" where {" +
+				" {<" + resourceUri + "> ?predicate ?object." +
+				"  ?object foaf:givenName ?givenName." +
+				"  ?object foaf:surname ?surname.}" +
+				" UNION" +
+				" {?subject ?anotherPredicate <" + resourceUri + ">." +
+				"  ?subject foaf:givenName ?anotherGivenName." +
+				"  ?subject foaf:surname ?anotherSurname.}" +
+				"}";
+		
+		Query secondQuery = QueryFactory.create(secondSparqlQuery);
+		QueryExecution secondQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, secondQuery);
+		
+		Model secondModel = secondQueryExecution.execConstruct();
+		
+		secondQueryExecution.close();
+		
+		Model mergedModel = model.union(secondModel);
+		
+		System.out.println("Constructing second model around " + resourceUri); // DEBUGGING ******************************
 		
 		/*
 		// DEBUGGING ***************************************************************
@@ -334,8 +419,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			}
 		} */
 
-		queryExecution.close();
-		return model;
+		return mergedModel;
+		//return model;
 	}
 
 	/*
