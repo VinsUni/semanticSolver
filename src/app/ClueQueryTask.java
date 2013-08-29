@@ -145,7 +145,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		System.out.println("rootResourceUri = " + rootResourceUri); // DEBUGGING ******************************
 		System.out.println("rootResource is null = " + (rootResource == null)); // DEBUGGING ******************************
 		
-		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, FOAF.givenname, (RDFNode)null);
+		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
 		
 		StmtIterator rootLabels = infModel.listStatements(rootResourceLabelSelector);
 		System.out.println("rootLabels.hasNext() = " + (rootLabels.hasNext())); // DEBUGGING ******************************
@@ -163,9 +163,6 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			}
 			
 		}
-		
-		
-		
 		
 		
 		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
