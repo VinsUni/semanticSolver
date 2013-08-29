@@ -20,6 +20,7 @@
     <!ENTITY n "http://dbpedia.org/class/yago/Rock" >
     <!ENTITY Compositor "http://dbpedia.org/class/yago/Compositor" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY pop "http://www.griffithsben.com/pop/ontology.owl#" >
 ]>
 
@@ -45,6 +46,8 @@
      xmlns:Compositor="&yago;Compositor"
      xmlns:Man="&yago;Man"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+     
     <owl:Ontology rdf:about="http://www.griffithsben.com/ontologies/pop.owl">
         <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
     </owl:Ontology>
@@ -97,6 +100,21 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+     
+    <!-- http://xmlns.com/foaf/0.1/givenName -->
+     
+    <owl:ObjectProperty rdf:about="&foaf;givenName">
+        <rdfs:label>given name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:ObjectProperty>
+    
+    <!-- http://xmlns.com/foaf/0.1/surname -->
+     
+    <owl:ObjectProperty rdf:about="&foaf;surname">
+        <rdfs:label>surname</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:ObjectProperty>
+     
 	
 	<!-- http://dbpedia.org/property/name -->
 	

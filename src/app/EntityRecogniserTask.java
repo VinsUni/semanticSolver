@@ -37,6 +37,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
+	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
@@ -101,7 +102,8 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                  String SPARQLquery = RDFS_PREFIX_DECLARATION + " " +
                                                               RDF_PREFIX_DECLARATION + " " +
                                                               DBPPROP_PREFIX_DECLARATION + " " +
-                                                              DB_OWL_PREFIX_DECLARATION +
+                                                              DB_OWL_PREFIX_DECLARATION + " " +
+                                                              FOAF_PREFIX_DECLARATION +
                                             " select distinct ?resource ?typeLabel {" +
                                            " {" +
                                                     "{ select distinct ?resource ?typeLabel" +
@@ -117,6 +119,18 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                                     " }" +
                                                     " UNION" +
                                                     " { select distinct ?resource ?typeLabel" +
+                                                    "  where {?resource foaf:givenName " + wrappedClueFragment + "." +
+                                                             " ?resource rdf:type ?type." +
+                                                             " ?type rdfs:label ?typeLabel.}" +
+                                                    " }" +
+                                                    " UNION" +
+                                                    " { select distinct ?resource ?typeLabel" +
+                                                    "  where {?resource foaf:surname " + wrappedClueFragment + "." +
+                                                             " ?resource rdf:type ?type." +
+                                                             " ?type rdfs:label ?typeLabel.}" +
+                                                    " }" +
+                                                    " UNION" +
+                                                    " { select distinct ?resource ?typeLabel" +
                                                     "  where {?redirectingResource rdfs:label " + wrappedClueFragment + "." +
                                                     "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
                                                              " ?resource rdf:type ?type." +
@@ -127,6 +141,20 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                                     " { select distinct ?resource ?typeLabel" +
                                                     "  where {?redirectingResource dbpprop:name " + wrappedClueFragment + "." +
                                                     "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
+                                                             " ?resource rdf:type ?type." +
+                                                             " ?type rdfs:label ?typeLabel.}" +
+                                                    " }" +
+                                                    " UNION" +
+                                                    " { select distinct ?resource ?typeLabel" +
+                                                    "  where {?redirectingResource foaf:givenName " + wrappedClueFragment + "." +
+                                                    "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                                             " ?resource rdf:type ?type." +
+                                                             " ?type rdfs:label ?typeLabel.}" +
+                                                    " }" +
+                                                    " UNION" +
+                                                    " { select distinct ?resource ?typeLabel" +
+                                                    "  where {?redirectingResource foaf:surname " + wrappedClueFragment + "." +
+                                                    "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
                                                              " ?resource rdf:type ?type." +
                                                              " ?type rdfs:label ?typeLabel.}" +
 

@@ -21,6 +21,7 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.LiteralRequiredException;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -38,6 +39,7 @@ import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
+import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 
 import experiments.NsPrefixLoader;
 import framework.Clue;
@@ -109,7 +111,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			try {
 				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
 				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
-			    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel); // adds any candidate solutions from the model to the candidateSolutions list
+			    ArrayList<Solution> sols = this.extractCandidateSolutions(infModel, resourceUri); // adds any candidate solutions from the model to the candidateSolutions list
 			    for(Solution sol : sols)
 			    	this.solutions.add(sol);
 			}
@@ -132,8 +134,39 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
     	this.setProgress(100);
     }
 	
-	private ArrayList<Solution> extractCandidateSolutions(InfModel infModel) {
+	private ArrayList<Solution> extractCandidateSolutions(InfModel infModel, String rootResourceUri) {
+		
 		ArrayList<Solution> candidateSols = new ArrayList<Solution>();
+		
+		/* First, check the labels of the resource around which the model was constructed */
+		
+		Resource rootResource = infModel.getResource(rootResourceUri);
+		
+		System.out.println("rootResourceUri = " + rootResourceUri); // DEBUGGING ******************************
+		System.out.println("rootResource is null = " + (rootResource == null)); // DEBUGGING ******************************
+		
+		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, FOAF.givenname, (RDFNode)null);
+		
+		StmtIterator rootLabels = infModel.listStatements(rootResourceLabelSelector);
+		System.out.println("rootLabels.hasNext() = " + (rootLabels.hasNext())); // DEBUGGING ******************************
+		while(rootLabels.hasNext()) {
+			Statement stmnt = rootLabels.nextStatement();
+			Literal rootLabelLiteral = stmnt.getLiteral();
+			
+			System.out.println("Found label of root resource: " + rootLabelLiteral.toString()); // DEBUGGING *************
+			
+			Solution solu = new SolutionImpl(rootLabelLiteral.toString(), rootResource, rootResource,
+					infModel, this.getClue()); // the solutionResource and clueResource are one and the same
+			if(!(candidateSols.contains(solu))) {
+				System.out.println("New solution found: " + solu.toString()); // DEBUGGING **********
+				candidateSols.add(solu);
+			}
+			
+		}
+		
+		
+		
+		
 		
 		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
 		// List statements in which the predicate is a pop:relationalProperty
@@ -363,26 +396,29 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		queryExecution.close();
 		
-		String secondSparqlQuery = FOAF_PREFIX_DECLARATION +
-				" construct {<" + resourceUri + "> ?predicate ?object." +
-				"			?object foaf:givenName ?givenName." +
-				"			?object foaf:surname ?surname." +
-				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
-				"			?subject foaf:givenName ?anotherGivenName." +
-				"			?subject foaf:surname ?anotherSurname." +
-				"}" +
+		/* Construct a second model to gather labels of the recognised resource */
+		String secondSparqlQuery = FOAF_PREFIX_DECLARATION + " " +
+				RDFS_PREFIX_DECLARATION + " " +
+				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
+				" construct {<" + resourceUri + "> foaf:givenName ?givenName." +
+				" 		<" + resourceUri + "> foaf:surname ?surname." +
+				" 		<" + resourceUri + "> rdfs:label ?label." +
+				" 		<" + resourceUri + "> dbpprop:name ?name." +
+				" }" +
 				" where {" +
-				" {<" + resourceUri + "> ?predicate ?object." +
-				"  ?object foaf:givenName ?givenName." +
-				"  ?object foaf:surname ?surname.}" +
-				" UNION" +
-				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				"  ?subject foaf:givenName ?anotherGivenName." +
-				"  ?subject foaf:surname ?anotherSurname.}" +
+				"	 {<" + resourceUri + "> foaf:givenName ?givenName.}" +
+				"	 UNION" +
+				"	 {<" + resourceUri + "> foaf:surname ?surname.}" +
+				"	 UNION" +
+				"	 {<" + resourceUri + "> rdfs:label ?label.}" +
+				"	 UNION" +
+				"	 {<" + resourceUri + "> dbpprop:name ?name.}" +
 				"}";
 		
 		Query secondQuery = QueryFactory.create(secondSparqlQuery);
 		QueryExecution secondQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, secondQuery);
+		
+		System.out.println("Constructing second model around " + resourceUri); // DEBUGGING ******************************
 		
 		Model secondModel = secondQueryExecution.execConstruct();
 		
@@ -390,11 +426,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		Model mergedModel = model.union(secondModel);
 		
-		System.out.println("Constructing second model around " + resourceUri); // DEBUGGING ******************************
 		
-		/*
 		// DEBUGGING ***************************************************************
-		if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
+		//if(resourceUri.equals("http://dbpedia.org/resource/Houses_Of_The_Holy")) {
 			 // load standard prefixes into the model
 		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
 			prefixLoader.loadStandardPrefixes();
@@ -417,7 +451,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-		} */
+		//} 
 
 		return mergedModel;
 		//return model;
