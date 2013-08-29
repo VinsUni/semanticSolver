@@ -191,7 +191,15 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
         
         ArrayList<JTextField> solutionStructureInputFields = this.getDisplayPanel().getSolutionStructureInputFields();
         for(int i = 0; i < solutionStructureInputFields.size(); i++) {
-        	solutionStructure[i] = Integer.parseInt(solutionStructureInputFields.get(i).getText()); // NEED TO ADD EXCEPTION CHECK
+        	try {
+        		solutionStructure[i] = Integer.parseInt(solutionStructureInputFields.get(i).getText());
+        	}
+        	catch(NumberFormatException e) {
+        		this.updateResults("Please specify the complete solution structure, using only digits (0-9)");
+        		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
+    	        this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+        		return;
+        	}
         }
         
         Clue clue = null;
