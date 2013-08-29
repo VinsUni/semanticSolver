@@ -3193,3 +3193,11 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
 23:48:31 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 49 column 46): {E202} Expecting XML start or end element(s). String data "
      xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+23:50:22 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 49 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+23:51:46 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 49 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+23:54:50 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 49 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+23:56:58 ERROR RDFDefaultErrorHandler    :: file:popv7.owl(line 49 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.

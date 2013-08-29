@@ -151,7 +151,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		System.out.println("rootLabels.hasNext() = " + (rootLabels.hasNext())); // DEBUGGING ******************************
 		while(rootLabels.hasNext()) {
 			Statement stmnt = rootLabels.nextStatement();
-			Literal rootLabelLiteral = stmnt.getLiteral();
+			Literal rootLabelLiteral;
+			try {
+				rootLabelLiteral = stmnt.getLiteral();
+			}
+			catch(LiteralRequiredException e) {
+				continue;
+			}
 			
 			System.out.println("Found label of root resource: " + rootLabelLiteral.toString()); // DEBUGGING *************
 			
