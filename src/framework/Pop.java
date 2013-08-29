@@ -53,11 +53,13 @@ public class Pop {
     /**
      * Classes in the pop vocabulary
      */
-    public static final Resource artist = model.createResource(POP_URI + "artist");
+    public static final Resource popClass = model.createResource(POP_URI + "popClass");
     public static final Resource album = model.createResource(POP_URI + "album");
+    public static final Resource artist = model.createResource(POP_URI + "artist");
     public static final Resource composer = model.createResource(POP_URI + "composer");
     public static final Resource composition = model.createResource(POP_URI + "composition");
     public static final Resource genre = model.createResource(POP_URI + "genre");
+    public static final Resource group = model.createResource(POP_URI + "genre");
     public static final Resource member = model.createResource(POP_URI + "member");
     public static final Resource producer = model.createResource(POP_URI + "producer");
     public static final Resource recordLabel = model.createResource(POP_URI + "recordLabel");

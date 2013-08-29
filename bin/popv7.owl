@@ -197,6 +197,17 @@
 
     <owl:ObjectProperty rdf:about="&dbpprop;currentMembers"/>
     
+    
+    
+    <!-- http://dbpedia.org/ontology/associatedBand -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/associatedBand">
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>associated band</rdfs:label>
+        <rdfs:label>member of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://www.griffithsben.com/ontologies/pop.owl#albumOf -->
@@ -650,15 +661,59 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    <!-- http://dbpedia.org/ontology/associatedBand -->
-
-    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/associatedBand">
-        <rdfs:label>band</rdfs:label>
-        <rdfs:label>associated band</rdfs:label>
-        <rdfs:label>member of</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
-    </owl:ObjectProperty>
+     
+    <!-- pop:popClass -->
+    <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    
+     <!-- pop:album -->
+    <rdf:Description rdf:about="&pop;album">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+        
+        <!-- pop:artist -->
+    <rdf:Description rdf:about="&pop;artist">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+    
+     <!-- pop:composer -->
+    <rdf:Description rdf:about="&pop;composer">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+    
+        <!-- pop:composition -->
+    <rdf:Description rdf:about="&pop;composition">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+    
+            <!-- pop:genre -->
+    <rdf:Description rdf:about="&pop;genre">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+    
+            <!-- pop:group -->
+    <rdf:Description rdf:about="&pop;group">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+    
+                <!-- pop:member -->
+    <rdf:Description rdf:about="&pop;member">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+     
+        <!-- pop:producer -->
+    <rdf:Description rdf:about="&pop;producer">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+ 
+        <!-- pop:recordLabel -->
+    <rdf:Description rdf:about="&pop;recordLabel">
+        <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
+    </rdf:Description>
+     
+     
+     
+     
+     
 
 
     <!-- http://dbpedia.org/class/yago/ACappellaSinging100546070 -->
