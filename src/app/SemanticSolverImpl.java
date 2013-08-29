@@ -146,10 +146,44 @@ public class SemanticSolverImpl implements SemanticSolver {
         							this.getClue().getSolutionStructureAsString() + "\":\n";
 
         	SolutionScorer solutionScorer = new SolutionScorerImpl();
+        	/* Score each solution */
         	for(Solution solution: solutions) {
              	solution.setScore(solutionScorer.score(solution));
-             	resultsBuffer += solution.getSolutionText() + " (confidence level: " + solution.getConfidence() + "%)\n";
         	}
+        	/* Filter out any solutions that duplicate a solution with a higher confidence level */
+        	ArrayList<Solution> filteredSolutions = new ArrayList<Solution>();
+        	for(int i = 0; i < solutions.size(); i++) {
+        		boolean notADupe = true;
+        		int j = 0;
+        		while(notADupe && j < solutions.size()) {
+        			if(i != j && solutions.get(j).getSolutionText().equals(solutions.get(i).getSolutionText())
+        				&& solutions.get(j).getConfidence() > solutions.get(i).getConfidence())
+        				notADupe = false;
+        			j++;
+        		}
+        		if(notADupe)
+        			filteredSolutions.add(solutions.get(i));
+        	}
+        	
+        	/* We still have potential dupes in our filtered solutions, where text and confidence are both exactly equal */
+        	ArrayList<Solution> uniqueSolutions = new ArrayList<Solution>();
+        	for(int i = 0; i < filteredSolutions.size(); i++) {
+        		Solution thisSolution = filteredSolutions.get(i);
+        		boolean notADupe = true;
+        		for(int j = i + 1; j < filteredSolutions.size(); j++) {
+        			if(thisSolution.getSolutionText().equals(filteredSolutions.get(j).getSolutionText())) {
+        				notADupe = false;
+        				break;
+        			}
+        		}
+        		if(notADupe)
+    				uniqueSolutions.add(thisSolution);
+        	}
+        	
+        	
+        	for(Solution solution : uniqueSolutions)
+        		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
+        					solution.getConfidence() + "%)\n";
         	
         	this.setResults(resultsBuffer);
         	

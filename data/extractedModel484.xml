@@ -1,0 +1,1752 @@
+<rdf:RDF
+    xmlns:opencyc="http://sw.opencyc.org/2008/06/10/concept/"
+    xmlns:j.0="http://dbpedia.org/class/yago/FolkMusiciansFromChicago,"
+    xmlns:yago-res="http://mpii.de/yago/resource/"
+    xmlns:j.1="http://dbpedia.org/class/yago/FilmsBasedOnChildren&apos;"
+    xmlns:j.2="http://dbpedia.org/class/yago/1949"
+    xmlns:j.3="http://dbpedia.org/class/yago/1948"
+    xmlns:xslwd="http://www.w3.org/TR/WD-xsl"
+    xmlns:j.4="http://dbpedia.org/class/yago/1944"
+    xmlns:j.5="http://dbpedia.org/class/yago/CitiesInWashington(U.S.State)"
+    xmlns:j.6="http://dbpedia.org/class/yago/1980"
+    xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+    xmlns:mesh="http://purl.org/commons/record/mesh/"
+    xmlns:j.7="http://dbpedia.org/class/yago/1940"
+    xmlns:dawgt="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"
+    xmlns:j.8="http://dbpedia.org/class/yago/1941"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions/#"
+    xmlns:product="http://www.buy.com/rss/module/productV2/"
+    xmlns:j.9="http://dbpedia.org/class/yago/1988"
+    xmlns:j.10="http://dbpedia.org/class/yago/1986"
+    xmlns:lgv="http://linkedgeodata.org/ontology/"
+    xmlns:rdfdf="http://www.openlinksw.com/virtrdf-data-formats#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:j.11="http://dbpedia.org/class/yago/1982"
+    xmlns:j.12="http://dbpedia.org/class/yago/2001"
+    xmlns:j.13="http://dbpedia.org/class/yago/MusiciansFromChicago,"
+    xmlns:j.14="http://dbpedia.org/class/yago/2003"
+    xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+    xmlns:freebase="http://rdf.freebase.com/ns/"
+    xmlns:bif="bif:"
+    xmlns:j.15="http://dbpedia.org/class/yago/2009"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:j.16="http://dbpedia.org/class/yago/1958"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:xsl1999="http://www.w3.org/1999/XSL/Transform"
+    xmlns:j.17="http://dbpedia.org/class/yago/1959"
+    xmlns:virtrdf="http://www.openlinksw.com/schemas/virtrdf#"
+    xmlns:math="http://www.w3.org/2000/10/swap/math#"
+    xmlns:j.18="http://dbpedia.org/class/yago/1955"
+    xmlns:j.19="http://dbpedia.org/class/yago/1956"
+    xmlns:j.20="http://dbpedia.org/class/yago/1950"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:j.21="http://dbpedia.org/class/yago/1952"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:yago="http://dbpedia.org/class/yago/"
+    xmlns:j.22="http://dbpedia.org/class/yago/1968"
+    xmlns:rev="http://purl.org/stuff/rev#"
+    xmlns:nci="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"
+    xmlns:umbel-ac="http://umbel.org/umbel/ac/"
+    xmlns:category="http://dbpedia.org/resource/Category:"
+    xmlns:usc="http://www.rdfabout.com/rdf/schema/uscensus/details/100pct/"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:sc="http://purl.org/science/owl/sciencecommons/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:j.23="http://dbpedia.org/class/yago/1963"
+    xmlns:j.24="http://dbpedia.org/class/yago/1962"
+    xmlns:protseq="http://purl.org/science/protein/bysequence/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.25="http://dbpedia.org/class/yago/1961"
+    xmlns:j.26="http://dbpedia.org/class/yago/1960"
+    xmlns:j.27="http://dbpedia.org/class/yago/1967"
+    xmlns:b3s="http://b3s.openlinksw.com/"
+    xmlns:j.28="http://dbpedia.org/class/yago/1965"
+    xmlns:grs="http://www.georss.org/georss/"
+    xmlns:j.29="http://dbpedia.org/class/yago/1964"
+    xmlns:obo="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:xsl10="http://www.w3.org/XSL/Transform/1.0"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:mf="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:umbel-sc="http://umbel.org/umbel/sc/"
+    xmlns:wikicompany="http://dbpedia.openlinksw.com/wikicompany/"
+    xmlns:vcard2006="http://www.w3.org/2006/vcard/ns#"
+    xmlns:units="http://dbpedia.org/units/"
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:virtcxml="http://www.openlinksw.com/schemas/virtcxml#"
+    xmlns:j.30="http://dbpedia.org/class/yago/1972"
+    xmlns:sql="sql:"
+    xmlns:go="http://purl.org/obo/owl/GO#"
+    xmlns:j.31="http://dbpedia.org/class/yago/1973"
+    xmlns:xf="http://www.w3.org/2004/07/xpath-functions"
+    xmlns:dbpedia-owl="http://dbpedia.org/ontology/"
+    xmlns:j.32="http://dbpedia.org/class/yago/20"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:lod="http://lod.openlinksw.com/"
+    xmlns:j.33="http://dbpedia.org/class/yago/1977">
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <rdfs:label>Thing</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology/Agent">
+    <rdfs:label xml:lang="en">agent</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://dbpedia.org/ontology/Person">
+    <rdfs:label xml:lang="pt">pessoa</rdfs:label>
+    <rdfs:label xml:lang="es">persona</rdfs:label>
+    <rdfs:label xml:lang="fr">personne</rdfs:label>
+    <rdfs:label xml:lang="sl">Oseba</rdfs:label>
+    <rdfs:label xml:lang="en">person</rdfs:label>
+    <rdfs:label xml:lang="el">Πληροφορίες προσώπου</rdfs:label>
+    <rdfs:label xml:lang="de">Person</rdfs:label>
+  </owl:Class>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Earthbound_%281981_film%29">
+    <dbpedia-owl:starring>
+      <dbpedia-owl:Agent rdf:about="http://dbpedia.org/resource/Burl_Ives">
+        <dbpedia-owl:deathPlace>
+          <yago:PopulatedPlacesEstablishedIn1891 rdf:about="http://dbpedia.org/resource/Anacortes,_Washington">
+            <rdfs:label xml:lang="es">Anacortes (Washington)</rdfs:label>
+            <rdfs:label xml:lang="vi">Anacortes, Washington</rdfs:label>
+            <rdf:type>
+              <rdf:Description rdf:about="http://dbpedia.org/class/yago/CitiesInWashington(U.S.State)">
+                <rdfs:label xml:lang="en">Cities in Washington (U.S. state)</rdfs:label>
+              </rdf:Description>
+            </rdf:type>
+            <rdfs:label xml:lang="fr">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="nl">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="de">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="cs">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="ca">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="pt">Anacortes</rdfs:label>
+            <rdfs:label xml:lang="zh">阿纳科特斯 (华盛顿州)</rdfs:label>
+            <rdfs:label xml:lang="ja">アナコルテス (ワシントン州)</rdfs:label>
+          </yago:PopulatedPlacesEstablishedIn1891>
+        </dbpedia-owl:deathPlace>
+        <dbpedia-owl:birthPlace>
+          <yago:IllinoisCounties rdf:about="http://dbpedia.org/resource/Jasper_County,_Illinois">
+            <rdfs:label xml:lang="pl">Hrabstwo Jasper (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="uk">Джеспер (округ, Іллінойс)</rdfs:label>
+            <rdfs:label xml:lang="vi">Quận Jasper, Illinois</rdfs:label>
+            <rdfs:label xml:lang="pt">Condado de Jasper (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="es">Condado de Jasper (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="it">Contea di Jasper (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="ja">ジャスパー郡 (イリノイ州)</rdfs:label>
+            <rdfs:label xml:lang="fr">Comté de Jasper (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="nl">Jasper County (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="no">Jasper County (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="de">Jasper County (Illinois)</rdfs:label>
+            <rdfs:label xml:lang="sv">Jasper County, Illinois</rdfs:label>
+            <rdfs:label xml:lang="zh">傑斯帕縣 (伊利諾伊州)</rdfs:label>
+          </yago:IllinoisCounties>
+        </dbpedia-owl:birthPlace>
+        <dbpedia-owl:birthPlace>
+          <dbpedia-owl:Place rdf:about="http://dbpedia.org/resource/Hunt_City,_Illinois">
+            <rdfs:label xml:lang="en">Hunt City, Illinois</rdfs:label>
+            <dbpprop:name xml:lang="en">Hunt City</dbpprop:name>
+            <rdf:type>
+              <rdf:Description rdf:about="http://dbpedia.org/class/yago/UnincorporatedCommunitiesInIllinois">
+                <rdfs:label xml:lang="en">unincorporated communities in Illinois</rdfs:label>
+                <rdfs:label xml:lang="en">Unincorporated communities in Illinois</rdfs:label>
+              </rdf:Description>
+            </rdf:type>
+            <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            <rdf:type>
+              <rdf:Description rdf:about="http://dbpedia.org/ontology/PopulatedPlace">
+                <rdfs:label xml:lang="en">populated place</rdfs:label>
+                <rdfs:label xml:lang="de">bewohnter Ort</rdfs:label>
+                <rdfs:label xml:lang="fr">lieu habité</rdfs:label>
+              </rdf:Description>
+            </rdf:type>
+            <rdf:type>
+              <rdf:Description rdf:about="http://dbpedia.org/ontology/Settlement">
+                <rdfs:label xml:lang="en">municipality</rdfs:label>
+                <rdfs:label xml:lang="el">οικισμός</rdfs:label>
+                <rdfs:label xml:lang="fr">municipalité</rdfs:label>
+                <rdfs:label xml:lang="ko">도시</rdfs:label>
+              </rdf:Description>
+            </rdf:type>
+            <rdf:type>
+              <rdf:Description rdf:about="http://dbpedia.org/ontology/Town">
+                <rdfs:label xml:lang="en">town</rdfs:label>
+                <rdfs:label xml:lang="fr">ville</rdfs:label>
+                <rdfs:label xml:lang="pl">miasteczko</rdfs:label>
+                <rdfs:label xml:lang="el">πόλη</rdfs:label>
+              </rdf:Description>
+            </rdf:type>
+          </dbpedia-owl:Place>
+        </dbpedia-owl:birthPlace>
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </dbpedia-owl:Agent>
+    </dbpedia-owl:starring>
+    <rdfs:label xml:lang="en">Earthbound (1981 film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Earthbound</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Film">
+        <rdfs:label xml:lang="en">film</rdfs:label>
+        <rdfs:label xml:lang="de">Film</rdfs:label>
+        <rdfs:label xml:lang="el">ταινία</rdfs:label>
+        <rdfs:label xml:lang="ko">영화</rdfs:label>
+        <rdfs:label xml:lang="fr">film</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Work">
+        <rdfs:label xml:lang="en">work</rdfs:label>
+        <rdfs:label xml:lang="pt">obra</rdfs:label>
+        <rdfs:label xml:lang="el">δημιουργία</rdfs:label>
+        <rdfs:label xml:lang="fr">travail</rdfs:label>
+        <rdfs:label xml:lang="de">Werk</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Just_You_and_Me,_Kid">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Just You and Me, Kid</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Just You and Me, Kid</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </owl:Thing>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Jules_Verne%27s_Rocket_to_the_Moon">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Jules Verne's Rocket to the Moon</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Jules Verne's Rocket to the Moon</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/The_Versatile_Burl_Ives!">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Versatile Burl Ives!</rdfs:label>
+    <dbpprop:name xml:lang="en">The Versatile Burl Ives!</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Album">
+        <rdfs:label xml:lang="el">album</rdfs:label>
+        <rdfs:label xml:lang="ko">앨범</rdfs:label>
+        <rdfs:label xml:lang="en">album</rdfs:label>
+        <rdfs:label xml:lang="de">Album</rdfs:label>
+        <rdfs:label xml:lang="fr">album</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalWork">
+        <rdfs:label xml:lang="en">musical work</rdfs:label>
+        <rdfs:label xml:lang="fr">œuvre musicale</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </dbpedia-owl:Work>
+  <j.21:ChristmasAlbums rdf:about="http://dbpedia.org/resource/Christmas_Day_in_the_Morning">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdfs:label xml:lang="en">Christmas Day in the Morning</rdfs:label>
+    <dbpprop:name xml:lang="en">Christmas Day in the Morning</dbpprop:name>
+    <rdfs:label xml:lang="sv">Christmas Day in the Morning</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BurlIvesAlbums">
+        <rdfs:label xml:lang="en">Burl Ives albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </j.21:ChristmasAlbums>
+  <dbpedia-owl:Film rdf:about="http://dbpedia.org/resource/White_Dog">
+    <rdfs:label xml:lang="de">Der weiße Hund von Beverly Hills</rdfs:label>
+    <rdfs:label xml:lang="ko">마견</rdfs:label>
+    <rdfs:label xml:lang="fr">Dressé pour tuer</rdfs:label>
+    <rdfs:label xml:lang="it">Cane bianco</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsAboutDogs">
+        <rdfs:label xml:lang="en">Films about dogs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/English-languAgeFilms">
+        <rdfs:label xml:lang="en">English-languAge films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1980sDramaFilms">
+        <rdfs:label xml:lang="en">1980s drama films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ParamountFilms">
+        <rdfs:label xml:lang="en">Paramount films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="ja">ホワイト・ドッグ</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedBySamuElFuller">
+        <rdfs:label xml:lang="en">Films directed by SamuEl Fuller</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanDramaFilms">
+        <rdfs:label xml:lang="en">American drama films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1982Films">
+        <rdfs:label xml:lang="en">1982 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Race-relatedFilms">
+        <rdfs:label xml:lang="en">Race-related films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">White Dog</rdfs:label>
+    <rdfs:label xml:lang="pt">White dog</rdfs:label>
+    <rdfs:label xml:lang="no">White dog</rdfs:label>
+    <rdfs:label xml:lang="ca">Gos blanc</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnNovels">
+        <rdfs:label xml:lang="en">Films based on novels</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">White Dog</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Movie106613686">
+        <rdfs:label xml:lang="en">film</rdfs:label>
+        <rdfs:label xml:lang="en">motion-picture show</rdfs:label>
+        <rdfs:label xml:lang="en">pic</rdfs:label>
+        <rdfs:label xml:lang="en">picture</rdfs:label>
+        <rdfs:label xml:lang="en">movie</rdfs:label>
+        <rdfs:label xml:lang="en">flick</rdfs:label>
+        <rdfs:label xml:lang="en">moving picture</rdfs:label>
+        <rdfs:label xml:lang="en">moving-picture show</rdfs:label>
+        <rdfs:label xml:lang="en">picture show</rdfs:label>
+        <rdfs:label xml:lang="en">motion picture</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Film>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Merry_Flippin%27_Christmas_Volumes_1_and_2">
+    <rdfs:label xml:lang="en">Merry Flippin' Christmas Volumes 1 and 2</rdfs:label>
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Merry Flippin' Christmas</dbpprop:name>
+    <dbpprop:name xml:lang="en">Volume 1</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/The_Other_Side_of_Bonnie_and_Clyde">
+    <dbpedia-owl:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Other Side of Bonnie and Clyde</rdfs:label>
+    <dbpprop:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">The Other Side of Bonnie and Clyde</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </owl:Thing>
+  <yago:ChristmasCompilationAlbums rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_Christmas!">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2001CompilationAlbums">
+        <rdfs:label xml:lang="en">2001 compilation albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas!</dbpprop:name>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas!</rdfs:label>
+    <rdfs:label xml:lang="pt">Now That's What I Call Christmas!</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/DouBleCompilationAlbums">
+        <rdfs:label xml:lang="en">DouBle compilation albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2001ChristmasAlbums">
+        <rdfs:label xml:lang="en">2001 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </yago:ChristmasCompilationAlbums>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/The_Wayfaring_Stranger_(album)">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1944Albums">
+        <rdfs:label xml:lang="en">1944 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdfs:label xml:lang="en">The Wayfaring Stranger (album)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:name xml:lang="en">The Wayfaring Stranger</dbpprop:name>
+  </dbpedia-owl:MusicalWork>
+  <j.16:Films rdf:about="http://dbpedia.org/resource/Wind_Across_the_Everglades">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByNicholasRay">
+        <rdfs:label xml:lang="en">Films directed by Nicholas Ray</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="ja">エヴァグレイズを渡る風</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Wind Across the Everglades</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFilms">
+        <rdfs:label xml:lang="en">American films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="fr">La Forêt interdite</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="en">Wind Across the Everglades</rdfs:label>
+  </j.16:Films>
+  <yago:AlbumsProduCEDByVoyleGilmore rdf:about="http://dbpedia.org/resource/...From_the_Hungry_i">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="en">...From the Hungry i</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/TheKingstonTrioAlbums">
+        <rdfs:label xml:lang="en">The Kingston Trio albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1959LiveAlbums">
+        <rdfs:label xml:lang="en">1959 live albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">...from the Hungry i</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/CapitolRecordsLiveAlbums">
+        <rdfs:label xml:lang="en">Capitol Records live albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </yago:AlbumsProduCEDByVoyleGilmore>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Sierra_(film)">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Sierra (film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <j.23:Films rdf:about="http://dbpedia.org/resource/Summer_Magic">
+    <rdfs:label xml:lang="it">Magia d'estate</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="fr">L'Été magique</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/DisneyFilms">
+        <rdfs:label xml:lang="en">Disney films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ShermanBrothers">
+        <rdfs:label xml:lang="en">Bob &amp; Dick Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Richard &amp; Robert Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Strummin' Song</rdfs:label>
+        <rdfs:label xml:lang="en">The Sherman Brothers</rdfs:label>
+        <rdfs:label xml:lang="en">Robert and Richard Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Richard M. and Robert B. Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Sherman Brothers</rdfs:label>
+        <rdfs:label xml:lang="en">Bob and Dick Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Sherman &amp; Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Robert B. Sherman &amp; Richard M. Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Richard and Robert Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Richard M. Sherman &amp; Robert B. Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Robert &amp; Richard Sherman</rdfs:label>
+        <rdfs:label xml:lang="en">Strummin’ Song</rdfs:label>
+        <rdfs:label xml:lang="en">Dick &amp; Bob Sherman</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <dbpprop:name xml:lang="en">Summer Magic</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByJamesNeilson">
+        <rdfs:label xml:lang="en">Films directed by James Neilson</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="nl">Summer Magic</rdfs:label>
+    <rdfs:label xml:lang="en">Summer Magic</rdfs:label>
+    <rdfs:label xml:lang="pt">Summer Magic</rdfs:label>
+  </j.23:Films>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Now_That%27s_What_I_Call_Christmas%21_4">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas! 4</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! 4</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <dbpedia-owl:Film rdf:about="http://dbpedia.org/resource/Cat_on_a_Hot_Tin_Roof_%28film%29">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Cat on a Hot Tin Roof (film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Cat on a Hot Tin Roof</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Film>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Uphill_All_the_Way">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1986Films">
+        <rdfs:label xml:lang="en">1986 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <dbpprop:name xml:lang="en">Uphill All the Way</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanComedyFilms">
+        <rdfs:label xml:lang="en">American comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">Uphill All the Way</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1980sComedyFilms">
+        <rdfs:label xml:lang="en">1980s comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Now_That%27s_What_I_Call_Christmas%21_3">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas! 3</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! Volume 3</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/A_Little_Bitty_Tear">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/WandaJacksonSongs">
+        <rdfs:label xml:lang="en">Wanda Jackson songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ChetAtkinsSongs">
+        <rdfs:label xml:lang="en">Chet Atkins songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:musicalArtist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BurlIvesSongs">
+        <rdfs:label xml:lang="en">Burl Ives songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpedia-owl:musicalBand rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">A Little Bitty Tear</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Single">
+        <rdfs:label xml:lang="fr">single</rdfs:label>
+        <rdfs:label xml:lang="en">single</rdfs:label>
+        <rdfs:label xml:lang="ko">싱글</rdfs:label>
+        <rdfs:label xml:lang="el">single</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">A Little Bitty Tear</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <j.2:Films rdf:about="http://dbpedia.org/resource/So_Dear_to_My_Heart">
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <rdfs:label xml:lang="fr">Danny, le petit mouton noir</rdfs:label>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsWithLiveActionAndAnimation">
+        <rdfs:label xml:lang="en">Films with live action and animation</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="es">So Dear to My Heart</rdfs:label>
+    <rdfs:label xml:lang="pl">So Dear to My Heart</rdfs:label>
+    <rdfs:label xml:lang="en">So Dear to My Heart</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnChildren&apos;sBooks">
+        <rdfs:label xml:lang="en">Films based on children's books</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="it">Tanto caro al mio cuore</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:label xml:lang="sv">Det svarta fåret</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DisneyFilms"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:name xml:lang="en">So Dear to My Heart</dbpprop:name>
+    <rdfs:label xml:lang="ja">わが心にかくも愛しき</rdfs:label>
+  </j.2:Films>
+  <yago:AmericanFolkMusicalGroups rdf:about="http://dbpedia.org/resource/Almanac_Singers">
+    <rdfs:label xml:lang="de">The Almanac Singers</rdfs:label>
+    <dbpedia-owl:formerBandMember rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Organisation">
+        <rdfs:label xml:lang="fr">organisation</rdfs:label>
+        <rdfs:label xml:lang="pt">organização</rdfs:label>
+        <rdfs:label xml:lang="sl">organizacija</rdfs:label>
+        <rdfs:label xml:lang="ko">조직</rdfs:label>
+        <rdfs:label xml:lang="de">Organisation</rdfs:label>
+        <rdfs:label xml:lang="en">organisation</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:pastMembers rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Almanac Singers</rdfs:label>
+    <rdfs:label xml:lang="pt">Almanac Singers</rdfs:label>
+    <rdfs:label xml:lang="sv">Almanac Singers</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/Band">
+        <rdfs:label xml:lang="ko">음악 그룹</rdfs:label>
+        <rdfs:label xml:lang="pt">banda</rdfs:label>
+        <rdfs:label xml:lang="fr">groupe de musique</rdfs:label>
+        <rdfs:label xml:lang="en">Band</rdfs:label>
+        <rdfs:label xml:lang="de">Musikgruppe</rdfs:label>
+        <rdfs:label xml:lang="el">μουσικό συγκρότημα</rdfs:label>
+        <rdfs:label xml:lang="es">banda</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">Almanac Singers</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+  </yago:AmericanFolkMusicalGroups>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Burl_Ives_Sings_Pearly_Shells_and_Other_Favorites">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Burl Ives Sings Pearly Shells and Other Favorites</rdfs:label>
+    <dbpprop:name xml:lang="en">Burl Ives Sings Pearly Shells and Other Favorites</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Ensign_Pulver">
+    <rdfs:label xml:lang="en">Ensign Pulver</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1964Films">
+        <rdfs:label xml:lang="en">1964 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/WorldWarIINavyFilms">
+        <rdfs:label xml:lang="en">World War II navy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">Ensign Pulver</dbpprop:name>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByJoshuALogan">
+        <rdfs:label xml:lang="en">Films directed by JoshuA Logan</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </dbpedia-owl:Work>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Caravan_of_Courage:_An_Ewok_Adventure">
+    <rdfs:label xml:lang="sv">Hjältarnas karavan: Ewokernas återkomst</rdfs:label>
+    <rdfs:label xml:lang="es">Caravan of Courage: An Ewok Adventure</rdfs:label>
+    <rdfs:label xml:lang="pt">Caravan of Courage: An Ewok Adventure</rdfs:label>
+    <rdfs:label xml:lang="no">Caravan of Courage: An Ewok Adventure</rdfs:label>
+    <rdfs:label xml:lang="uk">Караван мужності: Пригоди евоків</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <dbpedia-owl:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="ja">イウォーク・アドベンチャー</rdfs:label>
+    <rdfs:label xml:lang="fr">L'Aventure des Ewoks</rdfs:label>
+    <rdfs:label xml:lang="it">L'avventura degli Ewoks</rdfs:label>
+    <rdfs:label xml:lang="ru">Караван смельчаков. Приключения эвоков</rdfs:label>
+    <rdfs:label xml:lang="pl">Przygoda wśród Ewoków</rdfs:label>
+    <rdfs:label xml:lang="de">Ewoks – Die Karawane der Tapferen</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="nl">The Ewok Adventure</rdfs:label>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Now_That%27s_What_I_Call_Christmas%21%3A_The_Signature_Collection">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas!: The Signature Collection</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! Volume 2: The Signature Collection</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <j.27:Films rdf:about="http://dbpedia.org/resource/Jules_Verne&apos;s_Rocket_to_the_Moon">
+    <rdfs:label xml:lang="fr">Le Grand Départ vers la Lune</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Moon-relatedFilms">
+        <rdfs:label xml:lang="en">Moon-related films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <dbpprop:name xml:lang="en">Jules Verne's Rocket to the Moon</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BritishScienceFictionFilms">
+        <rdfs:label xml:lang="en">British science fiction films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1960sComedyFilms">
+        <rdfs:label xml:lang="en">1960s comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1960sScienceFictionFilms">
+        <rdfs:label xml:lang="en">1960s science fiction films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BritishComedyFilms">
+        <rdfs:label xml:lang="en">British comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">Jules Verne's Rocket to the Moon</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnTheWorksOfJulesVerne">
+        <rdfs:label xml:lang="en">Films based on the works of Jules Verne</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByDonSharp">
+        <rdfs:label xml:lang="en">Films directed by Don Sharp</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </j.27:Films>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Merry_Flippin&apos;_Christmas_Volumes_1_and_2">
+    <rdfs:label xml:lang="cs">Merry Flippin' Christmas Volume 1</rdfs:label>
+    <rdfs:label xml:lang="en">Merry Flippin' Christmas Volumes 1 and 2</rdfs:label>
+    <dbpprop:writer rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Merry Flippin' Christmas</dbpprop:name>
+    <dbpprop:name xml:lang="en">Volume 1</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/The_Essential_Now_That&apos;s_What_I_Call_Christmas">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Essential Now That's What I Call Christmas</rdfs:label>
+    <dbpprop:name xml:lang="en">The Essential Now That's What I Call Christmas</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </owl:Thing>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_a_Country_Christmas">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdfs:label xml:lang="en">Now That's What I Call a Country Christmas</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2009ChristmasAlbums">
+        <rdfs:label xml:lang="en">2009 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:name xml:lang="en">Now That's What I Call a Country Christmas</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DouBleCompilationAlbums"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2009CompilationAlbums">
+        <rdfs:label xml:lang="en">2009 compilation albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ChristmasCompilationAlbums">
+        <rdfs:label xml:lang="en">Christmas compilation albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Caravan_of_Courage%3A_An_Ewok_Adventure">
+    <dbpedia-owl:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Caravan of Courage: An Ewok Adventure</rdfs:label>
+    <dbpprop:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">An Ewok Adventure</dbpprop:name>
+    <dbpprop:name xml:lang="en">Caravan of Courage:</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </dbpedia-owl:Work>
+  <yago:BurlIvesAlbums rdf:about="http://dbpedia.org/resource/Christmas_at_the_White_House">
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ChristmasAlbumsByAmericanArtists">
+        <rdfs:label xml:lang="en">Christmas albums by American artists</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1972ChristmasAlbums">
+        <rdfs:label xml:lang="en">1972 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:name xml:lang="en">Christmas at the White House</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="sv">Christmas at the White House</rdfs:label>
+    <rdfs:label xml:lang="en">Christmas at the White House</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </yago:BurlIvesAlbums>
+  <yago:AmericanFilms rdf:about="http://dbpedia.org/resource/The_Brass_Bottle">
+    <rdfs:label xml:lang="en">The Brass Bottle</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">The Brass Bottle</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FantasyFilms">
+        <rdfs:label xml:lang="en">Fantasy films</rdfs:label>
+        <rdfs:label xml:lang="en">fantasy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/UniversalPicturesFilms">
+        <rdfs:label xml:lang="en">Universal Pictures films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/1964Films"/>
+  </yago:AmericanFilms>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Fantastic_Mr._Fox_%28film%29">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Fantastic Mr. Fox (film)</rdfs:label>
+    <dbpprop:name xml:lang="en">Fantastic Mr. Fox</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Songs_of_the_West_(Burl_Ives_album)">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdfs:label xml:lang="en">Songs of the West (Burl Ives album)</rdfs:label>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Songs of the West</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1961Albums">
+        <rdfs:label xml:lang="en">1961 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <yago:Stop-motionAnimatedFilms rdf:about="http://dbpedia.org/resource/Fantastic_Mr._Fox_(film)">
+    <rdfs:label xml:lang="uk">Незрівнянний містер Фокс (мультфільм)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/RegencyFilms">
+        <rdfs:label xml:lang="en">Regency films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsFeaturingAnthropomorphicCharacters">
+        <rdfs:label xml:lang="en">Films featuring anthropomorphic characters</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanAnimatedFilms">
+        <rdfs:label xml:lang="en">American animated films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="zh">了不起的狐狸爸爸</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2009Soundtracks">
+        <rdfs:label xml:lang="en">2009 soundtracks</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="de">Der fantastische Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="hu">A fantasztikus Róka úr</rdfs:label>
+    <rdfs:label xml:lang="en">Fantastic Mr. Fox (film)</rdfs:label>
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="no">Den fantastiske Mikkel Rev (film)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnRoaldDahlWorks">
+        <rdfs:label xml:lang="en">Films based on Roald Dahl works</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <rdfs:label xml:lang="fi">Fantastic Mr. Fox (elokuva)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByWesAnderson">
+        <rdfs:label xml:lang="en">Films directed by Wes Anderson</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmSoundtracks">
+        <rdfs:label xml:lang="en">Film soundtracks</rdfs:label>
+        <rdfs:label xml:lang="en">film soundtracks</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2009Films">
+        <rdfs:label xml:lang="en">2009 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AlbumsRecordedAtAbbeyRoadStuDios">
+        <rdfs:label xml:lang="en">Albums recorded at Abbey Road StuDios</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="es">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="pl">Fantastyczny pan Lis</rdfs:label>
+    <rdfs:label xml:lang="fr">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="it">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="ca">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="ru">Бесподобный мистер Фокс</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/20thCenturyFoxFilms">
+        <rdfs:label xml:lang="en">20th Century Fox films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="pt">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="nl">Fantastic Mr. Fox</rdfs:label>
+    <rdfs:label xml:lang="sv">Den fantastiska räven (film)</rdfs:label>
+    <rdfs:label xml:lang="ja">ファンタスティック Mr.FOX</rdfs:label>
+    <dbpprop:name xml:lang="en">Fantastic Mr. Fox</dbpprop:name>
+  </yago:Stop-motionAnimatedFilms>
+  <dbpedia-owl:Artist rdf:about="http://dbpedia.org/resource/Win_Stracke">
+    <dbpprop:name xml:lang="en">Stracke, Win</dbpprop:name>
+    <dbpedia-owl:associatedBand rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Person100007846">
+        <rdfs:label xml:lang="en">soul</rdfs:label>
+        <rdfs:label xml:lang="en">someone</rdfs:label>
+        <rdfs:label xml:lang="en">individuAl</rdfs:label>
+        <rdfs:label xml:lang="en">mortal</rdfs:label>
+        <rdfs:label xml:lang="en">somebody</rdfs:label>
+        <rdfs:label xml:lang="en">person</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/MusiciansFromChicago,Illinois">
+        <rdfs:label xml:lang="en">Musicians from Chicago, Illinois</rdfs:label>
+        <rdfs:label xml:lang="en">musicians from Chicago, Illinois</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolkSingers">
+        <rdfs:label xml:lang="en">American folk singers</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">Win Stracke</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolkMusicians">
+        <rdfs:label xml:lang="en">American folk musicians</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FolkMusiciansFromChicago,Illinois">
+        <rdfs:label xml:lang="en">Folk musicians from Chicago, Illinois</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:associatedMusicalArtist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:associatedActs rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Win Stracke</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolk-songCollectors">
+        <rdfs:label xml:lang="en">American folk-song collectors</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/MusicalArtist">
+        <rdfs:label xml:lang="fr">musicien</rdfs:label>
+        <rdfs:label xml:lang="ko">음악가</rdfs:label>
+        <rdfs:label xml:lang="pt">artista musical</rdfs:label>
+        <rdfs:label xml:lang="en">musical artist</rdfs:label>
+        <rdfs:label xml:lang="el">μουσικός</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </dbpedia-owl:Artist>
+  <yago:PoliticalSatireFilms rdf:about="http://dbpedia.org/resource/Our_Man_in_Havana_(film)">
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BritishFilms">
+        <rdfs:label xml:lang="en">British films</rdfs:label>
+        <rdfs:label xml:lang="en">british films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/SpyComedyFilms">
+        <rdfs:label xml:lang="en">Spy comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="fr">Notre Agent à La Havane</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:label xml:lang="en">Our Man in Havana (film)</rdfs:label>
+    <rdfs:label xml:lang="de">Unser Mann in Havanna (Film)</rdfs:label>
+    <rdfs:label xml:lang="it">Il nostro agente all'Avana (film)</rdfs:label>
+    <dbpprop:name xml:lang="en">Our Man in Havana</dbpprop:name>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="ca">El nostre home a l'Havana</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnWorksByGrahamGreene">
+        <rdfs:label xml:lang="en">Films based on works by Graham Greene</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Black-and-whiteFilms">
+        <rdfs:label xml:lang="en">Black-and-white films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1959Films">
+        <rdfs:label xml:lang="en">1959 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByCarolReed">
+        <rdfs:label xml:lang="en">Films directed by Carol Reed</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="ru">Наш человек в Гаване (фильм)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1950sComedyFilms">
+        <rdfs:label xml:lang="en">1950s comedy films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </yago:PoliticalSatireFilms>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_Christmas!_4">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="pt">Now That's What I Call Christmas! 4</rdfs:label>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas! 4</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! 4</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/It&apos;s_Just_My_Funny_Way_of_Laughin&apos;">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">It's Just My Funny Way of Laughin'</rdfs:label>
+    <dbpprop:name xml:lang="en">It's Just My Funny Way of Laughin'</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1962Albums">
+        <rdfs:label xml:lang="en">1962 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </dbpedia-owl:MusicalWork>
+  <yago:FictionalHippopotamuses rdf:about="http://dbpedia.org/resource/Hugo_the_Hippo">
+    <rdfs:label xml:lang="it">Hugo l'ippopotamo</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Hungarian-languAgeFilms">
+        <rdfs:label xml:lang="en">Hungarian-languAge films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1973Films">
+        <rdfs:label xml:lang="en">1973 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">Hugo the Hippo</rdfs:label>
+    <dbpprop:name xml:lang="en">Hugo the Hippo</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/HungarianAnimatedFilms">
+        <rdfs:label xml:lang="en">Hungarian animated films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/HungarianFilms">
+        <rdfs:label xml:lang="en">Hungarian films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </yago:FictionalHippopotamuses>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/The_Music_of_Disney%3A_A_Legacy_in_Song">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Music of Disney: A Legacy in Song</rdfs:label>
+    <dbpprop:name xml:lang="en">The Music of Disney: A Legacy In Song</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/The_Daydreamer_(film)">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Daydreamer (film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">The Daydreamer</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/The_Spiral_Road">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/DramaFilms">
+        <rdfs:label xml:lang="en">drama films</rdfs:label>
+        <rdfs:label xml:lang="en">Drama films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/UniversalPicturesFilms"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/FilmsBasedOnNovels"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1962Films">
+        <rdfs:label xml:lang="en">1962 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="pt">The Spiral Road</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByRobertMulligan">
+        <rdfs:label xml:lang="en">Films directed by Robert Mulligan</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">The Spiral Road</rdfs:label>
+    <dbpprop:name xml:lang="en">The Spiral Road</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Album rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_Christmas!_3">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/ChristmasCompilationAlbums"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2003CompilationAlbums">
+        <rdfs:label xml:lang="en">2003 compilation albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DouBleCompilationAlbums"/>
+    <rdfs:label xml:lang="pt">Now That's What I Call Christmas! 3</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/2003ChristmasAlbums">
+        <rdfs:label xml:lang="en">2003 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas! 3</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! Volume 3</dbpprop:name>
+  </dbpedia-owl:Album>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/Now_That%27s_What_I_Call_Christmas%21">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas!</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas!</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+  </dbpedia-owl:MusicalWork>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/Now_That&apos;s_What_I_Call_Christmas!:_The_Signature_Collection">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call Christmas!: The Signature Collection</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call Christmas! Volume 2: The Signature Collection</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+  </dbpedia-owl:MusicalWork>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Australian_Folk_Songs">
+    <rdfs:label xml:lang="en">Australian Folk Songs</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/DeccaRecordsAlbums">
+        <rdfs:label xml:lang="en">Decca Records albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:name xml:lang="en">Australian Folk Songs</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1958Albums">
+        <rdfs:label xml:lang="en">1958 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Album rdf:about="http://dbpedia.org/resource/Burl_Ives_Sings..._For_Fun">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Burl Ives Sings... For Fun</rdfs:label>
+    <dbpprop:name xml:lang="en">Burl Ives Sings... For Fun</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </dbpedia-owl:Album>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/Walt_Disney_Presents_Burl_Ives&apos;_Animal_Folk">
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdfs:label xml:lang="en">Walt Disney Presents Burl Ives' Animal Folk</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1963Albums">
+        <rdfs:label xml:lang="en">1963 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Walt Disney Presents Burl Ives' Animal Folk</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:MusicalWork>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Now_That%27s_What_I_Call_a_Country_Christmas">
+    <dbpprop:extra rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Now That's What I Call a Country Christmas</rdfs:label>
+    <dbpprop:name xml:lang="en">Now That's What I Call a Country Christmas</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </owl:Thing>
+  <j.16:Films rdf:about="http://dbpedia.org/resource/Cat_on_a_Hot_Tin_Roof_(film)">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnPlays">
+        <rdfs:label xml:lang="en">Films based on plays</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByRichardBrooks">
+        <rdfs:label xml:lang="en">Films directed by Richard Brooks</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="pl">Kotka na gorącym blaszanym dachu (film)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanDramaFilms"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="zh">朱門巧婦</rdfs:label>
+    <rdfs:label xml:lang="en">Cat on a Hot Tin Roof (film)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1950sDramaFilms">
+        <rdfs:label xml:lang="en">1950s drama films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanLGBT-relatedFilms">
+        <rdfs:label xml:lang="en">American LGBT-related films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="fr">La Chatte sur un toit brûlant</rdfs:label>
+    <rdfs:label xml:lang="es">La gata sobre el tejado de zinc</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdfs:label xml:lang="it">La gatta sul tetto che scotta (film 1958)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="de">Die Katze auf dem heißen Blechdach (Film)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsAboutAlcoholism">
+        <rdfs:label xml:lang="en">Films about alcoholism</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="nl">Cat on a Hot Tin Roof</rdfs:label>
+    <rdfs:label xml:lang="ja">熱いトタン屋根の猫 (映画)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="ru">Кошка на раскалённой крыше (фильм)</rdfs:label>
+    <dbpprop:name xml:lang="en">Cat on a Hot Tin Roof</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/MGMFilms">
+        <rdfs:label xml:lang="en">MGM films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:label xml:lang="fi">Kissa kuumalla katolla</rdfs:label>
+  </j.16:Films>
+  <j.3:Films rdf:about="http://dbpedia.org/resource/Station_West">
+    <rdfs:label xml:lang="fr">La Cité de la peur (film, 1948)</rdfs:label>
+    <rdfs:label xml:lang="en">Station West</rdfs:label>
+    <dbpprop:name xml:lang="en">Station West</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedBySidneyLanfield">
+        <rdfs:label xml:lang="en">Films directed by Sidney Lanfield</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Black-and-whiteFilms"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1940sWesternFilms">
+        <rdfs:label xml:lang="en">1940s Western films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </j.3:Films>
+  <yago:BurlIvesAlbums rdf:about="http://dbpedia.org/resource/The_Return_of_the_Wayfaring_Stranger">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:name xml:lang="en">The Return of the Wayfaring Stranger</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1949Albums">
+        <rdfs:label xml:lang="en">1949 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/ColumbiaRecordsAlbums">
+        <rdfs:label xml:lang="en">Columbia Records albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">The Return of the Wayfaring Stranger</rdfs:label>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </yago:BurlIvesAlbums>
+  <dbpedia-owl:Film rdf:about="http://dbpedia.org/resource/Earthbound_(1981_film)">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Earthbound (1981 film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Earthbound</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </dbpedia-owl:Film>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Burl_Ives_Sings_Little_White_Duck_and_Other_Children&apos;s_Favorites">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Burl Ives Sings Little White Duck and Other Children's Favorites</rdfs:label>
+    <dbpprop:name xml:lang="en">Burl Ives Sings Little White Duck and Other Children's Favorites</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </dbpedia-owl:Work>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/The_Times_They_Are_A-Changin&apos;_(Burl_Ives_album)">
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/ColumbiaRecordsAlbums"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1968Albums">
+        <rdfs:label xml:lang="en">1968 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">The Times They Are A-Changin'</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/CoversAlbums">
+        <rdfs:label xml:lang="en">covers albums</rdfs:label>
+        <rdfs:label xml:lang="en">Covers albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="en">The Times They Are A-Changin' (Burl Ives album)</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/AlbumsProduCEDByBobJohnston">
+        <rdfs:label xml:lang="en">albums produCED by Bob Johnston</rdfs:label>
+        <rdfs:label xml:lang="en">Albums produCED by Bob Johnston</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </owl:Thing>
+  <yago:BurlIvesAlbums rdf:about="http://dbpedia.org/resource/Have_a_Holly_Jolly_Christmas">
+    <rdfs:label xml:lang="en">Have a Holly Jolly Christmas</rdfs:label>
+    <dbpprop:name xml:lang="en">Have a Holly Jolly Christmas</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1965ChristmasAlbums">
+        <rdfs:label xml:lang="en">1965 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/ChristmasAlbumsByAmericanArtists"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+  </yago:BurlIvesAlbums>
+  <dbpedia-owl:Film rdf:about="http://dbpedia.org/resource/Our_Man_in_Havana_%28film%29">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Our Man in Havana (film)</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Our Man in Havana</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Film>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/Historical_America_in_Song">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <dbpprop:name xml:lang="en">Historical America in Song</dbpprop:name>
+    <rdfs:label xml:lang="en">Historical America in Song</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1950Albums">
+        <rdfs:label xml:lang="en">1950 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </dbpedia-owl:MusicalWork>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/The_Big_Country">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1950sWesternFilms">
+        <rdfs:label xml:lang="en">1950s Western films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/UnitedArtistsFilms">
+        <rdfs:label xml:lang="en">United Artists films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <rdfs:label xml:lang="es">Horizontes de grandeza</rdfs:label>
+    <rdfs:label xml:lang="it">Il grande paese</rdfs:label>
+    <rdfs:label xml:lang="sv">Det stora landet</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="pl">Biały Kanion</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanFilms"/>
+    <rdfs:label xml:lang="fr">Les Grands Espaces</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="cs">Velká země</rdfs:label>
+    <dbpprop:name xml:lang="en">The Big Country</dbpprop:name>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsFeaturingABestSupportingActorAcademyAwardWinningPerformance">
+        <rdfs:label xml:lang="en">Films featuring a Best Supporting Actor Academy Award winning performance</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1958Films">
+        <rdfs:label xml:lang="en">1958 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="ja">大いなる西部</rdfs:label>
+    <rdfs:label xml:lang="nl">The Big Country</rdfs:label>
+    <rdfs:label xml:lang="en">The Big Country</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:label xml:lang="pt">Da Terra Nascem os Homens</rdfs:label>
+    <rdfs:label xml:lang="de">Weites Land</rdfs:label>
+    <rdfs:label xml:lang="ca">Grans horitzons</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByWilliamWyler">
+        <rdfs:label xml:lang="en">Films directed by William Wyler</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </owl:Thing>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Day_of_the_Outlaw">
+    <rdfs:label xml:lang="en">Day of the Outlaw</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <dbpprop:name xml:lang="en">Day of the Outlaw</dbpprop:name>
+    <rdfs:label xml:lang="fr">La Chevauchée des bannis</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/1959Films"/>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/1950sWesternFilms"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </dbpedia-owl:Work>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Christmas_by_the_Bay">
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdfs:label xml:lang="en">Christmas by the Bay</rdfs:label>
+    <rdfs:label xml:lang="sv">Christmas by the Bay</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1977ChristmasAlbums">
+        <rdfs:label xml:lang="en">1977 Christmas albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/ChristmasAlbumsByAmericanArtists"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Christmas by the Bay</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </owl:Thing>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/The_Bermuda_Depths">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Bermuda Depths</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">The Bermuda Depths</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </dbpedia-owl:Work>
+  <yago:FilmsDirectedByEliaKazan rdf:about="http://dbpedia.org/resource/East_of_Eden_(film)">
+    <dbpprop:name xml:lang="en">East of Eden</dbpprop:name>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="pl">Na wschód od Edenu (film)</rdfs:label>
+    <rdfs:label xml:lang="it">La valle dell'Eden</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanDramaFilms"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/1950sDramaFilms"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1955Films">
+        <rdfs:label xml:lang="en">1955 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+    <rdfs:label xml:lang="ca">A l'est de l'edèn</rdfs:label>
+    <rdfs:label xml:lang="ja">エデンの東 (映画)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="sv">Öster om Eden (film)</rdfs:label>
+    <rdfs:label xml:lang="no">Øst for Eden</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsFeaturingABestSupportingActressAcademyAwardWinningPerformance">
+        <rdfs:label xml:lang="en">Films featuring a Best Supporting Actress Academy Award winning performance</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdfs:label xml:lang="pt">East of Eden</rdfs:label>
+    <rdfs:label xml:lang="es">East of Eden</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsAboutDysfunctionalFamilies">
+        <rdfs:label xml:lang="en">Films about dysfunctional families</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="ru">К востоку от рая (фильм)</rdfs:label>
+    <rdfs:label xml:lang="fi">Eedenistä itään (vuoden 1955 elokuva)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/WarnerBros.Films">
+        <rdfs:label xml:lang="en">Warner Bros. films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdfs:label xml:lang="fr">À l'est d'Éden (film, 1955)</rdfs:label>
+    <rdfs:label xml:lang="en">East of Eden (film)</rdfs:label>
+    <rdfs:label xml:lang="nl">East of Eden (film)</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsBasedOnJohnSteinbeckBooks">
+        <rdfs:label xml:lang="en">Films based on John Steinbeck books</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Movie106613686"/>
+    <rdfs:label xml:lang="de">Jenseits von Eden (Film)</rdfs:label>
+  </yago:FilmsDirectedByEliaKazan>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Burl_Ives_Presents_America&apos;s_Musical_Heritage">
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/1963Albums"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <dbpprop:name xml:lang="en">Burl Ives Presents America's Musical Heritage</dbpprop:name>
+    <rdfs:label xml:lang="en">Burl Ives Presents America's Musical Heritage</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+  </dbpedia-owl:Work>
+  <dbpedia-owl:Album rdf:about="http://dbpedia.org/resource/Down_to_the_Sea_in_Ships_(album)">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1956Albums">
+        <rdfs:label xml:lang="en">1956 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/DeccaRecordsAlbums"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <dbpprop:name xml:lang="en">Down to the Sea in Ships</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">Down to the Sea in Ships (album)</rdfs:label>
+  </dbpedia-owl:Album>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/The_Bold_Ones%3A_The_Lawyers">
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">The Bold Ones: The Lawyers</rdfs:label>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/ontology/TelevisionShow">
+        <rdfs:label xml:lang="en">television show</rdfs:label>
+        <rdfs:label xml:lang="sl">televizijska oddaja</rdfs:label>
+        <rdfs:label xml:lang="el">τηλεοπτική σειρά</rdfs:label>
+        <rdfs:label xml:lang="fr">émission de télévision</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </owl:Thing>
+  <yago:IrishFolkSongs rdf:about="http://dbpedia.org/resource/Mrs._McGrath">
+    <rdfs:label xml:lang="en">Mrs. McGrath</rdfs:label>
+    <dbpprop:recordedBy rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/Anti-warSongs">
+        <rdfs:label xml:lang="en">Anti-war songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/PeteSeegerSongs">
+        <rdfs:label xml:lang="en">Pete Seeger songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BruCESpringsteenSongs">
+        <rdfs:label xml:lang="en">BruCE Springsteen songs</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+  </yago:IrishFolkSongs>
+  <j.29:Albums rdf:about="http://dbpedia.org/resource/Scouting_Along_with_Burl_Ives">
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/ColumbiaRecordsAlbums"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+    <rdfs:label xml:lang="en">Scouting Along with Burl Ives</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/BoyScoutsOfAmerica">
+        <rdfs:label xml:lang="en">Boy scouts of america</rdfs:label>
+        <rdfs:label xml:lang="en">Boy Scouts of the USA</rdfs:label>
+        <rdfs:label xml:lang="en">Boy scouts of the USA</rdfs:label>
+        <rdfs:label xml:lang="en">The Boy Scouts of America</rdfs:label>
+        <rdfs:label xml:lang="en">US Boy Scout Councils</rdfs:label>
+        <rdfs:label xml:lang="en">Boy Scouts</rdfs:label>
+        <rdfs:label xml:lang="en">List of BSA local councils and districts in overseas areas</rdfs:label>
+        <rdfs:label xml:lang="en">Boys Scouts of America</rdfs:label>
+        <rdfs:label xml:lang="en">Boy Scouts of America</rdfs:label>
+        <rdfs:label xml:lang="en">Boy Scouts Of America</rdfs:label>
+        <rdfs:label xml:lang="en">Boy scouts of the usa</rdfs:label>
+        <rdfs:label xml:lang="en">BSA</rdfs:label>
+        <rdfs:label xml:lang="en">Boy Scout Committee</rdfs:label>
+        <rdfs:label xml:lang="en">B.S.A.</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">Scouting Along with Burl Ives</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+  </j.29:Albums>
+  <dbpedia-owl:MusicalWork rdf:about="http://dbpedia.org/resource/Okeh_Presents_the_Wayfaring_Stranger">
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1941Albums">
+        <rdfs:label xml:lang="en">1941 albums</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Okeh Presents the Wayfaring Stranger</dbpprop:name>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">Okeh Presents the Wayfaring Stranger</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/BurlIvesAlbums"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+  </dbpedia-owl:MusicalWork>
+  <owl:Thing rdf:about="http://dbpedia.org/resource/Rudolph_the_Red-Nosed_Reindeer_(TV_special)">
+    <dbpedia-owl:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Rudolph the Red-Nosed Reindeer (TV special)</rdfs:label>
+    <rdfs:label xml:lang="no">Reinsdyret Rudolf (TV-film)</rdfs:label>
+    <rdfs:label xml:lang="pl">Rudolph, the Red-Nosed Reindeer (film 1964)</rdfs:label>
+    <dbpprop:narrator rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:name xml:lang="en">Rudolph the Red-Nosed Reindeer</dbpprop:name>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </owl:Thing>
+  <yago:EroticFilms rdf:about="http://dbpedia.org/resource/Two_Moon_Junction">
+    <rdfs:label xml:lang="ru">Слияние двух лун</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AmericanDramaFilms"/>
+    <rdfs:label xml:lang="ja">トゥー・ムーン</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/English-languAgeFilms"/>
+    <rdfs:label xml:lang="it">Congiunzione di due lune</rdfs:label>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/IndependentFilms">
+        <rdfs:label xml:lang="en">independent films</rdfs:label>
+        <rdfs:label xml:lang="en">Independent Films</rdfs:label>
+        <rdfs:label xml:lang="en">Independent films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Work"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/RomanticDramaFilms">
+        <rdfs:label xml:lang="en">Romantic drama films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpedia-owl:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpprop:starring rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type>
+      <rdf:Description rdf:about="http://dbpedia.org/class/yago/1988Films">
+        <rdfs:label xml:lang="en">1988 films</rdfs:label>
+      </rdf:Description>
+    </rdf:type>
+    <dbpprop:name xml:lang="en">Two Moon Junction</dbpprop:name>
+    <rdfs:label xml:lang="de">Two Moon Junction</rdfs:label>
+    <rdfs:label xml:lang="es">Two Moon Junction</rdfs:label>
+    <rdfs:label xml:lang="en">Two Moon Junction</rdfs:label>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Film"/>
+  </yago:EroticFilms>
+  <dbpedia-owl:Work rdf:about="http://dbpedia.org/resource/Burl_Ives_and_the_Korean_Orphan_Choir_Sing_of_Faith_and_Joy">
+    <dbpedia-owl:picture rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <dbpedia-owl:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdfs:label xml:lang="en">Burl Ives and the Korean Orphan Choir Sing of Faith and Joy</rdfs:label>
+    <dbpprop:name xml:lang="en">Burl Ives and the Korean Orphan Choir Sing of Faith and Joy</dbpprop:name>
+    <dbpprop:artist rdf:resource="http://dbpedia.org/resource/Burl_Ives"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/Album"/>
+    <rdf:type rdf:resource="http://dbpedia.org/ontology/MusicalWork"/>
+  </dbpedia-owl:Work>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/PopulatedPlacesEstablishedIn1891">
+    <rdfs:label xml:lang="en">Populated places established in 1891</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/EroticFilms">
+    <rdfs:label xml:lang="en">Erotic films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1964Albums">
+    <rdfs:label xml:lang="en">1964 albums</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/FilmsDirectedByEliaKazan">
+    <rdfs:label xml:lang="en">Films directed by Elia Kazan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/AlbumsProduCEDByVoyleGilmore">
+    <rdfs:label xml:lang="en">Albums produCED by Voyle Gilmore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1949Films">
+    <rdfs:label xml:lang="en">1949 films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/PoliticalSatireFilms">
+    <rdfs:label xml:lang="en">Political satire films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/AmericanFolkMusicalGroups">
+    <rdfs:label xml:lang="en">American folk musical groups</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/Stop-motionAnimatedFilms">
+    <rdfs:label xml:lang="en">Stop-motion animated films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Place">
+    <rdfs:label xml:lang="pt">lugar</rdfs:label>
+    <rdfs:label xml:lang="en">place</rdfs:label>
+    <rdfs:label xml:lang="de">Ort</rdfs:label>
+    <rdfs:label xml:lang="fr">lieu</rdfs:label>
+    <rdfs:label xml:lang="el">περιοχή</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1948Films">
+    <rdfs:label xml:lang="en">1948 films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1963Films">
+    <rdfs:label xml:lang="en">1963 films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/IrishFolkSongs">
+    <rdfs:label xml:lang="en">Irish folk songs</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/IllinoisCounties">
+    <rdfs:label xml:lang="en">Illinois counties</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/ontology/Artist">
+    <rdfs:label xml:lang="de">Künstler</rdfs:label>
+    <rdfs:label xml:lang="el">καλλιτέχνης</rdfs:label>
+    <rdfs:label xml:lang="fr">artiste</rdfs:label>
+    <rdfs:label xml:lang="ko">예술가</rdfs:label>
+    <rdfs:label xml:lang="en">artist</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/FictionalHippopotamuses">
+    <rdfs:label xml:lang="en">Fictional hippopotamuses</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1952ChristmasAlbums">
+    <rdfs:label xml:lang="en">1952 Christmas albums</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/class/yago/1967Films">
+    <rdfs:label xml:lang="en">1967 films</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class">
+    <rdfs:label>Class</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
