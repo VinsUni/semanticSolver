@@ -215,6 +215,8 @@
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#albumOf">
         <rdfs:label>album of</rdfs:label>
         <rdfs:label>album by</rdfs:label>
+        <rdfs:label>album from</rdfs:label>
+        
         <skos:prefLabel>album of</skos:prefLabel>
         <rdfs:comment xml:lang="en">The value of this property is a musical artist or organisation responsible for performing/writing/producing/publishing the subject (a musical work of type pop:album)</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
@@ -433,6 +435,9 @@
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasAlbum">
         <rdfs:label>album</rdfs:label>
         <rdfs:label>has album</rdfs:label>
+        <rdfs:label>album by</rdfs:label>
+        <rdfs:label>album from</rdfs:label>
+        
         <skos:prefLabel>has album</skos:prefLabel>
         <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>

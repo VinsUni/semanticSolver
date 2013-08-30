@@ -387,7 +387,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				" ?subject dbpprop:name ?anotherName. " +
 				" ?subject rdf:type ?subjectType." +
 				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
-				"}";
+				"}" +
+				"LIMIT 50000";
 		 
 		
 		Query query = QueryFactory.create(sparqlQuery);
