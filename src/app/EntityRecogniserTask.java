@@ -160,7 +160,8 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 
                                                     " }" +
                                            " }" + 
-                                 " }";
+                                 " }" +
+                                 " LIMIT 100";
 
                  Query query = QueryFactory.create(SPARQLquery);
                  QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);

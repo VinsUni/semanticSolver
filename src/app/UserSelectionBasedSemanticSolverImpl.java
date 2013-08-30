@@ -28,7 +28,7 @@ import framework.UserInterface;
  * @author Ben Griffiths	
  *
  */
-public class SemanticSolverImpl implements SemanticSolver {
+public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private UserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -38,7 +38,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
-	public SemanticSolverImpl(UserInterface userInterface) {
+	public UserSelectionBasedSemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
 	}
 
@@ -72,29 +72,20 @@ public class SemanticSolverImpl implements SemanticSolver {
          		// TODO Auto-generated catch block
          		e.printStackTrace();
         	}
-
-        	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
         	
-        	for(RecognisedResource thisResource : this.getRecognisedResources())
-        		recognisedResourceUris.add(thisResource.getUri());
-        	
-        	this.findSolutions(recognisedResourceUris);
-        	
+         	/* End by calling a function in GraphicalUserInterface which will find out which resources the user wants to proceed with */
+         	SwingUtilities.invokeLater(new Runnable() {
+        		@Override
+                 	public void run() {
+                 	getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
+                 	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+                 	getUserInterface().getChosenEntitiesFromUser(getRecognisedResources());
+                 	}
+        	});
 	}
 	
 	@Override
-	public  void findSolutions(ArrayList<String> recognisedResourceUris) {
-		
-			/* Update the progress bar to reflect the fact that Entity Recognition phase is over */
-	     	SwingUtilities.invokeLater(new Runnable() {
-	    		@Override
-	             	public void run() {
-	    			String clueQueryInProgressMessage = "Searching for solutions on DBpedia";
-	    			getUserInterface().getDisplayPanel().getProgressBar().setValue(0);
-	    			getUserInterface().getDisplayPanel().getProgressBar().setString(clueQueryInProgressMessage);
-	    			getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
-	             	}
-	    	});      
+	public  void findSolutions(ArrayList<String> recognisedResourceUris) {        
                 
         	this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
         

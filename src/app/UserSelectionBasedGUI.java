@@ -43,7 +43,7 @@ import framework.UserInterface;
  *
  */
 @SuppressWarnings("serial")
-public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
+public class UserSelectionBasedGUI extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
 	//private final String SCORING_IN_PROGRESS_MESSAGE = "Scoring solutions";
@@ -337,13 +337,25 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     }
     
     /**
-     * showNewClueOptions - 
+     * showNewClueOptions - presents the user with the solutionStructurePanel, allowing the structure of the solution to a clue
+     * to be specified, and enables the submission of a new clue using the "Submit clue" button or the Enter key.
      * See framework.UserInterface
      */
     @Override
 	public void showNewClueOptions() {
 		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
 		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		this.getDisplayPanel().getSubmitClueButton().setActionCommand("submitClue");
+		this.getDisplayPanel().getSubmitClueButton().setText("Submit clue");
+ 
+     	/* Remove checkboxes from resourceSelectorPanel */
+     	for(JCheckBox thisCheckBox : this.getCheckBoxes())
+     		this.getDisplayPanel().getResourceSelectorPanel().remove(thisCheckBox);
+     	/* Remove resourceSelectorPanel and add solutionStructurePanel in its place */
+        this.getDisplayPanel().getPanelScrollPane().setViewportView(this.getDisplayPanel().getSolutionStructurePanel());
+        
+        this.getDisplayPanel().getPanelScrollPane().revalidate();
+     	this.getDisplayPanel().getPanelScrollPane().repaint();
 	}
     
     /**
