@@ -40,6 +40,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	private final String XPATH_FUNCTIONS_PREFIX_DECLARATION = "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
+	private final String BIF_PREFIX_DECLARATION = "PREFIX bif: <bif:>";
 	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
@@ -217,9 +218,11 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         if(considerAsPredicateOnly(clueFragment))
                  return;
 
-        String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
-
-        String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
+        //String wrappedClueFragment = "\"" + clueFragment + "\""; // wrap with escaped quotes but do NOT append a language tag
+        
+        //log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
+        
+        /*String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
         					RDFS_PREFIX_DECLARATION + " " +
                             RDF_PREFIX_DECLARATION + " " +
                             DBPPROP_PREFIX_DECLARATION + " " +
@@ -231,7 +234,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            " where {?resource rdfs:label ?label." +
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -239,7 +242,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "  where {?resource dbpprop:name ?label." +
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -247,7 +250,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "  where {?resource foaf:givenName ?label." +
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -255,7 +258,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "  where {?resource foaf:surname ?label." +
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -264,7 +267,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
 
                                            " }" +
@@ -274,7 +277,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -283,7 +286,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                            " UNION" +
@@ -292,12 +295,98 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                            "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
                                                     " ?resource rdf:type ?type." +
                                                     " ?type rdfs:label ?typeLabel." +
-                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    " FILTER (fn:contains(str(?label), " + wrappedClueFragment + "))" +
                                                     "}" +
                                            " }" +
                                   " }" + 
                         " }" +
                         " LIMIT 100";
+        */
+
+        //String wrappedClueFragment = "\"'*" + clueFragment + "*'\""; // wrap with single quotes and wildcards, enclosed in double quotes, but do NOT append a language tag
+        String wrappedClueFragment = "\"" + clueFragment + "\""; // wrap with escaped double quotes, but do NOT append a language tag
+        
+        log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
+        
+        String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
+				RDFS_PREFIX_DECLARATION + " " +
+                RDF_PREFIX_DECLARATION + " " +
+                DBPPROP_PREFIX_DECLARATION + " " +
+                DB_OWL_PREFIX_DECLARATION + " " +
+                FOAF_PREFIX_DECLARATION +
+                       " select distinct ?resource ?typeLabel {" +
+                      " {" +
+                               "{ select distinct ?resource ?typeLabel" +
+                               " where {?resource rdfs:label ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?resource dbpprop:name ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?resource foaf:givenName ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?resource foaf:surname ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?redirectingResource rdfs:label ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                               "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?redirectingResource dbpprop:name ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                               "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?redirectingResource foaf:givenName ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                               "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                               " UNION" +
+                               " { select distinct ?resource ?typeLabel" +
+                               "  where {?redirectingResource foaf:surname ?label." +
+                               			" ?label <bif:contains> " + wrappedClueFragment + "." +
+                               "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                        " ?resource rdf:type ?type." +
+                                        " ?type rdfs:label ?typeLabel." +
+                                        "}" +
+                               " }" +
+                      " }" + 
+            " }" +
+            " LIMIT 100";
 
         Query query = QueryFactory.create(SPARQLquery);
         QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
@@ -339,6 +428,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                   RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment);
                                   recognisedResource.addTypeLabel(typeLabel);
                                   this.getRecognisedResources().add(recognisedResource);
+                                  log.debug("Recognised resource: " + resourceUri);
                           }
                  }
                  queryExecution.close();   

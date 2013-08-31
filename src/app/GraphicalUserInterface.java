@@ -24,6 +24,8 @@ import javax.swing.JMenuItem;
 
 import javax.swing.JTextField;
 
+import org.apache.log4j.Logger;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +41,7 @@ import framework.UserInterface;
  */
 @SuppressWarnings("serial")
 public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
+	private static Logger log = Logger.getLogger(ClueQueryTask.class);
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	public static final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
 	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
@@ -72,6 +75,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.setExitMenuItem(new JMenuItem("Exit"));
 		this.getExitMenuItem().addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent actionEvent) {
+    			log.debug("System exit requested by user");
     			System.exit(EXIT_ON_CLOSE);
     		}
     	});
