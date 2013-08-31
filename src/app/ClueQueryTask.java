@@ -294,34 +294,10 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	
 	private void extractCandidateSolutions(String rootResourceUri) {
 		/* First, check the labels of the resource around which the model was constructed */
-		Resource rootResource = this.getInfModel().getResource(rootResourceUri);
-
-		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
+		this.extractSolutionsFromRootResource(rootResourceUri);
 		
-		StmtIterator rootLabels = this.getInfModel().listStatements(rootResourceLabelSelector);
-		
-		/* Logging */
-		log.debug("rootResourceUri = " + rootResourceUri);
-		log.debug("rootResource is null = " + (rootResource == null));
-		log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
-		
-		while(rootLabels.hasNext()) {
-			Statement stmnt = rootLabels.nextStatement();
-			Literal rootLabelLiteral;
-			try {
-				rootLabelLiteral = stmnt.getLiteral();
-			}
-			catch(LiteralRequiredException e) {
-				continue;
-			}
-			
-			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource);
-			log.debug("Found label of root resource: " + rootLabelLiteral.toString());
-		}
-		
-		
+		/* Now list statements from the model in which the predicate is a pop:relationalProperty */
 		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
-		// List statements in which the predicate is a pop:relationalProperty
 		StmtIterator statements = this.getInfModel().listStatements(propertiesOfInterestSelector);
 		
 		while(statements.hasNext()) {
@@ -354,26 +330,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 							Resource solutionResource, clueResource;
 							
 							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
-								
-
-								if(this.getRecognisedResourceUris().contains(r.getURI())) {
-									clueResource = r;
-									solutionResource = objectOfInterest.asResource();
-								}
-								else {
-									clueResource = objectOfInterest.asResource();
-									solutionResource = r;
-								}
-								
-								/* Trialling http://dbpedia.org/resource/ only... */
-								String solutionResourceNameSpace = solutionResource.getNameSpace();
-								String clueResourceNameSpace = clueResource.getNameSpace();
-								if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
-									continue;
-								if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
-									continue;
-
-								this.constructSolution(objectOfInterest.toString(), solutionResource, clueResource);									
+								this.extractSolutionFromLiteral(r, objectOfInterest.asResource());								
 							}
 								
 							else {  // a resource has been identified whose label may represent a solution
@@ -432,6 +389,53 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				}
 			}
 		}
+	}
+	
+	private void extractSolutionsFromRootResource(String rootResourceUri) {
+		Resource rootResource = this.getInfModel().getResource(rootResourceUri);
+		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
+		StmtIterator rootLabels = this.getInfModel().listStatements(rootResourceLabelSelector);
+		
+		/* Logging */
+		log.debug("rootResourceUri = " + rootResourceUri);
+		log.debug("rootResource is null = " + (rootResource == null));
+		log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
+		
+		while(rootLabels.hasNext()) {
+			Statement stmnt = rootLabels.nextStatement();
+			Literal rootLabelLiteral;
+			try {
+				rootLabelLiteral = stmnt.getLiteral();
+			}
+			catch(LiteralRequiredException e) {
+				continue;
+			}
+			
+			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource);
+			log.debug("Found label of root resource: " + rootLabelLiteral.toString());
+		}
+	}
+	
+	private void extractSolutionFromLiteral(Resource resource, Resource literalResource) {
+		Resource clueResource, solutionResource;
+		if(this.getRecognisedResourceUris().contains(resource.getURI())) {
+			clueResource = resource;
+			solutionResource = literalResource;
+		}
+		else {
+			clueResource = literalResource;
+			solutionResource = resource;
+		}
+		
+		/* Trialling http://dbpedia.org/resource/ only... */
+		String solutionResourceNameSpace = solutionResource.getNameSpace();
+		String clueResourceNameSpace = clueResource.getNameSpace();
+		if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
+			return;
+		if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
+			return;
+		
+		this.constructSolution(literalResource.toString(), solutionResource, clueResource);
 	}
 	
 	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource) {
