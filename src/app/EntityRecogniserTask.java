@@ -39,6 +39,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
+	private final String XPATH_FUNCTIONS_PREFIX_DECLARATION = "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
 	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
@@ -72,11 +73,12 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         for(String clueFragment : this.getClue().getClueFragments()) {
         	try {
         		if(this.getClue().isFillInTheBlank())
-        			this.extractEntities(clueFragment);
+        			this.extractFITBEntities(clueFragment);
         		else this.extractEntities(clueFragment);
         	}
         	catch (QueryExceptionHTTP e) {
         		log.debug("DBpedia connection dropped. Entity recognition for clue fragment " + clueFragment + " failed");
+        		log.debug(e.getResponseMessage());
         	}
         	progress += taskLength;
             this.setProgress(progress); // one query has been completed
@@ -210,6 +212,141 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                           throw e;
                  }
 	}
+    
+    private void extractFITBEntities(String clueFragment) throws QueryExceptionHTTP {
+        if(considerAsPredicateOnly(clueFragment))
+                 return;
+
+        String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
+
+        String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
+        					RDFS_PREFIX_DECLARATION + " " +
+                            RDF_PREFIX_DECLARATION + " " +
+                            DBPPROP_PREFIX_DECLARATION + " " +
+                            DB_OWL_PREFIX_DECLARATION + " " +
+                            FOAF_PREFIX_DECLARATION +
+                                   " select distinct ?resource ?typeLabel {" +
+                                  " {" +
+                                           "{ select distinct ?resource ?typeLabel" +
+                                           " where {?resource rdfs:label ?label." +
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?resource dbpprop:name ?label." +
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?resource foaf:givenName ?label." +
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?resource foaf:surname ?label." +
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?redirectingResource rdfs:label ?label." +
+                                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?redirectingResource dbpprop:name ?label." +
+                                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?redirectingResource foaf:givenName ?label." +
+                                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                           " UNION" +
+                                           " { select distinct ?resource ?typeLabel" +
+                                           "  where {?redirectingResource foaf:surname ?label." +
+                                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
+                                                    " ?resource rdf:type ?type." +
+                                                    " ?type rdfs:label ?typeLabel." +
+                                                    " FILTER (fn:contains(?label, " + wrappedClueFragment + "))" +
+                                                    "}" +
+                                           " }" +
+                                  " }" + 
+                        " }" +
+                        " LIMIT 100";
+
+        Query query = QueryFactory.create(SPARQLquery);
+        QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+        try {
+
+                 ResultSet resultSet = queryExecution.execSelect();
+                 while(resultSet.hasNext()) {
+                          QuerySolution querySolution = resultSet.nextSolution();
+                          Resource thisResource = querySolution.getResource("?resource");
+
+                          String nameSpace = thisResource.getNameSpace();
+                          
+                          /* Trialling dbpedia.org/resource only ... */
+                          if(!nameSpace.contains("http://dbpedia.org/resource/")) {
+                       	   continue;
+                          }
+                          
+                          Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
+                          String typeLabel = thisTypeLabel.toString();
+
+                          String resourceUri = thisResource.getURI();
+                          
+                          boolean resourceAlreadyRecognised = false;
+                          int indexOfResource = 0;
+                          
+                          /* Check if a RecognisedResource has already been created for this resource */
+                          for(int i = 0; i < this.getRecognisedResources().size(); i++) {
+                       	   if(this.getRecognisedResources().get(i).getUri().equals(resourceUri)) {
+                       		   resourceAlreadyRecognised = true;
+                       		   indexOfResource = i;
+                       	   	   break;
+                       	   }
+                          }
+                       
+                          if(resourceAlreadyRecognised) {
+                       	   this.getRecognisedResources().get(indexOfResource).addTypeLabel(typeLabel);
+                          }
+                          else {
+                                  RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment);
+                                  recognisedResource.addTypeLabel(typeLabel);
+                                  this.getRecognisedResources().add(recognisedResource);
+                          }
+                 }
+                 queryExecution.close();   
+        }
+        catch(QueryExceptionHTTP e) {
+                 throw e;
+        }
+    }
 
 	private String toProperCase(String thisWord) {
 		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();

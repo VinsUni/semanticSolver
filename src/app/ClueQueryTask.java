@@ -114,7 +114,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			}
 			catch(QueryExceptionHTTP e) {
 				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
-				log.debug(e.getStackTrace());
+				log.debug(e.getResponseMessage());
 			}
 			
         	progress += taskLength;

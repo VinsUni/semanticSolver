@@ -68,10 +68,10 @@ public class SemanticSolverImpl implements SemanticSolver {
          	throw e;
         	}
         	catch (InterruptedException e) {
-        		log.debug(e.getStackTrace());
+        		log.debug(e.getMessage());
                  } 
         	catch (ExecutionException e) {
-        		log.debug(e.getStackTrace());
+        		log.debug(e.getMessage());
         	}
 
         	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
