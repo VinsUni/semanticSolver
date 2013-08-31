@@ -132,59 +132,6 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
     }
     
     private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
-		/*
-		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
-				RDF_PREFIX_DECLARATION + " " +
-				DBPEDIA_PROPERTY_PREFIX_DECLARATION + " " +
-				FOAF_PREFIX_DECLARATION +
-				" construct {<" + resourceUri + "> ?predicate ?object." +
-				" 			?object rdfs:label ?label." +
-				" 			?object dbpprop:name ?name." +
-				"			?object rdf:type ?objectType." +
-				"			?object foaf:givenName ?givenName." +
-				"			?object foaf:surname ?surname." +
-				"			?objectType rdfs:label ?objectTypeLabel." +
-				" 			?subject ?anotherPredicate <" + resourceUri + ">." +
-				"			?subject rdfs:label ?anotherLabel." +
-				"			?subject dbpprop:name ?anotherName." +
-				"			?subject rdf:type ?subjectType." +
-				"			?subject foaf:givenName ?anotherGivenName." +
-				"			?subject foaf:surname ?anotherSurname." +
-				"			?subjectType rdfs:label ?subjectTypeLabel." +
-				"}" +
-				" where {" +
-				" {<" + resourceUri + "> ?predicate ?object." +
-				"  ?object rdfs:label ?label." +
-				"  ?object rdf:type ?objectType." +
-				"  ?objectType rdfs:label ?objectTypeLabel.}" +
-				" UNION" +
-				" {<" + resourceUri + "> ?predicate ?object." +
-				"  ?object dbpprop:name ?name." +
-				"  ?object rdf:type ?objectType." +
-				"  ?objectType rdfs:label ?objectTypeLabel.}" +
-				" UNION" +
-				" {<" + resourceUri + "> ?predicate ?object." +
-				"  ?object foaf:givenName ?givenName." +
-				"  ?object foaf:surname ?surname." +
-				"  ?objectType rdfs:label ?objectTypeLabel.}" +
-				" UNION" +
-				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				" ?subject rdfs:label ?anotherLabel. " +
-				" ?subject rdf:type ?subjectType." +
-				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
-				" UNION" +
-				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				" ?subject dbpprop:name ?anotherName. " +
-				" ?subject rdf:type ?subjectType." +
-				" ?subjectType rdfs:label ?subjectTypeLabel.}" +
-				" UNION" +
-				" {?subject ?anotherPredicate <" + resourceUri + ">." +
-				"  ?subject foaf:givenName ?anotherGivenName." +
-				"  ?subject foaf:surname ?anotherSurname." +
-				"  ?subjectType rdfs:label ?subjectTypeLabel.}" +
-				"}";
-		*/
-
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
 				RDF_PREFIX_DECLARATION + " " +
 				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
@@ -325,14 +272,14 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 						if(this.getClueFragments().contains(toProperCase(predicateLabel))) {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
-							
-							if(objectOfInterest.isLiteral())// a string has been identified which may be a solution
-								this.extractSolutionFromLiteral(r, objectOfInterest.asResource());								
-								
-							else this.extractSolutionsFromSubjectAndObject(subjectOfStatement, objectOfStatement.asResource()); 
-							/* a resource has been identified whose label may represent a solution
+							/*
+							 * Either a string has been identified which may be a solution or a resource has been identified
+							 * whose label may represent a solution
 							 * *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
 							 */
+							if(objectOfInterest.isLiteral())// a string has been identified which may be a solution
+								this.extractSolutionFromLiteral(r, objectOfInterest.asResource());								
+							else this.extractSolutionsFromSubjectAndObject(subjectOfStatement, objectOfStatement.asResource()); 
 						}
 					}
 				}
@@ -434,13 +381,29 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			}
 	}
 }
-	
+	/**
+	 * constructSolution - instantiates a Solution object with the solutionText argument and, if it is not already contained 
+	 * in the solutions list, adds it to that list. If the solutionText contains any spaces, then each individual word
+	 *  of the solution text is used to create a further Solution object
+	 * @param solutionText
+	 * @param solutionResource
+	 * @param clueResource
+	 */
 	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource) {
-		Solution solution = new SolutionImpl(solutionText, solutionResource, clueResource,
-				this.getInfModel(), this.getClue());
-		if(!(this.getSolutions().contains(solution))) {
-			this.getSolutions().add(solution);
-			log.debug("New solution found: " + solution.toString());
+		ArrayList<String> potentialSolutions = new ArrayList<String>();
+		potentialSolutions.add(solutionText);
+		
+		String[] solutionTextFragments = solutionText.split(" ");
+		for(int i = 0; i < solutionTextFragments.length; i++)
+			potentialSolutions.add(solutionTextFragments[i]);
+		
+		for(String potentialSolution : potentialSolutions) {
+			Solution solution = new SolutionImpl(potentialSolution, solutionResource, clueResource,
+					this.getInfModel(), this.getClue());
+			if(!(this.getSolutions().contains(solution))) {
+				this.getSolutions().add(solution);
+				log.debug("New solution found: " + solution.toString());
+			}
 		}
 	}
 
