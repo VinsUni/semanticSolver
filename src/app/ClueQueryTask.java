@@ -52,8 +52,6 @@ import framework.Solution;
  */
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
-	private final String SCHEMA_FILE_NAME = Pop.LOCAL_VOCAB_URI;
-	
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql
 	
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
@@ -91,7 +89,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		this.setCandidateSolutions(new ArrayList<String>());
 		this.setSolutions(new ArrayList<Solution>());
 		this.setExtractedResources(new ArrayList<Resource>());
-		this.setSchema(FileManager.get().loadModel(this.SCHEMA_FILE_NAME));
+		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
 		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
 	    this.setReasoner(reasoner.bindSchema(schema));
 	}
