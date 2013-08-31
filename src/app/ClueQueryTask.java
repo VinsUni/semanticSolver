@@ -11,6 +11,8 @@ import java.util.Random;
 
 import javax.swing.SwingWorker;
 
+import org.apache.log4j.Logger;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -52,6 +54,7 @@ import framework.Solution;
  */
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
+	private static Logger log = Logger.getLogger(ClueQueryTask.class);
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql
 	
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
@@ -114,8 +117,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			    	this.solutions.add(sol);
 			}
 			catch(QueryExceptionHTTP e) {
-				e.printStackTrace(); // DEBUGGING ***********************8
-				System.err.println("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+				log.debug(e.getStackTrace());
 			}
 			
         	progress += taskLength;
@@ -137,16 +140,17 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		ArrayList<Solution> candidateSols = new ArrayList<Solution>();
 		
 		/* First, check the labels of the resource around which the model was constructed */
-		
 		Resource rootResource = infModel.getResource(rootResourceUri);
-		
-		System.out.println("rootResourceUri = " + rootResourceUri); // DEBUGGING ******************************
-		System.out.println("rootResource is null = " + (rootResource == null)); // DEBUGGING ******************************
-		
+
 		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
 		
 		StmtIterator rootLabels = infModel.listStatements(rootResourceLabelSelector);
-		System.out.println("rootLabels.hasNext() = " + (rootLabels.hasNext())); // DEBUGGING ******************************
+		
+		/* Logging */
+		log.debug("rootResourceUri = " + rootResourceUri);
+		log.debug("rootResource is null = " + (rootResource == null));
+		log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
+		
 		while(rootLabels.hasNext()) {
 			Statement stmnt = rootLabels.nextStatement();
 			Literal rootLabelLiteral;
@@ -157,13 +161,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				continue;
 			}
 			
-			System.out.println("Found label of root resource: " + rootLabelLiteral.toString()); // DEBUGGING *************
+			log.debug("Found label of root resource: " + rootLabelLiteral.toString());
 			
 			Solution solu = new SolutionImpl(rootLabelLiteral.toString(), rootResource, rootResource,
 					infModel, this.getClue()); // the solutionResource and clueResource are one and the same
 			if(!(candidateSols.contains(solu))) {
-				System.out.println("New solution found: " + solu.toString()); // DEBUGGING **********
 				candidateSols.add(solu);
+				log.debug("New solution found: " + solu.toString());
 			}
 			
 		}
@@ -226,8 +230,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 								Solution s = new SolutionImpl(objectOfInterest.toString(), solutionResource, clueResource,
 										infModel, this.getClue());
 								if(!(candidateSols.contains(s))) {
-									System.out.println("New solution found: " + s.toString()); // DEBUGGING **********
 									candidateSols.add(s);
+									log.debug("New solution found: " + s.toString());
 								}
 								
 									
@@ -283,8 +287,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 											Solution so = new SolutionImpl(candidateLabel, solutionResource, clueResource,
 													infModel, this.getClue());
 											if(!(candidateSols.contains(so))) {
-												System.out.println("New solution found: " + so.toString()); // DEBUGGING **********
 												candidateSols.add(so);
+												log.debug("New solution found: " + so.toString());
 											}
 										}
 								}
@@ -350,7 +354,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				"  ?subjectType rdfs:label ?subjectTypeLabel.}" +
 				"}";
 		*/
-		
+
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
 				RDF_PREFIX_DECLARATION + " " +
 				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
@@ -388,11 +392,10 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				"}" +
 				"LIMIT 50000";
 		 
+		log.debug("Constructing model around " + resourceUri);
 		
 		Query query = QueryFactory.create(sparqlQuery);
 		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
-		
-		System.out.println("Constructing model around " + resourceUri); // DEBUGGING ******************************
 		
 		Model model = queryExecution.execConstruct();
 		
@@ -420,7 +423,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		Query secondQuery = QueryFactory.create(secondSparqlQuery);
 		QueryExecution secondQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, secondQuery);
 		
-		System.out.println("Constructing second model around " + resourceUri); // DEBUGGING ******************************
+		log.debug("Constructing second model around " + resourceUri);
 		
 		Model secondModel = secondQueryExecution.execConstruct();
 		
