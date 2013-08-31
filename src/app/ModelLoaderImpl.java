@@ -15,6 +15,7 @@ import com.hp.hpl.jena.util.FileManager;
 
 import experiments.NsPrefixLoader;
 import framework.ModelLoader;
+import framework.Pop;
 
 import lombok.AccessLevel;
 import lombok.Setter;
@@ -24,7 +25,7 @@ import lombok.Setter;
  *
  */
 public class ModelLoaderImpl implements ModelLoader {
-	private final String ONTOLOGY_URI = "popv7.owl";
+	private final String ONTOLOGY_URI = Pop.LOCAL_VOCAB_URI;
 	@Setter(AccessLevel.PRIVATE) private InfModel model;
 	
 	@Override

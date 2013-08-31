@@ -52,7 +52,7 @@ import framework.Solution;
  */
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
-	private final String SCHEMA_FILE_NAME = "popv7.owl";
+	private final String SCHEMA_FILE_NAME = Pop.LOCAL_VOCAB_URI;
 	
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql
 	

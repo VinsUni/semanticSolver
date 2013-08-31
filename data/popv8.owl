@@ -674,7 +674,7 @@
     <!-- ////////////////////////////// pop classes //////////////////////////////////// -->
      
     <!-- pop:popClass -->
-    <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#popClass"
+    <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#popClass">
     	<rdfs:comment xml:lang="en">All classes in the pop vocabulary are sub-classes of pop:popClass</rdfs:comment>
     </rdf:Description>
     
