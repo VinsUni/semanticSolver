@@ -10,6 +10,8 @@ import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
 
+import org.apache.log4j.Logger;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,6 +31,7 @@ import framework.UserInterface;
  *
  */
 public class SemanticSolverImpl implements SemanticSolver {
+	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private UserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
@@ -65,12 +68,10 @@ public class SemanticSolverImpl implements SemanticSolver {
          	throw e;
         	}
         	catch (InterruptedException e) {
-                          // TODO Auto-generated catch block
-                          e.printStackTrace();
+        		log.debug(e.getStackTrace());
                  } 
         	catch (ExecutionException e) {
-         		// TODO Auto-generated catch block
-         		e.printStackTrace();
+        		log.debug(e.getStackTrace());
         	}
 
         	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
