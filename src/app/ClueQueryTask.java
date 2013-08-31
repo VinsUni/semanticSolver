@@ -65,6 +65,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private final String ENG_LANG = "en";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model schema;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	
@@ -108,8 +109,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			Model data;
 			try {
 				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
-				InfModel infModel = ModelFactory.createInfModel(reasoner, data);
-			    this.extractCandidateSolutions(infModel, resourceUri); // adds any candidate solutions from the model to the solutions list
+				this.setInfModel(ModelFactory.createInfModel(reasoner, data));
+			    this.extractCandidateSolutions(resourceUri); // adds any candidate solutions from the model to the solutions list
 			}
 			catch(QueryExceptionHTTP e) {
 				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
@@ -291,13 +292,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		//return model;
 	}
 	
-	private void extractCandidateSolutions(InfModel infModel, String rootResourceUri) {
+	private void extractCandidateSolutions(String rootResourceUri) {
 		/* First, check the labels of the resource around which the model was constructed */
-		Resource rootResource = infModel.getResource(rootResourceUri);
+		Resource rootResource = this.getInfModel().getResource(rootResourceUri);
 
 		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
 		
-		StmtIterator rootLabels = infModel.listStatements(rootResourceLabelSelector);
+		StmtIterator rootLabels = this.getInfModel().listStatements(rootResourceLabelSelector);
 		
 		/* Logging */
 		log.debug("rootResourceUri = " + rootResourceUri);
@@ -314,14 +315,14 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				continue;
 			}
 			
-			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource, infModel);
+			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource);
 			log.debug("Found label of root resource: " + rootLabelLiteral.toString());
 		}
 		
 		
 		Selector propertiesOfInterestSelector = new SimpleSelector(null, Pop.relationalProperty, (RDFNode)null);
 		// List statements in which the predicate is a pop:relationalProperty
-		StmtIterator statements = infModel.listStatements(propertiesOfInterestSelector);
+		StmtIterator statements = this.getInfModel().listStatements(propertiesOfInterestSelector);
 		
 		while(statements.hasNext()) {
 			Statement thisStatement = statements.nextStatement();
@@ -331,13 +332,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			
 			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
 			
-			StmtIterator statementsOfInterest = infModel.listStatements(selector);
+			StmtIterator statementsOfInterest = this.getInfModel().listStatements(selector);
 			
 			while(statementsOfInterest.hasNext()) {
 				Statement statementOfInterest = statementsOfInterest.nextStatement();
 				Property thisPredicate = statementOfInterest.getPredicate();
 				
-				Resource thisPredicateInModel = infModel.getResource(thisPredicate.getURI());
+				Resource thisPredicateInModel = this.getInfModel().getResource(thisPredicate.getURI());
 				
 				StmtIterator labelProperties = thisPredicateInModel.listProperties(RDFS.label);
 				
@@ -372,8 +373,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 								if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
 									continue;
 
-								this.constructSolution(objectOfInterest.toString(), solutionResource, clueResource,
-										infModel);									
+								this.constructSolution(objectOfInterest.toString(), solutionResource, clueResource);									
 							}
 								
 							else {  // a resource has been identified whose label may represent a solution
@@ -423,8 +423,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 											if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
 												break;
 											
-											this.constructSolution(candidateLabel, solutionResource, clueResource,
-													infModel);
+											this.constructSolution(candidateLabel, solutionResource, clueResource);
 										}
 								}
 							}
@@ -435,10 +434,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		}
 	}
 	
-	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource, InfModel infModel) {
-		
+	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource) {
 		Solution solution = new SolutionImpl(solutionText, solutionResource, clueResource,
-				infModel, this.getClue());
+				this.getInfModel(), this.getClue());
 		if(!(this.getSolutions().contains(solution))) {
 			this.getSolutions().add(solution);
 			log.debug("New solution found: " + solution.toString());
