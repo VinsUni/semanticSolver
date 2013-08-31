@@ -42,6 +42,7 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 
+import exception.NoResourcesSelectedException;
 import framework.Clue;
 import framework.Pop;
 import framework.Solution;
@@ -102,7 +103,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
  
         int combinedLengthOfQueries = this.getRecognisedResourceUris().size();
         
-        int taskLength = (100 / combinedLengthOfQueries);
+        int taskLength = 0;
+        try {
+        	taskLength = (100 / combinedLengthOfQueries);
+        }
+        catch(ArithmeticException e) { // will be thrown if combinedLengthOfQueries is 0
+        	throw new NoResourcesSelectedException("No entities were recognised in the clue");
+        }
         
         for(String resourceUri : this.getRecognisedResourceUris()) {
         	

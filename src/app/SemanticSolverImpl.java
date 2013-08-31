@@ -18,6 +18,7 @@ import lombok.Setter;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
+import exception.NoResourcesSelectedException;
 import exception.NoSolutionsException;
 import framework.Clue;
 import framework.ClueSolver;
@@ -76,11 +77,27 @@ public class SemanticSolverImpl implements SemanticSolver {
 
         	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
         	
+        	if(this.getRecognisedResources() == null) {
+        		/* Notify the user that no solutions were found and then return*/
+				this.setResults("No solutions found");
+	        	SwingUtilities.invokeLater(new Runnable() {
+	        	@Override
+	                 	public void run() {
+	        				getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(false);
+	        				getUserInterface().updateResults(getResults());
+	                 		
+	                 		getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
+	                     	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+	                 		getUserInterface().showNewClueOptions();
+	                 	}
+	        	});
+	        	return;
+        	}
+
         	for(RecognisedResource thisResource : this.getRecognisedResources())
         		recognisedResourceUris.add(thisResource.getUri());
         	
         	this.findSolutions(recognisedResourceUris);
-        	
 	}
 	
 	@Override
@@ -111,12 +128,15 @@ public class SemanticSolverImpl implements SemanticSolver {
                  try {
                 	 proposedSolutions = this.getClueQueryTask().get(); // will block until CQTask is finished
                  }
-                 catch (InterruptedException e) {
-                          // TODO Auto-generated catch block
-                          e.printStackTrace();
-                 } catch (ExecutionException e) {
-                          // TODO Auto-generated catch block
-                          e.printStackTrace();
+                 catch (Exception e) {
+                	 try {
+                		 NoResourcesSelectedException castE = (NoResourcesSelectedException)e;
+                		 System.out.println("No entities were recognised in the clue " + this.getClue().getSourceClue());
+                		 log.debug(castE.getMessage());
+                	 }
+                	 catch(ClassCastException cce) {
+                		 log.debug(e.getMessage());
+                	 }
                  }
         
         	this.setClueSolver(new ClueSolverImpl());
