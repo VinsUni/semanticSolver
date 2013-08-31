@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 import javax.swing.SwingWorker;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -31,6 +33,7 @@ import framework.Clue;
  *
  */
 public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResource>, Void> {
+	private static Logger log = Logger.getLogger(EntityRecogniserTask.class);
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED IN QUERYIMPL
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"; // DUPLICATED IN QUERYIMPL
@@ -76,7 +79,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         		this.extractEntities(clueFragment); // extract entities for next clue fragment
         	}
         	catch (QueryExceptionHTTP e) {
-        		System.err.println("DBpedia connection dropped. Entity recognition for clue fragment " + clueFragment + " failed");
+        		log.debug("DBpedia connection dropped. Entity recognition for clue fragment " + clueFragment + " failed");
         	}
         	progress += taskLength;
             this.setProgress(progress); // one query has been completed

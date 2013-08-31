@@ -3,6 +3,8 @@
  */
 package app;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Resource;
 
@@ -18,6 +20,7 @@ import lombok.Setter;
  * unwanted characters
  */
 public class SolutionImpl implements Solution {
+	private static Logger log = Logger.getLogger(SolutionImpl.class);
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
@@ -53,9 +56,9 @@ public class SolutionImpl implements Solution {
 		this.setInfModel(infModel);
 		this.setClue(clue);
 		
-		System.out.println(); // DEBUGGING ******************************
-		System.out.println("Solution resource: " + this.getSolutionResource().getURI()); // DEBUGGING ******************************
-		System.out.println("Clue resource " + this.getClueResource().getURI()); // DEBUGGING ******************************
+		/* Logging */
+		log.debug("Solution resource: " + this.getSolutionResource().getURI());
+		log.debug("Clue resource " + this.getClueResource().getURI());
 	}
 
 	/*
