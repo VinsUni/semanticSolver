@@ -9,7 +9,6 @@ import javax.swing.SwingWorker;
 
 import org.apache.log4j.Logger;
 
-import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -47,8 +46,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", 
 			"writer", "song", "group"};
-	private final String[] VOCABULARIES_TO_EXCLUDE = {"http://dbpedia.org/class/yago/", 
-			"http://dbpedia.org/resource/Category:"}; // a list of namespaces whose terms should be excluded from consideration
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<RecognisedResource> recognisedResources;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
@@ -181,11 +178,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                                 	   continue;
                                    }
                                    
-                                   /*
-                                   if(excludedNameSpace(nameSpace))
-                                            continue;
-                                   */
-                                   
                                    Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
                                    String typeLabel = thisTypeLabel.toString();
 
@@ -241,22 +233,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private boolean considerAsPredicateOnly(String wordToCheck) {
 		for(int i = 0; i < this.WORDS_TO_CONSIDER_AS_PREDICATES_ONLY.length; i++)
 			if(toProperCase(WORDS_TO_CONSIDER_AS_PREDICATES_ONLY[i]).equals(wordToCheck))
-				return true;
-		return false;
-	}
-
-	/**
-	 * excludedNameSpace - checks if any of the namespaces of the vocabularies that we want to exclude from consideration are
-	 * substrings of the namespace under consideration. It is necessary to do it this way rather than simply checking if the NS 
-	 * under consideration is in our list of namespaces to be excluded primarily because of the high number of resources on DBpedia
-	 * that have been created under a badly-formed variant of the NS http://dbpedia.org/class/yago/, where a resource with local
-	 * name local_name has been put into the DBpedia graph with the NS "http://dbpedia.org/class/yago/local_name"
-	 * @param namespaceToCheck
-	 * @return
-	 */
-	private boolean excludedNameSpace(String nameSpaceToCheck) {
-		for(int i = 0; i < this.VOCABULARIES_TO_EXCLUDE.length; i++)
-			if(nameSpaceToCheck.contains(VOCABULARIES_TO_EXCLUDE[i]))
 				return true;
 		return false;
 	}
