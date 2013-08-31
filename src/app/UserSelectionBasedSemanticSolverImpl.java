@@ -22,14 +22,14 @@ import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.Solution;
 import framework.SolutionScorer;
-import framework.UserInterface;
+import framework.UserSelectionBasedUserInterface;
 
 /**
  * @author Ben Griffiths	
  *
  */
 public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private UserInterface userInterface;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private UserSelectionBasedUserInterface userInterface;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private EntityRecogniserTask entityRecogniserTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
@@ -38,7 +38,7 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
-	public UserSelectionBasedSemanticSolverImpl(UserInterface userInterface) {
+	public UserSelectionBasedSemanticSolverImpl(UserSelectionBasedUserInterface userInterface) {
 		this.setUserInterface(userInterface);
 	}
 

@@ -36,14 +36,14 @@ import lombok.Setter;
 import exception.InvalidClueException;
 import framework.Clue;
 import framework.SemanticSolver;
-import framework.UserInterface;
+import framework.UserSelectionBasedUserInterface;
 
 /**
  * @author Ben Griffiths
  *
  */
 @SuppressWarnings("serial")
-public class UserSelectionBasedGUI extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
+public class UserSelectionBasedGUI extends JFrame implements UserSelectionBasedUserInterface, ActionListener, PropertyChangeListener {
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	private final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
 	//private final String SCORING_IN_PROGRESS_MESSAGE = "Scoring solutions";
@@ -69,7 +69,7 @@ public class UserSelectionBasedGUI extends JFrame implements UserInterface, Acti
 	 */
 	@Override
 	public void createAndShow() {
-		this.setSemanticSolver(new SemanticSolverImpl(this));
+		this.setSemanticSolver(new UserSelectionBasedSemanticSolverImpl(this));
 		this.setTitle("Semantic Crossword Solver");
 		
 		/* Create menubar, menu and menu items */
