@@ -13,8 +13,6 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.FileManager;
 
-import experiments.NsPrefixLoader;
-
 import framework.Pop;
 
 import lombok.AccessLevel;

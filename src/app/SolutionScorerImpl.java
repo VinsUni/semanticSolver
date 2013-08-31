@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
@@ -31,7 +33,6 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import experiments.NsPrefixLoader;
 import framework.Clue;
 import framework.Pop;
 import framework.Solution;
@@ -42,6 +43,7 @@ import framework.SolutionScorer;
  *
  */
 public class SolutionScorerImpl implements SolutionScorer {
+	private static Logger log = Logger.getLogger(SolutionScorerImpl.class);
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED TWICE
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
@@ -59,20 +61,14 @@ public class SolutionScorerImpl implements SolutionScorer {
 		ArrayList<Resource> solutionTypes = this.getSolutionTypes(solution);
 		ArrayList<Resource> solutionProperties = this.getSolutionProperties(solution);
 		
-		System.out.println(); //DEBUGGING **********************************
-		System.out.println("Recognised the following types in the solutionResource " + solution.getSolutionResource().getURI() + ":"); //DEBUGGING **********************************
-		for(Resource solutionType : solutionTypes) //DEBUGGING **********************************
-			System.out.println(solutionType.getURI()); //DEBUGGING **********************************
-		System.out.println(); //DEBUGGING **********************************
-		
-		System.out.println(); //DEBUGGING **********************************
-		System.out.println("Recognised the following properties of the solutionResource " + solution.getSolutionResource().getURI() + ":"); //DEBUGGING **********************************
-		for(Resource solutionProperty : solutionProperties) //DEBUGGING **********************************
-			System.out.println(solutionProperty.getURI()); //DEBUGGING **********************************
-		System.out.println(); //DEBUGGING **********************************
-		
-		
-		
+		/* logging */
+		log.debug("Recognised the following types in the solutionResource " + solution.getSolutionResource().getURI() + ":");
+		for(Resource solutionType : solutionTypes)
+			log.debug(solutionType.getURI());
+		log.debug("Recognised the following properties of the solutionResource " + solution.getSolutionResource().getURI() + ":");
+		for(Resource solutionProperty : solutionProperties)
+			log.debug(solutionProperty.getURI());
+
 		double distanceBetweenClueFragmentsAndSolution = distance(solution.getSolutionResource(), solutionTypes, solutionProperties);
 		
 		return distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution;
@@ -124,7 +120,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		while(solutionTypeStatements.hasNext()) {
 			Statement thisStatement = solutionTypeStatements.nextStatement();
 			
-			System.err.println(thisStatement.toString()); // DEBUGGING ***********************************************
+			log.debug("Found solutionTypeStatement: " + thisStatement.toString());
 			
 			Resource thisType = thisStatement.getObject().asResource();
 			
@@ -140,7 +136,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisLabel = thisTypeLabelStatement.getString();
 				thisLabel = stripLanguageTag(thisLabel);
 				
-				System.out.println("Found label: " + thisLabel); // DEBUGGING *****************************************
+				log.debug("Found label: " + thisLabel);
 				
 				if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
 					solutionTypes.add(thisType);
@@ -166,7 +162,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		while(solutionPropertyStatements.hasNext()) {
 			Statement thisStatement = solutionPropertyStatements.nextStatement();
 			
-			System.err.println(thisStatement.toString()); // DEBUGGING ***********************************************
+			log.debug(thisStatement.toString());
 			
 			Resource thisPredicate = thisStatement.getPredicate().asResource();
 			
@@ -182,7 +178,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisPredicateLabel = thisPredicateLabelStatement.getString();
 				thisPredicateLabel = stripLanguageTag(thisPredicateLabel);
 				
-				System.out.println("Found label: " + thisPredicateLabel); // DEBUGGING *****************************************
+				log.debug("Found label: " + thisPredicateLabel);
 				
 				if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
 					solutionProperties.add(thisPredicate);
@@ -276,8 +272,8 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		double numberOfLinks = this.executeCountQuery(sparqlQuery);
 		
-		System.err.println("Second count query for solutionResource " + solutionResourceUri + " - " + sparqlQuery + " - has result: " +
-				numberOfLinks); // DEBUGGING ***********************************************************************
+		log.debug("Second count query for solutionResource " + solutionResourceUri + " - " + sparqlQuery + " - has result: " +
+				numberOfLinks);
 		
 		double distance = (1.0 / (1.0 + numberOfLinks));
 		
@@ -303,7 +299,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 			resultSet = queryExecution.execSelect();
 		}
 		catch (QueryExceptionHTTP e) {
-			System.err.println("DBpedia failed to return a result for the scoring query: " + sparqlQuery);
+			log.debug("DBpedia failed to return a result for the scoring query: " + sparqlQuery);
 			return 0;
 		}
 		
@@ -312,7 +308,7 @@ public class SolutionScorerImpl implements SolutionScorer {
         Literal numberOfLinksAsLiteral = querySolution.getLiteral("?count");
         double numberOfLinks = numberOfLinksAsLiteral.getDouble();
         
-        System.out.println("Number of links found: " + numberOfLinks); // DEBUGGING ****************
+        log.debug("Number of links found: " + numberOfLinks);
 
 		queryExecution.close();
 		return numberOfLinks;
@@ -326,7 +322,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 			resultSet = queryExecution.execSelect();
 		}
 		catch (QueryExceptionHTTP e) {
-			System.err.println("DBpedia failed to return a result for the scoring query: " + countQuery);
+			log.debug("DBpedia failed to return a result for the scoring query: " + countQuery);
 			return 0;
 		}
         QuerySolution querySolution = resultSet.nextSolution();
@@ -334,7 +330,7 @@ public class SolutionScorerImpl implements SolutionScorer {
         Literal numberOfLinksAsLiteral = querySolution.getLiteral("?count");
         double numberOfLinks = numberOfLinksAsLiteral.getDouble();
         
-        System.out.println("Number of links found: " + numberOfLinks); // DEBUGGING ****************
+        log.debug("Number of links found: " + numberOfLinks);
 
 		queryExecution.close();
 		return numberOfLinks;	

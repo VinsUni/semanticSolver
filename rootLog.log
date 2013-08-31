@@ -579,3 +579,457 @@
 15:53:17 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
 15:53:17 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
 15:53:17 DEBUG ClueQueryTask             :: New solution found: Beatles - http://dbpedia.org/resource/8749_Beatles - http://dbpedia.org/resource/8749_Beatles
+16:00:14 DEBUG ClueImpl                  :: Clue text = member of the beatles
+16:00:14 DEBUG ClueImpl                  :: Clue fragments generated:
+16:00:14 DEBUG ClueImpl                  :: Member
+16:00:14 DEBUG ClueImpl                  :: Member Of
+16:00:14 DEBUG ClueImpl                  :: Member Of The
+16:00:14 DEBUG ClueImpl                  :: Member Of The Beatles
+16:00:14 DEBUG ClueImpl                  :: Of The
+16:00:14 DEBUG ClueImpl                  :: Of The Beatles
+16:00:14 DEBUG ClueImpl                  :: The Beatles
+16:00:14 DEBUG ClueImpl                  :: Beatles
+16:00:21 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+16:00:34 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/The_Beatles
+16:00:38 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:39 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: ?????@zh
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found:  - http://dbpedia.org/resource/The_Beatles - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: ?????@ja
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: ???@ko
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@hu
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Beatles - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@pt
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@en
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@ru
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@de
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@fi
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@uk
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@nl
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@pl
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@cs
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@no
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@fr
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@it
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@sv
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@ca
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@vi
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@es
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Stuart_Sutcliffe
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Stuart Sutcliffe - http://dbpedia.org/resource/Stuart_Sutcliffe - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Stuart_Sutcliffe
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Stu Sutcliffe - http://dbpedia.org/resource/Stuart_Sutcliffe - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Stuart_Sutcliffe
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Sutcliffe Stuart - http://dbpedia.org/resource/Stuart_Sutcliffe - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Pete_Best
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Pete Best - http://dbpedia.org/resource/Pete_Best - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Pete_Best
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Best Randolph Peter - http://dbpedia.org/resource/Pete_Best - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Ringo_Starr
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Ringo Starr - http://dbpedia.org/resource/Ringo_Starr - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Ringo_Starr
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Starkey Richard - http://dbpedia.org/resource/Ringo_Starr - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Paul_McCartney
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Paul McCartney - http://dbpedia.org/resource/Paul_McCartney - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Paul_McCartney
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Sir Paul McCartney - http://dbpedia.org/resource/Paul_McCartney - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Paul_McCartney
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: McCartney Paul - http://dbpedia.org/resource/Paul_McCartney - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/George_Harrison
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: George Harrison - http://dbpedia.org/resource/George_Harrison - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/George_Harrison
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Harrison George - http://dbpedia.org/resource/George_Harrison - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/John_Lennon
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: John Lennon - http://dbpedia.org/resource/John_Lennon - http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/John_Lennon
+16:00:39 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:39 DEBUG ClueQueryTask             :: New solution found: Lennon John - http://dbpedia.org/resource/John_Lennon - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Plastic_Ono_Band
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: Plastic Ono Band - http://dbpedia.org/resource/Plastic_Ono_Band - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Plastic_Ono_Band
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Billy_Preston
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: Billy Preston - http://dbpedia.org/resource/Billy_Preston - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Billy_Preston
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: Preston Billy - http://dbpedia.org/resource/Billy_Preston - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Billy_Preston
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Billy_Preston
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Quarrymen
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Quarrymen - http://dbpedia.org/resource/The_Quarrymen - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Quarrymen
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Plastic_Ono_Band
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Plastic_Ono_Band - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Billy_Preston
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Billy_Preston - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Quarrymen
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Quarrymen - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Stuart_Sutcliffe
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Stuart_Sutcliffe - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Stuart_Sutcliffe
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Pete_Best
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Pete_Best - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Pete_Best
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Ringo_Starr
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Ringo_Starr - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Ringo_Starr
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Paul_McCartney
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/Paul_McCartney - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Paul_McCartney
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/George_Harrison
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/George_Harrison - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/George_Harrison
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/John_Lennon
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/John_Lennon - http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/John_Lennon
+16:00:42 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles
+16:00:42 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/The_Beatles_(album)
+16:00:45 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:46 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (musikalbum)@sv
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles musikalbum - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: ??????? (????)@ja
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found:   - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (White Album)@no
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles White Album - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@ko
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (??????)@ru
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles  - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (??????)@uk
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (álbum)@es
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles lbum - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (álbum)@pt
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (albumi)@fi
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles albumi - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@hu
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles album - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@cs
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@pl
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@it
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@fr
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@vi
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@en
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@nl
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (Album)@de
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: New solution found: The Beatles Album - http://dbpedia.org/resource/The_Beatles_(album) - http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (??)@zh
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@en
+16:00:46 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(album)
+16:00:46 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:47 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:48 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:48 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@en
+16:00:48 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: New solution found: The Beatles No  - http://dbpedia.org/resource/The_Beatles_%28No._1%29 - http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@en
+16:00:48 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Beatles_%28No._1%29 - http://dbpedia.org/resource/The_Beatles_%28No._1%29
+16:00:48 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:50 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:50 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (album)@en
+16:00:50 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: New solution found: The Beatles album - http://dbpedia.org/resource/The_Beatles_%28album%29 - http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@en
+16:00:50 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Beatles_%28album%29 - http://dbpedia.org/resource/The_Beatles_%28album%29
+16:00:50 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:51 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:52 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@fr
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: New solution found: The Beatles No  - http://dbpedia.org/resource/The_Beatles_(No._1) - http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@es
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@it
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@ru
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles (No. 1)@en
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: The Beatles@en
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: New solution found: The Beatles - http://dbpedia.org/resource/The_Beatles_(No._1) - http://dbpedia.org/resource/The_Beatles_(No._1)
+16:00:52 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: rootResource is null = false
+16:00:52 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@pt
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: New solution found:  Beatles - http://dbpedia.org/resource/8749_Beatles - http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@it
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@hu
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG ClueQueryTask             :: Found label of root resource: 8749 ?????@uk
+16:00:52 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:52 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: New solution found:   - http://dbpedia.org/resource/8749_Beatles - http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@en
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@vi
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: 8749 Beatles@pl
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: (8749) Beatles@fr
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: (8749) Beatles@es
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: (8749) Beatles@de
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: ????? (???)@ja
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: Found label of root resource: Beatles@en
+16:00:53 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG ClueQueryTask             :: New solution found: Beatles - http://dbpedia.org/resource/8749_Beatles - http://dbpedia.org/resource/8749_Beatles
+16:00:53 DEBUG SolutionScorerImpl        :: Number of links found: 6.0
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/ActorsFromLiverpool]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Actors from Liverpool
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/1980sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 1980s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/EnglishFilmActors]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: English film actors
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Actor109765278]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: actor
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: thespian
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: histrion
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: player
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: role player
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/LivingPeople]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Living people
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: living people
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/E1MusicArtists]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: E1 Music artists
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/1960sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 1960s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Artist]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Künstler
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: artist
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: ???????????
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: ???
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: artiste
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/1970sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 1970s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/PeopleSelf-identifyingAsAlcoholics]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: People self-identifying as alcoholics
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/BritishExpatriatesInTheUnitedStates]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: British expatriates in the United States
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AppleRecordsArtists]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Apple Records artists
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/MusiciansFromLiverpool]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: musicians from Liverpool
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Musicians from Liverpool
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2000sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 2000s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AtlanticRecordsArtists]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Atlantic Records artists
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Person]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: ??????????? ????????
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Person
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: persona
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: pessoa
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Oseba
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: personne
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: person
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Agent]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: agent
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2010sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 2010s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/EnglishBaritones]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: English baritones
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2002/07/owl#Thing]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Thing
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/MusicalArtist]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: ???
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: musical artist
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: artista musical
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: musicien
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: ????????
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/1990sSingers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: 1990s singers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/MercuryRecordsArtists]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: Mercury Records artists
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/EnglishVegetarians]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: English vegetarians
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/EnglishRockDrummers]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: English rock drummers
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Person100007846]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: somebody
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: person
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: someone
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: individuAl
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: soul
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: mortal
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#popClass]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/HomoSapiens]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Person]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist_Performer]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Singer110599806]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -54c6557d:140d4e39e9d:-7ff6]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Musician]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicalPerformer]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicPerformanceAgent]
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Musician110340312]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: musician
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: player
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: instrumentalist
+16:00:53 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Ringo_Starr, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#artist]
+16:00:53 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Ringo_Starr, http://www.griffithsben.com/ontologies/pop.owl#memberOf, http://dbpedia.org/resource/The_Beatles]
+16:00:53 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Ringo_Starr, http://www.griffithsben.com/ontologies/pop.owl#relationalProperty, http://dbpedia.org/resource/The_Beatles]
+16:00:53 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Ringo_Starr, http://dbpedia.org/ontology/associatedBand, http://dbpedia.org/resource/The_Beatles]
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: member of
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: associated band
+16:00:53 DEBUG SolutionScorerImpl        :: Found label: band
+16:00:53 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Ringo_Starr:
+16:00:53 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Ringo_Starr:
+16:00:53 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/associatedBand
+16:00:53 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+16:00:53 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Ringo_Starr - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Ringo_Starr> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/The_Beatles>} UNION {<http://dbpedia.org/resource/The_Beatles> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/Ringo_Starr>} } - has result: 1.0
