@@ -41,7 +41,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", 
@@ -54,7 +53,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	public EntityRecogniserTask(Clue clue) {
 		super(); // call SwingWorker Default constructor
 		this.setClue(clue);
-		this.setClueFragments(clue.getClueFragments());
 		this.setRecognisedResources(new ArrayList<RecognisedResource>());
 		this.setRecognisedResourceUris(new ArrayList<String>());
 	}
@@ -68,12 +66,14 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         this.setProgress(progress); // Initialise progress property of SwingWorker
         
         
-        int combinedLengthOfQueries = this.getClueFragments().size();
+        int combinedLengthOfQueries = this.getClue().getClueFragments().size();
         int taskLength = (100 / combinedLengthOfQueries);
         
-        for(String clueFragment : this.getClueFragments()) {
+        for(String clueFragment : this.getClue().getClueFragments()) {
         	try {
-        		this.extractEntities(clueFragment); // extract entities for next clue fragment
+        		if(this.getClue().isFillInTheBlank())
+        			this.extractEntities(clueFragment);
+        		else this.extractEntities(clueFragment);
         	}
         	catch (QueryExceptionHTTP e) {
         		log.debug("DBpedia connection dropped. Entity recognition for clue fragment " + clueFragment + " failed");

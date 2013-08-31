@@ -28,4 +28,5 @@ public interface Clue {
 	public String getSolutionStructureAsString();
 	public ArrayList<String> getClueFragments();
 	public boolean matchesStructure(Solution solution); // compares the structure of this clue with the Solution argument
+	public boolean isFillInTheBlank();
 }
