@@ -6,6 +6,8 @@ package app;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.apache.log4j.Logger;
+
 import com.hp.hpl.jena.rdf.model.Selector;
 
 import exception.InvalidClueException;
@@ -22,6 +24,7 @@ import lombok.Setter;
  * Represents a clue
  */
 public class ClueImpl implements Clue {
+	private static Logger log = Logger.getLogger(ClueImpl.class);
 	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
@@ -57,16 +60,17 @@ public class ClueImpl implements Clue {
 		this.setSourceClue(clueText);
 		if(this.getSourceClue().contains(FILL_IN_THE_BLANK_MARKER))
 			this.setFillInTheBlank(true);
-		System.err.println("Clue text = " + this.getSourceClue()); // DEBUGGING *******************************
 		
 		this.setSolutionStructure(solutionStructure);
 		
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(clueText);
 		
-		System.out.println("Clue fragments generated:"); // DEBUGGING *******************************
-		for(String f : this.getClueFragments()) // DEBUGGING *******************************
-			System.out.println(f); // DEBUGGING *******************************
+		/* Logging */
+		log.debug("Clue text = " + this.getSourceClue());
+		log.debug("Clue fragments generated:");
+		for(String f : this.getClueFragments())
+			log.debug(f);
 	}
 	
 	private String stripQuotes(String clueText) {

@@ -1,0 +1,22 @@
+15:13:42 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+15:16:46 INFO  ClueImpl                  :: Clue text = member of the beatles
+
+15:16:53 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+15:19:53 DEBUG ClueImpl                  :: Clue text = member of the beatles
+
+15:20:00 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+15:24:42 DEBUG ClueImpl                  :: Clue text = member of the beatles
+15:24:42 DEBUG ClueImpl                  :: Clue fragments generated:
+15:24:42 DEBUG ClueImpl                  :: Member
+15:24:42 DEBUG ClueImpl                  :: Member Of
+15:24:42 DEBUG ClueImpl                  :: Member Of The
+15:24:42 DEBUG ClueImpl                  :: Member Of The Beatles
+15:24:42 DEBUG ClueImpl                  :: Of The
+15:24:42 DEBUG ClueImpl                  :: Of The Beatles
+15:24:42 DEBUG ClueImpl                  :: The Beatles
+15:24:42 DEBUG ClueImpl                  :: Beatles
+15:24:49 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
