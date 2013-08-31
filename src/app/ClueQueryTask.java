@@ -304,8 +304,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			Statement thisStatement = statements.nextStatement();
 			Resource subjectOfStatement = thisStatement.getSubject();
 			RDFNode objectOfStatement = thisStatement.getObject();
-				
-			
+
 			Selector selector = new CandidateSelector(subjectOfStatement, null, objectOfStatement);
 			
 			StmtIterator statementsOfInterest = this.getInfModel().listStatements(selector);
@@ -327,63 +326,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
 							
-							Resource solutionResource, clueResource;
-							
-							if(objectOfInterest.isLiteral()) { // a string has been identified which may be a solution
+							if(objectOfInterest.isLiteral())// a string has been identified which may be a solution
 								this.extractSolutionFromLiteral(r, objectOfInterest.asResource());								
-							}
 								
-							else {  // a resource has been identified whose label may represent a solution
-								
-									// *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
-									Resource object = objectOfStatement.asResource();
-									
-									StmtIterator candidateLabels = object.listProperties(RDFS.label);
-									while(candidateLabels.hasNext()) {
-										Statement s = candidateLabels.nextStatement();
-										RDFNode candidateLabelValue = null;
-										
-										String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a 
-										try {										// LiteralRequiredException is thrown	
-											lang = s.getLanguage(); // we only want English-language labels
-										}
-										catch(LiteralRequiredException e) {
-											/* The pop ontology treats some properties in the dbpprop namespace as subProperties
-											 * of rdfs:label, because they are often used in place of rdfs:label in the DBpedia
-											 * dataset. However, sometimes they are given resources as values. In such cases,
-											 * we ignore the resource and move on to the next value of rdfs:label
-											 */
-										}
-										if(lang == null || lang.equals(this.ENG_LANG)) {
-											if(candidateLabelValue == null)
-												candidateLabelValue = s.getObject();
-											String rawCandidateLabel = candidateLabelValue.toString();
-											String candidateLabel = stripLanguageTag(rawCandidateLabel);
-											
-											Resource res = s.getSubject();
-											
-											if(this.getRecognisedResourceUris().contains(res.getURI())) {
-												clueResource = res;
-												solutionResource = subjectOfStatement;
-											}
-											else {
-												clueResource = subjectOfStatement;
-												solutionResource = res;
-											}
-											
-
-											/* Trialling http://dbpedia.org/resource/ only... */
-											String solutionResourceNameSpace = solutionResource.getNameSpace();
-											String clueResourceNameSpace = clueResource.getNameSpace();
-											if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
-												break;
-											if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
-												break;
-											
-											this.constructSolution(candidateLabel, solutionResource, clueResource);
-										}
-								}
-							}
+							else this.extractSolutionsFromSubjectAndObject(subjectOfStatement, objectOfStatement.asResource()); 
+							/* a resource has been identified whose label may represent a solution
+							 * *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
+							 */
 						}
 					}
 				}
@@ -437,6 +386,54 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		this.constructSolution(literalResource.toString(), solutionResource, clueResource);
 	}
+	
+	private void extractSolutionsFromSubjectAndObject(Resource subject, Resource object) {
+		Resource clueResource, solutionResource;
+		StmtIterator candidateLabels = object.listProperties(RDFS.label);
+		while(candidateLabels.hasNext()) {
+			Statement s = candidateLabels.nextStatement();
+			RDFNode candidateLabelValue = null;
+			
+			String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a 
+			try {										// LiteralRequiredException is thrown	
+				lang = s.getLanguage(); // we only want English-language labels
+			}
+			catch(LiteralRequiredException e) {
+				/* The pop ontology treats some properties in the dbpprop namespace as subProperties
+				 * of rdfs:label, because they are often used in place of rdfs:label in the DBpedia
+				 * dataset. However, sometimes they are given resources as values. In such cases,
+				 * we ignore the resource and move on to the next value of rdfs:label
+				 */
+			}
+			if(lang == null || lang.equals(this.ENG_LANG)) {
+				if(candidateLabelValue == null)
+					candidateLabelValue = s.getObject();
+				String rawCandidateLabel = candidateLabelValue.toString();
+				String candidateLabel = stripLanguageTag(rawCandidateLabel);
+				
+				Resource res = s.getSubject();
+				
+				if(this.getRecognisedResourceUris().contains(res.getURI())) {
+					clueResource = res;
+					solutionResource = subject;
+				}
+				else {
+					clueResource = subject;
+					solutionResource = res;
+				}
+
+				/* Trialling http://dbpedia.org/resource/ only... */
+				String solutionResourceNameSpace = solutionResource.getNameSpace();
+				String clueResourceNameSpace = clueResource.getNameSpace();
+				if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
+					return;
+				if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
+					return;
+				
+				this.constructSolution(candidateLabel, solutionResource, clueResource);
+			}
+	}
+}
 	
 	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource) {
 		Solution solution = new SolutionImpl(solutionText, solutionResource, clueResource,
