@@ -129,14 +129,16 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        	SwingUtilities.invokeLater(new Runnable() {
 	        	@Override
 	                 	public void run() {
+	        				getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(false);
+	        				
 	        				String exceptionMessage = getResults();
 	        				String solutionStructure = getClue().getSolutionStructureAsString();
 	        				setResults(exceptionMessage + ": \"" + getClue().getSourceClue() + "\" " + solutionStructure);
-	                 		getUserInterface().updateResults(getResults());
+	                 		
+	        				getUserInterface().updateResults(getResults());
 	                 		
 	                 		getUserInterface().getDisplayPanel().getSubmitClueButton().setEnabled(true);
 	                     	getUserInterface().getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-	                 		
 	                 		getUserInterface().showNewClueOptions();
 	                 	}
 	        	});

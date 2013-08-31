@@ -154,9 +154,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
         if (propertyChangeEvent.getPropertyName().equals("progress")) {
             int progress = (Integer) propertyChangeEvent.getNewValue();
+            if(progress == this.getDisplayPanel().PROGRESS_BAR_MAXIMUM) {
+            	this.getDisplayPanel().getProgressBar().setValue(progress);
+            	progress = 0;
+            }
             this.getDisplayPanel().getProgressBar().setValue(progress);
-            if(this.getDisplayPanel().getProgressBar().getValue() == 100)
-            	this.getDisplayPanel().getProgressBar().setStringPainted(false);
         } 
     }
     
@@ -226,6 +228,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
      */
     @Override
 	public void showNewClueOptions() {
+    	this.getDisplayPanel().getProgressBar().setStringPainted(false);
 		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
 		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 	}
