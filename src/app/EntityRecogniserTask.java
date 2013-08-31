@@ -304,8 +304,9 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         */
 
         //String wrappedClueFragment = "\"'*" + clueFragment + "*'\""; // wrap with single quotes and wildcards, enclosed in double quotes, but do NOT append a language tag
-        String wrappedClueFragment = "\"" + clueFragment + "\""; // wrap with escaped double quotes, but do NOT append a language tag
-        
+        //String wrappedClueFragment = "\"" + clueFragment + "\""; // wrap with escaped double quotes, but do NOT append a language tag
+        String wrappedClueFragment = "'\"" + clueFragment + "\"'";
+        // '"virtual database"'
         log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
         
         String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
