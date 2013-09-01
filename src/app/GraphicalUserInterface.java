@@ -16,13 +16,16 @@ import java.awt.event.WindowListener;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 import javax.swing.JTextField;
 
@@ -48,6 +51,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	public static final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
 	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
 	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
+	private final String HELP_FILE_LOCATION = "helpFile.txt";
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String helpText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
@@ -70,6 +75,20 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.setSemanticSolver(new SemanticSolverImpl(this));
 		this.setTitle("Semantic Crossword Solver");
 		
+		// Load the file containing text for the help dialog and copy contents into helpText string
+        ClassLoader classLoader = this.getClass().getClassLoader();
+		InputStream inputStream = classLoader.getResourceAsStream(HELP_FILE_LOCATION);
+		StringBuffer stringBuffer = new StringBuffer();
+		if(inputStream == null)
+			this.setHelpText("Help file not found");
+		else {
+			Scanner scanner = new Scanner(inputStream);
+			while (scanner.hasNext ())
+				stringBuffer.append (scanner.nextLine ());
+			scanner.close();
+			this.setHelpText(new String(stringBuffer));
+		}
+
 		/* Create menubar, menu and menu items */
 		this.setMainMenuBar(new JMenuBar());
 		this.setMenu(new JMenu("Help"));
@@ -92,9 +111,11 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     	this.setHelpMenuItem(new JMenuItem("How to use this application"));
     	this.getHelpMenuItem().addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent actionEvent) {
-    		
+    			JOptionPane.showMessageDialog(getContentPane(), getHelpText(), "How to use this application",
+    					JOptionPane.QUESTION_MESSAGE);
     		}
     	});
+    	
     	this.getMenu().add(this.getHelpMenuItem(), 0);
     	
     	this.getMainMenuBar().add(this.getMenu());

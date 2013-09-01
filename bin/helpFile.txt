@@ -1,0 +1,15 @@
+<html>
+<body width='750'>
+
+<h1>How to use this application</h1>
+
+<p>
+Help text goes here
+</p>
+
+<p>
+and a bit more here
+</p>
+
+</body>
+</html>
