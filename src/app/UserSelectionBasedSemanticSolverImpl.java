@@ -198,4 +198,9 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
         	
         	
 	}
+
+	@Override
+	public void persistKnowledgeBase() {
+		// TODO Auto-generated method stub
+	}
 }

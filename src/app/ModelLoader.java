@@ -45,7 +45,7 @@ public class ModelLoader {
 			Model baseModel = FileManager.get().loadModel(Pop.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
 			
 			/* Create an inference model using the knowledge base */
-			setModel(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
+			setKnowledgeBase(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
 		}
 		return knowledgeBase;
 	}

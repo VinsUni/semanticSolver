@@ -185,6 +185,39 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		
 		queryExecution.close();
 		
+		
+		/*
+		// DEBUGGING ***************************************************************
+		
+			 // load standard prefixes into the model
+		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
+			prefixLoader.loadStandardPrefixes();
+			 
+			// Now, write the model out to a file in RDF/XML-ABBREV format:
+			try {
+				Random rand = new Random();
+				int randToAppend = rand.nextInt(1000);
+				
+				String fileName = "data\\extractedModel" + randToAppend + ".xml";
+				FileOutputStream outFile = new FileOutputStream(fileName);
+				System.out.println("Writing retrieved data to file...");
+				model.write(outFile, "RDF/XML-ABBREV");
+				outFile.close();
+				System.out.println("Operation complete");
+			}
+			catch(FileNotFoundException e) {
+				e.printStackTrace();
+			} 
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+		/*
+		
+		
+		
+		
+		
+		
 		/* Construct a second model to gather labels of the recognised resource */
 		String secondSparqlQuery = FOAF_PREFIX_DECLARATION + " " +
 				RDFS_PREFIX_DECLARATION + " " +

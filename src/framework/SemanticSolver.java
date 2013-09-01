@@ -13,5 +13,6 @@ import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
  */
 public interface SemanticSolver {
 	public void findEntities(Clue clue) throws QueryExceptionHTTP;
-	public  void findSolutions(ArrayList<String> recognisedResourceUris);
+	public void findSolutions(ArrayList<String> recognisedResourceUris);
+	public void persistKnowledgeBase();
 }
