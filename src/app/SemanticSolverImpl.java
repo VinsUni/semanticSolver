@@ -102,6 +102,8 @@ public class SemanticSolverImpl implements SemanticSolver {
 	
 	@Override
 	public  void findSolutions(ArrayList<String> recognisedResourceUris) {
+			final long NANOSECONDS_IN_ONE_SECOND = 1000000000;
+			long startTime = System.nanoTime();
 		
 			/* Update the progress bar to reflect the fact that Entity Recognition phase is over */
 	     	SwingUtilities.invokeLater(new Runnable() {
@@ -216,6 +218,10 @@ public class SemanticSolverImpl implements SemanticSolver {
         	for(Solution solution : uniqueSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
         					solution.getConfidence() + "%)\n";
+        	
+        	long endTime = System.nanoTime();
+			long durationInSecs = (endTime - startTime) / NANOSECONDS_IN_ONE_SECOND;
+			resultsBuffer += "Time taken to process this clue: " + durationInSecs + "s\n";
         	
         	this.setResults(resultsBuffer);
         	
