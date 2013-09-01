@@ -11,6 +11,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -75,8 +77,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.setExitMenuItem(new JMenuItem("Exit"));
 		this.getExitMenuItem().addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent actionEvent) {
-    			log.debug("System exit requested by user");
-    			System.exit(EXIT_ON_CLOSE);
+    			exitApplication();
     		}
     	});
     	this.getMenu().add(this.getExitMenuItem(), 0);
@@ -125,11 +126,24 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 						solveClue();
 			}
 		});
-
+		
+		
 		this.setPreferredSize(this.FRAME_DIMENSION);
 		this.setMinimumSize(this.FRAME_DIMENSION);
-
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new WindowListener() {
+        	@Override
+			public void windowClosing(WindowEvent e) {
+				exitApplication();
+			}
+			@Override public void windowActivated(WindowEvent e) {}
+			@Override public void windowClosed(WindowEvent e) {}
+			@Override public void windowDeactivated(WindowEvent e) {}
+			@Override public void windowDeiconified(WindowEvent e) {}
+			@Override public void windowIconified(WindowEvent e) {}
+			@Override public void windowOpened(WindowEvent e) {}
+        });
 		this.pack();
 		this.setVisible(true);
 	}
@@ -238,5 +252,10 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     public void updateProgressBarMessage(String message) {
     	this.getDisplayPanel().getProgressBar().setString(message);
     	this.getDisplayPanel().getProgressBar().setStringPainted(true);
+    }
+    
+    public void exitApplication() {
+    	log.debug("System exit requested by user");
+		System.exit(EXIT_ON_CLOSE);
     }
 }
