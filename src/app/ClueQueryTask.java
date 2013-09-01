@@ -390,8 +390,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 }
 	/**
 	 * constructSolution - instantiates a Solution object with the solutionText argument and, if it is not already contained 
-	 * in the solutions list, adds it to that list. If the solutionText contains any spaces, then each individual word
-	 *  of the solution text is used to create a further Solution object
+	 * in the solutions list, adds it to that list. If the solutionText contains any spaces, then it is fragmented into every
+	 * possible combination of sequences of sequential words within the text, and each fragment is used to create a further 
+	 * Solution object
 	 * @param solutionText
 	 * @param solutionResource
 	 * @param clueResource
@@ -401,8 +402,14 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		potentialSolutions.add(solutionText);
 		
 		String[] solutionTextFragments = solutionText.split(" ");
-		for(int i = 0; i < solutionTextFragments.length; i++)
-			potentialSolutions.add(solutionTextFragments[i]);
+		for(int i = 0; i < solutionTextFragments.length; i++) {
+			String thisFragment = solutionTextFragments[i];
+			potentialSolutions.add(thisFragment);
+			for(int j = i + 1; j < solutionTextFragments.length; j++) {
+				thisFragment = thisFragment + " " + solutionTextFragments[j];
+				potentialSolutions.add(thisFragment);
+			}
+		}
 		
 		for(String potentialSolution : potentialSolutions) {
 			Solution solution = new SolutionImpl(potentialSolution, solutionResource, clueResource,
