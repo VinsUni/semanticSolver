@@ -55,11 +55,13 @@ public class ClueImpl implements Clue {
 				throw new InvalidClueException("Invalid specification of solution structure");
 		}
 		
+		if(clueText.contains(FILL_IN_THE_BLANK_MARKER))
+			this.setFillInTheBlank(true); // fillInTheBlank flag must be set before calling stripQuotes
+		
 		clueText = stripQuotes(clueText);
 		
 		this.setSourceClue(clueText);
-		if(this.getSourceClue().contains(FILL_IN_THE_BLANK_MARKER))
-			this.setFillInTheBlank(true);
+		
 		
 		this.setSolutionStructure(solutionStructure);
 		
@@ -75,6 +77,10 @@ public class ClueImpl implements Clue {
 	
 	private String stripQuotes(String clueText) {
 		String clueTextWithoutQuotes = clueText.replace("\"", "");
+		if(this.isFillInTheBlank()) {
+			clueTextWithoutQuotes = clueTextWithoutQuotes.replace(this.APOSTROPHE_S_SEQUENCE, ""); // remove instances of " 's "
+			clueTextWithoutQuotes = clueTextWithoutQuotes.replace("'", ""); // remove any remaining inverted commas
+		}
 		return clueTextWithoutQuotes;
 	}
 
