@@ -16,6 +16,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.NoResourcesSelectedException;
@@ -41,6 +42,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel knowledgeBase;
 
 	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
