@@ -131,36 +131,65 @@ public class ClueImpl implements Clue {
     	clueText = clueText.replace(this.FILL_IN_THE_BLANK_MARKER, "");
 		String[] wordsInClueText = clueText.split(" ");
 		
-		System.out.println("Elements of wordsInClueText are splitting around space:"); // DEBUGGING **************************
+		System.out.println("Elements of wordsInClueText after splitting around space:"); // DEBUGGING **************************
 		for(int i = 0; i < wordsInClueText.length; i++) // DEBUGGING **************************
 			System.out.println(i + ": " + wordsInClueText[i]); // DEBUGGING **************************
 		
 		
 		for(int i = 0; i < wordsInClueText.length; i++) {
+			String thisWord = wordsInClueText[i];
+			//thisWord = thisWord.replace("\"", ""); // remove any remaining double-quotes
+			
 			if(wordsInClueText[i].isEmpty())
-				continue; // first or last element may be an empty String, if clue text starts with "_ " or ends with " _"
-			String thisWord = this.toProperCase(wordsInClueText[i]);
+				continue; // first or last element may be an empty String, if clue text starts with '_ ' or '"' or ends with ' _' or '"'
+			thisWord = this.toProperCase(wordsInClueText[i]);
+			
 			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
+				/* if the word ends with a comma, remove the comma before adding the word as a clue fragment */
+				if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")))
+						thisWord = thisWord.substring(0, thisWord.length() - 1);
+				/* if the word contains unbalanced parentheses, remove all parentheses */
+				if(this.imbalancedParentheses(thisWord)) {
+					thisWord = thisWord.replace("(", "");
+					thisWord = thisWord.replace(")", "");
+				}
 				this.getClueFragments().add(thisWord);
-				/* if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too */
+				
+				/*
+				this.getClueFragments().add(thisWord);
+				// if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too
 				if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")
 						|| thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(")")))
 					this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
-				/* if the word begins with a (, add the word without the ( as a fragment too */
+				// if the word begins with a (, add the word without the ( as a fragment too
 				if(thisWord.length() > 1 && thisWord.substring(0, 1).equals("("))
 					this.getClueFragments().add(thisWord.substring(1, thisWord.length()));
+				*/
 			}
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
 				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
 				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
+					/* if the word ends with a comma, remove the comma before adding the word as a clue fragment */
+					if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")))
+							thisWord = thisWord.substring(0, thisWord.length() - 1);
+					/* if the word contains unbalanced parentheses, remove all parentheses */
+					if(this.imbalancedParentheses(thisWord)) {
+						thisWord = thisWord.replace("(", "");
+						thisWord = thisWord.replace(")", "");
+					}
 					this.getClueFragments().add(thisWord);
-					/* if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too */
+					
+					
+					/*
+					this.getClueFragments().add(thisWord);
+					// if the word ends with a comma or closing bracket, add the word without the comma/bracket as a fragment too
 					if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")
 							|| thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(")")))
 						this.getClueFragments().add(thisWord.substring(0, thisWord.length() - 1));
-					/* if the word begins with a (, add the word without the ( as a fragment too */
+					// if the word begins with a (, add the word without the ( as a fragment too
 					if(thisWord.length() > 1 && thisWord.substring(0, 1).equals("("))
 						this.getClueFragments().add(thisWord.substring(1, thisWord.length()));
+					*/
 				}
 			}
 		}
@@ -191,7 +220,7 @@ public class ClueImpl implements Clue {
     		}
     		else {
     			/* Find a matching end-quote */
-        		int indexOfEndQuote = clueText.substring(indexOfStartQuote + 1).indexOf(QUOTE);
+        		int indexOfEndQuote = clueText.indexOf(QUOTE, indexOfStartQuote + 1);
         		
         		if(indexOfEndQuote == -1)
         			clueText = clueText.replace(QUOTE, ""); // if no matching end-quote exists, simply strip the quote out
@@ -235,6 +264,28 @@ public class ClueImpl implements Clue {
 				}
     		}
     	}
+    }
+    
+    /**
+     * 
+     * @param text
+     * @return true if the number of opening brackets in the text argument is not equal to the number of closing brackets
+     */
+    private boolean imbalancedParentheses(String text) {
+    	System.out.println("imbalancedParentheses called on: " + text); // DEBUGGING ********************************
+    	final String OPEN_BRACKET = "(";
+    	final String CLOSE_BRACKET = ")";
+    	int openBracketCount = 0, closeBracketCount = 0;
+    	for(int i = 0; i < text.length(); i++) {
+    		String thisCharacter = text.substring(i, i + 1);
+    		if(thisCharacter.equals(OPEN_BRACKET))
+    			openBracketCount++;
+    		else {
+    			if(thisCharacter.equals(CLOSE_BRACKET))
+    				closeBracketCount++;
+    		}		
+    	}
+    	return (openBracketCount != closeBracketCount);
     }
 
 	private String toProperCase(String thisWord) {
