@@ -18,15 +18,15 @@ Choose a source of crossword clues covering my chosen domain to act as a test - 
 - The Everything Music Crosswords Book by Charles Timmerman (2007), Adams Media.
 - Entertainment Crosswords: Movies, Music, Broadway, Sports, TV, & More! by Sam Bellotto Jr. (2012), Imagine Publishing.
 
-Build a clue-parsing module that is able to match recognised words and phrases in a clue given as a plain text string to concepts present in the crossword clue ontology and output a set of matching RDF statements - June 2013
+Build a clue-parsing module that is able to match recognised words and phrases in a clue given as a plain text string to concepts present in the crossword clue ontology and output a set of matching RDF statements - June 2013 - done, 17th August 2013 
 
-Build a prototype query module that takes the output of the clue-parsing module and retrieves from the locally stored test dataset any candidate RDF triples matching the query criteria - July 2013
+Build a prototype query module that takes the output of the clue-parsing module and retrieves from the locally stored test dataset any candidate RDF triples matching the query criteria - July 2013 - done, 17th August 2013
 
-Build an answer-generating module that takes the output of the query module and builds a list of candidate solutions to the given clue - July 2013
+Build an answer-generating module that takes the output of the query module and builds a list of candidate solutions to the given clue - July 2013 - done, 17th August 2013
 
-Develop a simple front-end for the system that enables a user to enter a clue as a text string and receive an answer to the clue in response - July 2013
+Develop a simple front-end for the system that enables a user to enter a clue as a text string and receive an answer to the clue in response - July 2013 - done, 14th August 2013
 
-Extend the query module to retrieve data directly from DBpedia’s SPARQL endpoint - July 2013
+Extend the query module to retrieve data directly from DBpedia’s SPARQL endpoint - July 2013 - done, 15th August 2013
 
 Define the language of which clues must be members in order for the application to successfully provide a solution, and identify any gaps in the test base that this language fails to cover - August 2013
 
