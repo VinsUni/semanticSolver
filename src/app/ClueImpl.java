@@ -55,15 +55,19 @@ public class ClueImpl implements Clue {
 				throw new InvalidClueException("Invalid specification of solution structure");
 		}
 		
-		if(clueText.contains(FILL_IN_THE_BLANK_MARKER))
-			this.setFillInTheBlank(true); // fillInTheBlank flag must be set before calling stripQuotes
+		this.setSolutionStructure(solutionStructure);
 		
-		clueText = stripQuotes(clueText);
+		if(clueText.contains(FILL_IN_THE_BLANK_MARKER))
+			this.setFillInTheBlank(true); // fillInTheBlank flag must be set before calling stripQuotes and addClueFragments
+		
+		if(this.isFillInTheBlank() && imbalancedFITBMarkers(clueText))
+			throw new InvalidClueException("The numbed of underscores in the clue text doesn't " +
+											"match the number of words in the solution");
+		
+		clueText = stripQuotes(clueText); // must be called before calling addClueFragments
 		
 		this.setSourceClue(clueText);
-		
-		
-		this.setSolutionStructure(solutionStructure);
+
 		
 		this.setClueFragments(new ArrayList<String>());
 		this.addClueFragments(clueText);
@@ -75,12 +79,22 @@ public class ClueImpl implements Clue {
 			log.debug(f);
 	}
 	
+	/**
+	 * stripQuotes - removes double-inverted commas from the clue text of non-FITB-type clues, and returns the modified clue text.
+	 * The text of FITB-type clues is handled differently, with instances of " 's " removed, and then any remaining single-inverted
+	 * commas being removed, before returning the clue text with any double-inverted commas left in place.
+	 * This function must be called before addClueFragments is called.
+	 * @param clueText
+	 * @return
+	 */
 	private String stripQuotes(String clueText) {
-		String clueTextWithoutQuotes = clueText.replace("\"", "");
+		String clueTextWithoutQuotes = "";
 		if(this.isFillInTheBlank()) {
-			clueTextWithoutQuotes = clueTextWithoutQuotes.replace(this.APOSTROPHE_S_SEQUENCE, ""); // remove instances of " 's "
+			clueTextWithoutQuotes = clueText.replace(this.APOSTROPHE_S_SEQUENCE, ""); // remove instances of " 's "
 			clueTextWithoutQuotes = clueTextWithoutQuotes.replace("'", ""); // remove any remaining inverted commas
 		}
+		else clueTextWithoutQuotes = clueText.replace("\"", "");
+		
 		return clueTextWithoutQuotes;
 	}
 
@@ -106,11 +120,25 @@ public class ClueImpl implements Clue {
 		return structure;
 	}
 	
+	private void addClueFragments(String clueText) {
+		if(this.isFillInTheBlank())
+    		this.addFITBClueFragments(clueText);
+		else this.addStandardClueFragments(clueText);
+	}
 	
-	
-    private void addClueFragments(String clueText) {
+    private void addStandardClueFragments(String clueText) {
+    	// firstly, remove any FITB markers, since we are treating this text as not being part of a FITB sequence
+    	clueText = clueText.replace(this.FILL_IN_THE_BLANK_MARKER, "");
 		String[] wordsInClueText = clueText.split(" ");
+		
+		System.out.println("Elements of wordsInClueText are splitting around space:"); // DEBUGGING **************************
+		for(int i = 0; i < wordsInClueText.length; i++) // DEBUGGING **************************
+			System.out.println(i + ": " + wordsInClueText[i]); // DEBUGGING **************************
+		
+		
 		for(int i = 0; i < wordsInClueText.length; i++) {
+			if(wordsInClueText[i].isEmpty())
+				continue; // first or last element may be an empty String, if clue text starts with "_ " or ends with " _"
 			String thisWord = this.toProperCase(wordsInClueText[i]);
 			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 				this.getClueFragments().add(thisWord);
@@ -139,11 +167,78 @@ public class ClueImpl implements Clue {
 
 		if(clueText.contains(this.APOSTROPHE_S_SEQUENCE)) {
 			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
-			this.addClueFragments(transformedClueText);
+			this.addStandardClueFragments(transformedClueText);
 		}
 	}
+    
+    private void addFITBClueFragments(String clueText) {
+    	final String QUOTE = "\"";
+    	ArrayList<String> FITBfragments = new ArrayList<String>();
+    	ArrayList<String> otherFragments = new ArrayList<String>();
+    	
+    	if(!clueText.contains(QUOTE)) { // if no quotations are present, we complete the parsing of the clue as per non-FITB clues
+    		this.addStandardClueFragments(clueText);
+    		return;
+    	}
+    	
+    	while(clueText.contains(QUOTE)) {
+    		/* Clue text contains at least one double quote */
+    		/* Find the first double quote */
+    		int indexOfStartQuote = clueText.indexOf(QUOTE);
+    		
+    		if(indexOfStartQuote >= (clueText.length() - 1)) {
+    			clueText = clueText.replace(QUOTE, ""); // if no matching end-quote exists, simply strip the quote out
+    		}
+    		else {
+    			/* Find a matching end-quote */
+        		int indexOfEndQuote = clueText.substring(indexOfStartQuote + 1).indexOf(QUOTE);
+        		
+        		if(indexOfEndQuote == -1)
+        			clueText = clueText.replace(QUOTE, ""); // if no matching end-quote exists, simply strip the quote out
+        		else {
+        			String fragmentBeforeQuotedSequence = clueText.substring(0, indexOfStartQuote);
+        			String fragmentAfterQuotedSequence = clueText.substring(indexOfEndQuote + 1, clueText.length());
+        			otherFragments.add(fragmentBeforeQuotedSequence);
+        			otherFragments.add(fragmentAfterQuotedSequence);
+        			
+        			String FITBfragment = clueText.substring(indexOfStartQuote + 1, indexOfEndQuote);
+        			FITBfragments.add(FITBfragment);
+        			
+        			clueText = clueText.replaceFirst(QUOTE, ""); // remove the processed start quote tag
+        			clueText = clueText.replaceFirst(QUOTE, ""); // remove the processed end quote tag
+        		}
+    		}
+    	}
+    	
+    	/* Parse the portions of the clue outside of quoted sections as normal */
+    	for(String portionOfClue : otherFragments)
+    		this.addStandardClueFragments(portionOfClue);
+    	
+    	/* Parse the quoted sections of the clue */
+    	for(String fragment : FITBfragments) {
+    		/* Split the clue around any FITB-markers that are present, and treat each fragment as a single unit rather than
+    		 * a collection of words
+    		 */
+    		String[] fragmentsOfFITBsection = fragment.split(FILL_IN_THE_BLANK_MARKER);
+    		
+    		for(int i = 0; i < fragmentsOfFITBsection.length; i++) {
+				String thisFragment = fragmentsOfFITBsection[i];
+				if(!this.getClueFragments().contains(thisFragment)) {
+					this.getClueFragments().add(thisFragment);
+					/* if the fragment ends with a comma or closing bracket, add the fragment without the comma/bracket too */
+					if(thisFragment.length() > 1 && (thisFragment.substring(thisFragment.length() - 1, thisFragment.length()).equals(",")
+							|| thisFragment.substring(thisFragment.length() - 1, thisFragment.length()).equals(")")))
+						this.getClueFragments().add(thisFragment.substring(0, thisFragment.length() - 1));
+					/* if the fragment begins with a (, add the fragment without the ( too */
+					if(thisFragment.length() > 1 && thisFragment.substring(0, 1).equals("("))
+						this.getClueFragments().add(thisFragment.substring(1, thisFragment.length()));
+				}
+    		}
+    	}
+    }
 
 	private String toProperCase(String thisWord) {
+		log.debug("calling substring(0,1) on the String \"" + thisWord + "\"");
 		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
 		if(thisWord.length() > 1) {
 			int index = 1; // start at the second letter of the word
@@ -171,5 +266,19 @@ public class ClueImpl implements Clue {
 			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
 				return true;
 		return false;
+	}
+	
+	/**
+	 * 
+	 * @param clueText
+	 * @return
+	 */
+	private boolean imbalancedFITBMarkers(String clueText) {
+		int countOfFITBmarkers = 0;
+		for(int i = 0; i < clueText.length(); i++) {
+			if(clueText.substring(i, i + 1).equals(this.FILL_IN_THE_BLANK_MARKER))
+				countOfFITBmarkers++;
+		}
+		return (countOfFITBmarkers != this.getSolutionStructure().length);
 	}
 }
