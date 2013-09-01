@@ -46,6 +46,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 
 	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
+		this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
 	}
 
 	@Override
@@ -235,7 +236,5 @@ public class SemanticSolverImpl implements SemanticSolver {
                  		getUserInterface().showNewClueOptions();
                  	}
         	});
-        	
-        	
 	}
 }
