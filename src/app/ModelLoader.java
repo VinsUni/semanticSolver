@@ -3,10 +3,6 @@
  */
 package app;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
@@ -24,17 +20,14 @@ import lombok.Setter;
  */
 public class ModelLoader {
 	@Setter(AccessLevel.PRIVATE) private static InfModel model;
+	@Setter(AccessLevel.PRIVATE) private static InfModel knowledgeBase;
 	
 	private ModelLoader() {
-		/* ModelLoader is a Singleton, so the onyl constructor is private */
+		/* ModelLoader is a Singleton, so the only constructor is private */
 	}
 	
 	public static InfModel getModel() {
 		if(model == null) {
-			/* log4j logging configuration */
-			Logger.getRootLogger().setLevel(Level.INFO);
-			PropertyConfigurator.configure("log4j.properties");
-			
 			Model baseModel = FileManager.get().loadModel(Pop.LOCAL_VOCAB_URI); // Read my ontology into a model
 			
 			/* Create an inference model using my ontology */
@@ -47,5 +40,13 @@ public class ModelLoader {
 		return model;
 	}
 	
-	
+	public static InfModel getKnowledgeBase() {
+		if(knowledgeBase == null) {
+			Model baseModel = FileManager.get().loadModel(Pop.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
+			
+			/* Create an inference model using the knowledge base */
+			setModel(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
+		}
+		return knowledgeBase;
+	}
 }

@@ -16,6 +16,8 @@ public class Pop {
     private static Model model = ModelFactory.createDefaultModel();
     
     public static final String LOCAL_VOCAB_URI = "popv8.owl";
+    public static final String LOCAL_KNOWLEDGE_BASE_URI = "crosswordKB.owl";
+    
     
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
     public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
