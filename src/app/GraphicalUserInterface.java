@@ -52,7 +52,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
 	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
 	private final String HELP_FILE_LOCATION = "helpFile.txt";
+	private final String ABOUT_FILE_LOCATION = "aboutFile.txt";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String helpText;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String aboutText;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
@@ -88,6 +90,20 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 			scanner.close();
 			this.setHelpText(new String(stringBuffer));
 		}
+		
+		// Load the file containing text for the about dialog and copy contents into aboutText string
+		inputStream = classLoader.getResourceAsStream(ABOUT_FILE_LOCATION);
+		stringBuffer = new StringBuffer();
+		if(inputStream == null)
+			this.setAboutText("About file not found");
+		else {
+			Scanner scanner = new Scanner(inputStream);
+			while (scanner.hasNext ())
+				stringBuffer.append (scanner.nextLine ());
+			scanner.close();
+			this.setAboutText(new String(stringBuffer));
+		}
+		
 
 		/* Create menubar, menu and menu items */
 		this.setMainMenuBar(new JMenuBar());
@@ -104,7 +120,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.setAboutMenuItem(new JMenuItem("About this application"));
     	this.getAboutMenuItem().addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent actionEvent) {
-    		
+    			JOptionPane.showMessageDialog(getContentPane(), getAboutText(), "About this application",
+    					JOptionPane.INFORMATION_MESSAGE);
     		}
     	});
     	this.getMenu().add(this.getAboutMenuItem(), 0);

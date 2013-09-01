@@ -1,0 +1,22 @@
+<html>
+<body width='750'>
+
+<h1>About this application</h1>
+
+<p>
+This application was created by Ben Griffiths as part of my MSc research project, Using Linked Data to solve crossword clues.
+
+
+</p>
+
+
+
+
+<p>
+The supervisor of this project is Professor Michael Zakharyaschev.
+
+
+</p>
+
+</body>
+</html>
