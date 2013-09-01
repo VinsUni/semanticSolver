@@ -54,23 +54,20 @@ public class ClueImpl implements Clue {
 			if(solutionStructure[i] < 1)
 				throw new InvalidClueException("Invalid specification of solution structure");
 		}
-		
 		this.setSolutionStructure(solutionStructure);
+		this.setClueFragments(new ArrayList<String>());
+		
 		
 		if(clueText.contains(FILL_IN_THE_BLANK_MARKER))
-			this.setFillInTheBlank(true); // fillInTheBlank flag must be set before calling stripQuotes and addClueFragments
+			this.setFillInTheBlank(true);
 		
 		if(this.isFillInTheBlank() && imbalancedFITBMarkers(clueText))
 			throw new InvalidClueException("The numbed of underscores in the clue text doesn't " +
 											"match the number of words in the solution");
 		
-		clueText = stripQuotes(clueText); // must be called before calling addClueFragments
-		
 		this.setSourceClue(clueText);
-
+		this.parseClueText(clueText);
 		
-		this.setClueFragments(new ArrayList<String>());
-		this.addClueFragments(clueText);
 		
 		/* Logging */
 		log.debug("Clue text = " + this.getSourceClue());
@@ -79,23 +76,39 @@ public class ClueImpl implements Clue {
 			log.debug(f);
 	}
 	
+	
+	
 	/**
-	 * stripQuotes - removes double-inverted commas from the clue text of non-FITB-type clues, and returns the modified clue text.
+	 *            - removes segments surrounded by double-inverted commas from the clue text of non-FITB-type clues, adds those 
+	 * segments, without the quotes, to the list of clueFragments, and returns the modified clue text.
 	 * The text of FITB-type clues is handled differently, with instances of " 's " removed, and then any remaining single-inverted
-	 * commas being removed, before returning the clue text with any double-inverted commas left in place.
+	 * commas being removed, before returning the clue text with any double-inverted commas left in place. Assumes that quotation marks
+	 * come in pairs and are not nested
 	 * This function must be called before addClueFragments is called.
 	 * @param clueText
 	 * @return
 	 */
-	private String stripQuotes(String clueText) {
-		String clueTextWithoutQuotes = "";
+	private void parseClueText(String clueText) {
+		String textToBeFragmented = clueText;
+		final String QUOTE = "\"";
 		if(this.isFillInTheBlank()) {
-			clueTextWithoutQuotes = clueText.replace(this.APOSTROPHE_S_SEQUENCE, ""); // remove instances of " 's "
-			clueTextWithoutQuotes = clueTextWithoutQuotes.replace("'", ""); // remove any remaining inverted commas
+			textToBeFragmented = clueText.replace(this.APOSTROPHE_S_SEQUENCE, ""); // remove instances of " 's "
+			textToBeFragmented = textToBeFragmented.replace("'", ""); // remove any remaining inverted commas
 		}
-		else clueTextWithoutQuotes = clueText.replace("\"", "");
-		
-		return clueTextWithoutQuotes;
+		else { /* Remove any sequences surrounded by quotes and add them in their entirety as clue fragments */
+			while(textToBeFragmented.contains(QUOTE)) {
+				int indexOfStartQuote = textToBeFragmented.indexOf(QUOTE); // find the first double-inverted comma
+				int indexOfEndQuote = textToBeFragmented.indexOf(QUOTE, indexOfStartQuote + 1); // find the next one
+				String quotedSequence = textToBeFragmented.substring(indexOfStartQuote + 1, indexOfEndQuote);
+				String sequenceBeforeQuotation = textToBeFragmented.substring(0, indexOfStartQuote);
+				String sequenceAfterQuotation = textToBeFragmented.substring(indexOfEndQuote + 1, clueText.length());
+				
+				this.getClueFragments().add(quotedSequence);
+				
+				textToBeFragmented = sequenceBeforeQuotation + sequenceAfterQuotation;
+			}
+		}
+		this.addClueFragments(textToBeFragmented);
 	}
 
 	/**
@@ -138,10 +151,9 @@ public class ClueImpl implements Clue {
 		
 		for(int i = 0; i < wordsInClueText.length; i++) {
 			String thisWord = wordsInClueText[i];
-			//thisWord = thisWord.replace("\"", ""); // remove any remaining double-quotes
-			
+
 			if(wordsInClueText[i].isEmpty())
-				continue; // first or last element may be an empty String, if clue text starts with '_ ' or '"' or ends with ' _' or '"'
+				continue;
 			thisWord = this.toProperCase(wordsInClueText[i]);
 			
 			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
@@ -167,7 +179,9 @@ public class ClueImpl implements Clue {
 				*/
 			}
 			for(int j = i + 1; j < wordsInClueText.length; j++) {
-				thisWord = thisWord + " " + this.toProperCase(wordsInClueText[j]);
+				String wordToAppend = wordsInClueText[j];
+				if(!wordToAppend.isEmpty())
+					thisWord = thisWord + " " + this.toProperCase(wordToAppend);
 				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
 					/* if the word ends with a comma, remove the comma before adding the word as a clue fragment */
 					if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")))
