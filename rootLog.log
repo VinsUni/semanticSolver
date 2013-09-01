@@ -31564,3 +31564,602 @@
 21:16:03 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Katy_Perry:
 21:16:03 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Katy_Perry:
 21:16:06 DEBUG ClueQueryTask             :: System exit requested by user
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "Firework"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "the"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "of"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "that"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "a"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "singer"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "the"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "of"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "that"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "a"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "singer"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "the"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "of"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "that"
+22:02:02 DEBUG ClueImpl                  :: calling substring(0,1) on the String "a"
+22:02:02 DEBUG ClueImpl                  :: Clue text = Firework singer
+22:02:02 DEBUG ClueImpl                  :: Clue fragments generated:
+22:02:02 DEBUG ClueImpl                  :: Firework
+22:02:02 DEBUG ClueImpl                  :: Firework Singer
+22:02:02 DEBUG ClueImpl                  :: Singer
+22:02:04 ERROR RDFDefaultErrorHandler    :: file:popv8.owl(line 34 column 46): {E202} Expecting XML start or end element(s). String data "
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">" not allowed. Maybe a striping error.
+22:02:20 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Firework_(song)
+22:02:22 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: rootResource is null = false
+22:02:23 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found:  - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: ????????@ja
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Firework - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@de
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@cs
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ko
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ru
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@es
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@no
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ca
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@vi
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@pt
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@nl
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@it
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@pl
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Firework song - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: song - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework (song)@en
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Firework kappale - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: kappale - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework (kappale)@fi
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Firework chanson - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: chanson - http://dbpedia.org/resource/Firework_(song) - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework (chanson)@fr
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Found label of root resource: Firework@en
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Katy Perry - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Katy - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Perry - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Hudson Katheryn Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Hudson - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Hudson Katheryn - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Katheryn - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Katheryn Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:23 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: New solution found: Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_(song)
+22:02:23 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Firework_%28song%29
+22:02:24 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: rootResource is null = false
+22:02:25 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Firework song - http://dbpedia.org/resource/Firework_%28song%29 - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Firework - http://dbpedia.org/resource/Firework_%28song%29 - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: song - http://dbpedia.org/resource/Firework_%28song%29 - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework (song)@en
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@en
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Katy Perry - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Katy - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Perry - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Hudson Katheryn Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Hudson - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Hudson Katheryn - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Katheryn - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Katheryn Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Katy_Perry
+22:02:25 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: New solution found: Elizabeth - http://dbpedia.org/resource/Katy_Perry - http://dbpedia.org/resource/Firework_%28song%29
+22:02:25 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Fireworks
+22:02:25 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: rootResource is null = false
+22:02:26 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Ohostroj - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Oh?ostroj@cs
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fyrverkeri - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Fyrverkeri@sv
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Fyrverkeri@no
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fogos de artifcio - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fogos - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fogos de - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: de - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: de artifcio - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: artifcio - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Fogos de artifício@pt
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found:  - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: ????????@uk
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Pho hoa - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Pho - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: hoa - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Pháo hoa@vi
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Tzijtk - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: T?zijáték@hu
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Ilotulitus - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Ilotulitus@fi
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Feu dartifice - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Feu - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: dartifice - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Feu d'artifice@fr
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fuochi dartificio - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fuochi - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: dartificio - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Fuochi d'artificio@it
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: ?????????@ru
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: ????@ko
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Fireworks - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Fireworks@en
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Focs artificials - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Focs - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: artificials - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Focs artificials@ca
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: ??@zh
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: ??@ja
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Sztuczne ognie - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Sztuczne - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: ognie - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Sztuczne ognie@pl
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Vuurwerk - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Vuurwerk@nl
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: New solution found: Feuerwerk - http://dbpedia.org/resource/Fireworks - http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Solution resource: http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG SolutionImpl              :: Clue resource http://dbpedia.org/resource/Fireworks
+22:02:26 DEBUG ClueQueryTask             :: Found label of root resource: Feuerwerk@de
+22:02:26 DEBUG SolutionScorerImpl        :: Number of links found: 5.0
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2010sSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 2010s singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/ActorsFromCalifornia]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Actors from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFemaleGuitarists]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American female guitarists
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanBloggers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American bloggers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2002/07/owl#Thing]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Thing
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/LivingPeople]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Living people
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: living people
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/PeopleFromSantaBarbara,California]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: People from Santa Barbara, California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/CapitolRecordsArtists]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Capitol Records artists
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2000sSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 2000s singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/MusicalArtist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musical artist
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artista musical
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musicien
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Musician110340312]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: instrumentalist
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: player
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musician
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/English-languAgeSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: English-languAge singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPeopleOfPortuguEseDescent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American people of PortuguEse descent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/21st-centuryActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 21st-century actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanVoiceActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American voice actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/MusiciansFromCalifornia]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musicians from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Musicians from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Person]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: persona
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Oseba
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Person
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: personne
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ??????????? ????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: pessoa
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: person
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPopSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American pop singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Person100007846]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: somebody
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: individuAl
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: person
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: soul
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: someone
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: mortal
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFilmActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American film actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Künstler
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artiste
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artist
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanContraltos]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American contraltos
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPeopleOfGermanDescent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American people of German descent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Agent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: agent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanDanceMusicians]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American dance musicians
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/TheXFactorJuDges]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: The X Factor juDges
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/FemaleRockSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Female rock singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFemaleSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American female singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicPerformanceAgent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Singer110599806]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/HomoSapiens]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicalPerformer]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Person]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist_Performer]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Musician]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#popClass]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff5]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fef]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff6]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffe]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fee]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff1]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff0]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffd]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff9]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffb]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fe9]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffc]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff8]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff7]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Literal]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#hasAlbum, http://dbpedia.org/resource/Firework_(song)]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#relationalProperty, http://dbpedia.org/resource/Firework_(song)]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#hasComposition, http://dbpedia.org/resource/Firework_(song)]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#artistOf, http://dbpedia.org/resource/Firework_(song)]
+22:02:26 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Katy_Perry:
+22:02:26 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Katy_Perry:
+22:02:26 DEBUG SolutionScorerImpl        :: Number of links found: 5.0
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2010sSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 2010s singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/ActorsFromCalifornia]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Actors from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFemaleGuitarists]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American female guitarists
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanBloggers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American bloggers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2002/07/owl#Thing]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Thing
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/LivingPeople]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Living people
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: living people
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/PeopleFromSantaBarbara,California]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: People from Santa Barbara, California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/CapitolRecordsArtists]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Capitol Records artists
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/2000sSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 2000s singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/MusicalArtist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musical artist
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artista musical
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musicien
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Musician110340312]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: instrumentalist
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: player
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musician
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/English-languAgeSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: English-languAge singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPeopleOfPortuguEseDescent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American people of PortuguEse descent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/21st-centuryActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: 21st-century actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanVoiceActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American voice actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/MusiciansFromCalifornia]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: musicians from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Musicians from California
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Person]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: persona
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Oseba
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Person
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: personne
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ??????????? ????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: pessoa
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: person
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPopSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American pop singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Person100007846]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: somebody
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: individuAl
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: person
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: soul
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: someone
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: mortal
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFilmActors]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American film actors
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: ???????????
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Künstler
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artiste
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: artist
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanContraltos]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American contraltos
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanPeopleOfGermanDescent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American people of German descent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/ontology/Agent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: agent
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanDanceMusicians]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American dance musicians
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/TheXFactorJuDges]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: The X Factor juDges
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/FemaleRockSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: Female rock singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/AmericanFemaleSingers]
+22:02:26 DEBUG SolutionScorerImpl        :: Found label: American female singers
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Resource]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#popClass]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/HomoSapiens]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff5]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://dbpedia.org/class/yago/Singer110599806]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Musician]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicPerformanceAgent]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/MusicalPerformer]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Artist_Performer]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://umbel.org/umbel/rc/Person]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.griffithsben.com/ontologies/pop.owl#artist]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fef]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff0]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff9]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff1]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fee]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7fe9]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffe]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffb]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffd]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff6]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ffc]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, -48ed082e:140db54f539:-7ff7]
+22:02:26 DEBUG SolutionScorerImpl        :: Found solutionTypeStatement: [http://dbpedia.org/resource/Katy_Perry, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://www.w3.org/2000/01/rdf-schema#Literal]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#hasAlbum, http://dbpedia.org/resource/Firework_%28song%29]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#relationalProperty, http://dbpedia.org/resource/Firework_%28song%29]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#hasComposition, http://dbpedia.org/resource/Firework_%28song%29]
+22:02:26 DEBUG SolutionScorerImpl        :: [http://dbpedia.org/resource/Katy_Perry, http://www.griffithsben.com/ontologies/pop.owl#artistOf, http://dbpedia.org/resource/Firework_%28song%29]
+22:02:26 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Katy_Perry:
+22:02:26 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Katy_Perry:
+22:02:32 DEBUG ClueQueryTask             :: System exit requested by user
