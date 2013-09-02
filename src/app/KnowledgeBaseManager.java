@@ -67,10 +67,17 @@ public class KnowledgeBaseManager {
 			Statement solutionStructureStatement = thisClue.getProperty(CrosswordKB.hasSolutionStructure);
 			String solutionStructure = solutionStructureStatement.getObject().toString();
 			
-			Statement solutionTextStatement = thisSolution.getProperty(CrosswordKB.hasSolutionText);
-			String solutionText = solutionTextStatement.getObject().toString();
+			String clueUri = thisClue.getURI();
 			
-			solvedClues.add(new SolvedClue(clueText, solutionStructure, solutionText));
+			SolvedClue solvedClue = new SolvedClue(clueText, solutionStructure, clueUri);
+			
+			StmtIterator solutionTextStatements = thisSolution.listProperties(CrosswordKB.hasSolutionText);
+			while(solutionTextStatements.hasNext()) {
+				Statement solutionTextStatement = solutionTextStatements.nextStatement();
+				String solutionText = solutionTextStatement.getObject().toString();
+				solvedClue.getSolutionTexts().add(solutionText);
+			}
+			solvedClues.add(solvedClue);
 		}
 	}
 	
@@ -84,15 +91,36 @@ public class KnowledgeBaseManager {
 		this.setFinished(false);
 		for(Solution solution : solutions) {
 			if(solution.getConfidence() > 0) {
-				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), 
-						solution.getSolutionText());
-				if(!this.getSolvedClues().contains(solvedClue)) {
-					this.getSolvedClues().add(solvedClue); // add the solvedClue to the list in memory
+				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), null, 
+						solution.getSolutionText()); // create a dummy solvedClue object with a null uri
+				if(this.getSolvedClues().contains(solvedClue)) {
+					int index = this.getSolvedClues().indexOf(solvedClue);
+					SolvedClue previouslySolvedClue = this.getSolvedClues().get(index);
+					String clueResourceUri = previouslySolvedClue.getClueResourceUri();
+					if(!previouslySolvedClue.getSolutionTexts().contains(solution.getSolutionText()))
+						this.addSolutionOnlyToKnowledgeBase(clueResourceUri, solution);
+				}
+				else {
 					this.addToKnowledgeBase(clue, solution); // add the new triples to the knowledge base
 				}
 			}
 		}
 		this.setFinished(true);
+	}
+	
+	private void addSolutionOnlyToKnowledgeBase(String clueUri, Solution solution) {
+		Resource clueResource = this.getKnowledgeBase().getResource(clueUri);
+		
+		UUID solutionUID = UUID.randomUUID();
+		String solutionUri = CrosswordKB.CROSSWORD_KB_URI + solutionUID.toString();
+		String solutionText = solution.getSolutionText();
+		
+		Resource solutionResource = this.getKnowledgeBase().createResource(solutionUri);
+		
+		this.getKnowledgeBase().add(solutionResource, RDF.type, CrosswordKB.solution);
+		this.getKnowledgeBase().add(solutionResource, CrosswordKB.hasSolutionText, solutionText);
+		
+		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
 	}
 	
 	public void addToKnowledgeBase(Clue clue, Solution solution) {
@@ -117,6 +145,9 @@ public class KnowledgeBaseManager {
 		this.getKnowledgeBase().add(solutionResource, CrosswordKB.hasSolutionText, solutionText);
 		
 		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
+		
+		SolvedClue solvedClue = new SolvedClue(clueText, solutionStructure, clueUri, solutionText);
+		this.getSolvedClues().add(solvedClue);
 	}
 	
 	public void persistKnowledgeBase() {
