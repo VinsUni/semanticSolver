@@ -42,6 +42,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private KnowledgeBaseManager knowledgeBaseManager;
 
 	public SemanticSolverImpl(UserInterface userInterface) {
@@ -217,6 +218,8 @@ public class SemanticSolverImpl implements SemanticSolver {
     				uniqueSolutions.add(thisSolution);
         	}
         	
+        	this.addSolutionsToKnowledgeBase(uniqueSolutions);
+        	
         	
         	for(Solution solution : uniqueSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
@@ -241,5 +244,15 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void persistKnowledgeBase() {
 		this.getKnowledgeBaseManager().persistKnowledgeBase();
+	}
+	
+	private void addSolutionsToKnowledgeBase(ArrayList<Solution> solutions) {
+		this.setSolutions(solutions);
+		Thread kbManagerThread = new Thread(new Runnable() {
+        	public void run() {
+                 	getKnowledgeBaseManager().addToKnowledgeBase(getClue(), getSolutions());
+        	}
+    	});
+		kbManagerThread.start();
 	}
 }

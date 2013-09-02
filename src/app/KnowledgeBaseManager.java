@@ -6,6 +6,7 @@ package app;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
@@ -42,6 +43,11 @@ public class KnowledgeBaseManager {
 		if(instance == null)
 			instance = new KnowledgeBaseManager();
 		return instance;
+	}
+	
+	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
+		for(Solution solution : solutions)
+			this.addToKnowledgeBase(clue, solution);
 	}
 	
 	public void addToKnowledgeBase(Clue clue, Solution solution) {
