@@ -390,6 +390,12 @@
         <rdfs:label>has member</rdfs:label>
         <rdfs:label>included</rdfs:label>
         <rdfs:label>rapper</rdfs:label>
+        <rdfs:label>singer</rdfs:label>
+        <rdfs:label>musician</rdfs:label>
+        <rdfs:label>guitarist</rdfs:label>
+        <rdfs:label>drummer</rdfs:label>
+        <rdfs:label>bassist</rdfs:label>
+        <rdfs:label>frontman</rdfs:label>
         
         <skos:prefLabel>has member</skos:prefLabel>
         
@@ -444,6 +450,13 @@
         <rdfs:label>played with</rdfs:label>
         <rdfs:label>sang with</rdfs:label>
         <rdfs:label>singer with</rdfs:label>
+        <rdfs:label>rapper</rdfs:label>
+        <rdfs:label>singer</rdfs:label>
+        <rdfs:label>musician</rdfs:label>
+        <rdfs:label>guitarist</rdfs:label>
+        <rdfs:label>drummer</rdfs:label>
+        <rdfs:label>bassist</rdfs:label>
+        <rdfs:label>frontman</rdfs:label>
         
         <skos:prefLabel>member of</skos:prefLabel>
         
