@@ -15,9 +15,9 @@ import com.hp.hpl.jena.rdf.model.Resource;
 public class CrosswordKB {
     private static Model model = ModelFactory.createDefaultModel();
 
-    public static final String LOCAL_KNOWLEDGE_BASE_URI = "crosswordKB.owl";
+    public static final String LOCAL_KNOWLEDGE_BASE_URI = "crosswordKB.rdf";
     
-    public static final String CROSSWORD_KB_URI = "http://www.griffithsben.com/ontologies/crosswordKB.owl#";
+    public static final String CROSSWORD_KB_URI = "http://www.griffithsben.com/ontologies/crosswordKBontology.owl#";
     
     /**
      * Resource representing the crosswordKB namespace

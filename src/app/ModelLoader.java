@@ -43,10 +43,7 @@ public class ModelLoader {
 	
 	public static Model getKnowledgeBase() {
 		if(knowledgeBase == null) {
-			Model baseModel = FileManager.get().loadModel(CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
-			
-			/* Create an inference model using the knowledge base */
-			setKnowledgeBase(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
+			setKnowledgeBase(FileManager.get().loadModel(CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI)); // Read the KB into a model
 		}
 		return knowledgeBase;
 	}
