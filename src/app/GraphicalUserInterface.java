@@ -293,7 +293,9 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     }
     
     public void exitApplication() {
+    	this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
     	log.debug("System exit requested by user");
+    	this.getSemanticSolver().persistKnowledgeBase(); // save the crossword knowledge base to disk before exit
 		System.exit(EXIT_ON_CLOSE);
     }
 }
