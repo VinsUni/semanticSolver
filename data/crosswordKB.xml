@@ -5,6 +5,15 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:crosswordKBontology="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3a1d4b20-e32c-45db-a87f-9a78516e3b37">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/317dfe19-a5a1-4d5a-be1b-279abfa7385b">
+        <crosswordKBontology:hasSolutionText>Big Boi</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[3, 3]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>OutKast member</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/489a53de-4a7e-4da7-8d56-1f70aa819a84">
     <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
     <crosswordKBontology:hasSolutionStructure>[5, 5]</crosswordKBontology:hasSolutionStructure>
@@ -13,6 +22,15 @@
         <crosswordKBontology:hasSolutionText>Ringo Starr</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7f36be8b-8e46-45a5-8a6c-c4994a1281f3">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5affbf00-d537-496b-bacb-03bfaddd56c2">
+        <crosswordKBontology:hasSolutionText>Big Boi</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[3, 3]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>OutKast rapper</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/63e992db-4bf0-47ea-a304-d9080ab65a40">
     <crosswordKBontology:hasClueText>Aerosmith hit</crosswordKBontology:hasClueText>
@@ -55,15 +73,6 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4, 9]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
-  </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fbdfecf3-0e85-462c-a367-d359a93f75f4">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7d864fbe-41e3-4c71-978e-bbd221acbf66">
-        <crosswordKBontology:hasSolutionText>George Harrison</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[6, 8]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b1e1d786-09c0-4607-8113-c457b99c8860">

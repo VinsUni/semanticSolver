@@ -5,6 +5,15 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:crosswordKBontology="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3a1d4b20-e32c-45db-a87f-9a78516e3b37">
+    <crosswordKBontology:hasClueText>OutKast member</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[3, 3]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/317dfe19-a5a1-4d5a-be1b-279abfa7385b">
+        <crosswordKBontology:hasSolutionText>Big Boi</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/489a53de-4a7e-4da7-8d56-1f70aa819a84">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8141c8e3-487e-4697-a7e3-f63e84ae4406">
@@ -66,15 +75,6 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7933b4a8-55d2-42ac-9398-91b383655074">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b65cb441-548c-46fd-8673-1364db851ae8">
-        <crosswordKBontology:hasSolutionText>The Flaming Lips</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[3, 7, 4]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>Zaireeka band</crosswordKBontology:hasClueText>
-  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f3eb532a-95b7-4faf-8e8b-c7cf699061fe">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/07e2f805-52fb-4e41-95ed-e6cb1fadb6a1">
@@ -83,6 +83,15 @@
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4, 5]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>Firework singer</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7933b4a8-55d2-42ac-9398-91b383655074">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b65cb441-548c-46fd-8673-1364db851ae8">
+        <crosswordKBontology:hasSolutionText>The Flaming Lips</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[3, 7, 4]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>Zaireeka band</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f1f752da-55c5-4946-ab98-4139f1c7ed12">
     <crosswordKBontology:solvedBy>
