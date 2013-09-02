@@ -16,7 +16,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.RDFNode;
+import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Selector;
+import com.hp.hpl.jena.rdf.model.SimpleSelector;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
@@ -31,12 +37,55 @@ public class KnowledgeBaseManager {
 	private static KnowledgeBaseManager instance;
 	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model knowledgeBase;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<SolvedClue> solvedClues;
 	
 	/**
 	 * The only constructor is private
 	 */
 	private KnowledgeBaseManager() {
 		this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
+		this.setSolvedClues(new ArrayList<SolvedClue>());
+		this.gatherPreviouslySolvedClues();
+	}
+	
+	private void gatherPreviouslySolvedClues() {
+
+		Selector selector = new SimpleSelector(null, CrosswordKB.solvedBy, (RDFNode) null);
+		StmtIterator statements = this.getKnowledgeBase().listStatements(selector);
+		
+		while(statements.hasNext()) {
+			Statement thisStatement = statements.nextStatement();
+			System.err.println(thisStatement.toString());
+			Resource thisClue = thisStatement.getSubject();
+			Resource thisSolution = thisStatement.getObject().asResource();
+
+			Statement clueTextStatement = thisClue.getProperty(CrosswordKB.hasClueText);
+			String clueText = clueTextStatement.getObject().toString();
+			
+			Statement solutionStructureStatement = thisClue.getProperty(CrosswordKB.hasSolutionStructure);
+			String solutionStructure = solutionStructureStatement.getObject().toString();
+			
+			Statement solutionTextStatement = thisSolution.getProperty(CrosswordKB.hasSolutionText);
+			String solutionText = solutionTextStatement.getObject().toString();
+			
+			solvedClues.add(new SolvedClue(clueText, solutionStructure, solutionText));
+		}
+		/*
+		ResIterator clues = this.getKnowledgeBase().listResourcesWithProperty(RDF.type, CrosswordKB.clue);
+		
+		while(clues.hasNext()) {
+			Resource thisClue = clues.nextResource();
+			String clueText = thisClue.getPropertyResourceValue(CrosswordKB.hasClueText).asLiteral().toString();
+			String solutionStructure = thisClue.getPropertyResourceValue(CrosswordKB.hasSolutionStructure).asLiteral().toString();
+			
+			Resource solution = thisClue.getPropertyResourceValue(CrosswordKB.solvedBy);
+			
+			String solutionText = solution.getPropertyResourceValue(CrosswordKB.hasSolutionText).asLiteral().toString();
+			
+			solvedClues.add(new SolvedClue(clueText, solutionStructure, solutionText));
+			
+		}
+		*/
 	}
 	
 	public static KnowledgeBaseManager getInstance() {
@@ -47,22 +96,30 @@ public class KnowledgeBaseManager {
 	
 	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
 		for(Solution solution : solutions) {
-			if(solution.getConfidence() > 0)
-				this.addToKnowledgeBase(clue, solution);
+			if(solution.getConfidence() > 0) {
+				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), 
+						solution.getSolutionText());
+				if(!this.getSolvedClues().contains(solvedClue))
+					this.addToKnowledgeBase(clue, solution);
+			}
 		}
 	}
 	
 	public void addToKnowledgeBase(Clue clue, Solution solution) {
+		String clueText = clue.getSourceClue();
+		String solutionStructure = clue.getSolutionStructureAsString();
+		String solutionText = solution.getSolutionText();
+		
+		SolvedClue thisSolvedClue = new SolvedClue(clueText, solutionStructure, solutionText);
+		if(this.getSolvedClues().contains(thisSolvedClue))
+			return; // do not add duplicate solutions to the knowledge base
+		
 		UUID clueUID = UUID.randomUUID();
 		UUID solutionUID = UUID.randomUUID();
 		
 		String clueUri = CrosswordKB.CROSSWORD_KB_URI + clueUID.toString();
 		String solutionUri = CrosswordKB.CROSSWORD_KB_URI + solutionUID.toString();
-		
-		String clueText = clue.getSourceClue();
-		String solutionStructure = clue.getSolutionStructureAsString();
-		String solutionText = solution.getSolutionText();
-		
+
 		Resource clueResource = this.getKnowledgeBase().createResource(clueUri);
 		Resource solutionResource = this.getKnowledgeBase().createResource(solutionUri);
 		

@@ -6,7 +6,7 @@
 
 <rdf:RDF xmlns="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
      xml:base="http://www.griffithsben.com/ontologies/crosswordKBontology.owl"
-     xmlns:crosswordKB="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
+     xmlns:crosswordKBontology="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -16,23 +16,23 @@
     <!-- ////////////////////////////// crossWordKB object properties //////////////////////////////////// -->
      
      
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#solves -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solves -->
 
-    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#solves">
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solves">
     	<rdfs:label>solves</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#solution"/>
-		<rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue"/>
-		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#solvedBy"/>	
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solution"/>
+		<rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue"/>
+		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solvedBy"/>	
     </owl:ObjectProperty>
     
     
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#solvedBy -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solvedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#solvedBy">
+    <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solvedBy">
     	<rdfs:label>solved by</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue"/>
-		<rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#solution"/>
-		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#solves"/>		
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue"/>
+		<rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solution"/>
+		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solves"/>		
     </owl:ObjectProperty>
     
     
@@ -40,29 +40,29 @@
     <!-- ////////////////////////////// crossWordKB data properties //////////////////////////////////// -->
     
     
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#hasClueText -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasClueText -->
 
-    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#hasClueText">
+    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasClueText">
     	<rdfs:label>has clue text</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
     
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionStructure -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasSolutionStructure -->
 
-    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionStructure">
+    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasSolutionStructure">
     	<rdfs:label>has clue structure</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 
 
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionText -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasSolutionText -->
 
-    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionText">
+    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#hasSolutionText">
     	<rdfs:label>has solution text</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#solution"/>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solution"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -73,15 +73,15 @@
     <!-- ////////////////////////////// crosswordKB classes //////////////////////////////////// -->
 
 
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#clue -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue -->
 
-    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue">
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue">
         <rdfs:label>clue</rdfs:label>
     </owl:Class>
     
-    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#solution -->
+    <!-- http://www.griffithsben.com/ontologies/crosswordKBontology.owl#solution -->
 
-    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue">
+    <owl:Class rdf:about="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#clue">
         <rdfs:label>clue</rdfs:label>
     </owl:Class>
 

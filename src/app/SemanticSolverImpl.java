@@ -47,7 +47,12 @@ public class SemanticSolverImpl implements SemanticSolver {
 
 	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
-		this.setKnowledgeBaseManager(KnowledgeBaseManager.getInstance());
+		Thread instantiateKBManagerThread = new Thread(new Runnable() {
+        	public void run() {
+        		setKnowledgeBaseManager(KnowledgeBaseManager.getInstance());
+        	}
+    	});
+		instantiateKBManagerThread.start();
 	}
 
 	@Override

@@ -1,0 +1,26 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:crosswordKB="http://www.griffithsben.com/ontologies/crosswordKB/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:crosswordKBontology="http://www.griffithsben.com/ontologies/crosswordKBontology.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b1e1d786-09c0-4607-8113-c457b99c8860">
+    <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f9c39b6a-dfea-437e-b687-cb5f2191afbd">
+        <crosswordKBontology:hasSolutionText>John Lennon</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f3eb532a-95b7-4faf-8e8b-c7cf699061fe">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/07e2f805-52fb-4e41-95ed-e6cb1fadb6a1">
+        <crosswordKBontology:hasSolutionText>Katy Perry</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4, 5]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>Firework singer</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
+</rdf:RDF>
