@@ -236,6 +236,9 @@ public class SemanticSolverImpl implements SemanticSolver {
         	
         	this.setResults(resultsBuffer);
         	
+        	while(!this.getKnowledgeBaseManager().isFinished())
+        		; // wait for the KnowledgeBaseManager to finish updating the knowledge base
+        	
         	/* Update the GUI on the EDT to show the scores */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override

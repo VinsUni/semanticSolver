@@ -37,14 +37,17 @@ public class KnowledgeBaseManager {
 	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model knowledgeBase;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<SolvedClue> solvedClues;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private volatile boolean finished;
 	
 	/**
 	 * The only constructor is private
 	 */
 	private KnowledgeBaseManager() {
+		this.setFinished(false);
 		this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
 		this.setSolvedClues(new ArrayList<SolvedClue>());
 		this.gatherPreviouslySolvedClues();
+		this.setFinished(true);
 	}
 	
 	private void gatherPreviouslySolvedClues() {
@@ -78,6 +81,7 @@ public class KnowledgeBaseManager {
 	}
 	
 	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
+		this.setFinished(false);
 		for(Solution solution : solutions) {
 			if(solution.getConfidence() > 0) {
 				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), 
@@ -88,6 +92,7 @@ public class KnowledgeBaseManager {
 				}
 			}
 		}
+		this.setFinished(true);
 	}
 	
 	public void addToKnowledgeBase(Clue clue, Solution solution) {
