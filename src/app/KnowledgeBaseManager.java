@@ -59,6 +59,10 @@ public class KnowledgeBaseManager {
 		String clueUri = CrosswordKB.CROSSWORD_KB_URI + clueUID.toString();
 		String solutionUri = CrosswordKB.CROSSWORD_KB_URI + solutionUID.toString();
 		
+		String clueText = clue.getSourceClue();
+		String solutionStructure = clue.getSolutionStructureAsString();
+		String solutionText = solution.getSolutionText();
+		
 		Resource clueResource = this.getKnowledgeBase().createResource(clueUri);
 		Resource solutionResource = this.getKnowledgeBase().createResource(solutionUri);
 		

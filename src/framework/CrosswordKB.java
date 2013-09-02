@@ -30,6 +30,7 @@ public class CrosswordKB {
     public static final Property solves = model.createProperty(CROSSWORD_KB_URI + "solves");
     public static final Property solvedBy = model.createProperty(CROSSWORD_KB_URI + "solvedBy");
     public static final Property hasClueText = model.createProperty(CROSSWORD_KB_URI + "hasClueText");
+    public static final Property hasSolutionStructure = model.createProperty(CROSSWORD_KB_URI + "hasSolutionStructure");
     public static final Property hasSolutionText = model.createProperty(CROSSWORD_KB_URI + "hasSolutionText");
     
     

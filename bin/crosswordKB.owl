@@ -48,6 +48,14 @@
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
+    
+    <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionStructure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionStructure">
+    	<rdfs:label>has clue structure</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/crosswordKB.owl#clue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
 
 
     <!-- http://www.griffithsben.com/ontologies/crosswordKB.owl#hasSolutionText -->
