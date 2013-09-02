@@ -46,8 +46,10 @@ public class KnowledgeBaseManager {
 	}
 	
 	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
-		for(Solution solution : solutions)
-			this.addToKnowledgeBase(clue, solution);
+		for(Solution solution : solutions) {
+			if(solution.getConfidence() > 0)
+				this.addToKnowledgeBase(clue, solution);
+		}
 	}
 	
 	public void addToKnowledgeBase(Clue clue, Solution solution) {
