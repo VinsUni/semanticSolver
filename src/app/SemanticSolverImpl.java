@@ -26,7 +26,9 @@ import exception.NoResourcesSelectedException;
 import exception.NoSolutionsException;
 import framework.Clue;
 import framework.ClueSolver;
-import framework.Pop;
+
+import framework.CrosswordKB;
+
 import framework.SemanticSolver;
 import framework.Solution;
 import framework.SolutionScorer;
@@ -245,7 +247,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void persistKnowledgeBase() {
 		try {
-			String fileName = "data\\" + Pop.LOCAL_KNOWLEDGE_BASE_URI;
+			String fileName = "data\\" + CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI;
 			FileOutputStream outFile = new FileOutputStream(fileName);
 			log.debug("Writing out crosswordKB to disk");
 			this.getKnowledgeBase().write(outFile, "RDF/XML-ABBREV");

@@ -11,8 +11,10 @@ import lombok.Setter;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
+import framework.CrosswordKB;
 import framework.Pop;
 import framework.Solution;
 
@@ -41,12 +43,15 @@ public class KnowledgeBaseManager {
 		UUID clueUID = UUID.randomUUID();
 		UUID solutionUID = UUID.randomUUID();
 		
-		String clueUri = Pop.CROSSWORD_KB_URI + clueUID.toString();
-		String solutionUri = Pop.CROSSWORD_KB_URI + solutionUID.toString();
+		String clueUri = CrosswordKB.CROSSWORD_KB_URI + clueUID.toString();
+		String solutionUri = CrosswordKB.CROSSWORD_KB_URI + solutionUID.toString();
 		
 		Resource clueResource = this.getKnowledgeBase().createResource(clueUri);
 		Resource solutionResource = this.getKnowledgeBase().createResource(solutionUri);
 		
-		//this.getKnowledgeBase().add(clueResource, Pop.)
+		this.getKnowledgeBase().add(clueResource, RDF.type, CrosswordKB.clue);
+		this.getKnowledgeBase().add(solutionResource, RDF.type, CrosswordKB.solution);
+		
+		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
 	}
 }

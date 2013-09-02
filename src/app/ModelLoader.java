@@ -9,6 +9,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.util.FileManager;
 
+import framework.CrosswordKB;
 import framework.Pop;
 
 import lombok.AccessLevel;
@@ -42,7 +43,7 @@ public class ModelLoader {
 	
 	public static InfModel getKnowledgeBase() {
 		if(knowledgeBase == null) {
-			Model baseModel = FileManager.get().loadModel(Pop.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
+			Model baseModel = FileManager.get().loadModel(CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
 			
 			/* Create an inference model using the knowledge base */
 			setKnowledgeBase(ModelFactory.createInfModel(ReasonerRegistry.getOWLMiniReasoner(), baseModel));
