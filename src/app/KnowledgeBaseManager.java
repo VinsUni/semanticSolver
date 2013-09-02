@@ -17,7 +17,6 @@ import lombok.Setter;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
@@ -70,22 +69,6 @@ public class KnowledgeBaseManager {
 			
 			solvedClues.add(new SolvedClue(clueText, solutionStructure, solutionText));
 		}
-		/*
-		ResIterator clues = this.getKnowledgeBase().listResourcesWithProperty(RDF.type, CrosswordKB.clue);
-		
-		while(clues.hasNext()) {
-			Resource thisClue = clues.nextResource();
-			String clueText = thisClue.getPropertyResourceValue(CrosswordKB.hasClueText).asLiteral().toString();
-			String solutionStructure = thisClue.getPropertyResourceValue(CrosswordKB.hasSolutionStructure).asLiteral().toString();
-			
-			Resource solution = thisClue.getPropertyResourceValue(CrosswordKB.solvedBy);
-			
-			String solutionText = solution.getPropertyResourceValue(CrosswordKB.hasSolutionText).asLiteral().toString();
-			
-			solvedClues.add(new SolvedClue(clueText, solutionStructure, solutionText));
-			
-		}
-		*/
 	}
 	
 	public static KnowledgeBaseManager getInstance() {
@@ -99,8 +82,10 @@ public class KnowledgeBaseManager {
 			if(solution.getConfidence() > 0) {
 				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), 
 						solution.getSolutionText());
-				if(!this.getSolvedClues().contains(solvedClue))
-					this.addToKnowledgeBase(clue, solution);
+				if(!this.getSolvedClues().contains(solvedClue)) {
+					this.getSolvedClues().add(solvedClue); // add the solvedClue to the list in memory
+					this.addToKnowledgeBase(clue, solution); // add the new triples to the knowledge base
+				}
 			}
 		}
 	}
@@ -109,10 +94,6 @@ public class KnowledgeBaseManager {
 		String clueText = clue.getSourceClue();
 		String solutionStructure = clue.getSolutionStructureAsString();
 		String solutionText = solution.getSolutionText();
-		
-		SolvedClue thisSolvedClue = new SolvedClue(clueText, solutionStructure, solutionText);
-		if(this.getSolvedClues().contains(thisSolvedClue))
-			return; // do not add duplicate solutions to the knowledge base
 		
 		UUID clueUID = UUID.randomUUID();
 		UUID solutionUID = UUID.randomUUID();
