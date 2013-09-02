@@ -21,7 +21,7 @@ import lombok.Setter;
  */
 public class ModelLoader {
 	@Setter(AccessLevel.PRIVATE) private static InfModel model;
-	@Setter(AccessLevel.PRIVATE) private static InfModel knowledgeBase;
+	@Setter(AccessLevel.PRIVATE) private static Model knowledgeBase;
 	
 	private ModelLoader() {
 		/* ModelLoader is a Singleton, so the only constructor is private */
@@ -41,7 +41,7 @@ public class ModelLoader {
 		return model;
 	}
 	
-	public static InfModel getKnowledgeBase() {
+	public static Model getKnowledgeBase() {
 		if(knowledgeBase == null) {
 			Model baseModel = FileManager.get().loadModel(CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI); // Read the KB into a model
 			

@@ -15,7 +15,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.vocabulary.RDF;
 
@@ -30,7 +30,7 @@ import framework.Solution;
 public class KnowledgeBaseManager {
 	private static KnowledgeBaseManager instance;
 	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel knowledgeBase;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model knowledgeBase;
 	
 	/**
 	 * The only constructor is private
@@ -67,7 +67,11 @@ public class KnowledgeBaseManager {
 		Resource solutionResource = this.getKnowledgeBase().createResource(solutionUri);
 		
 		this.getKnowledgeBase().add(clueResource, RDF.type, CrosswordKB.clue);
+		this.getKnowledgeBase().add(clueResource, CrosswordKB.hasClueText, clueText);
+		this.getKnowledgeBase().add(clueResource, CrosswordKB.hasSolutionStructure, solutionStructure);
+		
 		this.getKnowledgeBase().add(solutionResource, RDF.type, CrosswordKB.solution);
+		this.getKnowledgeBase().add(solutionResource, CrosswordKB.hasSolutionText, solutionText);
 		
 		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
 	}
