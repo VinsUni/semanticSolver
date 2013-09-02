@@ -57,7 +57,6 @@ public class KnowledgeBaseManager {
 		
 		while(statements.hasNext()) {
 			Statement thisStatement = statements.nextStatement();
-			System.err.println(thisStatement.toString());
 			Resource thisClue = thisStatement.getSubject();
 			Resource thisSolution = thisStatement.getObject().asResource();
 
