@@ -4,9 +4,6 @@
 package app;
 
 import java.awt.Cursor;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -19,16 +16,13 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 import exception.NoResourcesSelectedException;
 import exception.NoSolutionsException;
+
 import framework.Clue;
 import framework.ClueSolver;
-
-import framework.CrosswordKB;
-
 import framework.SemanticSolver;
 import framework.Solution;
 import framework.SolutionScorer;
@@ -48,11 +42,11 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel knowledgeBase;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private KnowledgeBaseManager knowledgeBaseManager;
 
 	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
-		this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
+		this.setKnowledgeBaseManager(KnowledgeBaseManager.getInstance());
 	}
 
 	@Override
@@ -246,21 +240,6 @@ public class SemanticSolverImpl implements SemanticSolver {
 	
 	@Override
 	public void persistKnowledgeBase() {
-		try {
-			String fileName = "data\\" + CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI;
-			FileOutputStream outFile = new FileOutputStream(fileName);
-			log.debug("Writing out crosswordKB to disk");
-			this.getKnowledgeBase().write(outFile, "RDF/XML-ABBREV");
-			outFile.close();
-			log.debug("CrosswordKB written to disk");
-		}
-		catch(FileNotFoundException e) {
-			log.debug("Failed to write crosswordKB out to disk");
-			log.debug(e.getMessage());
-		} 
-		catch (IOException e) {
-			log.debug("Failed to write crosswordKB out to disk");
-			log.debug(e.getMessage());
-		}
+		this.getKnowledgeBaseManager().persistKnowledgeBase();
 	}
 }

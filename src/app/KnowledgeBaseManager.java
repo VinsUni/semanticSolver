@@ -3,7 +3,12 @@
  */
 package app;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.UUID;
+
+import org.apache.log4j.Logger;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -15,7 +20,6 @@ import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
 import framework.CrosswordKB;
-import framework.Pop;
 import framework.Solution;
 
 /**
@@ -24,6 +28,7 @@ import framework.Solution;
  */
 public class KnowledgeBaseManager {
 	private static KnowledgeBaseManager instance;
+	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel knowledgeBase;
 	
 	/**
@@ -53,5 +58,24 @@ public class KnowledgeBaseManager {
 		this.getKnowledgeBase().add(solutionResource, RDF.type, CrosswordKB.solution);
 		
 		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
+	}
+	
+	public void persistKnowledgeBase() {
+		try {
+			String fileName = "data\\" + CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI;
+			FileOutputStream outFile = new FileOutputStream(fileName);
+			log.debug("Writing out crosswordKB to disk");
+			this.getKnowledgeBase().write(outFile, "RDF/XML-ABBREV");
+			outFile.close();
+			log.debug("CrosswordKB written to disk");
+		}
+		catch(FileNotFoundException e) {
+			log.debug("Failed to write crosswordKB out to disk");
+			log.debug(e.getMessage());
+		} 
+		catch (IOException e) {
+			log.debug("Failed to write crosswordKB out to disk");
+			log.debug(e.getMessage());
+		}
 	}
 }
