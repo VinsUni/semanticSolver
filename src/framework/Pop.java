@@ -20,6 +20,7 @@ public class Pop {
     
     
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
+    public static final String CROSSWORD_KB_URI = "http://www.griffithsben.com/ontologies/crosswordKB.owl#";
     public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
     /**
      * Resource representing the pop namespace
