@@ -4,6 +4,7 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import javax.swing.SwingWorker;
 
@@ -47,6 +48,8 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<RecognisedResource> recognisedResources;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Map<String, Boolean> commonClueFragments;
+	
 
 	/* This constructor will be used to instantiate a task that recognises entities in a clue */
 	public EntityRecogniserTask(Clue clue) {
@@ -54,6 +57,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 		this.setClue(clue);
 		this.setRecognisedResources(new ArrayList<RecognisedResource>());
 		this.setRecognisedResourceUris(new ArrayList<String>());
+		this.setCommonClueFragments(ModelLoader.getCommonClueFragments());
 	}
     
 	/*

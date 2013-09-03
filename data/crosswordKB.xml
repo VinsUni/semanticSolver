@@ -14,25 +14,6 @@
     <crosswordKBontology:hasSolutionStructure>[3, 3]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>member of OutKast</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/904e5548-da43-4348-aadf-57e2166f2758">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bb9c540c-6724-4dfd-a3b9-fc14bf668306">
-        <crosswordKBontology:hasSolutionText>Quarrymen</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/603e2412-3352-4056-9ab0-f7a99f5efc51">
-        <crosswordKBontology:hasSolutionText>McCartney</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f0743cda-13c7-4b66-97c4-83d212ad5a6f">
-        <crosswordKBontology:hasSolutionText>Sutcliffe</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[9]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
-  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7f36be8b-8e46-45a5-8a6c-c4994a1281f3">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5affbf00-d537-496b-bacb-03bfaddd56c2">
