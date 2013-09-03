@@ -235,10 +235,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 			resultsBuffer += "Time taken to process this clue: " + durationInSecs + "s\n";
         	
         	this.setResults(resultsBuffer);
-        	
-        	while(!this.getKnowledgeBaseManager().isFinished())
-        		; // wait for the KnowledgeBaseManager to finish updating the knowledge base
-        	
+
         	/* Update the GUI on the EDT to show the scores */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
@@ -255,6 +252,8 @@ public class SemanticSolverImpl implements SemanticSolver {
 	}
 	
 	private void addSolutionsToKnowledgeBase(ArrayList<Solution> solutions) {
+		while(!this.getKnowledgeBaseManager().isFinished())
+    		; // wait for the KnowledgeBaseManager to finish any ongoing updates
 		this.setSolutions(solutions);
 		Thread kbManagerThread = new Thread(new Runnable() {
         	public void run() {

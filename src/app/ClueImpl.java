@@ -100,11 +100,12 @@ public class ClueImpl implements Clue {
 				int indexOfEndQuote = textToBeFragmented.indexOf(QUOTE, indexOfStartQuote + 1); // find the next one
 				String quotedSequence = textToBeFragmented.substring(indexOfStartQuote + 1, indexOfEndQuote);
 				String sequenceBeforeQuotation = textToBeFragmented.substring(0, indexOfStartQuote);
-				String sequenceAfterQuotation = textToBeFragmented.substring(indexOfEndQuote + 1, clueText.length());
-				
+				String sequenceAfterQuotation = textToBeFragmented.substring(indexOfEndQuote + 1, textToBeFragmented.length());
+
 				this.getClueFragments().add(quotedSequence);
 				
 				textToBeFragmented = sequenceBeforeQuotation + sequenceAfterQuotation;
+				System.err.println("textToBeFragmented after stripping quoted sequence: " + textToBeFragmented); // DEBUGGING *******
 			}
 		}
 		this.addClueFragments(textToBeFragmented);
