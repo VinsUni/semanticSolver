@@ -44,8 +44,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
-	private final String[] WORDS_TO_CONSIDER_AS_PREDICATES_ONLY = {"artist", "singer", "band", "album", "member", 
-			"writer", "song", "group"};
 
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<RecognisedResource> recognisedResources;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
@@ -95,9 +93,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
     }
     
     private void extractEntities(String clueFragment) throws QueryExceptionHTTP {
-                 if(considerAsPredicateOnly(clueFragment))
-                          return;
-
                  String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
 
                  String SPARQLquery = RDFS_PREFIX_DECLARATION + " " +
@@ -214,9 +209,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	}
     
     private void extractFITBEntities(String clueFragment) throws QueryExceptionHTTP {
-        if(considerAsPredicateOnly(clueFragment))
-                 return;
-
         String wrappedClueFragment = "'\"" + clueFragment + "\"'";
         
         log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
@@ -350,30 +342,4 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
                  throw e;
         }
     }
-
-	private String toProperCase(String thisWord) {
-		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
-		if(thisWord.length() > 1) {
-			int index = 1; // start at the second letter of the word
-			while(index < thisWord.length()) {
-				String nextCharacter = thisWord.substring(index, index + 1);
-				thisWordInProperCase += nextCharacter;
-				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
-					 index++; // the next character needs to be capitalised
-					 nextCharacter = thisWord.substring(index, index + 1);
-					 thisWordInProperCase += nextCharacter.toUpperCase();
-				}
-				index++;
-			}
-		}
-		return thisWordInProperCase;
-	}
-
-
-	private boolean considerAsPredicateOnly(String wordToCheck) {
-		for(int i = 0; i < this.WORDS_TO_CONSIDER_AS_PREDICATES_ONLY.length; i++)
-			if(toProperCase(WORDS_TO_CONSIDER_AS_PREDICATES_ONLY[i]).equals(wordToCheck))
-				return true;
-		return false;
-	}
 }
