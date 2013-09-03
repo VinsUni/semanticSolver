@@ -4,11 +4,35 @@
 <h1>How to use this application</h1>
 
 <p>
-Help text goes here
+Type a crossword clue into the text box provided.
+<br/>
 </p>
 
 <p>
-and a bit more here
+Specify the number of words in the solution by hitting up or down on the spinner. For each word in the solution, type the number of 
+letters in that word into the input box provided.
+<br/>
+</p>
+
+<p>
+<br/>
+If the clue is a Fill-In-The-Blank clue, where the solution constitutes a missing section of the clue text, indicate any blank words in
+the clue text using an underscore (_) for each one.
+<br/>
+For example: <i>Nat _ Cole</i>
+</p>
+
+<p>
+<br/>
+Clues will be solved more quickly if names that consist of multiple words are surrounded by double-quotes.
+<br/>
+For example, <i>"The Dark Side of the Moon" band</i> will be solved more quickly than <i>The Dark Side of the Moon band</i>. However, phrases 
+surrounded by quotes will be treated as being case-sensitive.
+</p>
+
+<p>
+<br/>
+To begin processing of the clue, click the Submit Clue button
 </p>
 
 </body>
