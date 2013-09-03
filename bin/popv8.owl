@@ -396,6 +396,7 @@
         <rdfs:label>drummer</rdfs:label>
         <rdfs:label>bassist</rdfs:label>
         <rdfs:label>frontman</rdfs:label>
+        <rdfs:label>one of</rdfs:label>
         
         <skos:prefLabel>has member</skos:prefLabel>
         
