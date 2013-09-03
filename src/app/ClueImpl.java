@@ -25,7 +25,6 @@ import lombok.Setter;
  */
 public class ClueImpl implements Clue {
 	private static Logger log = Logger.getLogger(ClueImpl.class);
-	private final String[] WORDS_TO_EXCLUDE = {"the", "of", "that", "a"}; // a list of common words to exclude from consideration
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
 	
@@ -156,7 +155,7 @@ public class ClueImpl implements Clue {
 				continue;
 			thisWord = this.toProperCase(wordsInClueText[i]);
 			
-			if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
+			if(!this.getClueFragments().contains(thisWord)) {
 				/* if the word ends with a comma, remove the comma before adding the word as a clue fragment */
 				if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")))
 						thisWord = thisWord.substring(0, thisWord.length() - 1);
@@ -182,7 +181,7 @@ public class ClueImpl implements Clue {
 				String wordToAppend = wordsInClueText[j];
 				if(!wordToAppend.isEmpty())
 					thisWord = thisWord + " " + this.toProperCase(wordToAppend);
-				if(!this.getClueFragments().contains(thisWord) && !excludedWord(thisWord)) {
+				if(!this.getClueFragments().contains(thisWord)) {
 					/* if the word ends with a comma, remove the comma before adding the word as a clue fragment */
 					if(thisWord.length() > 1 && (thisWord.substring(thisWord.length() - 1, thisWord.length()).equals(",")))
 							thisWord = thisWord.substring(0, thisWord.length() - 1);
@@ -319,18 +318,6 @@ public class ClueImpl implements Clue {
 			}
 		}
 		return thisWordInProperCase;
-	}
-
-	/**
-	 * 
-	 * @param wordToCheck
-	 * @return true if wordToCheck is in the list of common words to be excluded
-	 */
-	private boolean excludedWord(String wordToCheck) {
-		for(int i = 0; i < this.WORDS_TO_EXCLUDE.length; i++)
-			if(toProperCase(WORDS_TO_EXCLUDE[i]).equals(wordToCheck))
-				return true;
-		return false;
 	}
 	
 	/**
