@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
-import org.openjena.atlas.logging.Log;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
@@ -75,6 +74,7 @@ public class ModelLoader {
 					commonClueFragments.put(commonFragment, true);
 				}
 				scanner.close();
+				log.debug(COMMON_CLUE_FRAGMENTS_FILE_LOCATION + " successfully loaded");
 			}
 		}
 		return commonClueFragments;
