@@ -35,3 +35,10 @@ Refine the crossword clue ontology to cover any identified gaps. Redefine the la
 Complete first draft of project report and submit to supervisor for feedback - August 2013
 
 Complete and submit project report - September 2013
+
+
+Non-core objectives:
+
+Develop a semantic relatedness algorithm optimised to allow the answer-generating module to rank its candidate solutions in a probability-weighted list - done, 26th August 2013
+
+Develop a knowledge base of RDF statements that define the answers to previously encountered clues; this could potentially be used by future crossword-solving applications - done, 2nd September 2013
