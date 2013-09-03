@@ -86,7 +86,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		else {
 			Scanner scanner = new Scanner(inputStream);
 			while (scanner.hasNext ())
-				stringBuffer.append (scanner.nextLine ());
+				stringBuffer.append (scanner.nextLine());
 			scanner.close();
 			this.setHelpText(new String(stringBuffer));
 		}
@@ -99,7 +99,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		else {
 			Scanner scanner = new Scanner(inputStream);
 			while (scanner.hasNext ())
-				stringBuffer.append (scanner.nextLine ());
+				stringBuffer.append (scanner.nextLine());
 			scanner.close();
 			this.setAboutText(new String(stringBuffer));
 		}
