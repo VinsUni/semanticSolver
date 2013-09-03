@@ -101,3 +101,13 @@ us
 one of
 one of the
 of the
+singer
+album
+artist
+band
+member
+writer
+song
+group
+member of
+hit
