@@ -3,11 +3,7 @@
  */
 package app;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 
 import org.apache.log4j.Logger;
 
@@ -84,36 +80,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		/* Find the types of the clueResource */
 		Selector selector = new SimpleSelector(solution.getSolutionResource(), RDF.type, (RDFNode) null);
-		
-		
-		/*
-		// DEBUGGING ***************************************************************
-				
-					 // load standard prefixes into the model
-				    NsPrefixLoader prefixLoader = new NsPrefixLoader(infModel);
-					prefixLoader.loadStandardPrefixes();
-					 
-					// Now, write the model out to a file in RDF/XML-ABBREV format:
-					try {
-						Random rand = new Random();
-						int randToAppend = rand.nextInt(1000);
-						
-						String fileName = "data\\extractedModel" + randToAppend + "WithNSPrefixes.xml";
-						FileOutputStream outFile = new FileOutputStream(fileName);
-						System.out.println("Writing retrieved data to file...");
-						infModel.write(outFile, "RDF/XML-ABBREV");
-						outFile.close();
-						System.out.println("Operation complete");
-					}
-					catch(FileNotFoundException e) {
-						e.printStackTrace();
-					} 
-					catch (IOException e) {
-						e.printStackTrace();
-					}
-		*/
-		
-		
+
 		StmtIterator solutionTypeStatements = infModel.listStatements(selector);
 		
 		/* add labels to the types */

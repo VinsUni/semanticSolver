@@ -3,11 +3,7 @@
  */
 package app;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 
 import javax.swing.SwingWorker;
 
@@ -40,7 +36,6 @@ import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
-import com.hp.hpl.jena.sparql.vocabulary.FOAF;
 
 import exception.NoResourcesSelectedException;
 import framework.Clue;
@@ -214,36 +209,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		secondQueryExecution.close();
 		
 		Model mergedModel = model.union(secondModel);
-		
-		/*
-		// DEBUGGING ***************************************************************
-		
-			 // load standard prefixes into the model
-		    NsPrefixLoader prefixLoader = new NsPrefixLoader(model);
-			prefixLoader.loadStandardPrefixes();
-			 
-			// Now, write the model out to a file in RDF/XML-ABBREV format:
-			try {
-				Random rand = new Random();
-				int randToAppend = rand.nextInt(1000);
-				
-				String fileName = "data\\extractedModel" + randToAppend + ".xml";
-				FileOutputStream outFile = new FileOutputStream(fileName);
-				System.out.println("Writing retrieved data to file...");
-				model.write(outFile, "RDF/XML-ABBREV");
-				outFile.close();
-				System.out.println("Operation complete");
-			}
-			catch(FileNotFoundException e) {
-				e.printStackTrace();
-			} 
-			catch (IOException e) {
-				e.printStackTrace();
-			}
-		*/
 
 		return mergedModel;
-		//return model;
 	}
 	
 	private void extractCandidateSolutions(String rootResourceUri) {
@@ -376,7 +343,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 					solutionResource = res;
 				}
 
-				/* Trialling http://dbpedia.org/resource/ only... */
+				/* We are only interested in resources in the namespace http://dbpedia.org/resource/ */
 				String solutionResourceNameSpace = solutionResource.getNameSpace();
 				String clueResourceNameSpace = clueResource.getNameSpace();
 				if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
