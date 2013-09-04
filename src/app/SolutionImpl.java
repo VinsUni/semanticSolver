@@ -55,10 +55,6 @@ public class SolutionImpl implements Solution {
 		
 		this.setInfModel(infModel);
 		this.setClue(clue);
-		
-		/* Logging */
-		log.debug("Solution resource: " + this.getSolutionResource().getURI());
-		log.debug("Clue resource " + this.getClueResource().getURI());
 	}
 
 	/*

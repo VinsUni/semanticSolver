@@ -83,11 +83,11 @@ public class SolutionScorerImpl implements SolutionScorer {
 
 		StmtIterator solutionTypeStatements = infModel.listStatements(selector);
 		
-		/* add labels to the types */
+		/* add labels of the types */
 		while(solutionTypeStatements.hasNext()) {
 			Statement thisStatement = solutionTypeStatements.nextStatement();
 			
-			log.debug("Found solutionTypeStatement: " + thisStatement.toString());
+			//log.debug("Found solutionTypeStatement: " + thisStatement.toString());
 			
 			Resource thisType = thisStatement.getObject().asResource();
 			
@@ -103,7 +103,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisLabel = thisTypeLabelStatement.getString();
 				thisLabel = stripLanguageTag(thisLabel);
 				
-				log.debug("Found label: " + thisLabel);
+				log.debug("Found type label for " + thisType.getURI() + ": " + thisLabel);
 				
 				if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
 					solutionTypes.add(thisType);
@@ -125,11 +125,11 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		StmtIterator solutionPropertyStatements = infModel.listStatements(predicateSelector);
 		
-		/* add labels to the types */
+		/* add labels of the predicates */
 		while(solutionPropertyStatements.hasNext()) {
 			Statement thisStatement = solutionPropertyStatements.nextStatement();
 			
-			log.debug(thisStatement.toString());
+			//log.debug(thisStatement.toString());
 			
 			Resource thisPredicate = thisStatement.getPredicate().asResource();
 			
@@ -145,7 +145,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisPredicateLabel = thisPredicateLabelStatement.getString();
 				thisPredicateLabel = stripLanguageTag(thisPredicateLabel);
 				
-				log.debug("Found label: " + thisPredicateLabel);
+				log.debug("Found predicate label: " + thisPredicateLabel);
 				
 				if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
 					solutionProperties.add(thisPredicate);

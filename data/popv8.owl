@@ -31,7 +31,7 @@
      xmlns:umbel2="http://umbel.org/umbel#"
      xmlns:dbpprop="http://dbpedia.org/property/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/" >
      
      
     <owl:Ontology rdf:about="http://www.griffithsben.com/ontologies/pop.owl">
@@ -387,6 +387,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.griffithsben.com/ontologies/pop.owl#hasMember">
         <rdfs:label>member</rdfs:label>
+        <rdfs:label>member of</rdfs:label>
         <rdfs:label>has member</rdfs:label>
         <rdfs:label>included</rdfs:label>
         <rdfs:label>rapper</rdfs:label>

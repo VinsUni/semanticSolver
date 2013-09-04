@@ -383,7 +383,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 					this.getInfModel(), this.getClue());
 			if(!(this.getSolutions().contains(solution))) {
 				this.getSolutions().add(solution);
-				log.debug("New solution found: " + solution.toString());
+				//log.debug("New solution found: " + solution.toString());
 			}
 		}
 	}
