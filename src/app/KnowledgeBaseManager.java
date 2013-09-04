@@ -22,6 +22,7 @@ import com.hp.hpl.jena.rdf.model.Selector;
 import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.shared.JenaException;
 import com.hp.hpl.jena.vocabulary.RDF;
 
 import framework.Clue;
@@ -44,9 +45,16 @@ public class KnowledgeBaseManager {
 	 */
 	private KnowledgeBaseManager() {
 		this.setFinished(false);
-		this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
+		try {
+			this.setKnowledgeBase(ModelLoader.getKnowledgeBase());
+		}
+		catch(JenaException e) {
+			log.debug(e.getMessage());
+			this.setKnowledgeBase(null);
+		}
 		this.setSolvedClues(new ArrayList<SolvedClue>());
-		this.gatherPreviouslySolvedClues();
+		if(this.getKnowledgeBase() != null)
+			this.gatherPreviouslySolvedClues();
 		this.setFinished(true);
 	}
 	
@@ -88,6 +96,10 @@ public class KnowledgeBaseManager {
 	
 	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
 		this.setFinished(false);
+		if(this.getKnowledgeBase() == null) {
+			this.setFinished(true);
+			return;
+		}
 		for(Solution solution : solutions) {
 			if(solution.getConfidence() > 0) {
 				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), null, 
@@ -122,7 +134,7 @@ public class KnowledgeBaseManager {
 		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
 	}
 	
-	public void addToKnowledgeBase(Clue clue, Solution solution) {
+	private void addToKnowledgeBase(Clue clue, Solution solution) {
 		String clueText = clue.getSourceClue();
 		String solutionStructure = clue.getSolutionStructureAsString();
 		String solutionText = solution.getSolutionText();
@@ -150,6 +162,11 @@ public class KnowledgeBaseManager {
 	}
 	
 	public void persistKnowledgeBase() {
+		this.setFinished(false);
+		if(this.getKnowledgeBase() == null) {
+			this.setFinished(true);
+			return;
+		}
 		try {
 			String fileName = "data\\" + CrosswordKB.LOCAL_KNOWLEDGE_BASE_URI;
 			FileOutputStream outFile = new FileOutputStream(fileName);
@@ -166,5 +183,6 @@ public class KnowledgeBaseManager {
 			log.debug("Failed to write crosswordKB out to disk");
 			log.debug(e.getMessage());
 		}
+		this.setFinished(true);
 	}
 }
