@@ -121,6 +121,7 @@ public class DisplayPanel extends JPanel {
 							});
         this.setClueInputField(new JTextField(20));
 		this.getClueInputField().setText("Enter your clue");
+		this.getClueInputField().selectAll();
 		this.setClueInputPanel(new JPanel());
 		
 		/* create solutionStructurePanel and resourceSelectorPanels, both with gridbag layouts of one column and 
