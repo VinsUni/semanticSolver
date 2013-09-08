@@ -728,6 +728,13 @@
         <rdfs:label>group</rdfs:label>
         <rdfs:label>band</rdfs:label>
         <rdfs:label>outfit</rdfs:label>
+        <rdfs:label>collective</rdfs:label>
+        <rdfs:label>supergroup</rdfs:label>
+        <rdfs:label>duo</rdfs:label>
+        <rdfs:label>trio</rdfs:label>
+        <rdfs:label>quartet</rdfs:label>
+        <rdfs:label>quintet</rdfs:label>
+        <rdfs:label>sextet</rdfs:label>
         
         <skos:prefLabel>group</skos:prefLabel>
         
