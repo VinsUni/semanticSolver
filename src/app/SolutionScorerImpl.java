@@ -167,8 +167,13 @@ public class SolutionScorerImpl implements SolutionScorer {
 					while(equivalentPropertyStatements.hasNext()) {
 						Statement equivalentPropertyStatement = equivalentPropertyStatements.nextStatement();
 						Resource equivalentProperty = equivalentPropertyStatement.getObject().asResource();
-						/* Add the equivalent property as a solution property together with the original property's label */
-						if( (!solutionProperties.contains(equivalentProperty)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
+						String equivalentPropertyNameSpace = equivalentProperty.getNameSpace();
+						/* If not a property in the pop namespace, add the equivalent property as a solution property 
+						 * together with the original property's label
+						 */
+						if( (equivalentPropertyNameSpace != null) && (!equivalentPropertyNameSpace.equals(Pop.POP_URI)) &&
+							(!solutionProperties.contains(equivalentProperty)) && 
+							(clueFragments.contains(toProperCase(thisPredicateLabel))) )
 							solutionProperties.add(equivalentProperty);
 					}
 				}
