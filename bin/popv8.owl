@@ -733,7 +733,7 @@
 		
         <rdfs:subClassOf rdf:resource="&yago;Musician110340312"/>
         <rdfs:subClassOf rdf:resource="&yago;Singer110599806"/>
-        <rdfs:SubClassOf rdf:resource="&dbpedia-owl;MusicalArtist"/>
+        <rdfs:subClassOf rdf:resource="&dbpedia-owl;MusicalArtist"/>
         <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
     </owl:Class>
 

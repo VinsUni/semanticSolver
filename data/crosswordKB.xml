@@ -59,6 +59,15 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/75617ab8-2ceb-46ee-b4d6-865c3fa75c2a">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b7b31936-0f94-4d2e-8e73-a941bef31144">
+        <crosswordKBontology:hasSolutionText>Katy Perry</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4, 5]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>Firework artist</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/db16701d-6009-48d8-a2e2-dd9b3838c542">
     <crosswordKBontology:hasClueText>member of the rolling stones</crosswordKBontology:hasClueText>
     <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>

@@ -78,7 +78,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		ArrayList<String> clueFragments = this.getClue().getClueFragments();
 		
-		/* Find the types of the clueResource */
+		/* Find the types of the clueResource !!!!!!!!!!!!!!!!!************************************************************************* */
 		Selector selector = new SimpleSelector(solution.getSolutionResource(), RDF.type, (RDFNode) null);
 
 		StmtIterator solutionTypeStatements = infModel.listStatements(selector);
