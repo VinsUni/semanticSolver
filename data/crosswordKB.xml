@@ -140,11 +140,6 @@
     <crosswordKBontology:hasClueText>"Like a Rock" singer</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f1f752da-55c5-4946-ab98-4139f1c7ed12">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e7c34d90-e975-4b05-a9a5-08719e1e3aaa">
-        <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1d337974-5e05-44bb-83e2-c4ec0f33d5d8">
@@ -154,11 +149,6 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/da2a5564-de3c-4933-a0eb-89f5c509299a">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/718f962e-ac04-4486-ae72-f0638b50e27f">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -172,7 +162,17 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7fac603c-100c-4ed5-93ba-3a3002543121">
+        <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3c173608-4a36-42c5-ac22-b29609767f2b">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4641ca0e-cf38-4b28-a48b-939edb693d95">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -194,11 +194,6 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3e6d6b36-6405-431e-b430-9a8ae4891200">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/afc5ce76-a683-4f82-8bb8-1272af42c2b7">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -233,29 +228,15 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fa9987c7-b8d1-4315-a143-8e5761c15109">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a01d9ce1-c14f-48a5-8ec1-3268bee23cb5">
         <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
-  </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6d094ee8-aefb-4d02-982f-b996d98854c9">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c6e0f831-28bd-4a4d-89dc-68a18f1c370b">
-        <crosswordKBontology:hasSolutionText>Santa Barbara</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ea9f10af-e8e8-4049-aa35-b75ce630629d">
-        <crosswordKBontology:hasSolutionText>Stone Raiders</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/74bb9f3e-4926-450b-b31a-e9be9ee6a6f9">
-        <crosswordKBontology:hasSolutionText>Chuck Leavell</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[5, 7]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>member of the rolling stones</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ad64ccb3-6de4-4166-99b6-734aefb2da99">
     <crosswordKBontology:hasClueText>one of the beatles</crosswordKBontology:hasClueText>

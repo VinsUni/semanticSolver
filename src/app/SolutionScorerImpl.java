@@ -146,9 +146,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 			
 			Resource thisPredicate = thisStatement.getPredicate().asResource();
 			
-			String nameSpace = thisPredicate.getNameSpace();
-			if(nameSpace != null && nameSpace.equals(Pop.POP_URI))
-				continue;
+			
 			
 			StmtIterator predicateLabels = thisPredicate.listProperties(RDFS.label);
 			
@@ -160,8 +158,24 @@ public class SolutionScorerImpl implements SolutionScorer {
 				
 				log.debug("Found predicate label: " + thisPredicateLabel);
 				
-				if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
-					solutionProperties.add(thisPredicate);
+				String nameSpace = thisPredicate.getNameSpace();
+				if(nameSpace != null && nameSpace.equals(Pop.POP_URI)) {
+					/* Properties in the pop namespace are not found in the wild.
+					 * Find equivalent properties of this property that may be present in the DBpedia dataset
+					 */
+					StmtIterator equivalentPropertyStatements = thisPredicate.listProperties(OWL.equivalentProperty);
+					while(equivalentPropertyStatements.hasNext()) {
+						Statement equivalentPropertyStatement = equivalentPropertyStatements.nextStatement();
+						Resource equivalentProperty = equivalentPropertyStatement.getObject().asResource();
+						/* Add the equivalent property as a solution property together with the original property's label */
+						if( (!solutionProperties.contains(equivalentProperty)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
+							solutionProperties.add(equivalentProperty);
+					}
+				}
+				else {
+					if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
+						solutionProperties.add(thisPredicate);
+				}
 			}
 		}
 		return solutionProperties;
