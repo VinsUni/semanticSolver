@@ -731,9 +731,11 @@
         
 		<skos:prefLabel>artist</skos:prefLabel>
 		
+		<owl:equivalentClass rdf:resource="&dbpedia-owl;MusicalArtist"/>
+		
         <rdfs:subClassOf rdf:resource="&yago;Musician110340312"/>
         <rdfs:subClassOf rdf:resource="&yago;Singer110599806"/>
-        <rdfs:subClassOf rdf:resource="&dbpedia-owl;MusicalArtist"/>
+        
         <rdfs:subClassOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#popClass"/>
     </owl:Class>
 
@@ -923,7 +925,6 @@
     <!-- http://dbpedia.org/ontology/MusicalArtist -->
 
     <owl:Class rdf:about="&dbpedia-owl;MusicalArtist">
-        <owl:equivalentClass rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
         
         <rdfs:subClassOf rdf:resource="&pop;artist"/>
         

@@ -22,6 +22,7 @@ import com.hp.hpl.jena.rdf.model.SimpleSelector;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
+import com.hp.hpl.jena.vocabulary.OWL;
 import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 
@@ -78,7 +79,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		
 		ArrayList<String> clueFragments = this.getClue().getClueFragments();
 		
-		/* Find the types of the clueResource !!!!!!!!!!!!!!!!!************************************************************************* */
+		/* Find the types of the solutionResource */
 		Selector selector = new SimpleSelector(solution.getSolutionResource(), RDF.type, (RDFNode) null);
 
 		StmtIterator solutionTypeStatements = infModel.listStatements(selector);
@@ -90,11 +91,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 			//log.debug("Found solutionTypeStatement: " + thisStatement.toString());
 			
 			Resource thisType = thisStatement.getObject().asResource();
-			
-			String nameSpace = thisType.getNameSpace();
-			if(nameSpace != null && nameSpace.equals(Pop.POP_URI))
-				continue;
-			
+
 			StmtIterator typeLabels = thisType.listProperties(RDFS.label);
 			
 			while(typeLabels.hasNext()) {
@@ -105,8 +102,24 @@ public class SolutionScorerImpl implements SolutionScorer {
 				
 				log.debug("Found type label for " + thisType.getURI() + ": " + thisLabel);
 				
-				if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
-					solutionTypes.add(thisType);
+				String nameSpace = thisType.getNameSpace();
+				if(nameSpace != null && nameSpace.equals(Pop.POP_URI)) {
+					/* Types in the pop namespace are not found in the wild.
+					 * Find equivalent types of this type that may be present in the DBpedia dataset
+					 */
+					StmtIterator equivalentTypeStatements = thisType.listProperties(OWL.equivalentClass);
+					while(equivalentTypeStatements.hasNext()) {
+						Statement equivalentTypeStatement = equivalentTypeStatements.nextStatement();
+						Resource equivalentType = equivalentTypeStatement.getObject().asResource();
+						/* Add the equivalent type as a solution type together with the original type's label */
+						if( (!solutionTypes.contains(equivalentType)) && (clueFragments.contains(toProperCase(thisLabel))) )
+							solutionTypes.add(equivalentType);
+					}
+				}
+				else { // the type in question is one that is present in the DBpedia dataset
+					if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
+						solutionTypes.add(thisType);
+				}
 			}
 		}
 		return solutionTypes;
