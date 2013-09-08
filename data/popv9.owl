@@ -83,6 +83,8 @@
         <rdfs:label>album from</rdfs:label>
         
         <skos:prefLabel>album of</skos:prefLabel>
+        
+        <owl:equivalentProperty rdf:resource="&dbpprop;artist"/> <!-- here -->
     
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
         
@@ -401,10 +403,11 @@
         
         <skos:prefLabel>has member</skos:prefLabel>
         
-        <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedMusicalArtist"/>
-        <rdfs:subPropertyOf rdf:resource="&dbpprop;associatedActs"/>
-        <rdfs:subPropertyOf rdf:resource="&dbpprop;currentMembers"/>
-        <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;bandMember"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;associatedMusicalArtist"/>
+        <owl:equivalentProperty rdf:resource="&dbpprop;associatedActs"/>
+        <owl:equivalentProperty rdf:resource="&dbpprop;currentMembers"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;bandMember"/>
+        
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
         
         <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#memberOf"/>
@@ -605,22 +608,29 @@
     
     <!-- http://dbpedia.org/property/artist -->
 	
-	<owl:ObjectProperty rdf:about="&dbpprop;artist">
+	<owl:ObjectProperty rdf:about="&dbpprop;artist"> <!-- here -->
         <rdfs:label>artist</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
     </owl:ObjectProperty>
     
     <!-- http://dbpedia.org/property/associatedActs -->
 
-    <owl:ObjectProperty rdf:about="&dbpprop;associatedActs"/>
+    <owl:ObjectProperty rdf:about="&dbpprop;associatedActs">
+    	<rdfs:subPropertyOf rdf:resource="&pop;memberOf"/>
+    	<rdfs:subPropertyOf rdf:resource="&pop;hasMember"/>
+    </owl:ObjectProperty>
     
 
     <!-- http://dbpedia.org/property/currentMembers -->
 
-    <owl:ObjectProperty rdf:about="&dbpprop;currentMembers"/>
+    <owl:ObjectProperty rdf:about="&dbpprop;currentMembers">
+    	<rdfs:subPropertyOf rdf:resource="&pop;memberOf"/>
+    	<rdfs:subPropertyOf rdf:resource="&pop;hasMember"/>
+    </owl:ObjectProperty>
     
 	
 	<!-- ////////////////////////////// DBpedia Ontology object properties //////////////////////////////////// -->

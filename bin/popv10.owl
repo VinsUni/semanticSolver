@@ -84,46 +84,12 @@
         
         <skos:prefLabel>album of</skos:prefLabel>
         
-        <owl:equivalentProperty rdf:resource="&dbpprop;artist"/> <!-- here -->
+        <owl:equivalentProperty rdf:resource="&dbpprop;artist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;artist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;musicalArtist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;musicalBand"/>
     
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-        
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -142,33 +108,9 @@
         
         <skos:prefLabel>artist of</skos:prefLabel>
         
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+        
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -180,9 +122,8 @@
         
         <skos:prefLabel>composer of</skos:prefLabel>
         
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasComposer"/>
+
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
     </owl:ObjectProperty>
  
@@ -200,51 +141,12 @@
         
         <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artistOf"/>
         
-        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
+        <owl:equivalentProperty rdf:resource="&dbpprop;artist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;artist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;musicalArtist"/>
+        <owl:equivalentProperty rdf:resource="&dbpedia-owl;musicalBand"/>
         
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-                            <rdf:Description rdf:about="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-            </owl:Restriction>
-        </rdfs:range>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
     </owl:ObjectProperty>
 
 
@@ -258,25 +160,11 @@
         
         <skos:prefLabel>genre of</skos:prefLabel>
         
-        <rdfs:range rdf:resource="&dbpedia-owl;Band"/>
-        <rdfs:range rdf:resource="&dbpedia-owl;MusicalArtist"/>
-        <rdfs:range rdf:resource="&dbpedia-owl;Single"/>
-        <rdfs:range rdf:resource="&schema;MusicGroup"/>
-        <rdfs:range rdf:resource="&umbel;Artist_Performer"/>
-        <rdfs:range rdf:resource="&umbel;Band_MusicGroup"/>
-        <rdfs:range rdf:resource="&umbel;MusicSingle"/>
-        <rdfs:range rdf:resource="&umbel;MusicalComposition"/>
-        <rdfs:range rdf:resource="&umbel;MusicalComposition_Song"/>
-        <rdfs:range rdf:resource="&umbel;MusicalPerformer"/>
-        <rdfs:range rdf:resource="&umbel;RecordCompany"/>
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genre"/>
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
+        <owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasGenre"/>
+        
+        <!-- here -->
         
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-        
-		<owl:inverseOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasGenre"/>
     </owl:ObjectProperty>
 	
 	
@@ -289,24 +177,7 @@
         <rdfs:label>genre</rdfs:label>
         
         <skos:prefLabel>genre of</skos:prefLabel>
-        
-        <rdfs:domain rdf:resource="&dbpedia-owl;Band"/>
-        <rdfs:domain rdf:resource="&dbpedia-owl;MusicalArtist"/>
-        <rdfs:domain rdf:resource="&dbpedia-owl;Single"/>
-        <rdfs:domain rdf:resource="&schema;MusicGroup"/>
-        <rdfs:domain rdf:resource="&umbel;Artist_Performer"/>
-        <rdfs:domain rdf:resource="&umbel;Band_MusicGroup"/>
-        <rdfs:domain rdf:resource="&umbel;MusicSingle"/>
-        <rdfs:domain rdf:resource="&umbel;MusicalComposition"/>
-        <rdfs:domain rdf:resource="&umbel;MusicalComposition_Song"/>
-        <rdfs:domain rdf:resource="&umbel;MusicalPerformer"/>
-        <rdfs:domain rdf:resource="&umbel;RecordCompany"/>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-		<rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-		
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#genre"/>
-        
+
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
         
 		<owl:equivalentProperty rdf:resource="http://dbpedia.org/ontology/genre"/>
@@ -464,11 +335,7 @@
         <rdfs:label>frontman</rdfs:label>
         
         <skos:prefLabel>member of</skos:prefLabel>
-        
-        <rdfs:domain rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-        
-        <rdfs:range rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-        
+
         <rdfs:subPropertyOf rdf:resource="&dbpedia-owl;associatedBand"/>
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
         
@@ -487,37 +354,6 @@
         <skos:prefLabel>producer of</skos:prefLabel>
         
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-        
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producerOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -532,49 +368,6 @@
         <skos:prefLabel>record label of</skos:prefLabel>
         
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#relationalProperty"/>
-        
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composition"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#producer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#album"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#group"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#composer"/>
-            </owl:Restriction>
-        </rdfs:range>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabel"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#recordLabelOf"/>
-                <owl:someValuesFrom rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#artist"/>
-            </owl:Restriction>
-        </rdfs:range>
     </owl:ObjectProperty>
 	
 	
@@ -599,7 +392,7 @@
     
     <!-- ////////////////////////////// dbpprop object properties //////////////////////////////////// -->
 	
-	<!-- http://dbpedia.org/property/name -->
+	<!-- http://dbpedia.org/property/name --> <!-- here -->
 	
 	<owl:ObjectProperty rdf:about="&dbpprop;name">
         <rdfs:label>name</rdfs:label>
@@ -608,8 +401,9 @@
     
     <!-- http://dbpedia.org/property/artist -->
 	
-	<owl:ObjectProperty rdf:about="&dbpprop;artist"> <!-- here -->
+	<owl:ObjectProperty rdf:about="&dbpprop;artist">
         <rdfs:label>artist</rdfs:label>
+        
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         
         <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
@@ -638,9 +432,9 @@
     <!-- http://dbpedia.org/ontology/artist -->
 
     <rdf:Description rdf:about="&dbpedia-owl;artist">
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
     </rdf:Description>
     
 
@@ -654,30 +448,31 @@
     <!-- http://dbpedia.org/ontology/musicalArtist -->
 
     <rdf:Description rdf:about="&dbpedia-owl;musicalArtist">
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+    	<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#albumOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
     </rdf:Description>
     
 
     <!-- http://dbpedia.org/ontology/musicalBand -->
 
     <rdf:Description rdf:about="&dbpedia-owl;musicalBand">
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#compositionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasArtist"/>
     </rdf:Description>
     
 
     <!-- http://dbpedia.org/ontology/producer -->
 
     <rdf:Description rdf:about="&dbpedia-owl;producer">
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasProducer"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasProducer"/>
     </rdf:Description>
     
 
     <!-- http://dbpedia.org/ontology/recordLabel -->
 
     <rdf:Description rdf:about="&dbpedia-owl;recordLabel">
-        <owl:equivalentProperty rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel"/>
     </rdf:Description>
     
     
