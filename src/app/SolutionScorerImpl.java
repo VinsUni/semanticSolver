@@ -111,8 +111,12 @@ public class SolutionScorerImpl implements SolutionScorer {
 					while(equivalentTypeStatements.hasNext()) {
 						Statement equivalentTypeStatement = equivalentTypeStatements.nextStatement();
 						Resource equivalentType = equivalentTypeStatement.getObject().asResource();
-						/* Add the equivalent type as a solution type together with the original type's label */
-						if( (!solutionTypes.contains(equivalentType)) && (clueFragments.contains(toProperCase(thisLabel))) )
+						String equivalentTypeNameSpace = equivalentType.getNameSpace();
+						/* If not a type in the pop namespace, add the equivalent type as a solution type 
+						 * together with the original type's label
+						 */
+						if( (equivalentTypeNameSpace != null) && (!equivalentTypeNameSpace.equals(Pop.POP_URI)) &&
+							(!solutionTypes.contains(equivalentType)) && (clueFragments.contains(toProperCase(thisLabel))) )
 							solutionTypes.add(equivalentType);
 					}
 				}
@@ -177,7 +181,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 							solutionProperties.add(equivalentProperty);
 					}
 				}
-				else {
+				else { // the property in question is one that is present in the DBpedia dataset
 					if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
 						solutionProperties.add(thisPredicate);
 				}
