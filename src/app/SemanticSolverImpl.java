@@ -83,7 +83,7 @@ public class SemanticSolverImpl implements SemanticSolver {
         	catch (ExecutionException e) {
         		log.debug(e.getMessage());
         	}
-
+        	this.setEntityRecogniserTask(null); // allow EntityRecogniserTask to be garbage-collected
         	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
         	
         	if(this.getRecognisedResources() == null) {
@@ -149,7 +149,7 @@ public class SemanticSolverImpl implements SemanticSolver {
                 		 log.debug(e.getMessage());
                 	 }
                  }
-        
+            this.setClueQueryTask(null); // allow ClueQueryTask to be garbage-collected
         	this.setClueSolver(new ClueSolverImpl());
         
         	ArrayList<Solution> solutions = null;
@@ -222,20 +222,20 @@ public class SemanticSolverImpl implements SemanticSolver {
         		if(notADupe)
     				uniqueSolutions.add(thisSolution);
         	}
-        	
+        	solutions = null;
         	this.addSolutionsToKnowledgeBase(uniqueSolutions);
         	
         	
         	for(Solution solution : uniqueSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
         					solution.getConfidence() + "%)\n";
-        	
+        	uniqueSolutions = null;
         	long endTime = System.nanoTime();
 			long durationInSecs = (endTime - startTime) / NANOSECONDS_IN_ONE_SECOND;
 			resultsBuffer += "Time taken to process this clue: " + durationInSecs + "s\n";
         	
         	this.setResults(resultsBuffer);
-
+        	
         	/* Update the GUI on the EDT to show the scores */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
