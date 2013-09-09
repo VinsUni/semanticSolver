@@ -116,6 +116,7 @@ public class KnowledgeBaseManager {
 				}
 			}
 		}
+		solutions = null; // allow solutions to be garbage-collected
 		this.setFinished(true);
 	}
 	

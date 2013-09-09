@@ -113,6 +113,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
 				this.setInfModel(ModelFactory.createInfModel(reasoner, data));
 			    this.extractCandidateSolutions(resourceUri); // adds any candidate solutions from the model to the solutions list
+			    this.setInfModel(null); // allow the model to be garbage-collected
 			}
 			catch(QueryExceptionHTTP e) {
 				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");

@@ -68,6 +68,10 @@ public class SolutionScorerImpl implements SolutionScorer {
 
 		double distanceBetweenClueFragmentsAndSolution = distance(solution.getSolutionResource(), solutionTypes, solutionProperties);
 		
+		/* solution and clue can now both be garbage-collected */
+		this.setSolution(null);
+		this.setClue(null);
+		
 		return distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution;
 	}
 	
@@ -126,6 +130,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				}
 			}
 		}
+		infModel = null; // allow the model to be garbage-collected
 		return solutionTypes;
 	}
 	
