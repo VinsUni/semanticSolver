@@ -88,7 +88,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		this.setExtractedResources(new ArrayList<Resource>());
 		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
 		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
-	    this.setReasoner(reasoner.bindSchema(schema));
+	    this.setReasoner(reasoner.bindSchema(this.getSchema()));
 	}
 	
 	@Override
@@ -210,7 +210,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		secondQueryExecution.close();
 		
 		Model mergedModel = model.union(secondModel);
-
+		model = null;
+		secondModel = null;
 		return mergedModel;
 	}
 	
