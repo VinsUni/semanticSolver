@@ -249,6 +249,15 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/43b770c3-1c0e-4945-ad58-857b355ec968">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2c93be3d-8f74-4a89-bb2c-6260450be03a">
+        <crosswordKBontology:hasSolutionText>Guns N Roses</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4, 1, 5]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>Axl Rose's hard rock band</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/cbfb9e74-6c3d-4409-84e9-4f97504be0cc">
     <crosswordKBontology:hasClueText>Mick Jagger band</crosswordKBontology:hasClueText>
     <crosswordKBontology:hasSolutionStructure>[3, 7, 6]</crosswordKBontology:hasSolutionStructure>
@@ -321,6 +330,30 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9621608f-318d-4bbe-b06f-350c65f4a480">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/af0b0246-a653-49a1-8454-e36059d83482">
+        <crosswordKBontology:hasSolutionText>Rock rapper</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0389cdcd-de21-49a5-9bd0-fc670f4fd1e0">
+        <crosswordKBontology:hasSolutionText>Hard Jagged</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2db9af83-0b32-4d90-941a-5b55327c8c92">
+        <crosswordKBontology:hasSolutionText>Time Around</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/da8e9748-b3a3-478c-8861-27c49fe45349">
+        <crosswordKBontology:hasSolutionText>Deep Purple</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>"Smoke on the Water" hard rock band</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d63a3331-8a16-4678-8125-141b0397c8a1">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3e9813cf-655e-4a91-b2a2-4855fa0b4be9">
@@ -334,35 +367,6 @@
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4, 5]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>The Dark Side of the Moon band</crosswordKBontology:hasClueText>
-  </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2823b23d-1a03-4915-a1cf-54a92b8f0e7a">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b513adf1-8f86-4578-afc0-90f6d3da9ec8">
-        <crosswordKBontology:hasSolutionText>career</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/63f5ea36-055e-4c21-9df6-2cd7eb178c9c">
-        <crosswordKBontology:hasSolutionText>Gorman</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/483fc689-d5ce-49f7-9ab0-ae9a6097dc94">
-        <crosswordKBontology:hasSolutionText>Lennon</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d97cdf35-1481-4275-9a83-23cc4a4af398">
-        <crosswordKBontology:hasSolutionText>George</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fba86003-149e-44b6-833a-044f3f95bd08">
-        <crosswordKBontology:hasSolutionText>Stuart</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[6]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0b6b8e2c-d730-4b32-ac47-9014c1d0288f">
     <crosswordKBontology:solvedBy>
