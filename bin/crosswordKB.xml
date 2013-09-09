@@ -14,6 +14,175 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3b5550a5-dac0-43ad-85be-d1c73ac2a76a">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b9ecb58a-0a5e-4c57-80d9-667dd4adcbe2">
+        <crosswordKBontology:hasSolutionText>Mans</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3c6d413b-2813-457c-bf9a-f0a44212df47">
+        <crosswordKBontology:hasSolutionText>Tony</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/96e86584-c968-4648-9a73-4513795043ee">
+        <crosswordKBontology:hasSolutionText>Rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fcb84898-ec9f-49fb-9b80-2125dfb7f688">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/20c3fa0d-56b2-4ccb-bfbb-d72bb287f4c4">
+        <crosswordKBontology:hasSolutionText>Dark</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c8b2c084-ec67-44ee-a133-880b4ab6371c">
+        <crosswordKBontology:hasSolutionText>rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3ae4ce19-3f2c-4302-9519-d2e0552db60f">
+        <crosswordKBontology:hasSolutionText>Hard</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2d4e2a43-0970-4d81-b81e-c197bd70d5f2">
+        <crosswordKBontology:hasSolutionText>Mind</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasClueText>Gene Simmons band </crosswordKBontology:hasClueText>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a229ab35-62fe-4467-afb6-fa2c76ab3f35">
+        <crosswordKBontology:hasSolutionText>Witz  </crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3355f3af-bcd9-4562-a4a6-36374a8cf1ce">
+        <crosswordKBontology:hasSolutionText>Witz </crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/17314426-2c51-4165-b087-936b3f59f406">
+        <crosswordKBontology:hasSolutionText>Weis</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d9c355e7-d58b-4e22-a6d2-c644d0a209bd">
+        <crosswordKBontology:hasSolutionText>Jeff</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f44ac08c-b903-4ca2-b37e-fb94b6543807">
+        <crosswordKBontology:hasSolutionText>Half</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/96db75dc-212c-4659-9410-e54d4097da00">
+        <crosswordKBontology:hasSolutionText>Sean</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0d2276ea-a7f2-4a4b-b1c3-530dfcda25aa">
+        <crosswordKBontology:hasSolutionText>Wish</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7397a321-7806-4e47-a426-f120ab01c3cf">
+        <crosswordKBontology:hasSolutionText>roll</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/442114af-9ca5-4d52-9ee6-3e10d2318668">
+        <crosswordKBontology:hasSolutionText>pour</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c20c7165-13b4-40aa-ae84-1faca44453b8">
+        <crosswordKBontology:hasSolutionText>Knox</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/807dce7c-36ae-4253-a2e6-66d28be97d76">
+        <crosswordKBontology:hasSolutionText>Kiss</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/320826cd-805f-4cc9-a93b-c6247327fd1d">
+        <crosswordKBontology:hasSolutionText>Fear</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/59462074-cd28-474c-af2a-5f697800ba98">
+        <crosswordKBontology:hasSolutionText>When</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3c7f8152-1347-4519-9f3e-d5046369b2a1">
+        <crosswordKBontology:hasSolutionText>Miss</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/82cce8a7-3e0a-4d33-a734-c168b9bbcdc4">
+        <crosswordKBontology:hasSolutionText>Sorg</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0c54328b-8ca4-4001-9d3f-1632409b1923">
+        <crosswordKBontology:hasSolutionText>Ford</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e38deb3e-826b-4313-9550-b7aa1439c6b9">
+        <crosswordKBontology:hasSolutionText>List</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/78b52ff3-9f76-4815-80ae-6910bc5e8edd">
+        <crosswordKBontology:hasSolutionText>Star</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c117fb5f-759a-480d-aaf4-7053f61fead7">
+        <crosswordKBontology:hasSolutionText>Ween</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b724c337-78c7-438d-90e3-94000b8fd37a">
+        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e2b9fc48-9e9d-44ea-8be2-98f1cc8fdbaf">
+        <crosswordKBontology:hasSolutionText>Hole</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5c02c66e-410b-4da0-81e2-e571aacc254c">
+        <crosswordKBontology:hasSolutionText>upon</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a8207c07-e3bb-4299-af15-e7700c68cfe8">
+        <crosswordKBontology:hasSolutionText>Reed</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ef47304f-0efb-4bbe-ab20-2345a56e2067">
+        <crosswordKBontology:hasSolutionText>Witz</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c0434c81-0a3e-4646-a52e-3e7f136eab14">
+        <crosswordKBontology:hasSolutionText>Gene</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6151a4ec-e0af-42be-865d-5baf9ce99986">
     <crosswordKBontology:hasClueText>member of The Rolling Stones</crosswordKBontology:hasClueText>
     <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>
@@ -243,6 +412,16 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2a009922-29a4-43a6-bcd2-04c765718b36">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/eb414db4-e7c7-4a93-8fb0-179e408d3840">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ac2d5835-4042-4ddd-8c1d-a0c4d0c0339d">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
@@ -304,6 +483,54 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4ca09a67-8227-4013-928e-6aa85938d8ea">
+    <crosswordKBontology:hasClueText>Invaders that included Keith Moon</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[3, 3]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/97e220f1-0ff4-4657-bff0-c269d018dee9">
+        <crosswordKBontology:hasSolutionText>The Who</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5701d58d-c6cc-4e19-a6fa-8b15d2b5fec4">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9121c2b9-4c00-4171-9c22-834ad7506bfc">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/227ee9fa-eebf-40fa-9477-8b3f13989903">
+        <crosswordKBontology:hasSolutionText>Rino</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/22b25507-2048-4dae-9a64-1fb8b65191ef">
+        <crosswordKBontology:hasSolutionText>Amen</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4fe96fae-2ca2-486a-ae29-b130d9cb1243">
+        <crosswordKBontology:hasSolutionText>Luke</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e39ed6e7-ed33-4368-899b-3e2fa6c481a5">
+        <crosswordKBontology:hasSolutionText>Beat</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a50e620d-76e2-40f9-86b1-36c7a165d17b">
+        <crosswordKBontology:hasSolutionText>King</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasClueText>_ beat, accentuated in rock music</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c7971ac8-91b5-493a-8937-334a5c4abb6e">
+        <crosswordKBontology:hasSolutionText>High</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6d64d6ea-97d3-4242-9f38-a2ccecf28dc0">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3ac09753-e28d-4c55-8c37-5e29cc836fda">
@@ -358,13 +585,13 @@
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasClueText>"Fallin'" singer Keys</crosswordKBontology:hasClueText>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c2d6460-5ea5-449f-91f3-e3e869424fc2">
-        <crosswordKBontology:hasSolutionText>Stones</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a5d011d9-1589-4ddf-8d8e-d86d2c1b2310">
+        <crosswordKBontology:hasSolutionText>Warren</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a5d011d9-1589-4ddf-8d8e-d86d2c1b2310">
-        <crosswordKBontology:hasSolutionText>Warren</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c2d6460-5ea5-449f-91f3-e3e869424fc2">
+        <crosswordKBontology:hasSolutionText>Stones</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -615,6 +842,15 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0e961bb6-c916-47e0-aa6f-b93ca2d79fce">
+    <crosswordKBontology:hasClueText>"The bad boys from Boston" hard rock band</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[9]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/083ea96e-b1b3-44b7-9670-4abd9eed78a4">
+        <crosswordKBontology:hasSolutionText>Mackenzie</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6b933640-86e4-4795-8ed3-418cc2ef6a7c">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d9cd140b-9ca3-45fd-8841-25f3bfb6e000">
@@ -766,6 +1002,20 @@
     <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>member of the rolling stones</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/30d25efa-0714-4828-98b3-0cc31910d283">
+    <crosswordKBontology:hasClueText>"House of the Rising Sun" band</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[3, 7]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/67358fce-df96-4996-b2e3-db99d33d51fc">
+        <crosswordKBontology:hasSolutionText>The Animals</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/deb8b622-320a-4af6-950e-ae0a9d5230a0">
+        <crosswordKBontology:hasSolutionText>the Looking</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fd1f4089-93d3-4d15-9241-7b2456186157">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5b211ae6-350c-4a2b-9c74-74dfe77ec8d6">
@@ -774,6 +1024,39 @@
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4, 6]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>Rolling Stones member</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/000d363e-ddd2-4903-a243-3fb06ac33b7d">
+    <crosswordKBontology:hasClueText>Ulrich and Hetfield hard rock band</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[9]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d0d01024-bce8-4026-86c0-21fa7474132b">
+        <crosswordKBontology:hasSolutionText>Metallica</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f2c3ae65-f20d-486e-9345-441873e164ec">
+        <crosswordKBontology:hasSolutionText>Mackenzie</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2fa119e6-4c28-4f09-92d1-c7929e0beaee">
+    <crosswordKBontology:hasClueText>"The Bad Boys from Boston" hard rock band</crosswordKBontology:hasClueText>
+    <crosswordKBontology:hasSolutionStructure>[9]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9489f345-df10-48ff-9759-5817a030555a">
+        <crosswordKBontology:hasSolutionText>Tallarico</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/66a42bbb-8767-4b6b-8b0f-2e5b89ae0470">
+        <crosswordKBontology:hasSolutionText>Aerosmith</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/dbf3fe2b-ff90-4f46-ae13-c7fd6e561bbd">
+        <crosswordKBontology:hasSolutionText>Mackenzie</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/49792f0d-4df7-4984-9c42-4229efb59ffd">
     <crosswordKBontology:solvedBy>
@@ -842,6 +1125,405 @@
     <crosswordKBontology:hasSolutionStructure>[5, 5]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/49b51191-8493-45fc-adef-933cfee5e1e3">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e4ab77bd-feda-44f5-b13b-5b25806ef468">
+        <crosswordKBontology:hasSolutionText>Hard</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasClueText>Hard rock glam band</crosswordKBontology:hasClueText>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7aa50a74-ea79-4fcf-bfe1-7eec65b95b24">
+        <crosswordKBontology:hasSolutionText>GLAM</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/aef1f1a1-5331-49d1-b530-818b0ca7f7c6">
+        <crosswordKBontology:hasSolutionText>Camp</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0e411762-8194-4b8c-b22c-86248384a2f4">
+        <crosswordKBontology:hasSolutionText>rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c74f5bff-1cc2-4398-969f-9646106d07f1">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/cb7ce3df-8eb2-4b4d-b1b5-81168a94fa9b">
+        <crosswordKBontology:hasSolutionText>soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a7c1595b-dbcc-4890-974c-ad71bf1617ee">
+        <crosswordKBontology:hasSolutionText>Live</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ebbf9dc7-ea48-41be-83ec-dd80c0b0394c">
+        <crosswordKBontology:hasSolutionText>Boot</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/dbefb89e-3e28-40bb-b14a-6391206bf0d4">
+        <crosswordKBontology:hasSolutionText>Game</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f11c4d78-c1c1-4b9f-a756-1b556fa3adee">
+        <crosswordKBontology:hasSolutionText>Call</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c3c9fa32-371b-4f4f-aff9-59077428bae6">
+        <crosswordKBontology:hasSolutionText>show</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8fc4c65f-2d72-43e2-9b20-e0dec335c46e">
+        <crosswordKBontology:hasSolutionText>Glam</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d123f498-186b-460e-b135-89c3430cd9eb">
+        <crosswordKBontology:hasSolutionText>Gang</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/18e129ed-ab9f-45fc-b4da-4212b0d53dac">
+        <crosswordKBontology:hasSolutionText>song</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/642a9746-fff0-4ed2-923c-b7616e97ae4c">
+        <crosswordKBontology:hasSolutionText>Loud</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/566ae213-2572-438f-b6b3-8a5e7700d335">
+        <crosswordKBontology:hasSolutionText>Live</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/748d3caa-02db-4c8c-9bdc-837ec2d8b380">
+        <crosswordKBontology:hasSolutionText>Bush</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8c01fc4c-39a3-4c07-b1b9-7002c8aeb0b3">
+        <crosswordKBontology:hasSolutionText>HARD</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6b8fcffb-5ee3-48b1-aad0-eac6c77c4fbc">
+        <crosswordKBontology:hasSolutionText>Call</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b01b1f39-d4e5-449c-bbb8-91726f69f68d">
+        <crosswordKBontology:hasSolutionText>Bjrn</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/405a858e-840e-4a55-b1ef-4152704e9afb">
+        <crosswordKBontology:hasSolutionText>GLAM</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/73b2b3ef-c384-4d71-8af6-0498d51ee0ac">
+        <crosswordKBontology:hasSolutionText>VOTA</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d0d70c4d-e500-414b-94f0-c83bd2f60a29">
+        <crosswordKBontology:hasSolutionText>Bjrn</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6c81a6cd-e68c-4b86-a79d-e2ba7113a635">
+        <crosswordKBontology:hasSolutionText>What</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/01374055-6bf6-43c5-9a24-00a477c695a9">
+        <crosswordKBontology:hasSolutionText>Edge</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a20ab14c-4de2-4ec9-aac1-efe032a0c404">
+        <crosswordKBontology:hasSolutionText>What</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e2962ea1-28a5-4fa9-a43f-57e139fe2463">
+        <crosswordKBontology:hasSolutionText>song</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a4de2ca4-69c8-4b53-a5c2-4a54401848d6">
+        <crosswordKBontology:hasSolutionText>Call</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7fb17d89-5ba6-48ea-ae3a-a2a952dde000">
+        <crosswordKBontology:hasSolutionText>Edge</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a7ae0bf8-9ba1-4675-a7cd-06e70fb95486">
+        <crosswordKBontology:hasSolutionText>Glam</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c5a3ce4c-6aee-42e3-a921-80d799ca5824">
+        <crosswordKBontology:hasSolutionText>Soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9f892e45-6bbc-46e3-996d-f0765f1cb06e">
+        <crosswordKBontology:hasSolutionText>Tour</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8c9e909c-633b-46a3-acf8-480cec547f0b">
+        <crosswordKBontology:hasSolutionText>Boot</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c53768c-c548-4832-a230-70e4b75f5c52">
+        <crosswordKBontology:hasSolutionText>Loud</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1ceccd14-052e-4a92-be74-2d3a5134c84f">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f699474f-2eac-4791-b4fc-f7201a5a745d">
+        <crosswordKBontology:hasSolutionText>VOTA</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d32fd547-4f43-485a-9f29-12117496a1c6">
+        <crosswordKBontology:hasSolutionText>Soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7d2ef00b-4f96-4e07-b1c2-336a9ad74e0b">
+        <crosswordKBontology:hasSolutionText>Rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/262583db-9c2c-456d-ab1a-74e3e27cf138">
+        <crosswordKBontology:hasSolutionText>Mars</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e0331862-d5b0-46e5-aec5-9ba62277aa18">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7fb60170-e322-4075-8bb3-8c1ac92993e1">
+        <crosswordKBontology:hasSolutionText>show</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8c01c7fe-961b-4a90-ab4e-186250974e37">
+        <crosswordKBontology:hasSolutionText>soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6de0e0d7-bd12-4e8a-90bc-2214a5a1423d">
+        <crosswordKBontology:hasSolutionText>Rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ad26b37d-2d26-4e0c-ab4e-02a61a22f510">
+        <crosswordKBontology:hasSolutionText>Gang</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6f42f146-fb78-4856-9a27-d47475e6e1c9">
+        <crosswordKBontology:hasSolutionText>Leor</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6f24d460-3a26-4b8f-86ee-082e141fff33">
+        <crosswordKBontology:hasSolutionText>Camp</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2c0c7939-7464-4a24-9630-d4f5a9e94bf5">
+        <crosswordKBontology:hasSolutionText>VOTA</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/97d65a7c-4a43-4dfd-97f9-770df57b716b">
+        <crosswordKBontology:hasSolutionText>HARD</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ae099dd6-e5cf-48ea-a292-615639983a8a">
+        <crosswordKBontology:hasSolutionText>Glam</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/daf0aa5b-4e8a-46d3-b3d6-2ee329af0b56">
+        <crosswordKBontology:hasSolutionText>Tour</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ad893f51-f159-4450-9f47-4fe8ccf1adaa">
+        <crosswordKBontology:hasSolutionText>Tour</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/aab57faf-aea2-4720-ac0b-ff755b139bac">
+        <crosswordKBontology:hasSolutionText>Mars</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/30f8399c-d778-4666-97fc-62fdd8de6f72">
+        <crosswordKBontology:hasSolutionText>Camp</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/816f0762-ed93-4e32-8270-d1b99d95abc3">
+        <crosswordKBontology:hasSolutionText>Clik</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c8460be-e6c2-432a-914d-4aac16207cd0">
+        <crosswordKBontology:hasSolutionText>Edge</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ccf78328-1e7f-42a7-ae55-abfea4ac2a75">
+        <crosswordKBontology:hasSolutionText>Gang</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d220b8de-10a9-41eb-ac20-d12f9fa94f91">
+        <crosswordKBontology:hasSolutionText>Rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/088d4eb7-90ce-4062-b7de-a348ca7adef7">
+        <crosswordKBontology:hasSolutionText>Bush</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/448bc269-c935-457d-a988-bee0442d2b0e">
+        <crosswordKBontology:hasSolutionText>Four</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/77ecd40b-9e15-448b-a08b-b7067390f065">
+        <crosswordKBontology:hasSolutionText>What</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/24ef73ab-c02d-45e3-b419-45f73acc64c4">
+        <crosswordKBontology:hasSolutionText>Live</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a998e832-3c02-4f7d-aeaa-2fb016d2213a">
+        <crosswordKBontology:hasSolutionText>Teen</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9f73b3fc-349c-488c-b38e-3fda85158898">
+        <crosswordKBontology:hasSolutionText>Boot</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/48e4d971-df72-4df0-89e2-af9f3e88387d">
+        <crosswordKBontology:hasSolutionText>HARD</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2691bffd-64e2-4280-8368-96f2f1ca0fe3">
+        <crosswordKBontology:hasSolutionText>Bush</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4b4acedb-962b-48fd-9f14-aa7f94bc93f8">
+        <crosswordKBontology:hasSolutionText>rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ade52cb4-9c6c-4a6e-b191-09c5d0547fa8">
+        <crosswordKBontology:hasSolutionText>Clik</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bc694aa0-11e7-4354-9a6f-2dd2693ac06a">
+        <crosswordKBontology:hasSolutionText>Teen</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/73552867-b4a9-4c9b-99e8-acf0e28954c0">
+        <crosswordKBontology:hasSolutionText>Four</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6c02e8e1-4aa0-4fd2-b3d0-9b9ed6bbd10f">
+        <crosswordKBontology:hasSolutionText>GLAM</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fb46fdb4-086d-4adc-9358-f862fb06e7a4">
+        <crosswordKBontology:hasSolutionText>Four</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/98f6c54f-86f7-43b2-90ba-3ca01fdf9241">
+        <crosswordKBontology:hasSolutionText>Bjrn</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6b28a5fb-4831-4336-a713-864ef68767f3">
+        <crosswordKBontology:hasSolutionText>Clik</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3fb59f84-387e-4a88-b029-ba2b8fe354c1">
+        <crosswordKBontology:hasSolutionText>Leor</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/859afe4d-11db-4c75-8589-328f4a6d7b5a">
+        <crosswordKBontology:hasSolutionText>Game</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/74fa68da-2319-4b7c-9a8d-878032f13acc">
+        <crosswordKBontology:hasSolutionText>Loud</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c4c02c99-99e2-423d-95a1-0c69441d6ae1">
+        <crosswordKBontology:hasSolutionText>song</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f2a639ae-3ad1-45c5-bb2a-c309cec91a68">
+        <crosswordKBontology:hasSolutionText>Mars</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/05c1e620-3449-424d-ab2e-679fce2621a3">
+        <crosswordKBontology:hasSolutionText>Leor</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b7c4c60d-9954-42e7-9f27-1a8164e76950">
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9be1ae88-ba28-4326-81eb-61afc1e1cbe2">
@@ -850,6 +1532,140 @@
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[6]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>"Witchy Woman" group</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/936f4f05-e010-451e-9cae-23589a7c3f5d">
+    <crosswordKBontology:hasClueText>Hard rock band </crosswordKBontology:hasClueText>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9d5f7474-32f8-426d-9e69-72ca349a5281">
+        <crosswordKBontology:hasSolutionText>Loud</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/98dd3f11-644b-40f3-9e78-40888c44462b">
+        <crosswordKBontology:hasSolutionText>Camp</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0c9ec35e-096d-4022-a678-2ef040ad0776">
+        <crosswordKBontology:hasSolutionText>Four</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d8c22a75-17a8-4ae1-b27b-c93ebf6bd83f">
+        <crosswordKBontology:hasSolutionText>song</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2a0a3fb3-614b-42a0-a9a9-8a8537e9f12b">
+        <crosswordKBontology:hasSolutionText>Game</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e56aa3dc-bb2f-4868-a301-0c574fc540fc">
+        <crosswordKBontology:hasSolutionText>show</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b2acd1e8-59ba-4c85-92fe-6f071e29c996">
+        <crosswordKBontology:hasSolutionText>Rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1b0afddc-0b25-4250-8e71-2a7bdc143e77">
+        <crosswordKBontology:hasSolutionText>Leor</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3ea5bfe0-f053-45fa-b7ac-cb0338b99775">
+        <crosswordKBontology:hasSolutionText>VOTA</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/60bd915b-21ac-428a-be5a-4e86ede2fda7">
+        <crosswordKBontology:hasSolutionText>Soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/393151cb-7f33-459d-b7a9-c50bcd4b7639">
+        <crosswordKBontology:hasSolutionText>Hard</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5e0af039-4d73-4103-b3c5-edc51c7dc2fa">
+        <crosswordKBontology:hasSolutionText>HARD</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fd735127-9fba-4a44-aabd-4e1919a15318">
+        <crosswordKBontology:hasSolutionText>Live</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d623653a-aa20-41d8-9257-6913314dd72a">
+        <crosswordKBontology:hasSolutionText>Bush</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2d5a00e9-7831-4548-ba2f-ecc55796bd38">
+        <crosswordKBontology:hasSolutionText>rock</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/428a76e9-5d4b-4a6c-bdaf-42795ee15ed4">
+        <crosswordKBontology:hasSolutionText>Tour</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fd1477f5-b3c1-4130-9e2f-4cbb084dda60">
+        <crosswordKBontology:hasSolutionText>What</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/50c719dd-6fc6-4392-bf31-b247333f0328">
+        <crosswordKBontology:hasSolutionText>Clik</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/06bdf571-fdd9-4312-8580-68ee39117016">
+        <crosswordKBontology:hasSolutionText>soul</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/02e9da31-704d-4861-a936-83b86a40ebd5">
+        <crosswordKBontology:hasSolutionText>Bjrn</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/be828c8c-e203-4a3c-96dc-b7f4223c6bc8">
+        <crosswordKBontology:hasSolutionText>Band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4c535180-33d2-4e0b-abef-1451239f545e">
+        <crosswordKBontology:hasSolutionText>band</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/dc5f1cad-a57d-4374-bf2a-f4f828bf20d5">
+        <crosswordKBontology:hasSolutionText>Gang</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a60f4311-5655-440e-afbb-0d0dcdb1a8b0">
+        <crosswordKBontology:hasSolutionText>Call</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8430a6a4-36fe-4fea-b599-d32638628794">
+        <crosswordKBontology:hasSolutionText>Boot</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f8dd8581-4eae-40ea-8ff3-e7dc4249003a">
+        <crosswordKBontology:hasSolutionText>Edge</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4e816aa5-1709-48c8-bfd0-28f95f863216">
     <crosswordKBontology:solvedBy>

@@ -30,7 +30,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:umbel2="http://umbel.org/umbel#"
      xmlns:dbpprop="http://dbpedia.org/property/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/" >
      
      
@@ -179,6 +179,14 @@
         <rdfs:label>style</rdfs:label>
         <rdfs:label>music style</rdfs:label>
         <rdfs:label>type of music</rdfs:label>
+        <rdfs:label>band</rdfs:label>
+        <rdfs:label>artist</rdfs:label>
+        <rdfs:label>singer</rdfs:label>
+        <rdfs:label>proponent</rdfs:label>
+        <rdfs:label>proponents</rdfs:label>
+        <rdfs:label>group</rdfs:label>
+        <rdfs:label>pioneer</rdfs:label>
+        <rdfs:label>pioneers</rdfs:label>
         
         <skos:prefLabel>genre of</skos:prefLabel>
 
@@ -474,21 +482,21 @@
     
     <!-- http://dbpedia.org/property/writer -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/property/writer">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/property/writer">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasComposer"/>
   	</owl:ObjectProperty>
   	
   	
     <!-- http://dbpedia.org/property/album -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/property/album">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/property/album">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasAlbum"/>
   	</owl:ObjectProperty>
   	
   	
   	<!-- http://dbpedia.org/property/title -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/property/title">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/property/title">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasComposition"/>
   		<owl:inverseOf rdf:resource="http://dbpedia.org/property/album"/>
   	</owl:ObjectProperty>
@@ -496,14 +504,14 @@
   	
   	<!-- http://dbpedia.org/property/producer -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/property/producer">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/property/producer">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasProducer"/>
   	</owl:ObjectProperty>
   	
   	
   	<!-- http://dbpedia.org/property/label -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/property/label">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/property/label">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasRecordLabel"/>
   	</owl:ObjectProperty>
   	
@@ -513,7 +521,7 @@
 	
 	<!-- http://dbpedia.org/ontology/album -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/ontology/album">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/album">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasAlbum"/>
   	</owl:ObjectProperty>
 	
@@ -585,13 +593,13 @@
     
     <!-- http://dbpedia.org/ontology/genre -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/ontology/genre">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/genre">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasGenre"/>
   	</owl:ObjectProperty>
   	
   	<!-- http://dbpedia.org/ontology/writer -->
   	
-  	<owl:ObjectProperty rdf:resource="http://dbpedia.org/ontology/writer">
+  	<owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/writer">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasComposer"/>
   	</owl:ObjectProperty>
   	
@@ -600,7 +608,7 @@
   	
   	<!-- http://schema.org/genre -->
   	
-  	<owl:ObjectProperty rdf:resource="http://schema.org/genre">
+  	<owl:ObjectProperty rdf:about="http://schema.org/genre">
   		<rdfs:subPropertyOf rdf:resource="http://www.griffithsben.com/ontologies/pop.owl#hasGenre"/>
   	</owl:ObjectProperty>
 
