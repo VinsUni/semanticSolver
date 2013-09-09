@@ -13286,3 +13286,1342 @@
 18:21:05 DEBUG ClueQueryTask             :: System exit requested by user
 18:21:05 DEBUG SemanticSolverImpl        :: Writing out crosswordKB to disk
 18:21:05 DEBUG SemanticSolverImpl        :: CrosswordKB written to disk
+18:24:18 DEBUG ClueImpl                  :: calling substring(0,1) on the String "Firework"
+18:24:18 DEBUG ClueImpl                  :: calling substring(0,1) on the String "singer"
+18:24:18 DEBUG ClueImpl                  :: calling substring(0,1) on the String "singer"
+18:24:18 DEBUG ClueImpl                  :: Clue text = Firework singer
+18:24:18 DEBUG ClueImpl                  :: Clue fragments generated:
+18:24:18 DEBUG ClueImpl                  :: Firework
+18:24:18 DEBUG ClueImpl                  :: Firework Singer
+18:24:18 DEBUG ClueImpl                  :: Singer
+18:24:18 DEBUG SemanticSolverImpl        :: commonClueFragments.txt successfully loaded
+18:24:22 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Firework_(song)
+18:24:24 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Firework_(song)
+18:24:25 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Firework_(song)
+18:24:25 DEBUG ClueQueryTask             :: rootResource is null = false
+18:24:25 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: ????????@ja
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@de
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@cs
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ko
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ru
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@es
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@no
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@ca
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@vi
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@pt
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@nl
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@it
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@pl
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework (song)@en
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework (kappale)@fi
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework (chanson)@fr
+18:24:25 DEBUG ClueQueryTask             :: Found label of root resource: Firework@en
+18:24:25 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Firework_%28song%29
+18:24:26 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Firework_%28song%29
+18:24:27 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Firework_%28song%29
+18:24:27 DEBUG ClueQueryTask             :: rootResource is null = false
+18:24:27 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Firework (song)@en
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Firework@en
+18:24:27 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Fireworks
+18:24:27 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Fireworks
+18:24:27 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Fireworks
+18:24:27 DEBUG ClueQueryTask             :: rootResource is null = false
+18:24:27 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Oh?ostroj@cs
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Fyrverkeri@sv
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Fyrverkeri@no
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Fogos de artifício@pt
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: ????????@uk
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Pháo hoa@vi
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: T?zijáték@hu
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Ilotulitus@fi
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Feu d'artifice@fr
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Fuochi d'artificio@it
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: ?????????@ru
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: ????@ko
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Fireworks@en
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Focs artificials@ca
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: ??@zh
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: ??@ja
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Sztuczne ognie@pl
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Vuurwerk@nl
+18:24:27 DEBUG ClueQueryTask             :: Found label of root resource: Feuerwerk@de
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 5.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2010sSingers: 2010s singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/ActorsFromCalifornia: Actors from California
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFemaleGuitarists: American female guitarists
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanBloggers: American bloggers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/LivingPeople: Living people
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/LivingPeople: living people
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/PeopleFromSantaBarbara,California: People from Santa Barbara, California
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/CapitolRecordsArtists: Capitol Records artists
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2000sSingers: 2000s singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: ????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: musical artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: artista musical
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: ???
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: musicien
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: instrumentalist
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: musician
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/English-languAgeSingers: English-languAge singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPeopleOfPortuguEseDescent: American people of PortuguEse descent
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/21st-centuryActors: 21st-century actors
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanVoiceActors: American voice actors
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusiciansFromCalifornia: musicians from California
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusiciansFromCalifornia: Musicians from California
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: persona
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: Oseba
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: Person
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: personne
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: ??????????? ????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: pessoa
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: person
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPopSingers: American pop singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: somebody
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: individuAl
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: person
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: soul
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: someone
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: mortal
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFilmActors: American film actors
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: ???
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: ???????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: Künstler
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: artiste
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanContraltos: American contraltos
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPeopleOfGermanDescent: American people of German descent
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Agent: agent
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanDanceMusicians: American dance musicians
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/TheXFactorJuDges: The X Factor juDges
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/FemaleRockSingers: Female rock singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFemaleSingers: American female singers
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: musician
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: rocker
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: artiste
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: pop singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Katy_Perry:
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/class/yago/Musician110340312
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/MusicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/MusicPerformanceAgent
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/class/yago/Singer110599806
+18:24:28 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/MusicalPerformer
+18:24:28 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Artist_Performer
+18:24:28 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Musician
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Katy_Perry:
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 6.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Katy_Perry - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/class/yago/Musician110340312>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/ontology/MusicalArtist>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/MusicPerformanceAgent>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/class/yago/Singer110599806>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/MusicalPerformer>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Artist_Performer>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Artist>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Musician>. } UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Katy_Perry>} } - has result: 6.0
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 3.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByDr.Luke: Albums produCED by Dr. Luke
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/CapitolRecordsAlbums: Capitol Records albums
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByThe-Dream: Albums produCED by The-Dream
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/UpcomingAlbums: Upcoming albums
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/UpcomingAlbums: upcoming albums
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2010Albums: 2010 albums
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/KatyPerryAlbums: Katy Perry albums
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByStargate: Albums produCED by Stargate
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByTrickyStewart: Albums produCED by Tricky Stewart
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByMaxMartin: Albums produCED by Max Martin
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByGregWells: Albums produCED by Greg Wells
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album):
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album):
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} } - has result: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29:
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29:
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29 - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} } - has result: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29:
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29:
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29 - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_37_%28U.S._series%29>} } - has result: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series):
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series):
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} } - has result: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:28 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:28 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series):
+18:24:28 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series):
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:28 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:28 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:28 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_77_(UK_series)>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29:
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29:
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29 - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29:
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29:
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29 - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} UNION {<http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That%27s_What_I_Call_Music%21_77_%28UK_series%29>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series):
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series):
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series):
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series):
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} UNION {<http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Now_That's_What_I_Call_Music!_37_(U.S._series)>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 1.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29:
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29:
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29 - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29>} UNION {<http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29>} UNION {<http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29>} UNION {<http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_(song)>} UNION {<http://dbpedia.org/resource/Firework_(song)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Teenage_Dream_%28Katy_Perry_album%29>} } - has result: 0.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 5.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2010sSingers: 2010s singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/ActorsFromCalifornia: Actors from California
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFemaleGuitarists: American female guitarists
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanBloggers: American bloggers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/LivingPeople: Living people
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/LivingPeople: living people
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/PeopleFromSantaBarbara,California: People from Santa Barbara, California
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/CapitolRecordsArtists: Capitol Records artists
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2000sSingers: 2000s singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: ????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: musical artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: artista musical
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: ???
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalArtist: musicien
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: instrumentalist
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: player
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Musician110340312: musician
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/English-languAgeSingers: English-languAge singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPeopleOfPortuguEseDescent: American people of PortuguEse descent
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/21st-centuryActors: 21st-century actors
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanVoiceActors: American voice actors
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusiciansFromCalifornia: musicians from California
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusiciansFromCalifornia: Musicians from California
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: persona
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: Oseba
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: Person
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: personne
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: ??????????? ????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: pessoa
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Person: person
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPopSingers: American pop singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: somebody
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: individuAl
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: person
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: soul
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: someone
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Person100007846: mortal
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFilmActors: American film actors
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: ???
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: ???????????
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: Künstler
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: artiste
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Artist: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanContraltos: American contraltos
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPeopleOfGermanDescent: American people of German descent
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Agent: agent
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanDanceMusicians: American dance musicians
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/TheXFactorJuDges: The X Factor juDges
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/FemaleRockSingers: Female rock singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanFemaleSingers: American female singers
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: musician
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: rocker
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: artiste
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: pop singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#artist: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:29 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Katy_Perry:
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/class/yago/Musician110340312
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/MusicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/MusicPerformanceAgent
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/class/yago/Singer110599806
+18:24:29 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/MusicalPerformer
+18:24:29 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Artist_Performer
+18:24:29 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Musician
+18:24:29 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Katy_Perry:
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:29 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 6.0
+18:24:29 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Katy_Perry - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/class/yago/Musician110340312>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/ontology/MusicalArtist>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/MusicPerformanceAgent>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://dbpedia.org/class/yago/Singer110599806>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/MusicalPerformer>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Artist_Performer>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Artist>. } UNION {<http://dbpedia.org/resource/Katy_Perry> rdf:type <http://umbel.org/umbel/rc/Musician>. } UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Katy_Perry>} UNION {<http://dbpedia.org/resource/Katy_Perry> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Katy_Perry>} } - has result: 6.0
+18:24:29 DEBUG SolutionScorerImpl        :: Number of links found: 2.0
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByDr.Luke: Albums produCED by Dr. Luke
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: record album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/Album106591815: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/CapitolRecordsAlbums: Capitol Records albums
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByThe-Dream: Albums produCED by The-Dream
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/UpcomingAlbums: Upcoming albums
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/UpcomingAlbums: upcoming albums
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2010Albums: 2010 albums
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/KatyPerryAlbums: Katy Perry albums
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByStargate: Albums produCED by Stargate
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: Album
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: ??
+18:24:29 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Album: album
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByTrickyStewart: Albums produCED by Tricky Stewart
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: work
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: Werk
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: obra
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: travail
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Work: ??????????
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByMaxMartin: Albums produCED by Max Martin
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AlbumsProduCEDByGregWells: Albums produCED by Greg Wells
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: musical work
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/MusicalWork: œuvre musicale
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: platter
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: album
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: record
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: LP
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: long player
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#album: release
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: release
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: single
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: hit
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: song
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: tune
+18:24:30 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#composition: composition
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:30 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:30 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album):
+18:24:30 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album):
+18:24:30 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:30 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:30 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:30 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:30 DEBUG SolutionScorerImpl        :: Number of links found: 0.0
+18:24:30 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album) - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} UNION {<http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Firework_%28song%29>} UNION {<http://dbpedia.org/resource/Firework_%28song%29> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Teenage_Dream_(Katy_Perry_album)>} } - has result: 0.0
+18:24:52 DEBUG ClueImpl                  :: calling substring(0,1) on the String "Zaireeka"
+18:24:52 DEBUG ClueImpl                  :: calling substring(0,1) on the String "band"
+18:24:52 DEBUG ClueImpl                  :: calling substring(0,1) on the String "band"
+18:24:52 DEBUG ClueImpl                  :: Clue text = Zaireeka band
+18:24:52 DEBUG ClueImpl                  :: Clue fragments generated:
+18:24:52 DEBUG ClueImpl                  :: Zaireeka
+18:24:52 DEBUG ClueImpl                  :: Zaireeka Band
+18:24:52 DEBUG ClueImpl                  :: Band
+18:24:53 DEBUG ClueQueryTask             :: Constructing model around http://dbpedia.org/resource/Zaireeka
+18:24:54 DEBUG ClueQueryTask             :: Constructing second model around http://dbpedia.org/resource/Zaireeka
+18:24:54 DEBUG ClueQueryTask             :: rootResourceUri = http://dbpedia.org/resource/Zaireeka
+18:24:54 DEBUG ClueQueryTask             :: rootResource is null = false
+18:24:54 DEBUG ClueQueryTask             :: rootLabels.hasNext() = true
+18:24:54 DEBUG ClueQueryTask             :: Found label of root resource: Zaireeka@pl
+18:24:54 DEBUG ClueQueryTask             :: Found label of root resource: Zaireeka@pt
+18:24:54 DEBUG ClueQueryTask             :: Found label of root resource: Zaireeka@no
+18:24:54 DEBUG ClueQueryTask             :: Found label of root resource: Zaireeka@en
+18:24:54 DEBUG ClueQueryTask             :: Found label of root resource: Zaireeka@es
+18:24:54 DEBUG SolutionScorerImpl        :: Number of links found: 4.0
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Agent: agent
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusicalGroupsFromOklahoma: Musical groups from Oklahoma
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/AmericanPsychedelicRockMusicGroups: American psychedelic rock music groups
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: ??
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: organisation
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: organisation
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: Organisation
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: organizacija
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Organisation: organização
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/2000sMusicGroups: 2000s music groups
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/1990sMusicGroups: 1990s music groups
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.w3.org/2002/07/owl#Thing: Thing
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: banda
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: Musikgruppe
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: groupe de musique
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: banda
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: ?? ??
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: Band
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/ontology/Band: ??????? ??????????
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://dbpedia.org/class/yago/MusicalGroupsEstablishedIn1983: Musical groups established in 1983
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: group
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: supergroup
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: outfit
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: quartet
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: quintet
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: trio
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: band
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: collective
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: sextet
+18:24:54 DEBUG SolutionScorerImpl        :: Found type label for http://www.griffithsben.com/ontologies/pop.owl#group: duo
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: has composer
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: composed by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: singer
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: group
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: released by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: band
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: has artist
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: sung by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: composition of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: song by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: written by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: composer of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: track
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: writer of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: number
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: has composition
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: has album
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: release
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: song from
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: LP
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: album from
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: track from
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: record by
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: long player
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: record
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: from album
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: producer of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: producer
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: sung
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: sang
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: hit
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: singer of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: song
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: artist of
+18:24:54 DEBUG SolutionScorerImpl        :: Found predicate label: artist
+18:24:54 DEBUG SolutionScorerImpl        :: Recognised the following types in the solutionResource http://dbpedia.org/resource/The_Flaming_Lips:
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/Band
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/class/yago/Group100031264
+18:24:54 DEBUG SolutionScorerImpl        :: http://schema.org/MusicGroup
+18:24:54 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/Band_MusicGroup
+18:24:54 DEBUG SolutionScorerImpl        :: http://umbel.org/umbel/rc/MusicPerformanceOrganization
+18:24:54 DEBUG SolutionScorerImpl        :: Recognised the following properties of the solutionResource http://dbpedia.org/resource/The_Flaming_Lips:
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/property/artist
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalArtist
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/artist
+18:24:54 DEBUG SolutionScorerImpl        :: http://dbpedia.org/ontology/musicalBand
+18:24:55 DEBUG SolutionScorerImpl        :: Number of links found: 5.0
+18:24:55 DEBUG SolutionScorerImpl        :: Second count query for solutionResource http://dbpedia.org/resource/The_Flaming_Lips - PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> select (count(*) as ?count) where { {<http://dbpedia.org/resource/The_Flaming_Lips> rdf:type <http://dbpedia.org/ontology/Band>. } UNION {<http://dbpedia.org/resource/The_Flaming_Lips> rdf:type <http://dbpedia.org/class/yago/Group100031264>. } UNION {<http://dbpedia.org/resource/The_Flaming_Lips> rdf:type <http://schema.org/MusicGroup>. } UNION {<http://dbpedia.org/resource/The_Flaming_Lips> rdf:type <http://umbel.org/umbel/rc/Band_MusicGroup>. } UNION {<http://dbpedia.org/resource/The_Flaming_Lips> rdf:type <http://umbel.org/umbel/rc/MusicPerformanceOrganization>. } UNION {<http://dbpedia.org/resource/The_Flaming_Lips> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Zaireeka>} UNION {<http://dbpedia.org/resource/Zaireeka> <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/The_Flaming_Lips>} UNION {<http://dbpedia.org/resource/The_Flaming_Lips> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Zaireeka>} UNION {<http://dbpedia.org/resource/Zaireeka> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/The_Flaming_Lips>} UNION {<http://dbpedia.org/resource/The_Flaming_Lips> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/Zaireeka>} UNION {<http://dbpedia.org/resource/Zaireeka> <http://dbpedia.org/ontology/artist> <http://dbpedia.org/resource/The_Flaming_Lips>} UNION {<http://dbpedia.org/resource/The_Flaming_Lips> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/Zaireeka>} UNION {<http://dbpedia.org/resource/Zaireeka> <http://dbpedia.org/ontology/musicalBand> <http://dbpedia.org/resource/The_Flaming_Lips>} } - has result: 5.0
+18:25:03 DEBUG ClueQueryTask             :: System exit requested by user
+18:25:03 DEBUG SemanticSolverImpl        :: Writing out crosswordKB to disk
+18:25:04 DEBUG SemanticSolverImpl        :: CrosswordKB written to disk
