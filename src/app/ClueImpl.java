@@ -27,6 +27,7 @@ public class ClueImpl implements Clue {
 	private static Logger log = Logger.getLogger(ClueImpl.class);
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
+	private final String[] PUNCTUATION = {":", ";", ",", ".", "-"};
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	
@@ -165,7 +166,8 @@ public class ClueImpl implements Clue {
 					thisWord = thisWord.replace("(", "");
 					thisWord = thisWord.replace(")", "");
 				}
-				this.getClueFragments().add(thisWord);
+				if(this.notSolelyPunctuation(thisWord))
+					this.getClueFragments().add(thisWord);
 				
 				/*
 				this.getClueFragments().add(thisWord);
@@ -191,7 +193,8 @@ public class ClueImpl implements Clue {
 						thisWord = thisWord.replace("(", "");
 						thisWord = thisWord.replace(")", "");
 					}
-					this.getClueFragments().add(thisWord);
+					if(this.notSolelyPunctuation(thisWord))
+						this.getClueFragments().add(thisWord);
 					
 					
 					/*
@@ -278,6 +281,14 @@ public class ClueImpl implements Clue {
 				}
     		}
     	}
+    }
+    
+    private boolean notSolelyPunctuation(String text) {
+    	for(int i = 0; i < this.PUNCTUATION.length; i++) {
+    		if(this.PUNCTUATION[i].equals(text))
+    			return false;
+    	}
+    	return true;
     }
     
     /**
