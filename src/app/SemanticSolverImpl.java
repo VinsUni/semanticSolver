@@ -225,6 +225,7 @@ public class SemanticSolverImpl implements SemanticSolver {
         	solutions = null;
         	this.addSolutionsToKnowledgeBase(uniqueSolutions);
         	
+        	uniqueSolutions = this.sortByConfidenceLevel(uniqueSolutions);
         	
         	for(Solution solution : uniqueSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
@@ -249,6 +250,22 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void persistKnowledgeBase() {
 		this.getKnowledgeBaseManager().persistKnowledgeBase();
+	}
+	
+	private ArrayList<Solution> sortByConfidenceLevel(ArrayList<Solution> solutions) {
+		for(int i = 0; i < solutions.size(); i++) {
+			Solution thisSolution = solutions.get(i);
+			for(int j = i + 1; j < solutions.size(); j++) {
+				if(solutions.get(j).getConfidence() > thisSolution.getConfidence()) {
+					Solution temp = solutions.get(j);
+					solutions.remove(j);
+					solutions.add(j, thisSolution);
+					solutions.remove(i);
+					solutions.add(i, temp);
+				}
+			}
+		}
+		return solutions;
 	}
 	
 	private void addSolutionsToKnowledgeBase(ArrayList<Solution> solutions) {

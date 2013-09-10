@@ -43,7 +43,7 @@ public class ClueSolverImpl implements ClueSolver {
 		
 		if(acceptedSolutions.size() > 0)
 			this.setBestSolution(acceptedSolutions.get(0));
-		
+
 		return acceptedSolutions;
 	}
 
