@@ -269,9 +269,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		StmtIterator rootLabels = this.getInfModel().listStatements(rootResourceLabelSelector);
 		
 		/* Logging */
-		log.debug("rootResourceUri = " + rootResourceUri);
-		log.debug("rootResource is null = " + (rootResource == null));
-		log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
+		//log.debug("rootResourceUri = " + rootResourceUri);
+		//log.debug("rootResource is null = " + (rootResource == null));
+		//log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
 		
 		while(rootLabels.hasNext()) {
 			Statement stmnt = rootLabels.nextStatement();
@@ -284,7 +284,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			}
 			
 			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource);
-			log.debug("Found label of root resource: " + rootLabelLiteral.toString());
+			//log.debug("Found label of root resource: " + rootLabelLiteral.toString());
 		}
 	}
 	
@@ -352,7 +352,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 					return;
 				if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
 					return;
-				
+				log.debug("Constructing solution with label " + candidateLabel + " and solutionResource " + solutionResource.getURI());
 				this.constructSolution(candidateLabel, solutionResource, clueResource);
 			}
 	}

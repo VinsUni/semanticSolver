@@ -6,6 +6,9 @@ package app;
 import java.awt.Cursor;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.ListIterator;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
@@ -188,44 +191,16 @@ public class SemanticSolverImpl implements SemanticSolver {
         	for(Solution solution: solutions) {
              	solution.setScore(solutionScorer.score(solution));
         	}
-        	/* Filter out any solutions that duplicate a solution with a higher confidence level */
-        	ArrayList<Solution> filteredSolutions = new ArrayList<Solution>();
-        	for(int i = 0; i < solutions.size(); i++) {
-        		boolean notADupe = true;
-        		int j = 0;
-        		while(notADupe && j < solutions.size()) {
-        			if(i != j && solutions.get(j).getSolutionText().equals(solutions.get(i).getSolutionText())
-        				&& solutions.get(j).getConfidence() > solutions.get(i).getConfidence())
-        				notADupe = false;
-        			j++;
-        		}
-        		if(notADupe)
-        			filteredSolutions.add(solutions.get(i));
-        	}
         	
-        	/* We still have potential dupes in our filtered solutions, where text and confidence are both exactly equal */
-        	ArrayList<Solution> uniqueSolutions = new ArrayList<Solution>();
-        	for(int i = 0; i < filteredSolutions.size(); i++) {
-        		Solution thisSolution = filteredSolutions.get(i);
-        		boolean notADupe = true;
-        		for(int j = i + 1; j < filteredSolutions.size(); j++) {
-        			if(thisSolution.getSolutionText().equals(filteredSolutions.get(j).getSolutionText())) {
-        				notADupe = false;
-        				break;
-        			}
-        		}
-        		if(notADupe)
-    				uniqueSolutions.add(thisSolution);
-        	}
-        	solutions = null;
-        	this.addSolutionsToKnowledgeBase(uniqueSolutions);
+        	this.addSolutionsToKnowledgeBase(solutions);
         	
-        	uniqueSolutions = this.sortByConfidenceLevel(uniqueSolutions);
+        	/* Filter out any solutions that duplicate a solution with a higher confidence level, and sort in order of confidence */
+        	ArrayList<Solution> filteredSolutions = this.sortAndFilterSolutions(solutions);
         	
-        	for(Solution solution : uniqueSolutions)
+        	for(Solution solution : filteredSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
         					solution.getConfidence() + "%)\n";
-        	uniqueSolutions = null;
+        	solutions = null; // allow the garbage collector to remove solutions from memory immediately
         	long endTime = System.nanoTime();
 			long durationInSecs = (endTime - startTime) / NANOSECONDS_IN_ONE_SECOND;
 			resultsBuffer += "Time taken to process this clue: " + durationInSecs + "s\n";
@@ -247,19 +222,29 @@ public class SemanticSolverImpl implements SemanticSolver {
 		this.getKnowledgeBaseManager().persistKnowledgeBase();
 	}
 	
-	private ArrayList<Solution> sortByConfidenceLevel(ArrayList<Solution> solutions) {
-		for(int i = 0; i < solutions.size(); i++) {
-			Solution thisSolution = solutions.get(i);
-			for(int j = i + 1; j < solutions.size(); j++) {
-				if(solutions.get(j).getConfidence() > thisSolution.getConfidence()) {
-					Solution temp = solutions.get(j);
-					solutions.remove(j);
-					solutions.add(j, thisSolution);
-					solutions.remove(i);
-					solutions.add(i, temp);
-				}
+	private ArrayList<Solution> sortAndFilterSolutions(ArrayList<Solution> solutions) {
+		ArrayList<Solution> sortedSolutions = this.sortByConfidenceLevel(solutions);
+		ArrayList<Solution> filteredSolutions = new ArrayList<Solution>();
+		ArrayList<String> filteredSolutionTexts = new ArrayList<String>();
+		for(int i = 0; i < sortedSolutions.size(); i++) {
+			Solution thisSolution = sortedSolutions.get(i);
+			if(!filteredSolutionTexts.contains(thisSolution.getSolutionText())) {
+				filteredSolutions.add(thisSolution);
+				filteredSolutionTexts.add(thisSolution.getSolutionText());
 			}
 		}
+		return filteredSolutions;
+	}
+	
+	private ArrayList<Solution> sortByConfidenceLevel(ArrayList<Solution> solutions) {
+		
+		class SolutionConfidenceComparator implements Comparator<Solution> {
+		    @Override
+		    public int compare(Solution firstSolution, Solution secondSolution) {
+		        return secondSolution.getConfidence() - firstSolution.getConfidence();
+		    }
+		}
+		Collections.sort(solutions, new SolutionConfidenceComparator());
 		return solutions;
 	}
 	

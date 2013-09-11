@@ -72,6 +72,10 @@ public class SolutionScorerImpl implements SolutionScorer {
 		this.setSolution(null);
 		this.setClue(null);
 		
+		// DEBUGGING ********************************************************************************************************
+		System.out.println("Solution with text " + solution.getSolutionText() + " and solutionResource " +
+				solution.getSolutionResource().getURI() + " scores " + distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution);
+		
 		return distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution;
 	}
 	
@@ -104,7 +108,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisLabel = thisTypeLabelStatement.getString();
 				thisLabel = stripLanguageTag(thisLabel);
 				
-				log.debug("Found type label for " + thisType.getURI() + ": " + thisLabel);
+				//log.debug("Found type label for " + thisType.getURI() + ": " + thisLabel);
 				
 				String nameSpace = thisType.getNameSpace();
 				if(nameSpace != null && nameSpace.equals(Pop.POP_URI)) {
@@ -165,7 +169,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				String thisPredicateLabel = thisPredicateLabelStatement.getString();
 				thisPredicateLabel = stripLanguageTag(thisPredicateLabel);
 				
-				log.debug("Found predicate label: " + thisPredicateLabel);
+				//log.debug("Found predicate label: " + thisPredicateLabel);
 				
 				String nameSpace = thisPredicate.getNameSpace();
 				if(nameSpace != null && nameSpace.equals(Pop.POP_URI)) {

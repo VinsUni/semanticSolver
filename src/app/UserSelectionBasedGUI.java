@@ -1,7 +1,7 @@
 /**
  * 
  */
-package framework.remotePrototype;
+package app;
 
 import java.awt.Cursor;
 import java.awt.Dimension;
@@ -28,10 +28,6 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 import javax.swing.JTextField;
-
-import app.ClueImpl;
-import app.DisplayPanel;
-import app.EntityRecogniserTask;
 
 import lombok.AccessLevel;
 import lombok.Getter;

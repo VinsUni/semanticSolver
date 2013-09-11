@@ -106,60 +106,42 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	                                                  DBPPROP_PREFIX_DECLARATION + " " +
 	                                                  DB_OWL_PREFIX_DECLARATION + " " +
 	                                                  FOAF_PREFIX_DECLARATION +
-	                                " select distinct ?resource ?typeLabel {" +
+	                                " select distinct ?resource {" +
 	                               " {" +
-	                                        "{ select distinct ?resource ?typeLabel" +
-	                                        " where {?resource rdfs:label " + wrappedClueFragment + "." +
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        "{ select distinct ?resource" +
+	                                        " where {?resource rdfs:label " + wrappedClueFragment + ".}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
-	                                        "  where {?resource dbpprop:name " + wrappedClueFragment + "." +
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        " { select distinct ?resource" +
+	                                        "  where {?resource dbpprop:name " + wrappedClueFragment + ".}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
-	                                        "  where {?resource foaf:givenName " + wrappedClueFragment + "." +
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        " { select distinct ?resource" +
+	                                        "  where {?resource foaf:givenName " + wrappedClueFragment + ".}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
-	                                        "  where {?resource foaf:surname " + wrappedClueFragment + "." +
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        " { select distinct ?resource" +
+	                                        "  where {?resource foaf:surname " + wrappedClueFragment + ".}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
+	                                        " { select distinct ?resource" +
 	                                        "  where {?redirectingResource rdfs:label " + wrappedClueFragment + "." +
-	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
-	
+	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource.}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
+	                                        " { select distinct ?resource" +
 	                                        "  where {?redirectingResource dbpprop:name " + wrappedClueFragment + "." +
-	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource.}" +
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
+	                                        " { select distinct ?resource" +
 	                                        "  where {?redirectingResource foaf:givenName " + wrappedClueFragment + "." +
-	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
+	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource.}" + 
 	                                        " }" +
 	                                        " UNION" +
-	                                        " { select distinct ?resource ?typeLabel" +
+	                                        " { select distinct ?resource" +
 	                                        "  where {?redirectingResource foaf:surname " + wrappedClueFragment + "." +
-	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                                 " ?resource rdf:type ?type." +
-	                                                 " ?type rdfs:label ?typeLabel.}" +
-	
+	                                        "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource.}" +
 	                                        " }" +
 	                               " }" + 
 	                     " }" +
@@ -168,7 +150,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	     Query query = QueryFactory.create(SPARQLquery);
 	     QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
 	     try {
-	
 	              ResultSet resultSet = queryExecution.execSelect();
 	              while(resultSet.hasNext()) {
 	                       QuerySolution querySolution = resultSet.nextSolution();
@@ -182,11 +163,9 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	                       }
 	
 	                       String resourceUri = thisResource.getURI();
-	                       
-	                       if(!this.getRecognisedResourceUris().contains(resourceUri)) {
-	                    	   this.getRecognisedResourceUris().add(resourceUri);
-	                    	   log.debug("Recognised resource: " + resourceUri);
-	                       }
+
+	                       this.getRecognisedResourceUris().add(resourceUri);
+	                       log.debug("Recognised resource: " + resourceUri);
 	              }
 	              queryExecution.close();   
 	     }

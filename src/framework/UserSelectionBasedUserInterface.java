@@ -7,9 +7,8 @@ import java.util.ArrayList;
 
 import java.beans.PropertyChangeListener;
 
-import framework.remotePrototype.RecognisedResource;
-
 import app.DisplayPanel;
+import app.RecognisedResource;
 
 /**
  * @author Ben Griffiths
