@@ -32,7 +32,7 @@ import framework.Clue;
  * @author Ben Griffiths
  *
  */
-public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResource>, Void> {
+public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	private static Logger log = Logger.getLogger(EntityRecogniserTask.class);
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED IN QUERYIMPL
@@ -48,7 +48,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
 
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) ArrayList<RecognisedResource> recognisedResources;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) Map<String, Boolean> commonClueFragments;
 	
@@ -57,7 +56,6 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	public EntityRecogniserTask(Clue clue) {
 		super(); // call SwingWorker Default constructor
 		this.setClue(clue);
-		this.setRecognisedResources(new ArrayList<RecognisedResource>());
 		this.setRecognisedResourceUris(new ArrayList<String>());
 		this.setCommonClueFragments(ModelLoader.getCommonClueFragments());
 	}
@@ -66,7 +64,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
      * Main task. Executed in background thread. 
      */
     @Override
-    public ArrayList<RecognisedResource> doInBackground() {
+    public ArrayList<String> doInBackground() {
         int progress = 0;
         this.setProgress(progress); // Initialise progress property of SwingWorker
         
@@ -87,7 +85,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
         	progress += taskLength;
             this.setProgress(progress); // one query has been completed
         }
-        return this.getRecognisedResources();
+        return this.getRecognisedResourceUris();
     }
     
     /*
@@ -182,31 +180,12 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	                       if(!nameSpace.contains("http://dbpedia.org/resource/")) {
 	                    	   continue;
 	                       }
-	                       
-	                       Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
-	                       String typeLabel = thisTypeLabel.toString();
 	
 	                       String resourceUri = thisResource.getURI();
 	                       
-	                       boolean resourceAlreadyRecognised = false;
-	                       int indexOfResource = 0;
-	                       
-	                       /* Check if a RecognisedResource has already been created for this resource */
-	                       for(int i = 0; i < this.getRecognisedResources().size(); i++) {
-	                    	   if(this.getRecognisedResources().get(i).getUri().equals(resourceUri)) {
-	                    		   resourceAlreadyRecognised = true;
-	                    		   indexOfResource = i;
-	                    	   	   break;
-	                    	   }
-	                       }
-	                    
-	                       if(resourceAlreadyRecognised) {
-	                    	   this.getRecognisedResources().get(indexOfResource).addTypeLabel(typeLabel);
-	                       }
-	                       else {
-	                               RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment);
-	                               recognisedResource.addTypeLabel(typeLabel);
-	                               this.getRecognisedResources().add(recognisedResource);
+	                       if(!this.getRecognisedResourceUris().contains(resourceUri)) {
+	                    	   this.getRecognisedResourceUris().add(resourceUri);
+	                    	   log.debug("Recognised resource: " + resourceUri);
 	                       }
 	              }
 	              queryExecution.close();   
@@ -319,32 +298,12 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	                      if(!nameSpace.contains("http://dbpedia.org/resource/")) {
 	                   	   continue;
 	                      }
-	                      
-	                      Literal thisTypeLabel = querySolution.getLiteral("?typeLabel");
-	                      String typeLabel = thisTypeLabel.toString();
-	
+
 	                      String resourceUri = thisResource.getURI();
 	                      
-	                      boolean resourceAlreadyRecognised = false;
-	                      int indexOfResource = 0;
-	                      
-	                      /* Check if a RecognisedResource has already been created for this resource */
-	                      for(int i = 0; i < this.getRecognisedResources().size(); i++) {
-	                   	   if(this.getRecognisedResources().get(i).getUri().equals(resourceUri)) {
-	                   		   resourceAlreadyRecognised = true;
-	                   		   indexOfResource = i;
-	                   	   	   break;
-	                   	   }
-	                      }
-	                   
-	                      if(resourceAlreadyRecognised) {
-	                   	   this.getRecognisedResources().get(indexOfResource).addTypeLabel(typeLabel);
-	                      }
-	                      else {
-	                              RecognisedResource recognisedResource = new RecognisedResource(resourceUri, clueFragment);
-	                              recognisedResource.addTypeLabel(typeLabel);
-	                              this.getRecognisedResources().add(recognisedResource);
-	                              log.debug("Recognised resource: " + resourceUri);
+	                      if(!this.getRecognisedResourceUris().contains(resourceUri)) {
+	                    	   this.getRecognisedResourceUris().add(resourceUri);
+	                           log.debug("Recognised resource: " + resourceUri);
 	                      }
 	             }
 	             queryExecution.close();   

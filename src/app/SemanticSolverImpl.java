@@ -41,7 +41,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private KnowledgeBaseManager knowledgeBaseManager;
 
@@ -70,9 +70,9 @@ public class SemanticSolverImpl implements SemanticSolver {
             	});
          	erThread.start();
          	
-         	this.setRecognisedResources(null);
+         	this.setRecognisedResourceUris(null);
         	try {
-                        this.setRecognisedResources(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
+                        this.setRecognisedResourceUris(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
         	} 
         	catch (QueryExceptionHTTP e) {
          	throw e;
@@ -84,9 +84,8 @@ public class SemanticSolverImpl implements SemanticSolver {
         		log.debug(e.getMessage());
         	}
         	this.setEntityRecogniserTask(null); // allow EntityRecogniserTask to be garbage-collected
-        	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
-        	
-        	if(this.getRecognisedResources() == null) {
+
+        	if(this.getRecognisedResourceUris() == null) {
         		/* Notify the user that no solutions were found and then return*/
 				this.setResults("No solutions found");
 	        	SwingUtilities.invokeLater(new Runnable() {
@@ -102,11 +101,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        	});
 	        	return;
         	}
-
-        	for(RecognisedResource thisResource : this.getRecognisedResources())
-        		recognisedResourceUris.add(thisResource.getUri());
-        	
-        	this.findSolutions(recognisedResourceUris);
+        	this.findSolutions(this.getRecognisedResourceUris());
 	}
 	
 	@Override

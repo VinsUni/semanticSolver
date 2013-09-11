@@ -58,6 +58,7 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
          	erThread.start();
          	
          	this.setRecognisedResources(null);
+         	/* the ERTask no longer returns a list of RecognisedResources *************************************
         	try {
                         this.setRecognisedResources(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
         	} 
@@ -72,7 +73,7 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
          		// TODO Auto-generated catch block
          		e.printStackTrace();
         	}
-        	
+        	*/
          	/* End by calling a function in GraphicalUserInterface which will find out which resources the user wants to proceed with */
          	SwingUtilities.invokeLater(new Runnable() {
         		@Override

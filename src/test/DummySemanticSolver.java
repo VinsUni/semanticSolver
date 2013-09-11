@@ -15,7 +15,6 @@ import lombok.Setter;
 import app.ClueQueryTask;
 import app.ClueSolverImpl;
 import app.EntityRecogniserTask;
-import app.RecognisedResource;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
@@ -37,7 +36,7 @@ public class DummySemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
+	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 
 	public ArrayList<Solution> solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
@@ -52,9 +51,9 @@ public class DummySemanticSolver {
             	});
          	erThread.start();
          	
-         	this.setRecognisedResources(null);
+         	this.setRecognisedResourceUris(null);
         	try {
-                        this.setRecognisedResources(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
+                        this.setRecognisedResourceUris(this.getEntityRecogniserTask().get()); // will block until ERTask has finished
         	} 
         	catch (QueryExceptionHTTP e) {
          	throw e;
@@ -66,18 +65,12 @@ public class DummySemanticSolver {
         		log.debug(e.getMessage());
         	}
 
-        	ArrayList<String> recognisedResourceUris = new ArrayList<String>();
-        	
-        	if(this.getRecognisedResources() == null) {
+        	if(this.getRecognisedResourceUris() == null) {
         		/* Notify the user that no solutions were found and then return*/
 				this.setResults("No solutions found");
 	        	return null;
         	}
-
-        	for(RecognisedResource thisResource : this.getRecognisedResources())
-        		recognisedResourceUris.add(thisResource.getUri());
-        	
-        	return this.findSolutions(recognisedResourceUris);
+        	return this.findSolutions(this.getRecognisedResourceUris());
 	}
 
 	public  ArrayList<Solution> findSolutions(ArrayList<String> recognisedResourceUris) {

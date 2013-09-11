@@ -614,6 +614,11 @@
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f3eb532a-95b7-4faf-8e8b-c7cf699061fe">
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8f54b682-d056-4c01-b835-14ce70319e0f">
+        <crosswordKBontology:hasSolutionText>Call Music</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/07e2f805-52fb-4e41-95ed-e6cb1fadb6a1">
         <crosswordKBontology:hasSolutionText>Katy Perry</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
@@ -624,6 +629,11 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4, 5]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/195aac95-063b-4c79-bd6e-236d81472e7d">
+        <crosswordKBontology:hasSolutionText>Call Music </crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c672e51d-1954-4722-bf55-e5db81a243f8">
         <crosswordKBontology:hasSolutionText>Eric Doyle</crosswordKBontology:hasSolutionText>
@@ -2128,6 +2138,16 @@
     </crosswordKBontology:solvedBy>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f1f752da-55c5-4946-ab98-4139f1c7ed12">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/40563657-0a4f-4e7e-96c5-5533245aa8a1">
+        <crosswordKBontology:hasSolutionText>Tear</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6ce60f37-e9ef-4536-83ff-f03e8a83fe2b">
+        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/abaec01d-0613-484e-8ad5-30db8856889f">
@@ -2145,6 +2165,26 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d891f61d-0801-4921-a7d7-84fc02a57f81">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f4bf346e-b437-4751-9b6e-f63c5ae83917">
+        <crosswordKBontology:hasSolutionText>Down</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9deb977e-256b-41e2-821f-2a50d2c21dfc">
+        <crosswordKBontology:hasSolutionText>West</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/515775b5-5230-4a0b-ab23-36420fd11225">
+        <crosswordKBontology:hasSolutionText>They</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ac427dc7-0b03-41a3-90ac-64f1790c9e13">
         <crosswordKBontology:hasSolutionText>List</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
@@ -2152,6 +2192,11 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/412078bf-9d5f-4ec2-abe4-bcd23b30da3c">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/34477984-6310-459f-9c66-10698f832263">
+        <crosswordKBontology:hasSolutionText>Just</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2165,13 +2210,33 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/54407f2b-6210-4257-9f7c-5b4313a858f8">
+        <crosswordKBontology:hasSolutionText>Duck</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2a009922-29a4-43a6-bcd2-04c765718b36">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/19a07b1d-5c98-4774-bc28-9071bd846f3d">
+        <crosswordKBontology:hasSolutionText>West</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/eb414db4-e7c7-4a93-8fb0-179e408d3840">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/aee32a7d-4e14-443d-8c8d-ea82094a5353">
+        <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ec122e44-61e5-437c-ae30-73e84806b5aa">
+        <crosswordKBontology:hasSolutionText>Walt</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2190,8 +2255,18 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/be10e20a-264d-4829-a99b-99660ff86460">
+        <crosswordKBontology:hasSolutionText>Have</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3e6d6b36-6405-431e-b430-9a8ae4891200">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8d0b9923-067b-4cd7-9a90-883ff8f312d1">
+        <crosswordKBontology:hasSolutionText>Okeh</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2228,6 +2303,16 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6f3af424-90e7-41d9-8cf5-a686b0158e18">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4978bc27-d303-4805-9781-957dbba3521a">
+        <crosswordKBontology:hasSolutionText>with</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9e9afffc-e0da-40cf-a24f-8ad21bd327ec">
+        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -5302,6 +5387,20 @@
     <crosswordKBontology:hasSolutionStructure>[9]</crosswordKBontology:hasSolutionStructure>
     <crosswordKBontology:hasClueText>"The Bad Boys from Boston" hard rock band</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
+  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/02d5eb33-3794-4165-86fb-040e2e94acaa">
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e807075a-7b14-4166-b7bc-31a1507fa033">
+        <crosswordKBontology:hasSolutionText>for Your Balloons</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9f9db264-2909-42b7-ab04-b229774deeee">
+        <crosswordKBontology:hasSolutionText>The Soft Bulletin</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:hasSolutionStructure>[3, 4, 8]</crosswordKBontology:hasSolutionStructure>
+    <crosswordKBontology:hasClueText>album by the Flaming Lips</crosswordKBontology:hasClueText>
+  </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/489a53de-4a7e-4da7-8d56-1f70aa819a84">
     <crosswordKBontology:hasClueText>member of the beatles</crosswordKBontology:hasClueText>
     <crosswordKBontology:hasSolutionStructure>[5, 5]</crosswordKBontology:hasSolutionStructure>
@@ -5310,15 +5409,6 @@
         <crosswordKBontology:hasSolutionText>Ringo Starr</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
-  </crosswordKBontology:clue>
-  <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/50fee62e-4661-45b9-89d3-26852b0ade7d">
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0514fcd2-07af-4208-b418-d7261e0bc63a">
-        <crosswordKBontology:hasSolutionText>The Flaming</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:hasSolutionStructure>[3, 7]</crosswordKBontology:hasSolutionStructure>
-    <crosswordKBontology:hasClueText>John Lennon's band</crosswordKBontology:hasClueText>
   </crosswordKBontology:clue>
   <crosswordKBontology:clue rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7e2f7eb9-0727-436e-b5ad-f7e8e557c825">
     <crosswordKBontology:solvedBy>
