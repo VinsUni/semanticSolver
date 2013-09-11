@@ -42,6 +42,8 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	private final String XPATH_FUNCTIONS_PREFIX_DECLARATION = "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
 	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
+	private final int RESULT_LIMIT = 200;
+	private final int FITB_RESULT_LIMIT = 100;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private StmtIterator statementsIterator; // used to iterate over the statements in my local ontology
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ResIterator propertiesIterator;
@@ -163,7 +165,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	                                        " }" +
 	                               " }" + 
 	                     " }" +
-	                     " LIMIT 100";
+	                     " LIMIT " + this.RESULT_LIMIT;
 	
 	     Query query = QueryFactory.create(SPARQLquery);
 	     QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
@@ -300,7 +302,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<RecognisedResour
 	                           " }" +
 	                  " }" + 
 	        " }" +
-	        " LIMIT 100";
+	        " LIMIT " + this.FITB_RESULT_LIMIT;
 	
 	    Query query = QueryFactory.create(SPARQLquery);
 	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);

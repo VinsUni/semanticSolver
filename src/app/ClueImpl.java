@@ -26,6 +26,7 @@ import lombok.Setter;
 public class ClueImpl implements Clue {
 	private static Logger log = Logger.getLogger(ClueImpl.class);
 	private final String APOSTROPHE_S_SEQUENCE = "'s"; // if present in a clue, requires further special transformation
+	private final String S_APOSTROPHE_SEQUENCE = "s'"; // if present in a clue, requires further special transformation
 	private final String FILL_IN_THE_BLANK_MARKER = "_";
 	private final String[] PUNCTUATION = {":", ";", ",", ".", "-"};
 	
@@ -215,6 +216,11 @@ public class ClueImpl implements Clue {
 			String transformedClueText = clueText.replace(this.APOSTROPHE_S_SEQUENCE, "");
 			this.addStandardClueFragments(transformedClueText);
 		}
+		if(clueText.contains(this.S_APOSTROPHE_SEQUENCE)) {
+			String transformedClueText = clueText.replace(this.S_APOSTROPHE_SEQUENCE, "");
+			this.addStandardClueFragments(transformedClueText);
+		}
+		
 	}
     
     private void addFITBClueFragments(String clueText) {
