@@ -1,7 +1,7 @@
 /**
  * 
  */
-package app;
+package remotePrototype;
 
 import java.awt.Cursor;
 
@@ -13,6 +13,11 @@ import javax.swing.SwingUtilities;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+
+import app.ClueQueryTask;
+import app.ClueSolverImpl;
+import app.EntityRecogniserTask;
+import app.SolutionScorerImpl;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
