@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.util.ArrayList;
@@ -44,7 +41,9 @@ import framework.Solution;
 
 /**
  * @author Ben Griffiths
- *
+ * ClueQueryTask
+ * For a given clue
+ * @extends javax.swing.SwingWorker
  */
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
@@ -76,13 +75,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
 	
-	public ClueQueryTask(Clue clue, ArrayList<String> clueFragments, ArrayList<String> recognisedResourceUris) {
+	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
 		super();
 		/*if(recognisedResourceUris == null || recognisedResourceUris.size() == 0)
 			throw new NoResourcesSelectedException();
 		*/
 		this.setClue(clue);
-		this.setClueFragments(clueFragments);
+		this.setClueFragments(clue.getClueFragments());
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setSolutions(new ArrayList<Solution>());
 		this.setExtractedResources(new ArrayList<Resource>());

@@ -8,7 +8,6 @@ import java.awt.Cursor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.ListIterator;
 import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingUtilities;
@@ -43,7 +42,6 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private KnowledgeBaseManager knowledgeBaseManager;
@@ -61,8 +59,6 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
-        	
-         	this.setClueFragments(this.getClue().getClueFragments());
         	this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
 	
         	Thread erThread = new Thread(new Runnable() {
@@ -123,7 +119,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	             	}
 	    	});      
                 
-        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
+        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), recognisedResourceUris));
         
         	Thread cqThread = new Thread(new Runnable() {
                 	public void run() {

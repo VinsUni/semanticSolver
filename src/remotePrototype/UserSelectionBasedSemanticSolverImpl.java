@@ -40,7 +40,6 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<RecognisedResource> recognisedResources;
 
 	public UserSelectionBasedSemanticSolverImpl(UserSelectionBasedUserInterface userInterface) {
@@ -50,8 +49,6 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
-        	
-         	this.setClueFragments(this.getClue().getClueFragments());
         	this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
 	
         	Thread erThread = new Thread(new Runnable() {
@@ -93,7 +90,7 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	@Override
 	public  void findSolutions(ArrayList<String> recognisedResourceUris) {        
                 
-        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
+        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), recognisedResourceUris));
         
         	Thread cqThread = new Thread(new Runnable() {
                 	public void run() {

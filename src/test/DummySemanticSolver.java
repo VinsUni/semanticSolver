@@ -35,13 +35,10 @@ public class DummySemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueQueryTask clueQueryTask;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ClueSolver clueSolver;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String results;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 
 	public ArrayList<Solution> solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
-        	
-         	this.setClueFragments(this.getClue().getClueFragments());
         	this.setEntityRecogniserTask(new EntityRecogniserTask(getClue()));
 	
         	Thread erThread = new Thread(new Runnable() {
@@ -75,7 +72,7 @@ public class DummySemanticSolver {
 
 	public  ArrayList<Solution> findSolutions(ArrayList<String> recognisedResourceUris) {
                 
-        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), this.getClueFragments(), recognisedResourceUris));
+        	this.setClueQueryTask(new ClueQueryTask(this.getClue(), recognisedResourceUris));
         
         	Thread cqThread = new Thread(new Runnable() {
                 	public void run() {
