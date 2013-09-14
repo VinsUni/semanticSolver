@@ -38,6 +38,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	private static Logger log = Logger.getLogger(EntityRecogniserTask.class);
 	private final String LANG = "@en";
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql";
+	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
@@ -114,16 +115,12 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	              while(resultSet.hasNext()) {
 	                       QuerySolution querySolution = resultSet.nextSolution();
 	                       Resource thisResource = querySolution.getResource("?resource");
-	
 	                       String nameSpace = thisResource.getNameSpace();
-	                       
 	                       /* We only want to consider resources in the BDpedia namespace */
-	                       if(!nameSpace.contains("http://dbpedia.org/resource/")) {
+	                       if(!nameSpace.contains(this.DBPEDIA_RESOURCE_NS)) {
 	                    	   continue;
 	                       }
-	
 	                       String resourceUri = thisResource.getURI();
-
 	                       this.getRecognisedResourceUris().add(resourceUri);
 	                       log.debug("Recognised resource: " + resourceUri);
 	              }
@@ -134,10 +131,15 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	     }
 	}
 	
+	/**
+	 * extractFITBEntities - constructs a list of URIs of resources in the DBpedia knowledge base whose labels match partially
+	 * the given clue fragment
+	 * @param clueFragment - the fragment of clue text with which to try to find resources on DBpedia with partially matching labels
+	 * @throws com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP - if any of the generated SPARQL queries throw this exception
+	 */
 	private void extractFITBEntities(String clueFragment) throws QueryExceptionHTTP {
 		if(this.getCommonClueFragments().containsKey(clueFragment.toLowerCase()))
     		return; // do not construct models around the most commonly occurring English words, as defined in the commonClueFragments list
-		
 	    String wrappedClueFragment = "'\"" + clueFragment + "\"'";
 	    
 	    log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
@@ -208,21 +210,16 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	    Query query = QueryFactory.create(SPARQLquery);
 	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
 	    try {
-	
 	             ResultSet resultSet = queryExecution.execSelect();
 	             while(resultSet.hasNext()) {
 	                      QuerySolution querySolution = resultSet.nextSolution();
 	                      Resource thisResource = querySolution.getResource("?resource");
-	
 	                      String nameSpace = thisResource.getNameSpace();
-	                      
 	                      /* We only want to consider resources in the BDpedia namespace */
-	                      if(!nameSpace.contains("http://dbpedia.org/resource/")) {
+	                      if(!nameSpace.contains(this.DBPEDIA_RESOURCE_NS)) {
 	                   	   continue;
 	                      }
-
 	                      String resourceUri = thisResource.getURI();
-	                      
 	                      if(!this.getRecognisedResourceUris().contains(resourceUri)) {
 	                    	   this.getRecognisedResourceUris().add(resourceUri);
 	                           log.debug("Recognised resource: " + resourceUri);
@@ -235,17 +232,23 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	    }
 	}
 
-	/* This constructor will be used to instantiate a task that recognises entities in a clue */
+	/**
+	 * Constructor - instantiates a new EntityRecogniserTask object with the purpose of recognising named entities in the text of
+	 * the given clue
+	 * @param clue - the clue in the text of which the EntityRecogniserTask will attempt to find named entities
+	 */
 	public EntityRecogniserTask(Clue clue) {
-		super(); // call SwingWorker Default constructor
+		super();
 		this.setClue(clue);
 		this.setRecognisedResourceUris(new ArrayList<String>());
 		this.setCommonClueFragments(ModelLoader.getCommonClueFragments());
 	}
     
 	/**
-	 * 
+	 * doInBackground - for each fragment in the clueFragments member of the clue with which the EntityRecogniserTask was initialised,
+	 * an attempt is made to retrieve a list of resources from DBpedia with matching labels
 	 * @override javax.swing.SwingWorker.doInBackground
+	 * @return a list of URIs of resources representing named entities in the text of the clue
 	 */
     @Override
     public ArrayList<String> doInBackground() {
