@@ -26,7 +26,7 @@ import lombok.Setter;
  *
  */
 public class ModelLoader {
-	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
+	private static Logger log = Logger.getLogger(ModelLoader.class);
 	@Setter(AccessLevel.PRIVATE) private static Model model;
 	@Setter(AccessLevel.PRIVATE) private static Model knowledgeBase;
 	@Setter(AccessLevel.PRIVATE) private static Map<String, Boolean> commonClueFragments;
