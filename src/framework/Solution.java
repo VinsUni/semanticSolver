@@ -52,7 +52,7 @@ public interface Solution {
 	/**
 	 * setScore
 	 * @param score a value of type double to be assigned as the score of this solution, representing the semantic distance between 
-	 * the solution and clue resources.. Scores should range from 0 (the closest possible match between a clue and a solution) 
+	 * the solution and clue resources. Scores should range from 0 (the closest possible match between a clue and a solution) 
 	 * and 1 (the weakest possible match)
 	 */
 	public void setScore(double score);
