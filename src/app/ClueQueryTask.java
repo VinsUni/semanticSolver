@@ -65,12 +65,10 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	
 	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
 		super();
 		this.setClue(clue);
-		this.setClueFragments(clue.getClueFragments());
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setSolutions(new ArrayList<Solution>());
 		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
@@ -232,7 +230,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
 						String rawPredicateLabel = predicateLabelValue.toString();
 						String predicateLabel = stripLanguageTag(rawPredicateLabel);
-						if(this.getClueFragments().contains(toProperCase(predicateLabel))) {
+						if(this.getClue().getClueFragments().contains(toProperCase(predicateLabel))) {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
 							/*
