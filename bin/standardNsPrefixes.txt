@@ -114,3 +114,5 @@ yago
 http://dbpedia.org/class/yago/
 yago-res
 http://mpii.de/yago/resource/
+pop
+http://www.griffithsben.com/ontologies/pop.owl#
