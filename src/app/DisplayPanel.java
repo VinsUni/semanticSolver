@@ -94,6 +94,9 @@ public class DisplayPanel extends JPanel {
 		this.repaint();
 	}
 	
+	/**
+	 * Constructor - creates and displays a DisplayPanel with default user input options
+	 */
     public DisplayPanel() {
         super();
     	GridBagLayout gridBagLayout = new GridBagLayout();
@@ -134,9 +137,7 @@ public class DisplayPanel extends JPanel {
 		this.getClueInputField().selectAll();
 		this.setClueInputPanel(new JPanel());
 		
-		/* create solutionStructurePanel and resourceSelectorPanels, both with gridbag layouts of one column and 
-		 * variable number of rows
-		 */
+		/* create solutionStructurePanel with gridbag layout of one column and variable number of rows */
 		GridBagLayout solutionStructureLayout = new GridBagLayout();
 		this.setSolutionStructureConstraints(new GridBagConstraints());
 		this.getSolutionStructureConstraints().fill = GridBagConstraints.HORIZONTAL;
@@ -193,7 +194,7 @@ public class DisplayPanel extends JPanel {
 		this.getGridBagConstraints().gridx = 0;
 		this.getGridBagConstraints().gridy = 3;
 		gridBagLayout.setConstraints(this.getProgressBar(), this.getGridBagConstraints());
-		this.add(this.getProgressBar(), this.getGridBagConstraints()); // this.add(this.getProgressBar(), BorderLayout.SOUTH);
+		this.add(this.getProgressBar(), this.getGridBagConstraints());
 		
 		/* Draw the solutionStructurePanel using default number of words in solution */
 		this.setNumberOfWordsInSolution(this.DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION);
