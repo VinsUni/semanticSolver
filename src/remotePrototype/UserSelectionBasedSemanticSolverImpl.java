@@ -48,7 +48,7 @@ public class UserSelectionBasedSemanticSolverImpl implements SemanticSolver {
 	}
 
 	@Override
-	public void findEntities(Clue clue) throws QueryExceptionHTTP {
+	public void solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
         	
          	this.setClueFragments(this.getClue().getClueFragments());

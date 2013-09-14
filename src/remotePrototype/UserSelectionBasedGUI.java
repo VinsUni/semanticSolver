@@ -223,7 +223,7 @@ public class UserSelectionBasedGUI extends JFrame implements UserSelectionBasedU
 
 	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
-		        	getSemanticSolver().findEntities(getClue());
+		        	getSemanticSolver().solve(getClue());
 		        }
 		    });
 	    solverThread.start();

@@ -256,7 +256,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 
 	    Thread solverThread = new Thread(new Runnable() {
 		        public void run() {
-		        	getSemanticSolver().findEntities(getClue());
+		        	getSemanticSolver().solve(getClue());
 		        }
 		    });
 	    solverThread.start();

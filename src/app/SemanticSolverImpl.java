@@ -59,7 +59,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	}
 
 	@Override
-	public void findEntities(Clue clue) throws QueryExceptionHTTP {
+	public void solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
         	
          	this.setClueFragments(this.getClue().getClueFragments());
@@ -108,7 +108,7 @@ public class SemanticSolverImpl implements SemanticSolver {
 	}
 	
 	@Override
-	public  void findSolutions(ArrayList<String> recognisedResourceUris) {
+	public void findSolutions(ArrayList<String> recognisedResourceUris) {
 			final long NANOSECONDS_IN_ONE_SECOND = 1000000000;
 			long startTime = System.nanoTime();
 		
