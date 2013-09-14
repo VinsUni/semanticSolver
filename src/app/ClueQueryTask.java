@@ -42,49 +42,37 @@ import framework.Solution;
 /**
  * @author Ben Griffiths
  * ClueQueryTask
- * For a given clue
+ * For a given clue and list of URIs of named entities in that clue, the ClueQueryTask queries DBpedia's SPARQL endpoint to retrieve
+ * a graph of RDF triples around each named entity. It then searches within each knowledge graph for resources that are semantically 
+ * related to the recognised entity around which the graph is constructed, and builds a list of Solution objects representing potential
+ * solutions to the clue, based on relationships defined in the pop ontology.
  * @extends javax.swing.SwingWorker
  */
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private static Logger log = Logger.getLogger(ClueQueryTask.class);
-	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql
-	
-	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>"; // the 'old' property ontology
+	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql";
+	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
-	
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String ENG_LANG = "en";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Model schema;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Reasoner reasoner;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
-	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
-	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Resource> extractedResources; // Resources whose labels have been extracted from DBpedia
-	
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions; // list of candidate solutions wrapped in Solution objects
-	
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Query query;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private QueryExecution queryExecution;
-	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PUBLIC) private String whereClause;
-	
 	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
 		super();
-		/*if(recognisedResourceUris == null || recognisedResourceUris.size() == 0)
-			throw new NoResourcesSelectedException();
-		*/
 		this.setClue(clue);
 		this.setClueFragments(clue.getClueFragments());
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setSolutions(new ArrayList<Solution>());
-		this.setExtractedResources(new ArrayList<Resource>());
 		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
 		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
 	    this.setReasoner(reasoner.bindSchema(this.getSchema()));
