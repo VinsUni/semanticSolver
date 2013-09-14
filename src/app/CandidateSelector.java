@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import com.hp.hpl.jena.rdf.model.Property;
@@ -12,8 +9,11 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import framework.remotePrototype.Pop;
 
 /**
+ * CandidateSelector
+ * A simple extension of Jena's built-in implementation of the Selector interface, this class is used as a convenient method
+ * of selecting all Statements in a model in which the predicate is Pop.relationalProperty
  * @author Ben Griffiths
- *
+ * @extends com.hp.hpl.jena.rdf.model.SimpleSelector
  */
 public class CandidateSelector extends SimpleSelector {
 	

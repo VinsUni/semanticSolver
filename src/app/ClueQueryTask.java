@@ -251,7 +251,6 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 							/*
 							 * Either a string has been identified which may be a solution or a resource has been identified
 							 * whose label may represent a solution
-							 * *********** SHOULD I ALSO TEST THE LABELS OF SUBJECTS????????? ********************
 							 */
 							if(objectOfInterest.isLiteral())// a string has been identified which may be a solution
 								this.extractSolutionFromLiteral(r, objectOfInterest.asResource());								
