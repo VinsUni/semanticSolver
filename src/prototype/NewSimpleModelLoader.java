@@ -28,7 +28,6 @@ import com.hp.hpl.jena.util.FileManager;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.ReasonerVocabulary;
 
-import experiments.NsPrefixLoader;
 import framework.prototype.ModelLoader;
 
 import lombok.AccessLevel;

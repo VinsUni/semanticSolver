@@ -11,6 +11,8 @@ import java.util.Random;
 
 import javax.swing.SwingWorker;
 
+import prototype.NsPrefixLoader;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,7 +41,6 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-import experiments.NsPrefixLoader;
 import framework.remotePrototype.Clue;
 import framework.remotePrototype.Pop;
 import framework.remotePrototype.Solution;

@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import prototype.NsPrefixLoader;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,7 +42,6 @@ import com.hp.hpl.jena.vocabulary.RDFS;
 
 import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
-import experiments.NsPrefixLoader;
 import framework.remotePrototype.Clue;
 import framework.remotePrototype.ClueQuery;
 import framework.remotePrototype.EntityRecogniser;
