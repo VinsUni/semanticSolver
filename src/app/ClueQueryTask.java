@@ -353,16 +353,29 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		return solutionText;
 	}
 	
+	/**
+	 * Constructor - instantiates a ClueQueryTask object for the given clue and list of URIs of recognised entities in the clue text
+	 * @param clue - the clue for which the ClueQueryTask will search for a solution
+	 * @param recognisedResourceUris - an ArrayList<String> of URIs of recognised entities in the clue text
+	 */
 	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
 		super();
 		this.setClue(clue);
 		this.setRecognisedResourceUris(recognisedResourceUris);
 		this.setSolutions(new ArrayList<Solution>());
-		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
+		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the pop ontology
 		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
 	    this.setReasoner(reasoner.bindSchema(this.getSchema()));
 	}
 	
+	/**
+	 * doInBackground - constucts an RDF graph around each resource specified in the recognisedResourceUris list held by this
+	 * ClueQueryTask. Then constructs an instance of com.hp.hpl.jena.rdf.model.InfModel by binding the constructed graph to an instance
+	 * of com.hp.hpl.jena.reasoner.Reasoner that has been instantiated with the pop ontology as its schema.
+	 * A list of candidate solutions is then built by querying each such inference model.
+	 * @override javax.swing.SwingWorker.doInBackground
+	 * @throws exception.NoResourcesSelectedException if the list of recognisedResourceUris held by this ClueQueryTask is empty
+	 */
 	@Override
 	protected ArrayList<Solution> doInBackground() throws Exception {
 		int progress = 0;
@@ -398,9 +411,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
         return this.getSolutions();
 	}
 	
-    /*
-     * Executed on EDT
-     */
+	/**
+	 * @override javax.swing.SwingWorker.done
+	 */
     @Override
     public void done() {
     	this.setProgress(100);
