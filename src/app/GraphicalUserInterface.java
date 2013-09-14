@@ -38,7 +38,12 @@ import framework.UserInterface;
 
 /**
  * @author Ben Griffiths
- *
+ * GraphicalUserInterface
+ * Controls the user interface presented to the user
+ * @extends javax.swing.JFrame
+ * @implements framework.UserInterface
+ * @implements java.awt.event.ActionListener
+ * @implements java.beans.PropertyChangeListener
  */
 @SuppressWarnings("serial")
 public class GraphicalUserInterface extends JFrame implements UserInterface, ActionListener, PropertyChangeListener {
