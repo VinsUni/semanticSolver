@@ -230,29 +230,6 @@ public class ClueImpl implements Clue {
     	}
     	return (openBracketCount != closeBracketCount);
     }
-    
-    /**
-     * toUpperCase
-     * @param thisWord the String to be converted to upper case
-     * @return thisWord, converted to upper case
-     */
-	private String toProperCase(String thisWord) {
-		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
-		if(thisWord.length() > 1) {
-			int index = 1; // start at the second letter of the word
-			while(index < thisWord.length()) {
-				String nextCharacter = thisWord.substring(index, index + 1);
-				thisWordInProperCase += nextCharacter;
-				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
-					 index++; // the next character needs to be capitalised
-					 nextCharacter = thisWord.substring(index, index + 1);
-					 thisWordInProperCase += nextCharacter.toUpperCase();
-				}
-				index++;
-			}
-		}
-		return thisWordInProperCase;
-	}
 	
 	/**
 	 * imbalancedFITBMarkers - if the text of a clue contains FITB markers, then in order to construct a valid clue, 
@@ -326,5 +303,28 @@ public class ClueImpl implements Clue {
 			structure += ", " + this.getSolutionStructure()[i];
 		structure += "]";
 		return structure;
+	}
+	
+	 /**
+     * toProperCase
+     * @override framework.Clue.toProperCase
+     */
+	@Override
+	public String toProperCase(String thisWord) {
+		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
+		if(thisWord.length() > 1) {
+			int index = 1; // start at the second letter of the word
+			while(index < thisWord.length()) {
+				String nextCharacter = thisWord.substring(index, index + 1);
+				thisWordInProperCase += nextCharacter;
+				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
+					 index++; // the next character needs to be capitalised
+					 nextCharacter = thisWord.substring(index, index + 1);
+					 thisWordInProperCase += nextCharacter.toUpperCase();
+				}
+				index++;
+			}
+		}
+		return thisWordInProperCase;
 	}
 }

@@ -191,7 +191,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 						RDFNode predicateLabelValue = labelProperties.nextStatement().getObject();
 						String rawPredicateLabel = predicateLabelValue.toString();
 						String predicateLabel = stripLanguageTag(rawPredicateLabel);
-						if(this.getClue().getClueFragments().contains(toProperCase(predicateLabel))) {
+						if(this.getClue().getClueFragments().contains(this.getClue().toProperCase(predicateLabel))) {
 							Resource r = thisStatement.getResource();
 							RDFNode objectOfInterest = thisStatement.getObject();
 							/*
@@ -232,7 +232,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	}
 	
 	/**
-	 * extractSolutionFromLiteral - constructs a Solution from two provided resources
+	 * extractSolutionFromLiteral - constructs a single Solution from two provided resources, one of which must be known 
+	 * to reference a literal resource
 	 * @param resource - an instance of com.hp.hpl.jena.rdf.model.Resource
 	 * @param literalResource - an instance of com.hp.hpl.jena.rdf.model.Resource that is assumed to reference a literal resource
 	 */
@@ -257,9 +258,10 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	}
 	
 	/**
-	 * extractSolutionsFromSubjectAndObject ******************************************************************************
-	 * @param subject
-	 * @param object
+	 * extractSolutionsFromSubjectAndObject - constructs one or more Solutions from two provided resources that have been found in 
+	 * a single triple within the most recently constructed RDF graph
+	 * @param subject - the first resource, present as the subject in the identified triple
+	 * @param object - the second resource, present as the object in the identified triple
 	 */
 	private void extractSolutionsFromSubjectAndObject(Resource subject, Resource object) {
 		Resource clueResource, solutionResource;
@@ -268,8 +270,8 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			Statement s = candidateLabels.nextStatement();
 			RDFNode candidateLabelValue = null;
 			
-			String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a 
-			try {										// LiteralRequiredException is thrown	
+			String lang = "LITERAL_REQUIRED_EXCEPTION"; // will remain with this value if a LiteralRequiredException is thrown 
+			try {
 				lang = s.getLanguage(); // we only want English-language labels
 			}
 			catch(LiteralRequiredException e) {
@@ -295,13 +297,12 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 					clueResource = subject;
 					solutionResource = res;
 				}
-
 				/* We are only interested in resources in the namespace http://dbpedia.org/resource/ */
 				String solutionResourceNameSpace = solutionResource.getNameSpace();
 				String clueResourceNameSpace = clueResource.getNameSpace();
-				if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
+				if(!solutionResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
 					return;
-				if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
+				if(!clueResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
 					return;
 				log.debug("Constructing solution with label " + candidateLabel + " and solutionResource " + solutionResource.getURI());
 				this.constructSolution(candidateLabel, solutionResource, clueResource);
@@ -313,14 +314,13 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	 * in the solutions list, adds it to that list. If the solutionText contains any spaces, then it is fragmented into every
 	 * possible combination of sequences of sequential words within the text, and each fragment is used to create a further 
 	 * Solution object
-	 * @param solutionText
-	 * @param solutionResource
-	 * @param clueResource
+	 * @param solutionText - the text with which to construct one or more Solutions
+	 * @param solutionResource - the resource whose label provides the solution text
+	 * @param clueResource - the named entity recognised in the clue, around which the most recent RDF graph was constructed
 	 */
 	private void constructSolution(String solutionText, Resource solutionResource, Resource clueResource) {
 		ArrayList<String> potentialSolutions = new ArrayList<String>();
 		potentialSolutions.add(solutionText);
-		
 		String[] solutionTextFragments = solutionText.split(" ");
 		for(int i = 0; i < solutionTextFragments.length; i++) {
 			String thisFragment = solutionTextFragments[i];
@@ -330,19 +330,19 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				potentialSolutions.add(thisFragment);
 			}
 		}
-		
 		for(String potentialSolution : potentialSolutions) {
 			Solution solution = new SolutionImpl(potentialSolution, solutionResource, clueResource,
 					this.getInfModel(), this.getClue());
 			if(!(this.getSolutions().contains(solution))) {
 				this.getSolutions().add(solution);
-				//log.debug("New solution found: " + solution.toString());
 			}
 		}
 	}
 
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
+	/**
+	 * stripLanguageTag
+	 * @param solutionText - the String to be stripped
+	 * @return - the solutionText with any instances of LANGUAGE_TAG removed from it
 	 */
 	private String stripLanguageTag(String solutionText) {
 		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
@@ -351,27 +351,6 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				return solutionText.substring(0, positionOfLanguageTag);
 		}
 		return solutionText;
-	}
-	
-	/*
-	 * DUPLICATED FROM ENTITYRECOGNISERIMPL CLASS
-	 */
-	private String toProperCase(String thisWord) {
-		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
-		if(thisWord.length() > 1) {
-			int index = 1; // start at the second letter of the word
-			while(index < thisWord.length()) {
-				String nextCharacter = thisWord.substring(index, index + 1);
-				thisWordInProperCase += nextCharacter;
-				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
-					 index++; // the next character needs to be capitalised
-					 nextCharacter = thisWord.substring(index, index + 1);
-					 thisWordInProperCase += nextCharacter.toUpperCase();
-				}
-				index++;
-			}
-		}
-		return thisWordInProperCase;
 	}
 	
 	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {

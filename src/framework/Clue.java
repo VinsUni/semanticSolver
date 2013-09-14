@@ -50,4 +50,11 @@ public interface Clue {
 	 * whose contents provides the clue's solution
 	 */
 	public boolean isFillInTheBlank();
+	
+	/**
+	 * toProperCase
+     * @param thisWord the String to be converted to proper case
+     * @return thisWord, converted to proper case
+	 */
+	public String toProperCase(String text);
 }
