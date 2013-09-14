@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.util.ArrayList;
