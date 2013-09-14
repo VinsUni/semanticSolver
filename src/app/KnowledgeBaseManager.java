@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.io.FileNotFoundException;
@@ -31,7 +28,9 @@ import framework.Solution;
 
 /**
  * @author Ben Griffiths
- *
+ * KnowledgeBaseManager
+ * Responsible for managing the persistent knowledge base of previously solved clues and their solutions.
+ * Implemented as a Singleton class.
  */
 public class KnowledgeBaseManager {
 	private static KnowledgeBaseManager instance;
@@ -41,7 +40,8 @@ public class KnowledgeBaseManager {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private volatile boolean finished;
 	
 	/**
-	 * The only constructor is private
+	 * Constructor - the only constructor is private. Loads the persistent knowledge base into memory and then reads into the 
+	 * solvedClues list all solved clues contained within the knowledge base
 	 */
 	private KnowledgeBaseManager() {
 		this.setFinished(false);
@@ -58,6 +58,9 @@ public class KnowledgeBaseManager {
 		this.setFinished(true);
 	}
 	
+	/**
+	 * gatherPreviouslySolvedClues - initialises the solvedClues member with a list of all solved clues present in the knowledge base
+	 */
 	private void gatherPreviouslySolvedClues() {
 
 		Selector selector = new SimpleSelector(null, CrosswordKB.solvedBy, (RDFNode) null);
@@ -88,38 +91,12 @@ public class KnowledgeBaseManager {
 		}
 	}
 	
-	public static KnowledgeBaseManager getInstance() {
-		if(instance == null)
-			instance = new KnowledgeBaseManager();
-		return instance;
-	}
-	
-	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
-		this.setFinished(false);
-		if(this.getKnowledgeBase() == null) {
-			this.setFinished(true);
-			return;
-		}
-		for(Solution solution : solutions) {
-			if(solution.getConfidence() > 0) {
-				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), null, 
-						solution.getSolutionText()); // create a dummy solvedClue object with a null uri
-				if(this.getSolvedClues().contains(solvedClue)) {
-					int index = this.getSolvedClues().indexOf(solvedClue);
-					SolvedClue previouslySolvedClue = this.getSolvedClues().get(index);
-					String clueResourceUri = previouslySolvedClue.getClueResourceUri();
-					if(!previouslySolvedClue.getSolutionTexts().contains(solution.getSolutionText()))
-						this.addSolutionOnlyToKnowledgeBase(clueResourceUri, solution);
-				}
-				else {
-					this.addToKnowledgeBase(clue, solution); // add the new triples to the knowledge base
-				}
-			}
-		}
-		solutions = null; // allow solutions to be garbage-collected
-		this.setFinished(true);
-	}
-	
+	/**
+	 * addSolutionOnlyToKnowledgeBase - adds a new solution to an existing solved clue in the in-memory representation of the knowledge
+	 * base
+	 * @param clueUri - the URI of the solved clue, as used in the crossword knowledge base
+	 * @param solution - a Solution object representing the new solution found for this clue
+	 */
 	private void addSolutionOnlyToKnowledgeBase(String clueUri, Solution solution) {
 		Resource clueResource = this.getKnowledgeBase().getResource(clueUri);
 		
@@ -135,6 +112,11 @@ public class KnowledgeBaseManager {
 		this.getKnowledgeBase().add(clueResource, CrosswordKB.solvedBy, solutionResource);
 	}
 	
+	/**
+	 * addToKnowledgeBase - adds a new clue-solution pair to the in-memory representation of the knowledge base
+	 * @param clue - a Clue object representing the newly solved clue
+	 * @param solution - a Solution object representing a found Solution to the clue
+	 */
 	private void addToKnowledgeBase(Clue clue, Solution solution) {
 		String clueText = clue.getSourceClue();
 		String solutionStructure = clue.getSolutionStructureAsString();
@@ -162,6 +144,51 @@ public class KnowledgeBaseManager {
 		this.getSolvedClues().add(solvedClue);
 	}
 	
+	/**
+	 * getInstance - returns the unique instance of the KnowledgeBaseManager class
+	 * @return
+	 */
+	public static KnowledgeBaseManager getInstance() {
+		if(instance == null)
+			instance = new KnowledgeBaseManager();
+		return instance;
+	}
+	
+	/**
+	 * addToKnowledgeBase - adds a new clue to the in-memory representation of the knowledge base, and a new clue-solution pair for
+	 * each Solution object in the solutions argument
+	 * @param clue - a Clue object representing the newly solved clue
+	 * @param solutions - an ArrayList of Solution objects representing found solutions to the new clue
+	 */
+	public void addToKnowledgeBase(Clue clue, ArrayList<Solution> solutions) {
+		this.setFinished(false);
+		if(this.getKnowledgeBase() == null) {
+			this.setFinished(true);
+			return;
+		}
+		for(Solution solution : solutions) {
+			if(solution.getConfidence() > 0) {
+				SolvedClue solvedClue = new SolvedClue(clue.getSourceClue(), clue.getSolutionStructureAsString(), null, 
+						solution.getSolutionText()); // create a dummy solvedClue object with a null uri
+				if(this.getSolvedClues().contains(solvedClue)) {
+					int index = this.getSolvedClues().indexOf(solvedClue);
+					SolvedClue previouslySolvedClue = this.getSolvedClues().get(index);
+					String clueResourceUri = previouslySolvedClue.getClueResourceUri();
+					if(!previouslySolvedClue.getSolutionTexts().contains(solution.getSolutionText()))
+						this.addSolutionOnlyToKnowledgeBase(clueResourceUri, solution);
+				}
+				else {
+					this.addToKnowledgeBase(clue, solution); // add the new triples to the knowledge base
+				}
+			}
+		}
+		solutions = null; // allow solutions to be garbage-collected
+		this.setFinished(true);
+	}
+	
+	/**
+	 * persistKnowledgeBase - writes the in-memory representation of the knowledge base out to disk in RDF/XML form
+	 */
 	public void persistKnowledgeBase() {
 		this.setFinished(false);
 		if(this.getKnowledgeBase() == null) {
