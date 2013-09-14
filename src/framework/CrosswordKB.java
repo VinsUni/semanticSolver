@@ -1,6 +1,3 @@
-/**
- * 
- */
 package framework;
 
 import com.hp.hpl.jena.rdf.model.Model;
@@ -10,13 +7,12 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
  * @author Ben Griffiths
- *
+ * CrosswordKB
+ * Contains a series of static constants providing easy access to terms used in the Crossword Knowledge Base and its associated ontology
  */
 public class CrosswordKB {
     private static Model model = ModelFactory.createDefaultModel();
-
     public static final String LOCAL_KNOWLEDGE_BASE_URI = "crosswordKB.xml";
-    
     public static final String CROSSWORD_KB_ONTOLOGY_URI = "http://www.griffithsben.com/ontologies/crosswordKBontology.owl#";
     public static final String CROSSWORD_KB_URI = "http://www.griffithsben.com/ontologies/crosswordKB/";
     
@@ -29,11 +25,9 @@ public class CrosswordKB {
     public static final Property hasSolutionStructure = model.createProperty(CROSSWORD_KB_ONTOLOGY_URI + "hasSolutionStructure");
     public static final Property hasSolutionText = model.createProperty(CROSSWORD_KB_ONTOLOGY_URI + "hasSolutionText");
     
-    
     /**
      * Classes in the crosswordKB vocabulary
      */
     public static final Resource clue = model.createResource(CROSSWORD_KB_ONTOLOGY_URI + "clue");
     public static final Resource solution = model.createResource(CROSSWORD_KB_ONTOLOGY_URI + "solution");
-   
 }
