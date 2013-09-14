@@ -74,16 +74,18 @@ public class ClueImpl implements Clue {
 	
 	
 	/**
-	 *            - removes segments surrounded by double-inverted commas from the clue text of non-FITB-type clues, adds those 
+	 * parseClueText - removes segments surrounded by double-inverted commas from the clue text of non-FITB-type clues, adds those 
 	 * segments, without the quotes, to the list of clueFragments, and returns the modified clue text.
 	 * The text of FITB-type clues is handled differently, with instances of " 's " removed, and then any remaining single-inverted
 	 * commas being removed, before returning the clue text with any double-inverted commas left in place. Assumes that quotation marks
 	 * come in pairs and are not nested
 	 * This function must be called before addClueFragments is called.
+	 * @override framework.Clue.parseClueText
 	 * @param clueText
 	 * @return
 	 */
-	private void parseClueText(String clueText) {
+	@Override
+	public void parseClueText(String clueText) {
 		String textToBeFragmented = clueText;
 		final String QUOTE = "\"";
 		if(this.isFillInTheBlank()) {
