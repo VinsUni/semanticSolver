@@ -35,9 +35,7 @@ public class ClueSolverImpl implements ClueSolver {
 		
 		ArrayList<Solution> acceptedSolutions = new ArrayList<Solution>();
 		for(Solution proposedSolution : proposedSolutions) {
-			String solutionText = proposedSolution.getSolutionText();
-			if(!acceptedSolutions.contains(proposedSolution) && isWellFormedSolution(solutionText) 
-					&& clue.matchesStructure(proposedSolution))
+			if(!acceptedSolutions.contains(proposedSolution) && clue.matchesStructure(proposedSolution))
 				acceptedSolutions.add(proposedSolution);
 		}
 		
@@ -66,22 +64,5 @@ public class ClueSolverImpl implements ClueSolver {
 			filteredSolutions.add(thisSolution);
 		}
 		return filteredSolutions;
-	}
-
-	/**
-	 * Need to make this much more sophisticated... (!)
-	 * @param solutionText
-	 * @return
-	 */
-	private boolean isWellFormedSolution(String solutionText) {
-		return true;
-	}
-	
-	/**
-	 * getBestSolution - see framework.ClueSolver
-	 */
-	@Override
-	public String getBestSolution(Clue clue) {
-		return this.getBestSolutionText();
 	}
 }
