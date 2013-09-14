@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.awt.Cursor;
@@ -20,7 +17,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -55,167 +51,19 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private final String ABOUT_FILE_LOCATION = "aboutFile.txt";
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String helpText;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private String aboutText;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String userResponse;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private DisplayPanel displayPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private SemanticSolver semanticSolver;
-
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JCheckBox> checkBoxes;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
-	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuBar mainMenuBar;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenu menu;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem aboutMenuItem;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem helpMenuItem;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JMenuItem exitMenuItem;
 	
-	/**
-	 * createAndShow - Creates the GUI. Must be called from the EDT. See framework.UserInterface
-	 */
-	@Override
-	public void createAndShow() {
-		this.setSemanticSolver(new SemanticSolverImpl(this));
-		this.setTitle("Semantic Crossword Solver");
-		
-		// Load the file containing text for the help dialog and copy contents into helpText string
-        ClassLoader classLoader = this.getClass().getClassLoader();
-		InputStream inputStream = classLoader.getResourceAsStream(HELP_FILE_LOCATION);
-		StringBuffer stringBuffer = new StringBuffer();
-		if(inputStream == null)
-			this.setHelpText("Help file not found");
-		else {
-			Scanner scanner = new Scanner(inputStream);
-			while (scanner.hasNext ())
-				stringBuffer.append (scanner.nextLine());
-			scanner.close();
-			this.setHelpText(new String(stringBuffer));
-		}
-		
-		// Load the file containing text for the about dialog and copy contents into aboutText string
-		inputStream = classLoader.getResourceAsStream(ABOUT_FILE_LOCATION);
-		stringBuffer = new StringBuffer();
-		if(inputStream == null)
-			this.setAboutText("About file not found");
-		else {
-			Scanner scanner = new Scanner(inputStream);
-			while (scanner.hasNext ())
-				stringBuffer.append (scanner.nextLine());
-			scanner.close();
-			this.setAboutText(new String(stringBuffer));
-		}
-		
-
-		/* Create menubar, menu and menu items */
-		this.setMainMenuBar(new JMenuBar());
-		this.setMenu(new JMenu("Help"));
-		
-		this.setExitMenuItem(new JMenuItem("Exit"));
-		this.getExitMenuItem().addActionListener(new ActionListener() {
-    		public void actionPerformed(ActionEvent actionEvent) {
-    			exitApplication();
-    		}
-    	});
-    	this.getMenu().add(this.getExitMenuItem(), 0);
-		
-		this.setAboutMenuItem(new JMenuItem("About this application"));
-    	this.getAboutMenuItem().addActionListener(new ActionListener() {
-    		public void actionPerformed(ActionEvent actionEvent) {
-    			JOptionPane.showMessageDialog(getContentPane(), getAboutText(), "About this application",
-    					JOptionPane.INFORMATION_MESSAGE);
-    		}
-    	});
-    	this.getMenu().add(this.getAboutMenuItem(), 0);
-    	this.setHelpMenuItem(new JMenuItem("How to use this application"));
-    	this.getHelpMenuItem().addActionListener(new ActionListener() {
-    		public void actionPerformed(ActionEvent actionEvent) {
-    			JOptionPane.showMessageDialog(getContentPane(), getHelpText(), "How to use this application",
-    					JOptionPane.QUESTION_MESSAGE);
-    		}
-    	});
-    	
-    	this.getMenu().add(this.getHelpMenuItem(), 0);
-    	
-    	this.getMainMenuBar().add(this.getMenu());
-    	this.setJMenuBar(this.getMainMenuBar());
-    	
-        
-		this.setDisplayPanel(new DisplayPanel());
-		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
-		
-		this.getDisplayPanel().setPreferredSize(this.DISPLAY_PANEL_DIMENSION);
-		
-		this.getDisplayPanel().setSize(this.DISPLAY_PANEL_DIMENSION);
-		
-		this.getDisplayPanel().setOpaque(true);
-
-		this.setContentPane(this.getDisplayPanel());
-
-		this.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				requestFocusInWindow();
-			}
-		});
-
-		this.addKeyListener(new KeyAdapter() {
-			@Override
-			public void keyPressed(KeyEvent keyEvent) {
-				if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER)
-						solveClue();
-			}
-		});
-		
-		
-		this.setPreferredSize(this.FRAME_DIMENSION);
-		this.setMinimumSize(this.FRAME_DIMENSION);
-		
-		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        this.addWindowListener(new WindowListener() {
-        	@Override
-			public void windowClosing(WindowEvent e) {
-				exitApplication();
-			}
-			@Override public void windowActivated(WindowEvent e) {}
-			@Override public void windowClosed(WindowEvent e) {}
-			@Override public void windowDeactivated(WindowEvent e) {}
-			@Override public void windowDeiconified(WindowEvent e) {}
-			@Override public void windowIconified(WindowEvent e) {}
-			@Override public void windowOpened(WindowEvent e) {}
-        });
-		this.pack();
-		this.setVisible(true);
-	}
-	
-	/**
-	 * updateResults - Adds the specified String to the message area. See framework.UserInterface
-	 * @argument resultsMessage - the message to be displayed to the user
-	 */
-	@Override
-	public void updateResults(String resultsMessage) {
-		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
-		this.repaint();
-	}
-
-	/**
-     * propertyChange - Invoked when task's progress property changes. See java.beans.PropertyChangeListener
-     * @argument propertyChangeEvent - the event to be handled
-     */
-    @Override
-    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
-        if (propertyChangeEvent.getPropertyName().equals("progress")) {
-            int progress = (Integer) propertyChangeEvent.getNewValue();
-            if(progress == this.getDisplayPanel().PROGRESS_BAR_MAXIMUM) {
-            	this.getDisplayPanel().getProgressBar().setValue(progress);
-            	progress = 0;
-            }
-            this.getDisplayPanel().getProgressBar().setValue(progress);
-        } 
-    }
-    
-    /**
+	 /**
      * solveClue - updates the GUI to reflect to the user that a clue has been submitted. Retrieves the specification of a clue
      * entered by the user and instantiates a new Clue object to represent the clue. Then calls the SemanticSolver member's
-     * findEntities method on a separate thread in order to begin extracting recognised entities from the clue.
+     * solveClue method on a separate thread.
      */
     private void solveClue() {
     	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
@@ -259,11 +107,159 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		    });
 	    solverThread.start();
     }
+    
+    /**
+     * exitApplication - calls the semanticSolver member's persistKnowledgeBase method before exiting
+     */
+    private void exitApplication() {
+    	this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+    	log.debug("System exit requested by user");
+    	this.getSemanticSolver().persistKnowledgeBase(); // save the crossword knowledge base to disk before exit
+		System.exit(EXIT_ON_CLOSE);
+    }
+	
+	/**
+	 * createAndShow
+	 * @override framework.UserInterface.createAndShow
+	 */
+	@Override
+	public void createAndShow() {
+		this.setSemanticSolver(new SemanticSolverImpl(this));
+		this.setTitle("Semantic Crossword Solver");
+		
+		// Load the file containing text for the help dialog and copy contents into helpText string
+        ClassLoader classLoader = this.getClass().getClassLoader();
+		InputStream inputStream = classLoader.getResourceAsStream(HELP_FILE_LOCATION);
+		StringBuffer stringBuffer = new StringBuffer();
+		if(inputStream == null)
+			this.setHelpText("Help file not found");
+		else {
+			Scanner scanner = new Scanner(inputStream);
+			while (scanner.hasNext ())
+				stringBuffer.append (scanner.nextLine());
+			scanner.close();
+			this.setHelpText(new String(stringBuffer));
+		}
+		
+		// Load the file containing text for the about dialog and copy contents into aboutText string
+		inputStream = classLoader.getResourceAsStream(ABOUT_FILE_LOCATION);
+		stringBuffer = new StringBuffer();
+		if(inputStream == null)
+			this.setAboutText("About file not found");
+		else {
+			Scanner scanner = new Scanner(inputStream);
+			while (scanner.hasNext ())
+				stringBuffer.append (scanner.nextLine());
+			scanner.close();
+			this.setAboutText(new String(stringBuffer));
+		}
+		
+		/* Create menubar, menu and menu items */
+		this.setMainMenuBar(new JMenuBar());
+		this.setMenu(new JMenu("Help"));
+		
+		this.setExitMenuItem(new JMenuItem("Exit"));
+		this.getExitMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    			exitApplication();
+    		}
+    	});
+    	this.getMenu().add(this.getExitMenuItem(), 0);
+		
+		this.setAboutMenuItem(new JMenuItem("About this application"));
+    	this.getAboutMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    			JOptionPane.showMessageDialog(getContentPane(), getAboutText(), "About this application",
+    					JOptionPane.INFORMATION_MESSAGE);
+    		}
+    	});
+    	this.getMenu().add(this.getAboutMenuItem(), 0);
+    	this.setHelpMenuItem(new JMenuItem("How to use this application"));
+    	this.getHelpMenuItem().addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent actionEvent) {
+    			JOptionPane.showMessageDialog(getContentPane(), getHelpText(), "How to use this application",
+    					JOptionPane.QUESTION_MESSAGE);
+    		}
+    	});
+    	
+    	this.getMenu().add(this.getHelpMenuItem(), 0);
+    	
+    	this.getMainMenuBar().add(this.getMenu());
+    	this.setJMenuBar(this.getMainMenuBar());
+    	
+		this.setDisplayPanel(new DisplayPanel());
+		this.getDisplayPanel().getSubmitClueButton().addActionListener(this);
+		this.getDisplayPanel().setPreferredSize(this.DISPLAY_PANEL_DIMENSION);
+		this.getDisplayPanel().setSize(this.DISPLAY_PANEL_DIMENSION);
+		this.getDisplayPanel().setOpaque(true);
+
+		this.setContentPane(this.getDisplayPanel());
+
+		this.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				requestFocusInWindow();
+			}
+		});
+
+		this.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent keyEvent) {
+				if(keyEvent.getKeyCode() == KeyEvent.VK_ENTER)
+						solveClue();
+			}
+		});
+		
+		
+		this.setPreferredSize(this.FRAME_DIMENSION);
+		this.setMinimumSize(this.FRAME_DIMENSION);
+		
+		this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new WindowListener() {
+        	@Override
+			public void windowClosing(WindowEvent e) {
+				exitApplication();
+			}
+			@Override public void windowActivated(WindowEvent e) {}
+			@Override public void windowClosed(WindowEvent e) {}
+			@Override public void windowDeactivated(WindowEvent e) {}
+			@Override public void windowDeiconified(WindowEvent e) {}
+			@Override public void windowIconified(WindowEvent e) {}
+			@Override public void windowOpened(WindowEvent e) {}
+        });
+		this.pack();
+		this.setVisible(true);
+	}
+	
+	/**
+	 * updateResults
+	 * @override framework.UserInterface.updateResults
+	 */
+	@Override
+	public void updateResults(String resultsMessage) {
+		this.getDisplayPanel().getMessageArea().append(resultsMessage + "\n");
+		this.repaint();
+	}
+
+	/**
+     * propertyChange
+     * @override java.beans.PropertyChangeListener
+     */
+    @Override
+    public void propertyChange(PropertyChangeEvent propertyChangeEvent) {
+        if (propertyChangeEvent.getPropertyName().equals("progress")) {
+            int progress = (Integer) propertyChangeEvent.getNewValue();
+            if(progress == this.getDisplayPanel().PROGRESS_BAR_MAXIMUM) {
+            	this.getDisplayPanel().getProgressBar().setValue(progress);
+            	progress = 0;
+            }
+            this.getDisplayPanel().getProgressBar().setValue(progress);
+        } 
+    }
 
     /**
-     * actionPerformed - invoked when the user presses the "Submit clue" button in order to submit a clue.
-     * See java.awt.event.ActionListener.
-     * @argument actionEvent - the event to be handled
+     * actionPerformed - invoked when the user presses the "Submit clue" button in order to submit a clue
+     * @override java.awt.event.ActionListener.actionPerformed
      */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
@@ -271,8 +267,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
     }
     
     /**
-     * showNewClueOptions - 
-     * See framework.UserInterface
+     * showNewClueOptions
+     * @override framework.UserInterface.showNewClueOptions
      */
     @Override
 	public void showNewClueOptions() {
@@ -280,11 +276,4 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().getSubmitClueButton().setEnabled(true);
 		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 	}
-    
-    private void exitApplication() {
-    	this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-    	log.debug("System exit requested by user");
-    	this.getSemanticSolver().persistKnowledgeBase(); // save the crossword knowledge base to disk before exit
-		System.exit(EXIT_ON_CLOSE);
-    }
 }
