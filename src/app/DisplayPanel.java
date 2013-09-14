@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.awt.FlowLayout;
@@ -30,7 +27,8 @@ import lombok.AccessLevel;
 
 /**
  * @author Ben Griffiths
- *
+ * DisplayPanel - an instance of DisplayPanel is used as the main display pane by the GraphicalUserInterface class
+ * @extends javax.swing.JPanel
  */
 @SuppressWarnings("serial")
 public class DisplayPanel extends JPanel {
@@ -38,51 +36,64 @@ public class DisplayPanel extends JPanel {
 	private final int MESSAGE_AREA_ROWS = 5;
 	private final int MESSAGE_AREA_COLUMNS = 20;
 	public final int PROGRESS_BAR_MAXIMUM = 100;
-	
 	private final int H_PAD = 400;
-	
 	private final int CLUE_INPUT_PANEL_V_PAD = 30;
 	private final int PANEL_SCROLL_PANE_V_PAD = 235;
 	private final int MESSAGE_SCROLL_PANE_V_PAD = 140;
 	private final int PROGRESS_BAR_V_PAD = 50;
-	
 	private final int DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION = 1;
-
 	private final int DEFAULT_WORD_NUMBER = 1;
 	private final String CLUE_HINT_MESSAGE = "Please enter a clue here: ";
 	private final String WORD_NUMBER_HINT_MESSAGE = "Number of words in the solution: ";
-	public final String RESOURCE_SELECTION_LABEL = "The following entities have been recognised in the clue. " +
-													"Please tick all those that are relevant:";
 	private final String SOLUTION_STRUCTURE_LABEL = "Please enter the number of letters in each word of the solution";
-
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints; // constraints for the DisplayPanel itself
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints gridBagConstraints;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints solutionStructureConstraints;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private GridBagConstraints resourceSelectorConstraints;
-	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JPanel clueInputPanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel clueHintLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel wordNumberHintLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private int numberOfWordsInSolution;
-	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JScrollPane panelScrollPane;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel solutionStructurePanel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JLabel solutionStructureTitleLabel;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JPanel resourceSelectorPanel;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JLabel resourceSelectorTitleLabel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<JLabel> solutionStructureLabels;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<JTextField> solutionStructureInputFields;
-
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextField clueInputField;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JSpinner wordNumberSpinner;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private SpinnerListModel wordNumberSpinnerModel;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private JScrollPane messageAreaScrollPane;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JTextArea messageArea;
-
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JProgressBar progressBar;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private JButton submitClueButton;
-
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 
+	/**
+	 * drawSolutionStructurePanel - creates and displays the solution structure panel, which presents the user with an interface with
+	 * which to specify the solution structure of the clue to be solved
+	 */
+	private void drawSolutionStructurePanel() {
+		this.getSolutionStructurePanel().removeAll();
+		this.setSolutionStructureLabels(new ArrayList<JLabel>());
+		this.setSolutionStructureInputFields(new ArrayList<JTextField>());
+		this.getSolutionStructureConstraints().gridx = 0;
+		this.getSolutionStructureConstraints().gridy = 0;
+		this.getSolutionStructurePanel().add(this.getSolutionStructureTitleLabel(), this.getSolutionStructureConstraints());
+
+		for(int i = 1; i <= this.getNumberOfWordsInSolution(); i++) {
+			this.getSolutionStructureConstraints().gridy += 1;
+			
+			this.getSolutionStructureLabels().add(new JLabel("Letters in word " + i + ": "));
+			this.getSolutionStructureInputFields().add(new JTextField(1));
+			/* add the newly created label and textfield to a panel */
+			JPanel solutionStructureSubPanel = new JPanel();
+			solutionStructureSubPanel.add(this.getSolutionStructureLabels().get(i - 1));
+			solutionStructureSubPanel.add(this.getSolutionStructureInputFields().get(i - 1));
+			/* add the panel to the next row of the solutionStructurePanel */
+			this.getSolutionStructurePanel().add(solutionStructureSubPanel, this.getSolutionStructureConstraints());
+		}
+		this.revalidate();
+		this.repaint();
+	}
+	
     public DisplayPanel() {
         super();
     	GridBagLayout gridBagLayout = new GridBagLayout();
@@ -117,7 +128,6 @@ public class DisplayPanel extends JPanel {
 									setNumberOfWordsInSolution((Integer)getWordNumberSpinnerModel().getValue());
 									drawSolutionStructurePanel();
 								}
-
 							});
         this.setClueInputField(new JTextField(20));
 		this.getClueInputField().setText("Enter your clue");
@@ -135,15 +145,6 @@ public class DisplayPanel extends JPanel {
 		this.setSolutionStructurePanel(new JPanel());
 		this.setSolutionStructureTitleLabel(new JLabel(this.SOLUTION_STRUCTURE_LABEL));
 		this.getSolutionStructurePanel().setLayout(solutionStructureLayout);
-		
-		GridBagLayout resourceSelectorLayout = new GridBagLayout();
-		this.setResourceSelectorConstraints(new GridBagConstraints());
-		this.getResourceSelectorConstraints().fill = GridBagConstraints.HORIZONTAL;
-		this.getResourceSelectorConstraints().anchor = GridBagConstraints.NORTHWEST;
-		
-		this.setResourceSelectorPanel(new JPanel());
-		this.setResourceSelectorTitleLabel(new JLabel(this.RESOURCE_SELECTION_LABEL));
-		this.getResourceSelectorPanel().setLayout(resourceSelectorLayout);
 		
 		this.setPanelScrollPane(new JScrollPane(this.getSolutionStructurePanel(), 
 				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED));
@@ -198,31 +199,4 @@ public class DisplayPanel extends JPanel {
 		this.setNumberOfWordsInSolution(this.DEFAULT_NUMBER_OF_WORDS_IN_SOLUTION);
 		this.drawSolutionStructurePanel();
     }
-
-	private void drawSolutionStructurePanel() {
-		this.getSolutionStructurePanel().removeAll();
-		this.setSolutionStructureLabels(new ArrayList<JLabel>());
-		this.setSolutionStructureInputFields(new ArrayList<JTextField>());
-		
-		this.getSolutionStructureConstraints().gridx = 0;
-		this.getSolutionStructureConstraints().gridy = 0;
-		
-		this.getSolutionStructurePanel().add(this.getSolutionStructureTitleLabel(), this.getSolutionStructureConstraints());
-
-		for(int i = 1; i <= this.getNumberOfWordsInSolution(); i++) {
-			this.getSolutionStructureConstraints().gridy += 1;
-			
-			this.getSolutionStructureLabels().add(new JLabel("Letters in word " + i + ": "));
-			this.getSolutionStructureInputFields().add(new JTextField(1));
-			/* add the newly created label and textfield to a panel */
-			JPanel solutionStructureSubPanel = new JPanel();
-			solutionStructureSubPanel.add(this.getSolutionStructureLabels().get(i - 1));
-			solutionStructureSubPanel.add(this.getSolutionStructureInputFields().get(i - 1));
-			
-			/* add the panel to the next row of the solutionStructurePanel */
-			this.getSolutionStructurePanel().add(solutionStructureSubPanel, this.getSolutionStructureConstraints());
-		}
-		this.revalidate();
-		this.repaint();
-	}
 }
