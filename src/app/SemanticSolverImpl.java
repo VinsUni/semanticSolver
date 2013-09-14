@@ -179,7 +179,8 @@ public class SemanticSolverImpl implements SemanticSolver {
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
                  	public void run() {
-                 		getUserInterface().updateProgressBarMessage("Calculating confidence levels for solutions");
+                 		getUserInterface().getDisplayPanel().getProgressBar().setString("Calculating confidence levels for solutions");
+                 		getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
                  	}
         	});
 			

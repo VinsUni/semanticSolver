@@ -281,15 +281,6 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 		this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 	}
     
-    /**
-     * 
-     */
-    @Override
-    public void updateProgressBarMessage(String message) {
-    	this.getDisplayPanel().getProgressBar().setString(message);
-    	this.getDisplayPanel().getProgressBar().setStringPainted(true);
-    }
-    
     private void exitApplication() {
     	this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
     	log.debug("System exit requested by user");
