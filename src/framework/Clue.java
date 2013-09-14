@@ -53,8 +53,8 @@ public interface Clue {
 	
 	/**
 	 * toProperCase
-     * @param thisWord the String to be converted to proper case
-     * @return thisWord, converted to proper case
+     * @param text - the String to be converted to proper case
+     * @return text, converted to proper case
 	 */
 	public String toProperCase(String text);
 }
