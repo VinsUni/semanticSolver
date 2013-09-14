@@ -8,8 +8,6 @@ import java.util.Arrays;
 
 import org.apache.log4j.Logger;
 
-import com.hp.hpl.jena.rdf.model.Selector;
-
 import exception.InvalidClueException;
 
 import framework.Clue;
@@ -31,12 +29,8 @@ public class ClueImpl implements Clue {
 	private final String[] PUNCTUATION = {":", ";", ",", ".", "-"};
 	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
-	
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private String sourceClue;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<String> clueVariations;
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private ArrayList<Selector> selectorVariations;
-	/* solutionStructure of e.g. {2, 3} means the answer consists of a 2-letter word followed by a 3-letter word */
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private int[] SolutionStructure;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String sourceClue;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] SolutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank; // true if the clue is a 'Fill in the blank' style clue
 
 	/**
