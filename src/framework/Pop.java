@@ -1,6 +1,3 @@
-/**
- * 
- */
 package framework;
 
 import com.hp.hpl.jena.rdf.model.Model;
@@ -10,15 +7,15 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 /**
  * @author Ben Griffiths
- *
+ * Pop
+ * Contains a series of static constants providing easy access to terms used in the pop ontology
  */
 public class Pop {
     private static Model model = ModelFactory.createDefaultModel();
-    
     public static final String LOCAL_VOCAB_URI = "popv10.owl";
-    
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
     public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
+    
     /**
      * Resource representing the pop namespace
      */
@@ -28,7 +25,6 @@ public class Pop {
      * Properties of special interest in the dbpedia-owl vocabulary
      */
     public static final Property wikiPageRedirects = model.createProperty(DBPEDIA_OWL_URI + "wikiPageRedirects");
-    
     
     /**
      * Properties in the pop vocabulary
