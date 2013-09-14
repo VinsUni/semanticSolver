@@ -80,12 +80,10 @@ public class ClueImpl implements Clue {
 	 * commas being removed, before returning the clue text with any double-inverted commas left in place. Assumes that quotation marks
 	 * come in pairs and are not nested
 	 * This function must be called before addClueFragments is called.
-	 * @override framework.Clue.parseClueText
 	 * @param clueText
 	 * @return
 	 */
-	@Override
-	public void parseClueText(String clueText) {
+	private void parseClueText(String clueText) {
 		String textToBeFragmented = clueText;
 		final String QUOTE = "\"";
 		if(this.isFillInTheBlank()) {

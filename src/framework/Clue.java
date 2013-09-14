@@ -50,10 +50,4 @@ public interface Clue {
 	 * whose contents provides the clue's solution
 	 */
 	public boolean isFillInTheBlank();
-	
-	/**
-	 * parseClueText
-	 * @param clueText - the clue text to be parsed
-	 */
-	public void parseClueText(String clueText);
 }
