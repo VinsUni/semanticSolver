@@ -51,7 +51,8 @@ import framework.Solution;
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private static Logger log = Logger.getLogger(ClueQueryTask.class);
-	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql";
+	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // URL of the DBpedia Live SPARQL endpoint
+	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
@@ -66,60 +67,15 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private  ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	
-	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
-		super();
-		this.setClue(clue);
-		this.setRecognisedResourceUris(recognisedResourceUris);
-		this.setSolutions(new ArrayList<Solution>());
-		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
-		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
-	    this.setReasoner(reasoner.bindSchema(this.getSchema()));
-	}
-	
-	@Override
-	protected ArrayList<Solution> doInBackground() throws Exception {
-		int progress = 0;
-        this.setProgress(progress); // Initialise progress property of SwingWorker
- 
-        int combinedLengthOfQueries = this.getRecognisedResourceUris().size();
-        
-        int taskLength = 0;
-        try {
-        	taskLength = (100 / combinedLengthOfQueries);
-        }
-        catch(ArithmeticException e) { // will be thrown if combinedLengthOfQueries is 0
-        	throw new NoResourcesSelectedException("No entities were recognised in the clue");
-        }
-        
-        for(String resourceUri : this.getRecognisedResourceUris()) {
-        	
-			Model data;
-			try {
-				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
-				this.setInfModel(ModelFactory.createInfModel(reasoner, data));
-			    this.extractCandidateSolutions(resourceUri); // adds any candidate solutions from the model to the solutions list
-			    this.setInfModel(null); // allow the model to be garbage-collected
-			}
-			catch(QueryExceptionHTTP e) {
-				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
-				log.debug(e.getResponseMessage());
-			}
-			
-        	progress += taskLength;
-            this.setProgress(progress); // one query has been completed
-        }
-        return this.getSolutions();
-	}
-	
-    /*
-     * Executed on EDT
-     */
-    @Override
-    public void done() {
-    	this.setProgress(100);
-    }
-    
-    private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
+	/**
+	 * constructModelFromRemoteStore
+	 * @param resourceUri - the URI of a resource around which to construct an RDF graph by performing a SPARQL query against
+	 * DBpedia's SPARQL endpoint
+	 * @return an instance of com.hp.hpl.jena.rdf.model.Model representing the constructed RDF graph
+	 * @throws com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP - if either of two SPARQL queries generated result in this 
+	 * exception being thrown
+	 */
+	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
 		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
 				RDF_PREFIX_DECLARATION + " " +
 				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
@@ -200,6 +156,11 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		return mergedModel;
 	}
 	
+	/**
+	 * extractCandidateSolutions - searches the inference model most recently constructed for candidate solutions to the clue with which
+	 * the ClueQueryTask was initialised
+	 * @param rootResourceUri - the URI of the resource around which the most recent RDF graph was constructed 
+	 */
 	private void extractCandidateSolutions(String rootResourceUri) {
 		/* First, check the labels of the resource around which the model was constructed */
 		this.extractSolutionsFromRootResource(rootResourceUri);
@@ -247,16 +208,16 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		}
 	}
 	
+	/**
+	 * extractSolutionsFromRootResource - checks the labels of the root resource of the most recently constructed RDF graph for 
+	 * potential solutions to the clue, and constructs a Solution object for each label with a literal value
+	 * @param rootResourceUri - the URI of the resource around which the most recent RDF graph was constructed
+	 */
 	private void extractSolutionsFromRootResource(String rootResourceUri) {
 		Resource rootResource = this.getInfModel().getResource(rootResourceUri);
 		Selector rootResourceLabelSelector = new SimpleSelector(rootResource, RDFS.label, (RDFNode)null);
 		StmtIterator rootLabels = this.getInfModel().listStatements(rootResourceLabelSelector);
-		
-		/* Logging */
-		//log.debug("rootResourceUri = " + rootResourceUri);
-		//log.debug("rootResource is null = " + (rootResource == null));
-		//log.debug("rootLabels.hasNext() = " + (rootLabels.hasNext()));
-		
+
 		while(rootLabels.hasNext()) {
 			Statement stmnt = rootLabels.nextStatement();
 			Literal rootLabelLiteral;
@@ -266,12 +227,15 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			catch(LiteralRequiredException e) {
 				continue;
 			}
-			
 			this.constructSolution(rootLabelLiteral.toString(), rootResource, rootResource);
-			//log.debug("Found label of root resource: " + rootLabelLiteral.toString());
 		}
 	}
 	
+	/**
+	 * extractSolutionFromLiteral - constructs a Solution from two provided resources
+	 * @param resource - an instance of com.hp.hpl.jena.rdf.model.Resource
+	 * @param literalResource - an instance of com.hp.hpl.jena.rdf.model.Resource that is assumed to reference a literal resource
+	 */
 	private void extractSolutionFromLiteral(Resource resource, Resource literalResource) {
 		Resource clueResource, solutionResource;
 		if(this.getRecognisedResourceUris().contains(resource.getURI())) {
@@ -282,18 +246,21 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 			clueResource = literalResource;
 			solutionResource = resource;
 		}
-		
-		/* Trialling http://dbpedia.org/resource/ only... */
+		/* Only construct a Solution if both resources are in the DBpedia namespace  */
 		String solutionResourceNameSpace = solutionResource.getNameSpace();
 		String clueResourceNameSpace = clueResource.getNameSpace();
-		if(!solutionResourceNameSpace.contains("http://dbpedia.org/resource/"))
+		if(!solutionResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
 			return;
-		if(!clueResourceNameSpace.contains("http://dbpedia.org/resource/"))
+		if(!clueResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
 			return;
-		
 		this.constructSolution(literalResource.toString(), solutionResource, clueResource);
 	}
 	
+	/**
+	 * extractSolutionsFromSubjectAndObject ******************************************************************************
+	 * @param subject
+	 * @param object
+	 */
 	private void extractSolutionsFromSubjectAndObject(Resource subject, Resource object) {
 		Resource clueResource, solutionResource;
 		StmtIterator candidateLabels = object.listProperties(RDFS.label);
@@ -406,4 +373,57 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		}
 		return thisWordInProperCase;
 	}
+	
+	public ClueQueryTask(Clue clue, ArrayList<String> recognisedResourceUris) {
+		super();
+		this.setClue(clue);
+		this.setRecognisedResourceUris(recognisedResourceUris);
+		this.setSolutions(new ArrayList<Solution>());
+		this.setSchema(ModelLoader.getModel()); // retrieve a reference to the local ontology
+		Reasoner reasoner = ReasonerRegistry.getOWLMicroReasoner();
+	    this.setReasoner(reasoner.bindSchema(this.getSchema()));
+	}
+	
+	@Override
+	protected ArrayList<Solution> doInBackground() throws Exception {
+		int progress = 0;
+        this.setProgress(progress); // Initialise progress property of SwingWorker
+ 
+        int combinedLengthOfQueries = this.getRecognisedResourceUris().size();
+        
+        int taskLength = 0;
+        try {
+        	taskLength = (100 / combinedLengthOfQueries);
+        }
+        catch(ArithmeticException e) { // will be thrown if combinedLengthOfQueries is 0
+        	throw new NoResourcesSelectedException("No entities were recognised in the clue");
+        }
+        
+        for(String resourceUri : this.getRecognisedResourceUris()) {
+        	
+			Model data;
+			try {
+				data = this.constructModelFromRemoteStore(resourceUri); // Query DBpedia for triples that include this resource
+				this.setInfModel(ModelFactory.createInfModel(reasoner, data));
+			    this.extractCandidateSolutions(resourceUri); // adds any candidate solutions from the model to the solutions list
+			    this.setInfModel(null); // allow the model to be garbage-collected
+			}
+			catch(QueryExceptionHTTP e) {
+				log.debug("Extraction of recognised resource <" + resourceUri + "> from DBpedia failed.");
+				log.debug(e.getResponseMessage());
+			}
+			
+        	progress += taskLength;
+            this.setProgress(progress); // one query has been completed
+        }
+        return this.getSolutions();
+	}
+	
+    /*
+     * Executed on EDT
+     */
+    @Override
+    public void done() {
+    	this.setProgress(100);
+    }
 }
