@@ -216,10 +216,8 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
      * solveClue - updates the GUI to reflect to the user that a clue has been submitted. Retrieves the specification of a clue
      * entered by the user and instantiates a new Clue object to represent the clue. Then calls the SemanticSolver member's
      * findEntities method on a separate thread in order to begin extracting recognised entities from the clue.
-     * See framework.UserInterface
      */
-    @Override
-    public void solveClue() {
+    private void solveClue() {
     	this.getDisplayPanel().getSubmitClueButton().setEnabled(false);
         this.getDisplayPanel().setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         
