@@ -40,7 +40,7 @@ import lombok.Setter;
 import exception.InvalidClueException;
 import framework.Clue;
 import framework.SemanticSolver;
-import framework.UserSelectionBasedUserInterface;
+import framework.remotePrototype.UserSelectionBasedUserInterface;
 
 /**
  * @author Ben Griffiths

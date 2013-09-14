@@ -27,7 +27,7 @@ import framework.ClueSolver;
 import framework.SemanticSolver;
 import framework.Solution;
 import framework.SolutionScorer;
-import framework.UserSelectionBasedUserInterface;
+import framework.remotePrototype.UserSelectionBasedUserInterface;
 
 /**
  * @author Ben Griffiths	

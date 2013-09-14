@@ -1,7 +1,7 @@
 /**
  * 
  */
-package framework;
+package framework.remotePrototype;
 
 import java.util.ArrayList;
 
@@ -11,10 +11,6 @@ import remotePrototype.RecognisedResource;
 
 import app.DisplayPanel;
 
-/**
- * @author Ben Griffiths
- *
- */
 public interface UserSelectionBasedUserInterface extends PropertyChangeListener {
 	public void createAndShow();
 	public void updateResults(String resultsMessage);
