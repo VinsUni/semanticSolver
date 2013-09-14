@@ -102,10 +102,9 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	     String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
 	
 	     String SPARQLquery = RDFS_PREFIX_DECLARATION + " " +
-	                                                  RDF_PREFIX_DECLARATION + " " +
-	                                                  DBPPROP_PREFIX_DECLARATION + " " +
-	                                                  DB_OWL_PREFIX_DECLARATION + " " +
-	                                                  FOAF_PREFIX_DECLARATION +
+	                          DBPPROP_PREFIX_DECLARATION + " " +
+	                          DB_OWL_PREFIX_DECLARATION + " " +
+	                          FOAF_PREFIX_DECLARATION +
 	                                " select distinct ?resource {" +
 	                               " {" +
 	                                        "{ select distinct ?resource" +
@@ -184,78 +183,61 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	    
 	    String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
 				RDFS_PREFIX_DECLARATION + " " +
-	            RDF_PREFIX_DECLARATION + " " +
 	            DBPPROP_PREFIX_DECLARATION + " " +
 	            DB_OWL_PREFIX_DECLARATION + " " +
 	            FOAF_PREFIX_DECLARATION +
-	                   " select distinct ?resource ?typeLabel {" +
+	                   " select distinct ?resource {" +
 	                  " {" +
-	                           "{ select distinct ?resource ?typeLabel" +
+	                           "{ select distinct ?resource" +
 	                           " where {?resource rdfs:label ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?resource dbpprop:name ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?resource foaf:givenName ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?resource foaf:surname ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?redirectingResource rdfs:label ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
 	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?redirectingResource dbpprop:name ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
 	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?redirectingResource foaf:givenName ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
+	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
 	                                    "}" +
 	                           " }" +
 	                           " UNION" +
-	                           " { select distinct ?resource ?typeLabel" +
+	                           " { select distinct ?resource" +
 	                           "  where {?redirectingResource foaf:surname ?label." +
 	                           			" ?label <bif:contains> " + wrappedClueFragment + "." +
-	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +                                                             
-	                                    " ?resource rdf:type ?type." +
-	                                    " ?type rdfs:label ?typeLabel." +
+	                           "         ?redirectingResource dbpedia-owl:wikiPageRedirects ?resource." +
 	                                    "}" +
 	                           " }" +
 	                  " }" + 
