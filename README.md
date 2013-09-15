@@ -8,6 +8,8 @@ Department of Computer Science and Information Systems, Birkbeck College, Univer
 
 Author: Ben Griffiths
 
+An executable JAR is provided for the use of this project's examiners in the directory named executable.
+
 Required external libraries:
 Apache Jena (http://www.apache.org/dist/jena/ - apache-jena-2.10.1)
 log4j (included in the Apache Jena distribution)
