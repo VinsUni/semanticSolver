@@ -8,14 +8,21 @@ import com.hp.hpl.jena.rdf.model.Resource;
 /**
  * @author Ben Griffiths
  * Pop
- * Contains a series of static constants providing easy access to terms used in the pop ontology
+ * Contains a series of static constants providing easy access to terms used in the pop ontology and important URIs and prefix declarations
+ * used in the DBpedia dataset
  */
 public class Pop {
     private static Model model = ModelFactory.createDefaultModel();
     public static final String LOCAL_VOCAB_URI = "pop.owl";
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
     public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
-    public static final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // URL of the DBpedia Live SPARQL endping
+    public static final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // URL of the DBpedia Live SPARQL endpoint
+    public static final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
+    public static final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
+    public static final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
+    public static final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
+    public static final String XPATH_FUNCTIONS_PREFIX_DECLARATION = "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
+    public static final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
     
     /**
      * Resource representing the pop namespace

@@ -35,12 +35,6 @@ import framework.Pop;
 public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	private static Logger log = Logger.getLogger(EntityRecogniserTask.class);
 	private final String LANG = "@en";
-	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
-	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
-	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
-	private final String DB_OWL_PREFIX_DECLARATION = "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>";
-	private final String XPATH_FUNCTIONS_PREFIX_DECLARATION = "PREFIX fn: <http://www.w3.org/2005/xpath-functions#>";
-	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	private final int RESULT_LIMIT = 200;
 	private final int FITB_RESULT_LIMIT = 100;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
@@ -60,10 +54,10 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
     		return;	// do not construct models around the most commonly occurring English words, as defined in the commonClueFragments list
 	     String wrappedClueFragment = "\"" + clueFragment + "\"" + LANG; // wrap with escaped quotes and append a language tag
 	
-	     String SPARQLquery = RDFS_PREFIX_DECLARATION + " " +
-	                          DBPPROP_PREFIX_DECLARATION + " " +
-	                          DB_OWL_PREFIX_DECLARATION + " " +
-	                          FOAF_PREFIX_DECLARATION +
+	     String SPARQLquery = Pop.RDFS_PREFIX_DECLARATION + " " +
+	    		 			Pop.DBPPROP_PREFIX_DECLARATION + " " +
+	    		 			Pop.DB_OWL_PREFIX_DECLARATION + " " +
+	    		 			Pop.FOAF_PREFIX_DECLARATION +
 	                                " select distinct ?resource {" +
 	                               " {" +
 	                                        "{ select distinct ?resource" +
@@ -114,7 +108,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	                       Resource thisResource = querySolution.getResource("?resource");
 	                       String nameSpace = thisResource.getNameSpace();
 	                       /* We only want to consider resources in the BDpedia namespace */
-	                       if(!nameSpace.contains(this.DBPEDIA_RESOURCE_NS)) {
+	                       if(!nameSpace.contains(Pop.DBPEDIA_RESOURCE_NS)) {
 	                    	   continue;
 	                       }
 	                       String resourceUri = thisResource.getURI();
@@ -141,11 +135,11 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	    
 	    log.debug("Attempting to extract resources whose labels contain " + wrappedClueFragment);
 	    
-	    String SPARQLquery = XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
-				RDFS_PREFIX_DECLARATION + " " +
-	            DBPPROP_PREFIX_DECLARATION + " " +
-	            DB_OWL_PREFIX_DECLARATION + " " +
-	            FOAF_PREFIX_DECLARATION +
+	    String SPARQLquery = Pop.XPATH_FUNCTIONS_PREFIX_DECLARATION + " " +
+	    					Pop.RDFS_PREFIX_DECLARATION + " " +
+	    					Pop.DBPPROP_PREFIX_DECLARATION + " " +
+	    					Pop.DB_OWL_PREFIX_DECLARATION + " " +
+	    					Pop.FOAF_PREFIX_DECLARATION +
 	                   " select distinct ?resource {" +
 	                  " {" +
 	                           "{ select distinct ?resource" +
@@ -213,7 +207,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	                      Resource thisResource = querySolution.getResource("?resource");
 	                      String nameSpace = thisResource.getNameSpace();
 	                      /* We only want to consider resources in the BDpedia namespace */
-	                      if(!nameSpace.contains(this.DBPEDIA_RESOURCE_NS)) {
+	                      if(!nameSpace.contains(Pop.DBPEDIA_RESOURCE_NS)) {
 	                   	   continue;
 	                      }
 	                      String resourceUri = thisResource.getURI();
