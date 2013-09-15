@@ -1,9 +1,4 @@
-/**
- * 
- */
 package app;
-
-import org.apache.log4j.Logger;
 
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -16,11 +11,11 @@ import lombok.Setter;
 
 /**
  * @author Ben Griffiths
- * Represents a solution to a clue - at present, it is just used to parse the solution by removing language tags and other
- * unwanted characters
+ * SolutionImpl
+ * An implementation of framework.Solution. Represents a solution to a clue. Provides access to the inference model from which the
+ * solution was derived.
  */
 public class SolutionImpl implements Solution {
-	private static Logger log = Logger.getLogger(SolutionImpl.class);
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String solutionText;
@@ -29,36 +24,12 @@ public class SolutionImpl implements Solution {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Resource clueResource;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private InfModel infModel;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private Clue clue;
-	
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private double score;
 	
-	public SolutionImpl(String solutionText) {
-		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
-		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
-		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
-	}
-	
 	/**
-	 * This constructor allows for scoring of the clue
-	 * @param solutionText
-	 * @param solutionResource
-	 * @param infModel
-	 * @param clue
-	 */
-	public SolutionImpl(String solutionText, Resource solutionResource, Resource clueResource, InfModel infModel, Clue clue) {
-		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
-		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
-		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
-		
-		this.setSolutionResource(solutionResource);
-		this.setClueResource(clueResource);
-		
-		this.setInfModel(infModel);
-		this.setClue(clue);
-	}
-
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
+	 * stripLanguageTag
+	 * @param solutionText - a String representing the text of a solution, which may or may not conclude with a language tag, "@XX"
+	 * @return the solutionText with any trailing instance of "@XX" removed
 	 */
 	private String stripLanguageTag(String solutionText) {
 		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
@@ -70,15 +41,21 @@ public class SolutionImpl implements Solution {
 	}
 	
 	/**
-	 * 
-	 * @param solutionWithoutLanguageTag
-	 * @return the solution after removing all characters that are not alphabetic or spaces or hyphens
+	 * removeIllegalCharacters - only letters, a-z or A-Z, spaces, and hyphens are considered valid characters in the text of a solution
+	 * @param solutionText - the solution text to be parsed
+	 * @return the solutionText after removing all characters that are not alphabetic or spaces or hyphens
 	 */
-	private String removeIllegalCharacters(String solutionWithoutLanguageTag) {
-		String parsedSolution = solutionWithoutLanguageTag.replaceAll("[^a-zA-Z -]", "");
+	private String removeIllegalCharacters(String solutionText) {
+		String parsedSolution = solutionText.replaceAll("[^a-zA-Z -]", "");
 		return parsedSolution;
 	}
-
+	
+	/**
+	 * deriveSolutionStructure - parses the text of a solution to derive its structure, i.e. the number of words in the solution,
+	 * and the number of letters in each word
+	 * @param solutionText - the solution text of which to derive the structure
+	 * @return an integer array representing the solution structure
+	 */
 	private int[] deriveSolutionStructure(String solutionText) {
 		String[] decomposedSolution = solutionText.split(" "); // words in the clue are separated by spaces
 		int[] structure = new int[decomposedSolution.length];
@@ -88,9 +65,29 @@ public class SolutionImpl implements Solution {
 	}
 	
 	/**
-	 * equals - see java.lang.Object
-	 * Two Solution objects are considered equal if their respective solutionText members are equal, the URLs of their respective
-	 * solutionResource members are equal, and the URLs of their respective clueResource members are equal
+	 * Constructor - instantiates a new Solution to represent the given solutionText
+	 * @param solutionText - the text of the Solution
+	 * @param solutionResource - an instance of com.hp.hpl.jena.rdf.model.Resource representing the resource from whose label the 
+	 * solution text was derived
+	 * @param clueResource - an instance of com.hp.hpl.jena.rdf.model.Resource representing the resource, recognised as a named entity
+	 * in the text of the clue, around which the infModel argument was created
+	 * @param infModel - an instance of com.hp.hpl.jena.rdf.model.InfModel representing the RDF graph containing the solutionResource
+	 * @param clue - an instance of framework.Clue representing the clue to which the solutionText provides a solution
+	 */
+	public SolutionImpl(String solutionText, Resource solutionResource, Resource clueResource, InfModel infModel, Clue clue) {
+		String solutionWithoutLanguageTag = this.stripLanguageTag(solutionText);
+		this.setSolutionText(this.removeIllegalCharacters(solutionWithoutLanguageTag));
+		this.setSolutionStructure(this.deriveSolutionStructure(this.getSolutionText()));
+		this.setSolutionResource(solutionResource);
+		this.setClueResource(clueResource);
+		this.setInfModel(infModel);
+		this.setClue(clue);
+	}
+	
+	/**
+	 * equals - two Solution objects are considered equal if their respective solutionText members are equal, 
+	 * the URLs of their respective solutionResource members are equal, and the URLs of their respective clueResource members are equal
+	 * @override java.lang.Object.equals
 	 */
 	@Override
 	public boolean equals(Object anotherObject) {
@@ -107,7 +104,8 @@ public class SolutionImpl implements Solution {
 	}
 	
 	/**
-	 * getConfidence - see framework.Solution
+	 * getConfidence
+	 * @override framework.Solution.getConfidence
 	 */
 	@Override
 	public int getConfidence() {
@@ -115,6 +113,10 @@ public class SolutionImpl implements Solution {
 		return confidence;
 	}
 	
+	/**
+	 * toString
+	 * @override java.lang.Object.toString
+	 */
 	@Override
 	public String toString() {
 		return this.getSolutionText() + " - " + this.getSolutionResource().getURI() + " - " + this.getClueResource().getURI();
