@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.util.ArrayList;
@@ -37,13 +34,13 @@ import framework.SolutionScorer;
 
 /**
  * @author Ben Griffiths
- *
+ * SolutionScorerImpl
+ * An implementation of framework.SolutionScorer. 
+ * @implements framework.SolutionScorer
  */
 public class SolutionScorerImpl implements SolutionScorer {
 	private static Logger log = Logger.getLogger(SolutionScorerImpl.class);
 	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED TWICE
-	private final int LANGUAGE_TAG_LENGTH = 3;
-	private final String LANGUAGE_TAG = "@";
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
@@ -106,7 +103,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				Statement thisTypeLabelStatement = typeLabels.nextStatement();
 				
 				String thisLabel = thisTypeLabelStatement.getString();
-				thisLabel = stripLanguageTag(thisLabel);
+				thisLabel = solution.stripLanguageTag(thisLabel);
 				
 				//log.debug("Found type label for " + thisType.getURI() + ": " + thisLabel);
 				
@@ -167,7 +164,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 				Statement thisPredicateLabelStatement = predicateLabels.nextStatement();
 				
 				String thisPredicateLabel = thisPredicateLabelStatement.getString();
-				thisPredicateLabel = stripLanguageTag(thisPredicateLabel);
+				thisPredicateLabel = solution.stripLanguageTag(thisPredicateLabel);
 				
 				//log.debug("Found predicate label: " + thisPredicateLabel);
 				
@@ -220,17 +217,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		return thisWordInProperCase;
 	}
 	
-	/*
-	 * THIS CODE IS DUPLICATED IN THE SIMPLEENTITYRECOGNISER CLASS - REFACTOR IT OUT SOMEWHERE?
-	 */
-	private String stripLanguageTag(String solutionText) {
-		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
-		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
-			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return solutionText.substring(0, positionOfLanguageTag);
-		}
-		return solutionText;
-	}
+	
 	
 
 	private double distance(Resource firstResource, Resource secondResource) {

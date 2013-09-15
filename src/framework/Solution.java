@@ -69,4 +69,11 @@ public interface Solution {
 	 * levels should range from 0 (representing a score of 1) to 100 (representing a score of 0)
 	 */
 	public int getConfidence();
+	
+	/**
+	 * stripLanguageTag
+	 * @param text - a String representing the text of a solution, which may or may not conclude with a language tag, "@XX"
+	 * @return the text with any trailing instance of "@XX" removed
+	 */
+	public String stripLanguageTag(String text);
 }

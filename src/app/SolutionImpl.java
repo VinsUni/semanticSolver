@@ -27,20 +27,6 @@ public class SolutionImpl implements Solution {
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PUBLIC) private double score;
 	
 	/**
-	 * stripLanguageTag
-	 * @param solutionText - a String representing the text of a solution, which may or may not conclude with a language tag, "@XX"
-	 * @return the solutionText with any trailing instance of "@XX" removed
-	 */
-	private String stripLanguageTag(String solutionText) {
-		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
-		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
-			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
-				return solutionText.substring(0, positionOfLanguageTag);
-		}
-		return solutionText;
-	}
-	
-	/**
 	 * removeIllegalCharacters - only letters, a-z or A-Z, spaces, and hyphens are considered valid characters in the text of a solution
 	 * @param solutionText - the solution text to be parsed
 	 * @return the solutionText after removing all characters that are not alphabetic or spaces or hyphens
@@ -85,6 +71,30 @@ public class SolutionImpl implements Solution {
 	}
 	
 	/**
+	 * getConfidence
+	 * @override framework.Solution.getConfidence
+	 */
+	@Override
+	public int getConfidence() {
+		int confidence = (int)((1 - this.getScore()) * 100);
+		return confidence;
+	}
+	
+	/**
+	 * stripLanguageTag
+	 * @override framework.Solution.stripLanguageTag
+	 */
+	@Override
+	public String stripLanguageTag(String solutionText) {
+		int positionOfLanguageTag = solutionText.length() - LANGUAGE_TAG_LENGTH;
+		if(solutionText.length() > LANGUAGE_TAG_LENGTH) {
+			if(solutionText.substring(positionOfLanguageTag, positionOfLanguageTag + 1).equals(LANGUAGE_TAG))
+				return solutionText.substring(0, positionOfLanguageTag);
+		}
+		return solutionText;
+	}
+	
+	/**
 	 * equals - two Solution objects are considered equal if their respective solutionText members are equal, 
 	 * the URLs of their respective solutionResource members are equal, and the URLs of their respective clueResource members are equal
 	 * @override java.lang.Object.equals
@@ -101,16 +111,6 @@ public class SolutionImpl implements Solution {
 		return this.getSolutionText().equals(anotherSolution.getSolutionText()) &&
 				this.getSolutionResource().getURI().equals(anotherSolution.getSolutionResource().getURI()) &&
 				this.getClueResource().getURI().equals(anotherSolution.getClueResource().getURI());
-	}
-	
-	/**
-	 * getConfidence
-	 * @override framework.Solution.getConfidence
-	 */
-	@Override
-	public int getConfidence() {
-		int confidence = (int)((1 - this.getScore()) * 100);
-		return confidence;
 	}
 	
 	/**
