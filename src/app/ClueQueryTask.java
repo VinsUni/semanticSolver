@@ -51,7 +51,6 @@ import framework.Solution;
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private static Logger log = Logger.getLogger(ClueQueryTask.class);
-	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // URL of the DBpedia Live SPARQL endpoint
 	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
 	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
@@ -116,7 +115,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		log.debug("Constructing model around " + resourceUri);
 		
 		Query query = QueryFactory.create(sparqlQuery);
-		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, query);
 		
 		Model model = queryExecution.execConstruct();
 		
@@ -142,7 +141,7 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				"}";
 		
 		Query secondQuery = QueryFactory.create(secondSparqlQuery);
-		QueryExecution secondQueryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, secondQuery);
+		QueryExecution secondQueryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, secondQuery);
 		
 		log.debug("Constructing second model around " + resourceUri);
 		

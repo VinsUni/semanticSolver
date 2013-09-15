@@ -40,7 +40,6 @@ import framework.SolutionScorer;
  */
 public class SolutionScorerImpl implements SolutionScorer {
 	private static Logger log = Logger.getLogger(SolutionScorerImpl.class);
-	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // http://dbpedia.org/sparql // DUPLICATED TWICE
 	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
@@ -291,7 +290,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 							 	" }" +
 							 " }";
 		Query query = QueryFactory.create(sparqlQuery);
-		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(this.ENDPOINT_URI, query);
+		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, query);
 		
 		ResultSet resultSet = null;
 		try {
@@ -315,7 +314,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 	
 	private double executeCountQuery(String countQuery) {
 		Query query = QueryFactory.create(countQuery);
-		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(this.ENDPOINT_URI, query);
+		QueryExecution queryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, query);
 		ResultSet resultSet = null;
 		try {
 			resultSet = queryExecution.execSelect();

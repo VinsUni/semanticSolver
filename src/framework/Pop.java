@@ -15,6 +15,7 @@ public class Pop {
     public static final String LOCAL_VOCAB_URI = "pop.owl";
     public static final String POP_URI = "http://www.griffithsben.com/ontologies/pop.owl#";
     public static final String DBPEDIA_OWL_URI = "http://dbpedia.org/ontology/";
+    public static final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql"; // URL of the DBpedia Live SPARQL endping
     
     /**
      * Resource representing the pop namespace

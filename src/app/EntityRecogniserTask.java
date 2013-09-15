@@ -23,6 +23,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import framework.Clue;
+import framework.Pop;
 
 /**
  * @author Ben Griffiths
@@ -34,7 +35,6 @@ import framework.Clue;
 public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	private static Logger log = Logger.getLogger(EntityRecogniserTask.class);
 	private final String LANG = "@en";
-	private final String ENDPOINT_URI = "http://dbpedia-live.openlinksw.com/sparql";
 	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
 	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
 	private final String DBPPROP_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
@@ -106,7 +106,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	                     " LIMIT " + this.RESULT_LIMIT;
 	
 	     Query query = QueryFactory.create(SPARQLquery);
-	     QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+	     QueryExecution queryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, query);
 	     try {
 	              ResultSet resultSet = queryExecution.execSelect();
 	              while(resultSet.hasNext()) {
@@ -205,7 +205,7 @@ public class EntityRecogniserTask extends SwingWorker<ArrayList<String>, Void> {
 	        " LIMIT " + this.FITB_RESULT_LIMIT;
 	
 	    Query query = QueryFactory.create(SPARQLquery);
-	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService(ENDPOINT_URI, query);
+	    QueryExecution queryExecution = QueryExecutionFactory.sparqlService(Pop.ENDPOINT_URI, query);
 	    try {
 	             ResultSet resultSet = queryExecution.execSelect();
 	             while(resultSet.hasNext()) {
