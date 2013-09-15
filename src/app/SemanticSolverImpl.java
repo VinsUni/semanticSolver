@@ -1,6 +1,3 @@
-/**
- * 
- */
 package app;
 
 import java.awt.Cursor;
@@ -32,7 +29,13 @@ import framework.UserInterface;
 
 /**
  * @author Ben Griffiths	
- *
+ * SemanticSolveImpl
+ * An implementation of the SemanticSolver interface, the SemanticSolver acts as the controller of the logic of the system, and is
+ * responsible for generating entity recognition and query tasks to solve clues passed to it by an implementation of 
+ * framework.UserInterface. Once a list of candidate solutions is generated, the SemanticSolver is responsible for returning a ranked
+ * list of valid solutions to the user interface for display to the user, and for adding any newly acquired knowledge to the crossword
+ * knowledge base.
+ * @implements framework.SemanticSolver
  */
 public class SemanticSolverImpl implements SemanticSolver {
 	private static Logger log = Logger.getLogger(SemanticSolverImpl.class);
@@ -45,7 +48,59 @@ public class SemanticSolverImpl implements SemanticSolver {
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<String> recognisedResourceUris;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private ArrayList<Solution> solutions;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private KnowledgeBaseManager knowledgeBaseManager;
-
+	
+	/**
+	 * sortAndFilterSolutions
+	 * @param solutions - an ArrayList of Solution objects, each of which has had its score field set prior to calling
+	 * @return - the solutions list with any duplicate solutions removed, sorted in descending order of confidence level
+	 */
+	private ArrayList<Solution> sortAndFilterSolutions(ArrayList<Solution> solutions) {
+		ArrayList<Solution> sortedSolutions = this.sortByConfidenceLevel(solutions);
+		ArrayList<Solution> filteredSolutions = new ArrayList<Solution>();
+		ArrayList<String> filteredSolutionTexts = new ArrayList<String>();
+		for(int i = 0; i < sortedSolutions.size(); i++) {
+			Solution thisSolution = sortedSolutions.get(i);
+			if(!filteredSolutionTexts.contains(thisSolution.getSolutionText())) {
+				filteredSolutions.add(thisSolution);
+				filteredSolutionTexts.add(thisSolution.getSolutionText());
+			}
+		}
+		return filteredSolutions;
+	}
+	
+	/**
+	 * sortByConfidenceLevel
+	 * @param solutions - an ArrayList of Solution objects, each of which has had its score field set prior to calling
+	 * @return - the solutions list, sorted in descending order of confidence level
+	 */
+	private ArrayList<Solution> sortByConfidenceLevel(ArrayList<Solution> solutions) {
+		
+		class SolutionConfidenceComparator implements Comparator<Solution> {
+		    @Override
+		    public int compare(Solution firstSolution, Solution secondSolution) {
+		        return secondSolution.getConfidence() - firstSolution.getConfidence();
+		    }
+		}
+		Collections.sort(solutions, new SolutionConfidenceComparator());
+		return solutions;
+	}
+	
+	/**
+	 * addSolutionsToKnowledgeBase
+	 * @param solutions - a list of solutions to be added to the crossword knowledge base together with the clue that they solve
+	 */
+	private void addSolutionsToKnowledgeBase(ArrayList<Solution> solutions) {
+		while(!this.getKnowledgeBaseManager().isFinished())
+    		; // wait for the KnowledgeBaseManager to finish any ongoing updates
+		this.setSolutions(solutions);
+		Thread kbManagerThread = new Thread(new Runnable() {
+        	public void run() {
+                 	getKnowledgeBaseManager().addToKnowledgeBase(getClue(), getSolutions());
+        	}
+    	});
+		kbManagerThread.start();
+	}
+	
 	public SemanticSolverImpl(UserInterface userInterface) {
 		this.setUserInterface(userInterface);
 		Thread instantiateKBManagerThread = new Thread(new Runnable() {
@@ -55,7 +110,11 @@ public class SemanticSolverImpl implements SemanticSolver {
     	});
 		instantiateKBManagerThread.start();
 	}
-
+	
+	/**
+	 * solve
+	 * @override framework.SemanticSolver.solve
+	 */
 	@Override
 	public void solve(Clue clue) throws QueryExceptionHTTP {
          	this.setClue(clue);
@@ -103,6 +162,10 @@ public class SemanticSolverImpl implements SemanticSolver {
         	this.findSolutions(this.getRecognisedResourceUris());
 	}
 	
+	/**
+	 * findSolutions
+	 * @override framework.SemanticSolver.findSolutions
+	 */
 	@Override
 	public void findSolutions(ArrayList<String> recognisedResourceUris) {
 			final long NANOSECONDS_IN_ONE_SECOND = 1000000000;
@@ -170,7 +233,6 @@ public class SemanticSolverImpl implements SemanticSolver {
 	        	});
 	        	return;
 			}
-			
 			/* Update the GUI on the EDT */
         	SwingUtilities.invokeLater(new Runnable() {
         	@Override
@@ -179,17 +241,14 @@ public class SemanticSolverImpl implements SemanticSolver {
                  		getUserInterface().getDisplayPanel().getProgressBar().setStringPainted(true);
                  	}
         	});
-			
         	String resultsBuffer = "Solutions to the clue \"" + this.getClue().getSourceClue() + " " +
         							this.getClue().getSolutionStructureAsString() + "\":\n";
-
         	SolutionScorer solutionScorer = new SolutionScorerImpl();
         	/* Score each solution */
         	for(Solution solution: solutions) {
              	solution.setScore(solutionScorer.score(solution));
         	}
-        	
-        	this.addSolutionsToKnowledgeBase(solutions);
+        	this.addSolutionsToKnowledgeBase(solutions); // pass solutions to Knowledge Base Manager, to add any new discoveries 
         	
         	/* Filter out any solutions that duplicate a solution with a higher confidence level, and sort in order of confidence */
         	ArrayList<Solution> filteredSolutions = this.sortAndFilterSolutions(solutions);
@@ -214,46 +273,12 @@ public class SemanticSolverImpl implements SemanticSolver {
         	});
 	}
 	
+	/**
+	 * persistKnowledgeBase
+	 * @override framework.SemanticSolver.persistKnowledgeBase
+	 */
 	@Override
 	public void persistKnowledgeBase() {
 		this.getKnowledgeBaseManager().persistKnowledgeBase();
-	}
-	
-	private ArrayList<Solution> sortAndFilterSolutions(ArrayList<Solution> solutions) {
-		ArrayList<Solution> sortedSolutions = this.sortByConfidenceLevel(solutions);
-		ArrayList<Solution> filteredSolutions = new ArrayList<Solution>();
-		ArrayList<String> filteredSolutionTexts = new ArrayList<String>();
-		for(int i = 0; i < sortedSolutions.size(); i++) {
-			Solution thisSolution = sortedSolutions.get(i);
-			if(!filteredSolutionTexts.contains(thisSolution.getSolutionText())) {
-				filteredSolutions.add(thisSolution);
-				filteredSolutionTexts.add(thisSolution.getSolutionText());
-			}
-		}
-		return filteredSolutions;
-	}
-	
-	private ArrayList<Solution> sortByConfidenceLevel(ArrayList<Solution> solutions) {
-		
-		class SolutionConfidenceComparator implements Comparator<Solution> {
-		    @Override
-		    public int compare(Solution firstSolution, Solution secondSolution) {
-		        return secondSolution.getConfidence() - firstSolution.getConfidence();
-		    }
-		}
-		Collections.sort(solutions, new SolutionConfidenceComparator());
-		return solutions;
-	}
-	
-	private void addSolutionsToKnowledgeBase(ArrayList<Solution> solutions) {
-		while(!this.getKnowledgeBaseManager().isFinished())
-    		; // wait for the KnowledgeBaseManager to finish any ongoing updates
-		this.setSolutions(solutions);
-		Thread kbManagerThread = new Thread(new Runnable() {
-        	public void run() {
-                 	getKnowledgeBaseManager().addToKnowledgeBase(getClue(), getSolutions());
-        	}
-    	});
-		kbManagerThread.start();
 	}
 }
