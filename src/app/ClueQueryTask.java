@@ -51,11 +51,6 @@ import framework.Solution;
 
 public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	private static Logger log = Logger.getLogger(ClueQueryTask.class);
-	private final String DBPEDIA_RESOURCE_NS = "http://dbpedia.org/resource/";
-	private final String DBPEDIA_PROPERTY_PREFIX_DECLARATION = "PREFIX dbpprop: <http://dbpedia.org/property/>";
-	private final String RDFS_PREFIX_DECLARATION = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
-	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
-	private final String FOAF_PREFIX_DECLARATION = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>";
 	private final int LANGUAGE_TAG_LENGTH = 3;
 	private final String LANGUAGE_TAG = "@";
 	private final String ENG_LANG = "en";
@@ -75,9 +70,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 	 * exception being thrown
 	 */
 	private Model constructModelFromRemoteStore(String resourceUri) throws QueryExceptionHTTP {
-		String sparqlQuery = RDFS_PREFIX_DECLARATION + " " +
-				RDF_PREFIX_DECLARATION + " " +
-				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
+		String sparqlQuery = Pop.RDFS_PREFIX_DECLARATION + " " +
+				Pop.RDF_PREFIX_DECLARATION + " " +
+				Pop.DBPEDIA_PROPERTY_PREFIX_DECLARATION +
 				" construct {<" + resourceUri + "> ?predicate ?object." +
 				" 			?object rdfs:label ?label." +
 				" 			?object dbpprop:name ?name." +
@@ -122,9 +117,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		queryExecution.close();
 		
 		/* Construct a second model to gather labels of the recognised resource */
-		String secondSparqlQuery = FOAF_PREFIX_DECLARATION + " " +
-				RDFS_PREFIX_DECLARATION + " " +
-				DBPEDIA_PROPERTY_PREFIX_DECLARATION +
+		String secondSparqlQuery = Pop.FOAF_PREFIX_DECLARATION + " " +
+				Pop.RDFS_PREFIX_DECLARATION + " " +
+				Pop.DBPEDIA_PROPERTY_PREFIX_DECLARATION +
 				" construct {<" + resourceUri + "> foaf:givenName ?givenName." +
 				" 		<" + resourceUri + "> foaf:surname ?surname." +
 				" 		<" + resourceUri + "> rdfs:label ?label." +
@@ -249,9 +244,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 		/* Only construct a Solution if both resources are in the DBpedia namespace  */
 		String solutionResourceNameSpace = solutionResource.getNameSpace();
 		String clueResourceNameSpace = clueResource.getNameSpace();
-		if(!solutionResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
+		if(!solutionResourceNameSpace.contains(Pop.DBPEDIA_RESOURCE_NS))
 			return;
-		if(!clueResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
+		if(!clueResourceNameSpace.contains(Pop.DBPEDIA_RESOURCE_NS))
 			return;
 		this.constructSolution(literalResource.toString(), solutionResource, clueResource);
 	}
@@ -299,9 +294,9 @@ public class ClueQueryTask extends SwingWorker<ArrayList<Solution>, Void> {
 				/* We are only interested in resources in the namespace http://dbpedia.org/resource/ */
 				String solutionResourceNameSpace = solutionResource.getNameSpace();
 				String clueResourceNameSpace = clueResource.getNameSpace();
-				if(!solutionResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
+				if(!solutionResourceNameSpace.contains(Pop.DBPEDIA_RESOURCE_NS))
 					return;
-				if(!clueResourceNameSpace.contains(this.DBPEDIA_RESOURCE_NS))
+				if(!clueResourceNameSpace.contains(Pop.DBPEDIA_RESOURCE_NS))
 					return;
 				log.debug("Constructing solution with label " + candidateLabel + " and solutionResource " + solutionResource.getURI());
 				this.constructSolution(candidateLabel, solutionResource, clueResource);
