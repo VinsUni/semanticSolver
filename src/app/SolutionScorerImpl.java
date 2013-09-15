@@ -40,7 +40,6 @@ import framework.SolutionScorer;
  */
 public class SolutionScorerImpl implements SolutionScorer {
 	private static Logger log = Logger.getLogger(SolutionScorerImpl.class);
-	private final String RDF_PREFIX_DECLARATION = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
 	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Solution solution;
@@ -261,7 +260,7 @@ public class SolutionScorerImpl implements SolutionScorer {
 		}
 		
 		
-		String sparqlQueryStart = this.RDF_PREFIX_DECLARATION +
+		String sparqlQueryStart = Pop.RDF_PREFIX_DECLARATION +
 							" select (count(*) as ?count) where {";
 		
 		String sparqlQueryEnd = " }";

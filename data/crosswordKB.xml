@@ -2174,13 +2174,28 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/05e6e179-4d44-4ef1-a47a-f7e7cf403494">
-        <crosswordKBontology:hasSolutionText>Down</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7cb4bdfe-f357-4d9c-98e1-aa6bbb49e9d4">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7cb4bdfe-f357-4d9c-98e1-aa6bbb49e9d4">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d5bc688c-5843-4a5f-b26b-ac80519b8068">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2f265420-7010-4f5b-b1bf-31babea374f7">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7eb4c17b-9f17-496c-b646-f185487950c0">
+        <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/637c3c45-f673-4698-91c6-fdc01daed9b7">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2189,28 +2204,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/480ffcba-ec00-487a-b067-049852fe527c">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2adb7f11-76a0-4c78-a66a-846a1c254127">
-        <crosswordKBontology:hasSolutionText>Okeh</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/55ca263d-b1ea-439b-a327-a725fd06befe">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8f3fb5e7-a9dd-4616-8cbd-08390ae19693">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d9cfabd8-78b3-4b25-9c42-e55de54f6e16">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2229,28 +2224,18 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e4e8e821-f9b6-4ad9-921a-6dd42800dbb5">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bcfa1071-fc24-43b3-ad9e-138b42516466">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/af66e462-ac58-4c88-8c53-4b42c12b657e">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e952c3b5-436c-4201-b3fe-35339757be71">
-        <crosswordKBontology:hasSolutionText>Tear</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f8a84dfd-2663-40ba-8ef8-771c7eb9d43d">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/58517142-5c94-4646-ad07-157a9450ebf2">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/45107683-97f9-4a25-b45f-ea06f8d07416">
+        <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2259,28 +2244,23 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/248f6bc3-ef9e-4e85-92e2-4b2f9e28f609">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c5802cf7-a800-4a95-ac73-e1061fcde463">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/941cdaf6-2aa1-4f43-b3b8-ca39c8ba135f">
         <crosswordKBontology:hasSolutionText>Walt</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0fa94856-8d08-47f2-b239-3059354bbd2e">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/715bfce5-db88-4707-a613-7393a48f4408">
+        <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/715bfce5-db88-4707-a613-7393a48f4408">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fdfece0c-8c57-4491-a1f1-506f2931b0c1">
         <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0410d657-c1da-41ad-9c6a-66f0cfe4adaa">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2324,13 +2304,13 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/79f3ab6b-609d-473a-915a-6a25d0deb4ed">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/51dfd8dc-9f9f-400e-add3-25148788b0cc">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/06ebc544-cfeb-4e80-bc7a-d93d1527680d">
-        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/106063f7-6f17-4842-8210-3ce7639b668c">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2339,17 +2319,12 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e3aec38d-8874-415f-8388-70c5fc646ee9">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c4fbdfe8-71d0-453e-9bb9-c09c93238740">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d21b6cc1-3777-4adb-a0f1-3759cbeed310">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7e1ce25f-b070-47d2-a289-276bf993057b">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ddfd0891-50f9-40dc-80e3-110a40f961d2">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2359,13 +2334,13 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/278a46c7-178f-4cf7-9d2d-59181f2fbb97">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/61d123da-6de1-4159-9153-9679d6a13368">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/284ce03f-9129-4a96-9492-5140e09590ca">
-        <crosswordKBontology:hasSolutionText>Duck</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/278a46c7-178f-4cf7-9d2d-59181f2fbb97">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2384,23 +2359,28 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8bd863e2-f322-49d4-8904-3b16ea959d6c">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/addc9bef-a8a2-45e2-95bc-2d7811eee1d1">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/278ca8b7-548b-4fc1-9024-45cd374f2bca">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/cee7dbe9-3f88-4dad-8e31-c91624acf07a">
-        <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c407f383-de7e-4108-9f27-39af060ae446">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a2f726c1-efee-48f3-bcba-795b3d92d312">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8202c2f6-5013-46d8-ae2e-6bffb3f6a2ab">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ffa4593f-6cb4-4da5-a1e2-3a1339969c03">
+        <crosswordKBontology:hasSolutionText>Just</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasSolutionStructure>[4]</crosswordKBontology:hasSolutionStructure>
@@ -2410,8 +2390,28 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4a3a61af-a568-464d-9e34-94c2e5435eb1">
-        <crosswordKBontology:hasSolutionText>Have</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5a759dde-ac23-4d07-97c4-49a3c6f56fa4">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b35c57b7-0e99-419e-ac60-c93bb98f80fa">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ed2d4595-140a-442e-b022-9b188b854dbe">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/68506f94-c9a5-4a21-ba6a-4f339637983e">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/54d4e611-c542-4c24-a111-6f53960abda4">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2420,18 +2420,13 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5d1bdef2-c3ed-462b-adc4-f05d2b7a09f4">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/29ae4641-98e8-4abd-9099-3afa08e29694">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b6bdce48-0363-4651-954a-322b1829b47b">
-        <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2beadfcf-258c-4837-9132-3e096a13d07b">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ba1ec41e-4711-442a-96fd-fbfbbad9e5f3">
+        <crosswordKBontology:hasSolutionText>Duck</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2440,17 +2435,17 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fee8826f-330d-4efe-9523-0f1ea5a3fed7">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/844b7af9-350b-4ed1-930f-70cb263efb9f">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1392db3f-9567-49da-a720-5e97c3e0c68e">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6a848653-f7ed-4db7-9e33-abd47e42f044">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1cc38a3e-edce-4489-ad20-a3492825142c">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/844b7af9-350b-4ed1-930f-70cb263efb9f">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2460,8 +2455,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2280d068-0e3f-4d20-909a-f8beedf95fd4">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3b3e6ae2-3b4b-440d-ad2e-b19322dcfb13">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2470,23 +2465,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6af5279a-93db-41e2-8df9-282cabf27b7d">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a97dc36a-4463-4e2f-bb65-3d0380592f3c">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a366851f-5e8c-4b3c-b961-27fb7df19eb7">
         <crosswordKBontology:hasSolutionText>with</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fb68e12b-3d60-4a4d-a24e-7e075e6f0694">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2495,13 +2475,38 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/caf5fc74-569d-460c-be91-451ced9e1f92">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/60a66a56-6a67-40be-aadb-d354f2b6544b">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/80efefbb-70cc-4301-a19a-4d02183c83b7">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7b8e521b-6a64-462e-bda7-23349f84f55e">
+        <crosswordKBontology:hasSolutionText>Down</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f789272e-5fdd-4a48-82b0-4a2cbf02f718">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5135815c-1b66-4698-a722-06d1fc3df9bf">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6f3af424-90e7-41d9-8cf5-a686b0158e18">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8dcec076-8277-4000-aa45-50d84224350b">
+        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2515,8 +2520,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/473d172b-f341-4120-864f-4b19bfea3bf7">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/90eb9b62-db97-4497-82ba-dc98ecd35ad8">
+        <crosswordKBontology:hasSolutionText>Okeh</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2530,18 +2535,18 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2e76db13-d2f2-4510-aab9-a121458c64fc">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b4ff829d-1b7a-452f-85e5-e2a1aaa02129">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d2544084-7a49-4670-a830-2dfc10b34849">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2e192b0a-9170-4d25-a2df-89f9f6c8fe4a">
+        <crosswordKBontology:hasSolutionText>West</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a04cf5b4-d82c-4c89-82ff-aefcd3374032">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2555,12 +2560,22 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e37e35f0-c839-44f7-9dfc-59773859d715">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2293aa2d-b07c-4a53-9532-1ac970597d85">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/429268de-fecf-4d7c-bffe-1763c8fcc7a0">
+        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/3c173608-4a36-42c5-ac22-b29609767f2b">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2ec6edf2-fafb-4b78-8d95-6dcfa87bb2a8">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2570,18 +2585,18 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0c1280ac-0296-4761-8e62-d9b28d373054">
-        <crosswordKBontology:hasSolutionText>Walt</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/7f60b823-66a1-4f3a-9812-0c6946c9e7e7">
         <crosswordKBontology:hasSolutionText>Folk</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8432b4b5-1cca-47e4-b7e3-e367cc24eedf">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c807a68-f87e-40ca-870f-265b1c00d019">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0dae1126-6739-416a-82a1-ee201b18682a">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2599,6 +2614,11 @@
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/445a58bf-f0db-4483-b77c-5f5ab1f4be52">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
     <crosswordKBontology:hasClueText>Singer Ives</crosswordKBontology:hasClueText>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/aca2d947-099f-4070-ab38-c37161cb037d">
@@ -2606,13 +2626,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/9c0ece8b-baa1-4c5f-a473-41b1277e1bb1">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fc49f23c-38e9-4292-adcc-fdd6965e2f34">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c1657528-77ab-40ea-a289-8ba0b667b8cd">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2626,13 +2641,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/07467520-5304-4933-a2f6-7dbee1c524fa">
-        <crosswordKBontology:hasSolutionText>West</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8f793835-8af7-4f94-88b2-a4265b744fb7">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/fbf15659-4d5f-471f-a438-1eda21d16a1f">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2646,21 +2656,6 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/61b23df3-3ba1-4484-af1e-a320caeeb577">
-        <crosswordKBontology:hasSolutionText>Just</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/df49c9cd-cd43-423a-afe6-f90784439401">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e28473e8-037e-48a9-88e8-97c4c27741d4">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/202d97e0-ed36-494d-aad2-7d30cf75e83d">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
@@ -2668,6 +2663,11 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b67e6935-8b1a-46d7-a921-8e243686cfb0">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/0f326f25-b508-4320-be6d-c1bb1a3ed21a">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2691,11 +2691,6 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4e571146-56f8-411f-8779-20e883ec5895">
-        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/06fc541b-7181-4add-bc33-a680e2d6554c">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
@@ -2711,17 +2706,12 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2759ab2a-a1bc-42b7-a7fa-a9b2f59a1147">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bdaf19e7-3a36-4762-b9e6-e4c92fee0a04">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e8f6c54e-846a-4309-9252-bb0e6918bc4e">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bdaf19e7-3a36-4762-b9e6-e4c92fee0a04">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/dd9da4a2-13ef-4917-8e6d-434013aec4d1">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2736,13 +2726,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/30e4899d-f568-495a-8aca-ea3b8a959d99">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/04172d8f-ae84-4f0c-ae6d-e8ba2edb9154">
-        <crosswordKBontology:hasSolutionText>They</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8537119f-4c50-4eb4-a252-478fc92462ff">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2756,13 +2741,13 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c89100f8-54a9-42cb-9001-c125dd005476">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/4c8a3c09-d87f-4bfb-b213-13a326f995d6">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/64eeaa63-e5ad-4002-9584-4bb5963763f7">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/84249a1d-8121-467a-8616-4971c8b3b2cc">
+        <crosswordKBontology:hasSolutionText>They</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2771,27 +2756,22 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d75c2efe-5cdb-458c-b864-7a732ca96f68">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6e4622c4-ffae-49f7-a691-756dd289e127">
         <crosswordKBontology:hasSolutionText>Duck</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/42d8f69f-ce95-4462-a075-b3342255771d">
-        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/891db741-8412-449c-8f56-6d6fbbc73797">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ac2d5835-4042-4ddd-8c1d-a0c4d0c0339d">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d489c1d4-4602-47a4-8aeb-9260ec142380">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/081d126a-e6ba-4302-b228-7922c269e972">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2806,8 +2786,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d1034557-1dd6-402f-b8d9-f6d6aebb6f7e">
-        <crosswordKBontology:hasSolutionText>Sing</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/648f42d2-490e-4048-9212-4f8897ead262">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2818,6 +2798,16 @@
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/80b94b72-7b0d-4165-bb0f-3c6a8f6cbfd5">
         <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/5f0e164c-1fed-4db9-b7e9-84471660ea31">
+        <crosswordKBontology:hasSolutionText>Sing</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1b1f898d-5131-445d-a74d-f2efacefa04e">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2836,8 +2826,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d6e89b6f-9734-4af4-b5c7-6b37d5a0ecc7">
-        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2922ad4b-a951-4e95-a9e0-291d88cc2d6e">
+        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2851,7 +2841,17 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/64fcd691-b4f2-45f9-9b18-9059f3382a33">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/763b53a4-ea0e-462b-a395-ab514c662a0f">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/183d7c4a-bf70-4f9f-98a0-2a91c2672303">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2861,38 +2861,33 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1baf6460-5d12-4475-9e4e-027502b5b844">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a963ccf2-8c44-459c-8a63-54e24f5280a9">
         <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/379d8b26-f9ec-4faa-aaac-8d16e61eb9cc">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1df3473e-2af4-46a5-9fcb-e31d468aca07">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1aa29584-981b-4a63-aad7-29f96f5efdd5">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/ea5c314e-74b6-4cff-b864-58b57df61eaf">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2d9f32cd-b478-4957-a960-33ecb223b186">
         <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b89d75b5-13cf-4916-87f3-a64f8e0b209b">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/cfa3c80c-b84f-471c-ac0a-962a43ea421a">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/02a68ddd-908d-45b2-b3e1-bdf74b3f8be2">
         <crosswordKBontology:hasSolutionText>West</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/bdd941a9-612b-4129-9aa5-2d56fc9eb9b4">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2911,13 +2906,13 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2ce04c60-4faa-4e3a-b536-02f200ec057c">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/393b7b9e-4758-409c-a277-aea6fdafdd5f">
+        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c9367ef7-a4b9-4b22-adf9-da30539e113b">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c6996687-fbf1-41f2-977c-a7c5900911bb">
+        <crosswordKBontology:hasSolutionText>Tear</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2931,23 +2926,28 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2fa4207e-6a33-4c48-9750-2763491ac219">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/33b102a0-8ce7-46f3-bf8e-971968f0817e">
         <crosswordKBontology:hasSolutionText>They</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/a16b338d-0118-4e1a-8eaf-29e1c1d647a3">
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/cd8c39d8-e354-4e31-a98b-2c71394a316d">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8931a947-9899-4160-af05-710bb2a7117e">
+        <crosswordKBontology:hasSolutionText>Walt</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/1ff10b8f-719f-4d5a-99ff-6082f4d30950">
         <crosswordKBontology:hasSolutionText>Lita</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/251287ef-0b84-48a3-80e6-28e3ac127f41">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
@@ -2961,32 +2961,32 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/f34f1437-af31-4679-9cd2-5c1ad8a308bc">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/8397dcb9-a906-4971-98bd-fd8fd2d9ac44">
-        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
-      </crosswordKBontology:solution>
-    </crosswordKBontology:solvedBy>
-    <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/86193b42-8bb2-45d0-bca0-90e244bd865e">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/c8f6f300-6bfb-4751-b09c-5db2e9b02c77">
-        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/6ea5e08e-5735-4176-b1ac-db5d34b977f6">
+        <crosswordKBontology:hasSolutionText>Have</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/b0ad02a5-595d-46dd-b063-e1d10be75611">
-        <crosswordKBontology:hasSolutionText>York</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d982eb92-23fd-4de0-b1dd-2499acc608da">
+        <crosswordKBontology:hasSolutionText>Song</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
       <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/2a009922-29a4-43a6-bcd2-04c765718b36">
+        <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/d40d2178-c72e-4330-9e5d-481c450ebbae">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
+      </crosswordKBontology:solution>
+    </crosswordKBontology:solvedBy>
+    <crosswordKBontology:solvedBy>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/799d0413-545a-41b8-8105-3c1c14bcd748">
         <crosswordKBontology:hasSolutionText>Ives</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
@@ -2996,8 +2996,8 @@
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
-      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/17648ac5-6cf4-408d-9521-c90c4c149258">
-        <crosswordKBontology:hasSolutionText>Ivan</crosswordKBontology:hasSolutionText>
+      <crosswordKBontology:solution rdf:about="http://www.griffithsben.com/ontologies/crosswordKB/e94a0a12-de0c-4116-a16f-f2a622700092">
+        <crosswordKBontology:hasSolutionText>Burl</crosswordKBontology:hasSolutionText>
       </crosswordKBontology:solution>
     </crosswordKBontology:solvedBy>
     <crosswordKBontology:solvedBy>
