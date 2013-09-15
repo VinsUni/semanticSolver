@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test;
 
 import java.util.ArrayList;
@@ -26,7 +23,8 @@ import framework.Solution;
 
 /**
  * @author Ben Griffiths	
- *
+ * DummySemanticSolver
+ * Dummy controller with no dependency on a user interface, used for automated testing of the system.
  */
 public class DummySemanticSolver {
 	private static Logger log = Logger.getLogger(DummySemanticSolver.class);

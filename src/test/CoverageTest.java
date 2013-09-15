@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test;
 
 import static org.junit.Assert.assertTrue;
@@ -19,7 +16,11 @@ import framework.Solution;
 
 /**
  * @author Ben Griffiths
- *
+ * CoverageTest
+ * A simple test of coverage of a small number of clues that are known to be solvable, used to conveniently test functionality during
+ * development. Since the vast majority of the data used by the system to solve clues is retrieved remotely at run-time, thorough testing
+ * of the system requires detailed inspection of the log file to check the results of remote retrievals and inferences from locally
+ * constructed inference models.
  */
 public class CoverageTest {
 	private final long NANOSECONDS_IN_ONE_SECOND = 1000000000;
