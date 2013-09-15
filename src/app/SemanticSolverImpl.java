@@ -248,10 +248,10 @@ public class SemanticSolverImpl implements SemanticSolver {
         	for(Solution solution: solutions) {
              	solution.setScore(solutionScorer.score(solution));
         	}
-        	this.addSolutionsToKnowledgeBase(solutions); // pass solutions to Knowledge Base Manager, to add any new discoveries 
-        	
         	/* Filter out any solutions that duplicate a solution with a higher confidence level, and sort in order of confidence */
         	ArrayList<Solution> filteredSolutions = this.sortAndFilterSolutions(solutions);
+        	
+        	this.addSolutionsToKnowledgeBase(solutions); // pass solutions to Knowledge Base Manager, to add any new discoveries
         	
         	for(Solution solution : filteredSolutions)
         		resultsBuffer += solution.getSolutionText() + " (confidence level: " + 
