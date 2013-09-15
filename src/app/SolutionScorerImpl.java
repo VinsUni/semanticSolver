@@ -40,45 +40,13 @@ import framework.SolutionScorer;
  */
 public class SolutionScorerImpl implements SolutionScorer {
 	private static Logger log = Logger.getLogger(SolutionScorerImpl.class);
-	
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Clue clue;
 	@Getter(AccessLevel.PRIVATE) @Setter(AccessLevel.PRIVATE) private Solution solution;
-	
-	@Override
-	public double score(Solution solution) {
-		this.setSolution(solution);
-		
-		double distanceBetweenClueAndSolution = distance(solution.getSolutionResource(), solution.getClueResource());
-		
-		ArrayList<Resource> solutionTypes = this.getSolutionTypes(solution);
-		ArrayList<Resource> solutionProperties = this.getSolutionProperties(solution);
-		
-		/* logging */
-		log.debug("Recognised the following types in the solutionResource " + solution.getSolutionResource().getURI() + ":");
-		for(Resource solutionType : solutionTypes)
-			log.debug(solutionType.getURI());
-		log.debug("Recognised the following properties of the solutionResource " + solution.getSolutionResource().getURI() + ":");
-		for(Resource solutionProperty : solutionProperties)
-			log.debug(solutionProperty.getURI());
-
-		double distanceBetweenClueFragmentsAndSolution = distance(solution.getSolutionResource(), solutionTypes, solutionProperties);
-		
-		/* solution and clue can now both be garbage-collected */
-		this.setSolution(null);
-		this.setClue(null);
-		
-		// DEBUGGING ********************************************************************************************************
-		System.out.println("Solution with text " + solution.getSolutionText() + " and solutionResource " +
-				solution.getSolutionResource().getURI() + " scores " + distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution);
-		
-		return distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution;
-	}
 	
 	private ArrayList<Resource> getSolutionTypes(Solution solution) {
 		ArrayList<Resource> solutionTypes = new ArrayList<Resource>();
 
 		InfModel infModel = solution.getInfModel();
-		this.setClue(solution.getClue());
 		
 		ArrayList<String> clueFragments = this.getClue().getClueFragments();
 		
@@ -119,12 +87,12 @@ public class SolutionScorerImpl implements SolutionScorer {
 						 * together with the original type's label
 						 */
 						if( (equivalentTypeNameSpace != null) && (!equivalentTypeNameSpace.equals(Pop.POP_URI)) &&
-							(!solutionTypes.contains(equivalentType)) && (clueFragments.contains(toProperCase(thisLabel))) )
+							(!solutionTypes.contains(equivalentType)) && (clueFragments.contains(this.getClue().toProperCase(thisLabel))) )
 							solutionTypes.add(equivalentType);
 					}
 				}
 				else { // the type in question is one that is present in the DBpedia dataset
-					if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(toProperCase(thisLabel))) )
+					if( (!solutionTypes.contains(thisType)) && (clueFragments.contains(this.getClue().toProperCase(thisLabel))) )
 						solutionTypes.add(thisType);
 				}
 			}
@@ -137,9 +105,8 @@ public class SolutionScorerImpl implements SolutionScorer {
 		ArrayList<Resource> solutionProperties = new ArrayList<Resource>();
 
 		InfModel infModel = solution.getInfModel();
-		Clue clue = solution.getClue();
 		
-		ArrayList<String> clueFragments = clue.getClueFragments();
+		ArrayList<String> clueFragments = this.getClue().getClueFragments();
 		
 		Resource clueResource = solution.getClueResource();
 		Selector predicateSelector = new SimpleSelector(solution.getSolutionResource(), null, (RDFNode) clueResource);
@@ -181,12 +148,13 @@ public class SolutionScorerImpl implements SolutionScorer {
 						 */
 						if( (equivalentPropertyNameSpace != null) && (!equivalentPropertyNameSpace.equals(Pop.POP_URI)) &&
 							(!solutionProperties.contains(equivalentProperty)) && 
-							(clueFragments.contains(toProperCase(thisPredicateLabel))) )
+							(clueFragments.contains(this.getClue().toProperCase(thisPredicateLabel))) )
 							solutionProperties.add(equivalentProperty);
 					}
 				}
 				else { // the property in question is one that is present in the DBpedia dataset
-					if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(toProperCase(thisPredicateLabel))) )
+					if( (!solutionProperties.contains(thisPredicate)) && (clueFragments.contains(this.getClue().toProperCase(
+							thisPredicateLabel))) )
 						solutionProperties.add(thisPredicate);
 				}
 			}
@@ -194,30 +162,6 @@ public class SolutionScorerImpl implements SolutionScorer {
 		return solutionProperties;
 	}
 	
-	/*
-	 * DUPLICATED IN CLUEIMPL CLASS
-	 */
-	private String toProperCase(String thisWord) {
-		String thisWordInProperCase = thisWord.substring(0, 1).toUpperCase();
-		if(thisWord.length() > 1) {
-			int index = 1; // start at the second letter of the word
-			while(index < thisWord.length()) {
-				String nextCharacter = thisWord.substring(index, index + 1);
-				thisWordInProperCase += nextCharacter;
-				if((nextCharacter.equals(" ")) && (index < (thisWord.length() - 1))) {
-					 index++; // the next character needs to be capitalised
-					 nextCharacter = thisWord.substring(index, index + 1);
-					 thisWordInProperCase += nextCharacter.toUpperCase();
-				}
-				index++;
-			}
-		}
-		return thisWordInProperCase;
-	}
-	
-	
-	
-
 	private double distance(Resource firstResource, Resource secondResource) {
 		
 		double numberOfLinks = this.countLinks(firstResource, secondResource);
@@ -331,5 +275,36 @@ public class SolutionScorerImpl implements SolutionScorer {
 
 		queryExecution.close();
 		return numberOfLinks;	
+	}
+	
+	@Override
+	public double score(Solution solution) {
+		this.setSolution(solution);
+		this.setClue(solution.getClue());
+		
+		double distanceBetweenClueAndSolution = distance(solution.getSolutionResource(), solution.getClueResource());
+		
+		ArrayList<Resource> solutionTypes = this.getSolutionTypes(solution);
+		ArrayList<Resource> solutionProperties = this.getSolutionProperties(solution);
+		
+		/* logging */
+		log.debug("Recognised the following types in the solutionResource " + solution.getSolutionResource().getURI() + ":");
+		for(Resource solutionType : solutionTypes)
+			log.debug(solutionType.getURI());
+		log.debug("Recognised the following properties of the solutionResource " + solution.getSolutionResource().getURI() + ":");
+		for(Resource solutionProperty : solutionProperties)
+			log.debug(solutionProperty.getURI());
+
+		double distanceBetweenClueFragmentsAndSolution = distance(solution.getSolutionResource(), solutionTypes, solutionProperties);
+		
+		/* solution and clue can now both be garbage-collected */
+		this.setSolution(null);
+		this.setClue(null);
+		
+		// DEBUGGING ********************************************************************************************************
+		System.out.println("Solution with text " + solution.getSolutionText() + " and solutionResource " +
+				solution.getSolutionResource().getURI() + " scores " + distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution);
+		
+		return distanceBetweenClueAndSolution * distanceBetweenClueFragmentsAndSolution;
 	}
 }
