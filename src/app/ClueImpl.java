@@ -31,7 +31,7 @@ public class ClueImpl implements Clue {
 	/* Each element of the solutionStructure represents a word in the solution, with the value of that element representing the number
 	 * of letters in that word
 	 */
-	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] SolutionStructure;
+	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] solutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank;
 
 	/**
