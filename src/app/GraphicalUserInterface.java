@@ -50,7 +50,7 @@ public class GraphicalUserInterface extends JFrame implements UserInterface, Act
 	private static Logger log = Logger.getLogger(ClueQueryTask.class);
 	private final String ENTITY_RECOGNITION_IN_PROGRESS_MESSAGE = "Searching for known entities in the clue";
 	public static final String CLUE_QUERY_IN_PROGRESS_MESSAGE = "Searching for solutions on DBpedia";
-	private final Dimension FRAME_DIMENSION = new Dimension(1000, 600); // width and height of the GUI frame
+	private final Dimension FRAME_DIMENSION = new Dimension(1000, 675); // width and height of the GUI frame
 	private final Dimension DISPLAY_PANEL_DIMENSION = new Dimension(950, 575);
 	private final String HELP_FILE_LOCATION = "helpFile.txt";
 	private final String ABOUT_FILE_LOCATION = "aboutFile.txt";
