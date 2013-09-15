@@ -17,7 +17,7 @@ import lombok.Setter;
 /**
  * @author Ben Griffiths
  * ClueImpl
- * Represents a clue
+ * Represents a clue and has responsibility for parsing the clue into a queryable form.
  * @implements framework.Clue
  */
 public class ClueImpl implements Clue {
@@ -28,6 +28,9 @@ public class ClueImpl implements Clue {
 	private final String[] PUNCTUATION = {":", ";", ",", ".", "-"}; // common punctuation marks used in the text of clues
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private ArrayList<String> clueFragments;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private String sourceClue;
+	/* Each element of the solutionStructure represents a word in the solution, with the value of that element representing the number
+	 * of letters in that word
+	 */
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private int[] SolutionStructure;
 	@Getter(AccessLevel.PUBLIC) @Setter(AccessLevel.PRIVATE) private boolean fillInTheBlank;
 
